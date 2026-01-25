@@ -1,0 +1,1164 @@
+{
+    "HomePage": {
+        "title": "मुफ्त डेवलपर टूल्स",
+        "description": "आपके रोज़मर्रा के कामों के लिए सरल, तेज़ और सुरक्षित टूल्स का संग्रह।",
+        "noAds": "कोई विज्ञापन नहीं, कोई ट्रैकिंग नहीं, सिर्फ टूल्स।",
+        "toolsCount": "{count} टूल्स"
+    },
+    "App": {
+        "name": "AYNZO",
+        "nameHighlight": "TOOLS"
+    },
+    "Navigation": {
+        "more": "और देखें",
+        "searchPlaceholder": "टूल्स खोजें...",
+        "mobileMenu": "मेनू",
+        "home": "होम",
+        "tools": "टूल्स"
+    },
+    "Categories": {
+        "Image Tools": "इमेज टूल्स",
+        "Text Tools": "टेक्स्ट टूल्स",
+        "Calculator Tools": "कैलकुलेटर",
+        "Converter Tools": "कन्वर्टर",
+        "Time & Date Tools": "समय और तारीख",
+        "Web Tools": "वेब टूल्स",
+        "Dev Tools": "डेव टूल्स",
+        "Code & Developer Tools": "कोड और डेवलपर टूल्स",
+        "Security & Crypto Tools": "सुरक्षा और क्रिप्टो",
+        "Social Media & SEO Tools": "एसईओ और सोशल मीडिया",
+        "Miscellaneous Tools": "विविध",
+        "Generators": "जनरेटर",
+        "CSS Tools": "सीएसएस टूल्स",
+        "Color Tools": "कलर टूल्स",
+        "JSON Tools": "जेएसओएन टूल्स",
+        "Random Generators": "रैंडम जनरेटर",
+        "image": "इमेज टूल्स",
+        "text": "टेक्स्ट टूल्स",
+        "developer": "कोड और डेवलपर टूल्स",
+        "seo": "एसईओ और सोशल मीडिया",
+        "youtube": "यूट्यूब टूल्स",
+        "social": "सोशल और लिंक्स",
+        "security": "सुरक्षा और क्रिप्टो",
+        "crypto": "सुरक्षा और क्रिप्टो",
+        "converter": "कन्वर्टर",
+        "utility": "यूटिलिटी टूल्स",
+        "pdf": "पीडीएफ टूल्स",
+        "calculator": "कैलकुलेटर",
+        "Security & Crypto": "सुरक्षा और क्रिप्टो",
+        "Converters": "कन्वर्टर",
+        "SEO & Web Tools": "एसईओ और सोशल मीडिया",
+        "Utility Tools": "यूटिलिटी टूल्स",
+        "YouTube Tools": "यूट्यूब टूल्स",
+        "Social & Links": "सोशल और लिंक्स",
+        "Calculators": "कैलकुलेटर",
+        "web": "वेब टूल्स",
+        "Convert": "कन्वर्ट"
+    },
+    "Tools": {
+        "tryNow": "अभी आज़माएँ",
+        "relatedTools": "संबंधित टूल्स",
+        "viewAll": "सभी टूल्स देखें",
+        "backToTools": "टूल्स पर वापस",
+        "image-compressor": {
+            "name": "इमेज कंप्रेसर",
+            "description": "JPG, PNG और WebP इमेज को बिना क्वालिटी लॉस के कंप्रेस करें।",
+            "seoTitle": "इमेज कंप्रेसर - मुफ्त ऑनलाइन टूल",
+            "seoDescription": "इमेज को बिना क्वालिटी लॉस के कंप्रेस करें। 100% मुफ्त, तेज़ और सुरक्षित।",
+            "seoKeywords": "इमेज कंप्रेसर, इमेज छोटा करें, मुफ्त टूल",
+            "seoH1": "इमेज कंप्रेसर"
+        },
+        "image-resizer": {
+            "name": "इमेज रिसाइज़र",
+            "description": "इमेज को सटीक पिक्सल या प्रतिशत में रिसाइज़ करें।",
+            "seoTitle": "इमेज रिसाइज़र - मुफ्त ऑनलाइन टूल",
+            "seoDescription": "इमेज साइज़ आसानी से बदलें। 100% मुफ्त और सुरक्षित।",
+            "seoKeywords": "इमेज साइज़ बदलें, resize image",
+            "seoH1": "इमेज रिसाइज़र"
+        },
+        "jpg-to-png": {
+            "name": "JPG → PNG",
+            "description": "JPG इमेज को ट्रांसपेरेंट बैकग्राउंड सपोर्ट के साथ PNG में बदलें।",
+            "seoTitle": "JPG से PNG कन्वर्टर - मुफ्त टूल",
+            "seoDescription": "JPG को ट्रांसपेरेंट PNG में बदलें। 100% मुफ्त।",
+            "seoKeywords": "jpg to png, jpg png कन्वर्ट",
+            "seoH1": "JPG → PNG"
+        },
+        "png-to-jpg": {
+            "name": "PNG → JPG",
+            "description": "PNG इमेज को तुरंत JPG में बदलें।",
+            "seoTitle": "PNG से JPG कन्वर्टर - मुफ्त टूल",
+            "seoDescription": "PNG को JPG में बदलें। 100% मुफ्त।",
+            "seoKeywords": "png to jpg, png jpg कन्वर्ट",
+            "seoH1": "PNG → JPG"
+        },
+        "webp-converter": {
+            "name": "WebP कन्वर्टर",
+            "description": "इमेज को WebP फॉर्मेट में या WebP से कन्वर्ट करें।",
+            "seoTitle": "WebP कन्वर्टर - मुफ्त ऑनलाइन टूल",
+            "seoDescription": "WebP कन्वर्जन आसान। 100% मुफ्त।",
+            "seoKeywords": "webp कन्वर्टर, webp jpg png",
+            "seoH1": "WebP कन्वर्टर"
+        },
+        "image-format-converter": {
+            "name": "इमेज फॉर्मेट कन्वर्टर",
+            "description": "JPG, PNG, WebP आदि फॉर्मेट के बीच कन्वर्ट करें।",
+            "seoTitle": "इमेज फॉर्मेट कन्वर्टर - मुफ्त टूल",
+            "seoDescription": "ऑनलाइन इमेज फॉर्मेट बदलें। 100% मुफ्त।",
+            "seoKeywords": "इमेज फॉर्मेट कन्वर्टर, फॉर्मेट बदलें",
+            "seoH1": "इमेज फॉर्मेट कन्वर्टर"
+        },
+        "image-to-base64": {
+            "name": "इमेज → Base64",
+            "description": "इमेज को कोड में एम्बेड करने के लिए Base64 स्ट्रिंग में बदलें।",
+            "seoTitle": "इमेज से Base64",
+            "seoDescription": "इमेज को Base64 में बदलें। 100% मुफ्त।",
+            "seoKeywords": "image to base64, base64 एनकोडर",
+            "seoH1": "इमेज → Base64"
+        },
+        "image-cropper": {
+            "name": "इमेज क्रॉप",
+            "description": "कस्टम रेशियो के साथ ऑनलाइन इमेज क्रॉप करें।",
+            "seoTitle": "इमेज क्रॉप - मुफ्त टूल",
+            "seoDescription": "अपनी पसंद से इमेज क्रॉप करें। 100% मुफ्त।",
+            "seoKeywords": "इमेज क्रॉप, crop image online",
+            "seoH1": "इमेज क्रॉप"
+        },
+        "flip-image": {
+            "name": "इमेज फ्लिप",
+            "description": "इमेज को हॉरिजॉंटल या वर्टिकल फ्लिप करें।",
+            "seoTitle": "इमेज फ्लिप - मुफ्त टूल",
+            "seoDescription": "इमेज तुरंत फ्लिप करें। 100% मुफ्त।",
+            "seoKeywords": "इमेज फ्लिप, flip image",
+            "seoH1": "इमेज फ्लिप"
+        },
+        "rotate-image": {
+            "name": "इमेज रोटेट",
+            "description": "इमेज को 90, 180 या 270 डिग्री रोटेट करें।",
+            "seoTitle": "इमेज रोटेट - मुफ्त टूल",
+            "seoDescription": "इमेज आसानी से रोटेट करें। 100% मुफ्त।",
+            "seoKeywords": "इमेज रोटेट, rotate image",
+            "seoH1": "इमेज रोटेट"
+        },
+        "image-enlarger": {
+            "name": "इमेज एनलार्जर",
+            "description": "छोटी इमेज को बिना क्वालिटी लॉस के बड़ा करें।",
+            "seoTitle": "इमेज एनलार्जर - मुफ्त टूल",
+            "seoDescription": "4 गुना तक बड़ा करें। 100% मुफ्त।",
+            "seoKeywords": "इमेज बड़ा करें, upscale image",
+            "seoH1": "इमेज एनलार्जर"
+        },
+        "image-brightness": {
+            "name": "इमेज ब्राइटनेस",
+            "description": "इमेज की ब्राइटनेस एडजस्ट करें।",
+            "seoTitle": "ब्राइटनेस एडजस्ट",
+            "seoDescription": "ब्राइटनेस बढ़ाएँ या घटाएँ। 100% मुफ्त।",
+            "seoKeywords": "इमेज ब्राइटनेस, brightness adjust",
+            "seoH1": "ब्राइटनेस एडजस्ट"
+        },
+        "image-contrast": {
+            "name": "इमेज कंट्रास्ट",
+            "description": "इमेज का कंट्रास्ट एडजस्ट करें।",
+            "seoTitle": "कंट्रास्ट एडजस्ट",
+            "seoDescription": "कंट्रास्ट बेहतर करें। 100% मुफ्त।",
+            "seoKeywords": "इमेज कंट्रास्ट, contrast adjust",
+            "seoH1": "कंट्रास्ट एडजस्ट"
+        },
+        "grayscale-image": {
+            "name": "ग्रेस्केल",
+            "description": "कलर इमेज को ब्लैक एंड व्हाइट में बदलें।",
+            "seoTitle": "ग्रेस्केल कन्वर्टर",
+            "seoDescription": "तुरंत ब्लैक एंड व्हाइट करें। 100% मुफ्त।",
+            "seoKeywords": "ग्रेस्केल, ब्लैक व्हाइट",
+            "seoH1": "ग्रेस्केल"
+        },
+        "blur-image": {
+            "name": "इमेज ब्लर",
+            "description": "इमेज में ब्लर इफेक्ट जोड़ें।",
+            "seoTitle": "इमेज ब्लर टूल",
+            "seoDescription": "गॉसियन ब्लर लगाएँ। 100% मुफ्त।",
+            "seoKeywords": "इमेज ब्लर, blur image",
+            "seoH1": "इमेज ब्लर"
+        },
+        "sepia-converter": {
+            "name": "सेपिया फ़िल्टर",
+            "description": "फोटो में विंटेज सेपिया इफेक्ट लगाएँ।",
+            "seoTitle": "सेपिया फ़िल्टर टूल",
+            "seoDescription": "क्लासिक सेपिया टोन दें। 100% मुफ्त।",
+            "seoKeywords": "सेपिया फ़िल्टर, विंटेज इफेक्ट",
+            "seoH1": "सेपिया इफेक्ट"
+        },
+        "invert-image": {
+            "name": "कलर इनवर्ट",
+            "description": "इमेज कलर इनवर्ट करें (नेगेटिव इफेक्ट)।",
+            "seoTitle": "कलर इनवर्ट टूल",
+            "seoDescription": "नेगेटिव इफेक्ट बनाएँ। 100% मुफ्त।",
+            "seoKeywords": "कलर इनवर्ट, invert colors",
+            "seoH1": "कलर इनवर्ट"
+        },
+        "saturate-image": {
+            "name": "सैचुरेशन एडजस्ट",
+            "description": "इमेज कलर सैचुरेशन एडजस्ट करें।",
+            "seoTitle": "सैचुरेशन एडजस्ट",
+            "seoDescription": "कलर इंटेंसिटी बदलें। 100% मुफ्त।",
+            "seoKeywords": "सैचुरेशन एडजस्ट, saturation adjust",
+            "seoH1": "सैचुरेशन एडजस्ट"
+        },
+        "hue-rotate-image": {
+            "name": "ह्यू रोटेट",
+            "description": "क्रिएटिव इफेक्ट के लिए ह्यू बदलें।",
+            "seoTitle": "ह्यू रोटेट टूल",
+            "seoDescription": "क्रिएटिव तरीके से कलर शिफ्ट करें। 100% मुफ्त।",
+            "seoKeywords": "ह्यू रोटेट, hue rotate",
+            "seoH1": "ह्यू रोटेट"
+        },
+        "image-opacity": {
+            "name": "इमेज ओपेसिटी",
+            "description": "इमेज ट्रांसपेरेंसी/ओपेसिटी एडजस्ट करें।",
+            "seoTitle": "इमेज ओपेसिटी टूल",
+            "seoDescription": "इमेज ट्रांसपेरेंट करें। 100% मुफ्त।",
+            "seoKeywords": "इमेज ओपेसिटी, opacity adjust",
+            "seoH1": "ओपेसिटी एडजस्ट"
+        },
+        "round-corners-image": {
+            "name": "राउंड कॉर्नर",
+            "description": "इमेज में राउंड कॉर्नर जोड़ें।",
+            "seoTitle": "राउंड कॉर्नर टूल",
+            "seoDescription": "राउंड कॉर्नर इमेज बनाएँ। 100% मुफ्त।",
+            "seoKeywords": "राउंड कॉर्नर, rounded corners",
+            "seoH1": "राउंड कॉर्नर"
+        },
+        "image-border": {
+            "name": "इमेज बॉर्डर",
+            "description": "इमेज में कलर बॉर्डर जोड़ें।",
+            "seoTitle": "बॉर्डर जोड़ें",
+            "seoDescription": "कस्टम बॉर्डर। 100% मुफ्त।",
+            "seoKeywords": "इमेज बॉर्डर, image border",
+            "seoH1": "बॉर्डर जोड़ें"
+        },
+        "image-shadow": {
+            "name": "इमेज शैडो",
+            "description": "इमेज में ड्रॉप शैडो जोड़ें।",
+            "seoTitle": "शैडो टूल",
+            "seoDescription": "रियलिस्टिक शैडो। 100% मुफ्त।",
+            "seoKeywords": "इमेज शैडो, drop shadow",
+            "seoH1": "शैडो जोड़ें"
+        },
+        "pixelate-image": {
+            "name": "पिक्सेलेट",
+            "description": "डिटेल छिपाने या आर्ट बनाने के लिए इमेज पिक्सेलेट करें।",
+            "seoTitle": "पिक्सेलेट टूल",
+            "seoDescription": "पिक्सेल इफेक्ट लगाएँ। 100% मुफ्त।",
+            "seoKeywords": "पिक्सेलेट, pixelate image",
+            "seoH1": "इमेज पिक्सेलेट"
+        },
+        "svg-to-png": {
+            "name": "SVG → PNG",
+            "description": "SVG वेक्टर फाइल को PNG इमेज में बदलें।",
+            "seoTitle": "SVG से PNG",
+            "seoDescription": "SVG को PNG में बदलें। 100% मुफ्त।",
+            "seoKeywords": "svg to png, svg कन्वर्ट",
+            "seoH1": "SVG → PNG"
+        },
+        "png-to-svg": {
+            "name": "PNG → SVG",
+            "description": "PNG रास्टर इमेज को SVG वेक्टर में बदलें।",
+            "seoTitle": "PNG से SVG",
+            "seoDescription": "PNG वेक्टरीकरण। 100% मुफ्त।",
+            "seoKeywords": "png to svg, vectorize image",
+            "seoH1": "PNG → SVG"
+        },
+        "webp-to-jpg": {
+            "name": "WebP → JPG",
+            "description": "WebP को स्टैंडर्ड JPG में बदलें।",
+            "seoTitle": "WebP से JPG",
+            "seoDescription": "WebP को JPG में बदलें। 100% मुफ्त।",
+            "seoKeywords": "webp to jpg",
+            "seoH1": "WebP → JPG"
+        },
+        "webp-to-png": {
+            "name": "WebP → PNG",
+            "description": "WebP को ट्रांसपेरेंट PNG में बदलें।",
+            "seoTitle": "WebP से PNG",
+            "seoDescription": "ट्रांसपेरेंसी सपोर्ट के साथ कन्वर्ट।",
+            "seoKeywords": "webp to png",
+            "seoH1": "WebP → PNG"
+        },
+        "jpg-to-webp": {
+            "name": "JPG → WebP",
+            "description": "JPG को मॉडर्न WebP फॉर्मेट में बदलें।",
+            "seoTitle": "JPG से WebP",
+            "seoDescription": "WebP से फाइल साइज़ कम करें।",
+            "seoKeywords": "jpg to webp",
+            "seoH1": "JPG → WebP"
+        },
+        "png-to-webp": {
+            "name": "PNG → WebP",
+            "description": "PNG को WebP फॉर्मेट में बदलें।",
+            "seoTitle": "PNG से WebP",
+            "seoDescription": "ट्रांसपेरेंसी सपोर्ट WebP।",
+            "seoKeywords": "png to webp",
+            "seoH1": "PNG → WebP"
+        },
+        "base64-to-image": {
+            "name": "Base64 → इमेज",
+            "description": "Base64 स्ट्रिंग को इमेज फाइल में वापस बदलें।",
+            "seoTitle": "Base64 से इमेज डीकोडर",
+            "seoDescription": "Base64 को इमेज में डीकोड करें। 100% मुफ्त।",
+            "seoKeywords": "base64 to image",
+            "seoH1": "Base64 → इमेज"
+        },
+        "pdf-to-word": {
+            "name": "PDF → Word",
+            "description": "PDF डॉक्यूमेंट को एडिटेबल Word फाइल में बदलें।",
+            "seoTitle": "PDF से Word",
+            "seoDescription": "फॉर्मेटिंग बनाए रखते हुए DOCX में कन्वर्ट करें।",
+            "seoKeywords": "pdf to word, pdf कन्वर्टर",
+            "seoH1": "PDF → Word"
+        },
+        "word-counter": {
+            "name": "शब्द गिनती",
+            "description": "शब्द, अक्षर, वाक्य, पैराग्राफ गिनें।",
+            "seoTitle": "शब्द गिनती टूल",
+            "seoDescription": "शब्द और अक्षर की सटीक गिनती।",
+            "seoKeywords": "शब्द गिनती, word counter",
+            "seoH1": "शब्द गिनती"
+        },
+        "character-counter": {
+            "name": "अक्षर गिनती",
+            "description": "स्पेस के साथ/बिना अक्षर गिनें।",
+            "seoTitle": "अक्षर गिनती",
+            "seoDescription": "ट्विटर, एसएमएस आदि के लिए आदर्श।",
+            "seoKeywords": "अक्षर गिनती",
+            "seoH1": "अक्षर गिनती"
+        },
+        "text-case-converter": {
+            "name": "केस कन्वर्टर",
+            "description": "टेक्स्ट को अपरकेस, लोअरकेस, टाइटल आदि में बदलें।",
+            "seoTitle": "केस कन्वर्टर",
+            "seoDescription": "कई टेक्स्ट ट्रांसफॉर्म ऑप्शन।",
+            "seoKeywords": "केस कन्वर्टर, uppercase lowercase",
+            "seoH1": "केस कन्वर्टर"
+        },
+        "remove-line-breaks": {
+            "name": "लाइन ब्रेक हटाएँ",
+            "description": "टेक्स्ट से सभी लाइन ब्रेक हटाएँ।",
+            "seoTitle": "लाइन ब्रेक हटाएँ",
+            "seoDescription": "टेक्स्ट साफ करें।",
+            "seoKeywords": "लाइन ब्रेक हटाएँ",
+            "seoH1": "लाइन ब्रेक हटाएँ"
+        },
+        "italic-text": {
+            "name": "इटैलिक टेक्स्ट जनरेटर",
+            "description": "यूनिकोड से इटैलिक टेक्स्ट बनाएँ।",
+            "seoTitle": "इटैलिक टेक्स्ट जनरेटर",
+            "seoDescription": "सोशल मीडिया के लिए इटैलिक अक्षर।",
+            "seoKeywords": "इटैलिक टेक्स्ट, fancy text",
+            "seoH1": "इटैलिक टेक्स्ट जनरेटर"
+        },
+        "strikethrough-text": {
+            "name": "स्ट्राइकथ्रू टेक्स्ट",
+            "description": "स्ट्राइकथ्रू टेक्स्ट बनाएँ।",
+            "seoTitle": "स्ट्राइकथ्रू टेक्स्ट जनरेटर",
+            "seoDescription": "टेक्स्ट पर लाइन खींचें।",
+            "seoKeywords": "स्ट्राइकथ्रू टेक्स्ट",
+            "seoH1": "स्ट्राइकथ्रू टेक्स्ट"
+        },
+        "underline-text": {
+            "name": "अंडरलाइन टेक्स्ट",
+            "description": "यूनिकोड से अंडरलाइन टेक्स्ट बनाएँ।",
+            "seoTitle": "अंडरलाइन टेक्स्ट जनरेटर",
+            "seoDescription": "अंडरलाइन अक्षर।",
+            "seoKeywords": "अंडरलाइन टेक्स्ट",
+            "seoH1": "अंडरलाइन टेक्स्ट"
+        },
+        "small-text": {
+            "name": "छोटा टेक्स्ट जनरेटर",
+            "description": "छोटे सबस्क्रिप्ट/सुपरस्क्रिप्ट टेक्स्ट बनाएँ।",
+            "seoTitle": "छोटा टेक्स्ट जनरेटर",
+            "seoDescription": "छोटे अक्षर।",
+            "seoKeywords": "छोटा टेक्स्ट, tiny text",
+            "seoH1": "छोटा टेक्स्ट जनरेटर"
+        },
+        "upside-down-text": {
+            "name": "उल्टा टेक्स्ट",
+            "description": "टेक्स्ट को उल्टा करें।",
+            "seoTitle": "उल्टा टेक्स्ट जनरेटर",
+            "seoDescription": "मज़ेदार उल्टे अक्षर।",
+            "seoKeywords": "उल्टा टेक्स्ट, upside down text",
+            "seoH1": "उल्टा टेक्स्ट जनरेटर"
+        },
+        "mirror-text": {
+            "name": "मिरर टेक्स्ट",
+            "description": "मिरर जैसा टेक्स्ट बनाएँ।",
+            "seoTitle": "मिरर टेक्स्ट जनरेटर",
+            "seoDescription": "मिरर अक्षर।",
+            "seoKeywords": "मिरर टेक्स्ट, mirror text",
+            "seoH1": "मिरर टेक्स्ट जनरेटर"
+        },
+        "duplicate-line-remover": {
+            "name": "डुप्लिकेट लाइन हटाएँ",
+            "description": "टेक्स्ट या लिस्ट से डुप्लिकेट लाइन हटाएँ।",
+            "seoTitle": "डुप्लिकेट हटाएँ",
+            "seoDescription": "लिस्ट साफ करें।",
+            "seoKeywords": "डुप्लिकेट हटाएँ",
+            "seoH1": "डुप्लिकेट लाइन हटाएँ"
+        },
+        "sort-alphabetically": {
+            "name": "वर्णमाला क्रम",
+            "description": "लाइनों को वर्णमाला क्रम में सॉर्ट करें।",
+            "seoTitle": "वर्णमाला क्रम",
+            "seoDescription": "लिस्ट को A-Z या Z-A सॉर्ट करें।",
+            "seoKeywords": "वर्णमाला क्रम",
+            "seoH1": "वर्णमाला क्रम"
+        },
+        "text-replace": {
+            "name": "खोजें और बदलें",
+            "description": "टेक्स्ट खोजें और बदलें।",
+            "seoTitle": "खोजें और बदलें टूल",
+            "seoDescription": "शक्तिशाली टेक्स्ट रिप्लेसमेंट।",
+            "seoKeywords": "खोजें बदलें, find replace",
+            "seoH1": "खोजें और बदलें"
+        },
+        "whitespace-remover": {
+            "name": "अतिरिक्त स्पेस हटाएँ",
+            "description": "अतिरिक्त स्पेस, टैब, लाइन ब्रेक हटाएँ।",
+            "seoTitle": "अतिरिक्त स्पेस हटाएँ",
+            "seoDescription": "गड़बड़ टेक्स्ट साफ करें।",
+            "seoKeywords": "स्पेस हटाएँ",
+            "seoH1": "अतिरिक्त स्पेस हटाएँ"
+        },
+        "word-frequency": {
+            "name": "शब्द आवृत्ति",
+            "description": "टेक्स्ट में सबसे ज्यादा इस्तेमाल शब्दों का विश्लेषण करें।",
+            "seoTitle": "शब्द आवृत्ति विश्लेषण",
+            "seoDescription": "शब्द उपयोग दिखाएँ।",
+            "seoKeywords": "शब्द आवृत्ति, keyword density",
+            "seoH1": "शब्द आवृत्ति"
+        },
+        "find-replace": {
+            "name": "एडवांस्ड खोजें और बदलें",
+            "description": "रेगेक्स सपोर्ट के साथ एडवांस्ड खोज और बदलाव।",
+            "seoTitle": "एडवांस्ड खोजें बदलें",
+            "seoDescription": "रेगेक्स के साथ शक्तिशाली बदलाव।",
+            "seoKeywords": "regex खोजें बदलें",
+            "seoH1": "एडवांस्ड खोजें और बदलें"
+        },
+        "json-formatter": {
+            "name": "JSON फॉर्मेटर",
+            "description": "JSON डेटा फॉर्मेट, सुंदर बनाएँ और वैलिडेट करें।",
+            "seoTitle": "JSON फॉर्मेटर और वैलिडेटर",
+            "seoDescription": "JSON को सुंदर दिखाएँ।",
+            "seoKeywords": "json फॉर्मेटर, json beautifier",
+            "seoH1": "JSON फॉर्मेटर"
+        },
+        "url-encoder-decoder": {
+            "name": "URL एनकोडर/डीकोडर",
+            "description": "URL एनकोड या डीकोड करें।",
+            "seoTitle": "URL एनकोडर डीकोडर",
+            "seoDescription": "URL के लिए प्रतिशत एनकोडिंग।",
+            "seoKeywords": "url encode decode",
+            "seoH1": "URL एनकोडर/डीकोडर"
+        },
+        "html-formatter": {
+            "name": "HTML फॉर्मेटर",
+            "description": "HTML कोड फॉर्मेट और सुंदर बनाएँ।",
+            "seoTitle": "HTML फॉर्मेटर",
+            "seoDescription": "HTML को सुंदर दिखाएँ।",
+            "seoKeywords": "html फॉर्मेटर",
+            "seoH1": "HTML फॉर्मेटर"
+        },
+        "css-formatter": {
+            "name": "CSS फॉर्मेटर",
+            "description": "CSS कोड फॉर्मेट और सुंदर बनाएँ।",
+            "seoTitle": "CSS फॉर्मेटर",
+            "seoDescription": "CSS व्यवस्थित करें।",
+            "seoKeywords": "css फॉर्मेटर",
+            "seoH1": "CSS फॉर्मेटर"
+        },
+        "javascript-formatter": {
+            "name": "JavaScript फॉर्मेटर",
+            "description": "JavaScript कोड फॉर्मेट और सुंदर बनाएँ।",
+            "seoTitle": "JavaScript फॉर्मेटर",
+            "seoDescription": "JS कोड सुंदर दिखाएँ।",
+            "seoKeywords": "js फॉर्मेटर",
+            "seoH1": "JavaScript फॉर्मेटर"
+        },
+        "xml-formatter": {
+            "name": "XML फॉर्मेटर",
+            "description": "XML कोड फॉर्मेट और सुंदर बनाएँ।",
+            "seoTitle": "XML फॉर्मेटर",
+            "seoDescription": "XML व्यवस्थित करें।",
+            "seoKeywords": "xml फॉर्मेटर",
+            "seoH1": "XML फॉर्मेटर"
+        },
+        "sql-formatter": {
+            "name": "SQL फॉर्मेटर",
+            "description": "SQL क्वेरी फॉर्मेट और सुंदर बनाएँ।",
+            "seoTitle": "SQL फॉर्मेटर",
+            "seoDescription": "SQL क्वेरी पढ़ने योग्य बनाएँ।",
+            "seoKeywords": "sql फॉर्मेटर",
+            "seoH1": "SQL फॉर्मेटर"
+        },
+        "markdown-to-html": {
+            "name": "Markdown → HTML",
+            "description": "Markdown को HTML कोड में बदलें।",
+            "seoTitle": "Markdown से HTML",
+            "seoDescription": "MD को HTML में बदलें।",
+            "seoKeywords": "markdown to html",
+            "seoH1": "Markdown → HTML"
+        },
+        "html-to-markdown": {
+            "name": "HTML → Markdown",
+            "description": "HTML को Markdown फॉर्मेट में बदलें।",
+            "seoTitle": "HTML से Markdown",
+            "seoDescription": "HTML को साफ Markdown में बदलें।",
+            "seoKeywords": "html to markdown",
+            "seoH1": "HTML → Markdown"
+        },
+        "csv-to-json": {
+            "name": "CSV → JSON",
+            "description": "CSV डेटा को JSON फॉर्मेट में बदलें।",
+            "seoTitle": "CSV से JSON",
+            "seoDescription": "CSV को JSON में बदलें।",
+            "seoKeywords": "csv to json",
+            "seoH1": "CSV → JSON"
+        },
+        "json-to-csv": {
+            "name": "JSON → CSV",
+            "description": "JSON डेटा को CSV फॉर्मेट में बदलें।",
+            "seoTitle": "JSON से CSV",
+            "seoDescription": "JSON को CSV में बदलें।",
+            "seoKeywords": "json to csv",
+            "seoH1": "JSON → CSV"
+        },
+        "code-minifier": {
+            "name": "कोड मिनिफायर",
+            "description": "HTML, CSS, JS कोड मिनिफाई करें।",
+            "seoTitle": "कोड मिनिफायर",
+            "seoDescription": "फाइल साइज़ कम करें।",
+            "seoKeywords": "कोड मिनिफायर, minify code",
+            "seoH1": "कोड मिनिफायर"
+        },
+        "diff-checker": {
+            "name": "टेक्स्ट अंतर चेकर",
+            "description": "दो टेक्स्ट की तुलना करें और अंतर हाइलाइट करें।",
+            "seoTitle": "टेक्स्ट अंतर चेकर",
+            "seoDescription": "टेक्स्ट के बीच अंतर ढूँढें।",
+            "seoKeywords": "diff checker, टेक्स्ट तुलना",
+            "seoH1": "टेक्स्ट अंतर चेकर"
+        },
+        "unit-converter": {
+            "name": "यूनिट कन्वर्टर",
+            "description": "विभिन्न माप इकाइयों के बीच कन्वर्ट करें।",
+            "seoTitle": "यूनिट कन्वर्टर",
+            "seoDescription": "लंबाई, वजन, तापमान आदि।",
+            "seoKeywords": "यूनिट कन्वर्टर",
+            "seoH1": "यूनिट कन्वर्टर"
+        },
+        "color-converter": {
+            "name": "कलर कन्वर्टर",
+            "description": "HEX, RGB, HSL के बीच कन्वर्ट करें।",
+            "seoTitle": "कलर कन्वर्टर",
+            "seoDescription": "कलर कोड कन्वर्ट करें।",
+            "seoKeywords": "कलर कन्वर्टर, hex rgb",
+            "seoH1": "कलर कन्वर्टर"
+        },
+        "binary-to-text": {
+            "name": "बाइनरी → टेक्स्ट",
+            "description": "बाइनरी कोड को टेक्स्ट में बदलें।",
+            "seoTitle": "बाइनरी से टेक्स्ट",
+            "seoDescription": "बाइनरी को ASCII में डीकोड करें।",
+            "seoKeywords": "binary to text",
+            "seoH1": "बाइनरी → टेक्स्ट"
+        },
+        "hex-to-decimal": {
+            "name": "हेक्स → डेसीमल",
+            "description": "हेक्साडेसीमल नंबर को डेसीमल में बदलें।",
+            "seoTitle": "हेक्स से डेसीमल",
+            "seoDescription": "hex नंबर कन्वर्ट करें।",
+            "seoKeywords": "hex to decimal",
+            "seoH1": "हेक्स → डेसीमल"
+        },
+        "roman-numeral": {
+            "name": "रोमन नंबर कन्वर्टर",
+            "description": "अरबी और रोमन नंबर के बीच कन्वर्ट करें।",
+            "seoTitle": "रोमन नंबर कन्वर्टर",
+            "seoDescription": "रोमन नंबर में बदलें।",
+            "seoKeywords": "रोमन नंबर कन्वर्टर",
+            "seoH1": "रोमन नंबर कन्वर्टर"
+        },
+        "random-number": {
+            "name": "रैंडम नंबर जनरेटर",
+            "description": "रेंज में रैंडम नंबर जनरेट करें।",
+            "seoTitle": "रैंडम नंबर जनरेटर",
+            "seoDescription": "सच्चे रैंडम नंबर।",
+            "seoKeywords": "रैंडम नंबर जनरेटर",
+            "seoH1": "रैंडम नंबर जनरेटर"
+        },
+        "random-string": {
+            "name": "रैंडम स्ट्रिंग जनरेटर",
+            "description": "रैंडम स्ट्रिंग और मजबूत पासवर्ड जनरेट करें।",
+            "seoTitle": "रैंडम स्ट्रिंग और पासवर्ड जनरेटर",
+            "seoDescription": "मजबूत पासवर्ड बनाएँ।",
+            "seoKeywords": "रैंडम स्ट्रिंग, पासवर्ड जनरेटर",
+            "seoH1": "रैंडम स्ट्रिंग जनरेटर"
+        },
+        "random-color": {
+            "name": "रैंडम कलर जनरेटर",
+            "description": "HEX कोड के साथ रैंडम कलर जनरेट करें।",
+            "seoTitle": "रैंडम कलर जनरेटर",
+            "seoDescription": "रैंडम कलर पाएँ।",
+            "seoKeywords": "रैंडम कलर जनरेटर",
+            "seoH1": "रैंडम कलर जनरेटर"
+        },
+        "random-date": {
+            "name": "रैंडम डेट जनरेटर",
+            "description": "रैंडम तारीख जनरेट करें।",
+            "seoTitle": "रैंडम डेट जनरेटर",
+            "seoDescription": "टेस्ट के लिए रैंडम तारीख।",
+            "seoKeywords": "रैंडम डेट जनरेटर",
+            "seoH1": "रैंडम डेट जनरेटर"
+        },
+        "random-ip": {
+            "name": "रैंडम IP जनरेटर",
+            "description": "रैंडम IP एड्रेस जनरेट करें।",
+            "seoTitle": "रैंडम IP जनरेटर",
+            "seoDescription": "वैध रैंडम IP।",
+            "seoKeywords": "रैंडम ip जनरेटर",
+            "seoH1": "रैंडम IP जनरेटर"
+        },
+        "password-generator": {
+            "name": "पासवर्ड जनरेटर",
+            "description": "मजबूत और सुरक्षित पासवर्ड जनरेट करें।",
+            "seoTitle": "मजबूत पासवर्ड जनरेटर",
+            "seoDescription": "ऑप्शन के साथ सुरक्षित पासवर्ड।",
+            "seoKeywords": "पासवर्ड जनरेटर, password generator",
+            "seoH1": "पासवर्ड जनरेटर"
+        },
+        "bcrypt-generator": {
+            "name": "Bcrypt जनरेटर",
+            "description": "पासवर्ड के लिए Bcrypt हैश जनरेट करें।",
+            "seoTitle": "Bcrypt हैश जनरेटर",
+            "seoDescription": "सुरक्षित Bcrypt हैश।",
+            "seoKeywords": "bcrypt जनरेटर",
+            "seoH1": "Bcrypt जनरेटर"
+        },
+        "base64-encoder": {
+            "name": "Base64 एनकोडर/डीकोडर",
+            "description": "Base64 स्ट्रिंग एनकोड और डीकोड करें।",
+            "seoTitle": "Base64 एनकोडर डीकोडर",
+            "seoDescription": "Base64 प्रोसेसिंग।",
+            "seoKeywords": "base64 encode decode",
+            "seoH1": "Base64 एनकोडर/डीकोडर"
+        },
+        "md5-hash": {
+            "name": "MD5 हैश जनरेटर",
+            "description": "MD5 चेकसम जनरेट करें।",
+            "seoTitle": "MD5 जनरेटर",
+            "seoDescription": "MD5 हैश बनाएँ।",
+            "seoKeywords": "md5 जनरेटर",
+            "seoH1": "MD5 जनरेटर"
+        },
+        "sha256-hash": {
+            "name": "SHA-256 हैश जनरेटर",
+            "description": "SHA-256 हैश जनरेट करें।",
+            "seoTitle": "SHA-256 जनरेटर",
+            "seoDescription": "सुरक्षित क्रिप्टो हैश।",
+            "seoKeywords": "sha256 जनरेटर",
+            "seoH1": "SHA-256 जनरेटर"
+        },
+        "sha512-hash": {
+            "name": "SHA-512 हैश जनरेटर",
+            "description": "SHA-512 हैश जनरेट करें।",
+            "seoTitle": "SHA-512 जनरेटर",
+            "seoDescription": "सबसे सुरक्षित SHA हैश।",
+            "seoKeywords": "sha512 जनरेटर",
+            "seoH1": "SHA-512 जनरेटर"
+        },
+        "uuid-generator": {
+            "name": "UUID जनरेटर",
+            "description": "UUID v4 आइडेंटिफायर जनरेट करें।",
+            "seoTitle": "UUID जनरेटर",
+            "seoDescription": "यूनिक ID बनाएँ।",
+            "seoKeywords": "uuid जनरेटर",
+            "seoH1": "UUID जनरेटर"
+        },
+        "qr-code-generator": {
+            "name": "QR कोड जनरेटर",
+            "description": "लिंक, टेक्स्ट आदि के लिए QR कोड बनाएँ।",
+            "seoTitle": "QR कोड जनरेटर",
+            "seoDescription": "कस्टम QR कोड।",
+            "seoKeywords": "qr code जनरेटर",
+            "seoH1": "QR कोड जनरेटर"
+        },
+        "lorem-ipsum": {
+            "name": "Lorem Ipsum जनरेटर",
+            "description": "लेआउट के लिए डमी टेक्स्ट जनरेट करें।",
+            "seoTitle": "Lorem Ipsum जनरेटर",
+            "seoDescription": "बहुभाषी डमी टेक्स्ट।",
+            "seoKeywords": "lorem ipsum",
+            "seoH1": "Lorem Ipsum जनरेटर"
+        },
+        "youtube-thumbnail-downloader": {
+            "name": "YouTube थंबनेल डाउनलोडर",
+            "description": "YouTube वीडियो से हाई क्वालिटी थंबनेल डाउनलोड करें।",
+            "seoTitle": "YouTube थंबनेल डाउनलोडर",
+            "seoDescription": "YouTube HD थंबनेल पाएँ।",
+            "seoKeywords": "youtube थंबनेल डाउनलोड",
+            "seoH1": "YouTube थंबनेल डाउनलोडर"
+        },
+        "youtube-tag-generator": {
+            "name": "YouTube टैग जनरेटर",
+            "description": "रैंकिंग बेहतर करने के लिए ऑप्टिमाइज़्ड टैग जनरेट करें।",
+            "seoTitle": "YouTube टैग जनरेटर",
+            "seoDescription": "संबंधित टैग से बेहतर SEO।",
+            "seoKeywords": "youtube टैग जनरेटर",
+            "seoH1": "YouTube टैग जनरेटर"
+        },
+        "youtube-title-generator": {
+            "name": "YouTube टाइटल जनरेटर",
+            "description": "आकर्षक और SEO फ्रेंडली टाइटल जनरेट करें।",
+            "seoTitle": "YouTube टाइटल जनरेटर",
+            "seoDescription": "अच्छे टाइटल से ज्यादा क्लिक।",
+            "seoKeywords": "youtube टाइटल जनरेटर",
+            "seoH1": "YouTube टाइटल जनरेटर"
+        },
+        "youtube-embed-code-generator": {
+            "name": "YouTube एम्बेड कोड जनरेटर",
+            "description": "कस्टम एम्बेड कोड जनरेट करें।",
+            "seoTitle": "YouTube एम्बेड जनरेटर",
+            "seoDescription": "ऑटोप्ले, लूप आदि के साथ।",
+            "seoKeywords": "youtube embed code",
+            "seoH1": "YouTube एम्बेड जनरेटर"
+        },
+        "youtube-timestamp-link-generator": {
+            "name": "YouTube टाइमस्टैम्प लिंक",
+            "description": "खास समय से शुरू होने वाली लिंक बनाएँ।",
+            "seoTitle": "YouTube टाइमस्टैम्प लिंक जनरेटर",
+            "seoDescription": "वीडियो सटीक जगह से शुरू करें।",
+            "seoKeywords": "youtube timestamp link",
+            "seoH1": "YouTube टाइमस्टैम्प लिंक"
+        },
+        "meta-tag-generator": {
+            "name": "मेटा टैग जनरेटर",
+            "description": "SEO फ्रेंडली मेटा टैग जनरेट करें।",
+            "seoTitle": "मेटा टैग जनरेटर",
+            "seoDescription": "टाइटल और डिस्क्रिप्शन टैग।",
+            "seoKeywords": "meta tag जनरेटर",
+            "seoH1": "मेटा टैग जनरेटर"
+        },
+        "open-graph-generator": {
+            "name": "Open Graph जनरेटर",
+            "description": "सोशल शेयरिंग के लिए Open Graph टैग जनरेट करें।",
+            "seoTitle": "Open Graph जनरेटर",
+            "seoDescription": "सोशल मीडिया में बेहतर दिखाएँ।",
+            "seoKeywords": "open graph जनरेटर",
+            "seoH1": "Open Graph जनरेटर"
+        },
+        "twitter-card-generator": {
+            "name": "Twitter Card जनरेटर",
+            "description": "Twitter Card मेटा टैग जनरेट करें।",
+            "seoTitle": "Twitter Card जनरेटर",
+            "seoDescription": "Twitter में बेहतर दिखाएँ।",
+            "seoKeywords": "twitter card जनरेटर",
+            "seoH1": "Twitter Card जनरेटर"
+        },
+        "robots-txt-generator": {
+            "name": "robots.txt जनरेटर",
+            "description": "robots.txt फाइल बनाएँ।",
+            "seoTitle": "robots.txt जनरेटर",
+            "seoDescription": "क्रॉलर एक्सेस कंट्रोल करें।",
+            "seoKeywords": "robots.txt जनरेटर",
+            "seoH1": "robots.txt जनरेटर"
+        },
+        "xml-sitemap-generator": {
+            "name": "XML साइटमैप जनरेटर",
+            "description": "SEO के लिए XML साइटमैप जनरेट करें।",
+            "seoTitle": "XML साइटमैप जनरेटर",
+            "seoDescription": "पेज इंडेक्सिंग आसान करें।",
+            "seoKeywords": "xml sitemap जनरेटर",
+            "seoH1": "XML साइटमैप जनरेटर"
+        },
+        "keyword-density-checker": {
+            "name": "कीवर्ड डेंसिटी चेकर",
+            "description": "कीवर्ड उपयोग और डेंसिटी का विश्लेषण करें।",
+            "seoTitle": "कीवर्ड डेंसिटी चेकर",
+            "seoDescription": "कीवर्ड फ्रीक्वेंसी चेक करें।",
+            "seoKeywords": "कीवर्ड डेंसिटी",
+            "seoH1": "कीवर्ड डेंसिटी चेकर"
+        },
+        "keyword-cleaner": {
+            "name": "कीवर्ड क्लीनर",
+            "description": "कीवर्ड लिस्ट साफ करें।",
+            "seoTitle": "कीवर्ड लिस्ट क्लीनर",
+            "seoDescription": "डुप्लिकेट और बेकार हटाएँ।",
+            "seoKeywords": "कीवर्ड क्लीनर",
+            "seoH1": "कीवर्ड क्लीनर"
+        },
+        "long-tail-keyword-generator": {
+            "name": "लॉन्ग टेल कीवर्ड जनरेटर",
+            "description": "लॉन्ग टेल कीवर्ड वैरिएशन जनरेट करें।",
+            "seoTitle": "लॉन्ग टेल कीवर्ड जनरेटर",
+            "seoDescription": "सीड कीवर्ड एक्सपैंड करें।",
+            "seoKeywords": "लॉन्ग टेल कीवर्ड",
+            "seoH1": "लॉन्ग टेल कीवर्ड"
+        },
+        "slug-generator": {
+            "name": "URL स्लग जनरेटर",
+            "description": "टेक्स्ट को SEO फ्रेंडली URL स्लग में बदलें।",
+            "seoTitle": "स्लग जनरेटर",
+            "seoDescription": "साफ और पढ़ने योग्य URL बनाएँ।",
+            "seoKeywords": "स्लग जनरेटर, url slug",
+            "seoH1": "URL स्लग जनरेटर"
+        },
+        "google-serp-simulator": {
+            "name": "Google सर्च प्रीव्यू",
+            "description": "Google सर्च रिजल्ट में पेज कैसे दिखेगा उसका प्रीव्यू।",
+            "seoTitle": "Google सर्च सिमुलेटर",
+            "seoDescription": "सर्च रिजल्ट प्रीव्यू टेस्ट करें।",
+            "seoKeywords": "google serp preview",
+            "seoH1": "Google सर्च प्रीव्यू"
+        },
+        "htaccess-redirect-generator": {
+            "name": ".htaccess रीडायरेक्ट जनरेटर",
+            "description": "301/302 रीडायरेक्ट कोड जनरेट करें।",
+            "seoTitle": ".htaccess रीडायरेक्ट जनरेटर",
+            "seoDescription": "रीडायरेक्ट नियम बनाएँ।",
+            "seoKeywords": "htaccess redirect जनरेटर",
+            "seoH1": ".htaccess रीडायरेक्ट जनरेटर"
+        },
+        "my-ip-address": {
+            "name": "मेरा IP एड्रेस",
+            "description": "पब्लिक IP एड्रेस और लोकेशन जानकारी चेक करें।",
+            "seoTitle": "मेरा IP एड्रेस क्या है?",
+            "seoDescription": "पब्लिक IP पता लगाएँ।",
+            "seoKeywords": "मेरा ip एड्रेस, what is my ip",
+            "seoH1": "मेरा IP एड्रेस"
+        },
+        "browser-info": {
+            "name": "ब्राउज़र जानकारी",
+            "description": "ब्राउज़र और डिवाइस डिटेल पाएँ।",
+            "seoTitle": "ब्राउज़र जानकारी टूल",
+            "seoDescription": "ब्राउज़र, OS, स्क्रीन साइज़ आदि।",
+            "seoKeywords": "ब्राउज़र जानकारी, user agent",
+            "seoH1": "ब्राउज़र जानकारी"
+        },
+        "screen-resolution-simulator": {
+            "name": "स्क्रीन रिज़ॉल्यूशन टेस्टर",
+            "description": "विभिन्न रिज़ॉल्यूशन में साइट टेस्ट करें।",
+            "seoTitle": "स्क्रीन रिज़ॉल्यूशन सिमुलेटर",
+            "seoDescription": "विभिन्न डिवाइस में प्रीव्यू।",
+            "seoKeywords": "स्क्रीन रिज़ॉल्यूशन टेस्टर",
+            "seoH1": "स्क्रीन रिज़ॉल्यूशन टेस्टर"
+        },
+        "responsive-checker": {
+            "name": "रिस्पॉन्सिव डिज़ाइन चेकर",
+            "description": "चेक करें कि साइट मोबाइल फ्रेंडली है या नहीं।",
+            "seoTitle": "रिस्पॉन्सिव साइट टेस्टर",
+            "seoDescription": "रिस्पॉन्सिव टेस्ट करें।",
+            "seoKeywords": "रिस्पॉन्सिव चेकर",
+            "seoH1": "रिस्पॉन्सिव चेकर"
+        },
+        "whatsapp-link-generator": {
+            "name": "WhatsApp लिंक जनरेटर",
+            "description": "WhatsApp क्लिक टू चैट लिंक बनाएँ।",
+            "seoTitle": "WhatsApp लिंक जनरेटर",
+            "seoDescription": "wa.me लिंक जनरेट करें।",
+            "seoKeywords": "whatsapp लिंक जनरेटर",
+            "seoH1": "WhatsApp लिंक जनरेटर"
+        },
+        "telegram-link-generator": {
+            "name": "Telegram लिंक जनरेटर",
+            "description": "Telegram यूज़र या चैनल के लिए डायरेक्ट लिंक बनाएँ।",
+            "seoTitle": "Telegram लिंक जनरेटर",
+            "seoDescription": "t.me लिंक जनरेट करें।",
+            "seoKeywords": "telegram लिंक जनरेटर",
+            "seoH1": "Telegram लिंक जनरेटर"
+        },
+        "paypal-link-generator": {
+            "name": "PayPal लिंक जनरेटर",
+            "description": "PayPal पेमेंट और डोनेशन लिंक बनाएँ।",
+            "seoTitle": "PayPal लिंक जनरेटर",
+            "seoDescription": "PayPal.me और पेमेंट लिंक।",
+            "seoKeywords": "paypal लिंक जनरेटर",
+            "seoH1": "PayPal लिंक जनरेटर"
+        },
+        "email-validator": {
+            "name": "ईमेल वैलिडेटर",
+            "description": "ईमेल एड्रेस फॉर्मेट वैलिडेट करें।",
+            "seoTitle": "ईमेल एड्रेस वैलिडेटर",
+            "seoDescription": "ईमेल सिंटैक्स चेक करें।",
+            "seoKeywords": "ईमेल वैलिडेटर",
+            "seoH1": "ईमेल वैलिडेटर"
+        },
+        "url-opener": {
+            "name": "बल्क URL ओपनर",
+            "description": "एक साथ कई URL खोलें।",
+            "seoTitle": "मल्टी URL ओपनर",
+            "seoDescription": "एक साथ ढेर सारी लिंक खोलें।",
+            "seoKeywords": "बल्क url ओपनर",
+            "seoH1": "बल्क URL ओपनर"
+        },
+        "user-agent-parser": {
+            "name": "User Agent पार्सर",
+            "description": "User-Agent स्ट्रिंग एनालाइज़ करें।",
+            "seoTitle": "User Agent पार्सर",
+            "seoDescription": "ब्राउज़र और डिवाइस जानकारी निकालें।",
+            "seoKeywords": "user agent पार्सर",
+            "seoH1": "User Agent पार्सर"
+        },
+        "wordpress-password-hash": {
+            "name": "WordPress पासवर्ड हैश",
+            "description": "WordPress कम्पैटिबल हैश जनरेट करें।",
+            "seoTitle": "WordPress हैश जनरेटर",
+            "seoDescription": "phpass हैश बनाएँ।",
+            "seoKeywords": "wordpress password hash",
+            "seoH1": "WordPress पासवर्ड हैश"
+        },
+        "age-calculator": {
+            "name": "उम्र कैलकुलेटर",
+            "description": "सटीक उम्र वर्ष, महीने, दिन में गिनें।",
+            "seoTitle": "उम्र कैलकुलेटर",
+            "seoDescription": "जन्म तारीख से सटीक उम्र।",
+            "seoKeywords": "उम्र कैलकुलेटर",
+            "seoH1": "उम्र कैलकुलेटर"
+        },
+        "bmi-calculator": {
+            "name": "BMI कैलकुलेटर",
+            "description": "बॉडी मास इंडेक्स और स्वास्थ्य स्थिति गिनें।",
+            "seoTitle": "BMI कैलकुलेटर",
+            "seoDescription": "अपना BMI चेक करें।",
+            "seoKeywords": "bmi कैलकुलेटर",
+            "seoH1": "BMI कैलकुलेटर"
+        },
+        "percentage-calculator": {
+            "name": "प्रतिशत कैलकुलेटर",
+            "description": "प्रतिशत, बढ़ोतरी, कमी गिनें।",
+            "seoTitle": "प्रतिशत कैलकुलेटर",
+            "seoDescription": "कई प्रतिशत टूल्स।",
+            "seoKeywords": "प्रतिशत कैलकुलेटर",
+            "seoH1": "प्रतिशत कैलकुलेटर"
+        },
+        "gst-calculator": {
+            "name": "टैक्स कैलकुलेटर",
+            "description": "टैक्स राशि और कुल कीमत गिनें।",
+            "seoTitle": "टैक्स कैलकुलेटर",
+            "seoDescription": "टैक्स आसानी से गिनें।",
+            "seoKeywords": "टैक्स कैलकुलेटर",
+            "seoH1": "टैक्स कैलकुलेटर"
+        },
+        "emi-calculator": {
+            "name": "लोन EMI कैलकुलेटर",
+            "description": "मासिक किस्त और कुल ब्याज गिनें।",
+            "seoTitle": "EMI कैलकुलेटर",
+            "seoDescription": "लोन किस्तें गिनें।",
+            "seoKeywords": "emi कैलकुलेटर, लोन कैलकुलेटर",
+            "seoH1": "EMI कैलकुलेटर"
+        },
+        "discount-calculator": {
+            "name": "डिस्काउंट कैलकुलेटर",
+            "description": "डिस्काउंट राशि और फाइनल कीमत गिनें।",
+            "seoTitle": "डिस्काउंट कैलकुलेटर",
+            "seoDescription": "ऑफर में बचत देखें।",
+            "seoKeywords": "डिस्काउंट कैलकुलेटर",
+            "seoH1": "डिस्काउंट कैलकुलेटर"
+        },
+        "instagram-hashtag-generator": {
+            "name": "Instagram हैशटैग जनरेटर",
+            "description": "Instagram के लिए पॉपुलर और संबंधित हैशटैग जनरेट करें।",
+            "seoTitle": "Instagram हैशटैग जनरेटर",
+            "seoDescription": "पोस्ट रीच बढ़ाएँ।",
+            "seoKeywords": "instagram हैशटैग",
+            "seoH1": "Instagram हैशटैग जनरेटर"
+        },
+        "html-to-jsx": {
+            "name": "HTML → JSX",
+            "description": "HTML कोड को React JSX सिंटैक्स में बदलें।",
+            "seoTitle": "HTML से JSX",
+            "seoDescription": "React डेवलपमेंट के लिए।",
+            "seoKeywords": "html to jsx",
+            "seoH1": "HTML → JSX"
+        }
+    },
+    "Common": {
+        "backToTools": "टूल्स पर वापस",
+        "howToUse": "{name} कैसे इस्तेमाल करें",
+        "toolIntro": "यह टूल आपको {description} तेज़ और सुरक्षित तरीके से करने की सुविधा देता है। सारा प्रोसेसिंग आपके ब्राउज़र में होती है।",
+        "keyFeatures": "मुख्य विशेषताएँ",
+        "featureFast": "बिजली जैसी तेज़",
+        "featureSimple": "सरल इंटरफेस",
+        "featureNoInstall": "इंस्टॉल करने की ज़रूरत नहीं",
+        "featureFree": "100% मुफ्त",
+        "featurePrivacy": "प्राइवेसी गारंटीड",
+        "relatedTools": "संबंधित टूल्स",
+        "viewAll": "सभी टूल्स देखें",
+        "whyUse": "इस टूल का उपयोग क्यों करें?",
+        "featureBrowser": "पूरी तरह ब्राउज़र आधारित",
+        "featureNoStorage": "सर्वर पर स्टोरेज नहीं",
+        "featureMobile": "100% मोबाइल कम्पैटिबल",
+        "selectImage": "इमेज चुनें",
+        "selectMultiple": "एक से ज्यादा इमेज चुनें",
+        "dragDrop": "फाइलें यहाँ ड्रैग करें",
+        "supports": "JPG, PNG, WebP, SVG सपोर्ट",
+        "privacyGuaranteed": "प्राइवेसी गारंटीड",
+        "lightningFast": "बिजली जैसी तेज़",
+        "imagesSelected": "{count} इमेज चुनी गई",
+        "clearAll": "सब साफ करें",
+        "addMore": "और जोड़ें",
+        "processing": "प्रोसेसिंग हो रही है...",
+        "processBatch": "बैच प्रोसेस",
+        "applyChanges": "बदलाव लागू करें",
+        "safePrivate": "सुरक्षित & निजी",
+        "localProcessing": "ब्राउज़र में लोकल प्रोसेसिंग",
+        "quality": "क्वालिटी",
+        "targetFormat": "टारगेट फॉर्मेट",
+        "copyString": "रिजल्ट कॉपी करें",
+        "fastSecure": "तेज़ & सुरक्षित",
+        "browserProcessing": "ब्राउज़र प्रोसेसिंग",
+        "noStorage": "डेटा स्टोर नहीं",
+        "mobileFriendly": "100% मोबाइल फ्रेंडली",
+        "settings": "सेटिंग्स",
+        "tipQuality": "टिप: 80% क्वालिटी सबसे अच्छा बैलेंस है",
+        "downloadsAsZip": "ZIP के रूप में डाउनलोड",
+        "base64Output": "Base64 आउटपुट",
+        "tryNow": "अभी आज़माएँ",
+        "copy": "कॉपी",
+        "clear": "साफ करें",
+        "download": "डाउनलोड",
+        "options": "ऑप्शन",
+        "output": "आउटपुट",
+        "input": "इनपुट",
+        "reset": "रीसेट",
+        "shareThisTool": "यह टूल शेयर करें",
+        "copyLink": "लिंक कॉपी करें"
+    },
+    "NavbarCategories": {
+        "Image Tools": "इमेज टूल्स",
+        "Text Tools": "टेक्स्ट टूल्स",
+        "Code & Developer Tools": "कोड & डेवलपर टूल्स",
+        "Converter Tools": "कन्वर्टर",
+        "Utility Tools": "यूटिलिटी टूल्स",
+        "Security & Crypto": "सुरक्षा & क्रिप्टो",
+        "YouTube Tools": "यूट्यूब टूल्स",
+        "Social & Links": "सोशल & लिंक्स",
+        "Calculators": "कैलकुलेटर",
+        "Convert": "कन्वर्ट"
+    },
+    "TextTools": {
+        "editor": "एडिटर",
+        "placeholder": "यहाँ टेक्स्ट पेस्ट करें या टाइप करें...",
+        "download": "डाउनलोड",
+        "copy": "कॉपी",
+        "clear": "साफ करें",
+        "topKeywords": "सबसे ज्यादा इस्तेमाल शब्द",
+        "quickTransformers": "तेज़ टूल्स",
+        "allCaps": "सब बड़े अक्षर",
+        "uppercase": "बड़े अक्षर",
+        "mirrorMode": "मिरर टेक्स्ट",
+        "reverseText": "टेक्स्ट उल्टा",
+        "allSmall": "सब छोटे अक्षर",
+        "lowercase": "छोटे अक्षर",
+        "headlineStyle": "हेडलाइन स्टाइल",
+        "titleCase": "टाइटल केस",
+        "naturalFlow": "प्राकृतिक प्रवाह",
+        "sentenceCase": "वाक्य केस",
+        "fixSpacing": "स्पेसिंग ठीक करें",
+        "removeExtraSpaces": "अतिरिक्त स्पेस हटाएँ",
+        "joinText": "लाइन जोड़ें",
+        "removeLineBreaks": "लाइन ब्रेक हटाएँ",
+        "findReplace": "खोजें & बदलें",
+        "find": "खोजें",
+        "replaceWith": "इससे बदलें",
+        "count": "मिला: {count}",
+        "replaceAll": "सब बदलें",
+        "words": "शब्द",
+        "characters": "अक्षर",
+        "sentences": "वाक्य",
+        "paragraphs": "पैराग्राफ",
+        "lines": "लाइन",
+        "readTime": "पढ़ने का समय",
+        "input": "इनपुट",
+        "reset": "रीसेट",
+        "pastePlaceholder": "यहाँ टेक्स्ट पेस्ट करें...",
+        "options": "ऑप्शन",
+        "findLabel": "खोजें",
+        "replaceLabel": "बदलें",
+        "useRegex": "रेगेक्स इस्तेमाल करें",
+        "caseSensitive": "केस सेंसिटिव",
+        "noConfig": "कोई सेटिंग नहीं",
+        "runTool": "प्रोसेस करें",
+        "output": "आउटपुट",
+        "resultsPlaceholder": "रिजल्ट यहाँ दिखेंगे",
+        "italicConverter": "इटैलिक टेक्स्ट",
+        "strikethrough": "स्ट्राइकथ्रू",
+        "sortAZ": "A-Z सॉर्ट",
+        "removeDuplicates": "डुप्लिकेट हटाएँ",
+        "textTool": "टेक्स्ट टूल"
+    },
+    "YouTubeTools": {
+        "autoplay": "ऑटोप्ले",
+        "loop": "लूप",
+        "hideControls": "कंट्रोल छिपाएँ",
+        "startTime": "शुरू समय",
+        "startTimePlaceholder": "उदा. 1मि30से",
+        "configuration": "एम्बेड ऑप्शन",
+        "enterTopic": "टॉपिक डालें",
+        "videoUrl": "YouTube URL",
+        "topicPlaceholder": "उदा. वेब डेवलपमेंट",
+        "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+        "fetchThumbnails": "थंबनेल लाएँ",
+        "generateNow": "जनरेट करें",
+        "growthTip": "प्रो टिप",
+        "tipText": "अच्छे थंबनेल और टैग क्लिक 40% तक बढ़ा सकते हैं।",
+        "generatedOutput": "रिजल्ट",
+        "qualityLabel": "{quality} क्वालिटी",
+        "downloadImage": "डाउनलोड",
+        "seoTags": "सुझाए गए टैग",
+        "copyAll": "सब कॉपी करें",
+        "generatedCode": "एम्बेड कोड",
+        "generatedLink": "जनरेटेड लिंक",
+        "copy": "कॉपी",
+        "openLink": "लिंक खोलें",
+        "inputRequired": "YouTube URL डालें",
+        "resultsPlaceholder": "रिजल्ट यहाँ दिखेंगे",
+        "duration": "अवधि",
+        "embedCode": "एम्बेड कोड"
+    },
+    "Footer": {
+        "topCategories": "पॉपुलर कैटेगरी",
+        "resources": "रिसोर्सेज़",
+        "aboutUs": "हमारे बारे में",
+        "contact": "संपर्क करें",
+        "privacyPolicy": "प्राइवेसी पॉलिसी",
+        "termsOfService": "सर्विस की शर्तें",
+        "ourMission": "हमारा मिशन",
+        "missionStatement": "सबके लिए मुफ्त, तेज़ और प्राइवेट ऑनलाइन टूल्स — बिना विज्ञापन या ट्रैकिंग के।",
+        "securePrivate": "सुरक्षित & प्राइवेट",
+        "allRightsReserved": "सभी अधिकार सुरक्षित।"
+    },
+    "Share": {
+        "shareThisTool": "यह टूल शेयर करें",
+        "linkCopied": "लिंक कॉपी हो गया!",
+        "copyLink": "लिंक कॉपी करें",
+        "shareOn": "{network} पर शेयर करें"
+    },
+    "ToolActions": {
+        "operationSuccessful": "सफल!",
+        "readyForDownload": "डाउनलोड के लिए तैयार",
+        "startNew": "नया शुरू करें",
+        "downloadNow": "अभी डाउनलोड करें",
+        "uploadFile": "{type} अपलोड करें",
+        "dragDrop": "ड्रैग एंड ड्रॉप",
+        "chooseFile": "फाइल चुनें",
+        "processing": "प्रोसेसिंग हो रही है...",
+        "convertTo": "{format} में कन्वर्ट करें",
+        "mergeFiles": "फाइलें मर्ज करें",
+        "splitFile": "फाइल स्प्लिट करें",
+        "addMore": "और जोड़ें",
+        "clearAll": "सब साफ करें",
+        "filesSelected": "{count} फाइलें चुनी गई",
+        "pasteBase64": "Base64 पेस्ट करें",
+        "batchReady": "बैच तैयार"
+    }
+}

@@ -1,0 +1,1164 @@
+{
+    "HomePage": {
+        "title": "免费开发者工具",
+        "description": "日常任务的简单、快速、安全工具集合。",
+        "noAds": "无广告、无跟踪，只有工具。",
+        "toolsCount": "{count} 个工具"
+    },
+    "App": {
+        "name": "AYNZO",
+        "nameHighlight": "TOOLS"
+    },
+    "Navigation": {
+        "more": "更多",
+        "searchPlaceholder": "搜索工具...",
+        "mobileMenu": "菜单",
+        "home": "首页",
+        "tools": "工具"
+    },
+    "Categories": {
+        "Image Tools": "图像工具",
+        "Text Tools": "文本工具",
+        "Calculator Tools": "计算器",
+        "Converter Tools": "转换器",
+        "Time & Date Tools": "时间与日期",
+        "Web Tools": "网页工具",
+        "Dev Tools": "开发工具",
+        "Code & Developer Tools": "代码与开发工具",
+        "Security & Crypto Tools": "安全与加密",
+        "Social Media & SEO Tools": "SEO与社交媒体",
+        "Miscellaneous Tools": "其他",
+        "Generators": "生成器",
+        "CSS Tools": "CSS工具",
+        "Color Tools": "颜色工具",
+        "JSON Tools": "JSON工具",
+        "Random Generators": "随机生成器",
+        "image": "图像工具",
+        "text": "文本工具",
+        "developer": "代码与开发工具",
+        "seo": "SEO与社交媒体",
+        "youtube": "YouTube工具",
+        "social": "社交与链接",
+        "security": "安全与加密",
+        "crypto": "安全与加密",
+        "converter": "转换器",
+        "utility": "实用工具",
+        "pdf": "PDF工具",
+        "calculator": "计算器",
+        "Security & Crypto": "安全与加密",
+        "Converters": "转换器",
+        "SEO & Web Tools": "SEO与社交媒体",
+        "Utility Tools": "实用工具",
+        "YouTube Tools": "YouTube工具",
+        "Social & Links": "社交与链接",
+        "Calculators": "计算器",
+        "web": "网页工具",
+        "Convert": "转换"
+    },
+    "Tools": {
+        "tryNow": "立即尝试",
+        "relatedTools": "相关工具",
+        "viewAll": "查看所有工具",
+        "backToTools": "返回工具",
+        "image-compressor": {
+            "name": "图像压缩器",
+            "description": "无损压缩JPG、PNG、WebP图像。",
+            "seoTitle": "图像压缩器 - 免费在线工具",
+            "seoDescription": "无损压缩图像。100%免费、快速、安全。",
+            "seoKeywords": "图像压缩, 图片压缩, 免费工具",
+            "seoH1": "图像压缩器"
+        },
+        "image-resizer": {
+            "name": "图像大小调整",
+            "description": "精确像素或百分比调整图像大小。",
+            "seoTitle": "图像大小调整 - 免费在线工具",
+            "seoDescription": "轻松调整图像大小。100%免费且安全。",
+            "seoKeywords": "图像大小调整, 图片缩放",
+            "seoH1": "图像大小调整"
+        },
+        "jpg-to-png": {
+            "name": "JPG → PNG",
+            "description": "将JPG图像转换为支持透明背景的PNG。",
+            "seoTitle": "JPG转PNG转换器 - 免费工具",
+            "seoDescription": "将JPG转换为透明PNG。100%免费。",
+            "seoKeywords": "jpg to png, jpg png 转换",
+            "seoH1": "JPG → PNG"
+        },
+        "png-to-jpg": {
+            "name": "PNG → JPG",
+            "description": "即时将PNG图像转换为JPG。",
+            "seoTitle": "PNG转JPG转换器 - 免费工具",
+            "seoDescription": "将PNG转换为JPG。100%免费。",
+            "seoKeywords": "png to jpg, png jpg 转换",
+            "seoH1": "PNG → JPG"
+        },
+        "webp-converter": {
+            "name": "WebP转换器",
+            "description": "将图像转换为WebP格式或从WebP转换。",
+            "seoTitle": "WebP转换器 - 免费在线工具",
+            "seoDescription": "WebP转换简单。100%免费。",
+            "seoKeywords": "webp 转换, webp jpg png",
+            "seoH1": "WebP转换器"
+        },
+        "image-format-converter": {
+            "name": "图像格式转换器",
+            "description": "在JPG、PNG、WebP等格式之间转换。",
+            "seoTitle": "图像格式转换器 - 免费工具",
+            "seoDescription": "在线更改图像格式。100%免费。",
+            "seoKeywords": "图像格式转换, 格式更改",
+            "seoH1": "图像格式转换器"
+        },
+        "image-to-base64": {
+            "name": "图像 → Base64",
+            "description": "将图像转换为用于代码嵌入的Base64字符串。",
+            "seoTitle": "图像转Base64",
+            "seoDescription": "将图像转换为Base64。100%免费。",
+            "seoKeywords": "image to base64, base64 编码器",
+            "seoH1": "图像 → Base64"
+        },
+        "image-cropper": {
+            "name": "图像裁剪",
+            "description": "使用自定义比例在线裁剪图像。",
+            "seoTitle": "图像裁剪 - 免费工具",
+            "seoDescription": "按需裁剪图像。100%免费。",
+            "seoKeywords": "图像裁剪, crop image online",
+            "seoH1": "图像裁剪"
+        },
+        "flip-image": {
+            "name": "图像翻转",
+            "description": "水平或垂直翻转图像。",
+            "seoTitle": "图像翻转 - 免费工具",
+            "seoDescription": "即时翻转图像。100%免费。",
+            "seoKeywords": "图像翻转, flip image",
+            "seoH1": "图像翻转"
+        },
+        "rotate-image": {
+            "name": "图像旋转",
+            "description": "将图像旋转90、180或270度。",
+            "seoTitle": "图像旋转 - 免费工具",
+            "seoDescription": "轻松旋转图像。100%免费。",
+            "seoKeywords": "图像旋转, rotate image",
+            "seoH1": "图像旋转"
+        },
+        "image-enlarger": {
+            "name": "图像放大器",
+            "description": "无损放大小型图像。",
+            "seoTitle": "图像放大器 - 免费工具",
+            "seoDescription": "最大放大4倍。100%免费。",
+            "seoKeywords": "图像放大, upscale image",
+            "seoH1": "图像放大器"
+        },
+        "image-brightness": {
+            "name": "图像亮度调整",
+            "description": "调整图像亮度。",
+            "seoTitle": "亮度调整",
+            "seoDescription": "增加或减少亮度。100%免费。",
+            "seoKeywords": "图像亮度, brightness adjust",
+            "seoH1": "亮度调整"
+        },
+        "image-contrast": {
+            "name": "图像对比度调整",
+            "description": "调整图像对比度。",
+            "seoTitle": "对比度调整",
+            "seoDescription": "提升对比度。100%免费。",
+            "seoKeywords": "图像对比度, contrast adjust",
+            "seoH1": "对比度调整"
+        },
+        "grayscale-image": {
+            "name": "灰度转换",
+            "description": "将彩色图像转换为黑白。",
+            "seoTitle": "灰度转换器",
+            "seoDescription": "即时转换为黑白。100%免费。",
+            "seoKeywords": "灰度, 黑白",
+            "seoH1": "灰度转换"
+        },
+        "blur-image": {
+            "name": "图像模糊",
+            "description": "为图像添加模糊效果。",
+            "seoTitle": "图像模糊工具",
+            "seoDescription": "应用高斯模糊。100%免费。",
+            "seoKeywords": "图像模糊, blur image",
+            "seoH1": "图像模糊"
+        },
+        "sepia-converter": {
+            "name": "棕调滤镜",
+            "description": "为照片应用复古棕调效果。",
+            "seoTitle": "棕调滤镜工具",
+            "seoDescription": "经典棕调。100%免费。",
+            "seoKeywords": "棕调滤镜, 复古效果",
+            "seoH1": "棕调效果"
+        },
+        "invert-image": {
+            "name": "颜色反转",
+            "description": "反转图像颜色（负片效果）。",
+            "seoTitle": "颜色反转工具",
+            "seoDescription": "创建负片效果。100%免费。",
+            "seoKeywords": "颜色反转, invert colors",
+            "seoH1": "颜色反转"
+        },
+        "saturate-image": {
+            "name": "饱和度调整",
+            "description": "调整图像颜色饱和度。",
+            "seoTitle": "饱和度调整",
+            "seoDescription": "更改颜色强度。100%免费。",
+            "seoKeywords": "饱和度调整, saturation adjust",
+            "seoH1": "饱和度调整"
+        },
+        "hue-rotate-image": {
+            "name": "色相旋转",
+            "description": "改变色相以获得创意效果。",
+            "seoTitle": "色相旋转工具",
+            "seoDescription": "创意地偏移颜色。100%免费。",
+            "seoKeywords": "色相旋转, hue rotate",
+            "seoH1": "色相旋转"
+        },
+        "image-opacity": {
+            "name": "图像透明度",
+            "description": "调整图像透明度/不透明度。",
+            "seoTitle": "图像透明度工具",
+            "seoDescription": "使图像透明。100%免费。",
+            "seoKeywords": "图像透明度, opacity adjust",
+            "seoH1": "透明度调整"
+        },
+        "round-corners-image": {
+            "name": "圆角",
+            "description": "为图像添加圆角。",
+            "seoTitle": "圆角工具",
+            "seoDescription": "创建圆角图像。100%免费。",
+            "seoKeywords": "圆角, rounded corners",
+            "seoH1": "圆角"
+        },
+        "image-border": {
+            "name": "图像边框",
+            "description": "为图像添加彩色边框。",
+            "seoTitle": "添加边框",
+            "seoDescription": "自定义边框。100%免费。",
+            "seoKeywords": "图像边框, image border",
+            "seoH1": "添加边框"
+        },
+        "image-shadow": {
+            "name": "图像阴影",
+            "description": "为图像添加投影阴影。",
+            "seoTitle": "阴影工具",
+            "seoDescription": "真实阴影。100%免费。",
+            "seoKeywords": "图像阴影, drop shadow",
+            "seoH1": "添加阴影"
+        },
+        "pixelate-image": {
+            "name": "像素化",
+            "description": "像素化图像以隐藏细节或创作艺术。",
+            "seoTitle": "像素化工具",
+            "seoDescription": "应用像素效果。100%免费。",
+            "seoKeywords": "像素化, pixelate image",
+            "seoH1": "图像像素化"
+        },
+        "svg-to-png": {
+            "name": "SVG → PNG",
+            "description": "将SVG矢量转换为PNG图像。",
+            "seoTitle": "SVG转PNG",
+            "seoDescription": "将SVG转换为PNG。100%免费。",
+            "seoKeywords": "svg to png, svg 转换",
+            "seoH1": "SVG → PNG"
+        },
+        "png-to-svg": {
+            "name": "PNG → SVG",
+            "description": "将PNG光栅转换为SVG矢量。",
+            "seoTitle": "PNG转SVG",
+            "seoDescription": "矢量化PNG。100%免费。",
+            "seoKeywords": "png to svg, vectorize image",
+            "seoH1": "PNG → SVG"
+        },
+        "webp-to-jpg": {
+            "name": "WebP → JPG",
+            "description": "将WebP转换为标准JPG。",
+            "seoTitle": "WebP转JPG",
+            "seoDescription": "将WebP转换为JPG。100%免费。",
+            "seoKeywords": "webp to jpg",
+            "seoH1": "WebP → JPG"
+        },
+        "webp-to-png": {
+            "name": "WebP → PNG",
+            "description": "将WebP转换为透明PNG。",
+            "seoTitle": "WebP转PNG",
+            "seoDescription": "支持透明转换。",
+            "seoKeywords": "webp to png",
+            "seoH1": "WebP → PNG"
+        },
+        "jpg-to-webp": {
+            "name": "JPG → WebP",
+            "description": "将JPG转换为现代WebP格式。",
+            "seoTitle": "JPG转WebP",
+            "seoDescription": "使用WebP减小文件大小。",
+            "seoKeywords": "jpg to webp",
+            "seoH1": "JPG → WebP"
+        },
+        "png-to-webp": {
+            "name": "PNG → WebP",
+            "description": "将PNG转换为WebP格式。",
+            "seoTitle": "PNG转WebP",
+            "seoDescription": "支持透明WebP。",
+            "seoKeywords": "png to webp",
+            "seoH1": "PNG → WebP"
+        },
+        "base64-to-image": {
+            "name": "Base64 → 图像",
+            "description": "将Base64字符串转换回图像文件。",
+            "seoTitle": "Base64转图像解码器",
+            "seoDescription": "将Base64解码为图像。100%免费。",
+            "seoKeywords": "base64 to image",
+            "seoH1": "Base64 → 图像"
+        },
+        "pdf-to-word": {
+            "name": "PDF → Word",
+            "description": "将PDF文档转换为可编辑的Word文件。",
+            "seoTitle": "PDF转Word",
+            "seoDescription": "保留格式转换为DOCX。",
+            "seoKeywords": "pdf to word, pdf 转换",
+            "seoH1": "PDF → Word"
+        },
+        "word-counter": {
+            "name": "字数统计",
+            "description": "统计字数、字符、句子、段落。",
+            "seoTitle": "字数统计工具",
+            "seoDescription": "准确的字数和字符统计。",
+            "seoKeywords": "字数统计, word counter",
+            "seoH1": "字数统计"
+        },
+        "character-counter": {
+            "name": "字符统计",
+            "description": "统计字符（含/不含空格）。",
+            "seoTitle": "字符统计",
+            "seoDescription": "适合微博、短信等。",
+            "seoKeywords": "字符统计",
+            "seoH1": "字符统计"
+        },
+        "text-case-converter": {
+            "name": "大小写转换",
+            "description": "将文本转换为大写、小写、标题等。",
+            "seoTitle": "大小写转换",
+            "seoDescription": "多种文本转换选项。",
+            "seoKeywords": "大小写转换, uppercase lowercase",
+            "seoH1": "大小写转换"
+        },
+        "remove-line-breaks": {
+            "name": "移除换行",
+            "description": "从文本中移除所有换行。",
+            "seoTitle": "移除换行工具",
+            "seoDescription": "清理文本。",
+            "seoKeywords": "移除换行",
+            "seoH1": "移除换行"
+        },
+        "italic-text": {
+            "name": "斜体文本生成",
+            "description": "使用Unicode生成斜体文本。",
+            "seoTitle": "斜体文本生成",
+            "seoDescription": "社交媒体用斜体字。",
+            "seoKeywords": "斜体文本, fancy text",
+            "seoH1": "斜体文本生成"
+        },
+        "strikethrough-text": {
+            "name": "删除线文本",
+            "description": "生成带删除线的文本。",
+            "seoTitle": "删除线文本生成",
+            "seoDescription": "给文本加删除线。",
+            "seoKeywords": "删除线文本",
+            "seoH1": "删除线文本"
+        },
+        "underline-text": {
+            "name": "下划线文本",
+            "description": "使用Unicode生成下划线文本。",
+            "seoTitle": "下划线文本生成",
+            "seoDescription": "下划线文字。",
+            "seoKeywords": "下划线文本",
+            "seoH1": "下划线文本"
+        },
+        "small-text": {
+            "name": "小文字生成",
+            "description": "生成小号下标/上标文字。",
+            "seoTitle": "小文字生成",
+            "seoDescription": "小号文字。",
+            "seoKeywords": "小文字, tiny text",
+            "seoH1": "小文字生成"
+        },
+        "upside-down-text": {
+            "name": "倒置文本",
+            "description": "将文本倒置。",
+            "seoTitle": "倒置文本生成",
+            "seoDescription": "趣味倒置文字。",
+            "seoKeywords": "倒置文本, upside down text",
+            "seoH1": "倒置文本生成"
+        },
+        "mirror-text": {
+            "name": "镜像文本",
+            "description": "创建镜像文本。",
+            "seoTitle": "镜像文本生成",
+            "seoDescription": "镜像文字。",
+            "seoKeywords": "镜像文本, mirror text",
+            "seoH1": "镜像文本生成"
+        },
+        "duplicate-line-remover": {
+            "name": "移除重复行",
+            "description": "从文本或列表中移除重复行。",
+            "seoTitle": "重复移除工具",
+            "seoDescription": "清理列表。",
+            "seoKeywords": "移除重复",
+            "seoH1": "移除重复行"
+        },
+        "sort-alphabetically": {
+            "name": "字母排序",
+            "description": "按字母顺序排序行。",
+            "seoTitle": "字母排序",
+            "seoDescription": "将列表按A-Z或Z-A排序。",
+            "seoKeywords": "字母排序",
+            "seoH1": "字母排序"
+        },
+        "text-replace": {
+            "name": "查找替换",
+            "description": "搜索并替换文本。",
+            "seoTitle": "查找替换工具",
+            "seoDescription": "强大的文本替换。",
+            "seoKeywords": "查找替换, find replace",
+            "seoH1": "查找替换"
+        },
+        "whitespace-remover": {
+            "name": "移除多余空格",
+            "description": "移除多余空格、制表符和换行。",
+            "seoTitle": "移除多余空格",
+            "seoDescription": "清理杂乱文本。",
+            "seoKeywords": "空格移除",
+            "seoH1": "移除多余空格"
+        },
+        "word-frequency": {
+            "name": "词频统计",
+            "description": "分析文本中最常用的词。",
+            "seoTitle": "词频分析",
+            "seoDescription": "显示词语使用频率。",
+            "seoKeywords": "词频, keyword density",
+            "seoH1": "词频统计"
+        },
+        "find-replace": {
+            "name": "高级查找替换",
+            "description": "支持正则表达式的高级查找替换。",
+            "seoTitle": "高级查找替换",
+            "seoDescription": "使用正则表达式的强大替换。",
+            "seoKeywords": "regex 查找替换",
+            "seoH1": "高级查找替换"
+        },
+        "json-formatter": {
+            "name": "JSON格式化",
+            "description": "格式化、美化和验证JSON数据。",
+            "seoTitle": "JSON格式化与验证器",
+            "seoDescription": "美化显示JSON。",
+            "seoKeywords": "json 格式化, json beautifier",
+            "seoH1": "JSON格式化"
+        },
+        "url-encoder-decoder": {
+            "name": "URL编码/解码",
+            "description": "编码或解码URL。",
+            "seoTitle": "URL编码解码器",
+            "seoDescription": "URL百分号编码。",
+            "seoKeywords": "url encode decode",
+            "seoH1": "URL编码/解码"
+        },
+        "html-formatter": {
+            "name": "HTML格式化",
+            "description": "格式化和美化HTML代码。",
+            "seoTitle": "HTML格式化",
+            "seoDescription": "美化显示HTML。",
+            "seoKeywords": "html 格式化",
+            "seoH1": "HTML格式化"
+        },
+        "css-formatter": {
+            "name": "CSS格式化",
+            "description": "格式化和美化CSS代码。",
+            "seoTitle": "CSS格式化",
+            "seoDescription": "整理CSS。",
+            "seoKeywords": "css 格式化",
+            "seoH1": "CSS格式化"
+        },
+        "javascript-formatter": {
+            "name": "JavaScript格式化",
+            "description": "格式化和美化JavaScript代码。",
+            "seoTitle": "JavaScript格式化",
+            "seoDescription": "美化显示JS代码。",
+            "seoKeywords": "js 格式化",
+            "seoH1": "JavaScript格式化"
+        },
+        "xml-formatter": {
+            "name": "XML格式化",
+            "description": "格式化和美化XML代码。",
+            "seoTitle": "XML格式化",
+            "seoDescription": "整理XML。",
+            "seoKeywords": "xml 格式化",
+            "seoH1": "XML格式化"
+        },
+        "sql-formatter": {
+            "name": "SQL格式化",
+            "description": "格式化和美化SQL查询。",
+            "seoTitle": "SQL格式化",
+            "seoDescription": "使SQL更易读。",
+            "seoKeywords": "sql 格式化",
+            "seoH1": "SQL格式化"
+        },
+        "markdown-to-html": {
+            "name": "Markdown → HTML",
+            "description": "将Markdown转换为HTML代码。",
+            "seoTitle": "Markdown转HTML",
+            "seoDescription": "将MD转换为HTML。",
+            "seoKeywords": "markdown to html",
+            "seoH1": "Markdown → HTML"
+        },
+        "html-to-markdown": {
+            "name": "HTML → Markdown",
+            "description": "将HTML转换为Markdown格式。",
+            "seoTitle": "HTML转Markdown",
+            "seoDescription": "将HTML转换为干净Markdown。",
+            "seoKeywords": "html to markdown",
+            "seoH1": "HTML → Markdown"
+        },
+        "csv-to-json": {
+            "name": "CSV → JSON",
+            "description": "将CSV数据转换为JSON格式。",
+            "seoTitle": "CSV转JSON",
+            "seoDescription": "将CSV转换为JSON。",
+            "seoKeywords": "csv to json",
+            "seoH1": "CSV → JSON"
+        },
+        "json-to-csv": {
+            "name": "JSON → CSV",
+            "description": "将JSON数据转换为CSV格式。",
+            "seoTitle": "JSON转CSV",
+            "seoDescription": "将JSON转换为CSV。",
+            "seoKeywords": "json to csv",
+            "seoH1": "JSON → CSV"
+        },
+        "code-minifier": {
+            "name": "代码压缩",
+            "description": "压缩HTML、CSS、JS代码。",
+            "seoTitle": "代码压缩",
+            "seoDescription": "减小文件体积。",
+            "seoKeywords": "代码压缩, minify code",
+            "seoH1": "代码压缩"
+        },
+        "diff-checker": {
+            "name": "文本差异对比",
+            "description": "对比两个文本并高亮差异。",
+            "seoTitle": "文本差异对比",
+            "seoDescription": "检测文本间差异。",
+            "seoKeywords": "diff checker, 文本对比",
+            "seoH1": "文本差异对比"
+        },
+        "unit-converter": {
+            "name": "单位转换器",
+            "description": "不同测量单位之间转换。",
+            "seoTitle": "单位转换器",
+            "seoDescription": "长度、重量、温度等。",
+            "seoKeywords": "单位转换",
+            "seoH1": "单位转换器"
+        },
+        "color-converter": {
+            "name": "颜色转换器",
+            "description": "在HEX、RGB、HSL之间转换。",
+            "seoTitle": "颜色转换器",
+            "seoDescription": "转换颜色代码。",
+            "seoKeywords": "颜色转换, hex rgb",
+            "seoH1": "颜色转换器"
+        },
+        "binary-to-text": {
+            "name": "二进制 → 文本",
+            "description": "将二进制代码转换为文本。",
+            "seoTitle": "二进制转文本",
+            "seoDescription": "将二进制解码为ASCII。",
+            "seoKeywords": "binary to text",
+            "seoH1": "二进制 → 文本"
+        },
+        "hex-to-decimal": {
+            "name": "十六进制 → 十进制",
+            "description": "将十六进制数转换为十进制。",
+            "seoTitle": "十六进制转十进制",
+            "seoDescription": "转换hex数字。",
+            "seoKeywords": "hex to decimal",
+            "seoH1": "十六进制 → 十进制"
+        },
+        "roman-numeral": {
+            "name": "罗马数字转换器",
+            "description": "阿拉伯数字与罗马数字互转。",
+            "seoTitle": "罗马数字转换器",
+            "seoDescription": "转换为罗马数字。",
+            "seoKeywords": "罗马数字转换",
+            "seoH1": "罗马数字转换器"
+        },
+        "random-number": {
+            "name": "随机数生成器",
+            "description": "在范围内生成随机数。",
+            "seoTitle": "随机数生成器",
+            "seoDescription": "真正的随机数。",
+            "seoKeywords": "随机数生成器",
+            "seoH1": "随机数生成器"
+        },
+        "random-string": {
+            "name": "随机字符串生成器",
+            "description": "生成随机字符串和强密码。",
+            "seoTitle": "随机字符串与密码生成器",
+            "seoDescription": "创建强密码。",
+            "seoKeywords": "随机字符串, 密码生成器",
+            "seoH1": "随机字符串生成器"
+        },
+        "random-color": {
+            "name": "随机颜色生成器",
+            "description": "生成带HEX码的随机颜色。",
+            "seoTitle": "随机颜色生成器",
+            "seoDescription": "获取随机颜色。",
+            "seoKeywords": "随机颜色生成器",
+            "seoH1": "随机颜色生成器"
+        },
+        "random-date": {
+            "name": "随机日期生成器",
+            "description": "生成随机日期。",
+            "seoTitle": "随机日期生成器",
+            "seoDescription": "测试用随机日期。",
+            "seoKeywords": "随机日期生成器",
+            "seoH1": "随机日期生成器"
+        },
+        "random-ip": {
+            "name": "随机IP生成器",
+            "description": "生成随机IP地址。",
+            "seoTitle": "随机IP生成器",
+            "seoDescription": "有效随机IP。",
+            "seoKeywords": "随机 ip 生成器",
+            "seoH1": "随机IP生成器"
+        },
+        "password-generator": {
+            "name": "密码生成器",
+            "description": "生成强大且安全的密码。",
+            "seoTitle": "强大密码生成器",
+            "seoDescription": "带选项的安全密码。",
+            "seoKeywords": "密码生成器, password generator",
+            "seoH1": "密码生成器"
+        },
+        "bcrypt-generator": {
+            "name": "Bcrypt生成器",
+            "description": "为密码生成Bcrypt哈希。",
+            "seoTitle": "Bcrypt哈希生成器",
+            "seoDescription": "安全的Bcrypt哈希。",
+            "seoKeywords": "bcrypt 生成器",
+            "seoH1": "Bcrypt生成器"
+        },
+        "base64-encoder": {
+            "name": "Base64编码/解码",
+            "description": "编码和解码Base64字符串。",
+            "seoTitle": "Base64编码解码器",
+            "seoDescription": "Base64处理。",
+            "seoKeywords": "base64 encode decode",
+            "seoH1": "Base64编码/解码"
+        },
+        "md5-hash": {
+            "name": "MD5哈希生成器",
+            "description": "生成MD5校验和。",
+            "seoTitle": "MD5生成器",
+            "seoDescription": "创建MD5哈希。",
+            "seoKeywords": "md5 生成器",
+            "seoH1": "MD5生成器"
+        },
+        "sha256-hash": {
+            "name": "SHA-256哈希生成器",
+            "description": "生成SHA-256哈希。",
+            "seoTitle": "SHA-256生成器",
+            "seoDescription": "安全的加密哈希。",
+            "seoKeywords": "sha256 生成器",
+            "seoH1": "SHA-256生成器"
+        },
+        "sha512-hash": {
+            "name": "SHA-512哈希生成器",
+            "description": "生成SHA-512哈希。",
+            "seoTitle": "SHA-512生成器",
+            "seoDescription": "最安全的SHA哈希。",
+            "seoKeywords": "sha512 生成器",
+            "seoH1": "SHA-512生成器"
+        },
+        "uuid-generator": {
+            "name": "UUID生成器",
+            "description": "生成UUID v4标识符。",
+            "seoTitle": "UUID生成器",
+            "seoDescription": "创建唯一ID。",
+            "seoKeywords": "uuid 生成器",
+            "seoH1": "UUID生成器"
+        },
+        "qr-code-generator": {
+            "name": "二维码生成器",
+            "description": "为链接、文本等生成二维码。",
+            "seoTitle": "二维码生成器",
+            "seoDescription": "自定义二维码。",
+            "seoKeywords": "qr code 生成器",
+            "seoH1": "二维码生成器"
+        },
+        "lorem-ipsum": {
+            "name": "Lorem Ipsum生成器",
+            "description": "生成用于布局的占位文本。",
+            "seoTitle": "Lorem Ipsum生成器",
+            "seoDescription": "多语言占位文本。",
+            "seoKeywords": "lorem ipsum",
+            "seoH1": "Lorem Ipsum生成器"
+        },
+        "youtube-thumbnail-downloader": {
+            "name": "YouTube缩略图下载器",
+            "description": "下载YouTube视频的高质量缩略图。",
+            "seoTitle": "YouTube缩略图下载器",
+            "seoDescription": "获取YouTube高清缩略图。",
+            "seoKeywords": "youtube 缩略图 下载",
+            "seoH1": "YouTube缩略图下载器"
+        },
+        "youtube-tag-generator": {
+            "name": "YouTube标签生成器",
+            "description": "生成优化标签以提升排名。",
+            "seoTitle": "YouTube标签生成器",
+            "seoDescription": "相关标签提升SEO。",
+            "seoKeywords": "youtube 标签 生成器",
+            "seoH1": "YouTube标签生成器"
+        },
+        "youtube-title-generator": {
+            "name": "YouTube标题生成器",
+            "description": "生成吸引人且SEO友好的标题。",
+            "seoTitle": "YouTube标题生成器",
+            "seoDescription": "好标题增加点击。",
+            "seoKeywords": "youtube 标题 生成器",
+            "seoH1": "YouTube标题生成器"
+        },
+        "youtube-embed-code-generator": {
+            "name": "YouTube嵌入代码生成器",
+            "description": "生成自定义嵌入代码。",
+            "seoTitle": "YouTube嵌入生成器",
+            "seoDescription": "支持自动播放、循环等。",
+            "seoKeywords": "youtube embed code",
+            "seoH1": "YouTube嵌入生成器"
+        },
+        "youtube-timestamp-link-generator": {
+            "name": "YouTube时间戳链接",
+            "description": "创建从特定时间开始的链接。",
+            "seoTitle": "YouTube时间戳链接生成器",
+            "seoDescription": "从精确位置开始视频。",
+            "seoKeywords": "youtube timestamp link",
+            "seoH1": "YouTube时间戳链接"
+        },
+        "meta-tag-generator": {
+            "name": "元标签生成器",
+            "description": "生成SEO友好的元标签。",
+            "seoTitle": "元标签生成器",
+            "seoDescription": "标题和描述标签。",
+            "seoKeywords": "meta tag 生成器",
+            "seoH1": "元标签生成器"
+        },
+        "open-graph-generator": {
+            "name": "Open Graph生成器",
+            "description": "生成用于社交分享的Open Graph标签。",
+            "seoTitle": "Open Graph生成器",
+            "seoDescription": "在社交媒体中更好显示。",
+            "seoKeywords": "open graph 生成器",
+            "seoH1": "Open Graph生成器"
+        },
+        "twitter-card-generator": {
+            "name": "Twitter Card生成器",
+            "description": "生成Twitter Card元标签。",
+            "seoTitle": "Twitter Card生成器",
+            "seoDescription": "在Twitter中更好显示。",
+            "seoKeywords": "twitter card 生成器",
+            "seoH1": "Twitter Card生成器"
+        },
+        "robots-txt-generator": {
+            "name": "robots.txt生成器",
+            "description": "创建robots.txt文件。",
+            "seoTitle": "robots.txt生成器",
+            "seoDescription": "控制爬虫访问。",
+            "seoKeywords": "robots.txt 生成器",
+            "seoH1": "robots.txt生成器"
+        },
+        "xml-sitemap-generator": {
+            "name": "XML站点地图生成器",
+            "description": "为SEO生成XML站点地图。",
+            "seoTitle": "XML站点地图生成器",
+            "seoDescription": "便于页面索引。",
+            "seoKeywords": "xml sitemap 生成器",
+            "seoH1": "XML站点地图生成器"
+        },
+        "keyword-density-checker": {
+            "name": "关键词密度检查器",
+            "description": "分析关键词使用和密度。",
+            "seoTitle": "关键词密度检查器",
+            "seoDescription": "检查关键词频率。",
+            "seoKeywords": "关键词密度",
+            "seoH1": "关键词密度检查器"
+        },
+        "keyword-cleaner": {
+            "name": "关键词清理器",
+            "description": "清理关键词列表。",
+            "seoTitle": "关键词列表清理器",
+            "seoDescription": "移除重复和无用项。",
+            "seoKeywords": "关键词清理器",
+            "seoH1": "关键词清理器"
+        },
+        "long-tail-keyword-generator": {
+            "name": "长尾关键词生成器",
+            "description": "生成长尾关键词变体。",
+            "seoTitle": "长尾关键词生成器",
+            "seoDescription": "扩展种子关键词。",
+            "seoKeywords": "长尾关键词",
+            "seoH1": "长尾关键词"
+        },
+        "slug-generator": {
+            "name": "URL Slug生成器",
+            "description": "将文本转换为SEO友好的URL slug。",
+            "seoTitle": "Slug生成器",
+            "seoDescription": "创建干净可读的URL。",
+            "seoKeywords": "slug 生成器, url slug",
+            "seoH1": "URL Slug生成器"
+        },
+        "google-serp-simulator": {
+            "name": "Google搜索结果预览",
+            "description": "预览页面在Google搜索结果中的显示。",
+            "seoTitle": "Google搜索结果模拟器",
+            "seoDescription": "测试搜索结果预览。",
+            "seoKeywords": "google serp preview",
+            "seoH1": "Google搜索结果预览"
+        },
+        "htaccess-redirect-generator": {
+            "name": ".htaccess重定向生成器",
+            "description": "生成301/302重定向代码。",
+            "seoTitle": ".htaccess重定向生成器",
+            "seoDescription": "创建重定向规则。",
+            "seoKeywords": "htaccess redirect 生成器",
+            "seoH1": ".htaccess重定向生成器"
+        },
+        "my-ip-address": {
+            "name": "我的IP地址",
+            "description": "检查公共IP地址和位置信息。",
+            "seoTitle": "我的IP地址是？",
+            "seoDescription": "查找公共IP。",
+            "seoKeywords": "我的 ip 地址, what is my ip",
+            "seoH1": "我的IP地址"
+        },
+        "browser-info": {
+            "name": "浏览器信息",
+            "description": "获取浏览器和设备信息。",
+            "seoTitle": "浏览器信息工具",
+            "seoDescription": "浏览器、OS、屏幕尺寸等。",
+            "seoKeywords": "浏览器信息, user agent",
+            "seoH1": "浏览器信息"
+        },
+        "screen-resolution-simulator": {
+            "name": "屏幕分辨率测试器",
+            "description": "在不同分辨率下测试网站。",
+            "seoTitle": "屏幕分辨率模拟器",
+            "seoDescription": "不同设备预览。",
+            "seoKeywords": "屏幕分辨率测试器",
+            "seoH1": "屏幕分辨率测试器"
+        },
+        "responsive-checker": {
+            "name": "响应式设计检查器",
+            "description": "检查网站是否移动友好。",
+            "seoTitle": "响应式网站测试器",
+            "seoDescription": "测试响应式。",
+            "seoKeywords": "响应式检查器",
+            "seoH1": "响应式检查器"
+        },
+        "whatsapp-link-generator": {
+            "name": "WhatsApp链接生成器",
+            "description": "创建WhatsApp点击聊天链接。",
+            "seoTitle": "WhatsApp链接生成器",
+            "seoDescription": "生成wa.me链接。",
+            "seoKeywords": "whatsapp 链接 生成器",
+            "seoH1": "WhatsApp链接生成器"
+        },
+        "telegram-link-generator": {
+            "name": "Telegram链接生成器",
+            "description": "创建Telegram用户或频道直接链接。",
+            "seoTitle": "Telegram链接生成器",
+            "seoDescription": "生成t.me链接。",
+            "seoKeywords": "telegram 链接 生成器",
+            "seoH1": "Telegram链接生成器"
+        },
+        "paypal-link-generator": {
+            "name": "PayPal链接生成器",
+            "description": "创建PayPal支付和捐赠链接。",
+            "seoTitle": "PayPal链接生成器",
+            "seoDescription": "PayPal.me和支付链接。",
+            "seoKeywords": "paypal 链接 生成器",
+            "seoH1": "PayPal链接生成器"
+        },
+        "email-validator": {
+            "name": "邮箱验证器",
+            "description": "验证邮箱地址格式。",
+            "seoTitle": "邮箱地址验证器",
+            "seoDescription": "检查邮箱语法。",
+            "seoKeywords": "邮箱验证器",
+            "seoH1": "邮箱验证器"
+        },
+        "url-opener": {
+            "name": "批量URL打开器",
+            "description": "同时打开多个URL。",
+            "seoTitle": "多URL打开器",
+            "seoDescription": "同时打开许多链接。",
+            "seoKeywords": "批量 url 打开器",
+            "seoH1": "批量URL打开器"
+        },
+        "user-agent-parser": {
+            "name": "User Agent解析器",
+            "description": "解析User-Agent字符串。",
+            "seoTitle": "User Agent解析器",
+            "seoDescription": "提取浏览器和设备信息。",
+            "seoKeywords": "user agent 解析器",
+            "seoH1": "User Agent解析器"
+        },
+        "wordpress-password-hash": {
+            "name": "WordPress密码哈希",
+            "description": "生成与WordPress兼容的哈希。",
+            "seoTitle": "WordPress哈希生成器",
+            "seoDescription": "创建phpass哈希。",
+            "seoKeywords": "wordpress password hash",
+            "seoH1": "WordPress密码哈希"
+        },
+        "age-calculator": {
+            "name": "年龄计算器",
+            "description": "精确计算年龄（年、月、日）。",
+            "seoTitle": "年龄计算器",
+            "seoDescription": "从出生日期计算精确年龄。",
+            "seoKeywords": "年龄计算器",
+            "seoH1": "年龄计算器"
+        },
+        "bmi-calculator": {
+            "name": "BMI计算器",
+            "description": "计算身体质量指数和健康状态。",
+            "seoTitle": "BMI计算器",
+            "seoDescription": "检查您的BMI。",
+            "seoKeywords": "bmi 计算器",
+            "seoH1": "BMI计算器"
+        },
+        "percentage-calculator": {
+            "name": "百分比计算器",
+            "description": "计算百分比、增减。",
+            "seoTitle": "百分比计算器",
+            "seoDescription": "多种百分比工具。",
+            "seoKeywords": "百分比计算器",
+            "seoH1": "百分比计算器"
+        },
+        "gst-calculator": {
+            "name": "税费计算器",
+            "description": "计算税额和总价。",
+            "seoTitle": "税费计算器",
+            "seoDescription": "轻松计算税费。",
+            "seoKeywords": "税费计算器",
+            "seoH1": "税费计算器"
+        },
+        "emi-calculator": {
+            "name": "贷款分期计算器",
+            "description": "计算月供和总利息。",
+            "seoTitle": "EMI计算器",
+            "seoDescription": "计算贷款分期。",
+            "seoKeywords": "emi 计算器, 贷款计算器",
+            "seoH1": "EMI计算器"
+        },
+        "discount-calculator": {
+            "name": "折扣计算器",
+            "description": "计算折扣金额和最终价格。",
+            "seoTitle": "折扣计算器",
+            "seoDescription": "查看优惠节省。",
+            "seoKeywords": "折扣计算器",
+            "seoH1": "折扣计算器"
+        },
+        "instagram-hashtag-generator": {
+            "name": "Instagram标签生成器",
+            "description": "为Instagram生成热门和相关标签。",
+            "seoTitle": "Instagram标签生成器",
+            "seoDescription": "增加帖子曝光。",
+            "seoKeywords": "instagram 标签",
+            "seoH1": "Instagram标签生成器"
+        },
+        "html-to-jsx": {
+            "name": "HTML → JSX",
+            "description": "将HTML代码转换为React JSX语法。",
+            "seoTitle": "HTML转JSX",
+            "seoDescription": "用于React开发。",
+            "seoKeywords": "html to jsx",
+            "seoH1": "HTML → JSX"
+        }
+    },
+    "Common": {
+        "backToTools": "返回工具",
+        "howToUse": "{name} 使用方法",
+        "toolIntro": "此工具可让您快速、安全地{description}。所有处理均在浏览器中完成。",
+        "keyFeatures": "主要特性",
+        "featureFast": "超快",
+        "featureSimple": "简洁界面",
+        "featureNoInstall": "无需安装",
+        "featureFree": "100%免费",
+        "featurePrivacy": "隐私保障",
+        "relatedTools": "相关工具",
+        "viewAll": "查看所有工具",
+        "whyUse": "为什么使用此工具",
+        "featureBrowser": "完全浏览器运行",
+        "featureNoStorage": "无服务器存储",
+        "featureMobile": "100%移动端兼容",
+        "selectImage": "选择图像",
+        "selectMultiple": "选择多张图像",
+        "dragDrop": "拖放文件到此处",
+        "supports": "支持JPG、PNG、WebP、SVG",
+        "privacyGuaranteed": "隐私保障",
+        "lightningFast": "超快",
+        "imagesSelected": "已选择 {count} 张图像",
+        "clearAll": "全部清除",
+        "addMore": "添加更多",
+        "processing": "处理中...",
+        "processBatch": "批量处理",
+        "applyChanges": "应用更改",
+        "safePrivate": "安全 & 私密",
+        "localProcessing": "浏览器本地处理",
+        "quality": "质量",
+        "targetFormat": "目标格式",
+        "copyString": "复制结果",
+        "fastSecure": "快速 & 安全",
+        "browserProcessing": "浏览器处理",
+        "noStorage": "无数据存储",
+        "mobileFriendly": "100%移动端友好",
+        "settings": "设置",
+        "tipQuality": "提示：80%质量是最佳平衡",
+        "downloadsAsZip": "ZIP下载",
+        "base64Output": "Base64输出",
+        "tryNow": "立即尝试",
+        "copy": "复制",
+        "clear": "清除",
+        "download": "下载",
+        "options": "选项",
+        "output": "输出",
+        "input": "输入",
+        "reset": "重置",
+        "shareThisTool": "分享此工具",
+        "copyLink": "复制链接"
+    },
+    "NavbarCategories": {
+        "Image Tools": "图像工具",
+        "Text Tools": "文本工具",
+        "Code & Developer Tools": "代码与开发工具",
+        "Converter Tools": "转换器",
+        "Utility Tools": "实用工具",
+        "Security & Crypto": "安全与加密",
+        "YouTube Tools": "YouTube工具",
+        "Social & Links": "社交与链接",
+        "Calculators": "计算器",
+        "Convert": "转换"
+    },
+    "TextTools": {
+        "editor": "编辑器",
+        "placeholder": "在此粘贴或输入文本...",
+        "download": "下载",
+        "copy": "复制",
+        "clear": "清除",
+        "topKeywords": "最常用词",
+        "quickTransformers": "快速工具",
+        "allCaps": "全部大写",
+        "uppercase": "大写",
+        "mirrorMode": "镜像文本",
+        "reverseText": "文本反转",
+        "allSmall": "全部小写",
+        "lowercase": "小写",
+        "headlineStyle": "标题样式",
+        "titleCase": "标题格式",
+        "naturalFlow": "自然流畅",
+        "sentenceCase": "句子格式",
+        "fixSpacing": "修复间距",
+        "removeExtraSpaces": "移除多余空格",
+        "joinText": "合并行",
+        "removeLineBreaks": "移除换行",
+        "findReplace": "查找替换",
+        "find": "查找",
+        "replaceWith": "替换为",
+        "count": "找到：{count}",
+        "replaceAll": "全部替换",
+        "words": "单词",
+        "characters": "字符",
+        "sentences": "句子",
+        "paragraphs": "段落",
+        "lines": "行",
+        "readTime": "阅读时间",
+        "input": "输入",
+        "reset": "重置",
+        "pastePlaceholder": "在此粘贴文本...",
+        "options": "选项",
+        "findLabel": "查找",
+        "replaceLabel": "替换",
+        "useRegex": "使用正则",
+        "caseSensitive": "区分大小写",
+        "noConfig": "无需配置",
+        "runTool": "处理",
+        "output": "输出",
+        "resultsPlaceholder": "结果将显示在这里",
+        "italicConverter": "斜体文本",
+        "strikethrough": "删除线",
+        "sortAZ": "A-Z排序",
+        "removeDuplicates": "移除重复",
+        "textTool": "文本工具"
+    },
+    "YouTubeTools": {
+        "autoplay": "自动播放",
+        "loop": "循环",
+        "hideControls": "隐藏控制",
+        "startTime": "开始时间",
+        "startTimePlaceholder": "例：1分30秒",
+        "configuration": "嵌入选项",
+        "enterTopic": "输入主题",
+        "videoUrl": "YouTube URL",
+        "topicPlaceholder": "例：网页开发",
+        "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+        "fetchThumbnails": "获取缩略图",
+        "generateNow": "生成",
+        "growthTip": "专业提示",
+        "tipText": "好的缩略图和标签可将点击率提高40%。",
+        "generatedOutput": "结果",
+        "qualityLabel": "{quality}质量",
+        "downloadImage": "下载",
+        "seoTags": "推荐标签",
+        "copyAll": "复制全部",
+        "generatedCode": "嵌入代码",
+        "generatedLink": "生成链接",
+        "copy": "复制",
+        "openLink": "打开链接",
+        "inputRequired": "请输入YouTube URL",
+        "resultsPlaceholder": "结果将显示在这里",
+        "duration": "时长",
+        "embedCode": "嵌入代码"
+    },
+    "Footer": {
+        "topCategories": "热门分类",
+        "resources": "资源",
+        "aboutUs": "关于我们",
+        "contact": "联系我们",
+        "privacyPolicy": "隐私政策",
+        "termsOfService": "服务条款",
+        "ourMission": "我们的使命",
+        "missionStatement": "为所有人提供免费、快速、私密的在线工具 — 无广告、无跟踪。",
+        "securePrivate": "安全 & 私密",
+        "allRightsReserved": "保留所有权利。"
+    },
+    "Share": {
+        "shareThisTool": "分享此工具",
+        "linkCopied": "链接已复制！",
+        "copyLink": "复制链接",
+        "shareOn": "在{network}分享"
+    },
+    "ToolActions": {
+        "operationSuccessful": "成功！",
+        "readyForDownload": "下载准备就绪",
+        "startNew": "重新开始",
+        "downloadNow": "立即下载",
+        "uploadFile": "上传{type}",
+        "dragDrop": "拖放",
+        "chooseFile": "选择文件",
+        "processing": "处理中...",
+        "convertTo": "转换为{format}",
+        "mergeFiles": "合并文件",
+        "splitFile": "分割文件",
+        "addMore": "添加更多",
+        "clearAll": "全部清除",
+        "filesSelected": "{count}个文件已选择",
+        "pasteBase64": "粘贴Base64",
+        "batchReady": "批量准备就绪"
+    }
+}

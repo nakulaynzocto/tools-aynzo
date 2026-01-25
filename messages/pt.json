@@ -1,0 +1,1164 @@
+{
+    "HomePage": {
+        "title": "Ferramentas Gratuitas para Desenvolvedores",
+        "description": "Uma coleção de ferramentas simples, rápidas e seguras para suas tarefas diárias.",
+        "noAds": "Sem anúncios, sem rastreamento, apenas ferramentas.",
+        "toolsCount": "{count} Ferramentas"
+    },
+    "App": {
+        "name": "AYNZO",
+        "nameHighlight": "TOOLS"
+    },
+    "Navigation": {
+        "more": "Mais",
+        "searchPlaceholder": "Buscar ferramentas...",
+        "mobileMenu": "Menu",
+        "home": "Início",
+        "tools": "Ferramentas"
+    },
+    "Categories": {
+        "Image Tools": "Ferramentas de Imagem",
+        "Text Tools": "Ferramentas de Texto",
+        "Calculator Tools": "Calculadoras",
+        "Converter Tools": "Conversores",
+        "Time & Date Tools": "Hora e Data",
+        "Web Tools": "Ferramentas Web",
+        "Dev Tools": "Ferramentas Dev",
+        "Code & Developer Tools": "Código e Desenvolvimento",
+        "Security & Crypto Tools": "Segurança e Cripto",
+        "Social Media & SEO Tools": "SEO e Redes Sociais",
+        "Miscellaneous Tools": "Diversos",
+        "Generators": "Geradores",
+        "CSS Tools": "Ferramentas CSS",
+        "Color Tools": "Ferramentas de Cor",
+        "JSON Tools": "Ferramentas JSON",
+        "Random Generators": "Geradores Aleatórios",
+        "image": "Ferramentas de Imagem",
+        "text": "Ferramentas de Texto",
+        "developer": "Código e Desenvolvimento",
+        "seo": "SEO e Redes Sociais",
+        "youtube": "Ferramentas YouTube",
+        "social": "Redes Sociais e Links",
+        "security": "Segurança e Cripto",
+        "crypto": "Segurança e Cripto",
+        "converter": "Conversores",
+        "utility": "Ferramentas Úteis",
+        "pdf": "Ferramentas PDF",
+        "calculator": "Calculadoras",
+        "Security & Crypto": "Segurança e Cripto",
+        "Converters": "Conversores",
+        "SEO & Web Tools": "SEO e Redes Sociais",
+        "Utility Tools": "Ferramentas Úteis",
+        "YouTube Tools": "Ferramentas YouTube",
+        "Social & Links": "Redes Sociais e Links",
+        "Calculators": "Calculadoras",
+        "web": "Ferramentas Web",
+        "Convert": "Converter"
+    },
+    "Tools": {
+        "tryNow": "Experimente agora",
+        "relatedTools": "Ferramentas relacionadas",
+        "viewAll": "Ver todas as ferramentas",
+        "backToTools": "Voltar às ferramentas",
+        "image-compressor": {
+            "name": "Compressor de Imagens",
+            "description": "Comprima imagens JPG, PNG e WebP sem perda de qualidade.",
+            "seoTitle": "Compressor de Imagens - Ferramenta Gratuita Online",
+            "seoDescription": "Comprima imagens sem perda de qualidade. 100% grátis, rápido e seguro.",
+            "seoKeywords": "compressor imagens, comprimir imagem, ferramenta gratuita",
+            "seoH1": "Compressor de Imagens"
+        },
+        "image-resizer": {
+            "name": "Redimensionador de Imagens",
+            "description": "Redimensione imagens para pixels exatos ou porcentagem.",
+            "seoTitle": "Redimensionador de Imagens - Ferramenta Gratuita",
+            "seoDescription": "Mude o tamanho de imagens facilmente. 100% grátis e seguro.",
+            "seoKeywords": "redimensionar imagem, resize image",
+            "seoH1": "Redimensionador de Imagens"
+        },
+        "jpg-to-png": {
+            "name": "JPG para PNG",
+            "description": "Converta imagens JPG para PNG com suporte a fundo transparente.",
+            "seoTitle": "Conversor JPG para PNG - Ferramenta Gratuita",
+            "seoDescription": "Converta JPG para PNG transparente. 100% grátis.",
+            "seoKeywords": "jpg to png, converter jpg png",
+            "seoH1": "JPG para PNG"
+        },
+        "png-to-jpg": {
+            "name": "PNG para JPG",
+            "description": "Converta imagens PNG para JPG instantaneamente.",
+            "seoTitle": "Conversor PNG para JPG - Ferramenta Gratuita",
+            "seoDescription": "Converta PNG para JPG. 100% grátis.",
+            "seoKeywords": "png to jpg, converter png jpg",
+            "seoH1": "PNG para JPG"
+        },
+        "webp-converter": {
+            "name": "Conversor WebP",
+            "description": "Converta imagens para ou do formato WebP para otimização web.",
+            "seoTitle": "Conversor WebP - Ferramenta Gratuita Online",
+            "seoDescription": "Conversão WebP fácil. 100% grátis.",
+            "seoKeywords": "conversor webp, webp jpg png",
+            "seoH1": "Conversor WebP"
+        },
+        "image-format-converter": {
+            "name": "Conversor de Formato de Imagem",
+            "description": "Converta entre JPG, PNG, WebP e outros formatos.",
+            "seoTitle": "Conversor de Formato de Imagem - Ferramenta Gratuita",
+            "seoDescription": "Mude formatos de imagem online. 100% grátis.",
+            "seoKeywords": "conversor formato imagem, mudar formato imagem",
+            "seoH1": "Conversor de Formato de Imagem"
+        },
+        "image-to-base64": {
+            "name": "Imagem para Base64",
+            "description": "Converta imagens em strings Base64 para embutir em código.",
+            "seoTitle": "Imagem para Base64 - Conversor Gratuito",
+            "seoDescription": "Converta imagem para Base64. 100% grátis.",
+            "seoKeywords": "image to base64, base64 encoder",
+            "seoH1": "Imagem para Base64"
+        },
+        "image-cropper": {
+            "name": "Cortador de Imagens",
+            "description": "Corte imagens online com proporções personalizadas.",
+            "seoTitle": "Cortador de Imagens - Ferramenta Gratuita",
+            "seoDescription": "Corte imagens como desejar. 100% grátis.",
+            "seoKeywords": "cortar imagem, crop image online",
+            "seoH1": "Cortador de Imagens"
+        },
+        "flip-image": {
+            "name": "Inverter Imagem",
+            "description": "Inverta imagens horizontal ou verticalmente.",
+            "seoTitle": "Inverter Imagem - Ferramenta Gratuita",
+            "seoDescription": "Inverta imagens instantaneamente. 100% grátis.",
+            "seoKeywords": "inverter imagem, flip image",
+            "seoH1": "Inverter Imagem"
+        },
+        "rotate-image": {
+            "name": "Rotacionar Imagem",
+            "description": "Rotacione imagens em 90, 180 ou 270 graus.",
+            "seoTitle": "Rotacionar Imagem - Ferramenta Gratuita",
+            "seoDescription": "Rotacione imagens facilmente. 100% grátis.",
+            "seoKeywords": "rotacionar imagem, rotate image",
+            "seoH1": "Rotacionar Imagem"
+        },
+        "image-enlarger": {
+            "name": "Ampliador de Imagens",
+            "description": "Amplie imagens pequenas sem perda de qualidade.",
+            "seoTitle": "Ampliador de Imagens - Ferramenta Gratuita",
+            "seoDescription": "Ampliação até 4x. 100% grátis.",
+            "seoKeywords": "ampliar imagem, upscale image",
+            "seoH1": "Ampliador de Imagens"
+        },
+        "image-brightness": {
+            "name": "Brilho da Imagem",
+            "description": "Ajuste o brilho das suas imagens.",
+            "seoTitle": "Ajustar Brilho",
+            "seoDescription": "Aumente ou diminua o brilho. 100% grátis.",
+            "seoKeywords": "brilho imagem, brightness adjust",
+            "seoH1": "Ajustar Brilho"
+        },
+        "image-contrast": {
+            "name": "Contraste da Imagem",
+            "description": "Ajuste o contraste das suas imagens.",
+            "seoTitle": "Ajustar Contraste",
+            "seoDescription": "Melhore o contraste. 100% grátis.",
+            "seoKeywords": "contraste imagem, contrast adjust",
+            "seoH1": "Ajustar Contraste"
+        },
+        "grayscale-image": {
+            "name": "Escala de Cinza",
+            "description": "Converta imagens coloridas em preto e branco.",
+            "seoTitle": "Conversor para Escala de Cinza",
+            "seoDescription": "Transforme em preto e branco. 100% grátis.",
+            "seoKeywords": "escala de cinza, preto e branco",
+            "seoH1": "Escala de Cinza"
+        },
+        "blur-image": {
+            "name": "Desfocar Imagem",
+            "description": "Adicione efeito de desfoque às imagens.",
+            "seoTitle": "Desfocar Imagem - Ferramenta Gratuita",
+            "seoDescription": "Aplique desfoque gaussiano. 100% grátis.",
+            "seoKeywords": "desfocar imagem, blur image",
+            "seoH1": "Desfocar Imagem"
+        },
+        "sepia-converter": {
+            "name": "Filtro Sépia",
+            "description": "Aplique efeito sépia vintage às fotos.",
+            "seoTitle": "Filtro Sépia - Ferramenta Gratuita",
+            "seoDescription": "Dê um tom sépia clássico.",
+            "seoKeywords": "filtro sépia, efeito vintage",
+            "seoH1": "Efeito Sépia"
+        },
+        "invert-image": {
+            "name": "Inverter Cores",
+            "description": "Inverta as cores da imagem (efeito negativo).",
+            "seoTitle": "Inverter Cores - Ferramenta Gratuita",
+            "seoDescription": "Crie efeito negativo. 100% grátis.",
+            "seoKeywords": "inverter cores, invert colors",
+            "seoH1": "Inverter Cores"
+        },
+        "saturate-image": {
+            "name": "Saturação de Cor",
+            "description": "Ajuste a saturação de cor das imagens.",
+            "seoTitle": "Ajustar Saturação",
+            "seoDescription": "Mude a intensidade da cor. 100% grátis.",
+            "seoKeywords": "saturação cor, saturation adjust",
+            "seoH1": "Ajustar Saturação"
+        },
+        "hue-rotate-image": {
+            "name": "Rotação de Matiz",
+            "description": "Mude o matiz para efeitos criativos.",
+            "seoTitle": "Rotação de Matiz - Ferramenta Gratuita",
+            "seoDescription": "Desloque cores de forma criativa.",
+            "seoKeywords": "rotação matiz, hue rotate",
+            "seoH1": "Rotação de Matiz"
+        },
+        "image-opacity": {
+            "name": "Opacidade da Imagem",
+            "description": "Ajuste a transparência/opacidade das imagens.",
+            "seoTitle": "Opacidade da Imagem - Ferramenta Gratuita",
+            "seoDescription": "Torne imagens transparentes. 100% grátis.",
+            "seoKeywords": "opacidade imagem, opacity adjust",
+            "seoH1": "Ajustar Opacidade"
+        },
+        "round-corners-image": {
+            "name": "Cantos Arredondados",
+            "description": "Adicione cantos arredondados às imagens.",
+            "seoTitle": "Cantos Arredondados - Ferramenta Gratuita",
+            "seoDescription": "Crie cantos arredondados. 100% grátis.",
+            "seoKeywords": "cantos arredondados, rounded corners",
+            "seoH1": "Cantos Arredondados"
+        },
+        "image-border": {
+            "name": "Borda da Imagem",
+            "description": "Adicione bordas coloridas às imagens.",
+            "seoTitle": "Adicionar Borda",
+            "seoDescription": "Bordas personalizadas. 100% grátis.",
+            "seoKeywords": "borda imagem, image border",
+            "seoH1": "Adicionar Borda"
+        },
+        "image-shadow": {
+            "name": "Sombra da Imagem",
+            "description": "Adicione sombras projetadas às imagens.",
+            "seoTitle": "Sombra da Imagem - Ferramenta Gratuita",
+            "seoDescription": "Sombras realistas. 100% grátis.",
+            "seoKeywords": "sombra imagem, drop shadow",
+            "seoH1": "Adicionar Sombra"
+        },
+        "pixelate-image": {
+            "name": "Pixelar Imagem",
+            "description": "Pixelize imagens para ocultar detalhes ou criar arte.",
+            "seoTitle": "Pixelar Imagem - Ferramenta Gratuita",
+            "seoDescription": "Aplique efeito pixelado. 100% grátis.",
+            "seoKeywords": "pixelar imagem, pixelate image",
+            "seoH1": "Pixelar Imagem"
+        },
+        "svg-to-png": {
+            "name": "SVG para PNG",
+            "description": "Converta arquivos vetoriais SVG para imagens PNG.",
+            "seoTitle": "SVG para PNG - Conversor Gratuito",
+            "seoDescription": "Converta SVG para PNG. 100% grátis.",
+            "seoKeywords": "svg to png, converter svg",
+            "seoH1": "SVG para PNG"
+        },
+        "png-to-svg": {
+            "name": "PNG para SVG",
+            "description": "Converta imagens PNG raster para vetores SVG.",
+            "seoTitle": "PNG para SVG - Conversor Gratuito",
+            "seoDescription": "Vectorize imagens PNG. 100% grátis.",
+            "seoKeywords": "png to svg, vetorizar imagem",
+            "seoH1": "PNG para SVG"
+        },
+        "webp-to-jpg": {
+            "name": "WebP para JPG",
+            "description": "Converta WebP para formato JPG padrão.",
+            "seoTitle": "WebP para JPG - Conversor Gratuito",
+            "seoDescription": "Converta WebP para JPG. 100% grátis.",
+            "seoKeywords": "webp to jpg",
+            "seoH1": "WebP para JPG"
+        },
+        "webp-to-png": {
+            "name": "WebP para PNG",
+            "description": "Converta WebP para PNG transparente.",
+            "seoTitle": "WebP para PNG - Conversor Gratuito",
+            "seoDescription": "WebP para PNG com transparência.",
+            "seoKeywords": "webp to png",
+            "seoH1": "WebP para PNG"
+        },
+        "jpg-to-webp": {
+            "name": "JPG para WebP",
+            "description": "Converta JPG para formato WebP moderno.",
+            "seoTitle": "JPG para WebP - Conversor Gratuito",
+            "seoDescription": "Reduza tamanho com WebP.",
+            "seoKeywords": "jpg to webp",
+            "seoH1": "JPG para WebP"
+        },
+        "png-to-webp": {
+            "name": "PNG para WebP",
+            "description": "Converta PNG para formato WebP.",
+            "seoTitle": "PNG para WebP - Conversor Gratuito",
+            "seoDescription": "PNG para WebP com transparência.",
+            "seoKeywords": "png to webp",
+            "seoH1": "PNG para WebP"
+        },
+        "base64-to-image": {
+            "name": "Base64 para Imagem",
+            "description": "Converta strings Base64 para arquivos de imagem.",
+            "seoTitle": "Base64 para Imagem - Decodificador Gratuito",
+            "seoDescription": "Decodifique Base64 para imagem. 100% grátis.",
+            "seoKeywords": "base64 to image",
+            "seoH1": "Base64 para Imagem"
+        },
+        "pdf-to-word": {
+            "name": "PDF para Word",
+            "description": "Converta documentos PDF para arquivos Word editáveis.",
+            "seoTitle": "PDF para Word - Conversor Gratuito",
+            "seoDescription": "Converta PDF para DOCX preservando formatação.",
+            "seoKeywords": "pdf to word, conversor pdf",
+            "seoH1": "PDF para Word"
+        },
+        "word-counter": {
+            "name": "Contador de Palavras",
+            "description": "Conte palavras, caracteres, frases e parágrafos.",
+            "seoTitle": "Contador de Palavras - Ferramenta Gratuita",
+            "seoDescription": "Contagem precisa de palavras e caracteres.",
+            "seoKeywords": "contador palavras, word counter",
+            "seoH1": "Contador de Palavras"
+        },
+        "character-counter": {
+            "name": "Contador de Caracteres",
+            "description": "Conte caracteres com ou sem espaços.",
+            "seoTitle": "Contador de Caracteres",
+            "seoDescription": "Ideal para Twitter, SMS etc.",
+            "seoKeywords": "contador caracteres",
+            "seoH1": "Contador de Caracteres"
+        },
+        "text-case-converter": {
+            "name": "Conversor de Maiúsculas/Minúsculas",
+            "description": "Converta texto para maiúsculas, minúsculas, título etc.",
+            "seoTitle": "Conversor de Maiúsculas/Minúsculas",
+            "seoDescription": "Múltiplas opções de transformação de texto.",
+            "seoKeywords": "conversor maiúsculas minúsculas, uppercase lowercase",
+            "seoH1": "Conversor de Maiúsculas/Minúsculas"
+        },
+        "remove-line-breaks": {
+            "name": "Remover Quebras de Linha",
+            "description": "Remova todas as quebras de linha do texto.",
+            "seoTitle": "Remover Quebras de Linha",
+            "seoDescription": "Limpe o texto.",
+            "seoKeywords": "remover quebras linha",
+            "seoH1": "Remover Quebras de Linha"
+        },
+        "italic-text": {
+            "name": "Gerador de Texto Itálico",
+            "description": "Gere texto itálico com Unicode.",
+            "seoTitle": "Gerador de Texto Itálico",
+            "seoDescription": "Texto itálico para redes sociais.",
+            "seoKeywords": "texto itálico, fancy text",
+            "seoH1": "Gerador de Texto Itálico"
+        },
+        "strikethrough-text": {
+            "name": "Texto Riscado",
+            "description": "Gere texto riscado.",
+            "seoTitle": "Gerador de Texto Riscado",
+            "seoDescription": "Risque o texto.",
+            "seoKeywords": "texto riscado",
+            "seoH1": "Texto Riscado"
+        },
+        "underline-text": {
+            "name": "Texto Sublinhado",
+            "description": "Gere texto sublinhado com Unicode.",
+            "seoTitle": "Gerador de Texto Sublinhado",
+            "seoDescription": "Texto sublinhado.",
+            "seoKeywords": "texto sublinhado",
+            "seoH1": "Texto Sublinhado"
+        },
+        "small-text": {
+            "name": "Gerador de Texto Pequeno",
+            "description": "Gere texto pequeno (subscrito/superescrito).",
+            "seoTitle": "Gerador de Texto Pequeno",
+            "seoDescription": "Letras pequenas.",
+            "seoKeywords": "texto pequeno, tiny text",
+            "seoH1": "Gerador de Texto Pequeno"
+        },
+        "upside-down-text": {
+            "name": "Texto de Cabeça para Baixo",
+            "description": "Inverta seu texto.",
+            "seoTitle": "Gerador de Texto de Cabeça para Baixo",
+            "seoDescription": "Texto invertido para diversão.",
+            "seoKeywords": "texto de cabeça para baixo, upside down text",
+            "seoH1": "Texto de Cabeça para Baixo"
+        },
+        "mirror-text": {
+            "name": "Texto Espelho",
+            "description": "Crie texto espelhado.",
+            "seoTitle": "Gerador de Texto Espelho",
+            "seoDescription": "Texto em espelho.",
+            "seoKeywords": "texto espelho, mirror text",
+            "seoH1": "Texto Espelho"
+        },
+        "duplicate-line-remover": {
+            "name": "Remover Linhas Duplicadas",
+            "description": "Remova linhas duplicadas do texto ou lista.",
+            "seoTitle": "Remover Duplicados",
+            "seoDescription": "Limpe listas.",
+            "seoKeywords": "remover duplicados",
+            "seoH1": "Remover Linhas Duplicadas"
+        },
+        "sort-alphabetically": {
+            "name": "Ordenar Alfabeticamente",
+            "description": "Ordene linhas alfabeticamente.",
+            "seoTitle": "Ordenar Alfabeticamente",
+            "seoDescription": "Ordene listas de A a Z ou Z a A.",
+            "seoKeywords": "ordenar alfabeticamente",
+            "seoH1": "Ordenar Alfabeticamente"
+        },
+        "text-replace": {
+            "name": "Localizar e Substituir",
+            "description": "Busque e substitua texto.",
+            "seoTitle": "Localizar e Substituir - Ferramenta Gratuita",
+            "seoDescription": "Substituição de texto poderosa.",
+            "seoKeywords": "localizar substituir, find replace",
+            "seoH1": "Localizar e Substituir"
+        },
+        "whitespace-remover": {
+            "name": "Remover Espaços Extras",
+            "description": "Remova espaços, tabs e quebras extras.",
+            "seoTitle": "Remover Espaços Extras",
+            "seoDescription": "Limpe texto bagunçado.",
+            "seoKeywords": "remover espaços",
+            "seoH1": "Remover Espaços Extras"
+        },
+        "word-frequency": {
+            "name": "Frequência de Palavras",
+            "description": "Analise as palavras mais frequentes no texto.",
+            "seoTitle": "Análise de Frequência de Palavras",
+            "seoDescription": "Veja o uso de palavras.",
+            "seoKeywords": "frequência palavras, densidade palavras-chave",
+            "seoH1": "Frequência de Palavras"
+        },
+        "find-replace": {
+            "name": "Busca e Substituição Avançada",
+            "description": "Busca e substituição com suporte a regex.",
+            "seoTitle": "Busca e Substituição Avançada",
+            "seoDescription": "Busca poderosa com regex.",
+            "seoKeywords": "regex busca substituição",
+            "seoH1": "Busca e Substituição Avançada"
+        },
+        "json-formatter": {
+            "name": "Formatador JSON",
+            "description": "Formate, beautifique e valide dados JSON.",
+            "seoTitle": "Formatador e Validador JSON",
+            "seoDescription": "Formate JSON bonito.",
+            "seoKeywords": "formatador json, json beautifier",
+            "seoH1": "Formatador JSON"
+        },
+        "url-encoder-decoder": {
+            "name": "Codificador/Decodificador URL",
+            "description": "Codifique ou decodifique URLs.",
+            "seoTitle": "Codificador/Decodificador URL",
+            "seoDescription": "Codificação percentual para URLs.",
+            "seoKeywords": "url encode decode",
+            "seoH1": "Codificador/Decodificador URL"
+        },
+        "html-formatter": {
+            "name": "Formatador HTML",
+            "description": "Formate e beautifique código HTML.",
+            "seoTitle": "Formatador HTML",
+            "seoDescription": "Formate HTML bonito.",
+            "seoKeywords": "formatador html",
+            "seoH1": "Formatador HTML"
+        },
+        "css-formatter": {
+            "name": "Formatador CSS",
+            "description": "Formate e beautifique código CSS.",
+            "seoTitle": "Formatador CSS",
+            "seoDescription": "Organize o CSS.",
+            "seoKeywords": "formatador css",
+            "seoH1": "Formatador CSS"
+        },
+        "javascript-formatter": {
+            "name": "Formatador JavaScript",
+            "description": "Formate e beautifique código JavaScript.",
+            "seoTitle": "Formatador JavaScript",
+            "seoDescription": "Formate código JS bonito.",
+            "seoKeywords": "formatador js",
+            "seoH1": "Formatador JavaScript"
+        },
+        "xml-formatter": {
+            "name": "Formatador XML",
+            "description": "Formate e beautifique código XML.",
+            "seoTitle": "Formatador XML",
+            "seoDescription": "Organize o XML.",
+            "seoKeywords": "formatador xml",
+            "seoH1": "Formatador XML"
+        },
+        "sql-formatter": {
+            "name": "Formatador SQL",
+            "description": "Formate e beautifique consultas SQL.",
+            "seoTitle": "Formatador SQL",
+            "seoDescription": "Torne consultas SQL legíveis.",
+            "seoKeywords": "formatador sql",
+            "seoH1": "Formatador SQL"
+        },
+        "markdown-to-html": {
+            "name": "Markdown para HTML",
+            "description": "Converta Markdown para código HTML.",
+            "seoTitle": "Markdown para HTML - Conversor",
+            "seoDescription": "Converta MD para HTML.",
+            "seoKeywords": "markdown to html",
+            "seoH1": "Markdown para HTML"
+        },
+        "html-to-markdown": {
+            "name": "HTML para Markdown",
+            "description": "Converta HTML para formato Markdown.",
+            "seoTitle": "HTML para Markdown - Conversor",
+            "seoDescription": "Converta HTML para Markdown limpo.",
+            "seoKeywords": "html to markdown",
+            "seoH1": "HTML para Markdown"
+        },
+        "csv-to-json": {
+            "name": "CSV para JSON",
+            "description": "Converta dados CSV para formato JSON.",
+            "seoTitle": "CSV para JSON - Conversor",
+            "seoDescription": "Converta CSV para JSON.",
+            "seoKeywords": "csv to json",
+            "seoH1": "CSV para JSON"
+        },
+        "json-to-csv": {
+            "name": "JSON para CSV",
+            "description": "Converta dados JSON para formato CSV.",
+            "seoTitle": "JSON para CSV - Conversor",
+            "seoDescription": "Converta JSON para CSV.",
+            "seoKeywords": "json to csv",
+            "seoH1": "JSON para CSV"
+        },
+        "code-minifier": {
+            "name": "Minificador de Código",
+            "description": "Minifique código HTML, CSS e JS.",
+            "seoTitle": "Minificador de Código",
+            "seoDescription": "Reduza tamanho de arquivos.",
+            "seoKeywords": "minificador código, minify code",
+            "seoH1": "Minificador de Código"
+        },
+        "diff-checker": {
+            "name": "Comparador de Texto",
+            "description": "Compare dois textos e destaque diferenças.",
+            "seoTitle": "Comparador de Texto",
+            "seoDescription": "Encontre diferenças entre textos.",
+            "seoKeywords": "comparador texto, diff checker",
+            "seoH1": "Comparador de Texto"
+        },
+        "unit-converter": {
+            "name": "Conversor de Unidades",
+            "description": "Converta entre diferentes unidades de medida.",
+            "seoTitle": "Conversor de Unidades",
+            "seoDescription": "Comprimento, peso, temperatura etc.",
+            "seoKeywords": "conversor unidades",
+            "seoH1": "Conversor de Unidades"
+        },
+        "color-converter": {
+            "name": "Conversor de Cores",
+            "description": "Converta entre HEX, RGB, HSL.",
+            "seoTitle": "Conversor de Cores",
+            "seoDescription": "Converta códigos de cor.",
+            "seoKeywords": "conversor cor, hex rgb",
+            "seoH1": "Conversor de Cores"
+        },
+        "binary-to-text": {
+            "name": "Binário para Texto",
+            "description": "Converta código binário para texto.",
+            "seoTitle": "Binário para Texto - Conversor",
+            "seoDescription": "Decodifique binário para ASCII.",
+            "seoKeywords": "binary to text",
+            "seoH1": "Binário para Texto"
+        },
+        "hex-to-decimal": {
+            "name": "Hex para Decimal",
+            "description": "Converta hexadecimal para decimal.",
+            "seoTitle": "Hex para Decimal - Conversor",
+            "seoDescription": "Converta números hex.",
+            "seoKeywords": "hex to decimal",
+            "seoH1": "Hex para Decimal"
+        },
+        "roman-numeral": {
+            "name": "Conversor de Números Romanos",
+            "description": "Converta entre números árabes e romanos.",
+            "seoTitle": "Conversor de Números Romanos",
+            "seoDescription": "Converta para números romanos.",
+            "seoKeywords": "conversor números romanos",
+            "seoH1": "Conversor de Números Romanos"
+        },
+        "random-number": {
+            "name": "Gerador de Números Aleatórios",
+            "description": "Gere números aleatórios em um intervalo.",
+            "seoTitle": "Gerador de Números Aleatórios",
+            "seoDescription": "Números verdadeiramente aleatórios.",
+            "seoKeywords": "gerador números aleatórios",
+            "seoH1": "Gerador de Números Aleatórios"
+        },
+        "random-string": {
+            "name": "Gerador de Strings Aleatórias",
+            "description": "Gere strings aleatórias e senhas seguras.",
+            "seoTitle": "Gerador de Strings & Senhas",
+            "seoDescription": "Crie senhas fortes.",
+            "seoKeywords": "gerador string aleatória, gerador senha",
+            "seoH1": "Gerador de Strings Aleatórias"
+        },
+        "random-color": {
+            "name": "Gerador de Cores Aleatórias",
+            "description": "Gere cores aleatórias com códigos HEX.",
+            "seoTitle": "Gerador de Cores Aleatórias",
+            "seoDescription": "Obtenha cores aleatórias.",
+            "seoKeywords": "gerador cor aleatória",
+            "seoH1": "Gerador de Cores Aleatórias"
+        },
+        "random-date": {
+            "name": "Gerador de Datas Aleatórias",
+            "description": "Gere datas aleatórias.",
+            "seoTitle": "Gerador de Datas Aleatórias",
+            "seoDescription": "Datas aleatórias para testes.",
+            "seoKeywords": "gerador data aleatória",
+            "seoH1": "Gerador de Datas Aleatórias"
+        },
+        "random-ip": {
+            "name": "Gerador de IP Aleatórios",
+            "description": "Gere endereços IP aleatórios.",
+            "seoTitle": "Gerador de IP Aleatórios",
+            "seoDescription": "IPs válidos aleatórios.",
+            "seoKeywords": "gerador ip aleatório",
+            "seoH1": "Gerador de IP Aleatórios"
+        },
+        "password-generator": {
+            "name": "Gerador de Senhas",
+            "description": "Gere senhas fortes e seguras.",
+            "seoTitle": "Gerador de Senhas Fortes",
+            "seoDescription": "Senhas seguras com opções.",
+            "seoKeywords": "gerador senha, password generator",
+            "seoH1": "Gerador de Senhas"
+        },
+        "bcrypt-generator": {
+            "name": "Gerador Bcrypt",
+            "description": "Gere hashes Bcrypt para senhas.",
+            "seoTitle": "Gerador de Hash Bcrypt",
+            "seoDescription": "Hashes Bcrypt seguros.",
+            "seoKeywords": "gerador bcrypt",
+            "seoH1": "Gerador Bcrypt"
+        },
+        "base64-encoder": {
+            "name": "Codificador/Decodificador Base64",
+            "description": "Codifique e decodifique strings Base64.",
+            "seoTitle": "Codificador/Decodificador Base64",
+            "seoDescription": "Processamento Base64.",
+            "seoKeywords": "base64 encode decode",
+            "seoH1": "Codificador/Decodificador Base64"
+        },
+        "md5-hash": {
+            "name": "Gerador de Hash MD5",
+            "description": "Gere checksums MD5.",
+            "seoTitle": "Gerador MD5",
+            "seoDescription": "Crie hashes MD5.",
+            "seoKeywords": "gerador md5",
+            "seoH1": "Gerador MD5"
+        },
+        "sha256-hash": {
+            "name": "Gerador de Hash SHA-256",
+            "description": "Gere hashes SHA-256.",
+            "seoTitle": "Gerador SHA-256",
+            "seoDescription": "Hash criptográfico seguro.",
+            "seoKeywords": "gerador sha256",
+            "seoH1": "Gerador SHA-256"
+        },
+        "sha512-hash": {
+            "name": "Gerador de Hash SHA-512",
+            "description": "Gere hashes SHA-512.",
+            "seoTitle": "Gerador SHA-512",
+            "seoDescription": "Hash SHA mais seguro.",
+            "seoKeywords": "gerador sha512",
+            "seoH1": "Gerador SHA-512"
+        },
+        "uuid-generator": {
+            "name": "Gerador de UUID",
+            "description": "Gere identificadores UUID v4.",
+            "seoTitle": "Gerador de UUID",
+            "seoDescription": "Identificadores únicos.",
+            "seoKeywords": "gerador uuid",
+            "seoH1": "Gerador de UUID"
+        },
+        "qr-code-generator": {
+            "name": "Gerador de Código QR",
+            "description": "Gere códigos QR para links, texto etc.",
+            "seoTitle": "Gerador de Código QR",
+            "seoDescription": "Códigos QR personalizados.",
+            "seoKeywords": "gerador qr code",
+            "seoH1": "Gerador de Código QR"
+        },
+        "lorem-ipsum": {
+            "name": "Gerador Lorem Ipsum",
+            "description": "Gere texto de preenchimento para layouts.",
+            "seoTitle": "Gerador Lorem Ipsum",
+            "seoDescription": "Texto fictício em vários idiomas.",
+            "seoKeywords": "lorem ipsum",
+            "seoH1": "Gerador Lorem Ipsum"
+        },
+        "youtube-thumbnail-downloader": {
+            "name": "Downloader de Miniaturas do YouTube",
+            "description": "Baixe miniaturas de alta qualidade de vídeos do YouTube.",
+            "seoTitle": "Downloader de Miniaturas do YouTube",
+            "seoDescription": "Obtenha miniaturas HD do YouTube.",
+            "seoKeywords": "downloader miniatura youtube",
+            "seoH1": "Downloader de Miniaturas do YouTube"
+        },
+        "youtube-tag-generator": {
+            "name": "Gerador de Tags do YouTube",
+            "description": "Gere tags otimizadas para melhorar o ranking.",
+            "seoTitle": "Gerador de Tags do YouTube",
+            "seoDescription": "Tags relevantes para melhor SEO.",
+            "seoKeywords": "gerador tags youtube",
+            "seoH1": "Gerador de Tags do YouTube"
+        },
+        "youtube-title-generator": {
+            "name": "Gerador de Títulos do YouTube",
+            "description": "Gere títulos atrativos e amigáveis para SEO.",
+            "seoTitle": "Gerador de Títulos do YouTube",
+            "seoDescription": "Mais cliques com bons títulos.",
+            "seoKeywords": "gerador título youtube",
+            "seoH1": "Gerador de Títulos do YouTube"
+        },
+        "youtube-embed-code-generator": {
+            "name": "Gerador de Código de Incorporação do YouTube",
+            "description": "Gere códigos de incorporação personalizados.",
+            "seoTitle": "Gerador de Incorporação do YouTube",
+            "seoDescription": "Com autoplay, loop etc.",
+            "seoKeywords": "código incorporação youtube",
+            "seoH1": "Gerador de Incorporação do YouTube"
+        },
+        "youtube-timestamp-link-generator": {
+            "name": "Link com Timestamp do YouTube",
+            "description": "Crie links que começam em um momento específico.",
+            "seoTitle": "Gerador de Link com Timestamp do YouTube",
+            "seoDescription": "Inicie o vídeo no ponto exato.",
+            "seoKeywords": "link timestamp youtube",
+            "seoH1": "Link com Timestamp do YouTube"
+        },
+        "meta-tag-generator": {
+            "name": "Gerador de Meta Tags",
+            "description": "Gere meta tags amigáveis para SEO.",
+            "seoTitle": "Gerador de Meta Tags",
+            "seoDescription": "Tags de título e descrição.",
+            "seoKeywords": "gerador meta tags",
+            "seoH1": "Gerador de Meta Tags"
+        },
+        "open-graph-generator": {
+            "name": "Gerador Open Graph",
+            "description": "Gere tags Open Graph para compartilhamento social.",
+            "seoTitle": "Gerador Open Graph",
+            "seoDescription": "Melhor aparência nas redes sociais.",
+            "seoKeywords": "gerador open graph",
+            "seoH1": "Gerador Open Graph"
+        },
+        "twitter-card-generator": {
+            "name": "Gerador Twitter Card",
+            "description": "Gere meta tags Twitter Card.",
+            "seoTitle": "Gerador Twitter Card",
+            "seoDescription": "Melhor aparência no Twitter.",
+            "seoKeywords": "gerador twitter card",
+            "seoH1": "Gerador Twitter Card"
+        },
+        "robots-txt-generator": {
+            "name": "Gerador robots.txt",
+            "description": "Crie arquivos robots.txt.",
+            "seoTitle": "Gerador robots.txt",
+            "seoDescription": "Controle o acesso de crawlers.",
+            "seoKeywords": "gerador robots.txt",
+            "seoH1": "Gerador robots.txt"
+        },
+        "xml-sitemap-generator": {
+            "name": "Gerador de Sitemap XML",
+            "description": "Gere sitemaps XML para SEO.",
+            "seoTitle": "Gerador de Sitemap XML",
+            "seoDescription": "Facilite a indexação de páginas.",
+            "seoKeywords": "gerador sitemap xml",
+            "seoH1": "Gerador de Sitemap XML"
+        },
+        "keyword-density-checker": {
+            "name": "Verificador de Densidade de Palavras-chave",
+            "description": "Analise o uso e densidade de palavras-chave.",
+            "seoTitle": "Verificador de Densidade de Palavras-chave",
+            "seoDescription": "Verifique a frequência de palavras-chave.",
+            "seoKeywords": "densidade palavras-chave",
+            "seoH1": "Verificador de Densidade de Palavras-chave"
+        },
+        "keyword-cleaner": {
+            "name": "Limpeza de Palavras-chave",
+            "description": "Limpe listas de palavras-chave.",
+            "seoTitle": "Limpeza de Lista de Palavras-chave",
+            "seoDescription": "Remova duplicados e lixo.",
+            "seoKeywords": "limpeza palavras-chave",
+            "seoH1": "Limpeza de Palavras-chave"
+        },
+        "long-tail-keyword-generator": {
+            "name": "Gerador de Palavras-chave Long Tail",
+            "description": "Gere variações de palavras-chave long tail.",
+            "seoTitle": "Gerador de Palavras-chave Long Tail",
+            "seoDescription": "Expanda palavras-chave seed.",
+            "seoKeywords": "palavras-chave long tail",
+            "seoH1": "Palavras-chave Long Tail"
+        },
+        "slug-generator": {
+            "name": "Gerador de Slug URL",
+            "description": "Converta texto em slug URL amigável para SEO.",
+            "seoTitle": "Gerador de Slug",
+            "seoDescription": "Crie URLs limpas e legíveis.",
+            "seoKeywords": "gerador slug, url slug",
+            "seoH1": "Gerador de Slug URL"
+        },
+        "google-serp-simulator": {
+            "name": "Pré-visualização SERP do Google",
+            "description": "Pré-visualize como sua página aparece nos resultados do Google.",
+            "seoTitle": "Simulador SERP do Google",
+            "seoDescription": "Teste a pré-visualização dos resultados de busca.",
+            "seoKeywords": "pré-visualização serp google",
+            "seoH1": "Pré-visualização SERP do Google"
+        },
+        "htaccess-redirect-generator": {
+            "name": "Gerador de Redirecionamento .htaccess",
+            "description": "Gere código de redirecionamento 301/302.",
+            "seoTitle": "Gerador de Redirecionamento .htaccess",
+            "seoDescription": "Crie regras de redirecionamento.",
+            "seoKeywords": "gerador redirecionamento htaccess",
+            "seoH1": "Gerador de Redirecionamento .htaccess"
+        },
+        "my-ip-address": {
+            "name": "Meu Endereço IP",
+            "description": "Verifique seu endereço IP público e localização.",
+            "seoTitle": "Qual é meu Endereço IP",
+            "seoDescription": "Descubra seu IP público.",
+            "seoKeywords": "meu endereço ip, what is my ip",
+            "seoH1": "Meu Endereço IP"
+        },
+        "browser-info": {
+            "name": "Informações do Navegador",
+            "description": "Obtenha detalhes do navegador e dispositivo.",
+            "seoTitle": "Informações do Navegador",
+            "seoDescription": "Navegador, SO, tamanho de tela etc.",
+            "seoKeywords": "info navegador, user agent",
+            "seoH1": "Informações do Navegador"
+        },
+        "screen-resolution-simulator": {
+            "name": "Testador de Resolução de Tela",
+            "description": "Teste seu site em diferentes resoluções.",
+            "seoTitle": "Simulador de Resolução de Tela",
+            "seoDescription": "Pré-visualização em diferentes dispositivos.",
+            "seoKeywords": "testador resolução tela",
+            "seoH1": "Testador de Resolução de Tela"
+        },
+        "responsive-checker": {
+            "name": "Verificador de Design Responsivo",
+            "description": "Verifique se seu site é mobile-friendly.",
+            "seoTitle": "Testador de Site Responsivo",
+            "seoDescription": "Teste o responsivo.",
+            "seoKeywords": "verificador responsivo",
+            "seoH1": "Verificador Responsivo"
+        },
+        "whatsapp-link-generator": {
+            "name": "Gerador de Link WhatsApp",
+            "description": "Crie links click-to-chat do WhatsApp.",
+            "seoTitle": "Gerador de Link WhatsApp",
+            "seoDescription": "Gere links wa.me.",
+            "seoKeywords": "gerador link whatsapp",
+            "seoH1": "Gerador de Link WhatsApp"
+        },
+        "telegram-link-generator": {
+            "name": "Gerador de Link Telegram",
+            "description": "Crie links diretos para usuários ou canais do Telegram.",
+            "seoTitle": "Gerador de Link Telegram",
+            "seoDescription": "Gere links t.me.",
+            "seoKeywords": "gerador link telegram",
+            "seoH1": "Gerador de Link Telegram"
+        },
+        "paypal-link-generator": {
+            "name": "Gerador de Link PayPal",
+            "description": "Crie links de pagamento e doação PayPal.",
+            "seoTitle": "Gerador de Link PayPal",
+            "seoDescription": "Links PayPal.me e pagamento.",
+            "seoKeywords": "gerador link paypal",
+            "seoH1": "Gerador de Link PayPal"
+        },
+        "email-validator": {
+            "name": "Validador de Email",
+            "description": "Valide o formato de endereços de email.",
+            "seoTitle": "Validador de Endereço de Email",
+            "seoDescription": "Verifique a sintaxe de email.",
+            "seoKeywords": "validador email",
+            "seoH1": "Validador de Email"
+        },
+        "url-opener": {
+            "name": "Abridor Massivo de URL",
+            "description": "Abra múltiplas URLs ao mesmo tempo.",
+            "seoTitle": "Abridor Múltiplo de URL",
+            "seoDescription": "Abra muitos links simultaneamente.",
+            "seoKeywords": "abridor url massivo",
+            "seoH1": "Abridor Massivo de URL"
+        },
+        "user-agent-parser": {
+            "name": "Analisador de User Agent",
+            "description": "Analise strings User-Agent.",
+            "seoTitle": "Analisador de User Agent",
+            "seoDescription": "Extraia informações de navegador e dispositivo.",
+            "seoKeywords": "analisador user agent",
+            "seoH1": "Analisador de User Agent"
+        },
+        "wordpress-password-hash": {
+            "name": "Hash de Senha WordPress",
+            "description": "Gere hashes compatíveis com WordPress.",
+            "seoTitle": "Gerador de Hash WordPress",
+            "seoDescription": "Crie hashes phpass.",
+            "seoKeywords": "hash senha wordpress",
+            "seoH1": "Hash de Senha WordPress"
+        },
+        "age-calculator": {
+            "name": "Calculadora de Idade",
+            "description": "Calcule a idade exata em anos, meses e dias.",
+            "seoTitle": "Calculadora de Idade",
+            "seoDescription": "Idade precisa a partir da data de nascimento.",
+            "seoKeywords": "calculadora idade",
+            "seoH1": "Calculadora de Idade"
+        },
+        "bmi-calculator": {
+            "name": "Calculadora de IMC",
+            "description": "Calcule o Índice de Massa Corporal e estado de saúde.",
+            "seoTitle": "Calculadora de IMC",
+            "seoDescription": "Verifique seu IMC.",
+            "seoKeywords": "calculadora imc, bmi calculator",
+            "seoH1": "Calculadora de IMC"
+        },
+        "percentage-calculator": {
+            "name": "Calculadora de Porcentagem",
+            "description": "Calcule porcentagens, aumentos, diminuições.",
+            "seoTitle": "Calculadora de Porcentagem",
+            "seoDescription": "Múltiplas ferramentas de porcentagem.",
+            "seoKeywords": "calculadora porcentagem",
+            "seoH1": "Calculadora de Porcentagem"
+        },
+        "gst-calculator": {
+            "name": "Calculadora de Imposto",
+            "description": "Calcule o valor do imposto e preço total.",
+            "seoTitle": "Calculadora de Imposto",
+            "seoDescription": "Calcule imposto facilmente.",
+            "seoKeywords": "calculadora imposto",
+            "seoH1": "Calculadora de Imposto"
+        },
+        "emi-calculator": {
+            "name": "Calculadora de Parcelas de Empréstimo",
+            "description": "Calcule a parcela mensal e juros total.",
+            "seoTitle": "Calculadora EMI",
+            "seoDescription": "Calcule parcelas de empréstimo.",
+            "seoKeywords": "calculadora emi, calculadora empréstimo",
+            "seoH1": "Calculadora EMI"
+        },
+        "discount-calculator": {
+            "name": "Calculadora de Desconto",
+            "description": "Calcule o valor do desconto e preço final.",
+            "seoTitle": "Calculadora de Desconto",
+            "seoDescription": "Veja suas economias em ofertas.",
+            "seoKeywords": "calculadora desconto",
+            "seoH1": "Calculadora de Desconto"
+        },
+        "instagram-hashtag-generator": {
+            "name": "Gerador de Hashtags Instagram",
+            "description": "Gere hashtags populares e relevantes para Instagram.",
+            "seoTitle": "Gerador de Hashtags Instagram",
+            "seoDescription": "Aumente o alcance de publicações.",
+            "seoKeywords": "hashtags instagram",
+            "seoH1": "Gerador de Hashtags Instagram"
+        },
+        "html-to-jsx": {
+            "name": "HTML para JSX",
+            "description": "Converta código HTML para sintaxe JSX do React.",
+            "seoTitle": "HTML para JSX - Conversor",
+            "seoDescription": "Para desenvolvimento React.",
+            "seoKeywords": "html to jsx",
+            "seoH1": "HTML para JSX"
+        }
+    },
+    "Common": {
+        "backToTools": "Voltar às ferramentas",
+        "howToUse": "Como usar {name}",
+        "toolIntro": "Esta ferramenta permite {description} de forma rápida e segura. Todo o processamento ocorre no seu navegador.",
+        "keyFeatures": "Principais características",
+        "featureFast": "Processamento ultrarrápido",
+        "featureSimple": "Interface simples",
+        "featureNoInstall": "Sem instalação",
+        "featureFree": "100% grátis",
+        "featurePrivacy": "Privacidade garantida",
+        "relatedTools": "Ferramentas similares",
+        "viewAll": "Ver todas as ferramentas",
+        "whyUse": "Por que usar esta ferramenta?",
+        "featureBrowser": "Funciona completamente no navegador",
+        "featureNoStorage": "Sem armazenamento no servidor",
+        "featureMobile": "100% compatível com mobile",
+        "selectImage": "Selecionar imagem",
+        "selectMultiple": "Selecionar múltiplas imagens",
+        "dragDrop": "Arraste e solte arquivos aqui",
+        "supports": "Suporta JPG, PNG, WebP & SVG",
+        "privacyGuaranteed": "Privacidade garantida",
+        "lightningFast": "Ultrarrápido",
+        "imagesSelected": "{count} imagens selecionadas",
+        "clearAll": "Limpar tudo",
+        "addMore": "Adicionar mais",
+        "processing": "Processando...",
+        "processBatch": "Processar lote",
+        "applyChanges": "Aplicar alterações",
+        "safePrivate": "Seguro & Privado",
+        "localProcessing": "Processado localmente no navegador",
+        "quality": "Qualidade",
+        "targetFormat": "Formato alvo",
+        "copyString": "Copiar resultado",
+        "fastSecure": "Rápido & Seguro",
+        "browserProcessing": "Processamento no navegador",
+        "noStorage": "Sem armazenamento de dados",
+        "mobileFriendly": "100% Compatível com mobile",
+        "settings": "Configurações",
+        "tipQuality": "Dica: 80% de qualidade é o melhor equilíbrio",
+        "downloadsAsZip": "Baixar como ZIP",
+        "base64Output": "Saída Base64",
+        "tryNow": "Experimente agora",
+        "copy": "Copiar",
+        "clear": "Limpar",
+        "download": "Baixar",
+        "options": "Opções",
+        "output": "Saída",
+        "input": "Entrada",
+        "reset": "Redefinir",
+        "shareThisTool": "Compartilhar esta ferramenta",
+        "copyLink": "Copiar link"
+    },
+    "NavbarCategories": {
+        "Image Tools": "Ferramentas de Imagem",
+        "Text Tools": "Ferramentas de Texto",
+        "Code & Developer Tools": "Código & Desenvolvimento",
+        "Converter Tools": "Conversores",
+        "Utility Tools": "Ferramentas Úteis",
+        "Security & Crypto": "Segurança & Cripto",
+        "YouTube Tools": "Ferramentas YouTube",
+        "Social & Links": "Redes Sociais & Links",
+        "Calculators": "Calculadoras",
+        "Convert": "Converter"
+    },
+    "TextTools": {
+        "editor": "Editor",
+        "placeholder": "Cole ou digite seu texto aqui...",
+        "download": "Baixar",
+        "copy": "Copiar",
+        "clear": "Limpar",
+        "topKeywords": "Palavras mais frequentes",
+        "quickTransformers": "Ferramentas rápidas",
+        "allCaps": "TUDO MAIÚSCULO",
+        "uppercase": "Maiúsculas",
+        "mirrorMode": "Texto espelho",
+        "reverseText": "Texto invertido",
+        "allSmall": "tudo minúsculo",
+        "lowercase": "minúsculas",
+        "headlineStyle": "Estilo Título",
+        "titleCase": "Título",
+        "naturalFlow": "Fluxo natural",
+        "sentenceCase": "Frase",
+        "fixSpacing": "Corrigir espaçamento",
+        "removeExtraSpaces": "Remover espaços extras",
+        "joinText": "Unir linhas",
+        "removeLineBreaks": "Remover quebras de linha",
+        "findReplace": "Localizar & Substituir",
+        "find": "Localizar",
+        "replaceWith": "Substituir por",
+        "count": "Encontrado: {count}",
+        "replaceAll": "Substituir tudo",
+        "words": "Palavras",
+        "characters": "Caracteres",
+        "sentences": "Frases",
+        "paragraphs": "Parágrafos",
+        "lines": "Linhas",
+        "readTime": "Tempo de leitura",
+        "input": "Entrada",
+        "reset": "Redefinir",
+        "pastePlaceholder": "Cole texto aqui...",
+        "options": "Opções",
+        "findLabel": "Localizar",
+        "replaceLabel": "Substituir",
+        "useRegex": "Usar Regex",
+        "caseSensitive": "Sensível a maiúsculas",
+        "noConfig": "Sem configuração necessária",
+        "runTool": "Processar",
+        "output": "Saída",
+        "resultsPlaceholder": "Os resultados aparecerão aqui",
+        "italicConverter": "Texto itálico",
+        "strikethrough": "Riscado",
+        "sortAZ": "Ordenar A-Z",
+        "removeDuplicates": "Remover duplicados",
+        "textTool": "Ferramenta de texto"
+    },
+    "YouTubeTools": {
+        "autoplay": "Reprodução automática",
+        "loop": "Loop",
+        "hideControls": "Ocultar controles",
+        "startTime": "Tempo de início",
+        "startTimePlaceholder": "ex. 1m30s",
+        "configuration": "Opções de incorporação",
+        "enterTopic": "Digite tópico",
+        "videoUrl": "URL do YouTube",
+        "topicPlaceholder": "ex. Desenvolvimento web",
+        "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+        "fetchThumbnails": "Obter miniaturas",
+        "generateNow": "Gerar",
+        "growthTip": "Dica pro",
+        "tipText": "Boas miniaturas e tags podem aumentar cliques em 40%.",
+        "generatedOutput": "Resultados",
+        "qualityLabel": "Qualidade {quality}",
+        "downloadImage": "Baixar",
+        "seoTags": "Tags recomendadas",
+        "copyAll": "Copiar tudo",
+        "generatedCode": "Código de incorporação",
+        "generatedLink": "Link gerado",
+        "copy": "Copiar",
+        "openLink": "Abrir link",
+        "inputRequired": "Por favor insira URL do YouTube",
+        "resultsPlaceholder": "Os resultados aparecerão aqui",
+        "duration": "Duração",
+        "embedCode": "Código de incorporação"
+    },
+    "Footer": {
+        "topCategories": "Categorias populares",
+        "resources": "Recursos",
+        "aboutUs": "Sobre nós",
+        "contact": "Contato",
+        "privacyPolicy": "Política de Privacidade",
+        "termsOfService": "Termos de Serviço",
+        "ourMission": "Nossa missão",
+        "missionStatement": "Ferramentas online gratuitas, rápidas e privadas para todos — sem anúncios nem rastreamento.",
+        "securePrivate": "Seguro & Privado",
+        "allRightsReserved": "Todos os direitos reservados."
+    },
+    "Share": {
+        "shareThisTool": "Compartilhar esta ferramenta",
+        "linkCopied": "Link copiado!",
+        "copyLink": "Copiar link",
+        "shareOn": "Compartilhar no {network}"
+    },
+    "ToolActions": {
+        "operationSuccessful": "Sucesso!",
+        "readyForDownload": "Pronto para download",
+        "startNew": "Nova operação",
+        "downloadNow": "Baixar agora",
+        "uploadFile": "Carregar {type}",
+        "dragDrop": "Arrastar e soltar",
+        "chooseFile": "Escolher arquivo",
+        "processing": "Processando...",
+        "convertTo": "Converter para {format}",
+        "mergeFiles": "Mesclar arquivos",
+        "splitFile": "Dividir arquivo",
+        "addMore": "Adicionar mais",
+        "clearAll": "Limpar tudo",
+        "filesSelected": "{count} arquivos selecionados",
+        "pasteBase64": "Colar Base64",
+        "batchReady": "Lote pronto"
+    }
+}

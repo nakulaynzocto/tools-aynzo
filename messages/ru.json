@@ -1,0 +1,1164 @@
+{
+    "HomePage": {
+        "title": "Бесплатные инструменты для разработчиков",
+        "description": "Коллекция простых, быстрых и безопасных инструментов для повседневных задач.",
+        "noAds": "Без рекламы, без трекинга, только инструменты.",
+        "toolsCount": "{count} инструментов"
+    },
+    "App": {
+        "name": "AYNZO",
+        "nameHighlight": "TOOLS"
+    },
+    "Navigation": {
+        "more": "Ещё",
+        "searchPlaceholder": "Поиск инструментов...",
+        "mobileMenu": "Меню",
+        "home": "Главная",
+        "tools": "Инструменты"
+    },
+    "Categories": {
+        "Image Tools": "Инструменты для изображений",
+        "Text Tools": "Инструменты для текста",
+        "Calculator Tools": "Калькуляторы",
+        "Converter Tools": "Конвертеры",
+        "Time & Date Tools": "Время и дата",
+        "Web Tools": "Веб-инструменты",
+        "Dev Tools": "Инструменты разработчика",
+        "Code & Developer Tools": "Код и разработка",
+        "Security & Crypto Tools": "Безопасность и крипто",
+        "Social Media & SEO Tools": "SEO и соцсети",
+        "Miscellaneous Tools": "Разное",
+        "Generators": "Генераторы",
+        "CSS Tools": "Инструменты CSS",
+        "Color Tools": "Инструменты цвета",
+        "JSON Tools": "Инструменты JSON",
+        "Random Generators": "Случайные генераторы",
+        "image": "Инструменты для изображений",
+        "text": "Инструменты для текста",
+        "developer": "Код и разработка",
+        "seo": "SEO и соцсети",
+        "youtube": "Инструменты YouTube",
+        "social": "Соцсети и ссылки",
+        "security": "Безопасность и крипто",
+        "crypto": "Безопасность и крипто",
+        "converter": "Конвертеры",
+        "utility": "Полезные инструменты",
+        "pdf": "Инструменты PDF",
+        "calculator": "Калькуляторы",
+        "Security & Crypto": "Безопасность и крипто",
+        "Converters": "Конвертеры",
+        "SEO & Web Tools": "SEO и соцсети",
+        "Utility Tools": "Полезные инструменты",
+        "YouTube Tools": "Инструменты YouTube",
+        "Social & Links": "Соцсети и ссылки",
+        "Calculators": "Калькуляторы",
+        "web": "Веб-инструменты",
+        "Convert": "Конвертировать"
+    },
+    "Tools": {
+        "tryNow": "Попробовать сейчас",
+        "relatedTools": "Похожие инструменты",
+        "viewAll": "Все инструменты",
+        "backToTools": "Вернуться к инструментам",
+        "image-compressor": {
+            "name": "Компрессор изображений",
+            "description": "Сжимайте изображения JPG, PNG и WebP без потери качества.",
+            "seoTitle": "Компрессор изображений - Бесплатный онлайн-инструмент",
+            "seoDescription": "Сжимайте изображения без потери качества. 100% бесплатно, быстро и безопасно.",
+            "seoKeywords": "компрессор изображений, сжатие изображений, бесплатный инструмент",
+            "seoH1": "Компрессор изображений"
+        },
+        "image-resizer": {
+            "name": "Изменение размера изображения",
+            "description": "Изменяйте размер изображений в точных пикселях или процентах.",
+            "seoTitle": "Изменение размера изображения - Бесплатный онлайн-инструмент",
+            "seoDescription": "Легко меняйте размер изображений. 100% бесплатно и безопасно.",
+            "seoKeywords": "изменение размера изображения, resize image",
+            "seoH1": "Изменение размера изображения"
+        },
+        "jpg-to-png": {
+            "name": "JPG → PNG",
+            "description": "Конвертируйте JPG в PNG с поддержкой прозрачного фона.",
+            "seoTitle": "Конвертер JPG в PNG - Бесплатный инструмент",
+            "seoDescription": "Конвертируйте JPG в прозрачный PNG. 100% бесплатно.",
+            "seoKeywords": "jpg to png, конвертер jpg png",
+            "seoH1": "JPG → PNG"
+        },
+        "png-to-jpg": {
+            "name": "PNG → JPG",
+            "description": "Мгновенно конвертируйте PNG в JPG.",
+            "seoTitle": "Конвертер PNG в JPG - Бесплатный инструмент",
+            "seoDescription": "Конвертируйте PNG в JPG. 100% бесплатно.",
+            "seoKeywords": "png to jpg, конвертер png jpg",
+            "seoH1": "PNG → JPG"
+        },
+        "webp-converter": {
+            "name": "Конвертер WebP",
+            "description": "Конвертируйте изображения в или из формата WebP для оптимизации веб.",
+            "seoTitle": "Конвертер WebP - Бесплатный онлайн-инструмент",
+            "seoDescription": "Простая конвертация WebP. 100% бесплатно.",
+            "seoKeywords": "конвертер webp, webp jpg png",
+            "seoH1": "Конвертер WebP"
+        },
+        "image-format-converter": {
+            "name": "Конвертер формата изображения",
+            "description": "Конвертируйте между JPG, PNG, WebP и другими форматами.",
+            "seoTitle": "Конвертер формата изображения - Бесплатный инструмент",
+            "seoDescription": "Меняйте формат изображений онлайн. 100% бесплатно.",
+            "seoKeywords": "конвертер формата изображения, смена формата",
+            "seoH1": "Конвертер формата изображения"
+        },
+        "image-to-base64": {
+            "name": "Изображение → Base64",
+            "description": "Конвертируйте изображения в строки Base64 для встраивания в код.",
+            "seoTitle": "Изображение в Base64 - Бесплатный конвертер",
+            "seoDescription": "Конвертируйте изображение в Base64. 100% бесплатно.",
+            "seoKeywords": "image to base64, base64 encoder",
+            "seoH1": "Изображение → Base64"
+        },
+        "image-cropper": {
+            "name": "Обрезка изображения",
+            "description": "Обрезайте изображения онлайн с пользовательскими пропорциями.",
+            "seoTitle": "Обрезка изображения - Бесплатный инструмент",
+            "seoDescription": "Обрезайте изображения как хотите. 100% бесплатно.",
+            "seoKeywords": "обрезка изображения, crop image online",
+            "seoH1": "Обрезка изображения"
+        },
+        "flip-image": {
+            "name": "Отразить изображение",
+            "description": "Отразите изображения по горизонтали или вертикали.",
+            "seoTitle": "Отразить изображение - Бесплатный инструмент",
+            "seoDescription": "Мгновенное отражение изображений. 100% бесплатно.",
+            "seoKeywords": "отразить изображение, flip image",
+            "seoH1": "Отразить изображение"
+        },
+        "rotate-image": {
+            "name": "Поворот изображения",
+            "description": "Поворачивайте изображения на 90, 180 или 270 градусов.",
+            "seoTitle": "Поворот изображения - Бесплатный инструмент",
+            "seoDescription": "Легкий поворот изображений. 100% бесплатно.",
+            "seoKeywords": "поворот изображения, rotate image",
+            "seoH1": "Поворот изображения"
+        },
+        "image-enlarger": {
+            "name": "Увеличитель изображений",
+            "description": "Увеличивайте маленькие изображения без потери качества.",
+            "seoTitle": "Увеличитель изображений - Бесплатный инструмент",
+            "seoDescription": "Увеличение до 4x. 100% бесплатно.",
+            "seoKeywords": "увеличить изображение, upscale image",
+            "seoH1": "Увеличитель изображений"
+        },
+        "image-brightness": {
+            "name": "Яркость изображения",
+            "description": "Настройте яркость изображений.",
+            "seoTitle": "Настройка яркости",
+            "seoDescription": "Увеличьте или уменьшите яркость. 100% бесплатно.",
+            "seoKeywords": "яркость изображения, brightness adjust",
+            "seoH1": "Настройка яркости"
+        },
+        "image-contrast": {
+            "name": "Контраст изображения",
+            "description": "Настройте контраст изображений.",
+            "seoTitle": "Настройка контраста",
+            "seoDescription": "Улучшите контраст. 100% бесплатно.",
+            "seoKeywords": "контраст изображения, contrast adjust",
+            "seoH1": "Настройка контраста"
+        },
+        "grayscale-image": {
+            "name": "Оттенки серого",
+            "description": "Преобразуйте цветные изображения в чёрно-белые.",
+            "seoTitle": "Конвертер в оттенки серого",
+            "seoDescription": "Мгновенное преобразование в чёрно-белое. 100% бесплатно.",
+            "seoKeywords": "оттенки серого, чёрно-белое",
+            "seoH1": "Оттенки серого"
+        },
+        "blur-image": {
+            "name": "Размытие изображения",
+            "description": "Добавьте эффект размытия к изображениям.",
+            "seoTitle": "Размытие изображения - Бесплатный инструмент",
+            "seoDescription": "Примените гауссово размытие. 100% бесплатно.",
+            "seoKeywords": "размытие изображения, blur image",
+            "seoH1": "Размытие изображения"
+        },
+        "sepia-converter": {
+            "name": "Фильтр сепия",
+            "description": "Примените винтажный эффект сепия к фото.",
+            "seoTitle": "Фильтр сепия - Бесплатный инструмент",
+            "seoDescription": "Классический сепия тон.",
+            "seoKeywords": "фильтр сепия, винтажный эффект",
+            "seoH1": "Эффект сепия"
+        },
+        "invert-image": {
+            "name": "Инвертировать цвета",
+            "description": "Инвертируйте цвета изображения (эффект негатива).",
+            "seoTitle": "Инвертировать цвета - Бесплатный инструмент",
+            "seoDescription": "Создайте эффект негатива. 100% бесплатно.",
+            "seoKeywords": "инвертировать цвета, invert colors",
+            "seoH1": "Инвертировать цвета"
+        },
+        "saturate-image": {
+            "name": "Насыщенность цвета",
+            "description": "Настройте насыщенность цвета изображений.",
+            "seoTitle": "Настройка насыщенности",
+            "seoDescription": "Измените интенсивность цвета. 100% бесплатно.",
+            "seoKeywords": "насыщенность цвета, saturation adjust",
+            "seoH1": "Настройка насыщенности"
+        },
+        "hue-rotate-image": {
+            "name": "Вращение оттенка",
+            "description": "Измените оттенок для креативных эффектов.",
+            "seoTitle": "Вращение оттенка - Бесплатный инструмент",
+            "seoDescription": "Креативно сдвигайте цвета. 100% бесплатно.",
+            "seoKeywords": "вращение оттенка, hue rotate",
+            "seoH1": "Вращение оттенка"
+        },
+        "image-opacity": {
+            "name": "Прозрачность изображения",
+            "description": "Настройте прозрачность/непрозрачность изображений.",
+            "seoTitle": "Прозрачность изображения - Бесплатный инструмент",
+            "seoDescription": "Сделайте изображения прозрачными. 100% бесплатно.",
+            "seoKeywords": "прозрачность изображения, opacity adjust",
+            "seoH1": "Настройка прозрачности"
+        },
+        "round-corners-image": {
+            "name": "Закруглённые углы",
+            "description": "Добавьте закруглённые углы к изображениям.",
+            "seoTitle": "Закруглённые углы - Бесплатный инструмент",
+            "seoDescription": "Создайте закруглённые углы. 100% бесплатно.",
+            "seoKeywords": "закруглённые углы, rounded corners",
+            "seoH1": "Закруглённые углы"
+        },
+        "image-border": {
+            "name": "Рамка изображения",
+            "description": "Добавьте цветные рамки к изображениям.",
+            "seoTitle": "Добавить рамку",
+            "seoDescription": "Пользовательские рамки. 100% бесплатно.",
+            "seoKeywords": "рамка изображения, image border",
+            "seoH1": "Добавить рамку"
+        },
+        "image-shadow": {
+            "name": "Тень изображения",
+            "description": "Добавьте падающую тень к изображениям.",
+            "seoTitle": "Тень изображения - Бесплатный инструмент",
+            "seoDescription": "Реалистичные тени. 100% бесплатно.",
+            "seoKeywords": "тень изображения, drop shadow",
+            "seoH1": "Добавить тень"
+        },
+        "pixelate-image": {
+            "name": "Пикселизация",
+            "description": "Пикселизуйте изображения для скрытия деталей или создания искусства.",
+            "seoTitle": "Пикселизация - Бесплатный инструмент",
+            "seoDescription": "Примените пиксельный эффект. 100% бесплатно.",
+            "seoKeywords": "пикселизация, pixelate image",
+            "seoH1": "Пикселизация изображения"
+        },
+        "svg-to-png": {
+            "name": "SVG → PNG",
+            "description": "Конвертируйте векторные SVG в растровые PNG.",
+            "seoTitle": "SVG в PNG - Бесплатный конвертер",
+            "seoDescription": "Конвертируйте SVG в PNG. 100% бесплатно.",
+            "seoKeywords": "svg to png, конвертер svg",
+            "seoH1": "SVG → PNG"
+        },
+        "png-to-svg": {
+            "name": "PNG → SVG",
+            "description": "Конвертируйте растровые PNG в векторные SVG.",
+            "seoTitle": "PNG в SVG - Бесплатный конвертер",
+            "seoDescription": "Векторизуйте PNG. 100% бесплатно.",
+            "seoKeywords": "png to svg, векторизация изображения",
+            "seoH1": "PNG → SVG"
+        },
+        "webp-to-jpg": {
+            "name": "WebP → JPG",
+            "description": "Конвертируйте WebP в стандартный JPG.",
+            "seoTitle": "WebP в JPG - Бесплатный конвертер",
+            "seoDescription": "Конвертируйте WebP в JPG. 100% бесплатно.",
+            "seoKeywords": "webp to jpg",
+            "seoH1": "WebP → JPG"
+        },
+        "webp-to-png": {
+            "name": "WebP → PNG",
+            "description": "Конвертируйте WebP в прозрачный PNG.",
+            "seoTitle": "WebP в PNG - Бесплатный конвертер",
+            "seoDescription": "Конвертация с поддержкой прозрачности.",
+            "seoKeywords": "webp to png",
+            "seoH1": "WebP → PNG"
+        },
+        "jpg-to-webp": {
+            "name": "JPG → WebP",
+            "description": "Конвертируйте JPG в современный формат WebP.",
+            "seoTitle": "JPG в WebP - Бесплатный конвертер",
+            "seoDescription": "Уменьшите размер файла с WebP.",
+            "seoKeywords": "jpg to webp",
+            "seoH1": "JPG → WebP"
+        },
+        "png-to-webp": {
+            "name": "PNG → WebP",
+            "description": "Конвертируйте PNG в формат WebP.",
+            "seoTitle": "PNG в WebP - Бесплатный конвертер",
+            "seoDescription": "Конвертация с поддержкой прозрачности.",
+            "seoKeywords": "png to webp",
+            "seoH1": "PNG → WebP"
+        },
+        "base64-to-image": {
+            "name": "Base64 → Изображение",
+            "description": "Конвертируйте строки Base64 в файлы изображений.",
+            "seoTitle": "Base64 в изображение - Бесплатный декодер",
+            "seoDescription": "Декодируйте Base64 в изображение. 100% бесплатно.",
+            "seoKeywords": "base64 to image",
+            "seoH1": "Base64 → Изображение"
+        },
+        "pdf-to-word": {
+            "name": "PDF → Word",
+            "description": "Конвертируйте PDF-документы в редактируемые файлы Word.",
+            "seoTitle": "PDF в Word - Бесплатный конвертер",
+            "seoDescription": "Конвертируйте PDF в DOCX с сохранением формата.",
+            "seoKeywords": "pdf to word, конвертер pdf",
+            "seoH1": "PDF → Word"
+        },
+        "word-counter": {
+            "name": "Счётчик слов",
+            "description": "Подсчитайте слова, символы, предложения и абзацы.",
+            "seoTitle": "Счётчик слов - Бесплатный инструмент",
+            "seoDescription": "Точный подсчёт слов и символов.",
+            "seoKeywords": "счётчик слов, word counter",
+            "seoH1": "Счётчик слов"
+        },
+        "character-counter": {
+            "name": "Счётчик символов",
+            "description": "Подсчитайте символы с пробелами или без.",
+            "seoTitle": "Счётчик символов",
+            "seoDescription": "Идеально для Twitter, SMS и т.д.",
+            "seoKeywords": "счётчик символов",
+            "seoH1": "Счётчик символов"
+        },
+        "text-case-converter": {
+            "name": "Конвертер регистра текста",
+            "description": "Преобразуйте текст в верхний, нижний регистр, заголовок и т.д.",
+            "seoTitle": "Конвертер регистра текста",
+            "seoDescription": "Множество вариантов преобразования текста.",
+            "seoKeywords": "конвертер регистра, uppercase lowercase",
+            "seoH1": "Конвертер регистра текста"
+        },
+        "remove-line-breaks": {
+            "name": "Удалить переносы строк",
+            "description": "Удалите все переносы строк из текста.",
+            "seoTitle": "Удалить переносы строк",
+            "seoDescription": "Очистите текст.",
+            "seoKeywords": "удалить переносы строк",
+            "seoH1": "Удалить переносы строк"
+        },
+        "italic-text": {
+            "name": "Генератор курсива",
+            "description": "Создавайте курсивный текст с помощью Unicode.",
+            "seoTitle": "Генератор курсива",
+            "seoDescription": "Курсив для соцсетей.",
+            "seoKeywords": "курсивный текст, fancy text",
+            "seoH1": "Генератор курсива"
+        },
+        "strikethrough-text": {
+            "name": "Зачёркнутый текст",
+            "description": "Создавайте зачёркнутый текст.",
+            "seoTitle": "Генератор зачёркнутого текста",
+            "seoDescription": "Зачеркните текст.",
+            "seoKeywords": "зачёркнутый текст",
+            "seoH1": "Зачёркнутый текст"
+        },
+        "underline-text": {
+            "name": "Подчёркнутый текст",
+            "description": "Создавайте подчёркнутый текст с помощью Unicode.",
+            "seoTitle": "Генератор подчёркнутого текста",
+            "seoDescription": "Подчёркнутый текст.",
+            "seoKeywords": "подчёркнутый текст",
+            "seoH1": "Подчёркнутый текст"
+        },
+        "small-text": {
+            "name": "Генератор маленького текста",
+            "description": "Создавайте маленький текст (подстрочный/надстрочный).",
+            "seoTitle": "Генератор маленького текста",
+            "seoDescription": "Маленькие буквы.",
+            "seoKeywords": "маленький текст, tiny text",
+            "seoH1": "Генератор маленького текста"
+        },
+        "upside-down-text": {
+            "name": "Перевёрнутый текст",
+            "description": "Переверните текст вверх ногами.",
+            "seoTitle": "Генератор перевёрнутого текста",
+            "seoDescription": "Перевёрнутый текст для развлечения.",
+            "seoKeywords": "перевёрнутый текст, upside down text",
+            "seoH1": "Генератор перевёрнутого текста"
+        },
+        "mirror-text": {
+            "name": "Зеркальный текст",
+            "description": "Создавайте зеркальный текст.",
+            "seoTitle": "Генератор зеркального текста",
+            "seoDescription": "Зеркальный текст.",
+            "seoKeywords": "зеркальный текст, mirror text",
+            "seoH1": "Генератор зеркального текста"
+        },
+        "duplicate-line-remover": {
+            "name": "Удалить дубликаты строк",
+            "description": "Удалите дублирующиеся строки из текста или списка.",
+            "seoTitle": "Удалить дубликаты",
+            "seoDescription": "Очистите списки.",
+            "seoKeywords": "удалить дубликаты",
+            "seoH1": "Удалить дубликаты строк"
+        },
+        "sort-alphabetically": {
+            "name": "Сортировка по алфавиту",
+            "description": "Сортируйте строки по алфавиту.",
+            "seoTitle": "Сортировка по алфавиту",
+            "seoDescription": "Сортируйте списки от А до Я или наоборот.",
+            "seoKeywords": "сортировка по алфавиту",
+            "seoH1": "Сортировка по алفавиту"
+        },
+        "text-replace": {
+            "name": "Поиск и замена",
+            "description": "Ищите и заменяйте текст.",
+            "seoTitle": "Поиск и замена - Бесплатный инструмент",
+            "seoDescription": "Мощная замена текста.",
+            "seoKeywords": "поиск замена, find replace",
+            "seoH1": "Поиск и замена"
+        },
+        "whitespace-remover": {
+            "name": "Удалить лишние пробелы",
+            "description": "Удалите лишние пробелы, табы и переносы.",
+            "seoTitle": "Удалить лишние пробелы",
+            "seoDescription": "Очистите беспорядочный текст.",
+            "seoKeywords": "удалить пробелы",
+            "seoH1": "Удалить лишние пробелы"
+        },
+        "word-frequency": {
+            "name": "Частота слов",
+            "description": "Анализируйте самые частые слова в тексте.",
+            "seoTitle": "Анализ частоты слов",
+            "seoDescription": "Показать использование слов.",
+            "seoKeywords": "частота слов, keyword density",
+            "seoH1": "Частота слов"
+        },
+        "find-replace": {
+            "name": "Расширенный поиск и замена",
+            "description": "Поиск и замена с поддержкой regex.",
+            "seoTitle": "Расширенный поиск и замена",
+            "seoDescription": "Мощный поиск с regex.",
+            "seoKeywords": "regex поиск замена",
+            "seoH1": "Расширенный поиск и замена"
+        },
+        "json-formatter": {
+            "name": "Форматировщик JSON",
+            "description": "Форматируйте, украшайте и валидируйте данные JSON.",
+            "seoTitle": "Форматировщик и валидатор JSON",
+            "seoDescription": "Красивое отображение JSON.",
+            "seoKeywords": "форматировщик json, json beautifier",
+            "seoH1": "Форматировщик JSON"
+        },
+        "url-encoder-decoder": {
+            "name": "Кодировщик/Декодировщик URL",
+            "description": "Кодируйте или декодируйте URL.",
+            "seoTitle": "Кодировщик/Декодировщик URL",
+            "seoDescription": "Процентное кодирование для URL.",
+            "seoKeywords": "url encode decode",
+            "seoH1": "Кодировщик/Декодировщик URL"
+        },
+        "html-formatter": {
+            "name": "Форматировщик HTML",
+            "description": "Форматируйте и украшайте код HTML.",
+            "seoTitle": "Форматировщик HTML",
+            "seoDescription": "Красивое отображение HTML.",
+            "seoKeywords": "форматировщик html",
+            "seoH1": "Форматировщик HTML"
+        },
+        "css-formatter": {
+            "name": "Форматировщик CSS",
+            "description": "Форматируйте и украшайте код CSS.",
+            "seoTitle": "Форматировщик CSS",
+            "seoDescription": "Упорядочите CSS.",
+            "seoKeywords": "форматировщик css",
+            "seoH1": "Форматировщик CSS"
+        },
+        "javascript-formatter": {
+            "name": "Форматировщик JavaScript",
+            "description": "Форматируйте и украшайте код JavaScript.",
+            "seoTitle": "Форматировщик JavaScript",
+            "seoDescription": "Красивое отображение кода JS.",
+            "seoKeywords": "форматировщик js",
+            "seoH1": "Форматировщик JavaScript"
+        },
+        "xml-formatter": {
+            "name": "Форматировщик XML",
+            "description": "Форматируйте и украшайте код XML.",
+            "seoTitle": "Форматировщик XML",
+            "seoDescription": "Упорядочите XML.",
+            "seoKeywords": "форматировщик xml",
+            "seoH1": "Форматировщик XML"
+        },
+        "sql-formatter": {
+            "name": "Форматировщик SQL",
+            "description": "Форматируйте и украшайте SQL-запросы.",
+            "seoTitle": "Форматировщик SQL",
+            "seoDescription": "Сделайте SQL-запросы читаемыми.",
+            "seoKeywords": "форматировщик sql",
+            "seoH1": "Форматировщик SQL"
+        },
+        "markdown-to-html": {
+            "name": "Markdown → HTML",
+            "description": "Конвертируйте Markdown в HTML-код.",
+            "seoTitle": "Markdown в HTML - Конвертер",
+            "seoDescription": "Конвертируйте MD в HTML.",
+            "seoKeywords": "markdown to html",
+            "seoH1": "Markdown → HTML"
+        },
+        "html-to-markdown": {
+            "name": "HTML → Markdown",
+            "description": "Конвертируйте HTML в формат Markdown.",
+            "seoTitle": "HTML в Markdown - Конвертер",
+            "seoDescription": "Конвертируйте HTML в чистый Markdown.",
+            "seoKeywords": "html to markdown",
+            "seoH1": "HTML → Markdown"
+        },
+        "csv-to-json": {
+            "name": "CSV → JSON",
+            "description": "Конвертируйте данные CSV в формат JSON.",
+            "seoTitle": "CSV в JSON - Конвертер",
+            "seoDescription": "Конвертируйте CSV в JSON.",
+            "seoKeywords": "csv to json",
+            "seoH1": "CSV → JSON"
+        },
+        "json-to-csv": {
+            "name": "JSON → CSV",
+            "description": "Конвертируйте данные JSON в формат CSV.",
+            "seoTitle": "JSON в CSV - Конвертер",
+            "seoDescription": "Конвертируйте JSON в CSV.",
+            "seoKeywords": "json to csv",
+            "seoH1": "JSON → CSV"
+        },
+        "code-minifier": {
+            "name": "Минификатор кода",
+            "description": "Минифицируйте код HTML, CSS и JS.",
+            "seoTitle": "Минификатор кода",
+            "seoDescription": "Уменьшите размер файлов.",
+            "seoKeywords": "минификатор кода, minify code",
+            "seoH1": "Минификатор кода"
+        },
+        "diff-checker": {
+            "name": "Сравнение текста",
+            "description": "Сравните два текста и выделите различия.",
+            "seoTitle": "Сравнение текста",
+            "seoDescription": "Найдите различия между текстами.",
+            "seoKeywords": "сравнение текста, diff checker",
+            "seoH1": "Сравнение текста"
+        },
+        "unit-converter": {
+            "name": "Конвертер единиц",
+            "description": "Конвертируйте между различными единицами измерения.",
+            "seoTitle": "Конвертер единиц",
+            "seoDescription": "Длина, вес, температура и т.д.",
+            "seoKeywords": "конвертер единиц",
+            "seoH1": "Конвертер единиц"
+        },
+        "color-converter": {
+            "name": "Конвертер цветов",
+            "description": "Конвертируйте между HEX, RGB, HSL.",
+            "seoTitle": "Конвертер цветов",
+            "seoDescription": "Конвертируйте коды цветов.",
+            "seoKeywords": "конвертер цветов, hex rgb",
+            "seoH1": "Конвертер цветов"
+        },
+        "binary-to-text": {
+            "name": "Бинарный → Текст",
+            "description": "Конвертируйте бинарный код в текст.",
+            "seoTitle": "Бинарный в текст - Конвертер",
+            "seoDescription": "Декодируйте бинарный в ASCII.",
+            "seoKeywords": "binary to text",
+            "seoH1": "Бинарный → Текст"
+        },
+        "hex-to-decimal": {
+            "name": "Шестнадцатеричный → Десятичный",
+            "description": "Конвертируйте шестнадцатеричные числа в десятичные.",
+            "seoTitle": "Шестнадцатеричный в десятичный - Конвертер",
+            "seoDescription": "Конвертируйте числа hex.",
+            "seoKeywords": "hex to decimal",
+            "seoH1": "Шестнадцатеричный → Десятичный"
+        },
+        "roman-numeral": {
+            "name": "Конвертер римских чисел",
+            "description": "Конвертируйте между арабскими и римскими числами.",
+            "seoTitle": "Конвертер римских чисел",
+            "seoDescription": "Конвертируйте в римские числа.",
+            "seoKeywords": "конвертер римских чисел",
+            "seoH1": "Конвертер римских чисел"
+        },
+        "random-number": {
+            "name": "Генератор случайных чисел",
+            "description": "Генерируйте случайные числа в диапазоне.",
+            "seoTitle": "Генератор случайных чисел",
+            "seoDescription": "Настоящие случайные числа.",
+            "seoKeywords": "генератор случайных чисел",
+            "seoH1": "Генератор случайных чисел"
+        },
+        "random-string": {
+            "name": "Генератор случайных строк",
+            "description": "Генерируйте случайные строки и сильные пароли.",
+            "seoTitle": "Генератор строк и паролей",
+            "seoDescription": "Создавайте сильные пароли.",
+            "seoKeywords": "генератор случайных строк, генератор паролей",
+            "seoH1": "Генератор случайных строк"
+        },
+        "random-color": {
+            "name": "Генератор случайных цветов",
+            "description": "Генерируйте случайные цвета с HEX-кодами.",
+            "seoTitle": "Генератор случайных цветов",
+            "seoDescription": "Получите случайный цвет.",
+            "seoKeywords": "генератор случайных цветов",
+            "seoH1": "Генератор случайных цветов"
+        },
+        "random-date": {
+            "name": "Генератор случайных дат",
+            "description": "Генерируйте случайные даты.",
+            "seoTitle": "Генератор случайных дат",
+            "seoDescription": "Случайные даты для тестирования.",
+            "seoKeywords": "генератор случайных дат",
+            "seoH1": "Генератор случайных дат"
+        },
+        "random-ip": {
+            "name": "Генератор случайных IP",
+            "description": "Генерируйте случайные IP-адреса.",
+            "seoTitle": "Генератор случайных IP",
+            "seoDescription": "Валидные случайные IP.",
+            "seoKeywords": "генератор случайных ip",
+            "seoH1": "Генератор случайных IP"
+        },
+        "password-generator": {
+            "name": "Генератор паролей",
+            "description": "Генерируйте сильные и безопасные пароли.",
+            "seoTitle": "Генератор сильных паролей",
+            "seoDescription": "Безопасные пароли с опциями.",
+            "seoKeywords": "генератор паролей, password generator",
+            "seoH1": "Генератор паролей"
+        },
+        "bcrypt-generator": {
+            "name": "Генератор Bcrypt",
+            "description": "Генерируйте Bcrypt-хэши для паролей.",
+            "seoTitle": "Генератор Bcrypt-хэша",
+            "seoDescription": "Безопасные Bcrypt-хэши.",
+            "seoKeywords": "генератор bcrypt",
+            "seoH1": "Генератор Bcrypt"
+        },
+        "base64-encoder": {
+            "name": "Кодировщик/Декодировщик Base64",
+            "description": "Кодируйте и декодируйте строки Base64.",
+            "seoTitle": "Кодировщик/Декодировщик Base64",
+            "seoDescription": "Обработка Base64.",
+            "seoKeywords": "base64 encode decode",
+            "seoH1": "Кодировщик/Декодировщик Base64"
+        },
+        "md5-hash": {
+            "name": "Генератор хэша MD5",
+            "description": "Генерируйте MD5-контрольные суммы.",
+            "seoTitle": "Генератор MD5",
+            "seoDescription": "Создавайте MD5-хэши.",
+            "seoKeywords": "генератор md5",
+            "seoH1": "Генератор MD5"
+        },
+        "sha256-hash": {
+            "name": "Генератор хэша SHA-256",
+            "description": "Генерируйте хэши SHA-256.",
+            "seoTitle": "Генератор SHA-256",
+            "seoDescription": "Безопасный криптографический хэш.",
+            "seoKeywords": "генератор sha256",
+            "seoH1": "Генератор SHA-256"
+        },
+        "sha512-hash": {
+            "name": "Генератор хэша SHA-512",
+            "description": "Генерируйте хэши SHA-512.",
+            "seoTitle": "Генератор SHA-512",
+            "seoDescription": "Самый безопасный хэш SHA.",
+            "seoKeywords": "генератор sha512",
+            "seoH1": "Генератор SHA-512"
+        },
+        "uuid-generator": {
+            "name": "Генератор UUID",
+            "description": "Генерируйте идентификаторы UUID v4.",
+            "seoTitle": "Генератор UUID",
+            "seoDescription": "Уникальные идентификаторы.",
+            "seoKeywords": "генератор uuid",
+            "seoH1": "Генератор UUID"
+        },
+        "qr-code-generator": {
+            "name": "Генератор QR-кодов",
+            "description": "Генерируйте QR-коды для ссылок, текста и т.д.",
+            "seoTitle": "Генератор QR-кодов",
+            "seoDescription": "Пользовательские QR-коды.",
+            "seoKeywords": "генератор qr code",
+            "seoH1": "Генератор QR-кодов"
+        },
+        "lorem-ipsum": {
+            "name": "Генератор Lorem Ipsum",
+            "description": "Генерируйте заполнительный текст для макетов.",
+            "seoTitle": "Генератор Lorem Ipsum",
+            "seoDescription": "Фиктивный текст на разных языках.",
+            "seoKeywords": "lorem ipsum",
+            "seoH1": "Генератор Lorem Ipsum"
+        },
+        "youtube-thumbnail-downloader": {
+            "name": "Скачиватель миниатюр YouTube",
+            "description": "Скачивайте высококачественные миниатюры с видео YouTube.",
+            "seoTitle": "Скачиватель миниатюр YouTube",
+            "seoDescription": "Получайте HD-миниатюры YouTube.",
+            "seoKeywords": "скачиватель миниатюр youtube",
+            "seoH1": "Скачиватель миниатюр YouTube"
+        },
+        "youtube-tag-generator": {
+            "name": "Генератор тегов YouTube",
+            "description": "Генерируйте оптимизированные теги для улучшения ранжирования.",
+            "seoTitle": "Генератор тегов YouTube",
+            "seoDescription": "Релевантные теги для лучшего SEO.",
+            "seoKeywords": "генератор тегов youtube",
+            "seoH1": "Генератор тегов YouTube"
+        },
+        "youtube-title-generator": {
+            "name": "Генератор заголовков YouTube",
+            "description": "Генерируйте привлекательные и SEO-дружелюбные заголовки.",
+            "seoTitle": "Генератор заголовков YouTube",
+            "seoDescription": "Больше кликов с хорошими заголовками.",
+            "seoKeywords": "генератор заголовков youtube",
+            "seoH1": "Генератор заголовков YouTube"
+        },
+        "youtube-embed-code-generator": {
+            "name": "Генератор кода встраивания YouTube",
+            "description": "Генерируйте пользовательские коды встраивания.",
+            "seoTitle": "Генератор встраивания YouTube",
+            "seoDescription": "С автозапуском, циклом и т.д.",
+            "seoKeywords": "код встраивания youtube",
+            "seoH1": "Генератор встраивания YouTube"
+        },
+        "youtube-timestamp-link-generator": {
+            "name": "Ссылка с таймкодом YouTube",
+            "description": "Создавайте ссылки, начинающиеся с определённого времени.",
+            "seoTitle": "Генератор ссылки с таймкодом YouTube",
+            "seoDescription": "Запуск видео с точного места.",
+            "seoKeywords": "ссылка с таймкодом youtube",
+            "seoH1": "Ссылка с таймкодом YouTube"
+        },
+        "meta-tag-generator": {
+            "name": "Генератор мета-тегов",
+            "description": "Генерируйте SEO-дружелюбные мета-теги.",
+            "seoTitle": "Генератор мета-тегов",
+            "seoDescription": "Теги title и description.",
+            "seoKeywords": "генератор meta tags",
+            "seoH1": "Генератор мета-тегов"
+        },
+        "open-graph-generator": {
+            "name": "Генератор Open Graph",
+            "description": "Генерируйте теги Open Graph для соцсетей.",
+            "seoTitle": "Генератор Open Graph",
+            "seoDescription": "Лучший вид в соцсетях.",
+            "seoKeywords": "генератор open graph",
+            "seoH1": "Генератор Open Graph"
+        },
+        "twitter-card-generator": {
+            "name": "Генератор Twitter Card",
+            "description": "Генерируйте мета-теги Twitter Card.",
+            "seoTitle": "Генератор Twitter Card",
+            "seoDescription": "Лучший вид в Twitter.",
+            "seoKeywords": "генератор twitter card",
+            "seoH1": "Генератор Twitter Card"
+        },
+        "robots-txt-generator": {
+            "name": "Генератор robots.txt",
+            "description": "Создавайте файлы robots.txt.",
+            "seoTitle": "Генератор robots.txt",
+            "seoDescription": "Контролируйте доступ краулеров.",
+            "seoKeywords": "генератор robots.txt",
+            "seoH1": "Генератор robots.txt"
+        },
+        "xml-sitemap-generator": {
+            "name": "Генератор карты сайта XML",
+            "description": "Генерируйте XML-карты сайта для SEO.",
+            "seoTitle": "Генератор карты сайта XML",
+            "seoDescription": "Упростите индексацию страниц.",
+            "seoKeywords": "генератор sitemap xml",
+            "seoH1": "Генератор карты сайта XML"
+        },
+        "keyword-density-checker": {
+            "name": "Проверка плотности ключевых слов",
+            "description": "Анализируйте использование и плотность ключевых слов.",
+            "seoTitle": "Проверка плотности ключевых слов",
+            "seoDescription": "Проверьте частоту ключевых слов.",
+            "seoKeywords": "плотность ключевых слов",
+            "seoH1": "Проверка плотности ключевых слов"
+        },
+        "keyword-cleaner": {
+            "name": "Очиститель ключевых слов",
+            "description": "Очищайте списки ключевых слов.",
+            "seoTitle": "Очиститель списка ключевых слов",
+            "seoDescription": "Удалите дубликаты и мусор.",
+            "seoKeywords": "очиститель ключевых слов",
+            "seoH1": "Очиститель ключевых слов"
+        },
+        "long-tail-keyword-generator": {
+            "name": "Генератор длинных ключевых слов",
+            "description": "Генерируйте вариации длинных ключевых слов.",
+            "seoTitle": "Генератор длинных ключевых слов",
+            "seoDescription": "Расширьте seed-слова.",
+            "seoKeywords": "длинные ключевые слова",
+            "seoH1": "Длинные ключевые слова"
+        },
+        "slug-generator": {
+            "name": "Генератор slug URL",
+            "description": "Преобразуйте текст в SEO-дружелюбный slug URL.",
+            "seoTitle": "Генератор slug",
+            "seoDescription": "Создавайте чистые и читаемые URL.",
+            "seoKeywords": "генератор slug, url slug",
+            "seoH1": "Генератор slug URL"
+        },
+        "google-serp-simulator": {
+            "name": "Предпросмотр SERP Google",
+            "description": "Предпросмотр, как ваша страница выглядит в результатах Google.",
+            "seoTitle": "Симулятор SERP Google",
+            "seoDescription": "Тестируйте предпросмотр результатов поиска.",
+            "seoKeywords": "предпросмотр serp google",
+            "seoH1": "Предпросмотр SERP Google"
+        },
+        "htaccess-redirect-generator": {
+            "name": "Генератор редиректа .htaccess",
+            "description": "Генерируйте код редиректа 301/302.",
+            "seoTitle": "Генератор редиректа .htaccess",
+            "seoDescription": "Создавайте правила редиректа.",
+            "seoKeywords": "генератор редиректа htaccess",
+            "seoH1": "Генератор редиректа .htaccess"
+        },
+        "my-ip-address": {
+            "name": "Мой IP-адрес",
+            "description": "Проверьте ваш публичный IP и информацию о местоположении.",
+            "seoTitle": "Какой мой IP-адрес",
+            "seoDescription": "Узнайте ваш публичный IP.",
+            "seoKeywords": "мой ip адрес, what is my ip",
+            "seoH1": "Мой IP-адрес"
+        },
+        "browser-info": {
+            "name": "Информация о браузере",
+            "description": "Получите детали браузера и устройства.",
+            "seoTitle": "Информация о браузере",
+            "seoDescription": "Браузер, ОС, размер экрана и т.д.",
+            "seoKeywords": "инфо браузер, user agent",
+            "seoH1": "Информация о браузере"
+        },
+        "screen-resolution-simulator": {
+            "name": "Тестер разрешения экрана",
+            "description": "Тестируйте сайт на разных разрешениях.",
+            "seoTitle": "Симулятор разрешения экрана",
+            "seoDescription": "Предпросмотр на разных устройствах.",
+            "seoKeywords": "тестер разрешения экрана",
+            "seoH1": "Тестер разрешения экрана"
+        },
+        "responsive-checker": {
+            "name": "Проверка адаптивного дизайна",
+            "description": "Проверьте, адаптивен ли ваш сайт для мобильных.",
+            "seoTitle": "Тестер адаптивного сайта",
+            "seoDescription": "Тестируйте адаптивность.",
+            "seoKeywords": "проверка адаптивности",
+            "seoH1": "Проверка адаптивного дизайна"
+        },
+        "whatsapp-link-generator": {
+            "name": "Генератор ссылки WhatsApp",
+            "description": "Создавайте ссылки клик-то-чат для WhatsApp.",
+            "seoTitle": "Генератор ссылки WhatsApp",
+            "seoDescription": "Генерируйте ссылки wa.me.",
+            "seoKeywords": "генератор ссылки whatsapp",
+            "seoH1": "Генератор ссылки WhatsApp"
+        },
+        "telegram-link-generator": {
+            "name": "Генератор ссылки Telegram",
+            "description": "Создавайте прямые ссылки на пользователей или каналы Telegram.",
+            "seoTitle": "Генератор ссылки Telegram",
+            "seoDescription": "Генерируйте ссылки t.me.",
+            "seoKeywords": "генератор ссылки telegram",
+            "seoH1": "Генератор ссылки Telegram"
+        },
+        "paypal-link-generator": {
+            "name": "Генератор ссылки PayPal",
+            "description": "Создавайте ссылки на оплату и донаты PayPal.",
+            "seoTitle": "Генератор ссылки PayPal",
+            "seoDescription": "Ссылки PayPal.me и оплата.",
+            "seoKeywords": "генератор ссылки paypal",
+            "seoH1": "Генератор ссылки PayPal"
+        },
+        "email-validator": {
+            "name": "Валидатор email",
+            "description": "Проверяйте формат адресов электронной почты.",
+            "seoTitle": "Валидатор адреса email",
+            "seoDescription": "Проверьте синтаксис email.",
+            "seoKeywords": "валидатор email",
+            "seoH1": "Валидатор email"
+        },
+        "url-opener": {
+            "name": "Массовый открыватель URL",
+            "description": "Открывайте несколько URL одновременно.",
+            "seoTitle": "Массовый открыватель URL",
+            "seoDescription": "Открывайте много ссылок сразу.",
+            "seoKeywords": "массовый открыватель url",
+            "seoH1": "Массовый открыватель URL"
+        },
+        "user-agent-parser": {
+            "name": "Парсер User Agent",
+            "description": "Анализируйте строки User-Agent.",
+            "seoTitle": "Парсер User Agent",
+            "seoDescription": "Извлекайте информацию о браузере и устройстве.",
+            "seoKeywords": "парсер user agent",
+            "seoH1": "Парсер User Agent"
+        },
+        "wordpress-password-hash": {
+            "name": "Хэш пароля WordPress",
+            "description": "Генерируйте хэши, совместимые с WordPress.",
+            "seoTitle": "Генератор хэша WordPress",
+            "seoDescription": "Создавайте phpass-хэши.",
+            "seoKeywords": "хэш пароля wordpress",
+            "seoH1": "Хэш пароля WordPress"
+        },
+        "age-calculator": {
+            "name": "Калькулятор возраста",
+            "description": "Рассчитайте точный возраст в годах, месяцах и днях.",
+            "seoTitle": "Калькулятор возраста",
+            "seoDescription": "Точный возраст по дате рождения.",
+            "seoKeywords": "калькулятор возраста",
+            "seoH1": "Калькулятор возраста"
+        },
+        "bmi-calculator": {
+            "name": "Калькулятор ИМТ",
+            "description": "Рассчитайте индекс массы тела и состояние здоровья.",
+            "seoTitle": "Калькулятор ИМТ",
+            "seoDescription": "Проверьте свой ИМТ.",
+            "seoKeywords": "калькулятор имт",
+            "seoH1": "Калькулятор ИМТ"
+        },
+        "percentage-calculator": {
+            "name": "Калькулятор процентов",
+            "description": "Рассчитайте проценты, увеличение, уменьшение.",
+            "seoTitle": "Калькулятор процентов",
+            "seoDescription": "Множество процентных инструментов.",
+            "seoKeywords": "калькулятор процентов",
+            "seoH1": "Калькулятор процентов"
+        },
+        "gst-calculator": {
+            "name": "Калькулятор налога",
+            "description": "Рассчитайте сумму налога и общую цену.",
+            "seoTitle": "Калькулятор налога",
+            "seoDescription": "Легко рассчитайте налог.",
+            "seoKeywords": "калькулятор налога",
+            "seoH1": "Калькулятор налога"
+        },
+        "emi-calculator": {
+            "name": "Калькулятор ежемесячных платежей",
+            "description": "Рассчитайте ежемесячный платёж и общие проценты.",
+            "seoTitle": "Калькулятор EMI",
+            "seoDescription": "Рассчитайте платежи по кредиту.",
+            "seoKeywords": "калькулятор emi, калькулятор кредита",
+            "seoH1": "Калькулятор EMI"
+        },
+        "discount-calculator": {
+            "name": "Калькулятор скидок",
+            "description": "Рассчитайте сумму скидки и итоговую цену.",
+            "seoTitle": "Калькулятор скидок",
+            "seoDescription": "Узнайте экономию на предложениях.",
+            "seoKeywords": "калькулятор скидок",
+            "seoH1": "Калькулятор скидок"
+        },
+        "instagram-hashtag-generator": {
+            "name": "Генератор хэштегов Instagram",
+            "description": "Генерируйте популярные и релевантные хэштеги для Instagram.",
+            "seoTitle": "Генератор хэштегов Instagram",
+            "seoDescription": "Увеличьте охват постов.",
+            "seoKeywords": "хэштеги instagram",
+            "seoH1": "Генератор хэштегов Instagram"
+        },
+        "html-to-jsx": {
+            "name": "HTML → JSX",
+            "description": "Конвертируйте код HTML в синтаксис JSX React.",
+            "seoTitle": "HTML в JSX - Конвертер",
+            "seoDescription": "Для разработки на React.",
+            "seoKeywords": "html to jsx",
+            "seoH1": "HTML → JSX"
+        }
+    },
+    "Common": {
+        "backToTools": "Вернуться к инструментам",
+        "howToUse": "Как использовать {name}",
+        "toolIntro": "Этот инструмент позволяет {description} быстро и безопасно. Вся обработка происходит в вашем браузере.",
+        "keyFeatures": "Основные возможности",
+        "featureFast": "Молниеносно быстро",
+        "featureSimple": "Простой интерфейс",
+        "featureNoInstall": "Без установки",
+        "featureFree": "100% бесплатно",
+        "featurePrivacy": "Конфиденциальность гарантирована",
+        "relatedTools": "Похожие инструменты",
+        "viewAll": "Все инструменты",
+        "whyUse": "Почему использовать этот инструмент?",
+        "featureBrowser": "Полностью работает в браузере",
+        "featureNoStorage": "Без хранения на сервере",
+        "featureMobile": "100% адаптивно для мобильных",
+        "selectImage": "Выбрать изображение",
+        "selectMultiple": "Выбрать несколько изображений",
+        "dragDrop": "Перетащите файлы сюда",
+        "supports": "Поддерживает JPG, PNG, WebP и SVG",
+        "privacyGuaranteed": "Конфиденциальность гарантирована",
+        "lightningFast": "Молниеносно быстро",
+        "imagesSelected": "{count} изображений выбрано",
+        "clearAll": "Очистить всё",
+        "addMore": "Добавить ещё",
+        "processing": "Обработка...",
+        "processBatch": "Пакетная обработка",
+        "applyChanges": "Применить изменения",
+        "safePrivate": "Безопасно и приватно",
+        "localProcessing": "Обработка локально в браузере",
+        "quality": "Качество",
+        "targetFormat": "Целевой формат",
+        "copyString": "Копировать результат",
+        "fastSecure": "Быстро и безопасно",
+        "browserProcessing": "Обработка в браузере",
+        "noStorage": "Без хранения данных",
+        "mobileFriendly": "100% адаптивно для мобильных",
+        "settings": "Настройки",
+        "tipQuality": "Совет: 80% качества — лучший баланс",
+        "downloadsAsZip": "Скачать как ZIP",
+        "base64Output": "Вывод Base64",
+        "tryNow": "Попробовать сейчас",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "download": "Скачать",
+        "options": "Опции",
+        "output": "Вывод",
+        "input": "Ввод",
+        "reset": "Сбросить",
+        "shareThisTool": "Поделиться инструментом",
+        "copyLink": "Копировать ссылку"
+    },
+    "NavbarCategories": {
+        "Image Tools": "Инструменты для изображений",
+        "Text Tools": "Инструменты для текста",
+        "Code & Developer Tools": "Код и разработка",
+        "Converter Tools": "Конвертеры",
+        "Utility Tools": "Полезные инструменты",
+        "Security & Crypto": "Безопасность и крипто",
+        "YouTube Tools": "Инструменты YouTube",
+        "Social & Links": "Соцсети и ссылки",
+        "Calculators": "Калькуляторы",
+        "Convert": "Конвертировать"
+    },
+    "TextTools": {
+        "editor": "Редактор",
+        "placeholder": "Вставьте или введите текст здесь...",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "topKeywords": "Самые частые слова",
+        "quickTransformers": "Быстрые инструменты",
+        "allCaps": "ВСЁ БОЛЬШИМИ",
+        "uppercase": "Большие буквы",
+        "mirrorMode": "Зеркальный текст",
+        "reverseText": "Обратный текст",
+        "allSmall": "всё маленькими",
+        "lowercase": "маленькие буквы",
+        "headlineStyle": "Стиль заголовка",
+        "titleCase": "Заголовок",
+        "naturalFlow": "Естественный поток",
+        "sentenceCase": "Предложение",
+        "fixSpacing": "Исправить пробелы",
+        "removeExtraSpaces": "Удалить лишние пробелы",
+        "joinText": "Объединить строки",
+        "removeLineBreaks": "Удалить переносы строк",
+        "findReplace": "Найти и заменить",
+        "find": "Найти",
+        "replaceWith": "Заменить на",
+        "count": "Найдено: {count}",
+        "replaceAll": "Заменить всё",
+        "words": "Слова",
+        "characters": "Символы",
+        "sentences": "Предложения",
+        "paragraphs": "Абзацы",
+        "lines": "Строки",
+        "readTime": "Время чтения",
+        "input": "Ввод",
+        "reset": "Сброс",
+        "pastePlaceholder": "Вставьте текст здесь...",
+        "options": "Опции",
+        "findLabel": "Найти",
+        "replaceLabel": "Заменить",
+        "useRegex": "Использовать Regex",
+        "caseSensitive": "Учитывать регистр",
+        "noConfig": "Без настроек",
+        "runTool": "Обработать",
+        "output": "Вывод",
+        "resultsPlaceholder": "Результаты появятся здесь",
+        "italicConverter": "Курсивный текст",
+        "strikethrough": "Зачёркнутый",
+        "sortAZ": "Сортировка А-Я",
+        "removeDuplicates": "Удалить дубликаты",
+        "textTool": "Инструмент текста"
+    },
+    "YouTubeTools": {
+        "autoplay": "Автовоспроизведение",
+        "loop": "Цикл",
+        "hideControls": "Скрыть управление",
+        "startTime": "Время начала",
+        "startTimePlaceholder": "прим. 1м30с",
+        "configuration": "Опции встраивания",
+        "enterTopic": "Введите тему",
+        "videoUrl": "URL YouTube",
+        "topicPlaceholder": "прим. Веб-разработка",
+        "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+        "fetchThumbnails": "Получить миниатюры",
+        "generateNow": "Сгенерировать",
+        "growthTip": "Про-совет",
+        "tipText": "Хорошие миниатюры и теги могут увеличить клики на 40%.",
+        "generatedOutput": "Результаты",
+        "qualityLabel": "Качество {quality}",
+        "downloadImage": "Скачать",
+        "seoTags": "Рекомендуемые теги",
+        "copyAll": "Копировать всё",
+        "generatedCode": "Код встраивания",
+        "generatedLink": "Сгенерированная ссылка",
+        "copy": "Копировать",
+        "openLink": "Открыть ссылку",
+        "inputRequired": "Пожалуйста, введите URL YouTube",
+        "resultsPlaceholder": "Результаты появятся здесь",
+        "duration": "Длительность",
+        "embedCode": "Код встраивания"
+    },
+    "Footer": {
+        "topCategories": "Популярные категории",
+        "resources": "Ресурсы",
+        "aboutUs": "О нас",
+        "contact": "Контакты",
+        "privacyPolicy": "Политика конфиденциальности",
+        "termsOfService": "Условия использования",
+        "ourMission": "Наша миссия",
+        "missionStatement": "Бесплатные, быстрые и приватные онлайн-инструменты для всех — без рекламы и трекинга.",
+        "securePrivate": "Безопасно и приватно",
+        "allRightsReserved": "Все права защищены."
+    },
+    "Share": {
+        "shareThisTool": "Поделиться инструментом",
+        "linkCopied": "Ссылка скопирована!",
+        "copyLink": "Копировать ссылку",
+        "shareOn": "Поделиться в {network}"
+    },
+    "ToolActions": {
+        "operationSuccessful": "Успешно!",
+        "readyForDownload": "Готово к скачиванию",
+        "startNew": "Новая операция",
+        "downloadNow": "Скачать сейчас",
+        "uploadFile": "Загрузить {type}",
+        "dragDrop": "Перетащить",
+        "chooseFile": "Выбрать файл",
+        "processing": "Обработка...",
+        "convertTo": "Конвертировать в {format}",
+        "mergeFiles": "Объединить файлы",
+        "splitFile": "Разделить файл",
+        "addMore": "Добавить ещё",
+        "clearAll": "Очистить всё",
+        "filesSelected": "{count} файлов выбрано",
+        "pasteBase64": "Вставить Base64",
+        "batchReady": "Пакет готов"
+    }
+}

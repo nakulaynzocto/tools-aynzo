@@ -1,0 +1,1164 @@
+{
+    "HomePage": {
+        "title": "Alat Pengembang Gratis",
+        "description": "Kumpulan alat sederhana, cepat, dan aman untuk tugas sehari-hari Anda.",
+        "noAds": "Tanpa iklan, tanpa pelacakan, hanya alat.",
+        "toolsCount": "{count} Alat"
+    },
+    "App": {
+        "name": "AYNZO",
+        "nameHighlight": "TOOLS"
+    },
+    "Navigation": {
+        "more": "Lainnya",
+        "searchPlaceholder": "Cari alat...",
+        "mobileMenu": "Menu",
+        "home": "Beranda",
+        "tools": "Alat"
+    },
+    "Categories": {
+        "Image Tools": "Alat Gambar",
+        "Text Tools": "Alat Teks",
+        "Calculator Tools": "Kalkulator",
+        "Converter Tools": "Konverter",
+        "Time & Date Tools": "Waktu & Tanggal",
+        "Web Tools": "Alat Web",
+        "Dev Tools": "Alat Dev",
+        "Code & Developer Tools": "Kode & Pengembang",
+        "Security & Crypto Tools": "Keamanan & Kripto",
+        "Social Media & SEO Tools": "SEO & Media Sosial",
+        "Miscellaneous Tools": "Lain-lain",
+        "Generators": "Generator",
+        "CSS Tools": "Alat CSS",
+        "Color Tools": "Alat Warna",
+        "JSON Tools": "Alat JSON",
+        "Random Generators": "Generator Acak",
+        "image": "Alat Gambar",
+        "text": "Alat Teks",
+        "developer": "Kode & Pengembang",
+        "seo": "SEO & Media Sosial",
+        "youtube": "Alat YouTube",
+        "social": "Sosial & Tautan",
+        "security": "Keamanan & Kripto",
+        "crypto": "Keamanan & Kripto",
+        "converter": "Konverter",
+        "utility": "Alat Utilitas",
+        "pdf": "Alat PDF",
+        "calculator": "Kalkulator",
+        "Security & Crypto": "Keamanan & Kripto",
+        "Converters": "Konverter",
+        "SEO & Web Tools": "SEO & Media Sosial",
+        "Utility Tools": "Alat Utilitas",
+        "YouTube Tools": "Alat YouTube",
+        "Social & Links": "Sosial & Tautan",
+        "Calculators": "Kalkulator",
+        "web": "Alat Web",
+        "Convert": "Konversi"
+    },
+    "Tools": {
+        "tryNow": "Coba Sekarang",
+        "relatedTools": "Alat Terkait",
+        "viewAll": "Lihat Semua Alat",
+        "backToTools": "Kembali ke Alat",
+        "image-compressor": {
+            "name": "Kompresor Gambar",
+            "description": "Kompres gambar JPG, PNG, dan WebP tanpa kehilangan kualitas.",
+            "seoTitle": "Kompresor Gambar - Alat Gratis Online",
+            "seoDescription": "Kompres gambar tanpa kehilangan kualitas. 100% gratis, cepat dan aman.",
+            "seoKeywords": "kompresor gambar, kompres gambar, alat gratis",
+            "seoH1": "Kompresor Gambar"
+        },
+        "image-resizer": {
+            "name": "Pengubah Ukuran Gambar",
+            "description": "Ubah ukuran gambar ke piksel tepat atau persentase.",
+            "seoTitle": "Pengubah Ukuran Gambar - Alat Gratis Online",
+            "seoDescription": "Ubah ukuran gambar dengan mudah. 100% gratis dan aman.",
+            "seoKeywords": "ubah ukuran gambar, resize gambar",
+            "seoH1": "Pengubah Ukuran Gambar"
+        },
+        "jpg-to-png": {
+            "name": "JPG ke PNG",
+            "description": "Konversi gambar JPG ke PNG dengan dukungan latar belakang transparan.",
+            "seoTitle": "Konverter JPG ke PNG - Alat Gratis",
+            "seoDescription": "Konversi JPG ke PNG transparan. 100% gratis.",
+            "seoKeywords": "jpg to png, konversi jpg png",
+            "seoH1": "JPG ke PNG"
+        },
+        "png-to-jpg": {
+            "name": "PNG ke JPG",
+            "description": "Konversi gambar PNG ke JPG secara instan.",
+            "seoTitle": "Konverter PNG ke JPG - Alat Gratis",
+            "seoDescription": "Konversi PNG ke JPG. 100% gratis.",
+            "seoKeywords": "png to jpg, konversi png jpg",
+            "seoH1": "PNG ke JPG"
+        },
+        "webp-converter": {
+            "name": "Konverter WebP",
+            "description": "Konversi gambar ke dan dari format WebP untuk optimasi web.",
+            "seoTitle": "Konverter WebP - Alat Gratis Online",
+            "seoDescription": "Konversi WebP mudah. 100% gratis.",
+            "seoKeywords": "konverter webp, webp jpg png",
+            "seoH1": "Konverter WebP"
+        },
+        "image-format-converter": {
+            "name": "Konverter Format Gambar",
+            "description": "Konversi antara JPG, PNG, WebP dan format lainnya.",
+            "seoTitle": "Konverter Format Gambar - Alat Gratis",
+            "seoDescription": "Ubah format gambar online. 100% gratis.",
+            "seoKeywords": "konverter format gambar, ubah format gambar",
+            "seoH1": "Konverter Format Gambar"
+        },
+        "image-to-base64": {
+            "name": "Gambar ke Base64",
+            "description": "Konversi gambar ke string Base64 untuk disematkan dalam kode.",
+            "seoTitle": "Gambar ke Base64 - Konverter Gratis",
+            "seoDescription": "Konversi gambar ke Base64. 100% gratis.",
+            "seoKeywords": "image to base64, base64 encoder",
+            "seoH1": "Gambar ke Base64"
+        },
+        "image-cropper": {
+            "name": "Pemotong Gambar",
+            "description": "Potong gambar online dengan rasio khusus.",
+            "seoTitle": "Pemotong Gambar - Alat Gratis",
+            "seoDescription": "Potong gambar sesuai keinginan. 100% gratis.",
+            "seoKeywords": "potong gambar, crop image online",
+            "seoH1": "Pemotong Gambar"
+        },
+        "flip-image": {
+            "name": "Balik Gambar",
+            "description": "Balik gambar secara horizontal atau vertikal.",
+            "seoTitle": "Balik Gambar - Alat Gratis",
+            "seoDescription": "Balik gambar secara instan. 100% gratis.",
+            "seoKeywords": "balik gambar, flip image",
+            "seoH1": "Balik Gambar"
+        },
+        "rotate-image": {
+            "name": "Putar Gambar",
+            "description": "Putar gambar 90, 180 atau 270 derajat.",
+            "seoTitle": "Putar Gambar - Alat Gratis",
+            "seoDescription": "Putar gambar dengan mudah. 100% gratis.",
+            "seoKeywords": "putar gambar, rotate image",
+            "seoH1": "Putar Gambar"
+        },
+        "image-enlarger": {
+            "name": "Pembesar Gambar",
+            "description": "Perbesar gambar kecil tanpa kehilangan kualitas.",
+            "seoTitle": "Pembesar Gambar - Alat Gratis",
+            "seoDescription": "Perbesar hingga 4x. 100% gratis.",
+            "seoKeywords": "perbesar gambar, upscale image",
+            "seoH1": "Pembesar Gambar"
+        },
+        "image-brightness": {
+            "name": "Kecerahan Gambar",
+            "description": "Atur kecerahan gambar Anda.",
+            "seoTitle": "Atur Kecerahan",
+            "seoDescription": "Tingkatkan atau kurangi kecerahan. 100% gratis.",
+            "seoKeywords": "kecerahan gambar, brightness adjust",
+            "seoH1": "Atur Kecerahan"
+        },
+        "image-contrast": {
+            "name": "Kontras Gambar",
+            "description": "Atur kontras gambar Anda.",
+            "seoTitle": "Atur Kontras",
+            "seoDescription": "Tingkatkan kontras. 100% gratis.",
+            "seoKeywords": "kontras gambar, contrast adjust",
+            "seoH1": "Atur Kontras"
+        },
+        "grayscale-image": {
+            "name": "Skala Abu-abu",
+            "description": "Ubah gambar berwarna menjadi hitam putih.",
+            "seoTitle": "Konverter Skala Abu-abu",
+            "seoDescription": "Ubah menjadi hitam putih. 100% gratis.",
+            "seoKeywords": "skala abu-abu, hitam putih",
+            "seoH1": "Skala Abu-abu"
+        },
+        "blur-image": {
+            "name": "Blur Gambar",
+            "description": "Tambahkan efek blur pada gambar.",
+            "seoTitle": "Blur Gambar - Alat Gratis",
+            "seoDescription": "Terapkan blur Gaussian. 100% gratis.",
+            "seoKeywords": "blur gambar, blur image",
+            "seoH1": "Blur Gambar"
+        },
+        "sepia-converter": {
+            "name": "Filter Sepia",
+            "description": "Terapkan efek sepia vintage pada foto.",
+            "seoTitle": "Filter Sepia - Alat Gratis",
+            "seoDescription": "Berikan nada sepia klasik.",
+            "seoKeywords": "filter sepia, efek vintage",
+            "seoH1": "Efek Sepia"
+        },
+        "invert-image": {
+            "name": "Balik Warna",
+            "description": "Balik warna gambar (efek negatif).",
+            "seoTitle": "Balik Warna - Alat Gratis",
+            "seoDescription": "Buat efek negatif. 100% gratis.",
+            "seoKeywords": "balik warna, invert colors",
+            "seoH1": "Balik Warna"
+        },
+        "saturate-image": {
+            "name": "Saturasi Warna",
+            "description": "Atur saturasi warna gambar.",
+            "seoTitle": "Atur Saturasi",
+            "seoDescription": "Ubah intensitas warna. 100% gratis.",
+            "seoKeywords": "saturasi warna, saturation adjust",
+            "seoH1": "Atur Saturasi"
+        },
+        "hue-rotate-image": {
+            "name": "Rotasi Hue",
+            "description": "Ubah hue untuk efek kreatif.",
+            "seoTitle": "Rotasi Hue - Alat Gratis",
+            "seoDescription": "Geser warna secara kreatif.",
+            "seoKeywords": "rotasi hue, hue rotate",
+            "seoH1": "Rotasi Hue"
+        },
+        "image-opacity": {
+            "name": "Opasitas Gambar",
+            "description": "Atur transparansi/opasitas gambar.",
+            "seoTitle": "Opasitas Gambar - Alat Gratis",
+            "seoDescription": "Buat gambar transparan. 100% gratis.",
+            "seoKeywords": "opasitas gambar, opacity adjust",
+            "seoH1": "Atur Opasitas"
+        },
+        "round-corners-image": {
+            "name": "Sudut Bulat",
+            "description": "Tambahkan sudut bulat pada gambar.",
+            "seoTitle": "Sudut Bulat - Alat Gratis",
+            "seoDescription": "Buat sudut bulat. 100% gratis.",
+            "seoKeywords": "sudut bulat, rounded corners",
+            "seoH1": "Sudut Bulat"
+        },
+        "image-border": {
+            "name": "Bingkai Gambar",
+            "description": "Tambahkan bingkai berwarna pada gambar.",
+            "seoTitle": "Tambah Bingkai",
+            "seoDescription": "Bingkai khusus. 100% gratis.",
+            "seoKeywords": "bingkai gambar, image border",
+            "seoH1": "Tambah Bingkai"
+        },
+        "image-shadow": {
+            "name": "Bayangan Gambar",
+            "description": "Tambahkan bayangan jatuh pada gambar.",
+            "seoTitle": "Bayangan Gambar - Alat Gratis",
+            "seoDescription": "Bayangan realistis. 100% gratis.",
+            "seoKeywords": "bayangan gambar, drop shadow",
+            "seoH1": "Tambah Bayangan"
+        },
+        "pixelate-image": {
+            "name": "Pikselisasi",
+            "description": "Pikselkan gambar untuk menyembunyikan detail atau membuat seni.",
+            "seoTitle": "Pikselisasi - Alat Gratis",
+            "seoDescription": "Terapkan efek piksel. 100% gratis.",
+            "seoKeywords": "pikselisasi, pixelate image",
+            "seoH1": "Pikselkan Gambar"
+        },
+        "svg-to-png": {
+            "name": "SVG ke PNG",
+            "description": "Konversi file vektor SVG ke gambar PNG.",
+            "seoTitle": "SVG ke PNG - Konverter Gratis",
+            "seoDescription": "Konversi SVG ke PNG. 100% gratis.",
+            "seoKeywords": "svg to png, konversi svg",
+            "seoH1": "SVG ke PNG"
+        },
+        "png-to-svg": {
+            "name": "PNG ke SVG",
+            "description": "Konversi gambar raster PNG ke vektor SVG.",
+            "seoTitle": "PNG ke SVG - Konverter Gratis",
+            "seoDescription": "Vektorisasi gambar PNG. 100% gratis.",
+            "seoKeywords": "png to svg, vektorisasi gambar",
+            "seoH1": "PNG ke SVG"
+        },
+        "webp-to-jpg": {
+            "name": "WebP ke JPG",
+            "description": "Konversi WebP ke format JPG standar.",
+            "seoTitle": "WebP ke JPG - Konverter Gratis",
+            "seoDescription": "Konversi WebP ke JPG. 100% gratis.",
+            "seoKeywords": "webp to jpg",
+            "seoH1": "WebP ke JPG"
+        },
+        "webp-to-png": {
+            "name": "WebP ke PNG",
+            "description": "Konversi WebP ke PNG transparan.",
+            "seoTitle": "WebP ke PNG - Konverter Gratis",
+            "seoDescription": "WebP ke PNG dengan transparansi.",
+            "seoKeywords": "webp to png",
+            "seoH1": "WebP ke PNG"
+        },
+        "jpg-to-webp": {
+            "name": "JPG ke WebP",
+            "description": "Konversi JPG ke format WebP modern.",
+            "seoTitle": "JPG ke WebP - Konverter Gratis",
+            "seoDescription": "Kurangi ukuran file dengan WebP.",
+            "seoKeywords": "jpg to webp",
+            "seoH1": "JPG ke WebP"
+        },
+        "png-to-webp": {
+            "name": "PNG ke WebP",
+            "description": "Konversi PNG ke format WebP.",
+            "seoTitle": "PNG ke WebP - Konverter Gratis",
+            "seoDescription": "PNG ke WebP dengan transparansi.",
+            "seoKeywords": "png to webp",
+            "seoH1": "PNG ke WebP"
+        },
+        "base64-to-image": {
+            "name": "Base64 ke Gambar",
+            "description": "Konversi string Base64 kembali ke file gambar.",
+            "seoTitle": "Base64 ke Gambar - Dekoder Gratis",
+            "seoDescription": "Dekode Base64 ke gambar. 100% gratis.",
+            "seoKeywords": "base64 to image",
+            "seoH1": "Base64 ke Gambar"
+        },
+        "pdf-to-word": {
+            "name": "PDF ke Word",
+            "description": "Konversi dokumen PDF ke file Word yang dapat diedit.",
+            "seoTitle": "PDF ke Word - Konverter Gratis",
+            "seoDescription": "Konversi PDF ke DOCX sambil mempertahankan format.",
+            "seoKeywords": "pdf to word, konverter pdf",
+            "seoH1": "PDF ke Word"
+        },
+        "word-counter": {
+            "name": "Penghitung Kata",
+            "description": "Hitung kata, karakter, kalimat dan paragraf.",
+            "seoTitle": "Penghitung Kata - Alat Gratis",
+            "seoDescription": "Penghitungan akurat kata dan karakter.",
+            "seoKeywords": "penghitung kata, word counter",
+            "seoH1": "Penghitung Kata"
+        },
+        "character-counter": {
+            "name": "Penghitung Karakter",
+            "description": "Hitung karakter dengan atau tanpa spasi.",
+            "seoTitle": "Penghitung Karakter",
+            "seoDescription": "Ideal untuk Twitter, SMS dll.",
+            "seoKeywords": "penghitung karakter",
+            "seoH1": "Penghitung Karakter"
+        },
+        "text-case-converter": {
+            "name": "Konverter Huruf Besar/Kecil",
+            "description": "Konversi teks ke huruf besar, kecil, judul dll.",
+            "seoTitle": "Konverter Huruf Besar/Kecil",
+            "seoDescription": "Berbagai opsi transformasi teks.",
+            "seoKeywords": "konverter huruf besar kecil, uppercase lowercase",
+            "seoH1": "Konverter Huruf Besar/Kecil"
+        },
+        "remove-line-breaks": {
+            "name": "Hapus Baris Baru",
+            "description": "Hapus semua baris baru dari teks.",
+            "seoTitle": "Hapus Baris Baru",
+            "seoDescription": "Bersihkan teks.",
+            "seoKeywords": "hapus baris baru",
+            "seoH1": "Hapus Baris Baru"
+        },
+        "italic-text": {
+            "name": "Generator Teks Miring",
+            "description": "Buat teks miring menggunakan Unicode.",
+            "seoTitle": "Generator Teks Miring",
+            "seoDescription": "Teks miring untuk media sosial.",
+            "seoKeywords": "teks miring, fancy text",
+            "seoH1": "Generator Teks Miring"
+        },
+        "strikethrough-text": {
+            "name": "Teks Dicoret",
+            "description": "Buat teks dicoret.",
+            "seoTitle": "Generator Teks Dicoret",
+            "seoDescription": "Coret teks.",
+            "seoKeywords": "teks dicoret",
+            "seoH1": "Teks Dicoret"
+        },
+        "underline-text": {
+            "name": "Teks Bergaris Bawah",
+            "description": "Buat teks bergaris bawah menggunakan Unicode.",
+            "seoTitle": "Generator Teks Bergaris Bawah",
+            "seoDescription": "Teks bergaris bawah.",
+            "seoKeywords": "teks bergaris bawah",
+            "seoH1": "Teks Bergaris Bawah"
+        },
+        "small-text": {
+            "name": "Generator Teks Kecil",
+            "description": "Buat teks kecil (subscript/superscript).",
+            "seoTitle": "Generator Teks Kecil",
+            "seoDescription": "Huruf kecil.",
+            "seoKeywords": "teks kecil, tiny text",
+            "seoH1": "Generator Teks Kecil"
+        },
+        "upside-down-text": {
+            "name": "Teks Terbalik",
+            "description": "Balik teks Anda.",
+            "seoTitle": "Generator Teks Terbalik",
+            "seoDescription": "Teks terbalik untuk bersenang-senang.",
+            "seoKeywords": "teks terbalik, upside down text",
+            "seoH1": "Teks Terbalik"
+        },
+        "mirror-text": {
+            "name": "Teks Cermin",
+            "description": "Buat teks cermin.",
+            "seoTitle": "Generator Teks Cermin",
+            "seoDescription": "Teks cermin.",
+            "seoKeywords": "teks cermin, mirror text",
+            "seoH1": "Teks Cermin"
+        },
+        "duplicate-line-remover": {
+            "name": "Hapus Baris Duplikat",
+            "description": "Hapus baris duplikat dari teks atau daftar.",
+            "seoTitle": "Hapus Duplikat",
+            "seoDescription": "Bersihkan daftar.",
+            "seoKeywords": "hapus duplikat",
+            "seoH1": "Hapus Baris Duplikat"
+        },
+        "sort-alphabetically": {
+            "name": "Urut Alfabet",
+            "description": "Urutkan baris secara alfabet.",
+            "seoTitle": "Urut Alfabet",
+            "seoDescription": "Urutkan daftar A-Z atau Z-A.",
+            "seoKeywords": "urut alfabet",
+            "seoH1": "Urut Alfabet"
+        },
+        "text-replace": {
+            "name": "Cari dan Ganti",
+            "description": "Cari dan ganti teks.",
+            "seoTitle": "Cari dan Ganti - Alat Gratis",
+            "seoDescription": "Penggantian teks kuat.",
+            "seoKeywords": "cari ganti, find replace",
+            "seoH1": "Cari dan Ganti"
+        },
+        "whitespace-remover": {
+            "name": "Hapus Spasi Berlebih",
+            "description": "Hapus spasi, tab dan baris baru berlebih.",
+            "seoTitle": "Hapus Spasi Berlebih",
+            "seoDescription": "Bersihkan teks berantakan.",
+            "seoKeywords": "hapus spasi",
+            "seoH1": "Hapus Spasi Berlebih"
+        },
+        "word-frequency": {
+            "name": "Frekuensi Kata",
+            "description": "Analisis kata yang paling sering digunakan dalam teks.",
+            "seoTitle": "Analisis Frekuensi Kata",
+            "seoDescription": "Lihat penggunaan kata.",
+            "seoKeywords": "frekuensi kata, densitas kata kunci",
+            "seoH1": "Frekuensi Kata"
+        },
+        "find-replace": {
+            "name": "Cari & Ganti Lanjutan",
+            "description": "Cari dan ganti dengan dukungan regex.",
+            "seoTitle": "Cari & Ganti Lanjutan",
+            "seoDescription": "Pencarian kuat dengan regex.",
+            "seoKeywords": "regex cari ganti",
+            "seoH1": "Cari & Ganti Lanjutan"
+        },
+        "json-formatter": {
+            "name": "Pemformat JSON",
+            "description": "Format, indahkan dan validasi data JSON.",
+            "seoTitle": "Pemformat & Validator JSON",
+            "seoDescription": "Format JSON yang indah.",
+            "seoKeywords": "pemformat json, json beautifier",
+            "seoH1": "Pemformat JSON"
+        },
+        "url-encoder-decoder": {
+            "name": "Pengkode/Decoder URL",
+            "description": "Kode atau dekode URL.",
+            "seoTitle": "Pengkode/Decoder URL",
+            "seoDescription": "Pengkodean persentase untuk URL.",
+            "seoKeywords": "url encode decode",
+            "seoH1": "Pengkode/Decoder URL"
+        },
+        "html-formatter": {
+            "name": "Pemformat HTML",
+            "description": "Format dan indahkan kode HTML.",
+            "seoTitle": "Pemformat HTML",
+            "seoDescription": "Format HTML yang rapi.",
+            "seoKeywords": "pemformat html",
+            "seoH1": "Pemformat HTML"
+        },
+        "css-formatter": {
+            "name": "Pemformat CSS",
+            "description": "Format dan indahkan kode CSS.",
+            "seoTitle": "Pemformat CSS",
+            "seoDescription": "Rapikan CSS.",
+            "seoKeywords": "pemformat css",
+            "seoH1": "Pemformat CSS"
+        },
+        "javascript-formatter": {
+            "name": "Pemformat JavaScript",
+            "description": "Format dan indahkan kode JavaScript.",
+            "seoTitle": "Pemformat JavaScript",
+            "seoDescription": "Format kode JS yang rapi.",
+            "seoKeywords": "pemformat js",
+            "seoH1": "Pemformat JavaScript"
+        },
+        "xml-formatter": {
+            "name": "Pemformat XML",
+            "description": "Format dan indahkan kode XML.",
+            "seoTitle": "Pemformat XML",
+            "seoDescription": "Rapikan XML.",
+            "seoKeywords": "pemformat xml",
+            "seoH1": "Pemformat XML"
+        },
+        "sql-formatter": {
+            "name": "Pemformat SQL",
+            "description": "Format dan indahkan query SQL.",
+            "seoTitle": "Pemformat SQL",
+            "seoDescription": "Buat query SQL mudah dibaca.",
+            "seoKeywords": "pemformat sql",
+            "seoH1": "Pemformat SQL"
+        },
+        "markdown-to-html": {
+            "name": "Markdown ke HTML",
+            "description": "Konversi Markdown ke kode HTML.",
+            "seoTitle": "Markdown ke HTML - Konverter",
+            "seoDescription": "Konversi MD ke HTML.",
+            "seoKeywords": "markdown to html",
+            "seoH1": "Markdown ke HTML"
+        },
+        "html-to-markdown": {
+            "name": "HTML ke Markdown",
+            "description": "Konversi HTML ke format Markdown.",
+            "seoTitle": "HTML ke Markdown - Konverter",
+            "seoDescription": "Konversi HTML ke Markdown bersih.",
+            "seoKeywords": "html to markdown",
+            "seoH1": "HTML ke Markdown"
+        },
+        "csv-to-json": {
+            "name": "CSV ke JSON",
+            "description": "Konversi data CSV ke format JSON.",
+            "seoTitle": "CSV ke JSON - Konverter",
+            "seoDescription": "Konversi CSV ke JSON.",
+            "seoKeywords": "csv to json",
+            "seoH1": "CSV ke JSON"
+        },
+        "json-to-csv": {
+            "name": "JSON ke CSV",
+            "description": "Konversi data JSON ke format CSV.",
+            "seoTitle": "JSON ke CSV - Konverter",
+            "seoDescription": "Konversi JSON ke CSV.",
+            "seoKeywords": "json to csv",
+            "seoH1": "JSON ke CSV"
+        },
+        "code-minifier": {
+            "name": "Minifier Kode",
+            "description": "Minifikasi kode HTML, CSS dan JS.",
+            "seoTitle": "Minifier Kode",
+            "seoDescription": "Kurangi ukuran file.",
+            "seoKeywords": "minifier kode, minify code",
+            "seoH1": "Minifier Kode"
+        },
+        "diff-checker": {
+            "name": "Pembanding Teks",
+            "description": "Bandingkan dua teks dan sorot perbedaan.",
+            "seoTitle": "Pembanding Teks",
+            "seoDescription": "Temukan perbedaan antar teks.",
+            "seoKeywords": "pembanding teks, diff checker",
+            "seoH1": "Pembanding Teks"
+        },
+        "unit-converter": {
+            "name": "Konverter Satuan",
+            "description": "Konversi antar berbagai satuan ukur.",
+            "seoTitle": "Konverter Satuan",
+            "seoDescription": "Panjang, berat, suhu dll.",
+            "seoKeywords": "konverter satuan",
+            "seoH1": "Konverter Satuan"
+        },
+        "color-converter": {
+            "name": "Konverter Warna",
+            "description": "Konversi antara HEX, RGB, HSL.",
+            "seoTitle": "Konverter Warna",
+            "seoDescription": "Konversi kode warna.",
+            "seoKeywords": "konverter warna, hex rgb",
+            "seoH1": "Konverter Warna"
+        },
+        "binary-to-text": {
+            "name": "Biner ke Teks",
+            "description": "Konversi kode biner ke teks.",
+            "seoTitle": "Biner ke Teks - Konverter",
+            "seoDescription": "Dekode biner ke ASCII.",
+            "seoKeywords": "binary to text",
+            "seoH1": "Biner ke Teks"
+        },
+        "hex-to-decimal": {
+            "name": "Hex ke Desimal",
+            "description": "Konversi heksadesimal ke desimal.",
+            "seoTitle": "Hex ke Desimal - Konverter",
+            "seoDescription": "Konversi angka hex.",
+            "seoKeywords": "hex to decimal",
+            "seoH1": "Hex ke Desimal"
+        },
+        "roman-numeral": {
+            "name": "Konverter Angka Romawi",
+            "description": "Konversi antara angka Arab dan Romawi.",
+            "seoTitle": "Konverter Angka Romawi",
+            "seoDescription": "Konversi ke angka Romawi.",
+            "seoKeywords": "konverter angka romawi",
+            "seoH1": "Konverter Angka Romawi"
+        },
+        "random-number": {
+            "name": "Generator Angka Acak",
+            "description": "Hasilkan angka acak dalam rentang.",
+            "seoTitle": "Generator Angka Acak",
+            "seoDescription": "Angka benar-benar acak.",
+            "seoKeywords": "generator angka acak",
+            "seoH1": "Generator Angka Acak"
+        },
+        "random-string": {
+            "name": "Generator String Acak",
+            "description": "Hasilkan string acak dan kata sandi aman.",
+            "seoTitle": "Generator String & Kata Sandi",
+            "seoDescription": "Buat kata sandi kuat.",
+            "seoKeywords": "generator string acak, generator kata sandi",
+            "seoH1": "Generator String Acak"
+        },
+        "random-color": {
+            "name": "Generator Warna Acak",
+            "description": "Hasilkan warna acak dengan kode HEX.",
+            "seoTitle": "Generator Warna Acak",
+            "seoDescription": "Dapatkan warna acak.",
+            "seoKeywords": "generator warna acak",
+            "seoH1": "Generator Warna Acak"
+        },
+        "random-date": {
+            "name": "Generator Tanggal Acak",
+            "description": "Hasilkan tanggal acak.",
+            "seoTitle": "Generator Tanggal Acak",
+            "seoDescription": "Tanggal acak untuk pengujian.",
+            "seoKeywords": "generator tanggal acak",
+            "seoH1": "Generator Tanggal Acak"
+        },
+        "random-ip": {
+            "name": "Generator IP Acak",
+            "description": "Hasilkan alamat IP acak.",
+            "seoTitle": "Generator IP Acak",
+            "seoDescription": "IP valid acak.",
+            "seoKeywords": "generator ip acak",
+            "seoH1": "Generator IP Acak"
+        },
+        "password-generator": {
+            "name": "Generator Kata Sandi",
+            "description": "Hasilkan kata sandi kuat dan aman.",
+            "seoTitle": "Generator Kata Sandi Kuat",
+            "seoDescription": "Kata sandi aman dengan opsi.",
+            "seoKeywords": "generator kata sandi, password generator",
+            "seoH1": "Generator Kata Sandi"
+        },
+        "bcrypt-generator": {
+            "name": "Generator Bcrypt",
+            "description": "Hasilkan hash Bcrypt untuk kata sandi.",
+            "seoTitle": "Generator Hash Bcrypt",
+            "seoDescription": "Hash Bcrypt aman.",
+            "seoKeywords": "generator bcrypt",
+            "seoH1": "Generator Bcrypt"
+        },
+        "base64-encoder": {
+            "name": "Pengkode/Decoder Base64",
+            "description": "Kode dan dekode string Base64.",
+            "seoTitle": "Pengkode/Decoder Base64",
+            "seoDescription": "Pengolahan Base64.",
+            "seoKeywords": "base64 encode decode",
+            "seoH1": "Pengkode/Decoder Base64"
+        },
+        "md5-hash": {
+            "name": "Generator Hash MD5",
+            "description": "Hasilkan checksum MD5.",
+            "seoTitle": "Generator MD5",
+            "seoDescription": "Buat hash MD5.",
+            "seoKeywords": "generator md5",
+            "seoH1": "Generator MD5"
+        },
+        "sha256-hash": {
+            "name": "Generator Hash SHA-256",
+            "description": "Hasilkan hash SHA-256.",
+            "seoTitle": "Generator SHA-256",
+            "seoDescription": "Hash kriptografi aman.",
+            "seoKeywords": "generator sha256",
+            "seoH1": "Generator SHA-256"
+        },
+        "sha512-hash": {
+            "name": "Generator Hash SHA-512",
+            "description": "Hasilkan hash SHA-512.",
+            "seoTitle": "Generator SHA-512",
+            "seoDescription": "Hash SHA paling aman.",
+            "seoKeywords": "generator sha512",
+            "seoH1": "Generator SHA-512"
+        },
+        "uuid-generator": {
+            "name": "Generator UUID",
+            "description": "Hasilkan pengenal UUID v4.",
+            "seoTitle": "Generator UUID",
+            "seoDescription": "Pengenal unik.",
+            "seoKeywords": "generator uuid",
+            "seoH1": "Generator UUID"
+        },
+        "qr-code-generator": {
+            "name": "Generator Kode QR",
+            "description": "Hasilkan kode QR untuk tautan, teks dll.",
+            "seoTitle": "Generator Kode QR",
+            "seoDescription": "Kode QR khusus.",
+            "seoKeywords": "generator qr code",
+            "seoH1": "Generator Kode QR"
+        },
+        "lorem-ipsum": {
+            "name": "Generator Lorem Ipsum",
+            "description": "Hasilkan teks pengisi untuk tata letak.",
+            "seoTitle": "Generator Lorem Ipsum",
+            "seoDescription": "Teks dummy dalam berbagai bahasa.",
+            "seoKeywords": "lorem ipsum",
+            "seoH1": "Generator Lorem Ipsum"
+        },
+        "youtube-thumbnail-downloader": {
+            "name": "Pengunduh Miniatur YouTube",
+            "description": "Unduh miniatur berkualitas tinggi dari video YouTube.",
+            "seoTitle": "Pengunduh Miniatur YouTube",
+            "seoDescription": "Dapatkan miniatur HD YouTube.",
+            "seoKeywords": "pengunduh miniatur youtube",
+            "seoH1": "Pengunduh Miniatur YouTube"
+        },
+        "youtube-tag-generator": {
+            "name": "Generator Tag YouTube",
+            "description": "Hasilkan tag yang dioptimalkan untuk meningkatkan peringkat.",
+            "seoTitle": "Generator Tag YouTube",
+            "seoDescription": "Tag relevan untuk SEO lebih baik.",
+            "seoKeywords": "generator tag youtube",
+            "seoH1": "Generator Tag YouTube"
+        },
+        "youtube-title-generator": {
+            "name": "Generator Judul YouTube",
+            "description": "Hasilkan judul yang menarik dan ramah SEO.",
+            "seoTitle": "Generator Judul YouTube",
+            "seoDescription": "Lebih banyak klik dengan judul bagus.",
+            "seoKeywords": "generator judul youtube",
+            "seoH1": "Generator Judul YouTube"
+        },
+        "youtube-embed-code-generator": {
+            "name": "Generator Kode Embed YouTube",
+            "description": "Hasilkan kode embed khusus.",
+            "seoTitle": "Generator Embed YouTube",
+            "seoDescription": "Dengan autoplay, loop dll.",
+            "seoKeywords": "kode embed youtube",
+            "seoH1": "Generator Embed YouTube"
+        },
+        "youtube-timestamp-link-generator": {
+            "name": "Tautan Timestamp YouTube",
+            "description": "Buat tautan yang dimulai pada waktu tertentu.",
+            "seoTitle": "Generator Tautan Timestamp YouTube",
+            "seoDescription": "Mulai video pada titik tepat.",
+            "seoKeywords": "tautan timestamp youtube",
+            "seoH1": "Tautan Timestamp YouTube"
+        },
+        "meta-tag-generator": {
+            "name": "Generator Meta Tag",
+            "description": "Hasilkan meta tag ramah SEO.",
+            "seoTitle": "Generator Meta Tag",
+            "seoDescription": "Tag judul dan deskripsi.",
+            "seoKeywords": "generator meta tag",
+            "seoH1": "Generator Meta Tag"
+        },
+        "open-graph-generator": {
+            "name": "Generator Open Graph",
+            "description": "Hasilkan tag Open Graph untuk berbagi sosial.",
+            "seoTitle": "Generator Open Graph",
+            "seoDescription": "Tampilan lebih baik di media sosial.",
+            "seoKeywords": "generator open graph",
+            "seoH1": "Generator Open Graph"
+        },
+        "twitter-card-generator": {
+            "name": "Generator Twitter Card",
+            "description": "Hasilkan meta tag Twitter Card.",
+            "seoTitle": "Generator Twitter Card",
+            "seoDescription": "Tampilan lebih baik di Twitter.",
+            "seoKeywords": "generator twitter card",
+            "seoH1": "Generator Twitter Card"
+        },
+        "robots-txt-generator": {
+            "name": "Generator robots.txt",
+            "description": "Buat file robots.txt.",
+            "seoTitle": "Generator robots.txt",
+            "seoDescription": "Kontrol akses crawler.",
+            "seoKeywords": "generator robots.txt",
+            "seoH1": "Generator robots.txt"
+        },
+        "xml-sitemap-generator": {
+            "name": "Generator Sitemap XML",
+            "description": "Hasilkan sitemap XML untuk SEO.",
+            "seoTitle": "Generator Sitemap XML",
+            "seoDescription": "Mudahkan pengindeksan halaman.",
+            "seoKeywords": "generator sitemap xml",
+            "seoH1": "Generator Sitemap XML"
+        },
+        "keyword-density-checker": {
+            "name": "Pemeriksa Kepadatan Kata Kunci",
+            "description": "Analisis penggunaan dan kepadatan kata kunci.",
+            "seoTitle": "Pemeriksa Kepadatan Kata Kunci",
+            "seoDescription": "Periksa frekuensi kata kunci.",
+            "seoKeywords": "kepadatan kata kunci",
+            "seoH1": "Pemeriksa Kepadatan Kata Kunci"
+        },
+        "keyword-cleaner": {
+            "name": "Pembersih Kata Kunci",
+            "description": "Bersihkan daftar kata kunci.",
+            "seoTitle": "Pembersih Daftar Kata Kunci",
+            "seoDescription": "Hapus duplikat dan sampah.",
+            "seoKeywords": "pembersih kata kunci",
+            "seoH1": "Pembersih Kata Kunci"
+        },
+        "long-tail-keyword-generator": {
+            "name": "Generator Kata Kunci Long Tail",
+            "description": "Hasilkan variasi kata kunci long tail.",
+            "seoTitle": "Generator Kata Kunci Long Tail",
+            "seoDescription": "Perluas kata kunci seed.",
+            "seoKeywords": "kata kunci long tail",
+            "seoH1": "Kata Kunci Long Tail"
+        },
+        "slug-generator": {
+            "name": "Generator Slug URL",
+            "description": "Konversi teks ke slug URL ramah SEO.",
+            "seoTitle": "Generator Slug",
+            "seoDescription": "Buat URL bersih dan mudah dibaca.",
+            "seoKeywords": "generator slug, url slug",
+            "seoH1": "Generator Slug URL"
+        },
+        "google-serp-simulator": {
+            "name": "Pratinjau SERP Google",
+            "description": "Pratinjau tampilan halaman Anda di hasil pencarian Google.",
+            "seoTitle": "Simulator SERP Google",
+            "seoDescription": "Uji pratinjau hasil pencarian.",
+            "seoKeywords": "pratinjau serp google",
+            "seoH1": "Pratinjau SERP Google"
+        },
+        "htaccess-redirect-generator": {
+            "name": "Generator Pengalihan .htaccess",
+            "description": "Hasilkan kode pengalihan 301/302.",
+            "seoTitle": "Generator Pengalihan .htaccess",
+            "seoDescription": "Buat aturan pengalihan.",
+            "seoKeywords": "generator pengalihan htaccess",
+            "seoH1": "Generator Pengalihan .htaccess"
+        },
+        "my-ip-address": {
+            "name": "Alamat IP Saya",
+            "description": "Periksa alamat IP publik dan informasi lokasi Anda.",
+            "seoTitle": "Apa Alamat IP Saya",
+            "seoDescription": "Temukan IP publik Anda.",
+            "seoKeywords": "alamat ip saya, what is my ip",
+            "seoH1": "Alamat IP Saya"
+        },
+        "browser-info": {
+            "name": "Informasi Browser",
+            "description": "Dapatkan detail browser dan perangkat.",
+            "seoTitle": "Informasi Browser",
+            "seoDescription": "Browser, OS, ukuran layar dll.",
+            "seoKeywords": "info browser, user agent",
+            "seoH1": "Informasi Browser"
+        },
+        "screen-resolution-simulator": {
+            "name": "Penguji Resolusi Layar",
+            "description": "Uji situs pada resolusi berbeda.",
+            "seoTitle": "Simulator Resolusi Layar",
+            "seoDescription": "Pratinjau pada berbagai perangkat.",
+            "seoKeywords": "penguji resolusi layar",
+            "seoH1": "Penguji Resolusi Layar"
+        },
+        "responsive-checker": {
+            "name": "Pemeriksa Desain Responsif",
+            "description": "Periksa apakah situs mobile-friendly.",
+            "seoTitle": "Penguji Situs Responsif",
+            "seoDescription": "Uji responsif.",
+            "seoKeywords": "pemeriksa responsif",
+            "seoH1": "Pemeriksa Responsif"
+        },
+        "whatsapp-link-generator": {
+            "name": "Generator Tautan WhatsApp",
+            "description": "Buat tautan click-to-chat WhatsApp.",
+            "seoTitle": "Generator Tautan WhatsApp",
+            "seoDescription": "Hasilkan tautan wa.me.",
+            "seoKeywords": "generator tautan whatsapp",
+            "seoH1": "Generator Tautan WhatsApp"
+        },
+        "telegram-link-generator": {
+            "name": "Generator Tautan Telegram",
+            "description": "Buat tautan langsung ke pengguna atau kanal Telegram.",
+            "seoTitle": "Generator Tautan Telegram",
+            "seoDescription": "Hasilkan tautan t.me.",
+            "seoKeywords": "generator tautan telegram",
+            "seoH1": "Generator Tautan Telegram"
+        },
+        "paypal-link-generator": {
+            "name": "Generator Tautan PayPal",
+            "description": "Buat tautan pembayaran dan donasi PayPal.",
+            "seoTitle": "Generator Tautan PayPal",
+            "seoDescription": "Tautan PayPal.me dan pembayaran.",
+            "seoKeywords": "generator tautan paypal",
+            "seoH1": "Generator Tautan PayPal"
+        },
+        "email-validator": {
+            "name": "Validator Email",
+            "description": "Validasi format alamat email.",
+            "seoTitle": "Validator Alamat Email",
+            "seoDescription": "Periksa sintaks email.",
+            "seoKeywords": "validator email",
+            "seoH1": "Validator Email"
+        },
+        "url-opener": {
+            "name": "Pembuka URL Massal",
+            "description": "Buka beberapa URL sekaligus.",
+            "seoTitle": "Pembuka Multi URL",
+            "seoDescription": "Buka banyak tautan secara bersamaan.",
+            "seoKeywords": "pembuka url massal",
+            "seoH1": "Pembuka URL Massal"
+        },
+        "user-agent-parser": {
+            "name": "Pengurai User Agent",
+            "description": "Analisis string User-Agent.",
+            "seoTitle": "Pengurai User Agent",
+            "seoDescription": "Ekstrak informasi browser dan perangkat.",
+            "seoKeywords": "pengurai user agent",
+            "seoH1": "Pengurai User Agent"
+        },
+        "wordpress-password-hash": {
+            "name": "Hash Kata Sandi WordPress",
+            "description": "Hasilkan hash kompatibel WordPress.",
+            "seoTitle": "Generator Hash WordPress",
+            "seoDescription": "Buat hash phpass.",
+            "seoKeywords": "hash kata sandi wordpress",
+            "seoH1": "Hash Kata Sandi WordPress"
+        },
+        "age-calculator": {
+            "name": "Kalkulator Usia",
+            "description": "Hitung usia tepat dalam tahun, bulan dan hari.",
+            "seoTitle": "Kalkulator Usia",
+            "seoDescription": "Usia tepat dari tanggal lahir.",
+            "seoKeywords": "kalkulator usia",
+            "seoH1": "Kalkulator Usia"
+        },
+        "bmi-calculator": {
+            "name": "Kalkulator BMI",
+            "description": "Hitung Indeks Massa Tubuh dan status kesehatan.",
+            "seoTitle": "Kalkulator BMI",
+            "seoDescription": "Periksa BMI Anda.",
+            "seoKeywords": "kalkulator bmi",
+            "seoH1": "Kalkulator BMI"
+        },
+        "percentage-calculator": {
+            "name": "Kalkulator Persentase",
+            "description": "Hitung persentase, peningkatan, penurunan.",
+            "seoTitle": "Kalkulator Persentase",
+            "seoDescription": "Berbagai alat persentase.",
+            "seoKeywords": "kalkulator persentase",
+            "seoH1": "Kalkulator Persentase"
+        },
+        "gst-calculator": {
+            "name": "Kalkulator Pajak",
+            "description": "Hitung jumlah pajak dan total harga.",
+            "seoTitle": "Kalkulator Pajak",
+            "seoDescription": "Hitung pajak dengan mudah.",
+            "seoKeywords": "kalkulator pajak",
+            "seoH1": "Kalkulator Pajak"
+        },
+        "emi-calculator": {
+            "name": "Kalkulator Cicilan Pinjaman",
+            "description": "Hitung cicilan bulanan dan bunga total.",
+            "seoTitle": "Kalkulator EMI",
+            "seoDescription": "Hitung cicilan pinjaman.",
+            "seoKeywords": "kalkulator emi, kalkulator pinjaman",
+            "seoH1": "Kalkulator EMI"
+        },
+        "discount-calculator": {
+            "name": "Kalkulator Diskon",
+            "description": "Hitung jumlah diskon dan harga akhir.",
+            "seoTitle": "Kalkulator Diskon",
+            "seoDescription": "Lihat penghematan Anda pada penawaran.",
+            "seoKeywords": "kalkulator diskon",
+            "seoH1": "Kalkulator Diskon"
+        },
+        "instagram-hashtag-generator": {
+            "name": "Generator Hashtag Instagram",
+            "description": "Hasilkan hashtag populer dan relevan untuk Instagram.",
+            "seoTitle": "Generator Hashtag Instagram",
+            "seoDescription": "Tingkatkan jangkauan posting.",
+            "seoKeywords": "hashtag instagram",
+            "seoH1": "Generator Hashtag Instagram"
+        },
+        "html-to-jsx": {
+            "name": "HTML ke JSX",
+            "description": "Konversi kode HTML ke sintaks JSX React.",
+            "seoTitle": "HTML ke JSX - Konverter",
+            "seoDescription": "Untuk pengembangan React.",
+            "seoKeywords": "html to jsx",
+            "seoH1": "HTML ke JSX"
+        }
+    },
+    "Common": {
+        "backToTools": "Kembali ke alat",
+        "howToUse": "Cara menggunakan {name}",
+        "toolIntro": "Alat ini memungkinkan Anda {description} dengan cepat dan aman. Semua pemrosesan terjadi di browser Anda.",
+        "keyFeatures": "Fitur utama",
+        "featureFast": "Super cepat",
+        "featureSimple": "Antarmuka sederhana",
+        "featureNoInstall": "Tidak perlu instalasi",
+        "featureFree": "100% gratis",
+        "featurePrivacy": "Privasi terjamin",
+        "relatedTools": "Alat terkait",
+        "viewAll": "Lihat semua alat",
+        "whyUse": "Mengapa menggunakan alat ini?",
+        "featureBrowser": "Berfungsi sepenuhnya di browser",
+        "featureNoStorage": "Tidak ada penyimpanan server",
+        "featureMobile": "100% ramah seluler",
+        "selectImage": "Pilih gambar",
+        "selectMultiple": "Pilih beberapa gambar",
+        "dragDrop": "Seret dan lepas file di sini",
+        "supports": "Mendukung JPG, PNG, WebP & SVG",
+        "privacyGuaranteed": "Privasi terjamin",
+        "lightningFast": "Super cepat",
+        "imagesSelected": "{count} gambar dipilih",
+        "clearAll": "Hapus semua",
+        "addMore": "Tambah lagi",
+        "processing": "Sedang diproses...",
+        "processBatch": "Proses batch",
+        "applyChanges": "Terapkan perubahan",
+        "safePrivate": "Aman & Privat",
+        "localProcessing": "Diproses lokal di browser",
+        "quality": "Kualitas",
+        "targetFormat": "Format target",
+        "copyString": "Salin hasil",
+        "fastSecure": "Cepat & Aman",
+        "browserProcessing": "Pemrosesan browser",
+        "noStorage": "Tidak ada penyimpanan data",
+        "mobileFriendly": "100% Ramah seluler",
+        "settings": "Pengaturan",
+        "tipQuality": "Tips: 80% kualitas adalah keseimbangan terbaik",
+        "downloadsAsZip": "Unduh sebagai ZIP",
+        "base64Output": "Output Base64",
+        "tryNow": "Coba sekarang",
+        "copy": "Salin",
+        "clear": "Hapus",
+        "download": "Unduh",
+        "options": "Opsi",
+        "output": "Output",
+        "input": "Input",
+        "reset": "Reset",
+        "shareThisTool": "Bagikan alat ini",
+        "copyLink": "Salin tautan"
+    },
+    "NavbarCategories": {
+        "Image Tools": "Alat Gambar",
+        "Text Tools": "Alat Teks",
+        "Code & Developer Tools": "Kode & Dev",
+        "Converter Tools": "Konverter",
+        "Utility Tools": "Alat Utilitas",
+        "Security & Crypto": "Keamanan & Kripto",
+        "YouTube Tools": "Alat YouTube",
+        "Social & Links": "Sosial & Tautan",
+        "Calculators": "Kalkulator",
+        "Convert": "Konversi"
+    },
+    "TextTools": {
+        "editor": "Editor",
+        "placeholder": "Tempel atau ketik teks Anda di sini...",
+        "download": "Unduh",
+        "copy": "Salin",
+        "clear": "Hapus",
+        "topKeywords": "Kata paling sering",
+        "quickTransformers": "Alat cepat",
+        "allCaps": "SEMUA HURUF BESAR",
+        "uppercase": "Huruf Besar",
+        "mirrorMode": "Teks cermin",
+        "reverseText": "Balik teks",
+        "allSmall": "semua huruf kecil",
+        "lowercase": "huruf kecil",
+        "headlineStyle": "Gaya Judul",
+        "titleCase": "Judul",
+        "naturalFlow": "Alur alami",
+        "sentenceCase": "Kalimat",
+        "fixSpacing": "Perbaiki spasi",
+        "removeExtraSpaces": "Hapus spasi ekstra",
+        "joinText": "Gabung baris",
+        "removeLineBreaks": "Hapus baris baru",
+        "findReplace": "Cari & Ganti",
+        "find": "Cari",
+        "replaceWith": "Ganti dengan",
+        "count": "Ditemukan: {count}",
+        "replaceAll": "Ganti semua",
+        "words": "Kata",
+        "characters": "Karakter",
+        "sentences": "Kalimat",
+        "paragraphs": "Paragraf",
+        "lines": "Baris",
+        "readTime": "Waktu baca",
+        "input": "Input",
+        "reset": "Reset",
+        "pastePlaceholder": "Tempel teks di sini...",
+        "options": "Opsi",
+        "findLabel": "Cari",
+        "replaceLabel": "Ganti",
+        "useRegex": "Gunakan Regex",
+        "caseSensitive": "Sensitif huruf besar/kecil",
+        "noConfig": "Tidak perlu konfigurasi",
+        "runTool": "Proses",
+        "output": "Output",
+        "resultsPlaceholder": "Hasil akan muncul di sini",
+        "italicConverter": "Teks miring",
+        "strikethrough": "Dicoret",
+        "sortAZ": "Urut A-Z",
+        "removeDuplicates": "Hapus duplikat",
+        "textTool": "Alat teks"
+    },
+    "YouTubeTools": {
+        "autoplay": "Putar otomatis",
+        "loop": "Ulang",
+        "hideControls": "Sembunyikan kontrol",
+        "startTime": "Waktu mulai",
+        "startTimePlaceholder": "mis. 1m30s",
+        "configuration": "Opsi embed",
+        "enterTopic": "Masukkan topik",
+        "videoUrl": "URL YouTube",
+        "topicPlaceholder": "mis. Pengembangan web",
+        "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+        "fetchThumbnails": "Ambil miniatur",
+        "generateNow": "Hasilkan",
+        "growthTip": "Tips pro",
+        "tipText": "Miniatur dan tag yang baik dapat meningkatkan klik hingga 40%.",
+        "generatedOutput": "Hasil",
+        "qualityLabel": "Kualitas {quality}",
+        "downloadImage": "Unduh",
+        "seoTags": "Tag yang disarankan",
+        "copyAll": "Salin semua",
+        "generatedCode": "Kode embed",
+        "generatedLink": "Tautan yang dihasilkan",
+        "copy": "Salin",
+        "openLink": "Buka tautan",
+        "inputRequired": "Masukkan URL YouTube",
+        "resultsPlaceholder": "Hasil akan muncul di sini",
+        "duration": "Durasi",
+        "embedCode": "Kode embed"
+    },
+    "Footer": {
+        "topCategories": "Kategori populer",
+        "resources": "Sumber daya",
+        "aboutUs": "Tentang kami",
+        "contact": "Kontak",
+        "privacyPolicy": "Kebijakan Privasi",
+        "termsOfService": "Syarat Layanan",
+        "ourMission": "Misi kami",
+        "missionStatement": "Alat online gratis, cepat dan privat untuk semua — tanpa iklan atau pelacakan.",
+        "securePrivate": "Aman & Privat",
+        "allRightsReserved": "Hak cipta dilindungi."
+    },
+    "Share": {
+        "shareThisTool": "Bagikan alat ini",
+        "linkCopied": "Tautan disalin!",
+        "copyLink": "Salin tautan",
+        "shareOn": "Bagikan di {network}"
+    },
+    "ToolActions": {
+        "operationSuccessful": "Berhasil!",
+        "readyForDownload": "Siap diunduh",
+        "startNew": "Operasi baru",
+        "downloadNow": "Unduh sekarang",
+        "uploadFile": "Unggah {type}",
+        "dragDrop": "Seret dan lepas",
+        "chooseFile": "Pilih file",
+        "processing": "Sedang diproses...",
+        "convertTo": "Konversi ke {format}",
+        "mergeFiles": "Gabung file",
+        "splitFile": "Pisah file",
+        "addMore": "Tambah lagi",
+        "clearAll": "Hapus semua",
+        "filesSelected": "{count} file dipilih",
+        "pasteBase64": "Tempel Base64",
+        "batchReady": "Batch siap"
+    }
+}

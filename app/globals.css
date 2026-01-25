@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Pure Dark Theme as Baseline */
+    --background: #000000;
+    --foreground: #ffffff;
+
+    --card: #0a0a0a;
+    --card-foreground: #ffffff;
+
+    --popover: #0a0a0a;
+    --popover-foreground: #ffffff;
+
+    --primary: #3882a5;
+    --primary-foreground: #ffffff;
+    --primary-light: #98c7dd;
+
+    --secondary: #121212;
+    --secondary-foreground: #e6edf3;
+
+    --muted: #1e1e1e;
+    --muted-foreground: #a1a1aa;
+
+    --accent: #58a6ff;
+    --accent-foreground: #000000;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: #27272a;
+    --input: #27272a;
+    --ring: rgba(88, 166, 255, 0.4);
+
+    --radius: 0.75rem;
+  }
+
+  .light {
+    --background: #f8fafc;
+    --foreground: #020617;
+    --card: #ffffff;
+    --border: #e2e8f0;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    background-color: var(--background);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-size: 14px;
+    min-height: 100vh;
+    transition: background-color 0.3s ease-in-out;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+
+  /* Hostinger-style Card - Adjusted for Black Mood */
+  .card-hostinger {
+    @apply bg-card border border-border rounded-lg shadow-sm transition-all duration-200;
+  }
+
+  .card-hostinger:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    /* Slight white glow for depth in black */
+    border-color: var(--primary);
+  }
+
+  .card-tool {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-tool:hover {
+    @apply -translate-y-1 border-accent/50;
+    box-shadow: 0 10px 30px -10px rgba(56, 130, 165, 0.2);
+  }
+
+  /* Button styling - Hostinger style */
+  .btn-hostinger {
+    @apply px-4 py-2 rounded-md text-[13px] font-medium border border-transparent transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-hostinger-primary {
+    @apply bg-white text-black border-white hover:bg-gray-200 hover:text-black hover:border-gray-200;
+  }
+
+  .btn-hostinger-secondary {
+    @apply bg-transparent text-gray-300 border-gray-700 hover:bg-gray-900 hover:border-gray-500 hover:text-white;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2;
+    box-shadow: 0 4px 14px 0 rgba(56, 130, 165, 0.39);
+  }
+
+  .btn-primary:hover {
+    @apply transform scale-[1.02];
+    background-color: #2c6e8f;
+    box-shadow: 0 6px 20px 0 rgba(56, 130, 165, 0.23);
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-gray-300 border border-gray-700 px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-gray-900 hover:border-gray-600 hover:text-white;
+  }
+
+  /* Text utilities */
+  .text-brand {
+    color: var(--primary);
+  }
+
+  .text-brand-strong {
+    color: var(--accent);
+  }
+
+  .bg-brand {
+    background-color: var(--accent);
+  }
+
+  .bg-brand-tint {
+    background-color: var(--primary-light);
+  }
+
+  .border-brand {
+    border-color: var(--accent);
+  }
+
+  /* Custom Scrollbar - Darker */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-800 rounded-full hover:bg-gray-600;
+  }
+}

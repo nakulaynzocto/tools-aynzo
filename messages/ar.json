@@ -1,0 +1,1164 @@
+{
+    "HomePage": {
+        "title": "أدوات مطورين مجانية",
+        "description": "مجموعة أدوات بسيطة وسريعة وآمنة لمهامك اليومية.",
+        "noAds": "بدون إعلانات، بدون تتبع، فقط أدوات.",
+        "toolsCount": "{count} أداة"
+    },
+    "App": {
+        "name": "AYNZO",
+        "nameHighlight": "TOOLS"
+    },
+    "Navigation": {
+        "more": "المزيد",
+        "searchPlaceholder": "ابحث في الأدوات...",
+        "mobileMenu": "القائمة",
+        "home": "الرئيسية",
+        "tools": "الأدوات"
+    },
+    "Categories": {
+        "Image Tools": "أدوات الصور",
+        "Text Tools": "أدوات النصوص",
+        "Calculator Tools": "الحاسبات",
+        "Converter Tools": "المحولات",
+        "Time & Date Tools": "الوقت والتاريخ",
+        "Web Tools": "أدوات الويب",
+        "Dev Tools": "أدوات المطورين",
+        "Code & Developer Tools": "الكود وأدوات المطورين",
+        "Security & Crypto Tools": "الأمان والتشفير",
+        "Social Media & SEO Tools": "السيو والتواصل الاجتماعي",
+        "Miscellaneous Tools": "متنوعة",
+        "Generators": "المولدات",
+        "CSS Tools": "أدوات CSS",
+        "Color Tools": "أدوات الألوان",
+        "JSON Tools": "أدوات JSON",
+        "Random Generators": "مولدات عشوائية",
+        "image": "أدوات الصور",
+        "text": "أدوات النصوص",
+        "developer": "الكود وأدوات المطورين",
+        "seo": "السيو والتواصل الاجتماعي",
+        "youtube": "أدوات يوتيوب",
+        "social": "التواصل والروابط",
+        "security": "الأمان والتشفير",
+        "crypto": "الأمان والتشفير",
+        "converter": "المحولات",
+        "utility": "أدوات مساعدة",
+        "pdf": "أدوات PDF",
+        "calculator": "الحاسبات",
+        "Security & Crypto": "الأمان والتشفير",
+        "Converters": "المحولات",
+        "SEO & Web Tools": "السيو والتواصل الاجتماعي",
+        "Utility Tools": "أدوات مساعدة",
+        "YouTube Tools": "أدوات يوتيوب",
+        "Social & Links": "التواصل والروابط",
+        "Calculators": "الحاسبات",
+        "web": "أدوات الويب",
+        "Convert": "تحويل"
+    },
+    "Tools": {
+        "tryNow": "جرب الآن",
+        "relatedTools": "أدوات ذات صلة",
+        "viewAll": "عرض جميع الأدوات",
+        "backToTools": "العودة إلى الأدوات",
+        "image-compressor": {
+            "name": "ضاغط الصور",
+            "description": "ضغط صور JPG و PNG و WebP بدون فقدان الجودة.",
+            "seoTitle": "ضاغط الصور - أداة مجانية عبر الإنترنت",
+            "seoDescription": "ضغط الصور بدون فقدان الجودة. 100% مجاني وسريع وآمن.",
+            "seoKeywords": "ضاغط صور, تصغير صور, أداة مجانية",
+            "seoH1": "ضاغط الصور"
+        },
+        "image-resizer": {
+            "name": "مُغيّر حجم الصور",
+            "description": "تغيير حجم الصور إلى أبعاد دقيقة أو نسبة مئوية.",
+            "seoTitle": "مُغيّر حجم الصور - أداة مجانية عبر الإنترنت",
+            "seoDescription": "تغيير حجم الصور بسهولة. 100% مجاني وآمن.",
+            "seoKeywords": "تغيير حجم صورة, resize image",
+            "seoH1": "مُغيّر حجم الصور"
+        },
+        "jpg-to-png": {
+            "name": "JPG إلى PNG",
+            "description": "تحويل صور JPG إلى PNG مع دعم الخلفية الشفافة.",
+            "seoTitle": "محول JPG إلى PNG - أداة مجانية",
+            "seoDescription": "تحويل JPG إلى PNG شفاف. 100% مجاني.",
+            "seoKeywords": "jpg to png, تحويل jpg png",
+            "seoH1": "JPG إلى PNG"
+        },
+        "png-to-jpg": {
+            "name": "PNG إلى JPG",
+            "description": "تحويل صور PNG إلى JPG فوراً.",
+            "seoTitle": "محول PNG إلى JPG - أداة مجانية",
+            "seoDescription": "تحويل PNG إلى JPG. 100% مجاني.",
+            "seoKeywords": "png to jpg, تحويل png jpg",
+            "seoH1": "PNG إلى JPG"
+        },
+        "webp-converter": {
+            "name": "محول WebP",
+            "description": "تحويل الصور إلى أو من صيغة WebP لتحسين الويب.",
+            "seoTitle": "محول WebP - أداة مجانية عبر الإنترنت",
+            "seoDescription": "تحويل WebP بسهولة. 100% مجاني.",
+            "seoKeywords": "محول webp, webp jpg png",
+            "seoH1": "محول WebP"
+        },
+        "image-format-converter": {
+            "name": "محول صيغ الصور",
+            "description": "التحويل بين JPG و PNG و WebP وغيرها.",
+            "seoTitle": "محول صيغ الصور - أداة مجانية",
+            "seoDescription": "تغيير صيغ الصور عبر الإنترنت. 100% مجاني.",
+            "seoKeywords": "محول صيغ صور, تغيير صيغة صورة",
+            "seoH1": "محول صيغ الصور"
+        },
+        "image-to-base64": {
+            "name": "صورة إلى Base64",
+            "description": "تحويل الصور إلى نصوص Base64 لتضمينها في الكود.",
+            "seoTitle": "صورة إلى Base64",
+            "seoDescription": "تحويل صورة إلى Base64. 100% مجاني.",
+            "seoKeywords": "image to base64, base64 encoder",
+            "seoH1": "صورة إلى Base64"
+        },
+        "image-cropper": {
+            "name": "قص الصور",
+            "description": "قص الصور عبر الإنترنت بنسب مخصصة.",
+            "seoTitle": "قص الصور - أداة مجانية",
+            "seoDescription": "قص الصور حسب رغبتك. 100% مجاني.",
+            "seoKeywords": "قص صورة, crop image online",
+            "seoH1": "قص الصور"
+        },
+        "flip-image": {
+            "name": "قلب الصورة",
+            "description": "قلب الصور أفقيًا أو عموديًا.",
+            "seoTitle": "قلب الصورة - أداة مجانية",
+            "seoDescription": "قلب الصور فوراً. 100% مجاني.",
+            "seoKeywords": "قلب صورة, flip image",
+            "seoH1": "قلب الصورة"
+        },
+        "rotate-image": {
+            "name": "تدوير الصورة",
+            "description": "تدوير الصور 90 أو 180 أو 270 درجة.",
+            "seoTitle": "تدوير الصورة - أداة مجانية",
+            "seoDescription": "تدوير الصور بسهولة. 100% مجاني.",
+            "seoKeywords": "تدوير صورة, rotate image",
+            "seoH1": "تدوير الصورة"
+        },
+        "image-enlarger": {
+            "name": "مكبر الصور",
+            "description": "تكبير الصور الصغيرة بدون فقدان الجودة.",
+            "seoTitle": "مكبر الصور - أداة مجانية",
+            "seoDescription": "تكبير حتى 4 أضعاف. 100% مجاني.",
+            "seoKeywords": "تكبير صورة, upscale image",
+            "seoH1": "مكبر الصور"
+        },
+        "image-brightness": {
+            "name": "إضاءة الصورة",
+            "description": "ضبط إضاءة الصور.",
+            "seoTitle": "ضبط الإضاءة",
+            "seoDescription": "زيادة أو تقليل الإضاءة. 100% مجاني.",
+            "seoKeywords": "إضاءة صورة, brightness adjust",
+            "seoH1": "ضبط الإضاءة"
+        },
+        "image-contrast": {
+            "name": "تباين الصورة",
+            "description": "ضبط تباين الصور.",
+            "seoTitle": "ضبط التباين",
+            "seoDescription": "تحسين التباين. 100% مجاني.",
+            "seoKeywords": "تباين صورة, contrast adjust",
+            "seoH1": "ضبط التباين"
+        },
+        "grayscale-image": {
+            "name": "التدرج الرمادي",
+            "description": "تحويل الصور الملونة إلى أبيض وأسود.",
+            "seoTitle": "محول التدرج الرمادي",
+            "seoDescription": "تحويل إلى أبيض وأسود. 100% مجاني.",
+            "seoKeywords": "تدرج رمادي, أبيض أسود",
+            "seoH1": "التدرج الرمادي"
+        },
+        "blur-image": {
+            "name": "طمس الصورة",
+            "description": "إضافة تأثير طمس إلى الصور.",
+            "seoTitle": "طمس الصورة - أداة مجانية",
+            "seoDescription": "تطبيق طمس غاوسي. 100% مجاني.",
+            "seoKeywords": "طمس صورة, blur image",
+            "seoH1": "طمس الصورة"
+        },
+        "sepia-converter": {
+            "name": "فلتر سيبيا",
+            "description": "تطبيق تأثير سيبيا قديم على الصور.",
+            "seoTitle": "فلتر سيبيا - أداة مجانية",
+            "seoDescription": "إعطاء لون سيبيا كلاسيكي.",
+            "seoKeywords": "فلتر سيبيا, تأثير قديم",
+            "seoH1": "تأثير سيبيا"
+        },
+        "invert-image": {
+            "name": "عكس الألوان",
+            "description": "عكس ألوان الصورة (تأثير نيجاتيف).",
+            "seoTitle": "عكس الألوان - أداة مجانية",
+            "seoDescription": "إنشاء تأثير نيجاتيف. 100% مجاني.",
+            "seoKeywords": "عكس ألوان, invert colors",
+            "seoH1": "عكس الألوان"
+        },
+        "saturate-image": {
+            "name": "تشبع الألوان",
+            "description": "ضبط تشبع ألوان الصور.",
+            "seoTitle": "ضبط التشبع",
+            "seoDescription": "تغيير كثافة اللون. 100% مجاني.",
+            "seoKeywords": "تشبع ألوان, saturation adjust",
+            "seoH1": "ضبط التشبع"
+        },
+        "hue-rotate-image": {
+            "name": "تدوير اللون",
+            "description": "تغيير اللون لتأثيرات إبداعية.",
+            "seoTitle": "تدوير اللون - أداة مجانية",
+            "seoDescription": "تحريك الألوان بطريقة إبداعية. 100% مجاني.",
+            "seoKeywords": "تدوير لون, hue rotate",
+            "seoH1": "تدوير اللون"
+        },
+        "image-opacity": {
+            "name": "شفافية الصورة",
+            "description": "ضبط شفافية الصور.",
+            "seoTitle": "شفافية الصورة - أداة مجانية",
+            "seoDescription": "جعل الصور شفافة. 100% مجاني.",
+            "seoKeywords": "شفافية صورة, opacity adjust",
+            "seoH1": "ضبط الشفافية"
+        },
+        "round-corners-image": {
+            "name": "زوايا مستديرة",
+            "description": "إضافة زوايا مستديرة إلى الصور.",
+            "seoTitle": "زوايا مستديرة - أداة مجانية",
+            "seoDescription": "إنشاء زوايا مستديرة. 100% مجاني.",
+            "seoKeywords": "زوايا مستديرة, rounded corners",
+            "seoH1": "زوايا مستديرة"
+        },
+        "image-border": {
+            "name": "إطار الصورة",
+            "description": "إضافة إطارات ملونة إلى الصور.",
+            "seoTitle": "إضافة إطار",
+            "seoDescription": "إطارات مخصصة. 100% مجاني.",
+            "seoKeywords": "إطار صورة, image border",
+            "seoH1": "إضافة إطار"
+        },
+        "image-shadow": {
+            "name": "ظل الصورة",
+            "description": "إضافة ظلال إلى الصور.",
+            "seoTitle": "ظل الصورة - أداة مجانية",
+            "seoDescription": "ظلال واقعية. 100% مجاني.",
+            "seoKeywords": "ظل صورة, drop shadow",
+            "seoH1": "إضافة ظل"
+        },
+        "pixelate-image": {
+            "name": "بكسلة الصورة",
+            "description": "بكسلة الصور لإخفاء التفاصيل أو إنشاء فن.",
+            "seoTitle": "بكسلة الصورة - أداة مجانية",
+            "seoDescription": "تطبيق تأثير بكسل. 100% مجاني.",
+            "seoKeywords": "بكسلة صورة, pixelate image",
+            "seoH1": "بكسلة الصورة"
+        },
+        "svg-to-png": {
+            "name": "SVG إلى PNG",
+            "description": "تحويل ملفات SVG المتجهة إلى صور PNG.",
+            "seoTitle": "SVG إلى PNG - محول مجاني",
+            "seoDescription": "تحويل SVG إلى PNG. 100% مجاني.",
+            "seoKeywords": "svg to png, تحويل svg",
+            "seoH1": "SVG إلى PNG"
+        },
+        "png-to-svg": {
+            "name": "PNG إلى SVG",
+            "description": "تحويل صور PNG إلى متجهات SVG.",
+            "seoTitle": "PNG إلى SVG - محول مجاني",
+            "seoDescription": "تحويل PNG إلى متجه. 100% مجاني.",
+            "seoKeywords": "png to svg, vectorize image",
+            "seoH1": "PNG إلى SVG"
+        },
+        "webp-to-jpg": {
+            "name": "WebP إلى JPG",
+            "description": "تحويل WebP إلى صيغة JPG القياسية.",
+            "seoTitle": "WebP إلى JPG - محول مجاني",
+            "seoDescription": "تحويل WebP إلى JPG. 100% مجاني.",
+            "seoKeywords": "webp to jpg",
+            "seoH1": "WebP إلى JPG"
+        },
+        "webp-to-png": {
+            "name": "WebP إلى PNG",
+            "description": "تحويل WebP إلى PNG شفاف.",
+            "seoTitle": "WebP إلى PNG - محول مجاني",
+            "seoDescription": "تحويل WebP إلى PNG مع الشفافية.",
+            "seoKeywords": "webp to png",
+            "seoH1": "WebP إلى PNG"
+        },
+        "jpg-to-webp": {
+            "name": "JPG إلى WebP",
+            "description": "تحويل JPG إلى صيغة WebP الحديثة.",
+            "seoTitle": "JPG إلى WebP - محول مجاني",
+            "seoDescription": "تقليل حجم الملف باستخدام WebP.",
+            "seoKeywords": "jpg to webp",
+            "seoH1": "JPG إلى WebP"
+        },
+        "png-to-webp": {
+            "name": "PNG إلى WebP",
+            "description": "تحويل PNG إلى صيغة WebP.",
+            "seoTitle": "PNG إلى WebP - محول مجاني",
+            "seoDescription": "تحويل PNG إلى WebP مع الشفافية.",
+            "seoKeywords": "png to webp",
+            "seoH1": "PNG إلى WebP"
+        },
+        "base64-to-image": {
+            "name": "Base64 إلى صورة",
+            "description": "تحويل نصوص Base64 إلى ملفات صور.",
+            "seoTitle": "Base64 إلى صورة - فك تشفير مجاني",
+            "seoDescription": "فك Base64 إلى صورة. 100% مجاني.",
+            "seoKeywords": "base64 to image",
+            "seoH1": "Base64 إلى صورة"
+        },
+        "pdf-to-word": {
+            "name": "PDF إلى Word",
+            "description": "تحويل مستندات PDF إلى ملفات Word قابلة للتحرير.",
+            "seoTitle": "PDF إلى Word - محول مجاني",
+            "seoDescription": "تحويل PDF إلى DOCX مع الحفاظ على التنسيق.",
+            "seoKeywords": "pdf to word, محول pdf",
+            "seoH1": "PDF إلى Word"
+        },
+        "word-counter": {
+            "name": "عدّاد الكلمات",
+            "description": "عد الكلمات والأحرف والجمل والفقرات.",
+            "seoTitle": "عدّاد الكلمات - أداة مجانية",
+            "seoDescription": "عد دقيق للكلمات والأحرف.",
+            "seoKeywords": "عد كلمات, word counter",
+            "seoH1": "عدّاد الكلمات"
+        },
+        "character-counter": {
+            "name": "عدّاد الأحرف",
+            "description": "عد الأحرف مع أو بدون مسافات.",
+            "seoTitle": "عدّاد الأحرف",
+            "seoDescription": "مثالي لتويتر والرسائل القصيرة.",
+            "seoKeywords": "عد أحرف",
+            "seoH1": "عدّاد الأحرف"
+        },
+        "text-case-converter": {
+            "name": "محول حالة النص",
+            "description": "تحويل النص إلى أحرف كبيرة أو صغيرة أو عنوان إلخ.",
+            "seoTitle": "محول حالة النص",
+            "seoDescription": "خيارات تحويل نص متعددة.",
+            "seoKeywords": "محول حالة نص, uppercase lowercase",
+            "seoH1": "محول حالة النص"
+        },
+        "remove-line-breaks": {
+            "name": "إزالة فواصل الأسطر",
+            "description": "إزالة جميع فواصل الأسطر من النص.",
+            "seoTitle": "إزالة فواصل الأسطر",
+            "seoDescription": "تنظيف النص.",
+            "seoKeywords": "إزالة فواصل أسطر",
+            "seoH1": "إزالة فواصل الأسطر"
+        },
+        "italic-text": {
+            "name": "مولد نص مائل",
+            "description": "إنشاء نص مائل باستخدام يونيكود.",
+            "seoTitle": "مولد نص مائل",
+            "seoDescription": "نص مائل للتواصل الاجتماعي.",
+            "seoKeywords": "نص مائل, fancy text",
+            "seoH1": "مولد نص مائل"
+        },
+        "strikethrough-text": {
+            "name": "نص مشطوب",
+            "description": "إنشاء نص مشطوب.",
+            "seoTitle": "مولد نص مشطوب",
+            "seoDescription": "شطب النص.",
+            "seoKeywords": "نص مشطوب",
+            "seoH1": "نص مشطوب"
+        },
+        "underline-text": {
+            "name": "نص مسطر",
+            "description": "إنشاء نص مسطر باستخدام يونيكود.",
+            "seoTitle": "مولد نص مسطر",
+            "seoDescription": "نص مسطر.",
+            "seoKeywords": "نص مسطر",
+            "seoH1": "نص مسطر"
+        },
+        "small-text": {
+            "name": "مولد نص صغير",
+            "description": "إنشاء نص صغير (أسفل/أعلى).",
+            "seoTitle": "مولد نص صغير",
+            "seoDescription": "حروف صغيرة.",
+            "seoKeywords": "نص صغير, tiny text",
+            "seoH1": "مولد نص صغير"
+        },
+        "upside-down-text": {
+            "name": "نص مقلوب",
+            "description": "قلب النص رأسًا على عقب.",
+            "seoTitle": "مولد نص مقلوب",
+            "seoDescription": "نص مقلوب للمتعة.",
+            "seoKeywords": "نص مقلوب, upside down text",
+            "seoH1": "مولد نص مقلوب"
+        },
+        "mirror-text": {
+            "name": "نص مرآة",
+            "description": "إنشاء نص مرآة.",
+            "seoTitle": "مولد نص مرآة",
+            "seoDescription": "نص مرآة.",
+            "seoKeywords": "نص مرآة, mirror text",
+            "seoH1": "مولد نص مرآة"
+        },
+        "duplicate-line-remover": {
+            "name": "إزالة الأسطر المكررة",
+            "description": "إزالة الأسطر المكررة من النص أو القائمة.",
+            "seoTitle": "إزالة المكرر",
+            "seoDescription": "تنظيف القوائم.",
+            "seoKeywords": "إزالة مكرر",
+            "seoH1": "إزالة الأسطر المكررة"
+        },
+        "sort-alphabetically": {
+            "name": "ترتيب أبجدي",
+            "description": "ترتيب الأسطر أبجديًا.",
+            "seoTitle": "ترتيب أبجدي",
+            "seoDescription": "ترتيب القوائم من أ إلى ي أو العكس.",
+            "seoKeywords": "ترتيب أبجدي",
+            "seoH1": "ترتيب أبجدي"
+        },
+        "text-replace": {
+            "name": "البحث والاستبدال",
+            "description": "البحث واستبدال النص.",
+            "seoTitle": "البحث والاستبدال - أداة مجانية",
+            "seoDescription": "استبدال نص قوي.",
+            "seoKeywords": "بحث استبدال, find replace",
+            "seoH1": "البحث والاستبدال"
+        },
+        "whitespace-remover": {
+            "name": "إزالة المسافات الزائدة",
+            "description": "إزالة المسافات والتبويبات وفواصل الأسطر الزائدة.",
+            "seoTitle": "إزالة المسافات الزائدة",
+            "seoDescription": "تنظيف النص الفوضوي.",
+            "seoKeywords": "إزالة مسافات",
+            "seoH1": "إزالة المسافات الزائدة"
+        },
+        "word-frequency": {
+            "name": "تكرار الكلمات",
+            "description": "تحليل الكلمات الأكثر استخدامًا في النص.",
+            "seoTitle": "تحليل تكرار الكلمات",
+            "seoDescription": "عرض استخدام الكلمات.",
+            "seoKeywords": "تكرار كلمات, keyword density",
+            "seoH1": "تكرار الكلمات"
+        },
+        "find-replace": {
+            "name": "بحث واستبدال متقدم",
+            "description": "بحث واستبدال بدعم التعبيرات المنتظمة.",
+            "seoTitle": "بحث واستبدال متقدم",
+            "seoDescription": "بحث قوي بالتعبيرات المنتظمة.",
+            "seoKeywords": "regex بحث استبدال",
+            "seoH1": "بحث واستبدال متقدم"
+        },
+        "json-formatter": {
+            "name": "مُنسق JSON",
+            "description": "تنسيق وتجميل وفحص بيانات JSON.",
+            "seoTitle": "مُنسق ومدقق JSON",
+            "seoDescription": "عرض JSON بشكل جميل.",
+            "seoKeywords": "منسق json, json beautifier",
+            "seoH1": "مُنسق JSON"
+        },
+        "url-encoder-decoder": {
+            "name": "مشفر/مفكك URL",
+            "description": "تشفير أو فك تشفير الروابط.",
+            "seoTitle": "مشفر/مفكك URL",
+            "seoDescription": "تشفير بالنسبة المئوية للروابط.",
+            "seoKeywords": "url encode decode",
+            "seoH1": "مشفر/مفكك URL"
+        },
+        "html-formatter": {
+            "name": "مُنسق HTML",
+            "description": "تنسيق وتجميل كود HTML.",
+            "seoTitle": "مُنسق HTML",
+            "seoDescription": "عرض HTML بشكل جميل.",
+            "seoKeywords": "منسق html",
+            "seoH1": "مُنسق HTML"
+        },
+        "css-formatter": {
+            "name": "مُنسق CSS",
+            "description": "تنسيق وتجميل كود CSS.",
+            "seoTitle": "مُنسق CSS",
+            "seoDescription": "ترتيب CSS.",
+            "seoKeywords": "منسق css",
+            "seoH1": "مُنسق CSS"
+        },
+        "javascript-formatter": {
+            "name": "مُنسق JavaScript",
+            "description": "تنسيق وتجميل كود JavaScript.",
+            "seoTitle": "مُنسق JavaScript",
+            "seoDescription": "عرض كود JS بشكل جميل.",
+            "seoKeywords": "منسق js",
+            "seoH1": "مُنسق JavaScript"
+        },
+        "xml-formatter": {
+            "name": "مُنسق XML",
+            "description": "تنسيق وتجميل كود XML.",
+            "seoTitle": "مُنسق XML",
+            "seoDescription": "ترتيب XML.",
+            "seoKeywords": "منسق xml",
+            "seoH1": "مُنسق XML"
+        },
+        "sql-formatter": {
+            "name": "مُنسق SQL",
+            "description": "تنسيق وتجميل استعلامات SQL.",
+            "seoTitle": "مُنسق SQL",
+            "seoDescription": "جعل استعلامات SQL قابلة للقراءة.",
+            "seoKeywords": "منسق sql",
+            "seoH1": "مُنسق SQL"
+        },
+        "markdown-to-html": {
+            "name": "Markdown إلى HTML",
+            "description": "تحويل Markdown إلى كود HTML.",
+            "seoTitle": "Markdown إلى HTML - محول",
+            "seoDescription": "تحويل MD إلى HTML.",
+            "seoKeywords": "markdown to html",
+            "seoH1": "Markdown إلى HTML"
+        },
+        "html-to-markdown": {
+            "name": "HTML إلى Markdown",
+            "description": "تحويل HTML إلى صيغة Markdown.",
+            "seoTitle": "HTML إلى Markdown - محول",
+            "seoDescription": "تحويل HTML إلى Markdown نظيف.",
+            "seoKeywords": "html to markdown",
+            "seoH1": "HTML إلى Markdown"
+        },
+        "csv-to-json": {
+            "name": "CSV إلى JSON",
+            "description": "تحويل بيانات CSV إلى صيغة JSON.",
+            "seoTitle": "CSV إلى JSON - محول",
+            "seoDescription": "تحويل CSV إلى JSON.",
+            "seoKeywords": "csv to json",
+            "seoH1": "CSV إلى JSON"
+        },
+        "json-to-csv": {
+            "name": "JSON إلى CSV",
+            "description": "تحويل بيانات JSON إلى صيغة CSV.",
+            "seoTitle": "JSON إلى CSV - محول",
+            "seoDescription": "تحويل JSON إلى CSV.",
+            "seoKeywords": "json to csv",
+            "seoH1": "JSON إلى CSV"
+        },
+        "code-minifier": {
+            "name": "مُصغّر الكود",
+            "description": "تصغير كود HTML و CSS و JS.",
+            "seoTitle": "مُصغّر الكود",
+            "seoDescription": "تقليل حجم الملفات.",
+            "seoKeywords": "مصغر كود, minify code",
+            "seoH1": "مُصغّر الكود"
+        },
+        "diff-checker": {
+            "name": "مقارن الفروق",
+            "description": "مقارنة نصين وإبراز الفروق.",
+            "seoTitle": "مقارن الفروق",
+            "seoDescription": "البحث عن الفروق بين النصوص.",
+            "seoKeywords": "مقارن فروق, diff checker",
+            "seoH1": "مقارن الفروق"
+        },
+        "unit-converter": {
+            "name": "محول الوحدات",
+            "description": "التحويل بين وحدات قياس مختلفة.",
+            "seoTitle": "محول الوحدات",
+            "seoDescription": "الطول والوزن والحرارة إلخ.",
+            "seoKeywords": "محول وحدات",
+            "seoH1": "محول الوحدات"
+        },
+        "color-converter": {
+            "name": "محول الألوان",
+            "description": "التحويل بين HEX و RGB و HSL.",
+            "seoTitle": "محول الألوان",
+            "seoDescription": "تحويل رموز الألوان.",
+            "seoKeywords": "محول ألوان, hex rgb",
+            "seoH1": "محول الألوان"
+        },
+        "binary-to-text": {
+            "name": "ثنائي إلى نص",
+            "description": "تحويل الرمز الثنائي إلى نص.",
+            "seoTitle": "ثنائي إلى نص - محول",
+            "seoDescription": "فك الثنائي إلى ASCII.",
+            "seoKeywords": "binary to text",
+            "seoH1": "ثنائي إلى نص"
+        },
+        "hex-to-decimal": {
+            "name": "سداسي عشري إلى عشري",
+            "description": "تحويل الأعداد السداسية العشرية إلى عشرية.",
+            "seoTitle": "سداسي إلى عشري - محول",
+            "seoDescription": "تحويل أعداد hex.",
+            "seoKeywords": "hex to decimal",
+            "seoH1": "سداسي إلى عشري"
+        },
+        "roman-numeral": {
+            "name": "محول الأرقام الرومانية",
+            "description": "التحويل بين الأرقام العربية والرومانية.",
+            "seoTitle": "محول الأرقام الرومانية",
+            "seoDescription": "تحويل إلى أرقام رومانية.",
+            "seoKeywords": "محول أرقام رومانية",
+            "seoH1": "محول الأرقام الرومانية"
+        },
+        "random-number": {
+            "name": "مولد أرقام عشوائية",
+            "description": "إنشاء أرقام عشوائية ضمن نطاق.",
+            "seoTitle": "مولد أرقام عشوائية",
+            "seoDescription": "أرقام عشوائية حقيقية.",
+            "seoKeywords": "مولد أرقام عشوائية",
+            "seoH1": "مولد أرقام عشوائية"
+        },
+        "random-string": {
+            "name": "مولد نصوص عشوائية",
+            "description": "إنشاء نصوص عشوائية وكلمات مرور قوية.",
+            "seoTitle": "مولد نصوص وكلمات مرور عشوائية",
+            "seoDescription": "إنشاء كلمات مرور قوية.",
+            "seoKeywords": "مولد نصوص عشوائية, مولد كلمة مرور",
+            "seoH1": "مولد نصوص عشوائية"
+        },
+        "random-color": {
+            "name": "مولد ألوان عشوائية",
+            "description": "إنشاء ألوان عشوائية برموز HEX.",
+            "seoTitle": "مولد ألوان عشوائية",
+            "seoDescription": "الحصول على ألوان عشوائية.",
+            "seoKeywords": "مولد ألوان عشوائية",
+            "seoH1": "مولد ألوان عشوائية"
+        },
+        "random-date": {
+            "name": "مولد تواريخ عشوائية",
+            "description": "إنشاء تواريخ عشوائية.",
+            "seoTitle": "مولد تواريخ عشوائية",
+            "seoDescription": "تواريخ عشوائية للاختبار.",
+            "seoKeywords": "مولد تاريخ عشوائي",
+            "seoH1": "مولد تواريخ عشوائية"
+        },
+        "random-ip": {
+            "name": "مولد IP عشوائي",
+            "description": "إنشاء عناوين IP عشوائية.",
+            "seoTitle": "مولد IP عشوائي",
+            "seoDescription": "عناوين IP صالحة عشوائية.",
+            "seoKeywords": "مولد ip عشوائي",
+            "seoH1": "مولد IP عشوائي"
+        },
+        "password-generator": {
+            "name": "مولد كلمات المرور",
+            "description": "إنشاء كلمات مرور قوية وآمنة.",
+            "seoTitle": "مولد كلمات مرور قوية",
+            "seoDescription": "كلمات مرور آمنة مع خيارات.",
+            "seoKeywords": "مولد كلمة مرور, password generator",
+            "seoH1": "مولد كلمات المرور"
+        },
+        "bcrypt-generator": {
+            "name": "مولد Bcrypt",
+            "description": "إنشاء تجزئة Bcrypt لكلمات المرور.",
+            "seoTitle": "مولد تجزئة Bcrypt",
+            "seoDescription": "تجزئة Bcrypt آمنة.",
+            "seoKeywords": "مولد bcrypt",
+            "seoH1": "مولد Bcrypt"
+        },
+        "base64-encoder": {
+            "name": "مشفر/مفكك Base64",
+            "description": "تشفير وفك تشفير نصوص Base64.",
+            "seoTitle": "مشفر/مفكك Base64",
+            "seoDescription": "معالجة Base64.",
+            "seoKeywords": "base64 encode decode",
+            "seoH1": "مشفر/مفكك Base64"
+        },
+        "md5-hash": {
+            "name": "مولد تجزئة MD5",
+            "description": "إنشاء تجزئة MD5.",
+            "seoTitle": "مولد MD5",
+            "seoDescription": "إنشاء تجزئة MD5.",
+            "seoKeywords": "مولد md5",
+            "seoH1": "مولد MD5"
+        },
+        "sha256-hash": {
+            "name": "مولد تجزئة SHA-256",
+            "description": "إنشاء تجزئة SHA-256.",
+            "seoTitle": "مولد SHA-256",
+            "seoDescription": "تجزئة تشفير آمنة.",
+            "seoKeywords": "مولد sha256",
+            "seoH1": "مولد SHA-256"
+        },
+        "sha512-hash": {
+            "name": "مولد تجزئة SHA-512",
+            "description": "إنشاء تجزئة SHA-512.",
+            "seoTitle": "مولد SHA-512",
+            "seoDescription": "أآمن تجزئة SHA.",
+            "seoKeywords": "مولد sha512",
+            "seoH1": "مولد SHA-512"
+        },
+        "uuid-generator": {
+            "name": "مولد UUID",
+            "description": "إنشاء معرفات UUID v4.",
+            "seoTitle": "مولد UUID",
+            "seoDescription": "إنشاء معرفات فريدة.",
+            "seoKeywords": "مولد uuid",
+            "seoH1": "مولد UUID"
+        },
+        "qr-code-generator": {
+            "name": "مولد رمز QR",
+            "description": "إنشاء رموز QR للروابط والنصوص إلخ.",
+            "seoTitle": "مولد رمز QR",
+            "seoDescription": "رموز QR مخصصة.",
+            "seoKeywords": "مولد qr code",
+            "seoH1": "مولد رمز QR"
+        },
+        "lorem-ipsum": {
+            "name": "مولد Lorem Ipsum",
+            "description": "إنشاء نص حشو للتصاميم.",
+            "seoTitle": "مولد Lorem Ipsum",
+            "seoDescription": "نص وهمي متعدد اللغات.",
+            "seoKeywords": "lorem ipsum",
+            "seoH1": "مولد Lorem Ipsum"
+        },
+        "youtube-thumbnail-downloader": {
+            "name": "تنزيل صور مصغرة يوتيوب",
+            "description": "تنزيل صور مصغرة عالية الجودة من فيديوهات يوتيوب.",
+            "seoTitle": "تنزيل صور مصغرة يوتيوب",
+            "seoDescription": "الحصول على صور مصغرة HD من يوتيوب.",
+            "seoKeywords": "تنزيل صورة مصغرة يوتيوب",
+            "seoH1": "تنزيل صور مصغرة يوتيوب"
+        },
+        "youtube-tag-generator": {
+            "name": "مولد وسمات يوتيوب",
+            "description": "إنشاء وسمات محسنة لتحسين الترتيب.",
+            "seoTitle": "مولد وسمات يوتيوب",
+            "seoDescription": "وسمات ذات صلة لسيو أفضل.",
+            "seoKeywords": "مولد وسمات يوتيوب",
+            "seoH1": "مولد وسمات يوتيوب"
+        },
+        "youtube-title-generator": {
+            "name": "مولد عناوين يوتيوب",
+            "description": "إنشاء عناوين جذابة وصديقة للسيو.",
+            "seoTitle": "مولد عناوين يوتيوب",
+            "seoDescription": "زيادة النقرات بعناوين جيدة.",
+            "seoKeywords": "مولد عنوان يوتيوب",
+            "seoH1": "مولد عناوين يوتيوب"
+        },
+        "youtube-embed-code-generator": {
+            "name": "مولد كود تضمين يوتيوب",
+            "description": "إنشاء أكواد تضمين مخصصة.",
+            "seoTitle": "مولد تضمين يوتيوب",
+            "seoDescription": "مع تشغيل تلقائي وحلقة إلخ.",
+            "seoKeywords": "كود تضمين يوتيوب",
+            "seoH1": "مولد تضمين يوتيوب"
+        },
+        "youtube-timestamp-link-generator": {
+            "name": "رابط توقيت يوتيوب",
+            "description": "إنشاء روابط تبدأ من وقت معين.",
+            "seoTitle": "مولد رابط توقيت يوتيوب",
+            "seoDescription": "بدء الفيديو من المكان المحدد.",
+            "seoKeywords": "رابط توقيت يوتيوب",
+            "seoH1": "رابط توقيت يوتيوب"
+        },
+        "meta-tag-generator": {
+            "name": "مولد وسمات ميتا",
+            "description": "إنشاء وسمات ميتا صديقة للسيو.",
+            "seoTitle": "مولد وسمات ميتا",
+            "seoDescription": "وسمات العنوان والوصف.",
+            "seoKeywords": "مولد meta tag",
+            "seoH1": "مولد وسمات ميتا"
+        },
+        "open-graph-generator": {
+            "name": "مولد Open Graph",
+            "description": "إنشاء وسمات Open Graph للمشاركة الاجتماعية.",
+            "seoTitle": "مولد Open Graph",
+            "seoDescription": "عرض أفضل في التواصل الاجتماعي.",
+            "seoKeywords": "مولد open graph",
+            "seoH1": "مولد Open Graph"
+        },
+        "twitter-card-generator": {
+            "name": "مولد بطاقة تويتر",
+            "description": "إنشاء وسمات بطاقة تويتر.",
+            "seoTitle": "مولد بطاقة تويتر",
+            "seoDescription": "عرض أفضل في تويتر.",
+            "seoKeywords": "مولد twitter card",
+            "seoH1": "مولد بطاقة تويتر"
+        },
+        "robots-txt-generator": {
+            "name": "مولد robots.txt",
+            "description": "إنشاء ملف robots.txt.",
+            "seoTitle": "مولد robots.txt",
+            "seoDescription": "التحكم في وصول الزواحف.",
+            "seoKeywords": "مولد robots.txt",
+            "seoH1": "مولد robots.txt"
+        },
+        "xml-sitemap-generator": {
+            "name": "مولد خريطة الموقع XML",
+            "description": "إنشاء خرائط موقع XML للسيو.",
+            "seoTitle": "مولد خريطة الموقع XML",
+            "seoDescription": "تسهيل فهرسة الصفحات.",
+            "seoKeywords": "مولد sitemap xml",
+            "seoH1": "مولد خريطة الموقع XML"
+        },
+        "keyword-density-checker": {
+            "name": "فاحص كثافة الكلمات المفتاحية",
+            "description": "تحليل استخدام وكثافة الكلمات المفتاحية.",
+            "seoTitle": "فاحص كثافة الكلمات المفتاحية",
+            "seoDescription": "فحص تكرار الكلمات المفتاحية.",
+            "seoKeywords": "كثافة كلمات مفتاحية",
+            "seoH1": "فاحص كثافة الكلمات المفتاحية"
+        },
+        "keyword-cleaner": {
+            "name": "منظف الكلمات المفتاحية",
+            "description": "تنظيف قوائم الكلمات المفتاحية.",
+            "seoTitle": "منظف قائمة الكلمات المفتاحية",
+            "seoDescription": "إزالة المكرر والزائد.",
+            "seoKeywords": "منظف كلمات مفتاحية",
+            "seoH1": "منظف الكلمات المفتاحية"
+        },
+        "long-tail-keyword-generator": {
+            "name": "مولد كلمات مفتاحية طويلة الذيل",
+            "description": "إنشاء تنويعات كلمات مفتاحية طويلة الذيل.",
+            "seoTitle": "مولد كلمات مفتاحية طويلة الذيل",
+            "seoDescription": "توسيع الكلمات المفتاحية الأساسية.",
+            "seoKeywords": "كلمات مفتاحية طويلة الذيل",
+            "seoH1": "كلمات مفتاحية طويلة الذيل"
+        },
+        "slug-generator": {
+            "name": "مولد Slug URL",
+            "description": "تحويل النص إلى slug URL صديق للسيو.",
+            "seoTitle": "مولد Slug",
+            "seoDescription": "إنشاء روابط نظيفة وقابلة للقراءة.",
+            "seoKeywords": "مولد slug, url slug",
+            "seoH1": "مولد Slug URL"
+        },
+        "google-serp-simulator": {
+            "name": "معاينة نتائج بحث جوجل",
+            "description": "معاينة كيفية ظهور صفحتك في نتائج بحث جوجل.",
+            "seoTitle": "محاكي نتائج بحث جوجل",
+            "seoDescription": "اختبار معاينة نتائج البحث.",
+            "seoKeywords": "معاينة serp جوجل",
+            "seoH1": "معاينة نتائج بحث جوجل"
+        },
+        "htaccess-redirect-generator": {
+            "name": "مولد إعادة توجيه .htaccess",
+            "description": "إنشاء كود إعادة توجيه 301/302.",
+            "seoTitle": "مولد إعادة توجيه .htaccess",
+            "seoDescription": "إنشاء قواعد إعادة توجيه.",
+            "seoKeywords": "مولد إعادة توجيه htaccess",
+            "seoH1": "مولد إعادة توجيه .htaccess"
+        },
+        "my-ip-address": {
+            "name": "عنوان IP الخاص بي",
+            "description": "فحص عنوان IP العام ومعلومات الموقع.",
+            "seoTitle": "ما هو عنوان IP الخاص بي؟",
+            "seoDescription": "اكتشف عنوان IP العام.",
+            "seoKeywords": "عنوان ip الخاص بي, what is my ip",
+            "seoH1": "عنوان IP الخاص بي"
+        },
+        "browser-info": {
+            "name": "معلومات المتصفح",
+            "description": "الحصول على تفاصيل المتصفح والجهاز.",
+            "seoTitle": "معلومات المتصفح",
+            "seoDescription": "المتصفح ونظام التشغيل وحجم الشاشة إلخ.",
+            "seoKeywords": "معلومات متصفح, user agent",
+            "seoH1": "معلومات المتصفح"
+        },
+        "screen-resolution-simulator": {
+            "name": "اختبار دقة الشاشة",
+            "description": "اختبار الموقع على دقات مختلفة.",
+            "seoTitle": "محاكي دقة الشاشة",
+            "seoDescription": "معاينة على أجهزة مختلفة.",
+            "seoKeywords": "اختبار دقة شاشة",
+            "seoH1": "اختبار دقة الشاشة"
+        },
+        "responsive-checker": {
+            "name": "فاحص التصميم المتجاوب",
+            "description": "التحقق مما إذا كان الموقع متوافقًا مع الجوال.",
+            "seoTitle": "اختبار الموقع المتجاوب",
+            "seoDescription": "اختبار التصميم المتجاوب.",
+            "seoKeywords": "فاحص متجاوب",
+            "seoH1": "فاحص التصميم المتجاوب"
+        },
+        "whatsapp-link-generator": {
+            "name": "مولد رابط واتساب",
+            "description": "إنشاء روابط واتساب للدردشة بالنقر.",
+            "seoTitle": "مولد رابط واتساب",
+            "seoDescription": "إنشاء روابط wa.me.",
+            "seoKeywords": "مولد رابط واتساب",
+            "seoH1": "مولد رابط واتساب"
+        },
+        "telegram-link-generator": {
+            "name": "مولد رابط تيليجرام",
+            "description": "إنشاء روابط مباشرة لمستخدمي أو قنوات تيليجرام.",
+            "seoTitle": "مولد رابط تيليجرام",
+            "seoDescription": "إنشاء روابط t.me.",
+            "seoKeywords": "مولد رابط تيليجرام",
+            "seoH1": "مولد رابط تيليجرام"
+        },
+        "paypal-link-generator": {
+            "name": "مولد رابط باي بال",
+            "description": "إنشاء روابط دفع وتبرع باي بال.",
+            "seoTitle": "مولد رابط باي بال",
+            "seoDescription": "روابط PayPal.me ودفع.",
+            "seoKeywords": "مولد رابط باي بال",
+            "seoH1": "مولد رابط باي بال"
+        },
+        "email-validator": {
+            "name": "مدقق البريد الإلكتروني",
+            "description": "التحقق من صيغة عناوين البريد الإلكتروني.",
+            "seoTitle": "مدقق عنوان البريد الإلكتروني",
+            "seoDescription": "فحص صيغة البريد الإلكتروني.",
+            "seoKeywords": "مدقق بريد إلكتروني",
+            "seoH1": "مدقق البريد الإلكتروني"
+        },
+        "url-opener": {
+            "name": "مفتاح روابط جماعي",
+            "description": "فتح عدة روابط في نفس الوقت.",
+            "seoTitle": "مفتاح روابط متعددة",
+            "seoDescription": "فتح العديد من الروابط معًا.",
+            "seoKeywords": "مفتاح روابط جماعي",
+            "seoH1": "مفتاح روابط جماعي"
+        },
+        "user-agent-parser": {
+            "name": "محلل User Agent",
+            "description": "تحليل سلاسل User-Agent.",
+            "seoTitle": "محلل User Agent",
+            "seoDescription": "استخراج معلومات المتصفح والجهاز.",
+            "seoKeywords": "محلل user agent",
+            "seoH1": "محلل User Agent"
+        },
+        "wordpress-password-hash": {
+            "name": "تجزئة كلمة مرور ووردبريس",
+            "description": "إنشاء تجزئة متوافقة مع ووردبريس.",
+            "seoTitle": "مولد تجزئة ووردبريس",
+            "seoDescription": "إنشاء تجزئة phpass.",
+            "seoKeywords": "تجزئة كلمة مرور ووردبريس",
+            "seoH1": "تجزئة كلمة مرور ووردبريس"
+        },
+        "age-calculator": {
+            "name": "حاسبة العمر",
+            "description": "حساب العمر الدقيق بالسنوات والأشهر والأيام.",
+            "seoTitle": "حاسبة العمر",
+            "seoDescription": "العمر الدقيق من تاريخ الميلاد.",
+            "seoKeywords": "حاسبة عمر",
+            "seoH1": "حاسبة العمر"
+        },
+        "bmi-calculator": {
+            "name": "حاسبة مؤشر كتلة الجسم",
+            "description": "حساب مؤشر كتلة الجسم وحالة الصحة.",
+            "seoTitle": "حاسبة BMI",
+            "seoDescription": "فحص BMI الخاص بك.",
+            "seoKeywords": "حاسبة bmi",
+            "seoH1": "حاسبة مؤشر كتلة الجسم"
+        },
+        "percentage-calculator": {
+            "name": "حاسبة النسبة المئوية",
+            "description": "حساب النسب المئوية والزيادات والنقصان.",
+            "seoTitle": "حاسبة النسبة المئوية",
+            "seoDescription": "أدوات نسب مئوية متعددة.",
+            "seoKeywords": "حاسبة نسبة مئوية",
+            "seoH1": "حاسبة النسبة المئوية"
+        },
+        "gst-calculator": {
+            "name": "حاسبة الضريبة",
+            "description": "حساب مبلغ الضريبة والسعر الإجمالي.",
+            "seoTitle": "حاسبة الضريبة",
+            "seoDescription": "حساب الضريبة بسهولة.",
+            "seoKeywords": "حاسبة ضريبة",
+            "seoH1": "حاسبة الضريبة"
+        },
+        "emi-calculator": {
+            "name": "حاسبة قسط القرض",
+            "description": "حساب القسط الشهري والفائدة الإجمالية.",
+            "seoTitle": "حاسبة EMI",
+            "seoDescription": "حساب أقساط القروض.",
+            "seoKeywords": "حاسبة emi, حاسبة قرض",
+            "seoH1": "حاسبة EMI"
+        },
+        "discount-calculator": {
+            "name": "حاسبة الخصم",
+            "description": "حساب مبلغ الخصم والسعر النهائي.",
+            "seoTitle": "حاسبة الخصم",
+            "seoDescription": "معرفة التوفير في العروض.",
+            "seoKeywords": "حاسبة خصم",
+            "seoH1": "حاسبة الخصم"
+        },
+        "instagram-hashtag-generator": {
+            "name": "مولد هاشتاج إنستغرام",
+            "description": "إنشاء هاشتاجات شائعة وذات صلة لإنستغرام.",
+            "seoTitle": "مولد هاشتاج إنستغرام",
+            "seoDescription": "زيادة مدى المنشورات.",
+            "seoKeywords": "هاشتاج إنستغرام",
+            "seoH1": "مولد هاشتاج إنستغرام"
+        },
+        "html-to-jsx": {
+            "name": "HTML إلى JSX",
+            "description": "تحويل كود HTML إلى صيغة JSX لـ React.",
+            "seoTitle": "HTML إلى JSX - محول",
+            "seoDescription": "للتطوير بـ React.",
+            "seoKeywords": "html to jsx",
+            "seoH1": "HTML إلى JSX"
+        }
+    },
+    "Common": {
+        "backToTools": "العودة إلى الأدوات",
+        "howToUse": "كيفية استخدام {name}",
+        "toolIntro": "تتيح لك هذه الأداة {description} بسرعة وأمان. يتم كل المعالجة في متصفحك.",
+        "keyFeatures": "الميزات الرئيسية",
+        "featureFast": "سرعة فائقة",
+        "featureSimple": "واجهة بسيطة",
+        "featureNoInstall": "لا حاجة لتثبيت",
+        "featureFree": "100% مجاني",
+        "featurePrivacy": "خصوصيتك مضمونة",
+        "relatedTools": "أدوات ذات صلة",
+        "viewAll": "عرض جميع الأدوات",
+        "whyUse": "لماذا تستخدم هذه الأداة؟",
+        "featureBrowser": "يعمل بالكامل في المتصفح",
+        "featureNoStorage": "لا تخزين على الخادم",
+        "featureMobile": "100% متوافق مع الجوال",
+        "selectImage": "اختر صورة",
+        "selectMultiple": "اختر صور متعددة",
+        "dragDrop": "اسحب وأفلت الملفات هنا",
+        "supports": "يدعم JPG و PNG و WebP و SVG",
+        "privacyGuaranteed": "خصوصية مضمونة",
+        "lightningFast": "سرعة فائقة",
+        "imagesSelected": "تم اختيار {count} صورة",
+        "clearAll": "مسح الكل",
+        "addMore": "إضافة المزيد",
+        "processing": "جاري المعالجة...",
+        "processBatch": "معالجة دفعة",
+        "applyChanges": "تطبيق التغييرات",
+        "safePrivate": "آمن وخاص",
+        "localProcessing": "معالجة محلية في المتصفح",
+        "quality": "الجودة",
+        "targetFormat": "الصيغة المستهدفة",
+        "copyString": "نسخ النتيجة",
+        "fastSecure": "سريع وآمن",
+        "browserProcessing": "معالجة المتصفح",
+        "noStorage": "لا تخزين بيانات",
+        "mobileFriendly": "100% متوافق مع الجوال",
+        "settings": "الإعدادات",
+        "tipQuality": "نصيحة: جودة 80% هي التوازن الأفضل",
+        "downloadsAsZip": "تنزيل كملف ZIP",
+        "base64Output": "إخراج Base64",
+        "tryNow": "جرب الآن",
+        "copy": "نسخ",
+        "clear": "مسح",
+        "download": "تنزيل",
+        "options": "خيارات",
+        "output": "الإخراج",
+        "input": "الإدخال",
+        "reset": "إعادة تعيين",
+        "shareThisTool": "مشاركة هذه الأداة",
+        "copyLink": "نسخ الرابط"
+    },
+    "NavbarCategories": {
+        "Image Tools": "أدوات الصور",
+        "Text Tools": "أدوات النصوص",
+        "Code & Developer Tools": "الكود والتطوير",
+        "Converter Tools": "المحولات",
+        "Utility Tools": "أدوات مساعدة",
+        "Security & Crypto": "الأمان والتشفير",
+        "YouTube Tools": "أدوات يوتيوب",
+        "Social & Links": "التواصل والروابط",
+        "Calculators": "الحاسبات",
+        "Convert": "تحويل"
+    },
+    "TextTools": {
+        "editor": "المحرر",
+        "placeholder": "الصق أو اكتب نصك هنا...",
+        "download": "تنزيل",
+        "copy": "نسخ",
+        "clear": "مسح",
+        "topKeywords": "الكلمات الأكثر تكرارًا",
+        "quickTransformers": "أدوات سريعة",
+        "allCaps": "كلها كبيرة",
+        "uppercase": "أحرف كبيرة",
+        "mirrorMode": "نص مرآة",
+        "reverseText": "نص معكوس",
+        "allSmall": "كلها صغيرة",
+        "lowercase": "أحرف صغيرة",
+        "headlineStyle": "أسلوب العنوان",
+        "titleCase": "عنوان",
+        "naturalFlow": "تدفق طبيعي",
+        "sentenceCase": "جملة",
+        "fixSpacing": "إصلاح التباعد",
+        "removeExtraSpaces": "إزالة المسافات الزائدة",
+        "joinText": "دمج الأسطر",
+        "removeLineBreaks": "إزالة فواصل الأسطر",
+        "findReplace": "البحث والاستبدال",
+        "find": "ابحث",
+        "replaceWith": "استبدل بـ",
+        "count": "تم العثور على: {count}",
+        "replaceAll": "استبدال الكل",
+        "words": "كلمات",
+        "characters": "أحرف",
+        "sentences": "جمل",
+        "paragraphs": "فقرات",
+        "lines": "أسطر",
+        "readTime": "وقت القراءة",
+        "input": "الإدخال",
+        "reset": "إعادة تعيين",
+        "pastePlaceholder": "الصق النص هنا...",
+        "options": "خيارات",
+        "findLabel": "ابحث",
+        "replaceLabel": "استبدل",
+        "useRegex": "استخدام Regex",
+        "caseSensitive": "حساس لحالة الأحرف",
+        "noConfig": "لا يحتاج إعدادات",
+        "runTool": "معالجة",
+        "output": "الإخراج",
+        "resultsPlaceholder": "ستظهر النتائج هنا",
+        "italicConverter": "نص مائل",
+        "strikethrough": "مشطوب",
+        "sortAZ": "ترتيب أ-ي",
+        "removeDuplicates": "إزالة المكرر",
+        "textTool": "أداة نص"
+    },
+    "YouTubeTools": {
+        "autoplay": "تشغيل تلقائي",
+        "loop": "تكرار",
+        "hideControls": "إخفاء التحكم",
+        "startTime": "وقت البدء",
+        "startTimePlaceholder": "مثال: 1د30ث",
+        "configuration": "خيارات التضمين",
+        "enterTopic": "أدخل موضوع",
+        "videoUrl": "رابط يوتيوب",
+        "topicPlaceholder": "مثال: تطوير الويب",
+        "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+        "fetchThumbnails": "جلب الصور المصغرة",
+        "generateNow": "إنشاء",
+        "growthTip": "نصيحة احترافية",
+        "tipText": "الصور المصغرة والوسمات الجيدة يمكن أن تزيد النقرات بنسبة 40%.",
+        "generatedOutput": "النتائج",
+        "qualityLabel": "جودة {quality}",
+        "downloadImage": "تنزيل",
+        "seoTags": "الوسمات المقترحة",
+        "copyAll": "نسخ الكل",
+        "generatedCode": "كود التضمين",
+        "generatedLink": "الرابط المُنشأ",
+        "copy": "نسخ",
+        "openLink": "فتح الرابط",
+        "inputRequired": "يرجى إدخال رابط يوتيوب",
+        "resultsPlaceholder": "ستظهر النتائج هنا",
+        "duration": "المدة",
+        "embedCode": "كود التضمين"
+    },
+    "Footer": {
+        "topCategories": "الفئات الشائعة",
+        "resources": "الموارد",
+        "aboutUs": "من نحن",
+        "contact": "تواصل معنا",
+        "privacyPolicy": "سياسة الخصوصية",
+        "termsOfService": "شروط الخدمة",
+        "ourMission": "مهمتنا",
+        "missionStatement": "أدوات عبر الإنترنت مجانية وسريعة وخاصة للجميع — بدون إعلانات أو تتبع.",
+        "securePrivate": "آمن وخاص",
+        "allRightsReserved": "جميع الحقوق محفوظة."
+    },
+    "Share": {
+        "shareThisTool": "مشاركة هذه الأداة",
+        "linkCopied": "تم نسخ الرابط!",
+        "copyLink": "نسخ الرابط",
+        "shareOn": "مشاركة على {network}"
+    },
+    "ToolActions": {
+        "operationSuccessful": "نجاح!",
+        "readyForDownload": "جاهز للتنزيل",
+        "startNew": "بدء جديد",
+        "downloadNow": "تنزيل الآن",
+        "uploadFile": "رفع {type}",
+        "dragDrop": "اسحب وأفلت",
+        "chooseFile": "اختر ملف",
+        "processing": "جاري المعالجة...",
+        "convertTo": "تحويل إلى {format}",
+        "mergeFiles": "دمج الملفات",
+        "splitFile": "تقسيم الملف",
+        "addMore": "إضافة المزيد",
+        "clearAll": "مسح الكل",
+        "filesSelected": "تم اختيار {count} ملف",
+        "pasteBase64": "لصق Base64",
+        "batchReady": "الدفعة جاهزة"
+    }
+}

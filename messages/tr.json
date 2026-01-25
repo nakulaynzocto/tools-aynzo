@@ -1,0 +1,1164 @@
+{
+    "HomePage": {
+        "title": "Ücretsiz Geliştirici Araçları",
+        "description": "Günlük işleriniz için basit, hızlı ve güvenli araç koleksiyonu.",
+        "noAds": "Reklam yok, takip yok, sadece araçlar.",
+        "toolsCount": "{count} Araç"
+    },
+    "App": {
+        "name": "AYNZO",
+        "nameHighlight": "TOOLS"
+    },
+    "Navigation": {
+        "more": "Daha Fazla",
+        "searchPlaceholder": "Araç ara...",
+        "mobileMenu": "Menü",
+        "home": "Ana Sayfa",
+        "tools": "Araçlar"
+    },
+    "Categories": {
+        "Image Tools": "Görüntü Araçları",
+        "Text Tools": "Metin Araçları",
+        "Calculator Tools": "Hesap Makineleri",
+        "Converter Tools": "Dönüştürücüler",
+        "Time & Date Tools": "Zaman & Tarih",
+        "Web Tools": "Web Araçları",
+        "Dev Tools": "Geliştirici Araçları",
+        "Code & Developer Tools": "Kod & Geliştirici Araçları",
+        "Security & Crypto Tools": "Güvenlik & Kripto",
+        "Social Media & SEO Tools": "SEO & Sosyal Medya",
+        "Miscellaneous Tools": "Çeşitli",
+        "Generators": "Üreteçler",
+        "CSS Tools": "CSS Araçları",
+        "Color Tools": "Renk Araçları",
+        "JSON Tools": "JSON Araçları",
+        "Random Generators": "Rastgele Üreteçler",
+        "image": "Görüntü Araçları",
+        "text": "Metin Araçları",
+        "developer": "Kod & Geliştirici Araçları",
+        "seo": "SEO & Sosyal Medya",
+        "youtube": "YouTube Araçları",
+        "social": "Sosyal Medya & Bağlantılar",
+        "security": "Güvenlik & Kripto",
+        "crypto": "Güvenlik & Kripto",
+        "converter": "Dönüştürücüler",
+        "utility": "Yardımcı Araçlar",
+        "pdf": "PDF Araçları",
+        "calculator": "Hesap Makineleri",
+        "Security & Crypto": "Güvenlik & Kripto",
+        "Converters": "Dönüştürücüler",
+        "SEO & Web Tools": "SEO & Sosyal Medya",
+        "Utility Tools": "Yardımcı Araçlar",
+        "YouTube Tools": "YouTube Araçları",
+        "Social & Links": "Sosyal Medya & Bağlantılar",
+        "Calculators": "Hesap Makineleri",
+        "web": "Web Araçları",
+        "Convert": "Dönüştür"
+    },
+    "Tools": {
+        "tryNow": "Şimdi Dene",
+        "relatedTools": "İlgili Araçlar",
+        "viewAll": "Tüm Araçları Gör",
+        "backToTools": "Araçlara Dön",
+        "image-compressor": {
+            "name": "Görüntü Sıkıştırıcı",
+            "description": "JPG, PNG ve WebP görüntülerini kalite kaybı olmadan sıkıştırın.",
+            "seoTitle": "Görüntü Sıkıştırıcı - Ücretsiz Online Araç",
+            "seoDescription": "Görüntüleri kalite kaybı olmadan sıkıştırın. %100 ücretsiz, hızlı ve güvenli.",
+            "seoKeywords": "görüntü sıkıştırıcı, resim küçültme, ücretsiz araç",
+            "seoH1": "Görüntü Sıkıştırıcı"
+        },
+        "image-resizer": {
+            "name": "Görüntü Boyutlandırıcı",
+            "description": "Görüntüleri tam piksel veya yüzde ile yeniden boyutlandırın.",
+            "seoTitle": "Görüntü Boyutlandırıcı - Ücretsiz Online Araç",
+            "seoDescription": "Görüntü boyutunu kolayca değiştirin. %100 ücretsiz ve güvenli.",
+            "seoKeywords": "görüntü boyutlandırma, resize image",
+            "seoH1": "Görüntü Boyutlandırıcı"
+        },
+        "jpg-to-png": {
+            "name": "JPG'den PNG'ye",
+            "description": "JPG görüntülerini şeffaf arka plan destekli PNG'ye dönüştürün.",
+            "seoTitle": "JPG'den PNG'ye Dönüştürücü - Ücretsiz Araç",
+            "seoDescription": "JPG'yi şeffaf PNG'ye dönüştürün. %100 ücretsiz.",
+            "seoKeywords": "jpg to png, jpg png dönüştür",
+            "seoH1": "JPG'den PNG'ye"
+        },
+        "png-to-jpg": {
+            "name": "PNG'den JPG'ye",
+            "description": "PNG görüntülerini anında JPG'ye dönüştürün.",
+            "seoTitle": "PNG'den JPG'ye Dönüştürücü - Ücretsiz Araç",
+            "seoDescription": "PNG'yi JPG'ye dönüştürün. %100 ücretsiz.",
+            "seoKeywords": "png to jpg, png jpg dönüştür",
+            "seoH1": "PNG'den JPG'ye"
+        },
+        "webp-converter": {
+            "name": "WebP Dönüştürücü",
+            "description": "Görüntüleri WebP formatına veya WebP'den dönüştürün.",
+            "seoTitle": "WebP Dönüştürücü - Ücretsiz Online Araç",
+            "seoDescription": "WebP dönüşümü kolay. %100 ücretsiz.",
+            "seoKeywords": "webp dönüştürücü, webp jpg png",
+            "seoH1": "WebP Dönüştürücü"
+        },
+        "image-format-converter": {
+            "name": "Görüntü Format Dönüştürücü",
+            "description": "JPG, PNG, WebP ve diğer formatlar arasında dönüştürün.",
+            "seoTitle": "Görüntü Format Dönüştürücü - Ücretsiz Araç",
+            "seoDescription": "Görüntü formatını online değiştirin. %100 ücretsiz.",
+            "seoKeywords": "görüntü format dönüştürücü, format değiştirme",
+            "seoH1": "Görüntü Format Dönüştürücü"
+        },
+        "image-to-base64": {
+            "name": "Görüntüden Base64'e",
+            "description": "Görüntüleri koda gömmek için Base64 dizisine dönüştürün.",
+            "seoTitle": "Görüntüden Base64'e Dönüştürücü",
+            "seoDescription": "Görüntüyü Base64'e dönüştürün. %100 ücretsiz.",
+            "seoKeywords": "image to base64, base64 encoder",
+            "seoH1": "Görüntüden Base64'e"
+        },
+        "image-cropper": {
+            "name": "Görüntü Kırpıcı",
+            "description": "Özel oranlarla görüntüleri online kırpın.",
+            "seoTitle": "Görüntü Kırpıcı - Ücretsiz Araç",
+            "seoDescription": "Görüntüleri istediğiniz gibi kırpın. %100 ücretsiz.",
+            "seoKeywords": "görüntü kırpma, crop image online",
+            "seoH1": "Görüntü Kırpıcı"
+        },
+        "flip-image": {
+            "name": "Görüntü Çevir",
+            "description": "Görüntüleri yatay veya dikey olarak çevirin.",
+            "seoTitle": "Görüntü Çevir - Ücretsiz Araç",
+            "seoDescription": "Görüntüleri anında çevirin. %100 ücretsiz.",
+            "seoKeywords": "görüntü çevirme, flip image",
+            "seoH1": "Görüntü Çevir"
+        },
+        "rotate-image": {
+            "name": "Görüntü Döndür",
+            "description": "Görüntüleri 90, 180 veya 270 derece döndürün.",
+            "seoTitle": "Görüntü Döndür - Ücretsiz Araç",
+            "seoDescription": "Görüntüleri kolayca döndürün. %100 ücretsiz.",
+            "seoKeywords": "görüntü döndürme, rotate image",
+            "seoH1": "Görüntü Döndür"
+        },
+        "image-enlarger": {
+            "name": "Görüntü Büyütücü",
+            "description": "Küçük görüntüleri kalite kaybı olmadan büyütün.",
+            "seoTitle": "Görüntü Büyütücü - Ücretsiz Araç",
+            "seoDescription": "4 kata kadar büyütme. %100 ücretsiz.",
+            "seoKeywords": "görüntü büyütme, upscale image",
+            "seoH1": "Görüntü Büyütücü"
+        },
+        "image-brightness": {
+            "name": "Görüntü Parlaklık",
+            "description": "Görüntü parlaklığını ayarlayın.",
+            "seoTitle": "Parlaklık Ayarı",
+            "seoDescription": "Parlaklığı artırın veya azaltın. %100 ücretsiz.",
+            "seoKeywords": "görüntü parlaklık, brightness adjust",
+            "seoH1": "Parlaklık Ayarı"
+        },
+        "image-contrast": {
+            "name": "Görüntü Kontrast",
+            "description": "Görüntü kontrastını ayarlayın.",
+            "seoTitle": "Kontrast Ayarı",
+            "seoDescription": "Kontrastı iyileştirin. %100 ücretsiz.",
+            "seoKeywords": "görüntü kontrast, contrast adjust",
+            "seoH1": "Kontrast Ayarı"
+        },
+        "grayscale-image": {
+            "name": "Gri Tonlama",
+            "description": "Renkli görüntüleri siyah beyaz yapın.",
+            "seoTitle": "Gri Tonlama Dönüştürücü",
+            "seoDescription": "Anında siyah beyaz yapın. %100 ücretsiz.",
+            "seoKeywords": "gri tonlama, siyah beyaz",
+            "seoH1": "Gri Tonlama"
+        },
+        "blur-image": {
+            "name": "Görüntü Bulanıklaştırma",
+            "description": "Görüntülere bulanıklık efekti ekleyin.",
+            "seoTitle": "Görüntü Bulanıklaştırma - Ücretsiz Araç",
+            "seoDescription": "Gauss bulanıklığı uygulayın. %100 ücretsiz.",
+            "seoKeywords": "görüntü bulanıklaştırma, blur image",
+            "seoH1": "Görüntü Bulanıklaştırma"
+        },
+        "sepia-converter": {
+            "name": "Sepya Filtresi",
+            "description": "Fotoğraflara vintage sepia efekti uygulayın.",
+            "seoTitle": "Sepya Filtresi - Ücretsiz Araç",
+            "seoDescription": "Klasik sepia tonu verin.",
+            "seoKeywords": "sepya filtre, vintage efekt",
+            "seoH1": "Sepya Efekti"
+        },
+        "invert-image": {
+            "name": "Renkleri Tersine Çevir",
+            "description": "Görüntü renklerini tersine çevirin (negatif efekt).",
+            "seoTitle": "Renkleri Tersine Çevir - Ücretsiz Araç",
+            "seoDescription": "Negatif efekt oluşturun. %100 ücretsiz.",
+            "seoKeywords": "renk tersine çevirme, invert colors",
+            "seoH1": "Renkleri Tersine Çevir"
+        },
+        "saturate-image": {
+            "name": "Renk Doygunluğu",
+            "description": "Görüntü renk doygunluğunu ayarlayın.",
+            "seoTitle": "Doygunluk Ayarı",
+            "seoDescription": "Renk yoğunluğunu değiştirin. %100 ücretsiz.",
+            "seoKeywords": "renk doygunluğu, saturation adjust",
+            "seoH1": "Doygunluk Ayarı"
+        },
+        "hue-rotate-image": {
+            "name": "Renk Tonu Döndürme",
+            "description": "Yaratıcı efektler için renk tonunu değiştirin.",
+            "seoTitle": "Renk Tonu Döndürme - Ücretsiz Araç",
+            "seoDescription": "Renkleri yaratıcı şekilde kaydırın. %100 ücretsiz.",
+            "seoKeywords": "renk tonu döndürme, hue rotate",
+            "seoH1": "Renk Tonu Döndürme"
+        },
+        "image-opacity": {
+            "name": "Görüntü Şeffaflık",
+            "description": "Görüntü şeffaflığını/opsağlığını ayarlayın.",
+            "seoTitle": "Görüntü Şeffaflık - Ücretsiz Araç",
+            "seoDescription": "Görüntüleri şeffaf yapın. %100 ücretsiz.",
+            "seoKeywords": "görüntü şeffaflık, opacity adjust",
+            "seoH1": "Şeffaflık Ayarı"
+        },
+        "round-corners-image": {
+            "name": "Yuvarlak Köşeler",
+            "description": "Görüntülere yuvarlak köşeler ekleyin.",
+            "seoTitle": "Yuvarlak Köşeler - Ücretsiz Araç",
+            "seoDescription": "Yuvarlak köşeler oluşturun. %100 ücretsiz.",
+            "seoKeywords": "yuvarlak köşeler, rounded corners",
+            "seoH1": "Yuvarlak Köşeler"
+        },
+        "image-border": {
+            "name": "Görüntü Çerçeve",
+            "description": "Görüntülere renkli çerçeve ekleyin.",
+            "seoTitle": "Çerçeve Ekle",
+            "seoDescription": "Özel çerçeveler. %100 ücretsiz.",
+            "seoKeywords": "görüntü çerçeve, image border",
+            "seoH1": "Çerçeve Ekle"
+        },
+        "image-shadow": {
+            "name": "Görüntü Gölge",
+            "description": "Görüntülere düşen gölge ekleyin.",
+            "seoTitle": "Görüntü Gölge - Ücretsiz Araç",
+            "seoDescription": "Gerçekçi gölgeler. %100 ücretsiz.",
+            "seoKeywords": "görüntü gölge, drop shadow",
+            "seoH1": "Gölge Ekle"
+        },
+        "pixelate-image": {
+            "name": "Pikselleştirme",
+            "description": "Detayları gizlemek veya sanat oluşturmak için görüntüleri pikselleştirin.",
+            "seoTitle": "Pikselleştirme - Ücretsiz Araç",
+            "seoDescription": "Piksel efekti uygulayın. %100 ücretsiz.",
+            "seoKeywords": "pikselleştirme, pixelate image",
+            "seoH1": "Görüntü Pikselleştirme"
+        },
+        "svg-to-png": {
+            "name": "SVG'den PNG'ye",
+            "description": "SVG vektör dosyalarını PNG görüntülerine dönüştürün.",
+            "seoTitle": "SVG'den PNG'ye Dönüştürücü",
+            "seoDescription": "SVG'yi PNG'ye dönüştürün. %100 ücretsiz.",
+            "seoKeywords": "svg to png, svg dönüştür",
+            "seoH1": "SVG'den PNG'ye"
+        },
+        "png-to-svg": {
+            "name": "PNG'den SVG'ye",
+            "description": "PNG raster görüntülerini SVG vektörlere dönüştürün.",
+            "seoTitle": "PNG'den SVG'ye Dönüştürücü",
+            "seoDescription": "PNG'yi vektörleştirin. %100 ücretsiz.",
+            "seoKeywords": "png to svg, vectorize image",
+            "seoH1": "PNG'den SVG'ye"
+        },
+        "webp-to-jpg": {
+            "name": "WebP'den JPG'ye",
+            "description": "WebP'yi standart JPG formatına dönüştürün.",
+            "seoTitle": "WebP'den JPG'ye Dönüştürücü",
+            "seoDescription": "WebP'yi JPG'ye dönüştürün. %100 ücretsiz.",
+            "seoKeywords": "webp to jpg",
+            "seoH1": "WebP'den JPG'ye"
+        },
+        "webp-to-png": {
+            "name": "WebP'den PNG'ye",
+            "description": "WebP'yi şeffaf PNG'ye dönüştürün.",
+            "seoTitle": "WebP'den PNG'ye Dönüştürücü",
+            "seoDescription": "Şeffaflık destekli dönüşüm.",
+            "seoKeywords": "webp to png",
+            "seoH1": "WebP'den PNG'ye"
+        },
+        "jpg-to-webp": {
+            "name": "JPG'den WebP'ye",
+            "description": "JPG'yi modern WebP formatına dönüştürün.",
+            "seoTitle": "JPG'den WebP'ye Dönüştürücü",
+            "seoDescription": "WebP ile dosya boyutunu azaltın.",
+            "seoKeywords": "jpg to webp",
+            "seoH1": "JPG'den WebP'ye"
+        },
+        "png-to-webp": {
+            "name": "PNG'den WebP'ye",
+            "description": "PNG'yi WebP formatına dönüştürün.",
+            "seoTitle": "PNG'den WebP'ye Dönüştürücü",
+            "seoDescription": "Şeffaflık destekli WebP.",
+            "seoKeywords": "png to webp",
+            "seoH1": "PNG'den WebP'ye"
+        },
+        "base64-to-image": {
+            "name": "Base64'den Görüntüye",
+            "description": "Base64 dizilerini görüntü dosyalarına dönüştürün.",
+            "seoTitle": "Base64'den Görüntüye Çözücü",
+            "seoDescription": "Base64'ü görüntüye çözün. %100 ücretsiz.",
+            "seoKeywords": "base64 to image",
+            "seoH1": "Base64'den Görüntüye"
+        },
+        "pdf-to-word": {
+            "name": "PDF'den Word'e",
+            "description": "PDF belgelerini düzenlenebilir Word dosyalarına dönüştürün.",
+            "seoTitle": "PDF'den Word'e Dönüştürücü",
+            "seoDescription": "Biçim korunarak DOCX'e dönüştürün.",
+            "seoKeywords": "pdf to word, pdf dönüştürücü",
+            "seoH1": "PDF'den Word'e"
+        },
+        "word-counter": {
+            "name": "Kelime Sayacı",
+            "description": "Kelime, karakter, cümle ve paragraf sayın.",
+            "seoTitle": "Kelime Sayacı - Ücretsiz Araç",
+            "seoDescription": "Doğru kelime ve karakter sayımı.",
+            "seoKeywords": "kelime sayacı, word counter",
+            "seoH1": "Kelime Sayacı"
+        },
+        "character-counter": {
+            "name": "Karakter Sayacı",
+            "description": "Boşluklu veya boşluksuz karakter sayın.",
+            "seoTitle": "Karakter Sayacı",
+            "seoDescription": "Twitter, SMS vb. için ideal.",
+            "seoKeywords": "karakter sayacı",
+            "seoH1": "Karakter Sayacı"
+        },
+        "text-case-converter": {
+            "name": "Büyük/Küçük Harf Dönüştürücü",
+            "description": "Metni büyük harf, küçük harf, başlık vb. yapın.",
+            "seoTitle": "Büyük/Küçük Harf Dönüştürücü",
+            "seoDescription": "Çoklu metin dönüşüm seçenekleri.",
+            "seoKeywords": "büyük küçük harf dönüştürücü, uppercase lowercase",
+            "seoH1": "Büyük/Küçük Harf Dönüştürücü"
+        },
+        "remove-line-breaks": {
+            "name": "Satır Sonlarını Kaldır",
+            "description": "Metinden tüm satır sonlarını kaldırın.",
+            "seoTitle": "Satır Sonlarını Kaldır",
+            "seoDescription": "Metni temizleyin.",
+            "seoKeywords": "satır sonu kaldırma",
+            "seoH1": "Satır Sonlarını Kaldır"
+        },
+        "italic-text": {
+            "name": "İtalik Metin Üreteci",
+            "description": "Unicode ile italik metin oluşturun.",
+            "seoTitle": "İtalik Metin Üreteci",
+            "seoDescription": "Sosyal medya için italik yazı.",
+            "seoKeywords": "italik metin, fancy text",
+            "seoH1": "İtalik Metin Üreteci"
+        },
+        "strikethrough-text": {
+            "name": "Üstü Çizili Metin",
+            "description": "Üstü çizili metin oluşturun.",
+            "seoTitle": "Üstü Çizili Metin Üreteci",
+            "seoDescription": "Metni üstü çizili yapın.",
+            "seoKeywords": "üstü çizili metin",
+            "seoH1": "Üstü Çizili Metin"
+        },
+        "underline-text": {
+            "name": "Altı Çizili Metin",
+            "description": "Unicode ile altı çizili metin oluşturun.",
+            "seoTitle": "Altı Çizili Metin Üreteci",
+            "seoDescription": "Altı çizili yazı.",
+            "seoKeywords": "altı çizili metin",
+            "seoH1": "Altı Çizili Metin"
+        },
+        "small-text": {
+            "name": "Küçük Metin Üreteci",
+            "description": "Küçük (alt/üst) yazı oluşturun.",
+            "seoTitle": "Küçük Metin Üreteci",
+            "seoDescription": "Küçük harfler.",
+            "seoKeywords": "küçük metin, tiny text",
+            "seoH1": "Küçük Metin Üreteci"
+        },
+        "upside-down-text": {
+            "name": "Ters Metin",
+            "description": "Metni ters çevirin.",
+            "seoTitle": "Ters Metin Üreteci",
+            "seoDescription": "Eğlence için ters yazı.",
+            "seoKeywords": "ters metin, upside down text",
+            "seoH1": "Ters Metin Üreteci"
+        },
+        "mirror-text": {
+            "name": "Ayna Metni",
+            "description": "Ayna gibi metin oluşturun.",
+            "seoTitle": "Ayna Metni Üreteci",
+            "seoDescription": "Ayna yazısı.",
+            "seoKeywords": "ayna metni, mirror text",
+            "seoH1": "Ayna Metni Üreteci"
+        },
+        "duplicate-line-remover": {
+            "name": "Tekrarlanan Satırları Kaldır",
+            "description": "Metin veya listeden tekrarlanan satırları kaldırın.",
+            "seoTitle": "Tekrarları Kaldır",
+            "seoDescription": "Listeleri temizleyin.",
+            "seoKeywords": "tekrar kaldırma",
+            "seoH1": "Tekrarlanan Satırları Kaldır"
+        },
+        "sort-alphabetically": {
+            "name": "Alfabetik Sırala",
+            "description": "Satırları alfabetik olarak sıralayın.",
+            "seoTitle": "Alfabetik Sıralama",
+            "seoDescription": "Listeleri A-Z veya Z-A sıralayın.",
+            "seoKeywords": "alfabetik sıralama",
+            "seoH1": "Alfabetik Sırala"
+        },
+        "text-replace": {
+            "name": "Bul ve Değiştir",
+            "description": "Metin arama ve değiştirme.",
+            "seoTitle": "Bul ve Değiştir - Ücretsiz Araç",
+            "seoDescription": "Güçlü metin değiştirme.",
+            "seoKeywords": "bul değiştir, find replace",
+            "seoH1": "Bul ve Değiştir"
+        },
+        "whitespace-remover": {
+            "name": "Fazla Boşlukları Kaldır",
+            "description": "Fazla boşluk, sekme ve satır sonlarını kaldırın.",
+            "seoTitle": "Fazla Boşlukları Kaldır",
+            "seoDescription": "Dağınık metni temizleyin.",
+            "seoKeywords": "boşluk kaldırma",
+            "seoH1": "Fazla Boşlukları Kaldır"
+        },
+        "word-frequency": {
+            "name": "Kelime Sıklığı",
+            "description": "Metindeki en sık kullanılan kelimeleri analiz edin.",
+            "seoTitle": "Kelime Sıklığı Analizi",
+            "seoDescription": "Kelime kullanımını gösterin.",
+            "seoKeywords": "kelime sıklığı, keyword density",
+            "seoH1": "Kelime Sıklığı"
+        },
+        "find-replace": {
+            "name": "Gelişmiş Bul ve Değiştir",
+            "description": "Regex destekli gelişmiş arama ve değiştirme.",
+            "seoTitle": "Gelişmiş Bul ve Değiştir",
+            "seoDescription": "Regex ile güçlü arama.",
+            "seoKeywords": "regex bul değiştir",
+            "seoH1": "Gelişmiş Bul ve Değiştir"
+        },
+        "json-formatter": {
+            "name": "JSON Biçimlendirici",
+            "description": "JSON verilerini biçimlendirin, güzelleştirin ve doğrulayın.",
+            "seoTitle": "JSON Biçimlendirici ve Doğrulayıcı",
+            "seoDescription": "JSON'u güzel gösterin.",
+            "seoKeywords": "json biçimlendirici, json beautifier",
+            "seoH1": "JSON Biçimlendirici"
+        },
+        "url-encoder-decoder": {
+            "name": "URL Kodlayıcı/Çözücü",
+            "description": "URL'leri kodlayın veya çözün.",
+            "seoTitle": "URL Kodlayıcı/Çözücü",
+            "seoDescription": "URL için yüzde kodlaması.",
+            "seoKeywords": "url encode decode",
+            "seoH1": "URL Kodlayıcı/Çözücü"
+        },
+        "html-formatter": {
+            "name": "HTML Biçimlendirici",
+            "description": "HTML kodunu biçimlendirin ve güzelleştirin.",
+            "seoTitle": "HTML Biçimlendirici",
+            "seoDescription": "HTML'i güzel gösterin.",
+            "seoKeywords": "html biçimlendirici",
+            "seoH1": "HTML Biçimlendirici"
+        },
+        "css-formatter": {
+            "name": "CSS Biçimlendirici",
+            "description": "CSS kodunu biçimlendirin ve güzelleştirin.",
+            "seoTitle": "CSS Biçimlendirici",
+            "seoDescription": "CSS'i düzenleyin.",
+            "seoKeywords": "css biçimlendirici",
+            "seoH1": "CSS Biçimlendirici"
+        },
+        "javascript-formatter": {
+            "name": "JavaScript Biçimlendirici",
+            "description": "JavaScript kodunu biçimlendirin ve güzelleştirin.",
+            "seoTitle": "JavaScript Biçimlendirici",
+            "seoDescription": "JS kodunu güzel gösterin.",
+            "seoKeywords": "js biçimlendirici",
+            "seoH1": "JavaScript Biçimlendirici"
+        },
+        "xml-formatter": {
+            "name": "XML Biçimlendirici",
+            "description": "XML kodunu biçimlendirin ve güzelleştirin.",
+            "seoTitle": "XML Biçimlendirici",
+            "seoDescription": "XML'i düzenleyin.",
+            "seoKeywords": "xml biçimlendirici",
+            "seoH1": "XML Biçimlendirici"
+        },
+        "sql-formatter": {
+            "name": "SQL Biçimlendirici",
+            "description": "SQL sorgularını biçimlendirin ve güzelleştirin.",
+            "seoTitle": "SQL Biçimlendirici",
+            "seoDescription": "SQL sorgularını okunabilir yapın.",
+            "seoKeywords": "sql biçimlendirici",
+            "seoH1": "SQL Biçimlendirici"
+        },
+        "markdown-to-html": {
+            "name": "Markdown'dan HTML'ye",
+            "description": "Markdown'ı HTML koduna dönüştürün.",
+            "seoTitle": "Markdown'dan HTML'ye Dönüştürücü",
+            "seoDescription": "MD'yi HTML'ye dönüştürün.",
+            "seoKeywords": "markdown to html",
+            "seoH1": "Markdown'dan HTML'ye"
+        },
+        "html-to-markdown": {
+            "name": "HTML'den Markdown'a",
+            "description": "HTML'yi Markdown formatına dönüştürün.",
+            "seoTitle": "HTML'den Markdown'a Dönüştürücü",
+            "seoDescription": "HTML'yi temiz Markdown'a dönüştürün.",
+            "seoKeywords": "html to markdown",
+            "seoH1": "HTML'den Markdown'a"
+        },
+        "csv-to-json": {
+            "name": "CSV'den JSON'a",
+            "description": "CSV verilerini JSON formatına dönüştürün.",
+            "seoTitle": "CSV'den JSON'a Dönüştürücü",
+            "seoDescription": "CSV'yi JSON'a dönüştürün.",
+            "seoKeywords": "csv to json",
+            "seoH1": "CSV'den JSON'a"
+        },
+        "json-to-csv": {
+            "name": "JSON'dan CSV'ye",
+            "description": "JSON verilerini CSV formatına dönüştürün.",
+            "seoTitle": "JSON'dan CSV'ye Dönüştürücü",
+            "seoDescription": "JSON'ı CSV'ye dönüştürün.",
+            "seoKeywords": "json to csv",
+            "seoH1": "JSON'dan CSV'ye"
+        },
+        "code-minifier": {
+            "name": "Kod Küçültücü",
+            "description": "HTML, CSS ve JS kodunu küçültün.",
+            "seoTitle": "Kod Küçültücü",
+            "seoDescription": "Dosya boyutunu azaltın.",
+            "seoKeywords": "kod küçültücü, minify code",
+            "seoH1": "Kod Küçültücü"
+        },
+        "diff-checker": {
+            "name": "Metin Fark Karşılaştırıcı",
+            "description": "İki metni karşılaştırın ve farkları vurgulayın.",
+            "seoTitle": "Metin Fark Karşılaştırıcı",
+            "seoDescription": "Metinler arası farkları bulun.",
+            "seoKeywords": "fark karşılaştırıcı, diff checker",
+            "seoH1": "Metin Fark Karşılaştırıcı"
+        },
+        "unit-converter": {
+            "name": "Birim Dönüştürücü",
+            "description": "Farklı ölçüm birimleri arasında dönüştürün.",
+            "seoTitle": "Birim Dönüştürücü",
+            "seoDescription": "Uzunluk, ağırlık, sıcaklık vb.",
+            "seoKeywords": "birim dönüştürücü",
+            "seoH1": "Birim Dönüştürücü"
+        },
+        "color-converter": {
+            "name": "Renk Dönüştürücü",
+            "description": "HEX, RGB, HSL arasında dönüştürün.",
+            "seoTitle": "Renk Dönüştürücü",
+            "seoDescription": "Renk kodlarını dönüştürün.",
+            "seoKeywords": "renk dönüştürücü, hex rgb",
+            "seoH1": "Renk Dönüştürücü"
+        },
+        "binary-to-text": {
+            "name": "İkilikten Metne",
+            "description": "İkilik kodu metne dönüştürün.",
+            "seoTitle": "İkilikten Metne Dönüştürücü",
+            "seoDescription": "İkiliği ASCII'ye çözün.",
+            "seoKeywords": "binary to text",
+            "seoH1": "İkilikten Metne"
+        },
+        "hex-to-decimal": {
+            "name": "Onaltılıktan Ondalığa",
+            "description": "Onaltılık sayıları ondalığa dönüştürün.",
+            "seoTitle": "Onaltılıktan Ondalığa Dönüştürücü",
+            "seoDescription": "Hex sayılarını dönüştürün.",
+            "seoKeywords": "hex to decimal",
+            "seoH1": "Onaltılıktan Ondalığa"
+        },
+        "roman-numeral": {
+            "name": "Roma Rakamı Dönüştürücü",
+            "description": "Arap ve Roma rakamları arasında dönüştürün.",
+            "seoTitle": "Roma Rakamı Dönüştürücü",
+            "seoDescription": "Rakamları Roma rakamlarına dönüştürün.",
+            "seoKeywords": "roma rakamı dönüştürücü",
+            "seoH1": "Roma Rakamı Dönüştürücü"
+        },
+        "random-number": {
+            "name": "Rastgele Sayı Üreteci",
+            "description": "Aralık içinde rastgele sayı üretin.",
+            "seoTitle": "Rastgele Sayı Üreteci",
+            "seoDescription": "Gerçek rastgele sayılar.",
+            "seoKeywords": "rastgele sayı üreteci",
+            "seoH1": "Rastgele Sayı Üreteci"
+        },
+        "random-string": {
+            "name": "Rastgele Dizi Üreteci",
+            "description": "Rastgele diziler ve güçlü şifreler üretin.",
+            "seoTitle": "Rastgele Dizi & Şifre Üreteci",
+            "seoDescription": "Güçlü şifreler oluşturun.",
+            "seoKeywords": "rastgele dizi üreteci, şifre üreteci",
+            "seoH1": "Rastgele Dizi Üreteci"
+        },
+        "random-color": {
+            "name": "Rastgele Renk Üreteci",
+            "description": "HEX kodlu rastgele renkler üretin.",
+            "seoTitle": "Rastgele Renk Üreteci",
+            "seoDescription": "Rastgele renk alın.",
+            "seoKeywords": "rastgele renk üreteci",
+            "seoH1": "Rastgele Renk Üreteci"
+        },
+        "random-date": {
+            "name": "Rastgele Tarih Üreteci",
+            "description": "Rastgele tarihler üretin.",
+            "seoTitle": "Rastgele Tarih Üreteci",
+            "seoDescription": "Test için rastgele tarihler.",
+            "seoKeywords": "rastgele tarih üreteci",
+            "seoH1": "Rastgele Tarih Üreteci"
+        },
+        "random-ip": {
+            "name": "Rastgele IP Üreteci",
+            "description": "Rastgele IP adresleri üretin.",
+            "seoTitle": "Rastgele IP Üreteci",
+            "seoDescription": "Geçerli rastgele IP.",
+            "seoKeywords": "rastgele ip üreteci",
+            "seoH1": "Rastgele IP Üreteci"
+        },
+        "password-generator": {
+            "name": "Şifre Üreteci",
+            "description": "Güçlü ve güvenli şifreler üretin.",
+            "seoTitle": "Güçlü Şifre Üreteci",
+            "seoDescription": "Seçenekli güvenli şifreler.",
+            "seoKeywords": "şifre üreteci, password generator",
+            "seoH1": "Şifre Üreteci"
+        },
+        "bcrypt-generator": {
+            "name": "Bcrypt Üreteci",
+            "description": "Şifreler için Bcrypt hash üretin.",
+            "seoTitle": "Bcrypt Hash Üreteci",
+            "seoDescription": "Güvenli Bcrypt hash.",
+            "seoKeywords": "bcrypt üreteci",
+            "seoH1": "Bcrypt Üreteci"
+        },
+        "base64-encoder": {
+            "name": "Base64 Kodlayıcı/Çözücü",
+            "description": "Base64 dizilerini kodlayın ve çözün.",
+            "seoTitle": "Base64 Kodlayıcı/Çözücü",
+            "seoDescription": "Base64 işleme.",
+            "seoKeywords": "base64 encode decode",
+            "seoH1": "Base64 Kodlayıcı/Çözücü"
+        },
+        "md5-hash": {
+            "name": "MD5 Hash Üreteci",
+            "description": "MD5 sağlama toplamı üretin.",
+            "seoTitle": "MD5 Üreteci",
+            "seoDescription": "MD5 hash oluşturun.",
+            "seoKeywords": "md5 üreteci",
+            "seoH1": "MD5 Üreteci"
+        },
+        "sha256-hash": {
+            "name": "SHA-256 Hash Üreteci",
+            "description": "SHA-256 hash üretin.",
+            "seoTitle": "SHA-256 Üreteci",
+            "seoDescription": "Güvenli şifreleme hash.",
+            "seoKeywords": "sha256 üreteci",
+            "seoH1": "SHA-256 Üreteci"
+        },
+        "sha512-hash": {
+            "name": "SHA-512 Hash Üreteci",
+            "description": "SHA-512 hash üretin.",
+            "seoTitle": "SHA-512 Üreteci",
+            "seoDescription": "En güvenli SHA hash.",
+            "seoKeywords": "sha512 üreteci",
+            "seoH1": "SHA-512 Üreteci"
+        },
+        "uuid-generator": {
+            "name": "UUID Üreteci",
+            "description": "UUID v4 tanımlayıcıları üretin.",
+            "seoTitle": "UUID Üreteci",
+            "seoDescription": "Benzersiz kimlikler oluşturun.",
+            "seoKeywords": "uuid üreteci",
+            "seoH1": "UUID Üreteci"
+        },
+        "qr-code-generator": {
+            "name": "QR Kod Üreteci",
+            "description": "Bağlantı, metin vb. için QR kod üretin.",
+            "seoTitle": "QR Kod Üreteci",
+            "seoDescription": "Özel QR kodlar.",
+            "seoKeywords": "qr code üreteci",
+            "seoH1": "QR Kod Üreteci"
+        },
+        "lorem-ipsum": {
+            "name": "Lorem Ipsum Üreteci",
+            "description": "Düzen için dolgu metin üretin.",
+            "seoTitle": "Lorem Ipsum Üreteci",
+            "seoDescription": "Çok dilli sahte metin.",
+            "seoKeywords": "lorem ipsum",
+            "seoH1": "Lorem Ipsum Üreteci"
+        },
+        "youtube-thumbnail-downloader": {
+            "name": "YouTube Küçük Resim İndirici",
+            "description": "YouTube videolarından yüksek kaliteli küçük resimler indirin.",
+            "seoTitle": "YouTube Küçük Resim İndirici",
+            "seoDescription": "HD YouTube küçük resimleri alın.",
+            "seoKeywords": "youtube küçük resim indirici",
+            "seoH1": "YouTube Küçük Resim İndirici"
+        },
+        "youtube-tag-generator": {
+            "name": "YouTube Etiket Üreteci",
+            "description": "Sıralama iyileştirmek için optimize edilmiş etiketler üretin.",
+            "seoTitle": "YouTube Etiket Üreteci",
+            "seoDescription": "İlgili etiketlerle daha iyi SEO.",
+            "seoKeywords": "youtube etiket üreteci",
+            "seoH1": "YouTube Etiket Üreteci"
+        },
+        "youtube-title-generator": {
+            "name": "YouTube Başlık Üreteci",
+            "description": "Çekici ve SEO dostu başlıklar üretin.",
+            "seoTitle": "YouTube Başlık Üreteci",
+            "seoDescription": "İyi başlıkla daha fazla tıklama.",
+            "seoKeywords": "youtube başlık üreteci",
+            "seoH1": "YouTube Başlık Üreteci"
+        },
+        "youtube-embed-code-generator": {
+            "name": "YouTube Gömme Kodu Üreteci",
+            "description": "Özel gömme kodları üretin.",
+            "seoTitle": "YouTube Gömme Üreteci",
+            "seoDescription": "Otomatik oynatma, döngü vb. ile.",
+            "seoKeywords": "youtube embed code",
+            "seoH1": "YouTube Gömme Üreteci"
+        },
+        "youtube-timestamp-link-generator": {
+            "name": "YouTube Zaman Damgası Bağlantısı",
+            "description": "Belirli bir zamandan başlayan bağlantılar oluşturun.",
+            "seoTitle": "YouTube Zaman Damgası Bağlantı Üreteci",
+            "seoDescription": "Videoyu tam yerden başlatın.",
+            "seoKeywords": "youtube zaman damgası bağlantı",
+            "seoH1": "YouTube Zaman Damgası Bağlantısı"
+        },
+        "meta-tag-generator": {
+            "name": "Meta Etiket Üreteci",
+            "description": "SEO dostu meta etiketler üretin.",
+            "seoTitle": "Meta Etiket Üreteci",
+            "seoDescription": "Başlık ve açıklama etiketleri.",
+            "seoKeywords": "meta tag üreteci",
+            "seoH1": "Meta Etiket Üreteci"
+        },
+        "open-graph-generator": {
+            "name": "Open Graph Üreteci",
+            "description": "Sosyal paylaşım için Open Graph etiketleri üretin.",
+            "seoTitle": "Open Graph Üreteci",
+            "seoDescription": "Sosyal medyada daha iyi görünüm.",
+            "seoKeywords": "open graph üreteci",
+            "seoH1": "Open Graph Üreteci"
+        },
+        "twitter-card-generator": {
+            "name": "Twitter Kart Üreteci",
+            "description": "Twitter Kart meta etiketleri üretin.",
+            "seoTitle": "Twitter Kart Üreteci",
+            "seoDescription": "Twitter'da daha iyi görünüm.",
+            "seoKeywords": "twitter card üreteci",
+            "seoH1": "Twitter Kart Üreteci"
+        },
+        "robots-txt-generator": {
+            "name": "robots.txt Üreteci",
+            "description": "robots.txt dosyası oluşturun.",
+            "seoTitle": "robots.txt Üreteci",
+            "seoDescription": "Tarayıcı erişimini kontrol edin.",
+            "seoKeywords": "robots.txt üreteci",
+            "seoH1": "robots.txt Üreteci"
+        },
+        "xml-sitemap-generator": {
+            "name": "XML Site Haritası Üreteci",
+            "description": "SEO için XML site haritası üretin.",
+            "seoTitle": "XML Site Haritası Üreteci",
+            "seoDescription": "Sayfaların indekslenmesini kolaylaştırın.",
+            "seoKeywords": "xml sitemap üreteci",
+            "seoH1": "XML Site Haritası Üreteci"
+        },
+        "keyword-density-checker": {
+            "name": "Anahtar Kelime Yoğunluğu Kontrolü",
+            "description": "Anahtar kelime kullanımını ve yoğunluğunu analiz edin.",
+            "seoTitle": "Anahtar Kelime Yoğunluğu Kontrolü",
+            "seoDescription": "Anahtar kelime sıklığını kontrol edin.",
+            "seoKeywords": "anahtar kelime yoğunluğu",
+            "seoH1": "Anahtar Kelime Yoğunluğu Kontrolü"
+        },
+        "keyword-cleaner": {
+            "name": "Anahtar Kelime Temizleyici",
+            "description": "Anahtar kelime listelerini temizleyin.",
+            "seoTitle": "Anahtar Kelime Listesi Temizleyici",
+            "seoDescription": "Tekrarları ve gereksizleri kaldırın.",
+            "seoKeywords": "anahtar kelime temizleyici",
+            "seoH1": "Anahtar Kelime Temizleyici"
+        },
+        "long-tail-keyword-generator": {
+            "name": "Uzun Kuyruk Anahtar Kelime Üreteci",
+            "description": "Uzun kuyruk anahtar kelime varyasyonları üretin.",
+            "seoTitle": "Uzun Kuyruk Anahtar Kelime Üreteci",
+            "seoDescription": "Tohum kelimeleri genişletin.",
+            "seoKeywords": "uzun kuyruk anahtar kelime",
+            "seoH1": "Uzun Kuyruk Anahtar Kelime"
+        },
+        "slug-generator": {
+            "name": "URL Slug Üreteci",
+            "description": "Metni SEO dostu URL slug'ına dönüştürün.",
+            "seoTitle": "Slug Üreteci",
+            "seoDescription": "Temiz ve okunabilir URL'ler oluşturun.",
+            "seoKeywords": "slug üreteci, url slug",
+            "seoH1": "URL Slug Üreteci"
+        },
+        "google-serp-simulator": {
+            "name": "Google SERP Önizleme",
+            "description": "Sayfanızın Google arama sonuçlarında nasıl görüneceğini önizleyin.",
+            "seoTitle": "Google SERP Simülatörü",
+            "seoDescription": "Arama sonucu önizlemesini test edin.",
+            "seoKeywords": "google serp önizleme",
+            "seoH1": "Google SERP Önizleme"
+        },
+        "htaccess-redirect-generator": {
+            "name": ".htaccess Yönlendirme Üreteci",
+            "description": "301/302 yönlendirme kodu üretin.",
+            "seoTitle": ".htaccess Yönlendirme Üreteci",
+            "seoDescription": "Yönlendirme kuralları oluşturun.",
+            "seoKeywords": "htaccess yönlendirme üreteci",
+            "seoH1": ".htaccess Yönlendirme Üreteci"
+        },
+        "my-ip-address": {
+            "name": "IP Adresim",
+            "description": "Genel IP adresinizi ve konum bilgilerinizi kontrol edin.",
+            "seoTitle": "IP Adresim Nedir?",
+            "seoDescription": "Genel IP'nizi keşfedin.",
+            "seoKeywords": "ip adresim, what is my ip",
+            "seoH1": "IP Adresim"
+        },
+        "browser-info": {
+            "name": "Tarayıcı Bilgileri",
+            "description": "Tarayıcı ve cihaz detaylarını alın.",
+            "seoTitle": "Tarayıcı Bilgileri",
+            "seoDescription": "Tarayıcı, işletim sistemi, ekran boyutu vb.",
+            "seoKeywords": "tarayıcı bilgisi, user agent",
+            "seoH1": "Tarayıcı Bilgileri"
+        },
+        "screen-resolution-simulator": {
+            "name": "Ekran Çözünürlük Testi",
+            "description": "Sitenizi farklı çözünürlüklerde test edin.",
+            "seoTitle": "Ekran Çözünürlük Simülatörü",
+            "seoDescription": "Farklı cihazlarda önizleme.",
+            "seoKeywords": "ekran çözünürlük testi",
+            "seoH1": "Ekran Çözünürlük Testi"
+        },
+        "responsive-checker": {
+            "name": "Responsive Tasarım Kontrolü",
+            "description": "Sitenizin mobil uyumlu olup olmadığını kontrol edin.",
+            "seoTitle": "Responsive Site Testi",
+            "seoDescription": "Responsive test edin.",
+            "seoKeywords": "responsive kontrol",
+            "seoH1": "Responsive Kontrol"
+        },
+        "whatsapp-link-generator": {
+            "name": "WhatsApp Bağlantı Üreteci",
+            "description": "WhatsApp tıklayarak sohbet bağlantıları oluşturun.",
+            "seoTitle": "WhatsApp Bağlantı Üreteci",
+            "seoDescription": "wa.me bağlantıları üretin.",
+            "seoKeywords": "whatsapp bağlantı üreteci",
+            "seoH1": "WhatsApp Bağlantı Üreteci"
+        },
+        "telegram-link-generator": {
+            "name": "Telegram Bağlantı Üreteci",
+            "description": "Telegram kullanıcı veya kanallarına doğrudan bağlantı oluşturun.",
+            "seoTitle": "Telegram Bağlantı Üreteci",
+            "seoDescription": "t.me bağlantıları üretin.",
+            "seoKeywords": "telegram bağlantı üreteci",
+            "seoH1": "Telegram Bağlantı Üreteci"
+        },
+        "paypal-link-generator": {
+            "name": "PayPal Bağlantı Üreteci",
+            "description": "PayPal ödeme ve bağış bağlantıları oluşturun.",
+            "seoTitle": "PayPal Bağlantı Üreteci",
+            "seoDescription": "PayPal.me ve ödeme bağlantıları.",
+            "seoKeywords": "paypal bağlantı üreteci",
+            "seoH1": "PayPal Bağlantı Üreteci"
+        },
+        "email-validator": {
+            "name": "E-posta Doğrulayıcı",
+            "description": "E-posta adreslerinin formatını doğrulayın.",
+            "seoTitle": "E-posta Adresi Doğrulayıcı",
+            "seoDescription": "E-posta sözdizimini kontrol edin.",
+            "seoKeywords": "e-posta doğrulayıcı",
+            "seoH1": "E-posta Doğrulayıcı"
+        },
+        "url-opener": {
+            "name": "Toplu URL Açıcı",
+            "description": "Birden fazla URL'yi aynı anda açın.",
+            "seoTitle": "Çoklu URL Açıcı",
+            "seoDescription": "Birçok bağlantıyı aynı anda açın.",
+            "seoKeywords": "toplu url açıcı",
+            "seoH1": "Toplu URL Açıcı"
+        },
+        "user-agent-parser": {
+            "name": "User Agent Çözümleyici",
+            "description": "User-Agent dizilerini analiz edin.",
+            "seoTitle": "User Agent Çözümleyici",
+            "seoDescription": "Tarayıcı ve cihaz bilgilerini çıkarın.",
+            "seoKeywords": "user agent çözümleyici",
+            "seoH1": "User Agent Çözümleyici"
+        },
+        "wordpress-password-hash": {
+            "name": "WordPress Şifre Hash",
+            "description": "WordPress uyumlu hash üretin.",
+            "seoTitle": "WordPress Hash Üreteci",
+            "seoDescription": "phpass hash oluşturun.",
+            "seoKeywords": "wordpress password hash",
+            "seoH1": "WordPress Şifre Hash"
+        },
+        "age-calculator": {
+            "name": "Yaş Hesaplayıcı",
+            "description": "Doğru yaşı yıl, ay ve gün olarak hesaplayın.",
+            "seoTitle": "Yaş Hesaplayıcı",
+            "seoDescription": "Doğum tarihinden doğru yaş.",
+            "seoKeywords": "yaş hesaplayıcı",
+            "seoH1": "Yaş Hesaplayıcı"
+        },
+        "bmi-calculator": {
+            "name": "BMI Hesaplayıcı",
+            "description": "Vücut Kitle İndeksi ve sağlık durumunu hesaplayın.",
+            "seoTitle": "BMI Hesaplayıcı",
+            "seoDescription": "BMI'nizi kontrol edin.",
+            "seoKeywords": "bmi hesaplayıcı",
+            "seoH1": "BMI Hesaplayıcı"
+        },
+        "percentage-calculator": {
+            "name": "Yüzde Hesaplayıcı",
+            "description": "Yüzde, artış ve azalmaları hesaplayın.",
+            "seoTitle": "Yüzde Hesaplayıcı",
+            "seoDescription": "Çoklu yüzde araçları.",
+            "seoKeywords": "yüzde hesaplayıcı",
+            "seoH1": "Yüzde Hesaplayıcı"
+        },
+        "gst-calculator": {
+            "name": "Vergi Hesaplayıcı",
+            "description": "Vergi tutarını ve toplam fiyatı hesaplayın.",
+            "seoTitle": "Vergi Hesaplayıcı",
+            "seoDescription": "Vergiyi kolayca hesaplayın.",
+            "seoKeywords": "vergi hesaplayıcı",
+            "seoH1": "Vergi Hesaplayıcı"
+        },
+        "emi-calculator": {
+            "name": "Kredi Taksit Hesaplayıcı",
+            "description": "Aylık taksit ve toplam faizi hesaplayın.",
+            "seoTitle": "EMI Hesaplayıcı",
+            "seoDescription": "Kredi taksitlerini hesaplayın.",
+            "seoKeywords": "emi hesaplayıcı, kredi hesaplayıcı",
+            "seoH1": "EMI Hesaplayıcı"
+        },
+        "discount-calculator": {
+            "name": "İndirim Hesaplayıcı",
+            "description": "İndirim tutarını ve nihai fiyatı hesaplayın.",
+            "seoTitle": "İndirim Hesaplayıcı",
+            "seoDescription": "Tekliflerdeki tasarrufu görün.",
+            "seoKeywords": "indirim hesaplayıcı",
+            "seoH1": "İndirim Hesaplayıcı"
+        },
+        "instagram-hashtag-generator": {
+            "name": "Instagram Hashtag Üreteci",
+            "description": "Instagram için popüler ve ilgili hashtag'ler üretin.",
+            "seoTitle": "Instagram Hashtag Üreteci",
+            "seoDescription": "Gönderi erişimini artırın.",
+            "seoKeywords": "instagram hashtag",
+            "seoH1": "Instagram Hashtag Üreteci"
+        },
+        "html-to-jsx": {
+            "name": "HTML'den JSX'e",
+            "description": "HTML kodunu React JSX sözdizimine dönüştürün.",
+            "seoTitle": "HTML'den JSX'e Dönüştürücü",
+            "seoDescription": "React geliştirme için.",
+            "seoKeywords": "html to jsx",
+            "seoH1": "HTML'den JSX'e"
+        }
+    },
+    "Common": {
+        "backToTools": "Araçlara dön",
+        "howToUse": "{name} nasıl kullanılır",
+        "toolIntro": "Bu araç ile {description} işlemini hızlı ve güvenli yapabilirsiniz. Tüm işlem tarayıcınızda gerçekleşir.",
+        "keyFeatures": "Ana özellikler",
+        "featureFast": "Yıldırım hızında",
+        "featureSimple": "Basit arayüz",
+        "featureNoInstall": "Kurulum gerektirmez",
+        "featureFree": "%100 ücretsiz",
+        "featurePrivacy": "Gizlilik garantili",
+        "relatedTools": "İlgili araçlar",
+        "viewAll": "Tüm araçları gör",
+        "whyUse": "Bu aracı neden kullanmalısınız?",
+        "featureBrowser": "Tamamen tarayıcı tabanlı",
+        "featureNoStorage": "Sunucuda veri saklanmaz",
+        "featureMobile": "%100 mobil uyumlu",
+        "selectImage": "Görüntü seç",
+        "selectMultiple": "Birden fazla görüntü seç",
+        "dragDrop": "Dosyaları buraya sürükle bırak",
+        "supports": "JPG, PNG, WebP & SVG destekler",
+        "privacyGuaranteed": "Gizlilik garantili",
+        "lightningFast": "Yıldırım hızında",
+        "imagesSelected": "{count} görüntü seçildi",
+        "clearAll": "Tümünü temizle",
+        "addMore": "Daha fazla ekle",
+        "processing": "İşleniyor...",
+        "processBatch": "Toplu işlem",
+        "applyChanges": "Değişiklikleri uygula",
+        "safePrivate": "Güvenli & Özel",
+        "localProcessing": "Tarayıcıda yerel işlem",
+        "quality": "Kalite",
+        "targetFormat": "Hedef format",
+        "copyString": "Sonucu kopyala",
+        "fastSecure": "Hızlı & Güvenli",
+        "browserProcessing": "Tarayıcıda işlem",
+        "noStorage": "Veri saklanmaz",
+        "mobileFriendly": "%100 Mobil uyumlu",
+        "settings": "Ayarlar",
+        "tipQuality": "İpucu: %80 kalite en iyi dengedir",
+        "downloadsAsZip": "ZIP olarak indir",
+        "base64Output": "Base64 çıktısı",
+        "tryNow": "Şimdi dene",
+        "copy": "Kopyala",
+        "clear": "Temizle",
+        "download": "İndir",
+        "options": "Seçenekler",
+        "output": "Çıktı",
+        "input": "Girdi",
+        "reset": "Sıfırla",
+        "shareThisTool": "Bu aracı paylaş",
+        "copyLink": "Bağlantıyı kopyala"
+    },
+    "NavbarCategories": {
+        "Image Tools": "Görüntü Araçları",
+        "Text Tools": "Metin Araçları",
+        "Code & Developer Tools": "Kod & Geliştirici Araçları",
+        "Converter Tools": "Dönüştürücüler",
+        "Utility Tools": "Yardımcı Araçlar",
+        "Security & Crypto": "Güvenlik & Kripto",
+        "YouTube Tools": "YouTube Araçları",
+        "Social & Links": "Sosyal & Bağlantılar",
+        "Calculators": "Hesap Makineleri",
+        "Convert": "Dönüştür"
+    },
+    "TextTools": {
+        "editor": "Editör",
+        "placeholder": "Metninizi buraya yapıştırın veya yazın...",
+        "download": "İndir",
+        "copy": "Kopyala",
+        "clear": "Temizle",
+        "topKeywords": "En sık kullanılan kelimeler",
+        "quickTransformers": "Hızlı araçlar",
+        "allCaps": "HEPSİ BÜYÜK",
+        "uppercase": "Büyük harf",
+        "mirrorMode": "Ayna metni",
+        "reverseText": "Metni ters çevir",
+        "allSmall": "hepsi küçük",
+        "lowercase": "küçük harf",
+        "headlineStyle": "Başlık stili",
+        "titleCase": "Başlık",
+        "naturalFlow": "Doğal akış",
+        "sentenceCase": "Cümle",
+        "fixSpacing": "Boşlukları düzelt",
+        "removeExtraSpaces": "Fazla boşlukları kaldır",
+        "joinText": "Satırları birleştir",
+        "removeLineBreaks": "Satır sonlarını kaldır",
+        "findReplace": "Bul & Değiştir",
+        "find": "Bul",
+        "replaceWith": "Değiştir",
+        "count": "Bulundu: {count}",
+        "replaceAll": "Tümünü değiştir",
+        "words": "Kelime",
+        "characters": "Karakter",
+        "sentences": "Cümle",
+        "paragraphs": "Paragraf",
+        "lines": "Satır",
+        "readTime": "Okuma süresi",
+        "input": "Girdi",
+        "reset": "Sıfırla",
+        "pastePlaceholder": "Metni buraya yapıştırın...",
+        "options": "Seçenekler",
+        "findLabel": "Bul",
+        "replaceLabel": "Değiştir",
+        "useRegex": "Regex kullan",
+        "caseSensitive": "Büyük/küçük harf duyarlı",
+        "noConfig": "Ayar gerekmez",
+        "runTool": "İşle",
+        "output": "Çıktı",
+        "resultsPlaceholder": "Sonuçlar burada görünecek",
+        "italicConverter": "İtalik metin",
+        "strikethrough": "Üstü çizili",
+        "sortAZ": "A-Z sırala",
+        "removeDuplicates": "Tekrarları kaldır",
+        "textTool": "Metin aracı"
+    },
+    "YouTubeTools": {
+        "autoplay": "Otomatik oynatma",
+        "loop": "Döngü",
+        "hideControls": "Kontrolleri gizle",
+        "startTime": "Başlangıç zamanı",
+        "startTimePlaceholder": "ör. 1d30s",
+        "configuration": "Gömme seçenekleri",
+        "enterTopic": "Konu girin",
+        "videoUrl": "YouTube URL",
+        "topicPlaceholder": "ör. Web geliştirme",
+        "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+        "fetchThumbnails": "Küçük resimleri getir",
+        "generateNow": "Üret",
+        "growthTip": "Pro ipucu",
+        "tipText": "İyi küçük resimler ve etiketler tıklamaları %40 artırabilir.",
+        "generatedOutput": "Sonuçlar",
+        "qualityLabel": "{quality} kalite",
+        "downloadImage": "İndir",
+        "seoTags": "Önerilen etiketler",
+        "copyAll": "Tümünü kopyala",
+        "generatedCode": "Gömme kodu",
+        "generatedLink": "Üretilen bağlantı",
+        "copy": "Kopyala",
+        "openLink": "Bağlantıyı aç",
+        "inputRequired": "Lütfen YouTube URL girin",
+        "resultsPlaceholder": "Sonuçlar burada görünecek",
+        "duration": "Süre",
+        "embedCode": "Gömme kodu"
+    },
+    "Footer": {
+        "topCategories": "Popüler Kategoriler",
+        "resources": "Kaynaklar",
+        "aboutUs": "Hakkımızda",
+        "contact": "İletişim",
+        "privacyPolicy": "Gizlilik Politikası",
+        "termsOfService": "Kullanım Şartları",
+        "ourMission": "Misyonumuz",
+        "missionStatement": "Herkes için ücretsiz, hızlı ve gizli online araçlar — reklam veya takip olmadan.",
+        "securePrivate": "Güvenli & Özel",
+        "allRightsReserved": "Tüm hakları saklıdır."
+    },
+    "Share": {
+        "shareThisTool": "Bu aracı paylaş",
+        "linkCopied": "Bağlantı kopyalandı!",
+        "copyLink": "Bağlantıyı kopyala",
+        "shareOn": "{network}'da paylaş"
+    },
+    "ToolActions": {
+        "operationSuccessful": "Başarılı!",
+        "readyForDownload": "İndirmeye hazır",
+        "startNew": "Yeni işlem",
+        "downloadNow": "Şimdi indir",
+        "uploadFile": "{type} yükle",
+        "dragDrop": "Sürükle bırak",
+        "chooseFile": "Dosya seç",
+        "processing": "İşleniyor...",
+        "convertTo": "{format}'a dönüştür",
+        "mergeFiles": "Dosyaları birleştir",
+        "splitFile": "Dosyayı böl",
+        "addMore": "Daha fazla ekle",
+        "clearAll": "Tümünü temizle",
+        "filesSelected": "{count} dosya seçildi",
+        "pasteBase64": "Base64 yapıştır",
+        "batchReady": "Toplu hazır"
+    }
+}

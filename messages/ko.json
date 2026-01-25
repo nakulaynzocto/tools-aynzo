@@ -1,0 +1,1169 @@
+{
+    "HomePage": {
+        "title": "무료 개발자 도구",
+        "description": "일상적인 작업을 위한 간단하고 빠르며 안전한 도구 모음입니다.",
+        "noAds": "광고 없음, 추적 없음, 오직 유틸리티뿐입니다.",
+        "toolsCount": "{count} Tools"
+    },
+    "App": {
+        "name": "AYNZO",
+        "nameHighlight": "TOOLS"
+    },
+    "Navigation": {
+        "more": "더보기",
+        "searchPlaceholder": "검색...",
+        "mobileMenu": "Menu",
+        "home": "홈",
+        "tools": "도구"
+    },
+    "Categories": {
+        "Image Tools": "이미지 도구",
+        "Text Tools": "텍스트 도구",
+        "Calculator Tools": "Calc",
+        "Converter Tools": "변환 도구",
+        "Time & Date Tools": "Time",
+        "Web Tools": "Web",
+        "Dev Tools": "Dev",
+        "Code & Developer Tools": "개발자 도구",
+        "Security & Crypto Tools": "Security",
+        "Social Media & SEO Tools": "SEO",
+        "Miscellaneous Tools": "Misc",
+        "Generators": "Gen",
+        "CSS Tools": "CSS",
+        "Color Tools": "Color",
+        "JSON Tools": "JSON",
+        "Random Generators": "Random",
+        "image": "이미지 도구",
+        "text": "텍스트 도구",
+        "developer": "개발자 도구",
+        "seo": "SEO 도구",
+        "youtube": "YouTube 도구",
+        "social": "소셜 도구",
+        "security": "보안 도구",
+        "crypto": "보안 도구",
+        "converter": "변환 도구",
+        "utility": "유틸리티 도구",
+        "pdf": "변환 도구",
+        "calculator": "계산기",
+        "Security & Crypto": "보안 도구",
+        "Converters": "Convert",
+        "SEO & Web Tools": "SEO 도구",
+        "Utility Tools": "유틸리티 도구",
+        "YouTube Tools": "YouTube 도구",
+        "Social & Links": "소셜 도구",
+        "Calculators": "계산기",
+        "web": "SEO 도구",
+        "Convert": "변환"
+    },
+    "Tools": {
+        "tryNow": "지금 시도하기",
+        "relatedTools": "Related Tools",
+        "viewAll": "View all tools",
+        "backToTools": "Back to Tools",
+        "image-compressor": {
+            "name": "이미지 압축",
+            "description": "Compress JPG, PNG, and WebP images without losing quality.",
+            "seoTitle": "이미지 압축기 - 무료 온라인 도구",
+            "seoDescription": "Compress JPG, PNG, and WebP images without losing quality. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "이미지 압축기, online tools, free tool",
+            "seoH1": "이미지 압축"
+        },
+        "image-resizer": {
+            "name": "이미지 크기 조정",
+            "description": "Resize your images to exact pixel dimensions or percentage.",
+            "seoTitle": "이미지 크기 조정 - 무료 온라인 도구",
+            "seoDescription": "Resize your images to exact pixel dimensions or percentage. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "이미지 크기 조정, online tools, free tool",
+            "seoH1": "이미지 크기 조정"
+        },
+        "jpg-to-png": {
+            "name": "JPG PNG 변환",
+            "description": "Convert JPG images to PNG format with transparent background support.",
+            "seoTitle": "JPG to PNG - 무료 온라인 도구",
+            "seoDescription": "Convert JPG images to PNG format with transparent background support. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "jpg to png, online tools, free tool",
+            "seoH1": "JPG PNG 변환"
+        },
+        "png-to-jpg": {
+            "name": "PNG JPG 변환",
+            "description": "Convert PNG images to JPG format instantly.",
+            "seoTitle": "PNG to JPG - 무료 온라인 도구",
+            "seoDescription": "Convert PNG images to JPG format instantly. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "png to jpg, online tools, free tool",
+            "seoH1": "PNG JPG 변환"
+        },
+        "webp-converter": {
+            "name": "WebP 변환기",
+            "description": "Convert images to and from WebP format for web optimization.",
+            "seoTitle": "WebP Converter - 무료 온라인 도구",
+            "seoDescription": "Convert images to and from WebP format for web optimization. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "webp converter, online tools, free tool",
+            "seoH1": "WebP 변환기"
+        },
+        "image-format-converter": {
+            "name": "Image Format Converter",
+            "description": "Convert between JPG, PNG, WebP and other formats.",
+            "seoTitle": "Image Format Converter - 무료 온라인 도구",
+            "seoDescription": "Convert between JPG, PNG, WebP and other formats. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image format converter, online tools, free tool",
+            "seoH1": "Image Format Converter"
+        },
+        "image-to-base64": {
+            "name": "IMAGE BASE64 변환",
+            "description": "Convert images to Base64 strings for embedding.",
+            "seoTitle": "Image to Base64 - 무료 온라인 도구",
+            "seoDescription": "Convert images to Base64 strings for embedding. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image to base64, online tools, free tool",
+            "seoH1": "IMAGE BASE64 변환"
+        },
+        "image-cropper": {
+            "name": "이미지 자르기",
+            "description": "Crop images online with custom aspect ratios.",
+            "seoTitle": "Image Cropper - 무료 온라인 도구",
+            "seoDescription": "Crop images online with custom aspect ratios. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image cropper, online tools, free tool",
+            "seoH1": "이미지 자르기"
+        },
+        "flip-image": {
+            "name": "Flip Image",
+            "description": "Flip images horizontally or vertically online.",
+            "seoTitle": "Flip Image - 무료 온라인 도구",
+            "seoDescription": "Flip images horizontally or vertically online. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "flip image, online tools, free tool",
+            "seoH1": "Flip Image"
+        },
+        "rotate-image": {
+            "name": "Rotate Image",
+            "description": "Rotate images 90, 180, or 270 degrees online.",
+            "seoTitle": "Rotate Image - 무료 온라인 도구",
+            "seoDescription": "Rotate images 90, 180, or 270 degrees online. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "rotate image, online tools, free tool",
+            "seoH1": "Rotate Image"
+        },
+        "image-enlarger": {
+            "name": "Image Enlarger",
+            "description": "Upscale small images without losing quality.",
+            "seoTitle": "Image Enlarger - 무료 온라인 도구",
+            "seoDescription": "Upscale small images without losing quality. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image enlarger, online tools, free tool",
+            "seoH1": "Image Enlarger"
+        },
+        "image-brightness": {
+            "name": "Image Brightness",
+            "description": "Adjust the brightness of your photos online.",
+            "seoTitle": "Image Brightness - 무료 온라인 도구",
+            "seoDescription": "Adjust the brightness of your photos online. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image brightness, online tools, free tool",
+            "seoH1": "Image Brightness"
+        },
+        "image-contrast": {
+            "name": "Image Contrast",
+            "description": "Adjust the contrast of your photos online.",
+            "seoTitle": "Image Contrast - 무료 온라인 도구",
+            "seoDescription": "Adjust the contrast of your photos online. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image contrast, online tools, free tool",
+            "seoH1": "Image Contrast"
+        },
+        "grayscale-image": {
+            "name": "Grayscale Image",
+            "description": "Convert color photos to black and white.",
+            "seoTitle": "Grayscale Image - 무료 온라인 도구",
+            "seoDescription": "Convert color photos to black and white. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "grayscale image, online tools, free tool",
+            "seoH1": "Grayscale Image"
+        },
+        "blur-image": {
+            "name": "Blur Image",
+            "description": "Add blur effect to your images online.",
+            "seoTitle": "Blur Image - 무료 온라인 도구",
+            "seoDescription": "Add blur effect to your images online. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "blur image, online tools, free tool",
+            "seoH1": "Blur Image"
+        },
+        "sepia-converter": {
+            "name": "Sepia Converter",
+            "description": "Apply a vintage sepia filter to your photos.",
+            "seoTitle": "Sepia Converter - 무료 온라인 도구",
+            "seoDescription": "Apply a vintage sepia filter to your photos. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "sepia converter, online tools, free tool",
+            "seoH1": "Sepia Converter"
+        },
+        "invert-image": {
+            "name": "Invert Colors",
+            "description": "Invert the colors of your image (negative effect).",
+            "seoTitle": "Invert Colors - 무료 온라인 도구",
+            "seoDescription": "Invert the colors of your image (negative effect). 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "invert colors, online tools, free tool",
+            "seoH1": "Invert Colors"
+        },
+        "saturate-image": {
+            "name": "Saturate Image",
+            "description": "Adjust the color saturation of your photos.",
+            "seoTitle": "Saturate Image - 무료 온라인 도구",
+            "seoDescription": "Adjust the color saturation of your photos. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "saturate image, online tools, free tool",
+            "seoH1": "Saturate Image"
+        },
+        "hue-rotate-image": {
+            "name": "Hue Rotate",
+            "description": "Shift the hue of your images for creative effects.",
+            "seoTitle": "Hue Rotate - 무료 온라인 도구",
+            "seoDescription": "Shift the hue of your images for creative effects. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "hue rotate, online tools, free tool",
+            "seoH1": "Hue Rotate"
+        },
+        "image-opacity": {
+            "name": "Image Opacity",
+            "description": "Change the transparency/opacity of your images.",
+            "seoTitle": "Image Opacity - 무료 온라인 도구",
+            "seoDescription": "Change the transparency/opacity of your images. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image opacity, online tools, free tool",
+            "seoH1": "Image Opacity"
+        },
+        "round-corners-image": {
+            "name": "Round Corners",
+            "description": "Add rounded corners to your images.",
+            "seoTitle": "Round Corners - 무료 온라인 도구",
+            "seoDescription": "Add rounded corners to your images. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "round corners, online tools, free tool",
+            "seoH1": "Round Corners"
+        },
+        "image-border": {
+            "name": "Image Border",
+            "description": "Add colorful borders to your images.",
+            "seoTitle": "Image Border - 무료 온라인 도구",
+            "seoDescription": "Add colorful borders to your images. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image border, online tools, free tool",
+            "seoH1": "Image Border"
+        },
+        "image-shadow": {
+            "name": "Image Shadow",
+            "description": "Add drop shadows to your images.",
+            "seoTitle": "Image Shadow - 무료 온라인 도구",
+            "seoDescription": "Add drop shadows to your images. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "image shadow, online tools, free tool",
+            "seoH1": "Image Shadow"
+        },
+        "pixelate-image": {
+            "name": "Pixelate Image",
+            "description": "Pixelate your images to hide details or create art.",
+            "seoTitle": "Pixelate Image - 무료 온라인 도구",
+            "seoDescription": "Pixelate your images to hide details or create art. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "pixelate image, online tools, free tool",
+            "seoH1": "Pixelate Image"
+        },
+        "svg-to-png": {
+            "name": "SVG PNG 변환",
+            "description": "Convert SVG vector files to PNG images.",
+            "seoTitle": "SVG to PNG - 무료 온라인 도구",
+            "seoDescription": "Convert SVG vector files to PNG images. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "svg to png, online tools, free tool",
+            "seoH1": "SVG PNG 변환"
+        },
+        "png-to-svg": {
+            "name": "PNG SVG 변환",
+            "description": "Convert PNG raster images to SVG vectors.",
+            "seoTitle": "PNG to SVG - 무료 온라인 도구",
+            "seoDescription": "Convert PNG raster images to SVG vectors. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "png to svg, online tools, free tool",
+            "seoH1": "PNG SVG 변환"
+        },
+        "webp-to-jpg": {
+            "name": "WEBP JPG 변환",
+            "description": "Convert WebP images to standard JPG format.",
+            "seoTitle": "WebP to JPG - 무료 온라인 도구",
+            "seoDescription": "Convert WebP images to standard JPG format. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "webp to jpg, online tools, free tool",
+            "seoH1": "WEBP JPG 변환"
+        },
+        "webp-to-png": {
+            "name": "WEBP PNG 변환",
+            "description": "Convert WebP images to transparent PNG format.",
+            "seoTitle": "WebP to PNG - 무료 온라인 도구",
+            "seoDescription": "Convert WebP images to transparent PNG format. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "webp to png, online tools, free tool",
+            "seoH1": "WEBP PNG 변환"
+        },
+        "jpg-to-webp": {
+            "name": "JPG WEBP 변환",
+            "description": "Convert JPG images to modern WebP format.",
+            "seoTitle": "JPG to WebP - 무료 온라인 도구",
+            "seoDescription": "Convert JPG images to modern WebP format. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "jpg to webp, online tools, free tool",
+            "seoH1": "JPG WEBP 변환"
+        },
+        "png-to-webp": {
+            "name": "PNG WEBP 변환",
+            "description": "Convert PNG images to modern WebP format.",
+            "seoTitle": "PNG to WebP - 무료 온라인 도구",
+            "seoDescription": "Convert PNG images to modern WebP format. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "png to webp, online tools, free tool",
+            "seoH1": "PNG WEBP 변환"
+        },
+        "base64-to-image": {
+            "name": "BASE64 IMAGE 변환",
+            "description": "Convert Base64 strings back to image files.",
+            "seoTitle": "Base64 to Image - 무료 온라인 도구",
+            "seoDescription": "Convert Base64 strings back to image files. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "base64 to image, online tools, free tool",
+            "seoH1": "BASE64 IMAGE 변환"
+        },
+        "pdf-to-word": {
+            "name": "PDF Word 변환",
+            "description": "Convert PDF documents to editable Word (DOCX) files.",
+            "seoTitle": "PDF to Word - 무료 온라인 도구",
+            "seoDescription": "Convert PDF documents to editable Word (DOCX) files. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "pdf to word, online tools, free tool",
+            "seoH1": "PDF Word 변환"
+        },
+        "word-counter": {
+            "name": "단어 수 세기",
+            "description": "Count words, characters, sentences, and paragraphs.",
+            "seoTitle": "단어 카운터 - 무료 온라인 도구",
+            "seoDescription": "Count words, characters, sentences, and paragraphs. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "단어 카운터, online tools, free tool",
+            "seoH1": "단어 수 세기"
+        },
+        "character-counter": {
+            "name": "Character Counter",
+            "description": "Count characters with or without spaces.",
+            "seoTitle": "Character Counter - 무료 온라인 도구",
+            "seoDescription": "Count characters with or without spaces. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "character counter, online tools, free tool",
+            "seoH1": "Character Counter"
+        },
+        "text-case-converter": {
+            "name": "Text Case Converter",
+            "description": "Convert text to UPPERCASE, lowercase, Title Case, etc.",
+            "seoTitle": "Text Case Converter - 무료 온라인 도구",
+            "seoDescription": "Convert text to UPPERCASE, lowercase, Title Case, etc. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "text case converter, online tools, free tool",
+            "seoH1": "Text Case Converter"
+        },
+        "remove-line-breaks": {
+            "name": "Remove Line Breaks",
+            "description": "Remove all line breaks and newlines from your text.",
+            "seoTitle": "Remove Line Breaks - 무료 온라인 도구",
+            "seoDescription": "Remove all line breaks and newlines from your text. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "remove line breaks, online tools, free tool",
+            "seoH1": "Remove Line Breaks"
+        },
+        "italic-text": {
+            "name": "Italic Text Generator",
+            "description": "Generate italic text using unicode characters.",
+            "seoTitle": "Italic Text Generator - 무료 온라인 도구",
+            "seoDescription": "Generate italic text using unicode characters. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "italic text generator, online tools, free tool",
+            "seoH1": "Italic Text Generator"
+        },
+        "strikethrough-text": {
+            "name": "Strikethrough Text",
+            "description": "Generate strikethrough text for social media.",
+            "seoTitle": "Strikethrough Text - 무료 온라인 도구",
+            "seoDescription": "Generate strikethrough text for social media. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "strikethrough text, online tools, free tool",
+            "seoH1": "Strikethrough Text"
+        },
+        "underline-text": {
+            "name": "Underline Text",
+            "description": "Generate underlined text for social media.",
+            "seoTitle": "Underline Text - 무료 온라인 도구",
+            "seoDescription": "Generate underlined text for social media. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "underline text, online tools, free tool",
+            "seoH1": "Underline Text"
+        },
+        "small-text": {
+            "name": "Small Text Generator",
+            "description": "Generate tiny text (subscript/superscript).",
+            "seoTitle": "Small Text Generator - 무료 온라인 도구",
+            "seoDescription": "Generate tiny text (subscript/superscript). 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "small text generator, online tools, free tool",
+            "seoH1": "Small Text Generator"
+        },
+        "upside-down-text": {
+            "name": "Upside Down Text",
+            "description": "Flip your text upside down instantly.",
+            "seoTitle": "Upside Down Text - 무료 온라인 도구",
+            "seoDescription": "Flip your text upside down instantly. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "upside down text, online tools, free tool",
+            "seoH1": "Upside Down Text"
+        },
+        "mirror-text": {
+            "name": "Mirror Text Generator",
+            "description": "Create mirrored text reflection.",
+            "seoTitle": "Mirror Text Generator - 무료 온라인 도구",
+            "seoDescription": "Create mirrored text reflection. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "mirror text generator, online tools, free tool",
+            "seoH1": "Mirror Text Generator"
+        },
+        "duplicate-line-remover": {
+            "name": "Duplicate Line Remover",
+            "description": "Remove duplicate lines from your text or list.",
+            "seoTitle": "Duplicate Line Remover - 무료 온라인 도구",
+            "seoDescription": "Remove duplicate lines from your text or list. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "duplicate line remover, online tools, free tool",
+            "seoH1": "Duplicate Line Remover"
+        },
+        "sort-alphabetically": {
+            "name": "Sort Alphabetically",
+            "description": "Sort lists and text lines alphabetically.",
+            "seoTitle": "Sort Alphabetically - 무료 온라인 도구",
+            "seoDescription": "Sort lists and text lines alphabetically. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "sort alphabetically, online tools, free tool",
+            "seoH1": "Sort Alphabetically"
+        },
+        "text-replace": {
+            "name": "Text Replacer",
+            "description": "Find and replace text online.",
+            "seoTitle": "Text Replacer - 무료 온라인 도구",
+            "seoDescription": "Find and replace text online. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "text replacer, online tools, free tool",
+            "seoH1": "Text Replacer"
+        },
+        "whitespace-remover": {
+            "name": "Whitespace Remover",
+            "description": "Trim extra whitespace, tabs, and line breaks.",
+            "seoTitle": "Whitespace Remover - 무료 온라인 도구",
+            "seoDescription": "Trim extra whitespace, tabs, and line breaks. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "whitespace remover, online tools, free tool",
+            "seoH1": "Whitespace Remover"
+        },
+        "word-frequency": {
+            "name": "Word Frequency",
+            "description": "Analyze word usage frequency in your text.",
+            "seoTitle": "Word Frequency - 무료 온라인 도구",
+            "seoDescription": "Analyze word usage frequency in your text. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "word frequency, online tools, free tool",
+            "seoH1": "Word Frequency"
+        },
+        "find-replace": {
+            "name": "Find & Replace",
+            "description": "Advanced find and replace tool with Regex.",
+            "seoTitle": "Find & Replace - 무료 온라인 도구",
+            "seoDescription": "Advanced find and replace tool with Regex. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "find & replace, online tools, free tool",
+            "seoH1": "Find & Replace"
+        },
+        "json-formatter": {
+            "name": "JSON 포맷터",
+            "description": "Beautify and validate your JSON data.",
+            "seoTitle": "JSON 포맷터 - 무료 온라인 도구",
+            "seoDescription": "Beautify and validate your JSON data. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "json 포맷터, online tools, free tool",
+            "seoH1": "JSON 포맷터"
+        },
+        "url-encoder-decoder": {
+            "name": "URL Encoder / Decoder",
+            "description": "Encode or decode URLs safely.",
+            "seoTitle": "URL Encoder / Decoder - 무료 온라인 도구",
+            "seoDescription": "Encode or decode URLs safely. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "url encoder / decoder, online tools, free tool",
+            "seoH1": "URL Encoder / Decoder"
+        },
+        "html-formatter": {
+            "name": "HTML Formatter",
+            "description": "Format and beautify HTML code.",
+            "seoTitle": "HTML Formatter - 무료 온라인 도구",
+            "seoDescription": "Format and beautify HTML code. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "html formatter, online tools, free tool",
+            "seoH1": "HTML Formatter"
+        },
+        "css-formatter": {
+            "name": "CSS Formatter",
+            "description": "Format and beautify CSS code.",
+            "seoTitle": "CSS Formatter - 무료 온라인 도구",
+            "seoDescription": "Format and beautify CSS code. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "css formatter, online tools, free tool",
+            "seoH1": "CSS Formatter"
+        },
+        "javascript-formatter": {
+            "name": "JS Formatter",
+            "description": "Format and beautify JavaScript code.",
+            "seoTitle": "JS Formatter - 무료 온라인 도구",
+            "seoDescription": "Format and beautify JavaScript code. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "js formatter, online tools, free tool",
+            "seoH1": "JS Formatter"
+        },
+        "xml-formatter": {
+            "name": "XML Formatter",
+            "description": "Format and beautify XML code.",
+            "seoTitle": "XML Formatter - 무료 온라인 도구",
+            "seoDescription": "Format and beautify XML code. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "xml formatter, online tools, free tool",
+            "seoH1": "XML Formatter"
+        },
+        "sql-formatter": {
+            "name": "SQL Formatter",
+            "description": "Format and beautify SQL queries.",
+            "seoTitle": "SQL Formatter - 무료 온라인 도구",
+            "seoDescription": "Format and beautify SQL queries. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "sql formatter, online tools, free tool",
+            "seoH1": "SQL Formatter"
+        },
+        "markdown-to-html": {
+            "name": "MARKDOWN HTML 변환",
+            "description": "Convert Markdown to HTML code.",
+            "seoTitle": "Markdown to HTML - 무료 온라인 도구",
+            "seoDescription": "Convert Markdown to HTML code. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "markdown to html, online tools, free tool",
+            "seoH1": "MARKDOWN HTML 변환"
+        },
+        "html-to-markdown": {
+            "name": "HTML MARKDOWN 변환",
+            "description": "Convert HTML to Markdown format.",
+            "seoTitle": "HTML to Markdown - 무료 온라인 도구",
+            "seoDescription": "Convert HTML to Markdown format. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "html to markdown, online tools, free tool",
+            "seoH1": "HTML MARKDOWN 변환"
+        },
+        "csv-to-json": {
+            "name": "CSV JSON 변환",
+            "description": "Convert CSV data to JSON format.",
+            "seoTitle": "CSV to JSON - 무료 온라인 도구",
+            "seoDescription": "Convert CSV data to JSON format. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "csv to json, online tools, free tool",
+            "seoH1": "CSV JSON 변환"
+        },
+        "json-to-csv": {
+            "name": "JSON CSV 변환",
+            "description": "Convert JSON data to CSV format.",
+            "seoTitle": "JSON to CSV - 무료 온라인 도구",
+            "seoDescription": "Convert JSON data to CSV format. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "json to csv, online tools, free tool",
+            "seoH1": "JSON CSV 변환"
+        },
+        "code-minifier": {
+            "name": "Code Minifier",
+            "description": "Minify HTML, CSS, and JS code.",
+            "seoTitle": "Code Minifier - 무료 온라인 도구",
+            "seoDescription": "Minify HTML, CSS, and JS code. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "code minifier, online tools, free tool",
+            "seoH1": "Code Minifier"
+        },
+        "diff-checker": {
+            "name": "Diff Checker",
+            "description": "Compare two texts to find differences.",
+            "seoTitle": "Diff Checker - 무료 온라인 도구",
+            "seoDescription": "Compare two texts to find differences. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "diff checker, online tools, free tool",
+            "seoH1": "Diff Checker"
+        },
+        "unit-converter": {
+            "name": "Unit Converter",
+            "description": "Convert length, weight, temperature, and more.",
+            "seoTitle": "Unit Converter - 무료 온라인 도구",
+            "seoDescription": "Convert length, weight, temperature, and more. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "unit converter, online tools, free tool",
+            "seoH1": "Unit Converter"
+        },
+        "color-converter": {
+            "name": "Color Converter",
+            "description": "Convert HEX, RGB, HSL colors.",
+            "seoTitle": "Color Converter - 무료 온라인 도구",
+            "seoDescription": "Convert HEX, RGB, HSL colors. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "color converter, online tools, free tool",
+            "seoH1": "Color Converter"
+        },
+        "binary-to-text": {
+            "name": "BINARY TEXT 변환",
+            "description": "Translate binary code to text.",
+            "seoTitle": "Binary to Text - 무료 온라인 도구",
+            "seoDescription": "Translate binary code to text. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "binary to text, online tools, free tool",
+            "seoH1": "BINARY TEXT 변환"
+        },
+        "hex-to-decimal": {
+            "name": "HEX DECIMAL 변환",
+            "description": "Convert Hexadecimal to Decimal.",
+            "seoTitle": "Hex to Decimal - 무료 온라인 도구",
+            "seoDescription": "Convert Hexadecimal to Decimal. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "hex to decimal, online tools, free tool",
+            "seoH1": "HEX DECIMAL 변환"
+        },
+        "roman-numeral": {
+            "name": "Roman Numeral",
+            "description": "Convert numbers to Roman numerals.",
+            "seoTitle": "Roman Numeral - 무료 온라인 도구",
+            "seoDescription": "Convert numbers to Roman numerals. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "roman numeral, online tools, free tool",
+            "seoH1": "Roman Numeral"
+        },
+        "random-number": {
+            "name": "Random Number",
+            "description": "Generate random numbers within a range.",
+            "seoTitle": "Random Number - 무료 온라인 도구",
+            "seoDescription": "Generate random numbers within a range. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "random number, online tools, free tool",
+            "seoH1": "Random Number"
+        },
+        "random-string": {
+            "name": "Random String",
+            "description": "Generate random strings and passwords.",
+            "seoTitle": "Random String - 무료 온라인 도구",
+            "seoDescription": "Generate random strings and passwords. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "random string, online tools, free tool",
+            "seoH1": "Random String"
+        },
+        "random-color": {
+            "name": "Random Color",
+            "description": "Generate random colors.",
+            "seoTitle": "Random Color - 무료 온라인 도구",
+            "seoDescription": "Generate random colors. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "random color, online tools, free tool",
+            "seoH1": "Random Color"
+        },
+        "random-date": {
+            "name": "Random Date",
+            "description": "Generate random dates.",
+            "seoTitle": "Random Date - 무료 온라인 도구",
+            "seoDescription": "Generate random dates. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "random date, online tools, free tool",
+            "seoH1": "Random Date"
+        },
+        "random-ip": {
+            "name": "Random IP",
+            "description": "Generate random IP addresses.",
+            "seoTitle": "Random IP - 무료 온라인 도구",
+            "seoDescription": "Generate random IP addresses. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "random ip, online tools, free tool",
+            "seoH1": "Random IP"
+        },
+        "password-generator": {
+            "name": "비밀번호 생성기",
+            "description": "Generate strong, secure passwords.",
+            "seoTitle": "Password Generator - 무료 온라인 도구",
+            "seoDescription": "Generate strong, secure passwords. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "password generator, online tools, free tool",
+            "seoH1": "비밀번호 생성기"
+        },
+        "bcrypt-generator": {
+            "name": "Bcrypt Generator",
+            "description": "Generate Bcrypt password hashes.",
+            "seoTitle": "Bcrypt Generator - 무료 온라인 도구",
+            "seoDescription": "Generate Bcrypt password hashes. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "bcrypt generator, online tools, free tool",
+            "seoH1": "Bcrypt Generator"
+        },
+        "base64-encoder": {
+            "name": "Base64 Encoder",
+            "description": "Encode/Decode Base64.",
+            "seoTitle": "Base64 Encoder - 무료 온라인 도구",
+            "seoDescription": "Encode/Decode Base64. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "base64 encoder, online tools, free tool",
+            "seoH1": "Base64 Encoder"
+        },
+        "md5-hash": {
+            "name": "MD5 Generator",
+            "description": "Generate MD5 hash.",
+            "seoTitle": "MD5 Generator - 무료 온라인 도구",
+            "seoDescription": "Generate MD5 hash. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "md5 generator, online tools, free tool",
+            "seoH1": "MD5 Generator"
+        },
+        "sha256-hash": {
+            "name": "SHA-256",
+            "description": "Generate SHA-256 hash.",
+            "seoTitle": "SHA-256 - 무료 온라인 도구",
+            "seoDescription": "Generate SHA-256 hash. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "sha-256, online tools, free tool",
+            "seoH1": "SHA-256"
+        },
+        "sha512-hash": {
+            "name": "SHA-512",
+            "description": "Generate SHA-512 hash.",
+            "seoTitle": "SHA-512 - 무료 온라인 도구",
+            "seoDescription": "Generate SHA-512 hash. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "sha-512, online tools, free tool",
+            "seoH1": "SHA-512"
+        },
+        "uuid-generator": {
+            "name": "UUID Generator",
+            "description": "Generate UUID v4.",
+            "seoTitle": "UUID Generator - 무료 온라인 도구",
+            "seoDescription": "Generate UUID v4. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "uuid generator, online tools, free tool",
+            "seoH1": "UUID Generator"
+        },
+        "qr-code-generator": {
+            "name": "QR 코드 생성기",
+            "description": "Generate QR codes.",
+            "seoTitle": "QR Code - 무료 온라인 도구",
+            "seoDescription": "Generate QR codes. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "qr code, online tools, free tool",
+            "seoH1": "QR 코드 생성기"
+        },
+        "lorem-ipsum": {
+            "name": "Lorem Ipsum",
+            "description": "Generate placeholder text.",
+            "seoTitle": "Lorem Ipsum - 무료 온라인 도구",
+            "seoDescription": "Generate placeholder text. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "lorem ipsum, online tools, free tool",
+            "seoH1": "Lorem Ipsum"
+        },
+        "youtube-thumbnail-downloader": {
+            "name": "유튜브 썸네일 다운로더",
+            "description": "Download high-quality thumbnails from any YouTube video.",
+            "seoTitle": "유튜브 썸네일 다운로더 - 무료 온라인 도구",
+            "seoDescription": "Download high-quality thumbnails from any YouTube video. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "유튜브 썸네일 다운로더, online tools, free tool",
+            "seoH1": "유튜브 썸네일 다운로더"
+        },
+        "youtube-tag-generator": {
+            "name": "YouTube Tag Generator",
+            "description": "Generate optimized tags for your YouTube videos to improve ranking.",
+            "seoTitle": "YouTube Tag Generator - 무료 온라인 도구",
+            "seoDescription": "Generate optimized tags for your YouTube videos to improve ranking. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "youtube tag generator, online tools, free tool",
+            "seoH1": "YouTube Tag Generator"
+        },
+        "youtube-title-generator": {
+            "name": "YouTube Title Generator",
+            "description": "Generate catchy, SEO-friendly titles for your YouTube videos.",
+            "seoTitle": "YouTube Title Generator - 무료 온라인 도구",
+            "seoDescription": "Generate catchy, SEO-friendly titles for your YouTube videos. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "youtube title generator, online tools, free tool",
+            "seoH1": "YouTube Title Generator"
+        },
+        "youtube-embed-code-generator": {
+            "name": "YouTube Embed Code Generator",
+            "description": "Generate advanced embed codes with autoplay, loop, and hide controls.",
+            "seoTitle": "YouTube Embed Code Generator - 무료 온라인 도구",
+            "seoDescription": "Generate advanced embed codes with autoplay, loop, and hide controls. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "youtube embed code generator, online tools, free tool",
+            "seoH1": "YouTube Embed Code Generator"
+        },
+        "youtube-timestamp-link-generator": {
+            "name": "YouTube Timestamp Link",
+            "description": "Create YouTube links that start at a specific time.",
+            "seoTitle": "YouTube Timestamp Link - 무료 온라인 도구",
+            "seoDescription": "Create YouTube links that start at a specific time. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "youtube timestamp link, online tools, free tool",
+            "seoH1": "YouTube Timestamp Link"
+        },
+        "meta-tag-generator": {
+            "name": "Meta Tag Generator",
+            "description": "Generate SEO-friendly meta tags for your website.",
+            "seoTitle": "Meta Tag Generator - 무료 온라인 도구",
+            "seoDescription": "Generate SEO-friendly meta tags for your website. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "meta tag generator, online tools, free tool",
+            "seoH1": "Meta Tag Generator"
+        },
+        "open-graph-generator": {
+            "name": "Open Graph Generator",
+            "description": "Create Open Graph meta tags for Facebook and LinkedIn sharing.",
+            "seoTitle": "Open Graph Generator - 무료 온라인 도구",
+            "seoDescription": "Create Open Graph meta tags for Facebook and LinkedIn sharing. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "open graph generator, online tools, free tool",
+            "seoH1": "Open Graph Generator"
+        },
+        "twitter-card-generator": {
+            "name": "Twitter Card Generator",
+            "description": "Generate Twitter Card meta tags for better social sharing.",
+            "seoTitle": "Twitter Card Generator - 무료 온라인 도구",
+            "seoDescription": "Generate Twitter Card meta tags for better social sharing. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "twitter card generator, online tools, free tool",
+            "seoH1": "Twitter Card Generator"
+        },
+        "robots-txt-generator": {
+            "name": "Robots.txt Generator",
+            "description": "Create proper robots.txt files to control crawler access.",
+            "seoTitle": "Robots.txt Generator - 무료 온라인 도구",
+            "seoDescription": "Create proper robots.txt files to control crawler access. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "robots.txt generator, online tools, free tool",
+            "seoH1": "Robots.txt Generator"
+        },
+        "xml-sitemap-generator": {
+            "name": "XML Sitemap Generator",
+            "description": "Generate XML sitemaps for easier search engine indexing.",
+            "seoTitle": "XML Sitemap Generator - 무료 온라인 도구",
+            "seoDescription": "Generate XML sitemaps for easier search engine indexing. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "xml sitemap generator, online tools, free tool",
+            "seoH1": "XML Sitemap Generator"
+        },
+        "keyword-density-checker": {
+            "name": "Keyword Density Checker",
+            "description": "Analyze keyword usage and density in your content.",
+            "seoTitle": "Keyword Density Checker - 무료 온라인 도구",
+            "seoDescription": "Analyze keyword usage and density in your content. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "keyword density checker, online tools, free tool",
+            "seoH1": "Keyword Density Checker"
+        },
+        "keyword-cleaner": {
+            "name": "Keyword Cleaner",
+            "description": "Clean up keyword lists: remove duplicates, empty lines, and specific characters.",
+            "seoTitle": "Keyword Cleaner - 무료 온라인 도구",
+            "seoDescription": "Clean up keyword lists: remove duplicates, empty lines, and specific characters. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "keyword cleaner, online tools, free tool",
+            "seoH1": "Keyword Cleaner"
+        },
+        "long-tail-keyword-generator": {
+            "name": "Long Tail Keyword Generator",
+            "description": "Generate long-tail keyword variations from seed keywords.",
+            "seoTitle": "Long Tail Keyword Generator - 무료 온라인 도구",
+            "seoDescription": "Generate long-tail keyword variations from seed keywords. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "long tail keyword generator, online tools, free tool",
+            "seoH1": "Long Tail Keyword Generator"
+        },
+        "slug-generator": {
+            "name": "Slug Generator",
+            "description": "Convert text into SEO-friendly URL slugs.",
+            "seoTitle": "Slug Generator - 무료 온라인 도구",
+            "seoDescription": "Convert text into SEO-friendly URL slugs. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "slug generator, online tools, free tool",
+            "seoH1": "Slug Generator"
+        },
+        "google-serp-simulator": {
+            "name": "Google SERP Simulator",
+            "description": "Preview how your website will appear in Google search results.",
+            "seoTitle": "Google SERP Simulator - 무료 온라인 도구",
+            "seoDescription": "Preview how your website will appear in Google search results. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "google serp simulator, online tools, free tool",
+            "seoH1": "Google SERP Simulator"
+        },
+        "htaccess-redirect-generator": {
+            "name": "Htaccess Redirect Generator",
+            "description": "Generate .htaccess redirect code for 301/302 redirects.",
+            "seoTitle": "Htaccess Redirect Generator - 무료 온라인 도구",
+            "seoDescription": "Generate .htaccess redirect code for 301/302 redirects. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "htaccess redirect generator, online tools, free tool",
+            "seoH1": "Htaccess Redirect Generator"
+        },
+        "my-ip-address": {
+            "name": "My IP Address",
+            "description": "Check your public IP address and location details.",
+            "seoTitle": "My IP Address - 무료 온라인 도구",
+            "seoDescription": "Check your public IP address and location details. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "my ip address, online tools, free tool",
+            "seoH1": "My IP Address"
+        },
+        "browser-info": {
+            "name": "Browser Info",
+            "description": "Get detailed information about your current browser and system.",
+            "seoTitle": "Browser Info - 무료 온라인 도구",
+            "seoDescription": "Get detailed information about your current browser and system. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "browser info, online tools, free tool",
+            "seoH1": "Browser Info"
+        },
+        "screen-resolution-simulator": {
+            "name": "Screen Resolution Simulator",
+            "description": "Test your website on different screen resolutions.",
+            "seoTitle": "Screen Resolution Simulator - 무료 온라인 도구",
+            "seoDescription": "Test your website on different screen resolutions. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "screen resolution simulator, online tools, free tool",
+            "seoH1": "Screen Resolution Simulator"
+        },
+        "responsive-checker": {
+            "name": "Responsive Checker",
+            "description": "Check if your website is responsive across devices.",
+            "seoTitle": "Responsive Checker - 무료 온라인 도구",
+            "seoDescription": "Check if your website is responsive across devices. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "responsive checker, online tools, free tool",
+            "seoH1": "Responsive Checker"
+        },
+        "whatsapp-link-generator": {
+            "name": "WhatsApp Link Generator",
+            "description": "Create direct click-to-chat WhatsApp links.",
+            "seoTitle": "WhatsApp Link Generator - 무료 온라인 도구",
+            "seoDescription": "Create direct click-to-chat WhatsApp links. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "whatsapp link generator, online tools, free tool",
+            "seoH1": "WhatsApp Link Generator"
+        },
+        "telegram-link-generator": {
+            "name": "Telegram Link Generator",
+            "description": "Create direct links to Telegram users or channels.",
+            "seoTitle": "Telegram Link Generator - 무료 온라인 도구",
+            "seoDescription": "Create direct links to Telegram users or channels. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "telegram link generator, online tools, free tool",
+            "seoH1": "Telegram Link Generator"
+        },
+        "paypal-link-generator": {
+            "name": "PayPal Link Generator",
+            "description": "Generate PayPal payment and donation links.",
+            "seoTitle": "PayPal Link Generator - 무료 온라인 도구",
+            "seoDescription": "Generate PayPal payment and donation links. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "paypal link generator, online tools, free tool",
+            "seoH1": "PayPal Link Generator"
+        },
+        "email-validator": {
+            "name": "Email Validator",
+            "description": "Validate email address format using regex.",
+            "seoTitle": "Email Validator - 무료 온라인 도구",
+            "seoDescription": "Validate email address format using regex. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "email validator, online tools, free tool",
+            "seoH1": "Email Validator"
+        },
+        "url-opener": {
+            "name": "URL Opener",
+            "description": "Open multiple URLs at once in new tabs.",
+            "seoTitle": "URL Opener - 무료 온라인 도구",
+            "seoDescription": "Open multiple URLs at once in new tabs. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "url opener, online tools, free tool",
+            "seoH1": "URL Opener"
+        },
+        "user-agent-parser": {
+            "name": "User Agent Parser",
+            "description": "Parse and analyze User-Agent strings.",
+            "seoTitle": "User Agent Parser - 무료 온라인 도구",
+            "seoDescription": "Parse and analyze User-Agent strings. 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "user agent parser, online tools, free tool",
+            "seoH1": "User Agent Parser"
+        },
+        "wordpress-password-hash": {
+            "name": "WordPress Password Hash",
+            "description": "Generate WordPress compatible password hashes (phpass).",
+            "seoTitle": "WordPress Password Hash - 무료 온라인 도구",
+            "seoDescription": "Generate WordPress compatible password hashes (phpass). 100% 무료, 빠르고 안전합니다.",
+            "seoKeywords": "wordpress password hash, online tools, free tool",
+            "seoH1": "WordPress Password Hash"
+        },
+        "age-calculator": {
+            "name": "나이 계산기",
+            "description": "Calculate your exact age in years, months, and days.",
+            "seoTitle": "Age Calculator - Free Online Tool | AYNZO TOOLS",
+            "seoDescription": "Calculate your exact age from date of birth. 100% free, fast, and secure.",
+            "seoKeywords": "age calculator, online tools, free tool",
+            "seoH1": "나이 계산기"
+        },
+        "bmi-calculator": {
+            "name": "BMI Calculator",
+            "description": "Calculate your Body Mass Index (BMI) and health status.",
+            "seoTitle": "BMI Calculator - Free Online Tool | AYNZO TOOLS",
+            "seoDescription": "Calculate your Body Mass Index (BMI) and health status. 100% free, fast, and secure.",
+            "seoKeywords": "bmi calculator, online tools, free tool",
+            "seoH1": "BMI Calculator"
+        },
+        "percentage-calculator": {
+            "name": "Percentage Calculator",
+            "description": "Quickly calculate percentages, increases, and decreases.",
+            "seoTitle": "Percentage Calculator - Free Online Tool | AYNZO TOOLS",
+            "seoDescription": "Quickly calculate percentages, increases, and decreases. 100% free, fast, and secure.",
+            "seoKeywords": "percentage calculator, online tools, free tool",
+            "seoH1": "Percentage Calculator"
+        },
+        "gst-calculator": {
+            "name": "GST Calculator",
+            "description": "Calculate GST (Goods and Services Tax) for any amount.",
+            "seoTitle": "GST Calculator - Free Online Tool | AYNZO TOOLS",
+            "seoDescription": "Calculate GST (Goods and Services Tax) for any amount. 100% free, fast, and secure.",
+            "seoKeywords": "gst calculator, online tools, free tool",
+            "seoH1": "GST Calculator"
+        },
+        "emi-calculator": {
+            "name": "EMI Calculator",
+            "description": "Calculate monthly loan EMI and total interest payable.",
+            "seoTitle": "EMI Calculator - Free Online Tool | AYNZO TOOLS",
+            "seoDescription": "Calculate monthly loan EMI and total interest payable. 100% free, fast, and secure.",
+            "seoKeywords": "emi calculator, online tools, free tool",
+            "seoH1": "EMI Calculator"
+        },
+        "discount-calculator": {
+            "name": "Discount Calculator",
+            "description": "Calculate final price after discount and savings.",
+            "seoTitle": "Discount Calculator - Free Online Tool | AYNZO TOOLS",
+            "seoDescription": "Calculate final price after discount and savings. 100% free, fast, and secure.",
+            "seoKeywords": "discount calculator, online tools, free tool",
+            "seoH1": "Discount Calculator"
+        },
+        "instagram-hashtag-generator": {
+            "name": "Instagram Hashtag Generator",
+            "description": "Generate popular and trending hashtags for Instagram.",
+            "seoTitle": "Instagram Hashtag Generator - Free Online Tool | AYNZO TOOLS",
+            "seoDescription": "Generate popular and trending hashtags for Instagram. 100% free, fast, and secure.",
+            "seoKeywords": "instagram hashtag generator, online tools, free tool",
+            "seoH1": "Instagram Hashtag Generator"
+        },
+        "html-to-jsx": {
+            "name": "HTML JSX 변환",
+            "description": "Convert standard HTML code into React JSX syntax.",
+            "seoTitle": "HTML to JSX - Free Online Tool | AYNZO TOOLS",
+            "seoDescription": "Convert standard HTML code into React JSX syntax. 100% free, fast, and secure.",
+            "seoKeywords": "html to jsx, online tools, free tool",
+            "seoH1": "HTML JSX 변환"
+        }
+    },
+    "Common": {
+        "backToTools": "도구로 돌아가기",
+        "howToUse": "{name} 사용법",
+        "toolIntro": "이 도구를 사용하면 빠르고 안전하게 {description} 할 수 있습니다.",
+        "keyFeatures": "주요 기능",
+        "featureFast": "Fast and efficient processing",
+        "featureSimple": "Simple, user-friendly interface",
+        "featureNoInstall": "No software installation required",
+        "featureFree": "100% free to use - No hidden charges",
+        "featurePrivacy": "Your privacy is protected",
+        "relatedTools": "관련 도구",
+        "viewAll": "모두 보기",
+        "whyUse": "이 도구를 사용하는 이유?",
+        "featureBrowser": "Browser-based processing",
+        "featureNoStorage": "No data storage",
+        "featureMobile": "100% Mobile friendly",
+        "selectImage": "이미지 선택",
+        "selectMultiple": "여러 개 선택",
+        "dragDrop": "파일을 여기로 드래그 앤 드롭",
+        "supports": "Supports JPG, PNG, WEBP & SVG",
+        "privacyGuaranteed": "개인정보 보호 보장",
+        "lightningFast": "번개처럼 빠름",
+        "imagesSelected": "{count} Images Selected",
+        "clearAll": "Clear All",
+        "addMore": "Add More",
+        "processing": "처리 중...",
+        "processBatch": "Process Batch",
+        "applyChanges": "Apply Changes",
+        "safePrivate": "Safe & Private",
+        "localProcessing": "Images are processed locally. No upload.",
+        "quality": "품질",
+        "targetFormat": "대상 형식",
+        "copyString": "문자열 복사",
+        "fastSecure": "Fast & Secure",
+        "browserProcessing": "Browser-based processing",
+        "noStorage": "No data storage",
+        "mobileFriendly": "100% Mobile friendly",
+        "settings": "설정",
+        "tipQuality": "Tip: 80% is the best balance for speed and quality.",
+        "downloadsAsZip": "Downloads as ZIP",
+        "base64Output": "Base64 Output",
+        "tryNow": "지금 시도",
+        "copy": "복사",
+        "clear": "지우기",
+        "download": "다운로드",
+        "options": "옵션",
+        "output": "출력",
+        "input": "입력",
+        "reset": "초기화",
+        "shareThisTool": "공유",
+        "copyLink": "링크 복사"
+    },
+    "NavbarCategories": {
+        "Image Tools": "이미지 도구",
+        "Text Tools": "텍스트 도구",
+        "Code & Developer Tools": "개발자 도구",
+        "Converter Tools": "변환 도구",
+        "Utility Tools": "유틸리티 도구",
+        "Security & Crypto": "보안 도구",
+        "YouTube Tools": "YouTube 도구",
+        "Social & Links": "소셜 도구",
+        "Calculators": "계산기",
+        "Convert": "변환"
+    },
+    "TextTools": {
+        "editor": "Editor",
+        "placeholder": "Paste your text here to begin analyzing and transforming...",
+        "download": "다운로드",
+        "copy": "복사",
+        "clear": "지우기",
+        "topKeywords": "인기 키워드",
+        "quickTransformers": "Quick Transformers",
+        "allCaps": "모두 대문자",
+        "uppercase": "대문자",
+        "mirrorMode": "미러 모드",
+        "reverseText": "텍스트 뒤집기",
+        "allSmall": "all small",
+        "lowercase": "소문자",
+        "headlineStyle": "Headline Style",
+        "titleCase": "제목 대소문자",
+        "naturalFlow": "Natural flow",
+        "sentenceCase": "문장 대소문자",
+        "fixSpacing": "간격 수정",
+        "removeExtraSpaces": "여분의 공백 제거",
+        "joinText": "텍스트 결합",
+        "removeLineBreaks": "Remove Line Breaks",
+        "findReplace": "Find & Replace",
+        "find": "찾기",
+        "replaceWith": "Replace with...",
+        "count": "개수",
+        "replaceAll": "모두 바꾸기",
+        "words": "단어",
+        "characters": "문자",
+        "sentences": "문장",
+        "paragraphs": "단락",
+        "lines": "줄",
+        "readTime": "읽기 시간",
+        "input": "입력",
+        "reset": "초기화",
+        "pastePlaceholder": "여기에 내용 붙여넣기...",
+        "options": "옵션",
+        "findLabel": "Find",
+        "replaceLabel": "Replace",
+        "useRegex": "Use Regex",
+        "caseSensitive": "Case Sensitive",
+        "noConfig": "No configuration needed for this tool. Click run tool to continue.",
+        "runTool": "Run Tool",
+        "output": "출력",
+        "resultsPlaceholder": "Results will appear here",
+        "italicConverter": "이탤릭 변환기",
+        "strikethrough": "취소선",
+        "sortAZ": "A-Z 정렬",
+        "removeDuplicates": "중복 제거",
+        "textTool": "Text Tool",
+        "character": "문자",
+        "word": "단어",
+        "sentence": "문장",
+        "paragraph": "단락",
+        "replace": "바꾸기"
+    },
+    "YouTubeTools": {
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "hideControls": "Hide Controls",
+        "startTime": "시작 시간",
+        "startTimePlaceholder": "e.g. 1m30s",
+        "configuration": "Configuration",
+        "enterTopic": "Enter Topic or Keyword",
+        "videoUrl": "YouTube 동영상 URL",
+        "topicPlaceholder": "e.g., Digital Marketing, Funny Cats",
+        "urlPlaceholder": "https://www.youtube.com/watch?v=...",
+        "fetchThumbnails": "썸네일 가져오기",
+        "generateNow": "Generate Now",
+        "growthTip": "Growth Tip",
+        "tipText": "High-quality thumbnails and optimized tags can increase your click-through rate by up to 40%.",
+        "generatedOutput": "Generated Output",
+        "qualityLabel": "{quality} 화질",
+        "downloadImage": "이미지 다운로드",
+        "seoTags": "SEO 태그",
+        "copyAll": "모두 복사",
+        "generatedCode": "Generated Code",
+        "generatedLink": "생성된 링크",
+        "copy": "COPY",
+        "openLink": "Open Link",
+        "inputRequired": "동영상 입력 필요",
+        "resultsPlaceholder": "Results will appear here",
+        "duration": "재생 시간",
+        "embedCode": "임베드 코드"
+    },
+    "Footer": {
+        "topCategories": "인기 카테고리",
+        "resources": "리소스",
+        "aboutUs": "회사 소개",
+        "contact": "연락처",
+        "privacyPolicy": "개인정보 처리방침",
+        "termsOfService": "이용 약관",
+        "ourMission": "우리의 미션",
+        "missionStatement": "모든 사람에게 무료로 안전한 도구를 제공합니다.",
+        "securePrivate": "보안 및 개인정보 보호",
+        "allRightsReserved": "모든 권리 보유."
+    },
+    "Share": {
+        "shareThisTool": "Share this tool:",
+        "linkCopied": "Link copied to clipboard!",
+        "copyLink": "Copy Link",
+        "shareOn": "Share on {network}"
+    },
+    "ToolActions": {
+        "operationSuccessful": "성공!",
+        "readyForDownload": "다운로드 준비 완료.",
+        "startNew": "다시 시작",
+        "downloadNow": "다운로드",
+        "uploadFile": "{type} 업로드",
+        "dragDrop": "드래그 앤 드롭",
+        "chooseFile": "{type} 선택",
+        "processing": "처리 중...",
+        "convertTo": "{format}로 변환",
+        "mergeFiles": "{count}개 병합",
+        "splitFile": "분할",
+        "addMore": "추가",
+        "clearAll": "지우기",
+        "filesSelected": "{count}개 파일 선택됨",
+        "pasteBase64": "Base64 붙여넣기",
+        "batchReady": "준비됨"
+    }
+}
