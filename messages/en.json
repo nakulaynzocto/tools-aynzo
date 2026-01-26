@@ -319,11 +319,11 @@
         },
         "word-counter": {
             "name": "Word Counter",
-            "description": "Count words, characters, sentences, and paragraphs.",
-            "seoTitle": "Word Counter Tool",
-            "seoDescription": "Accurate word and character count.",
-            "seoKeywords": "word counter, character counter",
-            "seoH1": "Word Counter"
+            "description": "Calculate words, characters, and reading time in real-time.",
+            "seoTitle": "Word Counter & Character Count Tool - Real-Time Analysis",
+            "seoDescription": "The ultimate free word counter for writers and SEOs. Check word count, character limits (Twitter/Google), and reading time instantly. 100% private.",
+            "seoKeywords": "word counter, character counter, word count online, essay word count, twitter character counter",
+            "seoH1": "Word Counter: The Writer's Ultimate Productivity Tool"
         },
         "character-counter": {
             "name": "Character Counter",
@@ -631,11 +631,11 @@
         },
         "password-generator": {
             "name": "Password Generator",
-            "description": "Generate strong and secure passwords.",
-            "seoTitle": "Password Generator",
-            "seoDescription": "Create secure passwords.",
-            "seoKeywords": "password generator, secure password",
-            "seoH1": "Password Generator"
+            "description": "Generate high-entropy, hack-proof passwords directly in your browser.",
+            "seoTitle": "Strong Password Generator - Create Hack-Proof Passwords",
+            "seoDescription": "Generate 100% secure, high-entropy passwords instantly. Uses military-grade browser encryption to ensure your data never leaves your device. Free and offline-capable.",
+            "seoKeywords": "strong password generator, random password maker, secure password tool, hack proof passwords, offline password generator",
+            "seoH1": "Military-Grade Password Generator: Security Starts Here"
         },
         "bcrypt-generator": {
             "name": "Bcrypt Generator",
@@ -646,12 +646,12 @@
             "seoH1": "Bcrypt Generator"
         },
         "base64-encoder": {
-            "name": "Base64 Encoder/Decoder",
-            "description": "Encode and decode Base64 strings.",
-            "seoTitle": "Base64 Encoder Decoder",
-            "seoDescription": "Base64 encoding/decoding.",
-            "seoKeywords": "base64 encode decode",
-            "seoH1": "Base64 Encoder/Decoder"
+            "name": "Base64 Encoder / Decoder",
+            "description": "Convert text, images, and files to Base64 (Data URI) securely.",
+            "seoTitle": "Base64 Encoder & Decoder - Secure Online Tool (Client-Side)",
+            "seoDescription": "Encode files and text to Base64 or decode strings instantly. Perfect for Data URIs, JWT debugging, and email attachments. 100% private.",
+            "seoKeywords": "base64 encode, base64 decode, data uri generator, base64 image",
+            "seoH1": "Base64 Encoder / Decoder: The Developer's Essential Tool"
         },
         "md5-hash": {
             "name": "MD5 Hash Generator",
@@ -703,19 +703,19 @@
         },
         "youtube-thumbnail-downloader": {
             "name": "YouTube Thumbnail Downloader",
-            "description": "Download high-quality YouTube thumbnails.",
-            "seoTitle": "YouTube Thumbnail Downloader",
-            "seoDescription": "Get HD YouTube thumbnails.",
-            "seoKeywords": "youtube thumbnail downloader",
-            "seoH1": "YouTube Thumbnail Downloader"
+            "description": "Download HD & 4K YouTube thumbnails instantly for free.",
+            "seoTitle": "YouTube Thumbnail Downloader - Get HD covers (Expert Guide)",
+            "seoDescription": "Download high-quality YouTube thumbnails in HD and 4K with our expert guide. 100% free, fast, and no login required. Master your video CTR.",
+            "seoKeywords": "youtube thumbnail downloader, download yt thumbnail hd, save youtube thumbnail, youtube thumbnail grabber",
+            "seoH1": "YouTube Thumbnail Downloader: The Ultimate Guide to Viral Video CTR"
         },
         "youtube-tag-generator": {
             "name": "YouTube Tag Generator",
-            "description": "Generate optimized YouTube tags.",
-            "seoTitle": "YouTube Tag Generator",
-            "seoDescription": "Improve video ranking with tags.",
-            "seoKeywords": "youtube tags generator",
-            "seoH1": "YouTube Tag Generator"
+            "description": "Generate optimized YouTube tags to boost video ranking.",
+            "seoTitle": "YouTube Tag Generator - Boost Video SEO (Expert Guide)",
+            "seoDescription": "Discover the secret to viral video growth with our 1200+ word guide. Generate optimized SEO tags instantly to improve your search visibility. 100% free.",
+            "seoKeywords": "youtube tag generator, yt tag finder, best tags for youtube, youtube seo tool",
+            "seoH1": "YouTube Tag Generator: The Master Guide to Algorithm Optimization"
         },
         "youtube-title-generator": {
             "name": "YouTube Title Generator",
@@ -783,11 +783,11 @@
         },
         "keyword-density-checker": {
             "name": "Keyword Density Checker",
-            "description": "Analyze keyword density in content.",
-            "seoTitle": "Keyword Density Checker",
-            "seoDescription": "Check keyword usage.",
-            "seoKeywords": "keyword density checker",
-            "seoH1": "Keyword Density Checker"
+            "description": "Analyze text for keyword stuffing and optimize SEO density.",
+            "seoTitle": "Keyword Density Checker - Avoid SEO Penalties (Free Tool)",
+            "seoDescription": "Check keyword frequency to avoid Google stuffing penalties. Free SEO text analyzer. Find overused words and optimize for 1-2% density. 100% private.",
+            "seoKeywords": "keyword density checker, check keyword stuffing, seo text analyzer, tf-idf checker",
+            "seoH1": "Keyword Density Checker: The Anti-Stuffing Audit Tool"
         },
         "keyword-cleaner": {
             "name": "Keyword Cleaner",
