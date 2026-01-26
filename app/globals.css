@@ -5,24 +5,25 @@
 @layer base {
   :root {
     /* Pure Dark Theme as Baseline */
-    --background: #000000;
-    --foreground: #ffffff;
+    /* Premium Midnight Blue Theme */
+    --background: #0B1120; /* Deep Midnight Blue instead of Pitch Black */
+    --foreground: #e2e8f0;
 
-    --card: #0a0a0a;
-    --card-foreground: #ffffff;
+    --card: #151e32; /* Slightly Lighter Navy */
+    --card-foreground: #f1f5f9;
 
-    --popover: #0a0a0a;
-    --popover-foreground: #ffffff;
+    --popover: #151e32;
+    --popover-foreground: #f1f5f9;
 
-    --primary: #3882a5;
-    --primary-foreground: #ffffff;
-    --primary-light: #98c7dd;
+    --primary: #38bdf8; /* Sky Blue for Primary Actions */
+    --primary-foreground: #0f172a;
+    --primary-light: #7dd3fc;
 
-    --secondary: #121212;
-    --secondary-foreground: #e6edf3;
+    --secondary: #1e293b; /* Slate-800 */
+    --secondary-foreground: #e2e8f0;
 
-    --muted: #1e1e1e;
-    --muted-foreground: #a1a1aa;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
 
     --accent: #58a6ff;
     --accent-foreground: #000000;
