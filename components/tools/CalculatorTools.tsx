@@ -182,9 +182,13 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="space-y-1">
                                         <label className="text-xs font-bold uppercase opacity-50">GST Rate (%)</label>
-                                        <select value={gst.rate} onChange={e => setGst({ ...gst, rate: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-bold">
-                                            {[5, 12, 18, 28].map(r => <option key={r} value={r}>{r}%</option>)}
-                                        </select>
+                                        <input
+                                            type="number"
+                                            value={gst.rate}
+                                            onChange={e => setGst({ ...gst, rate: e.target.value })}
+                                            className="w-full p-4 bg-input border-2 border-border rounded-xl font-bold"
+                                            placeholder="18"
+                                        />
                                     </div>
                                     <div className="space-y-1">
                                         <label className="text-xs font-bold uppercase opacity-50">Tax Type</label>
