@@ -27,51 +27,67 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
         width: 400
     });
 
-    const handleAction = async () => {
-        try {
-            if (type === 'base64-encoder') {
-                if (mode === 'encode') {
-                    const encoded = btoa(unescape(encodeURIComponent(input)));
-                    setOutput(encoded);
-                } else {
-                    try {
-                        const decoded = decodeURIComponent(escape(atob(input)));
-                        setOutput(decoded);
-                    } catch {
-                        setOutput('Error: Invalid Base64 string');
-                    }
-                }
-            } else if (type === 'md5-hash') {
-                const hash = CryptoJS.MD5(input).toString();
-                setOutput(hash);
-            } else if (type === 'sha256-hash') {
-                const hash = CryptoJS.SHA256(input).toString();
-                setOutput(hash);
-            } else if (type === 'sha512-hash') {
-                const hash = CryptoJS.SHA512(input).toString();
-                setOutput(hash);
-            } else if (type === 'bcrypt-generator') {
-                const salt = bcrypt.genSaltSync(rounds);
-                const hash = bcrypt.hashSync(input, salt);
-                setOutput(hash);
-            } else if (type === 'uuid-generator') {
-                const uuid = uuidv4();
-                setOutput(uuid);
-            } else if (type === 'qr-code-generator') {
-                if (!input) return;
-                const qrDataUrl = await QRCode.toDataURL(input, {
-                    width: qrOptions.width,
-                    margin: qrOptions.margin,
-                    color: {
-                        dark: qrOptions.dark,
-                        light: qrOptions.light
-                    }
-                });
-                setQrCodeData(qrDataUrl);
-                setOutput(input);
+    useEffect(() => {
+        const process = async () => {
+            if (!input && type !== 'uuid-generator') {
+                setOutput('');
+                setQrCodeData('');
+                return;
             }
-        } catch (error) {
-            console.error(error);
+
+            try {
+                if (type === 'base64-encoder') {
+                    if (mode === 'encode') {
+                        const encoded = btoa(unescape(encodeURIComponent(input)));
+                        setOutput(encoded);
+                    } else {
+                        try {
+                            const decoded = decodeURIComponent(escape(atob(input)));
+                            setOutput(decoded);
+                        } catch {
+                            setOutput('Error: Invalid Base64 string');
+                        }
+                    }
+                } else if (type === 'md5-hash') {
+                    const hash = CryptoJS.MD5(input).toString();
+                    setOutput(hash);
+                } else if (type === 'sha256-hash') {
+                    const hash = CryptoJS.SHA256(input).toString();
+                    setOutput(hash);
+                } else if (type === 'sha512-hash') {
+                    const hash = CryptoJS.SHA512(input).toString();
+                    setOutput(hash);
+                } else if (type === 'bcrypt-generator') {
+                    // Use a small timeout to avoid heavy bcrypt lag while typing
+                    const timeoutId = setTimeout(() => {
+                        const salt = bcrypt.genSaltSync(rounds);
+                        const hash = bcrypt.hashSync(input, salt);
+                        setOutput(hash);
+                    }, 500);
+                    return () => clearTimeout(timeoutId);
+                } else if (type === 'qr-code-generator') {
+                    const qrDataUrl = await QRCode.toDataURL(input, {
+                        width: qrOptions.width,
+                        margin: qrOptions.margin,
+                        color: {
+                            dark: qrOptions.dark,
+                            light: qrOptions.light
+                        }
+                    });
+                    setQrCodeData(qrDataUrl);
+                    setOutput(input);
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        process();
+    }, [input, mode, type, rounds, qrOptions]);
+
+    const handleAction = async () => {
+        if (type === 'uuid-generator') {
+            setOutput(uuidv4());
         }
     };
 
@@ -184,15 +200,14 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                                     </div>
                                 )}
 
-                                {!isQRCode && (
+                                {type === 'uuid-generator' && (
                                     <button
                                         onClick={handleAction}
-                                        disabled={showInput && !input}
                                         className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3"
                                     >
-                                        {type === 'uuid-generator' ? <RefreshCw className="w-6 h-6 animate-spin" /> : <Lock className="w-6 h-6" />}
+                                        <RefreshCw className="w-6 h-6 animate-spin" />
                                         <span className="text-lg">
-                                            {type === 'uuid-generator' ? 'Generate New UUID' : 'Process Input'}
+                                            Generate New UUID
                                         </span>
                                     </button>
                                 )}
@@ -226,13 +241,6 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                                                 <input type="range" min="0" max="10" value={qrOptions.margin} onChange={e => setQrOptions({ ...qrOptions, margin: parseInt(e.target.value) })} className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-accent" />
                                             </div>
 
-                                            <button
-                                                onClick={handleAction}
-                                                disabled={!input}
-                                                className="w-full py-5 bg-primary text-white rounded-2xl font-black shadow-xl transition-all"
-                                            >
-                                                Generate QR Code
-                                            </button>
                                         </div>
                                     </div>
                                 </div>

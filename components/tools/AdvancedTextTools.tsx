@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Copy, Download, RotateCcw, Search, Settings, Type, ArrowRightLeft, Trash2, ArrowDownAZ, Repeat, CheckCircle2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -49,97 +49,88 @@ export default function AdvancedTextTools({ type }: AdvancedTextToolsProps) {
         },
     };
 
-    const processText = () => {
-        setProcessing(true);
-        setTimeout(() => {
-            let result = '';
+    useEffect(() => {
+        if (!input) {
+            setOutput('');
+            return;
+        }
 
-            switch (type) {
-                case 'italic-text':
-                    result = input.split('').map(char => (unicodeMaps.italic as any)[char] || char).join('');
-                    break;
-
-                case 'strikethrough-text':
-                    result = input.split('').map(char => unicodeMaps.strikethrough(char)).join('');
-                    break;
-
-                case 'underline-text':
-                    result = input.split('').map(char => unicodeMaps.underline(char)).join('');
-                    break;
-
-                case 'small-text':
-                    result = input.split('').map(char => (unicodeMaps.small as any)[char] || char).join('');
-                    break;
-
-                case 'upside-down-text':
-                    result = input.split('').reverse().map(char => (unicodeMaps.upsideDown as any)[char] || char).join('');
-                    break;
-
-                case 'mirror-text':
-                    result = input.split('').reverse().join('');
-                    break;
-
-                case 'duplicate-line-remover':
-                    const lines = input.split('\n');
-                    const uniqueLines = Array.from(new Set(lines));
-                    result = uniqueLines.join('\n');
-                    break;
-
-                case 'sort-alphabetically':
-                    const sortLines = input.split('\n').filter(line => line.trim());
-                    result = sortLines.sort((a, b) => a.localeCompare(b)).join('\n');
-                    break;
-
-                case 'text-replace':
-                    if (findText) {
-                        result = input.split(findText).join(replaceText);
-                    } else {
-                        result = input;
-                    }
-                    break;
-
-                case 'whitespace-remover':
-                    result = input.replace(/\s+/g, ' ').trim();
-                    break;
-
-                case 'word-frequency':
-                    const words = input.toLowerCase().match(/\b\w+\b/g) || [];
-                    const frequency: { [key: string]: number } = {};
-                    words.forEach(word => {
-                        frequency[word] = (frequency[word] || 0) + 1;
-                    });
-                    const sorted = Object.entries(frequency).sort((a, b) => b[1] - a[1]);
-                    result = sorted.map(([word, count]) => `${word}: ${count}`).join('\n');
-                    break;
-
-                case 'find-replace':
-                    if (findText) {
-                        try {
-                            if (useRegex) {
-                                const flags = caseSensitive ? 'g' : 'gi';
-                                const regex = new RegExp(findText, flags);
-                                result = input.replace(regex, replaceText);
-                            } else {
-                                const flags = caseSensitive ? 'g' : 'gi';
-                                const escapedFind = findText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                                const regex = new RegExp(escapedFind, flags);
-                                result = input.replace(regex, replaceText);
-                            }
-                        } catch (error) {
-                            result = input;
-                        }
-                    } else {
-                        result = input;
-                    }
-                    break;
-
-                default:
+        let result = '';
+        switch (type) {
+            case 'italic-text':
+                result = input.split('').map(char => (unicodeMaps.italic as any)[char] || char).join('');
+                break;
+            case 'strikethrough-text':
+                result = input.split('').map(char => unicodeMaps.strikethrough(char)).join('');
+                break;
+            case 'underline-text':
+                result = input.split('').map(char => unicodeMaps.underline(char)).join('');
+                break;
+            case 'small-text':
+                result = input.split('').map(char => (unicodeMaps.small as any)[char] || char).join('');
+                break;
+            case 'upside-down-text':
+                result = input.split('').reverse().map(char => (unicodeMaps.upsideDown as any)[char] || char).join('');
+                break;
+            case 'mirror-text':
+                result = input.split('').reverse().join('');
+                break;
+            case 'duplicate-line-remover':
+                const lines = input.split('\n');
+                const uniqueLines = Array.from(new Set(lines));
+                result = uniqueLines.join('\n');
+                break;
+            case 'sort-alphabetically':
+                const sortLines = input.split('\n').filter(line => line.trim());
+                result = sortLines.sort((a, b) => a.localeCompare(b)).join('\n');
+                break;
+            case 'text-replace':
+                if (findText) {
+                    result = input.split(findText).join(replaceText);
+                } else {
                     result = input;
-            }
+                }
+                break;
+            case 'whitespace-remover':
+                result = input.replace(/\s+/g, ' ').trim();
+                break;
+            case 'word-frequency':
+                const words = input.toLowerCase().match(/\b\w+\b/g) || [];
+                const frequency: { [key: string]: number } = {};
+                words.forEach(word => {
+                    frequency[word] = (frequency[word] || 0) + 1;
+                });
+                const sorted = Object.entries(frequency).sort((a, b) => b[1] - a[1]);
+                result = sorted.map(([word, count]) => `${word}: ${count}`).join('\n');
+                break;
+            case 'find-replace':
+                if (findText) {
+                    try {
+                        if (useRegex) {
+                            const flags = caseSensitive ? 'g' : 'gi';
+                            const regex = new RegExp(findText, flags);
+                            result = input.replace(regex, replaceText);
+                        } else {
+                            const flags = caseSensitive ? 'g' : 'gi';
+                            const escapedFind = findText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                            const regex = new RegExp(escapedFind, flags);
+                            result = input.replace(regex, replaceText);
+                        }
+                    } catch (error) {
+                        result = input;
+                    }
+                } else {
+                    result = input;
+                }
+                break;
+            default:
+                result = input;
+        }
+        setOutput(result);
+    }, [input, type, findText, replaceText, useRegex, caseSensitive]);
 
-            setOutput(result);
-            setProcessing(false);
-        }, 300);
+    const processText = () => {
+        // Function kept for legacy or explicit trigger if needed, but not used by main button anymore
     };
 
     const copyToClipboard = () => {
@@ -257,14 +248,6 @@ export default function AdvancedTextTools({ type }: AdvancedTextToolsProps) {
                             <p className="text-sm text-muted-foreground italic">{t('noConfig')}</p>
                         )}
 
-                        <button
-                            onClick={processText}
-                            disabled={!input || processing}
-                            className="mt-6 w-full py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-semibold shadow-md hover:shadow-lg hover:scale-[1.01] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                        >
-                            {processing ? t('processing') : t('runTool')}
-                            {!processing && <ArrowRightLeft className="w-4 h-4" />}
-                        </button>
                     </div>
 
                     {/* Output Card */}

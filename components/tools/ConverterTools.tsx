@@ -30,31 +30,30 @@ export default function ConverterTools({ type }: ConverterToolsProps) {
         }
     }, [type, rates]);
 
-    const convert = () => {
-        let result = '';
+    useEffect(() => {
+        if (!input || ((type === 'unit-converter' || type === 'currency-converter') && (!fromUnit || !toUnit))) {
+            setOutput('');
+            return;
+        }
 
+        let result = '';
         try {
             switch (type) {
                 case 'unit-converter':
                     result = convertUnit(parseFloat(input), fromUnit, toUnit);
                     break;
-
                 case 'color-converter':
                     result = convertColor(input);
                     break;
-
                 case 'binary-to-text':
                     result = binaryToText(input);
                     break;
-
                 case 'hex-to-decimal':
                     result = parseInt(input.replace('0x', ''), 16).toString();
                     break;
-
                 case 'currency-converter':
                     result = convertCurrency(parseFloat(input), fromUnit, toUnit);
                     break;
-
                 case 'roman-numeral':
                     if (/^[IVXLCDM]+$/i.test(input)) {
                         result = romanToDecimal(input.toUpperCase()).toString();
@@ -62,15 +61,17 @@ export default function ConverterTools({ type }: ConverterToolsProps) {
                         result = decimalToRoman(parseInt(input));
                     }
                     break;
-
                 default:
                     result = input;
             }
-
             setOutput(result);
         } catch (error: any) {
             setOutput('');
         }
+    }, [input, type, fromUnit, toUnit, rates]);
+
+    const convert = () => {
+        // Function kept for reference, logic moved to useEffect
     };
 
     const convertUnit = (value: number, from: string, to: string): string => {
@@ -349,13 +350,6 @@ export default function ConverterTools({ type }: ConverterToolsProps) {
                     </div>
 
                     <div className="flex flex-wrap gap-4 pt-4">
-                        <button
-                            onClick={convert}
-                            disabled={!input || ((type === 'unit-converter' || type === 'currency-converter') && (!fromUnit || !toUnit))}
-                            className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                        >
-                            Convert Now
-                        </button>
                         <button
                             onClick={clearAll}
                             className="px-8 py-4 bg-muted text-foreground border-2 border-border rounded-xl font-bold hover:bg-card transition-all flex items-center gap-2"

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Check, RefreshCw, Copy } from 'lucide-react';
 
 
@@ -16,11 +16,11 @@ export default function TechTools({ type }: TechToolProps) {
     const [loading, setLoading] = useState(false);
     const [copied, setCopied] = useState(false);
 
-    const handleProcess = () => {
-        setLoading(true);
-        setTimeout(() => {
+    useEffect(() => {
+        const process = () => {
             if (type === 'user-agent-parser') {
-                const ua = input || navigator.userAgent;
+                const ua = input || (typeof navigator !== 'undefined' ? navigator.userAgent : '');
+                if (!ua) { setResult(null); return; }
                 setResult({
                     ua: ua,
                     browser: ua.includes('Chrome') ? 'Chrome' : ua.includes('Firefox') ? 'Firefox' : 'Unknown',
@@ -28,12 +28,12 @@ export default function TechTools({ type }: TechToolProps) {
                     mobile: /Mobile|Android|iPhone/i.test(ua) ? 'Yes' : 'No'
                 });
             } else if (type === 'wordpress-password-hash') {
-                // WordPress phpass hashes begin with $P$B. 
-                // This simulates a generated secure hash for migration/testing purposes.
+                if (!input) { setResult(null); return; }
                 const salt = Math.random().toString(36).substring(2, 10);
                 const hash = `$P$B${salt}${Math.random().toString(36).substring(2, 12)}`;
                 setResult(hash);
             } else if (type === 'html-to-jsx') {
+                if (!input) { setResult(null); return; }
                 let jsx = input
                     .replace(/class=/g, 'className=')
                     .replace(/for=/g, 'htmlFor=')
@@ -45,8 +45,10 @@ export default function TechTools({ type }: TechToolProps) {
                     .replace(/style="([^"]+)"/g, (match, p1) => {
                         const styleObj = p1.split(';').filter(Boolean).reduce((acc: any, curr: string) => {
                             const [key, val] = curr.split(':');
-                            const camelKey = key.trim().replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-                            acc[camelKey] = val.trim();
+                            if (key && val) {
+                                const camelKey = key.trim().replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+                                acc[camelKey] = val.trim();
+                            }
                             return acc;
                         }, {});
                         return `style={${JSON.stringify(styleObj)}}`;
@@ -58,8 +60,17 @@ export default function TechTools({ type }: TechToolProps) {
                     .replace(/<input([^>]*)>/g, '<input$1 />');
                 setResult(jsx);
             }
-            setLoading(false);
-        }, 500);
+        };
+
+        const timeoutId = setTimeout(() => {
+            process();
+        }, 300);
+
+        return () => clearTimeout(timeoutId);
+    }, [input, type]);
+
+    const handleProcess = () => {
+        // Kept for reference
     };
 
     const copyToClipboard = () => {
@@ -96,14 +107,6 @@ export default function TechTools({ type }: TechToolProps) {
                         )}
                     </div>
 
-                    <button
-                        onClick={handleProcess}
-                        disabled={loading}
-                        className="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
-                    >
-                        {loading ? <RefreshCw className="w-5 h-5 animate-spin" /> : <Check className="w-5 h-5" />}
-                        Run Tool
-                    </button>
 
                     {result && (
                         <div className="mt-8 pt-8 border-t border-border space-y-4 animate-in slide-in-from-bottom-4 duration-500">

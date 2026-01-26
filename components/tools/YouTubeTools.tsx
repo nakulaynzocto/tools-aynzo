@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Download, Copy, Link as LinkIcon, Play, Settings, RefreshCw, Info, Video, Check } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/utils/cn';
@@ -33,103 +33,100 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
         return (match && match[2].length === 11) ? match[2] : null;
     };
 
-    const handleProcess = () => {
+    useEffect(() => {
         if (!input.trim()) {
+            setResult(null);
             return;
         }
 
-        setLoading(true);
-        // Simulate processing
-        setTimeout(() => {
+        const processTool = () => {
+            switch (type) {
+                case 'youtube-thumbnail-downloader':
+                    const videoId = extractVideoId(input);
+                    if (!videoId) {
+                        setResult(null);
+                        return;
+                    }
+                    setResult({
+                        max: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+                        hd: `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
+                        hq: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+                        mq: `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
+                    });
+                    break;
+
+                case 'youtube-tag-generator':
+                    const keywords = input.split(' ');
+                    const tags = [
+                        ...keywords,
+                        `${input} tutorial`,
+                        `how to ${input}`,
+                        `best ${input}`,
+                        `${input} 2024`,
+                        `${input} guide`,
+                        `${input} review`,
+                        `${input} for beginners`,
+                        `learn ${input}`,
+                        `${input} tips`,
+                        `${input} tricks`,
+                        `${input} explained`
+                    ].join(', ');
+                    setResult(tags);
+                    break;
+
+                case 'youtube-title-generator':
+                    const titles = [
+                        `How to Master ${input} in just 10 Minutes`,
+                        `The Ultimate Guide to ${input} (2024 Edition)`,
+                        `7 Secrets About ${input} No One Tells You`,
+                        `Why ${input} is the Future of Everything`,
+                        `Stop Doing ${input} Wrong! (Watch This)`,
+                        `I tried ${input} for 30 Days - Here's What Happened`,
+                        `${input} 101: Everything You Need to Know`,
+                        `The Best Way to Learn ${input} Fast`
+                    ];
+                    setResult(titles);
+                    break;
+
+                case 'youtube-embed-code-generator':
+                    const embedId = extractVideoId(input);
+                    if (!embedId) {
+                        setResult(null);
+                        return;
+                    }
+                    let src = `https://www.youtube.com/embed/${embedId}?`;
+                    if (settings.autoplay) src += '&autoplay=1';
+                    if (settings.loop) src += '&loop=1';
+                    if (!settings.controls) src += '&controls=0';
+
+                    const code = `<iframe width="560" height="315" src="${src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    setResult(code);
+                    break;
+
+                case 'youtube-timestamp-link-generator':
+                    const timeId = extractVideoId(input);
+                    if (!timeId) {
+                        setResult(null);
+                        return;
+                    }
+                    let timeStr = settings.startTime || '0';
+                    const link = `https://youtu.be/${timeId}?t=${timeStr}`;
+                    setResult(link);
+                    break;
+            }
+        };
+
+        const timeoutId = setTimeout(() => {
             processTool();
-            setLoading(false);
         }, 500);
+
+        return () => clearTimeout(timeoutId);
+    }, [input, type, settings]);
+
+    const handleProcess = () => {
+        // Logic moved to useEffect
     };
 
-    const processTool = () => {
-        switch (type) {
-            case 'youtube-thumbnail-downloader':
-                const videoId = extractVideoId(input);
-                if (!videoId) {
-                    return;
-                }
-                setResult({
-                    max: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
-                    hd: `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
-                    hq: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-                    mq: `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
-                });
-                break;
-
-            case 'youtube-tag-generator':
-                // Mock tag generation for demo purposes (would typically use API)
-                const keywords = input.split(' ');
-                const tags = [
-                    ...keywords,
-                    `${input} tutorial`,
-                    `how to ${input}`,
-                    `best ${input}`,
-                    `${input} 2024`,
-                    `${input} guide`,
-                    `${input} review`,
-                    `${input} for beginners`,
-                    `learn ${input}`,
-                    `${input} tips`,
-                    `${input} tricks`,
-                    `${input} explained`
-                ].join(', ');
-                setResult(tags);
-                break;
-
-            case 'youtube-title-generator':
-                // Mock title generation
-                const titles = [
-                    `How to Master ${input} in just 10 Minutes`,
-                    `The Ultimate Guide to ${input} (2024 Edition)`,
-                    `7 Secrets About ${input} No One Tells You`,
-                    `Why ${input} is the Future of Everything`,
-                    `Stop Doing ${input} Wrong! (Watch This)`,
-                    `I tried ${input} for 30 Days - Here's What Happened`,
-                    `${input} 101: Everything You Need to Know`,
-                    `The Best Way to Learn ${input} Fast`
-                ];
-                setResult(titles);
-                break;
-
-            case 'youtube-embed-code-generator':
-                const embedId = extractVideoId(input);
-                if (!embedId) {
-                    return;
-                }
-                let src = `https://www.youtube.com/embed/${embedId}?`;
-                if (settings.autoplay) src += '&autoplay=1';
-                if (settings.loop) src += '&loop=1';
-                if (!settings.controls) src += '&controls=0';
-
-                const code = `<iframe width="560" height="315" src="${src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-                setResult(code);
-                break;
-
-            case 'youtube-timestamp-link-generator':
-                const timeId = extractVideoId(input);
-                if (!timeId) {
-                    return;
-                }
-                // Assume input is URL, secondary input for time (simplified for now to just append ?t=)
-                // For this specific tool, we might need a richer UI.
-                // Let's assume input string contains URL. We need a second input for time? 
-                // For simplicity in this generic component, let's assume valid Time format in settings if we had it.
-                // Or cleaner: just parse "1m 30s" from a second field? 
-                // Let's stick to a simple version: URL + basic param.
-                // Better: Use `settings.startTime` (e.g. "1m30s" or "90")
-
-                let timeStr = settings.startTime || '0';
-                // Basic parsing: if contains m/s logic could be added, or just raw seconds.
-                const link = `https://youtu.be/${timeId}?t=${timeStr}`;
-                setResult(link);
-                break;
-        }
-    };
 
     const copyToClipboard = (text: string, index?: number) => {
         navigator.clipboard.writeText(text);
@@ -227,16 +224,6 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
                                         {renderSettings()}
                                     </div>
                                 </div>
-                                <button
-                                    onClick={handleProcess}
-                                    disabled={loading}
-                                    className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-[1.25rem] font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
-                                >
-                                    {loading ? <RefreshCw className="w-6 h-6 animate-spin" /> : <Play className="w-6 h-6 shadow-lg" />}
-                                    <span className="text-lg">
-                                        {type === 'youtube-thumbnail-downloader' ? t('fetchThumbnails') : t('generateNow')}
-                                    </span>
-                                </button>
                             </div>
 
                             <div className="p-6 bg-blue-500/5 rounded-2xl border-2 border-blue-500/10 space-y-2">

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Copy, Download, RotateCcw, Check } from 'lucide-react';
 
 import { html as beautifyHtml, css as beautifyCss, js as beautifyJs } from 'js-beautify';
@@ -20,9 +20,13 @@ export default function FormatterTools({ type }: FormatterToolsProps) {
     const [indentSize, setIndentSize] = useState(2);
     const [copied, setCopied] = useState(false);
 
-    const formatCode = () => {
-        let result = '';
+    useEffect(() => {
+        if (!input) {
+            setOutput('');
+            return;
+        }
 
+        let result = '';
         try {
             switch (type) {
                 case 'html-formatter':
@@ -32,43 +36,36 @@ export default function FormatterTools({ type }: FormatterToolsProps) {
                         preserve_newlines: true,
                     });
                     break;
-
                 case 'css-formatter':
                     result = beautifyCss(input, {
                         indent_size: indentSize,
                     });
                     break;
-
                 case 'javascript-formatter':
                     result = beautifyJs(input, {
                         indent_size: indentSize,
                         brace_style: 'collapse',
                     });
                     break;
-
                 case 'xml-formatter':
                     result = formatXML(input, {
                         indentation: ' '.repeat(indentSize),
                         collapseContent: true,
                     });
                     break;
-
                 case 'sql-formatter':
                     result = formatSQL(input, {
                         language: 'sql',
                         tabWidth: indentSize,
                     });
                     break;
-
                 case 'markdown-to-html':
                     result = marked(input) as string;
                     break;
-
                 case 'html-to-markdown':
                     const turndownService = new TurndownService();
                     result = turndownService.turndown(input);
                     break;
-
                 case 'csv-to-json':
                     const csvResult = Papa.parse(input, {
                         header: true,
@@ -76,26 +73,29 @@ export default function FormatterTools({ type }: FormatterToolsProps) {
                     });
                     result = JSON.stringify(csvResult.data, null, indentSize);
                     break;
-
                 case 'json-to-csv':
-                    const jsonData = JSON.parse(input);
-                    const csv = Papa.unparse(jsonData);
-                    result = csv;
+                    try {
+                        const jsonData = JSON.parse(input);
+                        const csv = Papa.unparse(jsonData);
+                        result = csv;
+                    } catch {
+                        result = 'Invalid JSON';
+                    }
                     break;
-
                 case 'code-minifier':
-                    // Simple minification for demo purposes
                     result = input.replace(/\s+/g, ' ').replace(/\n/g, '').trim();
                     break;
-
                 default:
                     result = input;
             }
-
             setOutput(result);
         } catch (error: any) {
             setOutput('');
         }
+    }, [input, type, indentSize]);
+
+    const formatCode = () => {
+        // Function kept for reference
     };
 
     const copyToClipboard = () => {
@@ -213,13 +213,6 @@ export default function FormatterTools({ type }: FormatterToolsProps) {
                                 rows={16}
                                 className="w-full p-4 border-2 border-border rounded-2xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground resize-none leading-relaxed"
                             />
-                            <button
-                                onClick={formatCode}
-                                disabled={!input}
-                                className="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold shadow-xl hover:scale-[1.01] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 border border-white/10"
-                            >
-                                {type.includes('to') ? 'Convert Now' : 'Format Code'}
-                            </button>
                         </div>
 
                         {/* Output Section */}

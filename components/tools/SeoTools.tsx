@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Search, Globe, Share2, FileText, List, Copy, Settings, Code, RefreshCw, Eye, Check, ExternalLink, Info, CheckCircle2 } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
@@ -24,12 +24,12 @@ export default function SeoTools({ type }: SeoToolProps) {
     const [robots, setRobots] = useState({ allAgents: true, allow: '/', disallow: '/admin', sitemap: '' });
     const [sitemap, setSitemap] = useState({ urls: '', frequency: 'monthly', priority: '0.8' });
 
-    const handleGenerate = () => {
-        setLoading(true);
-        setTimeout(() => {
+    useEffect(() => {
+        const generate = () => {
             let output = '';
             switch (type) {
                 case 'meta-tag-generator':
+                    if (!meta.title && !meta.description) { setResult(''); return; }
                     output = `<!-- Primary Meta Tags -->
 <title>${meta.title}</title>
 <meta name="title" content="${meta.title}">
@@ -40,6 +40,7 @@ ${meta.viewport ? '<meta name="viewport" content="width=device-width, initial-sc
                     break;
 
                 case 'open-graph-generator':
+                    if (!og.title && !og.url) { setResult(''); return; }
                     output = `<!-- Open Graph / Facebook -->
 <meta property="og:type" content="${og.type}">
 <meta property="og:url" content="${og.url}">
@@ -50,6 +51,7 @@ ${meta.viewport ? '<meta name="viewport" content="width=device-width, initial-sc
                     break;
 
                 case 'twitter-card-generator':
+                    if (!twitter.title && !twitter.site) { setResult(''); return; }
                     output = `<!-- Twitter -->
 <meta property="twitter:card" content="${twitter.card}">
 <meta property="twitter:title" content="${twitter.title}">
@@ -67,6 +69,7 @@ ${robots.sitemap ? `Sitemap: ${robots.sitemap}` : ''}`;
                     break;
 
                 case 'xml-sitemap-generator':
+                    if (!sitemap.urls) { setResult(''); return; }
                     const urlList = sitemap.urls.split('\n').filter(u => u.trim());
                     const items = urlList.map(url => `  <url>
     <loc>${url.trim()}</loc>
@@ -80,8 +83,13 @@ ${items}
                     break;
             }
             setResult(output.trim());
-            setLoading(false);
-        }, 300);
+        };
+
+        generate();
+    }, [type, meta, og, twitter, robots, sitemap]);
+
+    const handleGenerate = () => {
+        // Logic moved to useEffect
     };
 
     const copyCode = () => {
@@ -174,12 +182,6 @@ ${items}
                             )}
                         </section>
 
-                        <button
-                            onClick={handleGenerate}
-                            className="w-full py-5 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-[1.5rem] font-black shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-3"
-                        >
-                            <Code className="w-5 h-5" /> GENERATE TAGS
-                        </button>
                     </div>
 
                     {/* Preview/Output Pane */}

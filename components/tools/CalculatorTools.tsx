@@ -19,11 +19,11 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
     const [emi, setEmi] = useState({ principal: '', rate: '', tenure: '', type: 'months' });
     const [discount, setDiscount] = useState({ price: '', discount: '', tax: '0' });
 
-    const calculate = () => {
+    useEffect(() => {
         let res: any = null;
         switch (type) {
             case 'age-calculator':
-                if (!ageDate) return;
+                if (!ageDate) break;
                 const birthDate = new Date(ageDate);
                 const today = new Date();
                 let years = today.getFullYear() - birthDate.getFullYear();
@@ -44,7 +44,7 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
             case 'bmi-calculator':
                 const h = parseFloat(bmi.height);
                 const w = parseFloat(bmi.weight);
-                if (!h || !w) return;
+                if (!h || !w) break;
                 const heightInMeters = bmi.unit === 'metric' ? h / 100 : h * 0.0254;
                 const weightInKg = bmi.unit === 'metric' ? w : w * 0.453592;
                 const score = weightInKg / (heightInMeters * heightInMeters);
@@ -59,7 +59,7 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
             case 'percentage-calculator':
                 const val1 = parseFloat(percent.v1);
                 const val2 = parseFloat(percent.v2);
-                if (isNaN(val1) || isNaN(val2)) return;
+                if (isNaN(val1) || isNaN(val2)) break;
                 if (percent.type === 'percentage-of') res = (val1 / 100) * val2;
                 else if (percent.type === 'is-what-percentage') res = (val1 / val2) * 100;
                 else if (percent.type === 'percentage-increase') res = ((val2 - val1) / val1) * 100;
@@ -69,7 +69,7 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
             case 'gst-calculator':
                 const amt = parseFloat(gst.amount);
                 const r = parseFloat(gst.rate);
-                if (!amt || !r) return;
+                if (!amt || !r) break;
                 if (gst.type === 'exclusive') {
                     const tax = (amt * r) / 100;
                     res = { tax: tax.toFixed(2), total: (amt + tax).toFixed(2) };
@@ -83,7 +83,7 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
                 const p = parseFloat(emi.principal);
                 const rate = parseFloat(emi.rate) / 12 / 100;
                 const n = emi.type === 'years' ? parseFloat(emi.tenure) * 12 : parseFloat(emi.tenure);
-                if (!p || !rate || !n) return;
+                if (!p || !rate || !n) break;
                 const emiVal = (p * rate * Math.pow(1 + rate, n)) / (Math.pow(1 + rate, n) - 1);
                 const totalPayment = emiVal * n;
                 res = {
@@ -97,7 +97,7 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
                 const op = parseFloat(discount.price);
                 const ds = parseFloat(discount.discount);
                 const tx = parseFloat(discount.tax);
-                if (!op) return;
+                if (!op) break;
                 const savings = (op * ds) / 100;
                 const discountedPrice = op - savings;
                 const taxAmt = (discountedPrice * tx) / 100;
@@ -109,6 +109,10 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
                 break;
         }
         setResult(res);
+    }, [type, ageDate, bmi, percent, gst, emi, discount]);
+
+    const calculate = () => {
+        // Logic moved to useEffect
     };
 
     const copy = () => {
@@ -237,9 +241,6 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
                             </div>
                         )}
 
-                        <button onClick={calculate} className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3">
-                            <RefreshCw size={20} /> CALCULATE NOW
-                        </button>
                     </div>
 
                     {/* RESULTS */}

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { List, RefreshCw, Copy, Settings, Info, Hash } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
@@ -17,66 +17,73 @@ export default function KeywordTools({ type }: KeywordToolProps) {
     const [loading, setLoading] = useState(false);
     const [copied, setCopied] = useState(false);
 
-    const handleProcess = () => {
+    useEffect(() => {
         if (!input.trim()) {
+            setResult(null);
             return;
         }
-        setLoading(true);
-        setTimeout(() => {
+
+        const processTool = () => {
+            switch (type) {
+                case 'keyword-density-checker':
+                    const words = input.toLowerCase().match(/\b\w+\b/g) || [];
+                    const totalWords = words.length;
+                    const frequency: { [key: string]: number } = {};
+                    words.forEach(w => {
+                        if (w.length > 3) frequency[w] = (frequency[w] || 0) + 1;
+                    });
+                    const density = Object.entries(frequency)
+                        .map(([word, count]) => ({
+                            word,
+                            count,
+                            percent: ((count / totalWords) * 100).toFixed(2)
+                        }))
+                        .sort((a, b) => b.count - a.count)
+                        .slice(0, 20);
+                    setResult(density);
+                    break;
+
+                case 'keyword-cleaner':
+                    const cleanList = input
+                        .split('\n')
+                        .map(l => l.trim())
+                        .filter(l => l) // Remove empty
+                        .filter((l, i, self) => self.indexOf(l) === i) // Remove duplicates
+                        .sort()
+                        .join('\n');
+                    setResult(cleanList);
+                    break;
+
+                case 'long-tail-keyword-generator':
+                    const seed = input.trim();
+                    const modifiers = ['best', 'cheap', 'guide', 'review', 'how to', 'tutorial', '2024', 'free', 'online', 'vs'];
+                    const generated = modifiers.map(m => `${m} ${seed}`).concat(modifiers.map(m => `${seed} ${m}`));
+                    setResult(generated.join('\n'));
+                    break;
+
+                case 'slug-generator':
+                    const slug = input
+                        .toLowerCase()
+                        .trim()
+                        .replace(/[^\w\s-]/g, '')
+                        .replace(/[\s_-]+/g, '-')
+                        .replace(/^-+|-+$/g, '');
+                    setResult(slug);
+                    break;
+            }
+        };
+
+        const timeoutId = setTimeout(() => {
             processTool();
-            setLoading(false);
-        }, 500);
+        }, 300);
+
+        return () => clearTimeout(timeoutId);
+    }, [input, type]);
+
+    const handleProcess = () => {
+        // Kept for reference
     };
 
-    const processTool = () => {
-        switch (type) {
-            case 'keyword-density-checker':
-                const words = input.toLowerCase().match(/\b\w+\b/g) || [];
-                const totalWords = words.length;
-                const frequency: { [key: string]: number } = {};
-                words.forEach(w => {
-                    if (w.length > 3) frequency[w] = (frequency[w] || 0) + 1;
-                });
-                const density = Object.entries(frequency)
-                    .map(([word, count]) => ({
-                        word,
-                        count,
-                        percent: ((count / totalWords) * 100).toFixed(2)
-                    }))
-                    .sort((a, b) => b.count - a.count)
-                    .slice(0, 20);
-                setResult(density);
-                break;
-
-            case 'keyword-cleaner':
-                const cleanList = input
-                    .split('\n')
-                    .map(l => l.trim())
-                    .filter(l => l) // Remove empty
-                    .filter((l, i, self) => self.indexOf(l) === i) // Remove duplicates
-                    .sort()
-                    .join('\n');
-                setResult(cleanList);
-                break;
-
-            case 'long-tail-keyword-generator':
-                const seed = input.trim();
-                const modifiers = ['best', 'cheap', 'guide', 'review', 'how to', 'tutorial', '2024', 'free', 'online', 'vs'];
-                const generated = modifiers.map(m => `${m} ${seed}`).concat(modifiers.map(m => `${seed} ${m}`));
-                setResult(generated.join('\n'));
-                break;
-
-            case 'slug-generator':
-                const slug = input
-                    .toLowerCase()
-                    .trim()
-                    .replace(/[^\w\s-]/g, '')
-                    .replace(/[\s_-]+/g, '-')
-                    .replace(/^-+|-+$/g, '');
-                setResult(slug);
-                break;
-        }
-    };
 
     const copyToClipboard = () => {
         const textToCopy = typeof result === 'string' ? result : JSON.stringify(result, null, 2);
@@ -110,16 +117,6 @@ export default function KeywordTools({ type }: KeywordToolProps) {
                                         placeholder={type === 'keyword-cleaner' ? "keyword 1\nkeyword 2..." : "Type or paste your content here..."}
                                     />
                                 </div>
-                                <button
-                                    onClick={handleProcess}
-                                    disabled={loading}
-                                    className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-[1.25rem] font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
-                                >
-                                    {loading ? <RefreshCw className="w-6 h-6 animate-spin" /> : <List className="w-6 h-6 shadow-lg" />}
-                                    <span className="text-lg">
-                                        {type === 'keyword-density-checker' ? 'Analyze Density' : 'Process Keywords'}
-                                    </span>
-                                </button>
                             </div>
 
                             <div className="p-6 bg-blue-500/5 rounded-2xl border-2 border-blue-500/10 space-y-2">

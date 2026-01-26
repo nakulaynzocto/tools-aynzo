@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Send, ExternalLink, RefreshCw, Copy, Check, Settings, X } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
@@ -26,26 +26,31 @@ export default function SocialLinkTools({ type }: SocialLinkToolProps) {
     const [urls, setUrls] = useState('');
     const [hashtag, setHashtag] = useState('');
 
-    const handleProcess = () => {
-        setLoading(true);
-        setTimeout(() => {
+    useEffect(() => {
+        if (type === 'url-opener') return;
+
+        const process = () => {
             let output = '';
             switch (type) {
                 case 'whatsapp-link-generator':
+                    if (!whatsapp.phone) { setResult(null); return; }
                     const cleanPhone = whatsapp.phone.replace(/[^\d]/g, '');
                     output = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(whatsapp.message)}`;
                     setResult(output);
                     break;
                 case 'telegram-link-generator':
+                    if (!telegram) { setResult(null); return; }
                     const username = telegram.replace('@', '').trim();
                     output = `https://t.me/${username}`;
                     setResult(output);
                     break;
                 case 'paypal-link-generator':
+                    if (!paypal.email) { setResult(null); return; }
                     output = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${paypal.email}&item_name=${encodeURIComponent(paypal.item)}&amount=${paypal.amount}&currency_code=${paypal.currency}`;
                     setResult(output);
                     break;
                 case 'instagram-hashtag-generator':
+                    if (!hashtag) { setResult(null); return; }
                     const baseTags = hashtag.split(' ').filter(t => t.length > 2);
                     const mockTags = baseTags.map(t => [
                         `#${t}`, `#${t}life`, `#best${t}`, `#${t}gram`, `#${t}oftheday`, `#${t}photography`, `#love${t}`
@@ -54,24 +59,29 @@ export default function SocialLinkTools({ type }: SocialLinkToolProps) {
                     setResult(output);
                     break;
                 case 'email-validator':
+                    if (!email) { setResult(null); return; }
                     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
                     setResult(isValid ? 'Valid Email Address ✅' : 'Invalid Email Address ❌');
                     break;
-                case 'url-opener':
-                    const urlList = urls.split('\n').filter(u => u.trim());
-                    if (urlList.length > 0) {
-                        // Check popup blocker
-                        const newWindow = window.open(urlList[0], '_blank');
-                        if (!newWindow) {
-                        } else {
-                            urlList.forEach(url => window.open(url.trim(), '_blank'));
-                            setResult(`Attempted to open ${urlList.length} links.`);
-                        }
-                    }
-                    break;
             }
-            setLoading(false);
-        }, 500);
+        };
+
+        process();
+    }, [type, whatsapp, telegram, paypal, hashtag, email]);
+
+    const handleProcess = () => {
+        if (type === 'url-opener') {
+            const urlList = urls.split('\n').filter(u => u.trim());
+            if (urlList.length > 0) {
+                const newWindow = window.open(urlList[0], '_blank');
+                if (newWindow) {
+                    urlList.forEach((url, i) => {
+                        if (i > 0) window.open(url.trim(), '_blank');
+                    });
+                    setResult(`Attempted to open ${urlList.length} links.`);
+                }
+            }
+        }
     };
 
     const copyToClipboard = () => {
@@ -172,16 +182,18 @@ export default function SocialLinkTools({ type }: SocialLinkToolProps) {
                                 </h3>
                                 {renderForm()}
                             </div>
-                            <button
-                                onClick={handleProcess}
-                                disabled={loading}
-                                className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
-                            >
-                                {loading ? <RefreshCw className="w-6 h-6 animate-spin" /> : <Check className="w-6 h-6" />}
-                                <span className="text-lg">
-                                    {type === 'email-validator' ? 'Validate Now' : 'Generate Link'}
-                                </span>
-                            </button>
+                            {type === 'url-opener' && (
+                                <button
+                                    onClick={handleProcess}
+                                    disabled={loading}
+                                    className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
+                                >
+                                    {loading ? <RefreshCw className="w-6 h-6 animate-spin" /> : <Check className="w-6 h-6" />}
+                                    <span className="text-lg">
+                                        Open All Links
+                                    </span>
+                                </button>
+                            )}
                         </div>
 
                         {/* Result Section */}

@@ -186,10 +186,12 @@ export default function WebTools({ type }: WebToolProps) {
         }
     };
 
-    const generateHtaccess = () => {
-        const code = `# HTTP Redirect\nRedirect ${redirect.type} ${redirect.from} ${redirect.to}`;
-        setResult(code);
-    };
+    useEffect(() => {
+        if (type === 'htaccess-redirect-generator') {
+            const code = `# HTTP Redirect\nRedirect ${redirect.type} ${redirect.from} ${redirect.to}`;
+            setResult(code);
+        }
+    }, [type, redirect]);
 
     const copy = (text: string) => {
         navigator.clipboard.writeText(text);
@@ -278,9 +280,6 @@ export default function WebTools({ type }: WebToolProps) {
                                     <input value={redirect.to} onChange={e => setRedirect({ ...redirect, to: e.target.value })} className="w-full p-5 border-2 border-border rounded-2xl bg-input font-bold" placeholder="https://new-link.com" />
                                 </div>
                             </div>
-                            <button onClick={generateHtaccess} className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3">
-                                <RefreshCw size={20} /> GENERATE REDIRECT CODE
-                            </button>
                             {result && (
                                 <div className="space-y-4 animate-in slide-in-from-bottom-10">
                                     <div className="flex justify-between items-center px-2">

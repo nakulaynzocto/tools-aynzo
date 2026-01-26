@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Code, Link2, Copy, CheckCircle2, Download, FileJson, FileText, FileCode, Minimize2, Maximize2, AlertCircle, X } from 'lucide-react';
 
 
@@ -22,12 +22,68 @@ export default function DevTools({ type }: DevToolsProps) {
     type: null
   });
 
+  useEffect(() => {
+    if (type === 'url-encoder-decoder') {
+      processURL(input, mode);
+    } else if (type === 'json-formatter') {
+      if (!input.trim()) {
+        setOutput('');
+        setValidationError('');
+        return;
+      }
+      const validation = validateJSON(input);
+      if (!validation.valid) {
+        setValidationError(validation.error || 'Invalid JSON');
+        setOutput('');
+        return;
+      }
+      setValidationError('');
+      try {
+        const parsed = JSON.parse(input);
+        if (jsonMode === 'beautify') {
+          setOutput(JSON.stringify(parsed, null, 2));
+        } else {
+          setOutput(JSON.stringify(parsed));
+        }
+      } catch (e: any) {
+        setValidationError(e.message);
+      }
+    }
+  }, [input, mode, type, jsonMode]);
+
+  const handleInputChange = (val: string) => {
+    setInput(val);
+  };
+
+  const handleModeChange = (newMode: 'encode' | 'decode') => {
+    setMode(newMode);
+    if (type === 'url-encoder-decoder') {
+      processURL(input, newMode);
+    }
+  };
+
   const validateJSON = (jsonString: string): { valid: boolean, error?: string } => {
     try {
       JSON.parse(jsonString);
       return { valid: true };
     } catch (e: any) {
       return { valid: false, error: e.message };
+    }
+  };
+
+  const processURL = (val: string, currentMode: 'encode' | 'decode') => {
+    if (!val.trim()) {
+      setOutput('');
+      return;
+    }
+    if (currentMode === 'encode') {
+      setOutput(encodeURIComponent(val));
+    } else {
+      try {
+        setOutput(decodeURIComponent(val));
+      } catch {
+        setOutput('Invalid encoded URL');
+      }
     }
   };
 
@@ -52,15 +108,6 @@ export default function DevTools({ type }: DevToolsProps) {
         }
       } catch (e: any) {
         setValidationError(e.message);
-      }
-    } else {
-      if (mode === 'encode') {
-        setOutput(encodeURIComponent(input));
-      } else {
-        try {
-          setOutput(decodeURIComponent(input));
-        } catch {
-        }
       }
     }
   };
@@ -221,7 +268,7 @@ export default function DevTools({ type }: DevToolsProps) {
                     ? 'bg-primary text-white shadow-md'
                     : 'text-muted-foreground hover:text-foreground hover:bg-card'
                     }`}
-                  onClick={() => setMode('encode')}
+                  onClick={() => handleModeChange('encode')}
                 >
                   Encode
                 </button>
@@ -230,30 +277,13 @@ export default function DevTools({ type }: DevToolsProps) {
                     ? 'bg-primary text-white shadow-md'
                     : 'text-muted-foreground hover:text-foreground hover:bg-card'
                     }`}
-                  onClick={() => setMode('decode')}
+                  onClick={() => handleModeChange('decode')}
                 >
                   Decode
                 </button>
               </div>
             )}
 
-            <button
-              onClick={handleAction}
-              disabled={!input.trim()}
-              className="px-6 py-3 bg-primary text-white rounded-xl hover:shadow-xl transition-all font-bold disabled:opacity-50 disabled:cursor-not-allowed ml-auto flex items-center gap-2 text-sm"
-            >
-              {type === 'json-formatter' ? (
-                <>
-                  <Code className="h-4 w-4" />
-                  {jsonMode === 'beautify' ? 'Beautify' : 'Minify'} JSON
-                </>
-              ) : (
-                <>
-                  <Link2 className="h-4 w-4" />
-                  {mode === 'encode' ? 'Encode URL' : 'Decode URL'}
-                </>
-              )}
-            </button>
 
             {type === 'json-formatter' && (
               <button
@@ -328,7 +358,7 @@ export default function DevTools({ type }: DevToolsProps) {
                       : 'Enter encoded URL to decode...'
                 }
                 value={input}
-                onChange={e => setInput(e.target.value)}
+                onChange={e => handleInputChange(e.target.value)}
               />
             </div>
 
