@@ -12,6 +12,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { RelatedTools } from '@/components/RelatedTools';
 import { ShareButtons } from '@/components/ShareButtons';
 import Script from 'next/script';
+import { generateProgrammaticMetadata } from '@/utils/seo-utils';
 
 const ImageTools = dynamic(() => import('@/components/tools/ImageTools'));
 const PdfTools = dynamic(() => import('@/components/tools/PdfTools'));
@@ -50,14 +51,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const tTools = await getTranslations('Tools');
     const seo = getToolSEO(params.slug);
+    const fallbackSeo = generateProgrammaticMetadata(params.slug, params.locale);
 
-    // Try to get localized strings from Tools.[slug]
+    // 1. Priority: Localized strings from en.json (Tools.[slug])
+    // 2. Secondary: Hardcoded data from lib/seo.ts
+    // 3. Tertiary: Programmatic generated metadata (New)
+    // 4. Final: Basic fallback
+
     const name = tTools.has(`${params.slug}.name`) ? tTools(`${params.slug}.name`) : (seo?.h1 || params.slug);
-    const localizedTitle = tTools.has(`${params.slug}.seoTitle`) ? tTools(`${params.slug}.seoTitle`) : seo?.title;
-    const localizedDesc = tTools.has(`${params.slug}.seoDescription`) ? tTools(`${params.slug}.seoDescription`) : seo?.description;
-    const localizedKeywords = tTools.has(`${params.slug}.seoKeywords`) ? tTools(`${params.slug}.seoKeywords`) : seo?.keywords;
 
-    // Final fallback if nothing exists
+    const localizedTitle = tTools.has(`${params.slug}.seoTitle`) ? tTools(`${params.slug}.seoTitle`) : (seo?.title || fallbackSeo?.title);
+    const localizedDesc = tTools.has(`${params.slug}.seoDescription`) ? tTools(`${params.slug}.seoDescription`) : (seo?.description || fallbackSeo?.description);
+    const localizedKeywords = tTools.has(`${params.slug}.seoKeywords`) ? tTools(`${params.slug}.seoKeywords`) : (seo?.keywords || fallbackSeo?.keywords);
+
+    // Final fallback if nothing exists (should be covered by fallbackSeo now)
     const finalTitle = localizedTitle || `Free Online ${name} | AYNZO TOOLS`;
     const finalDesc = localizedDesc || `Use our free online ${name} tool. Fast, secure, and easy to use.`;
     const finalKeywords = localizedKeywords || `${name.toLowerCase()}, online tools, free online ${name.toLowerCase()}`;

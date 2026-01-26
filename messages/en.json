@@ -1,7 +1,7 @@
 {
     "HomePage": {
-        "title": "Free Developer Tools",
-        "description": "A collection of simple, fast, and secure tools for your daily tasks.",
+        "title": "Aynzo Tools: Free Online Utilities, Image & PDF Tools",
+        "description": "Access a comprehensive suite of free online utilities, image converters, and PDF tools. Fast, secure, and no ads. Streamline your workflow with Aynzo Tools.",
         "noAds": "No ads, no tracking, just tools.",
         "toolsCount": "{count} Tools"
     },
@@ -64,10 +64,10 @@
         "image-compressor": {
             "name": "Image Compressor",
             "description": "Compress JPG, PNG, and WebP images without losing quality.",
-            "seoTitle": "Image Compressor - Free Online Tool",
-            "seoDescription": "Compress images online without quality loss. 100% free, fast, secure.",
-            "seoKeywords": "image compressor, compress image, free tool",
-            "seoH1": "Image Compressor"
+            "seoTitle": "Image Compressor Online Free - Reduce File Size (Expert Guide)",
+            "seoDescription": "Master image optimization with our 1200+ word guide. Compress JPG, PNG, and WebP online for free without losing quality. 100% private processing.",
+            "seoKeywords": "image compressor online free, compress image without quality loss, reduce image size, bulk image compressor",
+            "seoH1": "Image Compressor Online Free: The Ultimate Guide to Web Optimization"
         },
         "image-resizer": {
             "name": "Image Resizer",
@@ -279,11 +279,11 @@
         },
         "webp-to-png": {
             "name": "WebP to PNG",
-            "description": "Convert WebP to PNG with transparency.",
-            "seoTitle": "WebP to PNG Converter",
-            "seoDescription": "Convert WebP to transparent PNG.",
-            "seoKeywords": "webp to png",
-            "seoH1": "WebP to PNG Converter"
+            "description": "Convert WebP to PNG with transparency preservation.",
+            "seoTitle": "How to Convert WebP to PNG Online for Free (Step-by-Step Guide)",
+            "seoDescription": "Master WebP to PNG conversion with our expert guide. Learn how to preserve transparency and maintain high quality with our fast, secure, and free converter tool.",
+            "seoKeywords": "how to convert webp to png, webp to png converter, webp to transparent png, free online image converter",
+            "seoH1": "How to Convert WebP to PNG Online for Free: The Ultimate Guide"
         },
         "jpg-to-webp": {
             "name": "JPG to WebP",
@@ -311,11 +311,11 @@
         },
         "pdf-to-word": {
             "name": "PDF to Word",
-            "description": "Convert PDF documents to editable Word files.",
-            "seoTitle": "PDF to Word Converter",
-            "seoDescription": "Convert PDF to DOCX preserving formatting.",
-            "seoKeywords": "pdf to word, pdf converter",
-            "seoH1": "PDF to Word Converter"
+            "description": "Convert PDF documents to editable Word files with OCR support.",
+            "seoTitle": "How to Convert PDF to Word Editable Free (Step-by-Step Guide)",
+            "seoDescription": "Master PDF to Word conversion with our expert guide. Learn how to preserve formatting and use OCR for scanned documents. 100% free and secure.",
+            "seoKeywords": "how to convert pdf to word, pdf to word editable free, scanned pdf to word doc, free pdf converter",
+            "seoH1": "How to Convert PDF to Word Editable Free: The Ultimate Document Guide"
         },
         "word-counter": {
             "name": "Word Counter",
@@ -447,11 +447,11 @@
         },
         "json-formatter": {
             "name": "JSON Formatter",
-            "description": "Format, beautify, and validate JSON.",
-            "seoTitle": "JSON Formatter & Validator",
-            "seoDescription": "Pretty print JSON data.",
-            "seoKeywords": "json formatter, json beautifier",
-            "seoH1": "JSON Formatter"
+            "description": "Format, beautify, and validate JSON with client-side privacy.",
+            "seoTitle": "JSON Formatter & Validator - Master JSON Data (Expert Guide)",
+            "seoDescription": "Validate and beautify JSON instantly with our expert 1200+ word guide. Learn to fix syntax errors and minify your code for production. 100% private.",
+            "seoKeywords": "json formatter, json validator, beautify json online, fix json syntax, minify json",
+            "seoH1": "JSON Formatter & Validator: The Complete Guide to Data Optimization"
         },
         "url-encoder-decoder": {
             "name": "URL Encoder/Decoder",

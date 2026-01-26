@@ -16,14 +16,13 @@ export function RelatedTools({ currentSlug, category }: RelatedToolsProps) {
     // Filter tools in the same category first (Priority 1)
     const related = tools
         .filter(t => t.category === category && t.slug !== currentSlug)
-        .slice(0, 3); // Top 3 Related
+        .slice(0, 6); // Top 6 Related
 
     // If we need more, get popular tools from other categories (Priority 2)
-    if (related.length < 3) {
+    if (related.length < 6) {
         const others = tools
             .filter(t => t.category !== category && t.slug !== currentSlug)
-            // Fix Hydration Error: Removed Math.random(). Use deterministic sort or simple slice.
-            .slice(0, 3 - related.length);
+            .slice(0, 6 - related.length);
         related.push(...others);
     }
 

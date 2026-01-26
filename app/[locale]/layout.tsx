@@ -95,16 +95,47 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        {/* 
-          GOOGLE ADSENSE PLACEHOLDER 
-          When you get your AdSense Client ID (e.g., ca-pub-xxxxxxxxxxx), 
-          uncomment the lines below and replace 'YOUR_CLIENT_ID'
-        */}
-        {/* <script 
-            async 
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_CLIENT_ID"
-            crossOrigin="anonymous"
-        /> */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Aynzo Tools",
+              "url": "https://tools.aynzo.com",
+              "logo": "https://tools.aynzo.com/logo.png",
+              "sameAs": [
+                "https://www.facebook.com/profile.php?id=61579388700386",
+                "https://www.instagram.com/aynzo.world",
+                "https://x.com/aynzoworld",
+                "https://www.linkedin.com/company/aynzo/",
+                "https://www.youtube.com/channel/UC7lY7bl4eALJv4oUwXpfGMg"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-86999-66076",
+                "contactType": "customer service",
+                "email": "support@aynzo.com"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Aynzo Tools",
+              "url": "https://tools.aynzo.com",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://tools.aynzo.com/en?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>

@@ -7,24 +7,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     let allPages: MetadataRoute.Sitemap = [];
 
+    const alternateLanguages = (path: string) => {
+        const languages: Record<string, string> = {};
+        locales.forEach((l) => {
+            languages[l] = `${baseUrl}/${l}${path}`;
+        });
+        return { languages };
+    };
+
     locales.forEach((locale) => {
         // Home page for this locale
         allPages.push({
             url: `${baseUrl}/${locale}`,
             lastModified: new Date(),
-            changeFrequency: 'daily' as const,
+            changeFrequency: 'daily',
             priority: 1,
+            alternates: alternateLanguages(''),
         });
 
         // All tools for this locale
-        const toolPages = tools.map((tool) => ({
-            url: `${baseUrl}/${locale}/tools/${tool.slug}`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly' as const,
-            priority: 0.8,
-        }));
-
-        allPages = [...allPages, ...toolPages];
+        tools.forEach((tool) => {
+            allPages.push({
+                url: `${baseUrl}/${locale}/tools/${tool.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.8,
+                alternates: alternateLanguages(`/tools/${tool.slug}`),
+            });
+        });
     });
 
     return allPages;

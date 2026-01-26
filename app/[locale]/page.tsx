@@ -112,10 +112,6 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                 </span>
               </div>
 
-              <div className="flex items-center gap-3 border-b border-border pb-4 hidden">
-                {/* This hidden block is just to avoid unused icon imports being removed by checkers if I used them directly */}
-              </div>
-
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {categoryTools.map((tool) => (
                   <ToolCard
@@ -133,6 +129,72 @@ export default function Home({ params: { locale } }: { params: { locale: string 
           );
         })}
       </div>
+
+      {/* SEO Content Section */}
+      {locale === 'en' && (
+        <section className="w-full px-6 max-w-5xl mx-auto py-20 border-t border-border mt-20">
+          <div className="prose prose-invert prose-blue max-w-none">
+            <h2 className="text-3xl font-bold text-foreground mb-8">Empower Your Digital Workflow with Aynzo Tools</h2>
+
+            <p className="text-lg text-muted-foreground mb-6">
+              Welcome to <strong>Aynzo Tools</strong>, your ultimate destination for high-quality, <strong>free online tools</strong> designed to simplify your daily digital tasks. In a world where productivity is paramount, we provide a clean, fast, and secure environment to handle everything from complex file conversions to simple text formatting. Our mission is to offer a professional "utilities-as-a-service" platform that eliminates the need for expensive software or clunky, ad-ridden alternatives.
+            </p>
+
+            <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">A Comprehensive Suite of Online Utilities</h3>
+            <p className="text-muted-foreground mb-6">
+              At Aynzo Tools, we categorize our offerings to help you find exactly what you need in seconds:
+            </p>
+            <ul className="space-y-4 text-muted-foreground mb-8">
+              <li>
+                <strong className="text-foreground">Image Converter Online & Editors:</strong> Our image suite is built for speed. Whether you need an <strong>image converter online</strong> to switch between JPG, PNG, and WebP, or you need to compress photos for web optimization, we’ve got you covered. You can also crop, rotate, and add filters with zero quality loss.
+              </li>
+              <li>
+                <strong className="text-foreground">Essential PDF Tools:</strong> Documents shouldn't be a hassle. Our <strong className="text-foreground">pdf tools free</strong> of charge allow you to convert PDFs to Word, merge files, or extract images without compromising document integrity.
+              </li>
+              <li>
+                <strong className="text-foreground">Text & Coding Utilities:</strong> For developers and writers, we offer advanced text formatters, case converters, and code minifiers. Validate your JSON, beautify your CSS, or convert Markdown to HTML with a single click.
+              </li>
+              <li>
+                <strong className="text-foreground">SEO & Social Media Tools:</strong> Rank higher and share better. Use our meta-tag generators, keyword density checkers, and YouTube thumbnail downloaders to gain a competitive edge in search results.
+              </li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">Why Choose Aynzo Tools?</h3>
+            <p className="text-muted-foreground mb-6">
+              The internet is full of "free" sites that track your data or bombard you with intrusive ads. Aynzo Tools is different. We prioritize <strong>Privacy and Security</strong>, ensuring that your files are processed locally or deleted immediately after use. Our platform is <strong>100% Ad-Free</strong>, meaning you can focus on your work without distractions. Every tool is optimized for <strong>Blazing Fast Performance</strong>, using the latest web technologies to deliver results in milliseconds.
+            </p>
+
+            <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">Who is Aynzo Tools For?</h3>
+            <p className="text-muted-foreground mb-6">
+              Our platform is meticulously crafted for:
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8">
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">✓</span>
+                <span><strong>Developers:</strong> Quickly debugging code, formatting data, or generating hashes.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">✓</span>
+                <span><strong>Content Creators:</strong> Optimizing images, SEO analysis, and social assets.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">✓</span>
+                <span><strong>Students & Professionals:</strong> Converting documents and quick calculations.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">✓</span>
+                <span><strong>Everyday Users:</strong> Simple <strong>online utilities tools</strong> that just work.</span>
+              </li>
+            </ul>
+
+            <div className="bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12">
+              <p className="text-lg font-medium text-foreground italic">
+                "Stop jumping between dozens of tabs. Bookmark Aynzo Tools today and experience the power of a professional tool suite right in your browser."
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }
