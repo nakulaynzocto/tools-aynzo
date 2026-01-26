@@ -14,6 +14,7 @@ export function ToolInfoSection({ name, description, content }: ToolInfoSectionP
                 <div
                     className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground"
                     dangerouslySetInnerHTML={{ __html: content }}
+                    suppressHydrationWarning={true}
                 />
             ) : (
                 <>
