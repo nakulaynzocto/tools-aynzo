@@ -68,7 +68,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       }
     },
     icons: {
-      icon: '/logo.png',
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/logo.png', type: 'image/png' },
+      ],
       shortcut: '/logo.png',
       apple: '/logo.png',
     }

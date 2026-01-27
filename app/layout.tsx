@@ -8,7 +8,10 @@ export const metadata: Metadata = {
   title: "AYNZO TOOLS - Professional Online Tools",
   description: "Fast, secure, and free online tools for developers and creators.",
   icons: {
-    icon: '/logo.png', // Explicitly use the brand logo for favicon too if desired, or keep favicon.ico
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo.png', type: 'image/png' },
+    ],
     shortcut: '/logo.png',
     apple: '/logo.png',
   },
