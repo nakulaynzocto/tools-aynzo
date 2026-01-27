@@ -323,10 +323,10 @@ export default function WebTools({ type }: WebToolProps) {
                                         </div>
                                     </div>
                                     <div className="flex gap-6">
-                                        <button onClick={() => copy(result)} className={`px-12 py-5 border-2 rounded-[1.25rem] font-black transition-all flex items-center gap-3 text-sm shadow-xl ${copied ? 'bg-emerald-500/10 border-emerald-500 text-emerald-500' : 'bg-card border-border hover:border-primary'}`}>
+                                        <button onClick={() => copy(result)} className={`px-12 py-5 border-2 rounded-[1.25rem] font-black transition-all flex items-center gap-3 text-sm shadow-xl ${copied ? 'bg-emerald-500/10 border-emerald-500 text-emerald-500' : 'bg-card border-primary/20 text-primary hover:border-primary hover:bg-primary/5'}`}>
                                             {copied ? <CheckCircle2 size={20} /> : <Copy size={20} />} {copied ? 'IP COPIED' : 'COPY IP'}
                                         </button>
-                                        <button onClick={fetchIp} className="px-12 py-5 bg-primary text-white rounded-[1.25rem] font-black shadow-xl hover:scale-105 transition-all flex items-center gap-3 text-sm">
+                                        <button onClick={fetchIp} className="px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-[1.25rem] font-black shadow-xl hover:scale-105 transition-all flex items-center gap-3 text-sm">
                                             <RefreshCw size={20} /> REFRESH
                                         </button>
                                     </div>
