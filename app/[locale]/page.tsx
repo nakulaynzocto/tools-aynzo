@@ -82,7 +82,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
   return (
     <div className="space-y-16 pb-20">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
+      <section className="relative py-8 md:py-20 px-4 overflow-hidden">
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary opacity-[0.03]"></div>
 

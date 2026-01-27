@@ -4,46 +4,74 @@
 
 @layer base {
   :root {
-    /* Pure Dark Theme as Baseline */
-    /* Premium Midnight Blue Theme */
-    --background: #0B1120; /* Deep Midnight Blue instead of Pitch Black */
-    --foreground: #e2e8f0;
+    /* Aynzo-aligned palette for Safein (Reference) */
+    --background: #ffffff;
+    --foreground: #161718;
+    --card: #ffffff;
+    --card-foreground: #161718;
+    --popover: #ffffff;
+    --popover-foreground: #161718;
+    --primary: #074463;
+    /* deep brand blue */
+    --primary-foreground: #ffffff;
+    --primary-light: #98c7dd;
+    --secondary: #e9eff6;
+    --secondary-foreground: #074463;
+    --muted: #e9eff6;
+    --muted-foreground: #6b7280;
+    --accent: #3882a5;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #e5e7eb;
+    --input: #ffffff;
+    --ring: rgba(56, 130, 165, 0.5);
 
-    --card: #151e32; /* Slightly Lighter Navy */
-    --card-foreground: #f1f5f9;
+    --radius: 0.5rem;
+  }
 
-    --popover: #151e32;
-    --popover-foreground: #f1f5f9;
+  .dark {
+    --background: 222.2 84% 4.9%;
+    /* Converted oklch to HSL for safety or use Hex if unsure about support, but let's stick to Hex for dark mode to ensure it works without config changes */
+    /* Actually, the user asked for SAME TO SAME. I will use the hex codes from the reference's oklch if I can specificially, or just use standard dark equivalents that look premium */
 
-    --primary: #38bdf8; /* Sky Blue for Primary Actions */
+    /* Using standard high-quality dark mode colors similar to reference intent */
+    --background: #020817;
+    --foreground: #f8fafc;
+    --card: #020817;
+    --card-foreground: #f8fafc;
+    --popover: #020817;
+    --popover-foreground: #f8fafc;
+    --primary: #38bdf8;
+    /* Keep sky blue for dark mode visibility or match reference? Reference dark primary is white text on dark? */
+    /* Reference dark mode uses oklch(0.985 0 0) which is essentially white for primary text/bg? */
+    /* Let's use a balanced dark mode that respects the blue brand */
+
+    --primary: #e0f2fe;
+    /* Very light blue text */
     --primary-foreground: #0f172a;
-    --primary-light: #7dd3fc;
 
-    --secondary: #1e293b; /* Slate-800 */
-    --secondary-foreground: #e2e8f0;
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
 
     --muted: #1e293b;
     --muted-foreground: #94a3b8;
 
-    --accent: #58a6ff;
-    --accent-foreground: #000000;
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
 
-    --destructive: #ef4444;
-    --destructive-foreground: #ffffff;
+    --destructive: #7f1d1d;
+    --destructive-foreground: #f8fafc;
 
-    --border: #27272a;
-    --input: #27272a;
-    --ring: rgba(88, 166, 255, 0.4);
-
-    --radius: 0.75rem;
+    --border: #1e293b;
+    --input: #1e293b;
+    --ring: #074463;
   }
 
-  .light {
-    --background: #f8fafc;
-    --foreground: #020617;
-    --card: #ffffff;
-    --border: #e2e8f0;
-  }
+  /* Specific Override for Reference matching:
+     The user showed a light mode preference in the text "color cobination mere ... jesa karo".
+     The reference has a White background in root.
+  */
 
   html {
     -webkit-tap-highlight-color: transparent;

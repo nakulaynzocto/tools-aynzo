@@ -239,6 +239,20 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
 
                         <div className="space-y-6">
                             <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('generatedOutput')}</h3>
+
+                            {/* Live Preview for Embed Code */}
+                            {type === 'youtube-embed-code-generator' && result && (
+                                <div className="bg-card rounded-2xl border-2 border-border p-4 shadow-lg animate-in fade-in slide-in-from-top-4 duration-500">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <div className="p-1.5 bg-red-500/10 rounded-lg text-red-500">
+                                            <Play size={12} fill="currentColor" />
+                                        </div>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Live Player Preview</span>
+                                    </div>
+                                    <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-inner border border-white/10" dangerouslySetInnerHTML={{ __html: result }} />
+                                </div>
+                            )}
+
                             {result ? (
                                 <div className="animate-in fade-in slide-in-from-right-5 duration-500">
                                     {/* Thumbnail Results */}

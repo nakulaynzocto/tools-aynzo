@@ -67,7 +67,7 @@ export default function Navbar() {
                                     sizes="40px"
                                 />
                             </div>
-                            <span className="text-foreground font-black text-xl tracking-tighter hidden md:inline-block lg:hidden xl:inline-block">
+                            <span className="text-foreground font-black text-lg md:text-xl tracking-tighter inline-block">
                                 {tApp('name')}<span className="text-primary">{tApp('nameHighlight')}</span>
                             </span>
                         </div>
@@ -277,8 +277,9 @@ export default function Navbar() {
                         )}
                     </div>
 
-                    <div className="hidden lg:block">
+                    <div className="hidden lg:flex items-center gap-2">
                         <LanguageSwitcher />
+                        <ModeToggle />
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -296,8 +297,9 @@ export default function Navbar() {
                 mobileMenuOpen && (
                     <div className="lg:hidden bg-background border-t border-border max-h-[calc(100vh-4rem)] overflow-y-auto">
                         {/* Mobile Language Switcher */}
-                        <div className="p-4 border-b border-border flex justify-end">
+                        <div className="p-4 border-b border-border flex justify-end gap-2 items-center">
                             <LanguageSwitcher />
+                            <ModeToggle />
                         </div>
                         {/* Mobile Search */}
                         <div className="p-4 border-b border-border bg-card">

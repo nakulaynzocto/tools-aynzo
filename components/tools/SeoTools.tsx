@@ -188,7 +188,8 @@ ${items}
                     <div className="bg-muted/20 p-8 flex flex-col h-full overflow-hidden border-l-2 border-border">
                         <div className="flex-1 flex flex-col space-y-10">
                             {/* Visual Preview */}
-                            {(type === 'open-graph-generator' || type === 'twitter-card-generator') && (
+                            {/* Visual Preview */}
+                            {(type === 'open-graph-generator' || type === 'twitter-card-generator' || type === 'meta-tag-generator') && (
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-between">
                                         <h3 className="text-xs font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
@@ -196,37 +197,60 @@ ${items}
                                         </h3>
                                         <span className="px-2 py-0.5 bg-primary/10 text-primary rounded-md text-[10px] font-black uppercase">Live Mockup</span>
                                     </div>
-                                    <div className="bg-card rounded-[2.5rem] border-2 border-border shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden group transition-all duration-500 hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)]">
-                                        <div className="aspect-[1200/630] bg-muted relative overflow-hidden flex items-center justify-center">
-                                            {(type === 'open-graph-generator' ? og.image : twitter.image) ? (
-                                                <img
-                                                    src={type === 'open-graph-generator' ? og.image : twitter.image}
-                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
-                                                    alt="Preview"
-                                                />
-                                            ) : (
-                                                <div className="flex flex-col items-center gap-3 opacity-20">
-                                                    <Share2 size={64} />
-                                                    <span className="font-black text-sm uppercase tracking-widest">Image Mockup</span>
+
+                                    {type === 'meta-tag-generator' ? (
+                                        <div className="bg-card rounded-[1.5rem] border-2 border-border p-6 shadow-sm">
+                                            <div className="font-sans max-w-[600px]">
+                                                <div className="flex items-center gap-3 mb-2">
+                                                    <div className="w-7 h-7 bg-muted rounded-full flex items-center justify-center p-1">
+                                                        <Globe className="w-4 h-4 text-muted-foreground" />
+                                                    </div>
+                                                    <div className="flex flex-col">
+                                                        <span className="text-xs text-foreground font-medium">example.com</span>
+                                                        <span className="text-[10px] text-muted-foreground">https://example.com › page</span>
+                                                    </div>
                                                 </div>
-                                            )}
-                                            <div className="absolute top-6 left-6 px-4 py-2 bg-black/40 backdrop-blur-xl rounded-full text-[10px] text-white font-black border border-white/20 uppercase tracking-widest shadow-2xl">
-                                                {type === 'open-graph-generator' ? 'Open Graph' : 'X Card'}
+                                                <h3 className="text-xl text-[#1a0dab] dark:text-[#8ab4f8] hover:underline cursor-pointer font-medium truncate mb-1">
+                                                    {meta.title || 'Page Title | Your Brand'}
+                                                </h3>
+                                                <p className="text-sm text-[#4d5156] dark:text-[#bdc1c6] leading-relaxed line-clamp-2">
+                                                    {meta.description || 'This is how your page description will appear in search results. Keep it concise, relevant, and engaging to improve your click-through rate.'}
+                                                </p>
                                             </div>
                                         </div>
-                                        <div className="p-8 space-y-3 bg-gradient-to-b from-card to-muted/10 border-t-2 border-border">
-                                            <div className="flex items-center gap-2 opacity-50">
-                                                <Globe size={12} />
-                                                <p className="text-[10px] font-black uppercase tracking-[0.2em]">example.com</p>
+                                    ) : (
+                                        <div className="bg-card rounded-[2.5rem] border-2 border-border shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden group transition-all duration-500 hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)]">
+                                            <div className="aspect-[1200/630] bg-muted relative overflow-hidden flex items-center justify-center">
+                                                {(type === 'open-graph-generator' ? og.image : twitter.image) ? (
+                                                    <img
+                                                        src={type === 'open-graph-generator' ? og.image : twitter.image}
+                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                                                        alt="Preview"
+                                                    />
+                                                ) : (
+                                                    <div className="flex flex-col items-center gap-3 opacity-20">
+                                                        <Share2 size={64} />
+                                                        <span className="font-black text-sm uppercase tracking-widest">Image Mockup</span>
+                                                    </div>
+                                                )}
+                                                <div className="absolute top-6 left-6 px-4 py-2 bg-black/40 backdrop-blur-xl rounded-full text-[10px] text-white font-black border border-white/20 uppercase tracking-widest shadow-2xl">
+                                                    {type === 'open-graph-generator' ? 'Open Graph' : 'X Card'}
+                                                </div>
                                             </div>
-                                            <h4 className="text-2xl font-black leading-tight line-clamp-2 text-foreground tracking-tight">
-                                                {(type === 'open-graph-generator' ? og.title : twitter.title) || 'Enter a Captivating Title'}
-                                            </h4>
-                                            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 font-medium opacity-80">
-                                                {(type === 'open-graph-generator' ? og.description : twitter.description) || 'A brief summary of your content will appear here when your link is shared on social platforms.'}
-                                            </p>
+                                            <div className="p-8 space-y-3 bg-gradient-to-b from-card to-muted/10 border-t-2 border-border">
+                                                <div className="flex items-center gap-2 opacity-50">
+                                                    <Globe size={12} />
+                                                    <p className="text-[10px] font-black uppercase tracking-[0.2em]">example.com</p>
+                                                </div>
+                                                <h4 className="text-2xl font-black leading-tight line-clamp-2 text-foreground tracking-tight">
+                                                    {(type === 'open-graph-generator' ? og.title : twitter.title) || 'Enter a Captivating Title'}
+                                                </h4>
+                                                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 font-medium opacity-80">
+                                                    {(type === 'open-graph-generator' ? og.description : twitter.description) || 'A brief summary of your content will appear here when your link is shared on social platforms.'}
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
                                 </div>
                             )}
 

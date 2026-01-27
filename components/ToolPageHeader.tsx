@@ -38,8 +38,13 @@ export function ToolPageHeader({ name, description, category, h1 }: ToolPageHead
                     </div>
                 </div>
                 <div className="flex-1">
-                    <h1 className="text-3xl font-bold text-primary mb-2 tracking-tight">
-                        {h1 || name}
+                    <h1 className="text-2xl md:text-3xl font-bold text-primary mb-2 tracking-tight">
+                        {/* 
+                            Logic: If 'h1' (SEO Title) is very long (>50 chars), it ruins the UI. 
+                            In that case, prefer the clean 'name'. 
+                            If 'h1' is short/custom, use it.
+                        */}
+                        {(h1 && h1.length > 50) ? name : (h1 || name)}
                     </h1>
                     <p className="text-base text-muted-foreground leading-relaxed">
                         {description}

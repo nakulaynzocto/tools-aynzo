@@ -353,20 +353,14 @@ export default async function ToolPage({ params }: Props) {
           h1={tTools.has(`${params.slug}.seoH1`) ? tTools(`${params.slug}.seoH1`) : (seo?.h1 || translatedName)}
         />
 
-        {/* Ad Space - Top (High Visibility) */}
-        <div className="mb-8">
-          <AdUnit slot="header-ad" format="horizontal" className="h-[90px]" />
-        </div>
+
 
         {/* Tool Content */}
         <div className="mb-12">
           {renderTool()}
         </div>
 
-        {/* Ad Space - Middle (Post Interaction) */}
-        <div className="mb-12">
-          <AdUnit slot="content-ad" format="auto" />
-        </div>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
@@ -393,8 +387,7 @@ export default async function ToolPage({ params }: Props) {
           </div>
 
           <div className="space-y-8">
-            {/* Sidebar Ad (Sticky Potential) */}
-            <AdUnit slot="sidebar-ad" format="rectangle" className="h-[300px]" />
+
 
             {/* Sidebar or extra info could go here */}
             <div className="bg-muted p-6 rounded-xl border border-border">

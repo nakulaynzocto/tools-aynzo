@@ -68,7 +68,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       }
     },
     icons: {
-      icon: '/favicon.ico',
+      icon: '/logo.png',
       shortcut: '/logo.png',
       apple: '/logo.png',
     }
@@ -139,7 +139,7 @@ export default async function RootLayout({
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <Providers>
               <div className="flex flex-col min-h-screen">
                 <Navbar />

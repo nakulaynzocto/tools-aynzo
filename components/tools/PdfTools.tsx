@@ -26,6 +26,7 @@ export default function PdfTools({ type }: PdfToolProps) {
     const [files, setFiles] = useState<ProcessedFile[]>([]);
     const [dragActive, setDragActive] = useState(false);
     const [processing, setProcessing] = useState(false);
+    const [selectedFileId, setSelectedFileId] = useState<string | null>(null); // Added state
 
     // Settings
     const [mergeSequence, setMergeSequence] = useState(true); // Default true for now
@@ -44,13 +45,11 @@ export default function PdfTools({ type }: PdfToolProps) {
         }));
 
         if (type === 'split-pdf' || type === 'pdf-to-word') {
-            // Single file mode for these typically, but let's allow multiple for pdf-to-word batch?
-            // Split usually one at a time to keep UI simple, but can support batch.
-            // Let's stick to accumulating files.
             setFiles(prev => [...prev, ...newBatch]);
+            if (!selectedFileId && newBatch.length > 0) setSelectedFileId(newBatch[0].id);
         } else {
-            // Merge supports multiple obviously
             setFiles(prev => [...prev, ...newBatch]);
+            if (!selectedFileId && newBatch.length > 0) setSelectedFileId(newBatch[0].id);
         }
     };
 
@@ -62,6 +61,7 @@ export default function PdfTools({ type }: PdfToolProps) {
 
     const removeFile = (id: string) => {
         setFiles(prev => prev.filter(item => item.id !== id));
+        if (selectedFileId === id) setSelectedFileId(null);
     };
 
     const processMerge = async () => {
@@ -185,26 +185,26 @@ export default function PdfTools({ type }: PdfToolProps) {
                             onDragOver={handleDrag} onDragEnter={handleDrag} onDragLeave={handleDrag} onDrop={handleDrop}
                             onClick={() => document.getElementById('pdf-input')?.click()}
                             className={cn(
-                                "min-h-[400px] border-4 border-dashed rounded-[2rem] flex flex-col items-center justify-center transition-all cursor-pointer group hover:border-accent hover:bg-accent/5",
+                                "min-h-[280px] border-4 border-dashed rounded-[1.5rem] flex flex-col items-center justify-center transition-all cursor-pointer group hover:border-accent hover:bg-accent/5 py-8",
                                 dragActive ? "border-accent bg-accent/5 scale-[0.99]" : "border-border bg-muted/20"
                             )}
                         >
-                            <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center shadow-2xl mb-8 group-hover:scale-110 transition-transform">
-                                <FileText className="w-12 h-12 text-white" />
+                            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform">
+                                <FileText className="w-8 h-8 text-white" />
                             </div>
-                            <h2 className="text-3xl font-black text-foreground mb-4">
+                            <h2 className="text-lg md:text-2xl font-black text-foreground mb-2 text-center">
                                 {tActions('chooseFile')}
                             </h2>
-                            <p className="text-muted-foreground text-lg mb-10 text-center px-8 font-medium">
+                            <p className="text-muted-foreground text-sm mb-6 text-center px-4 font-medium max-w-lg mx-auto">
                                 {t.rich ? t.rich('dragDrop', {
                                     b: (chunks) => <span className="text-accent font-bold">{chunks}</span>
                                 }) : t('dragDrop')}
-                                <br /><span className="text-sm opacity-60">Supports PDF</span>
+                                <span className="text-xs opacity-60 block mt-1">Supports PDF</span>
                             </p>
 
-                            <div className="flex gap-4">
-                                <div className="px-5 py-2.5 bg-card border border-border rounded-full text-xs font-bold text-muted-foreground flex items-center gap-2 shadow-sm">
-                                    <CheckCircle2 size={14} className="text-emerald-500" /> {t('privacyGuaranteed')}
+                            <div className="flex flex-wrap justify-center gap-3">
+                                <div className="px-4 py-1.5 bg-card border border-border rounded-full text-[10px] font-bold text-muted-foreground flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+                                    <CheckCircle2 size={12} className="text-emerald-500" /> {t('privacyGuaranteed')}
                                 </div>
                             </div>
                         </div>
@@ -227,10 +227,42 @@ export default function PdfTools({ type }: PdfToolProps) {
                                     </button>
                                 </div>
 
+                                {/* Preview Section */}
+                                {(files.find(f => f.id === selectedFileId)?.file || files[0]?.file) && (
+                                    <div className="bg-card p-4 rounded-3xl border-2 border-border shadow-sm relative overflow-hidden group">
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-500 to-red-500 opacity-50" />
+                                        <div className="flex items-center justify-between mb-3">
+                                            <div className="flex items-center gap-2">
+                                                <div className="p-1.5 bg-red-500/10 rounded-lg text-red-500">
+                                                    <FileText size={14} />
+                                                </div>
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">PDF Preview</span>
+                                            </div>
+                                            <span className="text-[10px] font-bold bg-muted text-muted-foreground px-2 py-0.5 rounded-md truncate max-w-[150px]">
+                                                {files.find(f => f.id === selectedFileId)?.file.name || files[0].file.name}
+                                            </span>
+                                        </div>
+                                        <div className="relative rounded-xl overflow-hidden bg-muted/30 border-2 border-border/50 h-[300px] flex items-center justify-center checkered-bg">
+                                            <iframe
+                                                src={URL.createObjectURL(files.find(f => f.id === selectedFileId)?.file || files[0].file) + "#toolbar=0&view=FitH"}
+                                                className="w-full h-full"
+                                                title="PDF Preview"
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+
                                 {/* File List */}
                                 <div className="space-y-3">
                                     {files.map((file, idx) => (
-                                        <div key={file.id} className="bg-card p-4 rounded-xl border border-border flex items-center gap-4 group hover:border-accent transition-all relative overflow-hidden shadow-sm">
+                                        <div
+                                            key={file.id}
+                                            onClick={() => setSelectedFileId(file.id)}
+                                            className={cn(
+                                                "bg-card p-4 rounded-xl border-2 flex items-center gap-4 transition-all relative overflow-hidden shadow-sm cursor-pointer",
+                                                (selectedFileId === file.id || (!selectedFileId && idx === 0)) ? "border-red-500 ring-2 ring-red-500/20 bg-red-500/5" : "border-border hover:border-red-500/50"
+                                            )}
+                                        >
                                             <div className="w-12 h-12 rounded-lg bg-red-50 flex items-center justify-center border border-red-100 flex-shrink-0">
                                                 <FileText className="text-red-500 w-6 h-6" />
                                             </div>
@@ -244,7 +276,7 @@ export default function PdfTools({ type }: PdfToolProps) {
                                                 {file.status === 'processing' && <RefreshCw className="w-4 h-4 animate-spin text-accent" />}
                                                 {file.status === 'done' && <CheckCircle2 className="w-4 h-4 text-emerald-500" />}
                                                 {file.status === 'error' && <X className="w-4 h-4 text-destructive" />}
-                                                <button onClick={() => removeFile(file.id)} className="p-2 hover:bg-destructive/10 text-muted-foreground hover:text-destructive rounded-lg transition-colors">
+                                                <button onClick={(e) => { e.stopPropagation(); removeFile(file.id); }} className="p-2 hover:bg-destructive/10 text-muted-foreground hover:text-destructive rounded-lg transition-colors">
                                                     <X size={16} />
                                                 </button>
                                             </div>

@@ -12,7 +12,7 @@ export function ToolInfoSection({ name, description, content }: ToolInfoSectionP
         <div className="bg-card rounded-xl border-2 border-border p-5 shadow-lg">
             {content ? (
                 <div
-                    className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground"
+                    className="prose md:prose-lg dark:prose-invert max-w-none text-muted-foreground prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground"
                     dangerouslySetInnerHTML={{ __html: content }}
                     suppressHydrationWarning={true}
                 />

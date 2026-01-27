@@ -1,12 +1,22 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
-import { Upload, Image as ImageIcon, Settings, X, RefreshCw, Wand2, FileArchive, CheckCircle2, ChevronRight, Zap, Lock } from 'lucide-react';
+import { Upload, Image as ImageIcon, Settings, X, RefreshCw, Wand2, FileArchive, CheckCircle2, ChevronRight, Zap, Lock, RotateCcw, RotateCw, MoveHorizontal, MoveVertical, Sliders } from 'lucide-react';
 import { cn } from '@/utils/cn';
-import { toast } from 'sonner';
 
 import { v4 as uuidv4 } from 'uuid';
 import { useTranslations } from 'next-intl';
 import JSZip from 'jszip';
+import ReactCrop, { type Crop, type PixelCrop, centerCrop, makeAspectCrop } from 'react-image-crop';
+import 'react-image-crop/dist/ReactCrop.css';
+
+// Helper for centering crop
+function centerAspectCrop(mediaWidth: number, mediaHeight: number, aspect: number) {
+    return centerCrop(
+        makeAspectCrop({ unit: '%', width: 90 }, aspect, mediaWidth, mediaHeight),
+        mediaWidth,
+        mediaHeight
+    );
+}
 
 const base64ToBlob = (base64: string) => {
     const parts = base64.split(';base64,');
@@ -42,6 +52,17 @@ export default function ImageTools({ type }: ImageToolProps) {
     const [base64Input, setBase64Input] = useState('');
     const [base64Output, setBase64Output] = useState('');
     const [copied, setCopied] = useState(false);
+    const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+    const [selectedFileId, setSelectedFileId] = useState<string | null>(null);
+
+    // Set default selection when files are added
+    useEffect(() => {
+        if (files.length > 0 && !selectedFileId) {
+            setSelectedFileId(files[0].id);
+        } else if (files.length === 0) {
+            setSelectedFileId(null);
+        }
+    }, [files, selectedFileId]);
 
     // UI states
     const [quality, setQuality] = useState(80);
@@ -58,7 +79,29 @@ export default function ImageTools({ type }: ImageToolProps) {
     const [color, setColor] = useState('#000000');
     const [size, setSize] = useState(10);
 
-    const isBatchSupported = ['image-compressor', 'jpg-to-png', 'png-to-jpg', 'webp-converter', 'image-format-converter', 'webp-to-jpg', 'webp-to-png', 'jpg-to-webp', 'png-to-webp', 'svg-to-png'].includes(type);
+    // Cropper State
+    const [crop, setCrop] = useState<Crop>();
+    const [completedCrop, setCompletedCrop] = useState<PixelCrop>();
+    const [aspect, setAspect] = useState<number | undefined>(undefined);
+    const imgRef = useRef<HTMLImageElement>(null);
+
+    // Reset crop on file change
+    useEffect(() => {
+        setCrop(undefined);
+        setCompletedCrop(undefined);
+        setAspect(undefined);
+    }, [selectedFileId, files]);
+
+    // Initialize crop on image load
+    const onImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+        if (type === 'image-cropper' && !crop) {
+            const { width, height } = e.currentTarget;
+            setCrop(centerAspectCrop(width, height, 16 / 9));
+            setAspect(16 / 9);
+        }
+    };
+
+    const isBatchSupported = ['image-compressor', 'jpg-to-png', 'png-to-jpg', 'webp-converter', 'image-format-converter', 'webp-to-jpg', 'webp-to-png', 'jpg-to-webp', 'png-to-webp', 'svg-to-png', 'png-to-svg', 'jpg-to-svg', 'webp-to-svg'].includes(type);
 
     const handleDrag = (e: React.DragEvent) => {
         e.preventDefault(); e.stopPropagation();
@@ -76,8 +119,12 @@ export default function ImageTools({ type }: ImageToolProps) {
 
         if (!isBatchSupported) {
             setFiles([newBatch[0]]);
+            setSelectedFileId(newBatch[0].id);
         } else {
             setFiles(prev => [...prev, ...newBatch]);
+            if (!selectedFileId && newBatch.length > 0) {
+                setSelectedFileId(newBatch[0].id);
+            }
         }
     };
 
@@ -93,6 +140,9 @@ export default function ImageTools({ type }: ImageToolProps) {
             if (f?.preview) URL.revokeObjectURL(f.preview);
             return prev.filter(item => item.id !== id);
         });
+        if (selectedFileId === id) {
+            setSelectedFileId(null); // Effect will pick new default
+        }
     };
 
     const processSingleFile = async (pf: ProcessedFile): Promise<Blob | string> => {
@@ -102,6 +152,59 @@ export default function ImageTools({ type }: ImageToolProps) {
                 const canvas = document.createElement('canvas');
                 let w = img.width;
                 let h = img.height;
+
+                // Handle Cropper Special Case
+                if (type === 'image-cropper' && completedCrop && imgRef.current) {
+                    const scaleX = img.naturalWidth / imgRef.current.width;
+                    const scaleY = img.naturalHeight / imgRef.current.height;
+
+                    // If scale is infinite (div by 0), fallback
+                    if (!Number.isFinite(scaleX)) return reject('Image scale error');
+
+                    const pixelCrop = completedCrop;
+                    canvas.width = pixelCrop.width * scaleX;
+                    canvas.height = pixelCrop.height * scaleY;
+
+                    const ctx = canvas.getContext('2d');
+                    if (!ctx) return reject('No context');
+
+                    // Draw cropped region
+                    ctx.drawImage(
+                        img,
+                        pixelCrop.x * scaleX,
+                        pixelCrop.y * scaleY,
+                        pixelCrop.width * scaleX,
+                        pixelCrop.height * scaleY,
+                        0,
+                        0,
+                        canvas.width,
+                        canvas.height
+                    );
+
+                    // Handle SVG conversion for cropped images
+                    if (['png-to-svg', 'jpg-to-svg', 'webp-to-svg'].includes(type)) {
+                        const dataUrl = canvas.toDataURL('image/png'); // Always convert to PNG data URL for embedding
+                        const svgString = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                        <svg width="${canvas.width}" height="${canvas.height}" viewBox="0 0 ${canvas.width} ${canvas.height}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <image href="${dataUrl}" width="${canvas.width}" height="${canvas.height}" />
+                        </svg>`;
+                        const blob = new Blob([svgString], { type: 'image/svg+xml' });
+                        resolve(blob);
+                        return;
+                    }
+
+                    // Generate Blob directly for Cropper to avoid fallthrough to existing filters
+                    let mime = pf.file.type;
+                    // Default to PNG if input is not supported or for better quality in cropping
+                    if (mime === 'image/svg+xml') mime = 'image/png';
+
+                    canvas.toBlob((blob) => {
+                        if (blob) resolve(blob);
+                        else reject('Blob failed');
+                    }, mime, quality / 100);
+                    return;
+                }
 
                 if (type === 'image-resizer' || type === 'image-enlarger') {
                     if (width > 0 && height > 0) { w = width; h = height; }
@@ -124,9 +227,9 @@ export default function ImageTools({ type }: ImageToolProps) {
                     ctx.scale(flipH ? -1 : 1, flipV ? -1 : 1);
                     ctx.drawImage(img, -img.width / 2, -img.height / 2);
                 } else {
-                    if (type === 'grayscale-image') ctx.filter = 'grayscale(100%)';
-                    else if (type === 'sepia-converter') ctx.filter = 'sepia(100%)';
-                    else if (type === 'invert-image') ctx.filter = 'invert(100%)';
+                    if (type === 'grayscale-image') ctx.filter = `grayscale(${filterValue}%)`;
+                    else if (type === 'sepia-converter') ctx.filter = `sepia(${filterValue}%)`;
+                    else if (type === 'invert-image') ctx.filter = `invert(${filterValue}%)`;
                     else if (type === 'blur-image') ctx.filter = `blur(${size}px)`;
                     else if (type === 'image-brightness') ctx.filter = `brightness(${filterValue}%)`;
                     else if (type === 'image-contrast') ctx.filter = `contrast(${filterValue}%)`;
@@ -177,10 +280,24 @@ export default function ImageTools({ type }: ImageToolProps) {
                     }
                 }
 
+                if (['png-to-svg', 'jpg-to-svg', 'webp-to-svg'].includes(type)) {
+                    const dataUrl = canvas.toDataURL('image/png');
+                    const svgString = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg width="${canvas.width}" height="${canvas.height}" viewBox="0 0 ${canvas.width} ${canvas.height}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <image href="${dataUrl}" width="${canvas.width}" height="${canvas.height}" />
+                    </svg>`;
+                    const blob = new Blob([svgString], { type: 'image/svg+xml' });
+                    resolve(blob);
+                    return;
+                }
+
                 let mime = pf.file.type;
-                if (['jpg-to-png', 'webp-to-png'].includes(type) || targetFormat === 'png') mime = 'image/png';
-                if (['png-to-jpg', 'webp-to-jpg'].includes(type) || targetFormat === 'jpg') mime = 'image/jpeg';
-                if (['webp-converter', 'jpg-to-webp', 'png-to-webp'].includes(type) || targetFormat === 'webp') mime = 'image/webp';
+                const isConverter = type === 'image-format-converter';
+
+                if (['jpg-to-png', 'webp-to-png', 'svg-to-png'].includes(type) || (isConverter && targetFormat === 'png')) mime = 'image/png';
+                if (['png-to-jpg', 'webp-to-jpg'].includes(type) || (isConverter && targetFormat === 'jpg')) mime = 'image/jpeg';
+                if (['webp-converter', 'jpg-to-webp', 'png-to-webp'].includes(type) || (isConverter && targetFormat === 'webp')) mime = 'image/webp';
 
                 canvas.toBlob((blob) => {
                     if (blob) {
@@ -225,7 +342,9 @@ export default function ImageTools({ type }: ImageToolProps) {
                     if (f.resultBlob) {
                         const isString = typeof f.resultBlob === 'string';
                         const mime = isString ? 'text/plain' : (f.resultBlob as Blob).type;
-                        const ext = mime.split('/')[1] || (isString ? 'txt' : 'png');
+                        let ext = mime.split('/')[1] || (isString ? 'txt' : 'png');
+                        if (ext === 'svg+xml') ext = 'svg';
+                        if (ext === 'jpeg') ext = 'jpg';
                         zip.file(`${f.file.name.split('.')[0]}-processed.${ext}`, f.resultBlob);
                     }
                 });
@@ -237,7 +356,9 @@ export default function ImageTools({ type }: ImageToolProps) {
                 if (isString) {
                     setBase64Output(res as string);
                 } else {
-                    const ext = (res as Blob).type.split('/')[1] || 'png';
+                    let ext = (res as Blob).type.split('/')[1] || 'png';
+                    if (ext === 'svg+xml') ext = 'svg';
+                    if (ext === 'jpeg') ext = 'jpg';
                     download(res as Blob, `${updated[0].file.name.split('.')[0]}-processed.${ext}`);
                 }
             }
@@ -259,6 +380,39 @@ export default function ImageTools({ type }: ImageToolProps) {
         if (typeof content !== 'string') URL.revokeObjectURL(url);
     };
 
+    // Preview Generator Effect
+    useEffect(() => {
+        if (files.length === 0) {
+            setPreviewUrl(null);
+            return;
+        }
+
+        const generatePreview = async () => {
+            try {
+                // Generate preview for the selected file, or first if none selected
+                const fileToPreview = files.find(f => f.id === selectedFileId) || files[0];
+                if (!fileToPreview) return;
+
+                const result = await processSingleFile(fileToPreview);
+                if (result instanceof Blob) {
+                    const url = URL.createObjectURL(result);
+                    setPreviewUrl(prev => {
+                        if (prev && prev.startsWith('blob:')) URL.revokeObjectURL(prev);
+                        return url;
+                    });
+                } else {
+                    setPreviewUrl(result);
+                }
+            } catch (e) {
+                console.error("Preview generation failed", e);
+            }
+        };
+
+        const timeout = setTimeout(generatePreview, 200); // 200ms debounce
+        return () => clearTimeout(timeout);
+    }, [files, selectedFileId, rotation, flipH, flipV, filterValue, color, size, width, height, maintainAspectRatio, targetFormat, type]);
+
+
     return (
         <div className="max-w-6xl mx-auto space-y-6">
             <input id="image-input" type="file" multiple={isBatchSupported} className="hidden" accept="image/*" onChange={(e) => addFiles(e.target.files)} />
@@ -270,31 +424,31 @@ export default function ImageTools({ type }: ImageToolProps) {
                             onDragOver={handleDrag} onDragEnter={handleDrag} onDragLeave={handleDrag} onDrop={handleDrop}
                             onClick={() => document.getElementById('image-input')?.click()}
                             className={cn(
-                                "min-h-[400px] border-4 border-dashed rounded-[2rem] flex flex-col items-center justify-center transition-all cursor-pointer group hover:border-accent hover:bg-accent/5",
+                                "min-h-[280px] border-4 border-dashed rounded-[1.5rem] flex flex-col items-center justify-center transition-all cursor-pointer group hover:border-accent hover:bg-accent/5 py-8",
                                 dragActive ? "border-accent bg-accent/5 scale-[0.99]" : "border-border bg-muted/20"
                             )}
                         >
-                            <div className="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl mb-8 group-hover:scale-110 transition-transform">
-                                <Upload className="w-12 h-12 text-white" />
+                            <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform">
+                                <Upload className="w-8 h-8 text-white" />
                             </div>
-                            <h2 className="text-3xl font-black text-foreground mb-4">
+                            <h2 className="text-lg md:text-2xl font-black text-foreground mb-2 text-center">
                                 {isBatchSupported ? t('selectMultiple') : t('selectImage')}
                             </h2>
-                            <p className="text-muted-foreground text-lg mb-10 text-center px-8 font-medium">
+                            <p className="text-muted-foreground text-sm mb-6 text-center px-4 font-medium max-w-lg mx-auto">
                                 {t.rich ? t.rich('dragDrop', {
                                     b: (chunks) => <span className="text-accent font-bold">{chunks}</span>
                                 }) : t('dragDrop')}
-                                <br /><span className="text-sm opacity-60">{t('supports')}</span>
+                                <span className="text-xs opacity-60 block mt-1">{t('supports')}</span>
                             </p>
+
                             {/* Base64 Input for Base64 to Image */}
                             {type === 'base64-to-image' && (
-                                <div className="space-y-4" onClick={e => e.stopPropagation()}>
-                                    <label className="block text-sm font-bold text-foreground uppercase tracking-widest">{tActions('pasteBase64')}</label>
+                                <div className="space-y-4 w-full max-w-xl px-4 mb-4" onClick={e => e.stopPropagation()}>
                                     <textarea
                                         value={base64Input}
                                         onChange={(e) => setBase64Input(e.target.value)}
-                                        className="w-full h-32 p-4 border-2 border-border rounded-2xl bg-input font-mono text-xs text-foreground focus:border-accent outline-none resize-none"
-                                        placeholder="data:image/png;base64,..."
+                                        className="w-full h-24 p-3 border-2 border-border rounded-xl bg-input font-mono text-xs text-foreground focus:border-accent outline-none resize-none"
+                                        placeholder={tActions('pasteBase64')}
                                     />
                                     <button
                                         onClick={() => {
@@ -305,18 +459,19 @@ export default function ImageTools({ type }: ImageToolProps) {
                                             } catch (e) {
                                             }
                                         }}
-                                        className="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold shadow-xl hover:scale-[1.02] transition-all"
+                                        className="w-full py-2 bg-gradient-to-r from-primary to-accent text-white rounded-lg font-bold shadow-md hover:scale-[1.01] transition-all text-sm"
                                     >
                                         {tActions('convertTo', { format: 'Image' })}
                                     </button>
                                 </div>
                             )}
-                            <div className="flex gap-4">
-                                <div className="px-5 py-2.5 bg-card border border-border rounded-full text-xs font-bold text-muted-foreground flex items-center gap-2 shadow-sm">
-                                    <CheckCircle2 size={14} className="text-emerald-500" /> {t('privacyGuaranteed')}
+
+                            <div className="flex flex-wrap justify-center gap-3">
+                                <div className="px-4 py-1.5 bg-card border border-border rounded-full text-[10px] font-bold text-muted-foreground flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+                                    <CheckCircle2 size={12} className="text-emerald-500" /> {t('privacyGuaranteed')}
                                 </div>
-                                <div className="px-5 py-2.5 bg-card border border-border rounded-full text-xs font-bold text-muted-foreground flex items-center gap-2 shadow-sm">
-                                    <Zap size={14} className="text-amber-500" /> {t('lightningFast')}
+                                <div className="px-4 py-1.5 bg-card border border-border rounded-full text-[10px] font-bold text-muted-foreground flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+                                    <Zap size={12} className="text-amber-500" /> {t('lightningFast')}
                                 </div>
                             </div>
                         </div>
@@ -339,10 +494,60 @@ export default function ImageTools({ type }: ImageToolProps) {
                                     </button>
                                 </div>
 
+                                {/* Live Preview Section */}
+                                {previewUrl && (
+                                    <div className="bg-card p-4 rounded-3xl border-2 border-border shadow-sm relative overflow-hidden group">
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-50" />
+                                        <div className="flex items-center justify-between mb-3">
+                                            <div className="flex items-center gap-2">
+                                                <div className="p-1.5 bg-primary/10 rounded-lg text-primary">
+                                                    <Wand2 size={14} />
+                                                </div>
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Live Preview</span>
+                                            </div>
+                                            <span className="text-[10px] font-bold bg-muted text-muted-foreground px-2 py-0.5 rounded-md truncate max-w-[150px]">
+                                                {files.find(f => f.id === selectedFileId)?.file.name || files[0].file.name}
+                                            </span>
+                                        </div>
+                                        <div className={cn("relative rounded-xl overflow-hidden bg-muted/30 border-2 border-border/50 flex items-center justify-center checkered-bg", type === 'image-cropper' ? 'min-h-[400px]' : 'h-[200px]')}>
+                                            {type === 'image-cropper' ? (
+                                                <ReactCrop
+                                                    crop={crop}
+                                                    onChange={(_, percentCrop) => setCrop(percentCrop)}
+                                                    onComplete={(c) => setCompletedCrop(c)}
+                                                    aspect={aspect}
+                                                    className="max-w-full max-h-[500px]"
+                                                >
+                                                    <img
+                                                        ref={imgRef}
+                                                        src={previewUrl}
+                                                        onLoad={onImageLoad}
+                                                        alt="Preview"
+                                                        className="max-w-full max-h-[500px] object-contain"
+                                                    />
+                                                </ReactCrop>
+                                            ) : (
+                                                <img
+                                                    src={previewUrl}
+                                                    alt="Preview"
+                                                    className="w-full h-full object-contain"
+                                                />
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
+
                                 {/* File Grid */}
                                 <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                                     {files.map((file) => (
-                                        <div key={file.id} className="bg-card p-4 rounded-2xl border-2 border-border flex items-center gap-4 group hover:border-accent transition-all relative overflow-hidden shadow-sm">
+                                        <div
+                                            key={file.id}
+                                            onClick={() => setSelectedFileId(file.id)}
+                                            className={cn(
+                                                "bg-card p-4 rounded-2xl border-2 flex items-center gap-4 transition-all relative overflow-hidden shadow-sm cursor-pointer",
+                                                (selectedFileId === file.id || (!selectedFileId && files[0].id === file.id)) ? "border-accent ring-2 ring-accent/20 bg-accent/5" : "border-border hover:border-accent/50"
+                                            )}
+                                        >
                                             <div className="w-16 h-16 rounded-xl bg-muted flex-shrink-0 overflow-hidden border border-border">
                                                 <img src={file.preview} className="w-full h-full object-cover" alt="" />
                                             </div>
@@ -360,7 +565,7 @@ export default function ImageTools({ type }: ImageToolProps) {
                                             <div className="flex items-center gap-2">
                                                 {file.status === 'processing' && <RefreshCw className="w-4 h-4 animate-spin text-accent" />}
                                                 {file.status === 'done' && <CheckCircle2 className="w-4 h-4 text-emerald-500" />}
-                                                <button onClick={() => removeFile(file.id)} className="p-2 hover:bg-destructive/10 text-muted-foreground hover:text-destructive rounded-lg transition-colors">
+                                                <button onClick={(e) => { e.stopPropagation(); removeFile(file.id); }} className="p-2 hover:bg-destructive/10 text-muted-foreground hover:text-destructive rounded-lg transition-colors">
                                                     <X size={16} />
                                                 </button>
                                             </div>
@@ -373,9 +578,11 @@ export default function ImageTools({ type }: ImageToolProps) {
                                     >
                                         <div className="text-center">
                                             <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center mx-auto mb-2 text-muted-foreground group-hover:text-accent group-hover:scale-110 transition-transform">
-                                                <Upload size={20} />
+                                                {isBatchSupported ? <Upload size={20} /> : <RefreshCw size={20} />}
                                             </div>
-                                            <span className="text-xs font-black text-muted-foreground uppercase tracking-widest">{t('addMore')}</span>
+                                            <span className="text-xs font-black text-muted-foreground uppercase tracking-widest">
+                                                {isBatchSupported ? t('addMore') : 'Change Image'}
+                                            </span>
                                         </div>
                                     </button>
                                 </div>
@@ -408,6 +615,334 @@ export default function ImageTools({ type }: ImageToolProps) {
                                                 <p className="text-[10px] text-muted-foreground leading-relaxed italic font-medium">
                                                     {t('tipQuality')}
                                                 </p>
+                                            </div>
+                                        )}
+
+
+
+                                        {type === 'flip-image' && (
+                                            <div className="space-y-6">
+                                                <div className="flex justify-between items-center">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Flip Direction</label>
+                                                </div>
+                                                <div className="grid grid-cols-2 gap-4">
+                                                    <button
+                                                        onClick={() => setFlipH(!flipH)}
+                                                        className={cn(
+                                                            "p-4 rounded-2xl border-2 transition-all flex flex-col items-center gap-2",
+                                                            flipH ? "bg-accent text-white border-accent shadow-lg" : "bg-card border-border hover:border-accent/50 text-muted-foreground"
+                                                        )}
+                                                    >
+                                                        <MoveHorizontal size={24} />
+                                                        <span className="text-xs font-bold uppercase">Horizontal</span>
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setFlipV(!flipV)}
+                                                        className={cn(
+                                                            "p-4 rounded-2xl border-2 transition-all flex flex-col items-center gap-2",
+                                                            flipV ? "bg-accent text-white border-accent shadow-lg" : "bg-card border-border hover:border-accent/50 text-muted-foreground"
+                                                        )}
+                                                    >
+                                                        <MoveVertical size={24} />
+                                                        <span className="text-xs font-bold uppercase">Vertical</span>
+                                                    </button>
+                                                </div>
+                                                <p className="text-[10px] text-muted-foreground leading-relaxed italic font-medium bg-muted/30 p-3 rounded-lg border border-border">
+                                                    Toggle buttons to flip the image across the horizontal or vertical axis.
+                                                </p>
+                                            </div>
+                                        )}
+
+                                        {(type === 'grayscale-image' || type === 'sepia-converter' || type === 'invert-image') && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Intensity</label>
+                                                    <span className="text-2xl font-black text-accent">{filterValue}%</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="0" max="100" value={filterValue}
+                                                    onChange={(e) => setFilterValue(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {type === 'image-cropper' && (
+                                            <div className="space-y-4">
+                                                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Aspect Ratio</label>
+                                                <div className="grid grid-cols-3 gap-2">
+                                                    {[
+                                                        { label: 'Free', value: undefined },
+                                                        { label: '1:1', value: 1 },
+                                                        { label: '16:9', value: 16 / 9 },
+                                                        { label: '4:3', value: 4 / 3 },
+                                                        { label: '3:2', value: 3 / 2 },
+                                                        { label: '9:16', value: 9 / 16 },
+                                                    ].map((opt) => (
+                                                        <button
+                                                            key={opt.label}
+                                                            onClick={() => {
+                                                                setAspect(opt.value);
+                                                                if (imgRef.current && opt.value) {
+                                                                    setCrop(centerAspectCrop(imgRef.current.width, imgRef.current.height, opt.value));
+                                                                } else {
+                                                                    setCrop({ unit: '%', width: 90, height: 90, x: 5, y: 5 });
+                                                                }
+                                                            }}
+                                                            className={cn(
+                                                                "py-2 rounded-lg text-xs font-bold transition-all border",
+                                                                aspect === opt.value
+                                                                    ? "bg-accent text-white border-accent"
+                                                                    : "bg-muted text-muted-foreground border-transparent hover:bg-muted/80"
+                                                            )}
+                                                        >
+                                                            {opt.label}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {type === 'image-contrast' && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Contrast</label>
+                                                    <span className="text-2xl font-black text-accent">{filterValue}%</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="0" max="200" value={filterValue}
+                                                    onChange={(e) => setFilterValue(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {type === 'image-brightness' && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Brightness</label>
+                                                    <span className="text-2xl font-black text-accent">{filterValue}%</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="0" max="200" value={filterValue}
+                                                    onChange={(e) => setFilterValue(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {type === 'saturate-image' && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Saturation</label>
+                                                    <span className="text-2xl font-black text-accent">{filterValue}%</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="0" max="200" value={filterValue}
+                                                    onChange={(e) => setFilterValue(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {type === 'hue-rotate-image' && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Hue Rotate</label>
+                                                    <span className="text-2xl font-black text-accent">{filterValue}deg</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="0" max="360" value={filterValue}
+                                                    onChange={(e) => setFilterValue(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {type === 'blur-image' && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Blur Radius</label>
+                                                    <span className="text-2xl font-black text-accent">{size}px</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="0" max="100" value={size}
+                                                    onChange={(e) => setSize(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {type === 'pixelate-image' && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Pixel Size</label>
+                                                    <span className="text-2xl font-black text-accent">{size}px</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="1" max="100" value={size}
+                                                    onChange={(e) => setSize(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {type === 'image-opacity' && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Opacity</label>
+                                                    <span className="text-2xl font-black text-accent">{filterValue}%</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="0" max="100" value={filterValue}
+                                                    onChange={(e) => setFilterValue(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {(type === 'image-border' || type === 'image-shadow') && (
+                                            <div className="space-y-6">
+                                                <div className="space-y-4">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Color</label>
+                                                    <div className="flex items-center gap-3">
+                                                        <input
+                                                            type="color"
+                                                            value={color}
+                                                            onChange={(e) => setColor(e.target.value)}
+                                                            className="w-12 h-12 p-1 bg-card rounded-xl border border-border cursor-pointer"
+                                                        />
+                                                        <span className="text-sm font-mono text-muted-foreground uppercase">{color}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-4">
+                                                    <div className="flex justify-between items-end">
+                                                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Size</label>
+                                                        <span className="text-2xl font-black text-accent">{size}px</span>
+                                                    </div>
+                                                    <input
+                                                        type="range" min="0" max="100" value={size}
+                                                        onChange={(e) => setSize(parseInt(e.target.value))}
+                                                        className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                    />
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {type === 'round-corners-image' && (
+                                            <div className="space-y-4">
+                                                <div className="flex justify-between items-end">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Radius</label>
+                                                    <span className="text-2xl font-black text-accent">{size}px</span>
+                                                </div>
+                                                <input
+                                                    type="range" min="0" max="500" value={size}
+                                                    onChange={(e) => setSize(parseInt(e.target.value))}
+                                                    className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                />
+                                            </div>
+                                        )}
+
+                                        {(type === 'image-resizer' || type === 'image-enlarger') && (
+                                            <div className="space-y-6">
+                                                <div className="flex items-center justify-between">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Dimensions</label>
+                                                    <button
+                                                        onClick={() => setMaintainAspectRatio(!maintainAspectRatio)}
+                                                        className={cn(
+                                                            "flex items-center gap-2 text-[10px] font-bold px-3 py-1.5 rounded-lg transition-all border",
+                                                            maintainAspectRatio
+                                                                ? "bg-accent/10 text-accent border-accent/20"
+                                                                : "bg-muted text-muted-foreground border-transparent hover:bg-muted/80"
+                                                        )}
+                                                    >
+                                                        {maintainAspectRatio ? <Lock size={12} /> : <Zap size={12} />}
+                                                        {maintainAspectRatio ? "Ratio Locked" : "Ratio Unlocked"}
+                                                    </button>
+                                                </div>
+
+                                                <div className="grid grid-cols-[1fr,auto,1fr] gap-4 items-end">
+                                                    <div className="space-y-2">
+                                                        <label className="text-[10px] font-bold text-muted-foreground uppercase">Width (px)</label>
+                                                        <input
+                                                            type="number"
+                                                            value={width || ''}
+                                                            onChange={(e) => setWidth(parseInt(e.target.value) || 0)}
+                                                            placeholder="Auto"
+                                                            className="w-full p-3 bg-muted rounded-xl border-2 border-border focus:border-accent outline-none font-mono text-sm font-bold text-center"
+                                                        />
+                                                    </div>
+
+                                                    <div className="pb-4 text-muted-foreground/30">
+                                                        <X size={20} />
+                                                    </div>
+
+                                                    <div className="space-y-2">
+                                                        <label className="text-[10px] font-bold text-muted-foreground uppercase">Height (px)</label>
+                                                        <input
+                                                            type="number"
+                                                            value={height || ''}
+                                                            onChange={(e) => setHeight(parseInt(e.target.value) || 0)}
+                                                            placeholder="Auto"
+                                                            className="w-full p-3 bg-muted rounded-xl border-2 border-border focus:border-accent outline-none font-mono text-sm font-bold text-center"
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <p className="text-[10px] text-muted-foreground leading-relaxed italic font-medium bg-muted/30 p-3 rounded-lg border border-border">
+                                                    Leave <strong>Width</strong> or <strong>Height</strong> empty/0 to automatically calculate it based on aspect ratio.
+                                                </p>
+                                            </div>
+                                        )}
+
+                                        {type === 'rotate-image' && (
+                                            <div className="space-y-6">
+                                                <div className="flex justify-between items-center">
+                                                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Rotation</label>
+                                                    <span className="text-lg font-black text-accent bg-accent/10 px-3 py-1 rounded-lg">{(rotation % 360 + 360) % 360}°</span>
+                                                </div>
+
+                                                <div className="flex justify-center gap-4">
+                                                    <button
+                                                        onClick={() => setRotation(r => r - 90)}
+                                                        className="p-4 bg-card border-2 border-border hover:border-accent hover:bg-accent/5 text-foreground rounded-2xl transition-all shadow-sm group"
+                                                        title="Rotate Left 90°"
+                                                    >
+                                                        <RotateCcw className="w-6 h-6 group-hover:-rotate-90 transition-transform duration-300" />
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setRotation(r => r + 90)}
+                                                        className="p-4 bg-card border-2 border-border hover:border-accent hover:bg-accent/5 text-foreground rounded-2xl transition-all shadow-sm group"
+                                                        title="Rotate Right 90°"
+                                                    >
+                                                        <RotateCw className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+                                                    </button>
+                                                </div>
+
+                                                <div className="grid grid-cols-4 gap-2">
+                                                    {[0, 90, 180, 270].map((deg) => (
+                                                        <button
+                                                            key={deg}
+                                                            onClick={() => setRotation(deg)}
+                                                            className={cn(
+                                                                "py-2 rounded-lg text-xs font-bold transition-all border border-transparent",
+                                                                (rotation % 360 + 360) % 360 === deg
+                                                                    ? "bg-primary text-white shadow-md"
+                                                                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+                                                            )}
+                                                        >
+                                                            {deg}°
+                                                        </button>
+                                                    ))}
+                                                </div>
+
+                                                <div className="pt-2">
+                                                    <input
+                                                        type="range" min="0" max="360" value={(rotation % 360 + 360) % 360}
+                                                        onChange={(e) => setRotation(parseInt(e.target.value))}
+                                                        className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-accent"
+                                                    />
+                                                </div>
                                             </div>
                                         )}
 
@@ -470,32 +1005,34 @@ export default function ImageTools({ type }: ImageToolProps) {
             </div>
 
             {/* Base64 Output Result */}
-            {base64Output && (
-                <div className="bg-card p-8 rounded-3xl border-2 border-border shadow-2xl space-y-6 animate-in slide-in-from-bottom-5 duration-500">
-                    <div className="flex items-center justify-between">
-                        <h3 className="text-sm font-black uppercase tracking-widest text-muted-foreground">{t('base64Output')}</h3>
-                        <button
-                            onClick={() => {
-                                navigator.clipboard.writeText(base64Output)
-                                    .then(() => {
-                                        setCopied(true);
-                                        setTimeout(() => setCopied(false), 2000);
-                                    })
-                                    .catch(() => { });
-                            }}
-                            className={`px-6 py-2.5 border rounded-xl text-xs font-black uppercase tracking-widest transition-all flex items-center gap-2 ${copied ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20' : 'bg-primary/10 text-primary border-primary/20 hover:bg-primary/20'}`}
-                        >
-                            {copied ? <CheckCircle2 size={14} /> : null}
-                            {copied ? 'COPIED!' : t('copyString')}
-                        </button>
+            {
+                base64Output && (
+                    <div className="bg-card p-8 rounded-3xl border-2 border-border shadow-2xl space-y-6 animate-in slide-in-from-bottom-5 duration-500">
+                        <div className="flex items-center justify-between">
+                            <h3 className="text-sm font-black uppercase tracking-widest text-muted-foreground">{t('base64Output')}</h3>
+                            <button
+                                onClick={() => {
+                                    navigator.clipboard.writeText(base64Output)
+                                        .then(() => {
+                                            setCopied(true);
+                                            setTimeout(() => setCopied(false), 2000);
+                                        })
+                                        .catch(() => { });
+                                }}
+                                className={`px-6 py-2.5 border rounded-xl text-xs font-black uppercase tracking-widest transition-all flex items-center gap-2 ${copied ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20' : 'bg-primary/10 text-primary border-primary/20 hover:bg-primary/20'}`}
+                            >
+                                {copied ? <CheckCircle2 size={14} /> : null}
+                                {copied ? 'COPIED!' : t('copyString')}
+                            </button>
+                        </div>
+                        <textarea
+                            readOnly
+                            value={base64Output}
+                            className="w-full h-48 p-6 bg-muted rounded-3xl font-mono text-xs break-all resize-none outline-none border-2 border-border focus:border-accent transition-colors shadow-inner"
+                        />
                     </div>
-                    <textarea
-                        readOnly
-                        value={base64Output}
-                        className="w-full h-48 p-6 bg-muted rounded-3xl font-mono text-xs break-all resize-none outline-none border-2 border-border focus:border-accent transition-colors shadow-inner"
-                    />
-                </div>
-            )}
-        </div>
+                )
+            }
+        </div >
     );
 }
