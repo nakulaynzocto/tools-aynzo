@@ -1,22 +1,22 @@
 interface ToolSEO {
-title: string;
-description: string;
-keywords: string;
-h1: string;
-content?: string; // Optional rich text content
-schema?: any;
-faq?: { question: string; answer: string; }[];
+    title: string;
+    description: string;
+    keywords: string;
+    h1: string;
+    content?: string; // Optional rich text content
+    schema?: any;
+    faq?: { question: string; answer: string; }[];
 }
 
 // Tool-specific SEO metadata configuration
 export const toolSEO: { [key: string]: ToolSEO } = {
-// === EXISTING TOOLS ===
-'word-counter': {
-title: 'Word Counter & Character Count Tool - Real-Time Analysis',
-description: 'Count words, characters, sentences, and paragraphs in real-time. The ultimate free word counter for writers, students, and SEOs. Checks reading time and speaking time instantly.',
-keywords: 'word counter, character counter, check word count, essay word count, reading time calculator, sentence counter, real time word count, twitter character counter',
-h1: 'Word Counter: The Writer\'s Ultimate Productivity Tool',
-content: `
+    // === EXISTING TOOLS ===
+    'word-counter': {
+        title: 'Word Counter & Character Count Tool - Real-Time Analysis',
+        description: 'Count words, characters, sentences, and paragraphs in real-time. The ultimate free word counter for writers, students, and SEOs. Checks reading time and speaking time instantly.',
+        keywords: 'word counter, character counter, check word count, essay word count, reading time calculator, sentence counter, real time word count, twitter character counter',
+        h1: 'Word Counter: The Writer\'s Ultimate Productivity Tool',
+        content: `
 <p>In the digital age, length matters. Whether you are a student strictly adhering to a 1000-word essay limit, a social media manager crafting the perfect 280-character tweet, or an SEO specialist optimizing a meta description, precision is key. The **Aynzo Word Counter** is not just a calculator; it is a comprehensive writing assistant designed to give you deep insights into your text's structure, flow, and impact.</p>
 <p>This authoritative guide will explore why word count is a critical metric in modern communication, the standard limits for every major platform, and how our privacy-first tool protects your intellectual property while you work.</p>
 
@@ -75,29 +75,29 @@ content: `
 <h2>Conclusion: Write with Confidence</h2>
 <p>Don't let formatting limits disrupt your creative flow. Paste your text into Aynzo's Word Counter and get instant, accurate feedback. Once you're done editing, you might want to use our <a href="/en/tools/case-converter">Case Converter</a> to fix capitalization or our <a href="/en/tools/remove-extra-spaces">Whitespace Remover</a> to clean up your final draft.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Word Counter',
-description: 'Free online word count and character count tool. Analyze text length, reading time, and sentence structure instantly.',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Does this tool count spaces as characters?', answer: 'Yes. We provide two separate counts: one "with spaces" and one "without spaces" so you can choose the metric that fits your requirements.' },
-{ question: 'Is there a limit to how much text I can paste?', answer: 'No practical limit. Since we process text in your browser, you can paste entire novels (100k+ words) and get results instantly.' },
-{ question: 'How is "Reading Time" calculated?', answer: 'We use the industry standard of 225 words per minute (WPM), which represents the average adult silent reading speed.' },
-{ question: 'Do you save my text?', answer: 'Never. Your text is processed in your device\'s RAM and is cleared the moment you close the tab. We have zero visibility into what you write.' },
-{ question: 'Can I use this offline?', answer: 'Yes! Once the page is loaded, you can disconnect your internet and the counter will still work perfectly.' }
-]
-},
-'character-counter': {
-title: 'Character Counter - Free Online Text Character Count Tool',
-description: 'Free character counter online. Count characters with and without spaces, words, sentences instantly. Ideal for Twitter, SMS, and meta descriptions.',
-keywords: 'character counter, count characters, character count online, text character counter, character counter with spaces',
-h1: 'Free Online Character Counter',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Word Counter',
+            description: 'Free online word count and character count tool. Analyze text length, reading time, and sentence structure instantly.',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Does this tool count spaces as characters?', answer: 'Yes. We provide two separate counts: one "with spaces" and one "without spaces" so you can choose the metric that fits your requirements.' },
+            { question: 'Is there a limit to how much text I can paste?', answer: 'No practical limit. Since we process text in your browser, you can paste entire novels (100k+ words) and get results instantly.' },
+            { question: 'How is "Reading Time" calculated?', answer: 'We use the industry standard of 225 words per minute (WPM), which represents the average adult silent reading speed.' },
+            { question: 'Do you save my text?', answer: 'Never. Your text is processed in your device\'s RAM and is cleared the moment you close the tab. We have zero visibility into what you write.' },
+            { question: 'Can I use this offline?', answer: 'Yes! Once the page is loaded, you can disconnect your internet and the counter will still work perfectly.' }
+        ]
+    },
+    'character-counter': {
+        title: 'Character Counter - Free Online Text Character Count Tool',
+        description: 'Free character counter online. Count characters with and without spaces, words, sentences instantly. Ideal for Twitter, SMS, and meta descriptions.',
+        keywords: 'character counter, count characters, character count online, text character counter, character counter with spaces',
+        h1: 'Free Online Character Counter',
+        content: `
 <p>Our <strong>Online Character Counter</strong> is the perfect tool for social media managers, SEO specialists, and copywriters. When you are writing for platforms with strict limits—like Twitter (280 characters), SMS, or Google Meta Descriptions (150-160 characters)—you need an exact, real-time count to ensure your message isn't cut off.</p>
 
 <h3>Why Use This Character Counter?</h3>
@@ -117,26 +117,26 @@ content: `
 <h3>Best Practices for Social Media Limits</h3>
 <p><strong>Twitter:</strong> 280 characters. <strong>LinkedIn:</strong> 3000 characters for posts. <strong>Instagram:</strong> 2200 characters for captions. Our tool helps you stay within these bounds while maximizing your message's impact.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Character Counter',
-description: 'Count characters, words, and sentences online',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'What is the Twitter character limit?', answer: 'Twitter allows 280 characters per tweet. Our character counter helps you stay within this limit.' },
-{ question: 'How many characters for meta description?', answer: 'Meta descriptions should be 150-160 characters for optimal SEO.' }
-]
-},
-'text-case-converter': {
-title: 'Text Case Converter - Uppercase, Lowercase, Title Case Tool',
-description: 'Convert text case online instantly. Switch between uppercase, lowercase, title case, sentence case, and alternating case. Free, fast, and secure text transformer.',
-keywords: 'case converter, text converter, uppercase to lowercase, title case converter, sentence case, text transformer',
-h1: 'Online Text Case Converter',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Character Counter',
+            description: 'Count characters, words, and sentences online',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What is the Twitter character limit?', answer: 'Twitter allows 280 characters per tweet. Our character counter helps you stay within this limit.' },
+            { question: 'How many characters for meta description?', answer: 'Meta descriptions should be 150-160 characters for optimal SEO.' }
+        ]
+    },
+    'text-case-converter': {
+        title: 'Text Case Converter - Uppercase, Lowercase, Title Case Tool',
+        description: 'Convert text case online instantly. Switch between uppercase, lowercase, title case, sentence case, and alternating case. Free, fast, and secure text transformer.',
+        keywords: 'case converter, text converter, uppercase to lowercase, title case converter, sentence case, text transformer',
+        h1: 'Online Text Case Converter',
+        content: `
 <p>Welcome to the ultimate Text Case Converter, a versatile and free online tool designed to transform your text instantly. Whether you accidentally left Caps Lock on, need to format a headline, or want to clean up messy text, our tool handles it all with a single click.</p>
 
 <h3>Why Use Our Text Case Converter?</h3>
@@ -168,26 +168,26 @@ content: `
 </ol>
 <p>Our tool runs entirely in your browser, ensuring your text data remains private and secure. No text is ever sent to our servers.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Text Case Converter',
-description: 'Convert text case online suitable for any use case',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Is this tool free?', answer: 'Yes, our text case converter is 100% free to use with no limits.' },
-{ question: 'Is my text private?', answer: 'Absolutely. All processing is done client-side in your browser. We do not store or see your text.' }
-]
-},
-'json-formatter': {
-title: 'JSON Formatter & Validator - Beautify and Fix JSON Online Free',
-description: 'Master JSON data with our 1200+ word guide. Learn to validate, beautify, and minify JSON instantly. 100% private, browser-based JSON formatter for developers.',
-keywords: 'json formatter, json validator, beautify json online, fix json syntax, json parser, online json editor, minify json, format json string',
-h1: 'JSON Formatter & Validator: The Complete Guide to Data Optimization',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Text Case Converter',
+            description: 'Convert text case online suitable for any use case',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is this tool free?', answer: 'Yes, our text case converter is 100% free to use with no limits.' },
+            { question: 'Is my text private?', answer: 'Absolutely. All processing is done client-side in your browser. We do not store or see your text.' }
+        ]
+    },
+    'json-formatter': {
+        title: 'JSON Formatter & Validator - Beautify and Fix JSON Online Free',
+        description: 'Master JSON data with our 1200+ word guide. Learn to validate, beautify, and minify JSON instantly. 100% private, browser-based JSON formatter for developers.',
+        keywords: 'json formatter, json validator, beautify json online, fix json syntax, json parser, online json editor, minify json, format json string',
+        h1: 'JSON Formatter & Validator: The Complete Guide to Data Optimization',
+        content: `
 <p>In the high-speed world of software development, <strong>data exchange</strong> is the lifeblood of every application. Whether you are consuming a third-party API, configuring a cloud server, or debugging a mobile app, you are likely dealing with <strong>JSON (JavaScript Object Notation)</strong>. But as every developer knows, raw JSON is often a chaotic, single-line string that is impossible to read or debug effectively.</p>
 <p>If you've ever spent hours squinting at a wall of minified text trying to find a missing comma, you aren't alone. This guide will teach you exactly <strong>how to format and validate JSON online</strong> while exploring the technical standards that make this format the heartbeat of the modern web.</p>
 
@@ -253,28 +253,28 @@ content: `
 
 <p>Ready to explore more? Check out our <a href="/en/tools/url-encoder-decoder">URL Encoder/Decoder</a> or convert your data with our <a href="/en/tools/csv-to-json">CSV to JSON Converter</a> for even more power.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'JSON Formatter & Validator',
-description: 'Format, validate, and minify JSON data online with 100% client-side privacy.',
-applicationCategory: 'DeveloperApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Is JSON case sensitive?', answer: 'Yes. In JSON, the keys "name" and "Name" are treated as two completely different entities. Most parsers will fail or return null if the case does not match your expected schema.' },
-{ question: 'What is the limit for the JSON formatter?', answer: 'Because we use local browser processing, the limit depends on your computer\'s RAM. We comfortably support files up to 50MB, which covers 99.9% of API responses.' },
-{ question: 'Why is my JSON invalid despite looking correct?', answer: 'The most common hidden error is a special "smart quote" copied from a document editor or a hidden zero-width character. Our validator highlights these invisible issues instantly.' },
-{ question: 'Can I convert JSON to other formats?', answer: 'Yes! Aynzo Tools provides built-in converters for JSON to CSV and JSON to XML to help you move data between different systems.' }
-]
-},
-'password-generator': {
-title: 'Strong Password Generator - Create Hack-Proof Passwords',
-description: 'Generate 100% secure, high-entropy passwords instantly. Uses military-grade browser encryption to ensure your data never leaves your device. Free and offline-capable.',
-keywords: 'strong password generator, random password maker, secure password tool, hack proof passwords, offline password generator, password entropy calculator',
-h1: 'Military-Grade Password Generator: Security Starts Here',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'JSON Formatter & Validator',
+            description: 'Format, validate, and minify JSON data online with 100% client-side privacy.',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is JSON case sensitive?', answer: 'Yes. In JSON, the keys "name" and "Name" are treated as two completely different entities. Most parsers will fail or return null if the case does not match your expected schema.' },
+            { question: 'What is the limit for the JSON formatter?', answer: 'Because we use local browser processing, the limit depends on your computer\'s RAM. We comfortably support files up to 50MB, which covers 99.9% of API responses.' },
+            { question: 'Why is my JSON invalid despite looking correct?', answer: 'The most common hidden error is a special "smart quote" copied from a document editor or a hidden zero-width character. Our validator highlights these invisible issues instantly.' },
+            { question: 'Can I convert JSON to other formats?', answer: 'Yes! Aynzo Tools provides built-in converters for JSON to CSV and JSON to XML to help you move data between different systems.' }
+        ]
+    },
+    'password-generator': {
+        title: 'Strong Password Generator - Create Hack-Proof Passwords',
+        description: 'Generate 100% secure, high-entropy passwords instantly. Uses military-grade browser encryption to ensure your data never leaves your device. Free and offline-capable.',
+        keywords: 'strong password generator, random password maker, secure password tool, hack proof passwords, offline password generator, password entropy calculator',
+        h1: 'Military-Grade Password Generator: Security Starts Here',
+        content: `
 <p><strong>Your password is the only thing standing between a hacker and your identity.</strong> In an era of daily data breaches, "Password123" is no longer just a bad habit—it's a security risk. At Aynzo Tools, we believe that digital safety should be accessible to everyone. That's why we built the ultimate <strong>Client-Side Password Generator</strong>.</p>
 <p>This guide will explain concepts like <strong>Entropy</strong>, Brute Force protection, and why generating passwords offline in your browser is the safest method available in 2026.</p>
 
@@ -311,28 +311,28 @@ content: `
 <h2>Conclusion: Secure Your Digital Life</h2>
 <p>Don't wait for a data breach notification to upgrade your security. Use our Strong Password Generator today to secure your primary email and banking accounts. For other text security needs, check out our <a href="/en/tools/md5-hash">MD5 Hash Generator</a> or encode sensitive data with our <a href="/en/tools/base64-encoder">Base64 Tool</a>.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Strong Password Generator',
-description: 'Generate high-entropy, cryptographically secure passwords locally in your browser.',
-applicationCategory: 'SecurityApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Is it safe to generate passwords online?', answer: 'It is only safe if the generation happens on the "Client-Side" (in your browser), like it does here. Avoid tools that refresh the page to give you a new password, as they might be sending data from a server.' },
-{ question: 'How long should my password be?', answer: 'We recommend a minimum of 16 characters for critical accounts (Email, Banking) and 12 characters for standard accounts.' },
-{ question: 'Do you store generated passwords?', answer: 'Absolutely not. Our server never sees the passwords you generate. They are created and destroyed in your device\'s temporary memory.' },
-{ question: 'What symbols should I use?', answer: 'Our tool includes standard symbols (@#$%) that are accepted by most websites. You can toggle specific symbol sets if a site has restrictions.' }
-]
-},
-'image-compressor': {
-title: 'Image Compressor Online Free - Reduce File Size without Quality Loss',
-description: 'Compress JPG, PNG, and WebP images online for free. Master image optimization with our 1200+ word guide. 100% private, browser-based compression.',
-keywords: 'image compressor online free, compress image without losing quality, reduce image file size, bulk image compressor, online image optimizer, compress jpg to 50kb',
-h1: 'Image Compressor Online Free: The Ultimate Guide to Web Optimization',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Strong Password Generator',
+            description: 'Generate high-entropy, cryptographically secure passwords locally in your browser.',
+            applicationCategory: 'SecurityApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is it safe to generate passwords online?', answer: 'It is only safe if the generation happens on the "Client-Side" (in your browser), like it does here. Avoid tools that refresh the page to give you a new password, as they might be sending data from a server.' },
+            { question: 'How long should my password be?', answer: 'We recommend a minimum of 16 characters for critical accounts (Email, Banking) and 12 characters for standard accounts.' },
+            { question: 'Do you store generated passwords?', answer: 'Absolutely not. Our server never sees the passwords you generate. They are created and destroyed in your device\'s temporary memory.' },
+            { question: 'What symbols should I use?', answer: 'Our tool includes standard symbols (@#$%) that are accepted by most websites. You can toggle specific symbol sets if a site has restrictions.' }
+        ]
+    },
+    'image-compressor': {
+        title: 'Image Compressor Online Free - Reduce File Size without Quality Loss',
+        description: 'Compress JPG, PNG, and WebP images online for free. Master image optimization with our 1200+ word guide. 100% private, browser-based compression.',
+        keywords: 'image compressor online free, compress image without losing quality, reduce image file size, bulk image compressor, online image optimizer, compress jpg to 50kb',
+        h1: 'Image Compressor Online Free: The Ultimate Guide to Web Optimization',
+        content: `
 <p> In the high - stakes world of digital experience, speed is the ultimate currency.Whether you're a web developer aiming for a 100/100 Lighthouse score, a digital marketer optimizing social media assets, or a student trying to upload an assignment to a portal with strict file size limits, an <strong>image compressor</strong> is an essential tool in your kit.</p>
 <p> At Aynzo Tools, we believe that optimizing your images shouldn't mean compromising your privacy or your artistic vision. In this definitive guide, we’ll explore how to <strong>compress images online for free</strong> while maintaining professional-grade quality and total data security.</p>
 
@@ -370,29 +370,29 @@ content: `
 <h2> Conclusion: Optimize the Web, One Image at a Time </h2>
 <p> Digital optimization shouldn't be a chore. By integrating a fast, secure **image compressor** into your daily workflow, you contribute to a faster, greener, and more accessible internet. Ready to take your SEO to the next level? Explore our other utilities like the <a href="/en/tools/webp-converter">WebP Converter</a> or the <a href="/en/tools/image-resizer">Image Resizer</a> to complete your optimization toolkit.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Image Compressor',
-description: 'Compress JPG, PNG, and WebP images online without quality loss or server uploads.',
-applicationCategory: 'MultimediaApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Is there a limit on file size?', answer: 'Because our compressor runs locally on your machine (client-side), you are only limited by your device\'s RAM. We comfortably support files up to 100MB per image.' },
-{ question: 'Does bulk compression cost money?', answer: 'No. Bulk and batch compression is 100% free on Aynzo Tools. You can upload as many files as you need at once.' },
-{ question: 'Will my images look blurry?', answer: 'Not if you use the recommended settings. A quality level of 80% is virtually indistinguishable from the original to the naked eye while providing 70%+ space savings.' },
-{ question: 'What formats are supported?', answer: 'We support all major web formats: JPG (JPEG), PNG, and WebP. We also support transparent backgrounds for PNG and WebP files.' },
-{ question: 'Is this safe for sensitive photos?', answer: 'Yes. Since the images never leave your browser, it is as safe as using an offline desktop application.' }
-]
-},
-'image-resizer': {
-title: 'Image Resizer - Resize JPG/PNG to 20KB, 50KB, 100KB Online',
-description: 'Free online image resizer. Resize images to specific pixel dimensions or file sizes like 20KB, 50KB, 100KB. Perfect for passport photos, social media, and web optimization.',
-keywords: 'image resizer, resize image to 50kb, change image dimensions online, resize photo for passport, image resizer 20kb, resize image to 100kb, bulk image resizer, free online photo resizer',
-h1: 'Resize Image to Specific Dimensions & Size',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Image Compressor',
+            description: 'Compress JPG, PNG, and WebP images online without quality loss or server uploads.',
+            applicationCategory: 'MultimediaApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is there a limit on file size?', answer: 'Because our compressor runs locally on your machine (client-side), you are only limited by your device\'s RAM. We comfortably support files up to 100MB per image.' },
+            { question: 'Does bulk compression cost money?', answer: 'No. Bulk and batch compression is 100% free on Aynzo Tools. You can upload as many files as you need at once.' },
+            { question: 'Will my images look blurry?', answer: 'Not if you use the recommended settings. A quality level of 80% is virtually indistinguishable from the original to the naked eye while providing 70%+ space savings.' },
+            { question: 'What formats are supported?', answer: 'We support all major web formats: JPG (JPEG), PNG, and WebP. We also support transparent backgrounds for PNG and WebP files.' },
+            { question: 'Is this safe for sensitive photos?', answer: 'Yes. Since the images never leave your browser, it is as safe as using an offline desktop application.' }
+        ]
+    },
+    'image-resizer': {
+        title: 'Image Resizer - Resize JPG/PNG to 20KB, 50KB, 100KB Online',
+        description: 'Free online image resizer. Resize images to specific pixel dimensions or file sizes like 20KB, 50KB, 100KB. Perfect for passport photos, social media, and web optimization.',
+        keywords: 'image resizer, resize image to 50kb, change image dimensions online, resize photo for passport, image resizer 20kb, resize image to 100kb, bulk image resizer, free online photo resizer',
+        h1: 'Resize Image to Specific Dimensions & Size',
+        content: `
 <p> Need to fit an image into a specific dimension without distorting it ? Our <strong> Online Image Resizer </strong> is a powerful, free tool that lets you change the width and height of your photos in seconds. Whether you need a 1200x630 Open Graph image or a small 150x150 profile picture, we've got you covered.</p>
 
 <h3>Features of Our Image Resizer </h3>
@@ -413,26 +413,26 @@ content: `
 <li><strong>Download: </strong> Click "Resize" and save your optimized image.</li>
 </ol>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Image Resizer',
-description: 'Resize images to custom dimensions',
-applicationCategory: 'MultimediaApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'How do I resize an image?', answer: 'Upload your image, enter new dimensions, and click resize.' }
-]
-},
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Image Resizer',
+            description: 'Resize images to custom dimensions',
+            applicationCategory: 'MultimediaApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How do I resize an image?', answer: 'Upload your image, enter new dimensions, and click resize.' }
+        ]
+    },
 
-'url-encoder-decoder': {
-title: 'URL Encoder Decoder - Encode & Decode URLs Online',
-description: 'Free URL encoder and decoder. Encode URLs for safe transmission. Decode percent-encoded URLs.',
-keywords: 'url encoder, url decoder, encode url, decode url online, url encoding tool',
-h1: 'URL Encoder & Decoder',
-content: `
+    'url-encoder-decoder': {
+        title: 'URL Encoder Decoder - Encode & Decode URLs Online',
+        description: 'Free URL encoder and decoder. Encode URLs for safe transmission. Decode percent-encoded URLs.',
+        keywords: 'url encoder, url decoder, encode url, decode url online, url encoding tool',
+        h1: 'URL Encoder & Decoder',
+        content: `
 <p> URLs can only contain certain characters from the ASCII set.When a URL contains special characters or spaces, they must be converted into a safe "percent-encoded" format.Our <strong> Online URL Encoder / Decoder </strong> makes this process seamless for developers and SEOs.</p>
 
 <h3>When Should You Use This Tool ? </h3>
@@ -447,100 +447,100 @@ content: `
 <h3> Privacy First </h3>
 <p> Like all our utilities, encoding and decoding happens locally.Your URLs—which might contain sensitive data or tokens—are never transmitted to our servers.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'URL Encoder Decoder',
-description: 'Encode and decode URLs online',
-applicationCategory: 'DeveloperApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Why encode URLs?', answer: 'URL encoding converts special characters to a format safe for internet transmission.' }
-]
-},
-// === ADVANCED TEXT TOOLS ===
-'italic-text': {
-title: 'Italic Text Generator - Copy & Paste Italic Font',
-description: 'Generate italic text using unicode characters. Copy and paste into social media, bio, and comments.',
-keywords: 'italic text generator, italic font, unicode italic, instagram italic font',
-h1: 'Italic Text Generator'
-},
-'strikethrough-text': {
-title: 'Strikethrough Text Generator - Cross Out Text',
-description: 'Generate strikethrough text for social media. Copy and paste crossed out text easily.',
-keywords: 'strikethrough text, cross out text, strike text generator, line through text',
-h1: 'Strikethrough Text Generator'
-},
-'underline-text': {
-title: 'Underline Text Generator - Underline Font Online',
-description: 'Generate underlined text for Instagram, Facebook, and Twitter. Copy and paste underlined font.',
-keywords: 'underline text generator, underline font, text underline online',
-h1: 'Underline Text Generator'
-},
-'small-text': {
-title: 'Small Text Generator - ˢᵐᵃˡˡ ᵗᵉˣᵗ Copy & Paste',
-description: 'Generate tiny text (subscript/superscript) for social media bios and usernames.',
-keywords: 'small text generator, tiny text, subscript generator, superscript generator',
-h1: 'Small Text Generator'
-},
-'upside-down-text': {
-title: 'Upside Down Text Generator - Flip Text 180°',
-description: 'Flip your text upside down instantly. Copy and paste flipped text.',
-keywords: 'upside down text, flip text, rotate text 180, reverse text',
-h1: 'Upside Down Text Generator'
-},
-'mirror-text': {
-title: 'Mirror Text Generator - Reverse Text Reflection',
-description: 'Create mirrored text reflection. Flip text horizontally for cool effects.',
-keywords: 'mirror text, reverse text reflection, mirror writing generator',
-h1: 'Mirror Text Generator'
-},
-'duplicate-line-remover': {
-title: 'Remove Duplicate Lines - Clean Up Text Lists',
-description: 'Remove duplicate lines from your text or list instantly. Sort and clean unique lines.',
-keywords: 'remove duplicate lines, delete duplicates, deduplicate text, unique lines filter',
-h1: 'Duplicate Line Remover'
-},
-'sort-alphabetically': {
-title: 'Sort Text Alphabetically - Sort Lists A-Z / Z-A',
-description: 'Sort lists and text lines alphabetically (A-Z or Z-A) or numerically. Fast and free.',
-keywords: 'sort alphabetically, sort text a-z, alphabetize list, sort lines',
-h1: 'Sort Alphabetically Tool'
-},
-'text-replace': {
-title: 'Text Replacer - Replace Words & Characters Online',
-description: 'Find and replace text online. Bulk replace words, characters, or phrases in your text.',
-keywords: 'text replace, find and replace, replace words, string replace online',
-h1: 'Text Replacement Tool'
-},
-'whitespace-remover': {
-title: 'Whitespace Remover - Remove Extra Spaces & Tabs',
-description: 'Trim extra whitespace, tabs, and line breaks. Clean up your code or text.',
-keywords: 'whitespace remover, remove spaces, trim text, remove tabs',
-h1: 'Whitespace Remover'
-},
-'word-frequency': {
-title: 'Word Frequency Counter - Text Analysis Tool',
-description: 'Analyze word usage frequency in your text. Find most repeated words and keyword density.',
-keywords: 'word frequency counter, text analyzer, keyword density, word usage count',
-h1: 'Word Frequency Counter'
-},
-'find-replace': {
-title: 'Advanced Find & Replace - Regex Supported',
-description: 'Advanced find and replace tool with Regex support. Case sensitive matching and global replacement.',
-keywords: 'regex find replace, advanced replace, regular expression replace',
-h1: 'Advanced Find & Replace'
-},
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'URL Encoder Decoder',
+            description: 'Encode and decode URLs online',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Why encode URLs?', answer: 'URL encoding converts special characters to a format safe for internet transmission.' }
+        ]
+    },
+    // === ADVANCED TEXT TOOLS ===
+    'italic-text': {
+        title: 'Italic Text Generator - Copy & Paste Italic Font',
+        description: 'Generate italic text using unicode characters. Copy and paste into social media, bio, and comments.',
+        keywords: 'italic text generator, italic font, unicode italic, instagram italic font',
+        h1: 'Italic Text Generator'
+    },
+    'strikethrough-text': {
+        title: 'Strikethrough Text Generator - Cross Out Text',
+        description: 'Generate strikethrough text for social media. Copy and paste crossed out text easily.',
+        keywords: 'strikethrough text, cross out text, strike text generator, line through text',
+        h1: 'Strikethrough Text Generator'
+    },
+    'underline-text': {
+        title: 'Underline Text Generator - Underline Font Online',
+        description: 'Generate underlined text for Instagram, Facebook, and Twitter. Copy and paste underlined font.',
+        keywords: 'underline text generator, underline font, text underline online',
+        h1: 'Underline Text Generator'
+    },
+    'small-text': {
+        title: 'Small Text Generator - ˢᵐᵃˡˡ ᵗᵉˣᵗ Copy & Paste',
+        description: 'Generate tiny text (subscript/superscript) for social media bios and usernames.',
+        keywords: 'small text generator, tiny text, subscript generator, superscript generator',
+        h1: 'Small Text Generator'
+    },
+    'upside-down-text': {
+        title: 'Upside Down Text Generator - Flip Text 180°',
+        description: 'Flip your text upside down instantly. Copy and paste flipped text.',
+        keywords: 'upside down text, flip text, rotate text 180, reverse text',
+        h1: 'Upside Down Text Generator'
+    },
+    'mirror-text': {
+        title: 'Mirror Text Generator - Reverse Text Reflection',
+        description: 'Create mirrored text reflection. Flip text horizontally for cool effects.',
+        keywords: 'mirror text, reverse text reflection, mirror writing generator',
+        h1: 'Mirror Text Generator'
+    },
+    'duplicate-line-remover': {
+        title: 'Remove Duplicate Lines - Clean Up Text Lists',
+        description: 'Remove duplicate lines from your text or list instantly. Sort and clean unique lines.',
+        keywords: 'remove duplicate lines, delete duplicates, deduplicate text, unique lines filter',
+        h1: 'Duplicate Line Remover'
+    },
+    'sort-alphabetically': {
+        title: 'Sort Text Alphabetically - Sort Lists A-Z / Z-A',
+        description: 'Sort lists and text lines alphabetically (A-Z or Z-A) or numerically. Fast and free.',
+        keywords: 'sort alphabetically, sort text a-z, alphabetize list, sort lines',
+        h1: 'Sort Alphabetically Tool'
+    },
+    'text-replace': {
+        title: 'Text Replacer - Replace Words & Characters Online',
+        description: 'Find and replace text online. Bulk replace words, characters, or phrases in your text.',
+        keywords: 'text replace, find and replace, replace words, string replace online',
+        h1: 'Text Replacement Tool'
+    },
+    'whitespace-remover': {
+        title: 'Whitespace Remover - Remove Extra Spaces & Tabs',
+        description: 'Trim extra whitespace, tabs, and line breaks. Clean up your code or text.',
+        keywords: 'whitespace remover, remove spaces, trim text, remove tabs',
+        h1: 'Whitespace Remover'
+    },
+    'word-frequency': {
+        title: 'Word Frequency Counter - Text Analysis Tool',
+        description: 'Analyze word usage frequency in your text. Find most repeated words and keyword density.',
+        keywords: 'word frequency counter, text analyzer, keyword density, word usage count',
+        h1: 'Word Frequency Counter'
+    },
+    'find-replace': {
+        title: 'Advanced Find & Replace - Regex Supported',
+        description: 'Advanced find and replace tool with Regex support. Case sensitive matching and global replacement.',
+        keywords: 'regex find replace, advanced replace, regular expression replace',
+        h1: 'Advanced Find & Replace'
+    },
 
-// === FORMATTER TOOLS ===
-'html-formatter': {
-title: 'HTML Formatter & Beautifier - Format HTML Code',
-description: 'Format, beautify and indent your HTML code online. Fix messy HTML instantly.',
-keywords: 'html formatter, html beautifier, format html, clean html code',
-h1: 'HTML Formatter',
-content: `
+    // === FORMATTER TOOLS ===
+    'html-formatter': {
+        title: 'HTML Formatter & Beautifier - Format HTML Code',
+        description: 'Format, beautify and indent your HTML code online. Fix messy HTML instantly.',
+        keywords: 'html formatter, html beautifier, format html, clean html code',
+        h1: 'HTML Formatter',
+        content: `
 <p> Clean code is easier to debug and maintain.Our <strong> Online HTML Formatter </strong> (also known as a Beautifier) takes your messy, minified, or disorganized HTML and turns it into beautifully indented, human-readable code. It follows the industry-standard rules for nesting and spacing, making it perfect for developers and students alike.</p>
 
 <h3>Key Benefits </h3>
@@ -553,22 +553,22 @@ content: `
 <h3> Safety First </h3>
 <p> Your source code is never stored on our servers.The formatting process happens exclusively in your browser, ensuring that your private projects and proprietary code remain 100 % confidential.This tool is ideal for quickly cleaning up "View Source" snippets or minified production files.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'HTML Formatter',
-description: 'Format, beautify and indent your HTML code online.',
-applicationCategory: 'DeveloperApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'css-formatter': {
-title: 'CSS Formatter & Beautifier - Clean CSS Code',
-description: 'Beautify and format CSS code. Minify or expand CSS for better readability.',
-keywords: 'css formatter, css beautifier, format css, clean css',
-h1: 'CSS Formatter',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'HTML Formatter',
+            description: 'Format, beautify and indent your HTML code online.',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'css-formatter': {
+        title: 'CSS Formatter & Beautifier - Clean CSS Code',
+        description: 'Beautify and format CSS code. Minify or expand CSS for better readability.',
+        keywords: 'css formatter, css beautifier, format css, clean css',
+        h1: 'CSS Formatter',
+        content: `
 <p> Messy CSS can be a headache to manage.Our <strong> Online CSS Formatter </strong> transforms unorganized, minified, or inconsistent CSS into a clean, readable, and maintainable stylesheet. It automatically indents properties, organizes rules, and ensures consistent spacing, making your CSS development much smoother.</p>
 
 <h3>Why Format Your CSS ? </h3>
@@ -581,22 +581,22 @@ content: `
 <h3> Features & Privacy </h3>
 <p> Our formatter supports various CSS syntaxes, including standard CSS3 and common preprocessor outputs.You can choose between different indentation styles(e.g., 2 spaces, 4 spaces, tabs).All formatting occurs client - side in your browser, meaning your CSS code is never sent to our servers, guaranteeing your privacy and security.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'CSS Formatter',
-description: 'Beautify and format CSS code.',
-applicationCategory: 'DeveloperApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'javascript-formatter': {
-title: 'JavaScript Formatter - Beautify JS Code',
-description: 'Format and beautify JavaScript/JSON code. Fix indentation and spacing.',
-keywords: 'javascript formatter, js beautifier, format javascript, clean js code',
-h1: 'JavaScript Formatter',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'CSS Formatter',
+            description: 'Beautify and format CSS code.',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'javascript-formatter': {
+        title: 'JavaScript Formatter - Beautify JS Code',
+        description: 'Format and beautify JavaScript/JSON code. Fix indentation and spacing.',
+        keywords: 'javascript formatter, js beautifier, format javascript, clean js code',
+        h1: 'JavaScript Formatter',
+        content: `
 <p> Debugging unformatted JavaScript is a nightmare.Our <strong> JavaScript Beautifier </strong> takes your "spaghetti code" or minified JS and reorganizes it into a structured, readable format. It handles complex nesting, functions, and arrays with precision, following modern ECMAScript standards.</p>
 
 <h3>Why Beautify Your JS ? </h3>
@@ -609,66 +609,66 @@ content: `
 <h3> Features </h3>
 <p> Our formatter supports the latest JavaScript features including arrow functions, template literals, and async / await.It provides standard 2 - space or 4 - space indentation to match your project's style guide. All processing is local and secure.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'JavaScript Formatter',
-description: 'Format and beautify JavaScript/JSON code.',
-applicationCategory: 'DeveloperApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'xml-formatter': {
-title: 'XML Formatter - Beautify & Minify XML',
-description: 'Format, validate and beautify XML strings. Convert XML to single line or indented view.',
-keywords: 'xml formatter, xml beautifier, format xml, xml validator',
-h1: 'XML Formatter'
-},
-'sql-formatter': {
-title: 'SQL Formatter - Beautify SQL Queries',
-description: 'Format SQL queries for better readability. Supports standard SQL, MySQL, PostgreSQL.',
-keywords: 'sql formatter, format sql, beautify sql query, sql pretty printer',
-h1: 'SQL Formatter'
-},
-'markdown-to-html': {
-title: 'Markdown to HTML Converter - MD to HTML',
-description: 'Convert Markdown text to HTML code instantly. Preview the result.',
-keywords: 'markdown to html, md to html, convert markdown, markdown editor',
-h1: 'Markdown to HTML'
-},
-'html-to-markdown': {
-title: 'HTML to Markdown Converter - HTML to MD',
-description: 'Convert HTML code to Markdown format. Clean and meaningful conversion.',
-keywords: 'html to markdown, html to md, convert html, html converter',
-h1: 'HTML to Markdown'
-},
-'csv-to-json': {
-title: 'CSV to JSON Converter - Convert CSV Data',
-description: 'Convert CSV files or text to JSON format. Customize delimiter and structure.',
-keywords: 'csv to json, convert csv, csv parser, csv to json online',
-h1: 'CSV to JSON Converter'
-},
-'json-to-csv': {
-title: 'JSON to CSV Converter - Convert JSON Data',
-description: 'Convert JSON data to CSV format. Download as file for Excel.',
-keywords: 'json to csv, convert json, json parser, json to excel',
-h1: 'JSON to CSV Converter'
-},
-'code-minifier': {
-title: 'Code Minifier - Minify HTML, CSS, JS',
-description: 'Minify HTML, CSS, and JavaScript code. Reduce file size for better performance.',
-keywords: 'code minifier, minify html, minify css, minify js, remove whitespace',
-h1: 'Code Minifier'
-},
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'JavaScript Formatter',
+            description: 'Format and beautify JavaScript/JSON code.',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'xml-formatter': {
+        title: 'XML Formatter - Beautify & Minify XML',
+        description: 'Format, validate and beautify XML strings. Convert XML to single line or indented view.',
+        keywords: 'xml formatter, xml beautifier, format xml, xml validator',
+        h1: 'XML Formatter'
+    },
+    'sql-formatter': {
+        title: 'SQL Formatter - Beautify SQL Queries',
+        description: 'Format SQL queries for better readability. Supports standard SQL, MySQL, PostgreSQL.',
+        keywords: 'sql formatter, format sql, beautify sql query, sql pretty printer',
+        h1: 'SQL Formatter'
+    },
+    'markdown-to-html': {
+        title: 'Markdown to HTML Converter - MD to HTML',
+        description: 'Convert Markdown text to HTML code instantly. Preview the result.',
+        keywords: 'markdown to html, md to html, convert markdown, markdown editor',
+        h1: 'Markdown to HTML'
+    },
+    'html-to-markdown': {
+        title: 'HTML to Markdown Converter - HTML to MD',
+        description: 'Convert HTML code to Markdown format. Clean and meaningful conversion.',
+        keywords: 'html to markdown, html to md, convert html, html converter',
+        h1: 'HTML to Markdown'
+    },
+    'csv-to-json': {
+        title: 'CSV to JSON Converter - Convert CSV Data',
+        description: 'Convert CSV files or text to JSON format. Customize delimiter and structure.',
+        keywords: 'csv to json, convert csv, csv parser, csv to json online',
+        h1: 'CSV to JSON Converter'
+    },
+    'json-to-csv': {
+        title: 'JSON to CSV Converter - Convert JSON Data',
+        description: 'Convert JSON data to CSV format. Download as file for Excel.',
+        keywords: 'json to csv, convert json, json parser, json to excel',
+        h1: 'JSON to CSV Converter'
+    },
+    'code-minifier': {
+        title: 'Code Minifier - Minify HTML, CSS, JS',
+        description: 'Minify HTML, CSS, and JavaScript code. Reduce file size for better performance.',
+        keywords: 'code minifier, minify html, minify css, minify js, remove whitespace',
+        h1: 'Code Minifier'
+    },
 
-// === CONVERTER TOOLS ===
-'unit-converter': {
-title: 'Universal Unit Converter - Engineering Precision',
-description: 'Convert length, weight, temperature, and more with scientific accuracy. The last converter you will ever need. Fast, ad-free, and mobile-friendly.',
-keywords: 'unit converter, engineering converter, length conversion, weight converter, temperature calculator, metric to imperial',
-h1: 'Engineering-Grade Unit Converter',
-content: `
+    // === CONVERTER TOOLS ===
+    'unit-converter': {
+        title: 'Universal Unit Converter - Engineering Precision',
+        description: 'Convert length, weight, temperature, and more with scientific accuracy. The last converter you will ever need. Fast, ad-free, and mobile-friendly.',
+        keywords: 'unit converter, engineering converter, length conversion, weight converter, temperature calculator, metric to imperial',
+        h1: 'Engineering-Grade Unit Converter',
+        content: `
 <p> <strong>Math is universal.Units are not.</strong></p>
 <p>You're baking a cake and need to turn 'grams' into 'cups'. You're an engineer converting 'Pascals' to 'PSI'.Or you're just traveling and don't know what 30°C feels like.Our ** Universal Unit Converter ** bridges the gap.</p>
 
@@ -685,26 +685,26 @@ content: `
 <h3> Why Bookmark This Page ? </h3>
 <p> Stop asking Google for one - off conversions.Our tool loads instantly, works offline, and covers every unit you simply can't remember off the top of your head.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Unit Converter',
-description: 'Convert between varying units of measurement',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Is it accurate for engineering?', answer: 'Yes. We use standard SI conversion factors with high decimal precision.' },
-{ question: 'Does it work offline?', answer: 'Yes! Once the page loads, you can use it even without an internet connection.' }
-]
-},
-'color-converter': {
-title: 'Color Converter - HEX, RGB, HSL',
-description: 'Convert color codes between HEX, RGB, and HSL formats. Visual color picker included.',
-keywords: 'color converter, hex to rgb, rgb to hex, hex to hsl, color picker',
-h1: 'Color Code Converter',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Unit Converter',
+            description: 'Convert between varying units of measurement',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is it accurate for engineering?', answer: 'Yes. We use standard SI conversion factors with high decimal precision.' },
+            { question: 'Does it work offline?', answer: 'Yes! Once the page loads, you can use it even without an internet connection.' }
+        ]
+    },
+    'color-converter': {
+        title: 'Color Converter - HEX, RGB, HSL',
+        description: 'Convert color codes between HEX, RGB, and HSL formats. Visual color picker included.',
+        keywords: 'color converter, hex to rgb, rgb to hex, hex to hsl, color picker',
+        h1: 'Color Code Converter',
+        content: `
 <p> Colors on the web aren't just one format. Whether you're a designer working in HEX or a developer using RGB or HSL, our <strong>Online Color Converter </strong> makes switching between formats effortless. Simply enter a color value, and we'll instantly provide its equivalents across all major web standards.</p>
 
 <h3>Supported Formats </h3>
@@ -717,22 +717,22 @@ content: `
 <h3> How Color Conversion Helps Designers </h3>
 <p> Often, you find a color in one tool that only provides HEX, but your CSS library requires HSL for better manipulation.Our converter ensures you get the exact same shade every time.We also provide a live color preview so you can verify the result visually.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Color Converter',
-description: 'Convert color codes between HEX, RGB, and HSL formats.',
-applicationCategory: 'DeveloperApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'binary-to-text': {
-title: 'Binary to Text Converter - Binary Translator',
-description: 'Translate binary code to text and text to binary. Instant conversion.',
-keywords: 'binary to text, text to binary, binary translator, binary code converter',
-h1: 'Binary <-> Text Converter',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Color Converter',
+            description: 'Convert color codes between HEX, RGB, and HSL formats.',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'binary-to-text': {
+        title: 'Binary to Text Converter - Binary Translator',
+        description: 'Translate binary code to text and text to binary. Instant conversion.',
+        keywords: 'binary to text, text to binary, binary translator, binary code converter',
+        h1: 'Binary <-> Text Converter',
+        content: `
 <p> Binary code is the fundamental language of computers, but it's not very human-readable. Our <strong>Binary to Text Converter</strong> provides a quick and easy way to translate binary sequences into plain text, and vice-versa. This tool is invaluable for developers, students learning computer science, or anyone needing to decipher binary data.</p>
 
 <h3> How Binary Conversion Works </h3>
@@ -753,68 +753,68 @@ content: `
 <li><strong>CTF Challenges: </strong> Solving binary-encoded puzzles in cybersecurity competitions.</li>
 </ul>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Binary to Text Converter',
-description: 'Translate binary code to text and text to binary.',
-applicationCategory: 'DeveloperApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'hex-to-decimal': {
-title: 'Hex to Decimal Converter - Hexadecimal Tool',
-description: 'Convert Hexadecimal to Decimal and Decimal to Hex. Math conversion tool.',
-keywords: 'hex to decimal, decimal to hex, hexadecimal converter, number base converter',
-h1: 'Hex to Decimal Converter'
-},
-'roman-numeral': {
-title: 'Roman Numeral Converter - Numbers to Roman',
-description: 'Convert numbers to Roman numerals and back. Learn Roman numeral system.',
-keywords: 'roman numeral converter, numbers to roman, roman numerals date',
-h1: 'Roman Numeral Converter'
-},
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Binary to Text Converter',
+            description: 'Translate binary code to text and text to binary.',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'hex-to-decimal': {
+        title: 'Hex to Decimal Converter - Hexadecimal Tool',
+        description: 'Convert Hexadecimal to Decimal and Decimal to Hex. Math conversion tool.',
+        keywords: 'hex to decimal, decimal to hex, hexadecimal converter, number base converter',
+        h1: 'Hex to Decimal Converter'
+    },
+    'roman-numeral': {
+        title: 'Roman Numeral Converter - Numbers to Roman',
+        description: 'Convert numbers to Roman numerals and back. Learn Roman numeral system.',
+        keywords: 'roman numeral converter, numbers to roman, roman numerals date',
+        h1: 'Roman Numeral Converter'
+    },
 
-// === GENERATOR TOOLS ===
-'random-number': {
-title: 'Random Number Generator - RNG Tool',
-description: 'Generate true random numbers within a range. Pick numbers for lotteries and games.',
-keywords: 'random number generator, rng, randomize numbers, random picker',
-h1: 'Random Number Generator'
-},
-'random-string': {
-title: 'Random String Generator - Secure Strings',
-description: 'Generate random strings, passwords, and API keys with custom length and characters.',
-keywords: 'random string generator, generate string, random text, alphanumeric generator',
-h1: 'Random String Generator'
-},
-'random-color': {
-title: 'Random Color Generator - Color Palettes',
-description: 'Generate random colors and palettes in HEX, RGB, and HSL formats.',
-keywords: 'random color generator, color palette generator, random hex color',
-h1: 'Random Color Generator'
-},
-'random-date': {
-title: 'Random Date Generator - Pick a Date',
-description: 'Generate random dates within a start and end range. Useful for testing.',
-keywords: 'random date generator, generate date, random time, date picker',
-h1: 'Random Date Generator'
-},
-'random-ip': {
-title: 'Random IP Address Generator',
-description: 'Generate valid IPv4 and IPv6 addresses for testing purposes.',
-keywords: 'random ip generator, generate ip address, fake ip, ip spoofer',
-h1: 'Random IP Generator'
-},
+    // === GENERATOR TOOLS ===
+    'random-number': {
+        title: 'Random Number Generator - RNG Tool',
+        description: 'Generate true random numbers within a range. Pick numbers for lotteries and games.',
+        keywords: 'random number generator, rng, randomize numbers, random picker',
+        h1: 'Random Number Generator'
+    },
+    'random-string': {
+        title: 'Random String Generator - Secure Strings',
+        description: 'Generate random strings, passwords, and API keys with custom length and characters.',
+        keywords: 'random string generator, generate string, random text, alphanumeric generator',
+        h1: 'Random String Generator'
+    },
+    'random-color': {
+        title: 'Random Color Generator - Color Palettes',
+        description: 'Generate random colors and palettes in HEX, RGB, and HSL formats.',
+        keywords: 'random color generator, color palette generator, random hex color',
+        h1: 'Random Color Generator'
+    },
+    'random-date': {
+        title: 'Random Date Generator - Pick a Date',
+        description: 'Generate random dates within a start and end range. Useful for testing.',
+        keywords: 'random date generator, generate date, random time, date picker',
+        h1: 'Random Date Generator'
+    },
+    'random-ip': {
+        title: 'Random IP Address Generator',
+        description: 'Generate valid IPv4 and IPv6 addresses for testing purposes.',
+        keywords: 'random ip generator, generate ip address, fake ip, ip spoofer',
+        h1: 'Random IP Generator'
+    },
 
-// === CRYPTO TOOLS (Expanded) ===
-'base64-encoder': {
-title: 'Base64 Encoder & Decoder - Secure Online Tool',
-description: 'Encode text, files, and images to Base64 instantly. Decode Base64 strings back to readable text. Free, fast, and runs locally in your browser for 100% privacy.',
-keywords: 'base64 encode, base64 decode, base64 converter, string to base64, base64 image decoder, data uri generator',
-h1: 'Base64 Encoder / Decoder: The Developer\'s Essential Tool',
-content: `
+    // === CRYPTO TOOLS (Expanded) ===
+    'base64-encoder': {
+        title: 'Base64 Encoder & Decoder - Secure Online Tool',
+        description: 'Encode text, files, and images to Base64 instantly. Decode Base64 strings back to readable text. Free, fast, and runs locally in your browser for 100% privacy.',
+        keywords: 'base64 encode, base64 decode, base64 converter, string to base64, base64 image decoder, data uri generator',
+        h1: 'Base64 Encoder / Decoder: The Developer\'s Essential Tool',
+        content: `
 <p><strong>Base64</strong> is one of the most misunderstood concepts in web development. Is it encryption? Is it compression? (Spoiler: It's neither). Base64 is a <strong>binary-to-text encoding scheme</strong> that allows binary data (like images or PDF files) to be transported over text-based protocols like Email (SMTP) and HTTP.</p>
 <p>At Aynzo Tools, our <strong>Base64 Converter</strong> is designed for speed and security. Whether you are debugging a JWT token, embedding a small logo into CSS using a Data URI, or simply trying to read a baffled email attachment, our tool handles it all locally.</p>
 
@@ -835,51 +835,51 @@ content: `
 <h2>Why Use Our Client-Side Tool?</h2>
 <p>When you paste a sensitive API key or a private document to be encoded, you don't want that data sent to a stranger's server. Aynzo's tool performs all binary manipluation <strong>in your browser's JavaScript engine</strong>. Nothing is ever uploaded.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Base64 Tool',
-description: 'Encode and decode data using Base64 standard locally.',
-applicationCategory: 'DeveloperApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Does Base64 increase file size?', answer: 'Yes. Because it uses 4 characters to represent every 3 bytes, Base64 encoding increases the data size by approximately 33%.' },
-{ question: 'Can I convert images to Base64?', answer: 'Yes! You can drag and drop image files into our tool to generate a "Data URI" string ready for CSS or HTML embedding.' },
-{ question: 'Is Base64 URL safe?', answer: 'Standard Base64 uses "+" and "/" which can break URL parameters. We offer a "URL Safe" toggle that swaps these for "-" and "_" respectively.' }
-]
-},
-'md5-hash': {
-title: 'MD5 Hash Generator',
-description: 'Generate MD5 hash from any string.',
-keywords: 'md5 generator, md5 hash',
-h1: 'MD5 Generator'
-},
-'sha256-hash': {
-title: 'SHA-256 Hash Generator',
-description: 'Secure SHA-256 hash generation for text.',
-keywords: 'sha256 generator, sha256 hash, crypto hash',
-h1: 'SHA-256 Generator'
-},
-'sha512-hash': {
-title: 'SHA-512 Hash Generator',
-description: 'Secure SHA-512 hash generation.',
-keywords: 'sha512 generator, secure hash, crypto tool',
-h1: 'SHA-512 Generator'
-},
-'bcrypt-generator': {
-title: 'Bcrypt Hash Generator',
-description: 'Generate secure Bcrypt password hashes.',
-keywords: 'bcrypt generator, password hash, salt rounds',
-h1: 'Bcrypt Generator'
-},
-'uuid-generator': {
-title: 'Random UUID Generator - Create V4 GUIDs Online Free',
-description: 'Generate random UUIDs (Universally Unique Identifiers).',
-keywords: 'uuid generator, guid generator, v4 uuid',
-h1: 'UUID Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Base64 Tool',
+            description: 'Encode and decode data using Base64 standard locally.',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Does Base64 increase file size?', answer: 'Yes. Because it uses 4 characters to represent every 3 bytes, Base64 encoding increases the data size by approximately 33%.' },
+            { question: 'Can I convert images to Base64?', answer: 'Yes! You can drag and drop image files into our tool to generate a "Data URI" string ready for CSS or HTML embedding.' },
+            { question: 'Is Base64 URL safe?', answer: 'Standard Base64 uses "+" and "/" which can break URL parameters. We offer a "URL Safe" toggle that swaps these for "-" and "_" respectively.' }
+        ]
+    },
+    'md5-hash': {
+        title: 'MD5 Hash Generator',
+        description: 'Generate MD5 hash from any string.',
+        keywords: 'md5 generator, md5 hash',
+        h1: 'MD5 Generator'
+    },
+    'sha256-hash': {
+        title: 'SHA-256 Hash Generator',
+        description: 'Secure SHA-256 hash generation for text.',
+        keywords: 'sha256 generator, sha256 hash, crypto hash',
+        h1: 'SHA-256 Generator'
+    },
+    'sha512-hash': {
+        title: 'SHA-512 Hash Generator',
+        description: 'Secure SHA-512 hash generation.',
+        keywords: 'sha512 generator, secure hash, crypto tool',
+        h1: 'SHA-512 Generator'
+    },
+    'bcrypt-generator': {
+        title: 'Bcrypt Hash Generator',
+        description: 'Generate secure Bcrypt password hashes.',
+        keywords: 'bcrypt generator, password hash, salt rounds',
+        h1: 'Bcrypt Generator'
+    },
+    'uuid-generator': {
+        title: 'Random UUID Generator - Create V4 GUIDs Online Free',
+        description: 'Generate random UUIDs (Universally Unique Identifiers).',
+        keywords: 'uuid generator, guid generator, v4 uuid',
+        h1: 'UUID Generator',
+        content: `
 <p> A UUID(Universally Unique Identifier) is a 128 - bit number used to identify information in computer systems.Our <strong> Online UUID Generator </strong> provides you with high-quality, random Version 4 UUIDs that are practically guaranteed to be unique across all systems and time.</p>
 
 <h3>What are UUIDs Used For ? </h3>
@@ -892,44 +892,44 @@ content: `
 <h3> Version 4 UUIDs </h3>
 <p> The Version 4(v4) UUIDs generated by our tool are based on random numbers.The probability of two Version 4 UUIDs being the same is so low that it can be ignored for all practical purposes.All generation happens locally in your browser using secure cryptographic APIs.</p>
 `,
-schema: {},
-},
-'jpg-to-png': {
-title: 'JPG to PNG Converter',
-description: 'Convert JPG images to PNG format with transparent background support.',
-keywords: 'jpg to png, convert jpg to png, image converter',
-h1: 'JPG to PNG Converter'
-},
-'png-to-jpg': {
-title: 'PNG to JPG Converter',
-description: 'Convert PNG images to JPG format instantly.',
-keywords: 'png to jpg, convert png to jpg, image format converter',
-h1: 'PNG to JPG Converter'
-},
-'webp-converter': {
-title: 'WebP Image Converter',
-description: 'Convert images to and from WebP format for web optimization.',
-keywords: 'webp converter, convert to webp, webp to jpg',
-h1: 'WebP Converter'
-},
-'image-format-converter': {
-title: 'Universal Image Converter',
-description: 'Convert between JPG, PNG, WebP and other formats.',
-keywords: 'image converter, picture converter, change image format',
-h1: 'Image Format Converter'
-},
-'image-to-base64': {
-title: 'Image to Base64 Converter',
-description: 'Convert images to Base64 strings for embedding in HTML/CSS.',
-keywords: 'image to base64, picture to code, base64 image',
-h1: 'Image to Base64'
-},
-'image-cropper': {
-title: 'Image Cropper - Crop Images Online Free',
-description: 'Crop images online quickly and easily. Cut out parts of your photos with precision.',
-keywords: 'image cropper, crop image, crop photo online, free image cropper',
-h1: 'Online Image Cropper',
-content: `
+        schema: {},
+    },
+    'jpg-to-png': {
+        title: 'JPG to PNG Converter',
+        description: 'Convert JPG images to PNG format with transparent background support.',
+        keywords: 'jpg to png, convert jpg to png, image converter',
+        h1: 'JPG to PNG Converter'
+    },
+    'png-to-jpg': {
+        title: 'PNG to JPG Converter',
+        description: 'Convert PNG images to JPG format instantly.',
+        keywords: 'png to jpg, convert png to jpg, image format converter',
+        h1: 'PNG to JPG Converter'
+    },
+    'webp-converter': {
+        title: 'WebP Image Converter',
+        description: 'Convert images to and from WebP format for web optimization.',
+        keywords: 'webp converter, convert to webp, webp to jpg',
+        h1: 'WebP Converter'
+    },
+    'image-format-converter': {
+        title: 'Universal Image Converter',
+        description: 'Convert between JPG, PNG, WebP and other formats.',
+        keywords: 'image converter, picture converter, change image format',
+        h1: 'Image Format Converter'
+    },
+    'image-to-base64': {
+        title: 'Image to Base64 Converter',
+        description: 'Convert images to Base64 strings for embedding in HTML/CSS.',
+        keywords: 'image to base64, picture to code, base64 image',
+        h1: 'Image to Base64'
+    },
+    'image-cropper': {
+        title: 'Image Cropper - Crop Images Online Free',
+        description: 'Crop images online quickly and easily. Cut out parts of your photos with precision.',
+        keywords: 'image cropper, crop image, crop photo online, free image cropper',
+        h1: 'Online Image Cropper',
+        content: `
 <p> Our <strong> Online Image Cropper </strong> is a professional-grade utility designed to help you remove unwanted areas from your photos and focus on what matters. Whether you're cropping for an Instagram profile, a square thumbnail, or a custom header, our tool provides pixel-perfect accuracy.</p>
 
 <h3>Key Features </h3>
@@ -949,13 +949,13 @@ content: `
 <h3> Why Cropping is Essential for Engagement </h3>
 <p> Data shows that centered, well - cropped images receive 40 % more engagement on social media.Avoid distracting backgrounds and ensure your subject is the star of the show.Our tool makes this process fast, free, and completely secure.</p>
 `,
-},
-'base64-to-image': {
-title: 'Base64 to Image Converter',
-description: 'Convert Base64 strings back to images (PNG, JPG, GIF). Preview instant.',
-keywords: 'base64 to image, base64 decoder, convert base64',
-h1: 'Base64 to Image',
-content: `
+    },
+    'base64-to-image': {
+        title: 'Base64 to Image Converter',
+        description: 'Convert Base64 strings back to images (PNG, JPG, GIF). Preview instant.',
+        keywords: 'base64 to image, base64 decoder, convert base64',
+        h1: 'Base64 to Image',
+        content: `
 <p> Have a Base64 string and need to see the image it represents ? Our <strong> Base64 to Image Converter </strong> instantly decodes Base64 encoded image data back into viewable images. This is perfect for developers, designers, or anyone who needs to quickly preview Base64 image data without writing code.</p>
 
 <h3>How It Works </h3>
@@ -975,13 +975,13 @@ content: `
 <li><strong>Development: </strong> Verify Base64 image assets during development.</li>
 </ul>
 `,
-},
-'flip-image': {
-title: 'Flip Image Online - Mirror Image',
-description: 'Flip images horizontally or vertically online. Create mirror effects instantly.',
-keywords: 'flip image, mirror image, flip photo, reverse image',
-h1: 'Flip Image Tool',
-content: `
+    },
+    'flip-image': {
+        title: 'Flip Image Online - Mirror Image',
+        description: 'Flip images horizontally or vertically online. Create mirror effects instantly.',
+        keywords: 'flip image, mirror image, flip photo, reverse image',
+        h1: 'Flip Image Tool',
+        content: `
 <p> Our <strong> Flip Image Online Tool </strong> allows you to effortlessly mirror your photos horizontally or vertically. Whether you want to correct a selfie, create a symmetrical design, or just experiment with visual effects, our tool provides instant results without needing complex software.</p>
 
 <h3>Key Features </h3>
@@ -1007,13 +1007,13 @@ content: `
 <li><strong>Social Media: </strong> Adding a unique touch to your posts or profile pictures.</li>
 </ul>
 `,
-},
-'rotate-image': {
-title: 'Rotate Image Online - Turn Photos',
-description: 'Rotate images by 90, 180, or custom degrees. Fix sideways photos.',
-keywords: 'rotate image, turn photo, rotate picture, fix image orientation',
-h1: 'Rotate Image Tool',
-content: `
+    },
+    'rotate-image': {
+        title: 'Rotate Image Online - Turn Photos',
+        description: 'Rotate images by 90, 180, or custom degrees. Fix sideways photos.',
+        keywords: 'rotate image, turn photo, rotate picture, fix image orientation',
+        h1: 'Rotate Image Tool',
+        content: `
 <p> Is your photo sideways ? Our <strong> Rotate Image Online Tool </strong> provides a quick and easy way to adjust the orientation of your pictures. Rotate images by 90, 180, or 270 degrees, or specify a custom angle for precise adjustments. Perfect for fixing camera errors or achieving creative effects.</p>
 
 <h3>Key Features </h3>
@@ -1034,13 +1034,13 @@ content: `
 <h3> Why Image Rotation is Important </h3>
 <p> Correct image orientation is crucial for professional presentations, social media posts, and personal photo albums.Avoid awkward viewing experiences by ensuring your images are always displayed the right way up.Our tool makes this simple and efficient.</p>
 `,
-},
-'image-enlarger': {
-title: 'Image Enlarger - Upscale Images',
-description: 'Enlarge images online. Increase image size with simple scaling.',
-keywords: 'image enlarger, upscale image, make image bigger, resize up',
-h1: 'Image Enlarger',
-content: `
+    },
+    'image-enlarger': {
+        title: 'Image Enlarger - Upscale Images',
+        description: 'Enlarge images online. Increase image size with simple scaling.',
+        keywords: 'image enlarger, upscale image, make image bigger, resize up',
+        h1: 'Image Enlarger',
+        content: `
 <p> Need to make an image larger without losing too much quality ? Our <strong> Image Enlarger Tool </strong> allows you to upscale your images online quickly and easily. Whether you're preparing images for print, a high-resolution display, or just need a bigger version of a small photo, our tool helps you achieve the desired dimensions.</p>
 
 <h3>How Image Enlargement Works </h3>
@@ -1062,13 +1062,13 @@ content: `
 <li><strong>Archiving: </strong> Create higher-resolution versions of old photos.</li>
 </ul>
 `,
-},
-'image-brightness': {
-title: 'Image Brightness Adjuster',
-description: 'Adjust image brightness online. Lighten or darken photos easily.',
-keywords: 'image brightness, brighten photo, darken photo, adjust brightness',
-h1: 'Image Brightness Tool',
-content: `
+    },
+    'image-brightness': {
+        title: 'Image Brightness Adjuster',
+        description: 'Adjust image brightness online. Lighten or darken photos easily.',
+        keywords: 'image brightness, brighten photo, darken photo, adjust brightness',
+        h1: 'Image Brightness Tool',
+        content: `
 <p> Is your photo too dark or too bright ? Our <strong> Image Brightness Adjuster </strong> allows you to easily lighten or darken your images online. Achieve the perfect exposure for your photos with a simple slider, enhancing visibility and mood without needing complex photo editing software.</p>
 
 <h3>How to Adjust Brightness </h3>
@@ -1090,13 +1090,13 @@ content: `
 <li><strong>Consistency: </strong> Match the brightness levels across a series of photos.</li>
 </ul>
 `,
-},
-'image-contrast': {
-title: 'Image Contrast Adjuster',
-description: 'Adjust image contrast online. Enhance photo colors and depth.',
-keywords: 'image contrast, enhance photo, fix contrast',
-h1: 'Image Contrast Tool',
-content: `
+    },
+    'image-contrast': {
+        title: 'Image Contrast Adjuster',
+        description: 'Adjust image contrast online. Enhance photo colors and depth.',
+        keywords: 'image contrast, enhance photo, fix contrast',
+        h1: 'Image Contrast Tool',
+        content: `
 <p> Bring out the details and vibrancy in your photos with our <strong> Image Contrast Adjuster </strong>. Contrast defines the difference between the lightest and darkest areas of an image. By adjusting it, you can make your photos pop, add depth, and improve overall visual clarity.</p>
 
 <h3>Understanding Contrast </h3>
@@ -1118,13 +1118,13 @@ content: `
 <li><strong>Create Mood: </strong> Use high contrast for a bold, dramatic feel or low contrast for a soft, dreamy aesthetic.</li>
 </ul>
 `,
-},
-'grayscale-image': {
-title: 'Grayscale Image Converter - Black & White',
-description: 'Convert images to grayscale (black and white) online instantly.',
-keywords: 'grayscale converter, black and white photo, make monochrome',
-h1: 'Grayscale Image Converter',
-content: `
+    },
+    'grayscale-image': {
+        title: 'Grayscale Image Converter - Black & White',
+        description: 'Convert images to grayscale (black and white) online instantly.',
+        keywords: 'grayscale converter, black and white photo, make monochrome',
+        h1: 'Grayscale Image Converter',
+        content: `
 <p> Transform your colorful photos into classic black and white masterpieces with our <strong> Grayscale Image Converter </strong>. This tool instantly converts any image to grayscale, removing all color information and leaving you with a beautiful monochrome rendition. Perfect for artistic effects, historical looks, or simply focusing on composition.</p>
 
 <h3>What is Grayscale ? </h3>
@@ -1146,13 +1146,13 @@ content: `
 <li><strong>Focus on Emotion: </strong> Black and white can often convey deeper emotion and drama.</li>
 </ul>
 `,
-},
-'blur-image': {
-title: 'Blur Image Tool - Add Blur Effect',
-description: 'Add blur effect to images online. Soften photos or hide details.',
-keywords: 'blur image, blur photo, soften image, blur effect',
-h1: 'Blur Image Tool',
-content: `
+    },
+    'blur-image': {
+        title: 'Blur Image Tool - Add Blur Effect',
+        description: 'Add blur effect to images online. Soften photos or hide details.',
+        keywords: 'blur image, blur photo, soften image, blur effect',
+        h1: 'Blur Image Tool',
+        content: `
 <p> Our <strong> Blur Image Tool </strong> allows you to easily add a blur effect to your photos online. Whether you want to soften backgrounds, create a sense of depth, hide sensitive information, or achieve a dreamy aesthetic, our tool provides adjustable blur intensity for perfect results.</p>
 
 <h3>How Image Blurring Works </h3>
@@ -1174,13 +1174,13 @@ content: `
 <li><strong>Web Design: </strong> Use blurred images for background elements or placeholders.</li>
 </ul>
 `,
-},
-'sepia-converter': {
-title: 'Sepia Image Filter - Vintage Effect',
-description: 'Add sepia filter to photos. Create vintage, old-style images.',
-keywords: 'sepia filter, vintage effect, old photo effect',
-h1: 'Sepia Image Converter',
-content: `
+    },
+    'sepia-converter': {
+        title: 'Sepia Image Filter - Vintage Effect',
+        description: 'Add sepia filter to photos. Create vintage, old-style images.',
+        keywords: 'sepia filter, vintage effect, old photo effect',
+        h1: 'Sepia Image Converter',
+        content: `
 <p> Give your modern photos a timeless, antique feel with our <strong> Sepia Image Converter </strong>. This tool applies a classic sepia tone filter, transforming your images with warm, brownish hues reminiscent of old photographs. Perfect for creating vintage aesthetics, historical projects, or adding a nostalgic touch to your digital memories.</p>
 
 <h3>What is Sepia Tone ? </h3>
@@ -1202,13 +1202,13 @@ content: `
 <li><strong>Mood Setting: </strong> Evoke feelings of nostalgia, warmth, and timelessness.</li>
 </ul>
 `,
-},
-'invert-image': {
-title: 'Invert Image Colors - Negative Effect',
-description: 'Invert colors of an image. Create negative photo effect.',
-keywords: 'invert colors, negative image, invert photo',
-h1: 'Invert Image Colors',
-content: `
+    },
+    'invert-image': {
+        title: 'Invert Image Colors - Negative Effect',
+        description: 'Invert colors of an image. Create negative photo effect.',
+        keywords: 'invert colors, negative image, invert photo',
+        h1: 'Invert Image Colors',
+        content: `
 <p> Unleash a striking visual transformation with our <strong> Invert Image Colors Tool </strong>. This utility instantly reverses the color values of your image, creating a "negative" effect where light areas become dark, and dark areas become light, with colors shifting to their complementary hues. It's a powerful way to create artistic effects, analyze images, or simply have fun with your photos.</p>
 
 <h3>How Color Inversion Works </h3>
@@ -1230,13 +1230,13 @@ content: `
 <li><strong>Accessibility: </strong> Sometimes used to create high-contrast versions of images for specific viewing needs.</li>
 </ul>
 `,
-},
-'saturate-image': {
-title: 'Image Saturation Adjuster',
-description: 'Adjust color saturation. Make colors more vivid or muted.',
-keywords: 'image saturation, vivid colors, saturate photo',
-h1: 'Saturate Image Tool',
-content: `
+    },
+    'saturate-image': {
+        title: 'Image Saturation Adjuster',
+        description: 'Adjust color saturation. Make colors more vivid or muted.',
+        keywords: 'image saturation, vivid colors, saturate photo',
+        h1: 'Saturate Image Tool',
+        content: `
 <p> Control the intensity of colors in your photos with our <strong> Image Saturation Adjuster </strong>. Saturation refers to the purity or vividness of a color. Use this tool to make colors pop and appear more vibrant, or desaturate them for a muted, subdued, or even black-and-white effect.</p>
 
 <h3>Understanding Color Saturation </h3>
@@ -1258,13 +1258,13 @@ content: `
 <li><strong>Color Correction: </strong> Balance colors that are either too dull or overly vibrant.</li>
 </ul>
 `,
-},
-'hue-rotate-image': {
-title: 'Hue Rotate Image - Change Colors',
-description: 'Rotate image hue to shift colors. Create psychedelic effects.',
-keywords: 'hue rotate, change image colors, shift hue',
-h1: 'Hue Rotate Tool',
-content: `
+    },
+    'hue-rotate-image': {
+        title: 'Hue Rotate Image - Change Colors',
+        description: 'Rotate image hue to shift colors. Create psychedelic effects.',
+        keywords: 'hue rotate, change image colors, shift hue',
+        h1: 'Hue Rotate Tool',
+        content: `
 <p> Explore a spectrum of color possibilities with our <strong> Hue Rotate Image Tool </strong>. This powerful editor allows you to shift the entire color palette of your image by rotating its hue. Red becomes green, blue becomes yellow, and so on, creating stunning, often psychedelic, visual effects or subtle color adjustments.</p>
 
 <h3>What is Hue Rotation ? </h3>
@@ -1286,13 +1286,13 @@ content: `
 <li><strong>Color Experimentation: </strong> Discover unexpected and beautiful color combinations.</li>
 </ul>
 `,
-},
-'image-opacity': {
-title: 'Image Opacity Changer - Transparent Image',
-description: 'Change image opacity level. Make images semi-transparent.',
-keywords: 'image opacity, transparent image, see-through photo',
-h1: 'Image Opacity Tool',
-content: `
+    },
+    'image-opacity': {
+        title: 'Image Opacity Changer - Transparent Image',
+        description: 'Change image opacity level. Make images semi-transparent.',
+        keywords: 'image opacity, transparent image, see-through photo',
+        h1: 'Image Opacity Tool',
+        content: `
 <p> Our <strong> Image Opacity Changer </strong> allows you to easily adjust the transparency level of your images online. Make your photos semi-transparent, create watermarks, or blend images seamlessly into backgrounds. This tool provides precise control over how visible your image appears.</p>
 
 <h3>Understanding Opacity </h3>
@@ -1314,13 +1314,13 @@ content: `
 <li><strong>Web Design: </strong> Integrate images smoothly into web layouts.</li>
 </ul>
 `,
-},
-'round-corners-image': {
-title: 'Round Image Corners - Border Radius',
-description: 'Add rounded corners to images. Create circular or soft-edged photos.',
-keywords: 'round corners, image border radius, rounded photo',
-h1: 'Round Image Corners',
-content: `
+    },
+    'round-corners-image': {
+        title: 'Round Image Corners - Border Radius',
+        description: 'Add rounded corners to images. Create circular or soft-edged photos.',
+        keywords: 'round corners, image border radius, rounded photo',
+        h1: 'Round Image Corners',
+        content: `
 <p> Give your images a softer, more modern look with our <strong> Round Image Corners Tool </strong>. Easily add a border-radius to your photos, transforming sharp, square edges into smooth, rounded ones. Perfect for profile pictures, social media posts, or any design element where a friendly, contemporary aesthetic is desired.</p>
 
 <h3>How Border Radius Works </h3>
@@ -1342,13 +1342,13 @@ content: `
 <li><strong>Graphic Design: </strong> Add a touch of elegance and approachability to your visuals.</li>
 </ul>
 `,
-},
-'image-border': {
-title: 'Add Border to Image',
-description: 'Add custom borders to images. Choose color and thickness.',
-keywords: 'add image border, photo frame, image stroke',
-h1: 'Image Border Tool',
-content: `
+    },
+    'image-border': {
+        title: 'Add Border to Image',
+        description: 'Add custom borders to images. Choose color and thickness.',
+        keywords: 'add image border, photo frame, image stroke',
+        h1: 'Image Border Tool',
+        content: `
 <p> Frame your memories and highlight your photos with our <strong> Add Border to Image Tool </strong>. Easily add a custom border around any picture, choosing your preferred color and thickness. Whether you want a subtle outline or a bold frame, our tool helps you enhance your images for social media, presentations, or print.</p>
 
 <h3>Key Features </h3>
@@ -1374,13 +1374,13 @@ content: `
 <li><strong>Branding: </strong> Use brand colors for consistent visual identity.</li>
 </ul>
 `,
-},
-'image-shadow': {
-title: 'Add Shadow to Image',
-description: 'Add drop shadow to images. Create depth and 3D effects.',
-keywords: 'image shadow, drop shadow, photo shadow',
-h1: 'Image Shadow Tool',
-content: `
+    },
+    'image-shadow': {
+        title: 'Add Shadow to Image',
+        description: 'Add drop shadow to images. Create depth and 3D effects.',
+        keywords: 'image shadow, drop shadow, photo shadow',
+        h1: 'Image Shadow Tool',
+        content: `
 <p> Give your images a professional, three - dimensional look with our <strong> Add Shadow to Image Tool </strong>. Easily apply a customizable drop shadow to any photo, making it appear to float above its background. This effect adds depth, separates your image from its surroundings, and enhances its visual appeal.</p>
 
 <h3>Understanding Drop Shadows </h3>
@@ -1402,13 +1402,13 @@ content: `
 <li><strong>Artistic Flair: </strong> Add a subtle or dramatic visual element to your graphics.</li>
 </ul>
 `,
-},
-'pixelate-image': {
-title: 'Pixelate Image - Pixel Art Effect',
-description: 'Pixelate images online. Censor parts or create pixel art style.',
-keywords: 'pixelate image, pixel art, censor image, blur faces',
-h1: 'Pixelate Image Tool',
-content: `
+    },
+    'pixelate-image': {
+        title: 'Pixelate Image - Pixel Art Effect',
+        description: 'Pixelate images online. Censor parts or create pixel art style.',
+        keywords: 'pixelate image, pixel art, censor image, blur faces',
+        h1: 'Pixelate Image Tool',
+        content: `
 <p> Transform your images into a retro pixel art style or censor sensitive areas with our <strong> Pixelate Image Tool </strong>. This online utility allows you to apply a pixelation effect to your photos, breaking them down into large, blocky squares. It's perfect for creating stylized graphics, anonymizing faces, or adding a vintage digital aesthetic.</p>
 
 <h3>How Pixelation Works </h3>
@@ -1430,13 +1430,13 @@ content: `
 <li><strong>Creative Effects: </strong> Add a unique visual texture to your images.</li>
 </ul>
 `,
-},
-'svg-to-png': {
-title: 'SVG to PNG Converter',
-description: 'Convert SVG vectors to PNG images. High resolution support.',
-keywords: 'svg to png, convert svg, rasterize svg',
-h1: 'SVG to PNG Converter',
-content: `
+    },
+    'svg-to-png': {
+        title: 'SVG to PNG Converter',
+        description: 'Convert SVG vectors to PNG images. High resolution support.',
+        keywords: 'svg to png, convert svg, rasterize svg',
+        h1: 'SVG to PNG Converter',
+        content: `
 <p> Our <strong> SVG to PNG Converter </strong> provides a fast and efficient way to transform your scalable vector graphics (SVG) into high-quality raster images (PNG). Perfect for web developers, designers, and content creators who need to use SVG assets in contexts where PNG is preferred or required, such as social media, email signatures, or certain print applications.</p>
 
 <h3>Why Convert SVG to PNG ? </h3>
@@ -1457,13 +1457,13 @@ content: `
 <li><strong>Convert & Download: </strong> Click the convert button and save your new PNG image.</li>
 </ol>
 `,
-},
-'png-to-svg': {
-title: 'PNG to SVG Converter',
-description: 'Convert PNG images to SVG vectors. Trace bitmaps to vectors.',
-keywords: 'png to svg, vectorize image, bitmap to vector',
-h1: 'PNG to SVG Converter',
-content: `
+    },
+    'png-to-svg': {
+        title: 'PNG to SVG Converter',
+        description: 'Convert PNG images to SVG vectors. Trace bitmaps to vectors.',
+        keywords: 'png to svg, vectorize image, bitmap to vector',
+        h1: 'PNG to SVG Converter',
+        content: `
 <p> Our <strong> PNG to SVG Converter </strong> allows you to transform your raster PNG images into scalable vector graphics (SVG). This process, known as vectorization or tracing, converts pixel-based images into paths and shapes, enabling them to be scaled to any size without losing quality. It's an invaluable tool for designers, developers, and anyone needing to adapt bitmap graphics for vector-based applications.</p>
 
 <h3>Why Convert PNG to SVG ? </h3>
@@ -1484,13 +1484,13 @@ content: `
 <li><strong>Convert & Download: </strong> Click the convert button and save your new SVG file.</li>
 </ol>
 `,
-},
-'webp-to-jpg': {
-title: 'WebP to JPG Converter',
-description: 'Convert WebP images to standard JPG format.',
-keywords: 'webp to jpg, convert webp',
-h1: 'WebP to JPG',
-content: `
+    },
+    'webp-to-jpg': {
+        title: 'WebP to JPG Converter',
+        description: 'Convert WebP images to standard JPG format.',
+        keywords: 'webp to jpg, convert webp',
+        h1: 'WebP to JPG',
+        content: `
 <p> Our <strong> WebP to JPG Converter </strong> offers a quick and easy solution to convert your modern WebP images into the widely compatible JPG format. While WebP is excellent for web optimization, JPG remains a universal standard, making this tool essential for sharing, editing, or using WebP files in applications that don't yet support them.</p>
 
 <h3>Why Convert WebP to JPG ? </h3>
@@ -1511,13 +1511,13 @@ content: `
 <li><strong>Convert & Download: </strong> Click the convert button and save your new JPG image.</li>
 </ol>
 `,
-},
-'webp-to-png': {
-title: 'How to Convert WebP to PNG Online for Free (Step-by-Step Guide)',
-description: 'Master WebP to PNG conversion with our 1200+ word guide. Learn how to preserve transparency, convert in batch, and why PNG is essential for designers in 2026. Free tool included.',
-keywords: 'how to convert webp to png, webp to png converter, convert webp to png without losing quality, webp to transparent png, free online image converter, open webp files in photoshop',
-h1: 'How to Convert WebP to PNG Online for Free: The Ultimate Guide',
-content: `
+    },
+    'webp-to-png': {
+        title: 'How to Convert WebP to PNG Online for Free (Step-by-Step Guide)',
+        description: 'Master WebP to PNG conversion with our 1200+ word guide. Learn how to preserve transparency, convert in batch, and why PNG is essential for designers in 2026. Free tool included.',
+        keywords: 'how to convert webp to png, webp to png converter, convert webp to png without losing quality, webp to transparent png, free online image converter, open webp files in photoshop',
+        h1: 'How to Convert WebP to PNG Online for Free: The Ultimate Guide',
+        content: `
 <p> In the modern digital landscape, image formats are evolving faster than ever.You’ve likely encountered a file ending in <strong>.webp </strong> while saving an image from Google. While WebP is fantastic for website speed, it can be a nightmare when you try to open it in an older version of Photoshop, use it in a Microsoft Word document, or upload it to a platform that hasn’t caught up with modern standards.</p>
 <p>If you’re struggling with compatibility issues, you’re in the right place.In this guide, we’ll show you exactly <strong> how to convert WebP to PNG online for free </strong> while preserving transparency and high image quality.</p>
 
@@ -1567,29 +1567,29 @@ content: `
 <h2> Conclusion: Streamline Your Digital Workflow </h2>
 <p> Compatibility shouldn\'t be a hurdle in your creative process. By bridging the gap between cutting-edge web performance (WebP) and universal software compatibility (PNG), you can ensure your assets work everywhere, for everyone. If you found this tool helpful, consider exploring our other utilities like the <a href="/en/tools/image-resizer">Image Resizer</a> or our <a href="/en/tools/png-to-webp">PNG to WebP Converter</a> for your next web project.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'WebP to PNG Converter',
-description: 'Convert WebP images to PNG with transparency preservation locally in your browser.',
-applicationCategory: 'MultimediaApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'How to convert WebP to PNG online for free?', answer: 'Simply drag and drop your WebP file into our converter above, click convert, and download your PNG file. It is 100% free and requires no registration.' },
-{ question: 'Will I lose image quality during conversion?', answer: 'No. Since PNG is a lossless format, our converter extracts the maximum possible data from the source WebP file to ensure no quality is lost.' },
-{ question: 'Can I convert WebP to PNG on mobile?', answer: 'Yes! This tool works in any modern mobile browser including Chrome on Android and Safari on iOS.' },
-{ question: 'Does it support batch conversion?', answer: 'Yes, you can upload multiple WebP files at once and download them all as a single ZIP folder.' },
-{ question: 'How can I view a WebP file without converting it?', answer: 'Most modern web browsers like Chrome or Safari can view WebP files directly. Just drag the file into a new tab.' }
-]
-},
-'jpg-to-webp': {
-title: 'JPG to WebP Converter',
-description: 'Convert JPG to modern WebP format for fast web loading.',
-keywords: 'jpg to webp, compress to webp',
-h1: 'JPG to WebP',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'WebP to PNG Converter',
+            description: 'Convert WebP images to PNG with transparency preservation locally in your browser.',
+            applicationCategory: 'MultimediaApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How to convert WebP to PNG online for free?', answer: 'Simply drag and drop your WebP file into our converter above, click convert, and download your PNG file. It is 100% free and requires no registration.' },
+            { question: 'Will I lose image quality during conversion?', answer: 'No. Since PNG is a lossless format, our converter extracts the maximum possible data from the source WebP file to ensure no quality is lost.' },
+            { question: 'Can I convert WebP to PNG on mobile?', answer: 'Yes! This tool works in any modern mobile browser including Chrome on Android and Safari on iOS.' },
+            { question: 'Does it support batch conversion?', answer: 'Yes, you can upload multiple WebP files at once and download them all as a single ZIP folder.' },
+            { question: 'How can I view a WebP file without converting it?', answer: 'Most modern web browsers like Chrome or Safari can view WebP files directly. Just drag the file into a new tab.' }
+        ]
+    },
+    'jpg-to-webp': {
+        title: 'JPG to WebP Converter',
+        description: 'Convert JPG to modern WebP format for fast web loading.',
+        keywords: 'jpg to webp, compress to webp',
+        h1: 'JPG to WebP',
+        content: `
 <p> Optimize your website's performance and improve user experience with our <strong>JPG to WebP Converter</strong>. This tool efficiently converts your standard JPG images into the modern WebP format, which offers superior compression and quality. WebP files are significantly smaller than JPGs, leading to faster page load times and better SEO.</p>
 
 <h3> Why Convert JPG to WebP ? </h3>
@@ -1610,13 +1610,13 @@ content: `
 <li><strong>Convert & Download: </strong> Click the convert button and save your new WebP image.</li>
 </ol>
 `,
-},
-'png-to-webp': {
-title: 'PNG to WebP Converter',
-description: 'Convert PNG to optimized WebP format.',
-keywords: 'png to webp, convert png',
-h1: 'PNG to WebP',
-content: `
+    },
+    'png-to-webp': {
+        title: 'PNG to WebP Converter',
+        description: 'Convert PNG to optimized WebP format.',
+        keywords: 'png to webp, convert png',
+        h1: 'PNG to WebP',
+        content: `
 <p> Boost your website's speed and efficiency by converting your PNG images to the optimized WebP format with our <strong>PNG to WebP Converter</strong>. WebP offers significantly better compression than PNG, especially for images with transparency, resulting in smaller file sizes and faster page load times without compromising visual quality.</p>
 
 <h3> Why Convert PNG to WebP ? </h3>
@@ -1637,15 +1637,15 @@ content: `
 <li><strong>Convert & Download: </strong> Click the convert button and save your new WebP image.</li>
 </ol>
 `,
-},
+    },
 
-// === REGEX & DIFF TOOLS ===
-'regex-tester': {
-title: 'Regex Tester & Debugger',
-description: 'Test and debug regular expressions online with real-time highlighting.',
-keywords: 'regex tester, regex debug, regular expression tester',
-h1: 'Regex Tester',
-content: `
+    // === REGEX & DIFF TOOLS ===
+    'regex-tester': {
+        title: 'Regex Tester & Debugger',
+        description: 'Test and debug regular expressions online with real-time highlighting.',
+        keywords: 'regex tester, regex debug, regular expression tester',
+        h1: 'Regex Tester',
+        content: `
 <p> Our <strong> Regex Tester & Debugger </strong> is an indispensable tool for developers, data analysts, and anyone working with text patterns. Test and debug your regular expressions in real-time, with instant highlighting of matches and detailed explanations. Say goodbye to trial-and-error and master your regex patterns with ease.</p>
 
 <h3>What is Regex ? </h3>
@@ -1667,13 +1667,13 @@ content: `
 <li><strong>Refine: </strong> Adjust your regex or flags until you achieve the desired results.</li>
 </ol>
 `,
-},
-'diff-checker': {
-title: 'Online Diff Checker',
-description: 'Compare two text files or blocks and find differences.',
-keywords: 'diff checker, text compare, compare files, diff tool',
-h1: 'Diff Checker',
-content: `
+    },
+    'diff-checker': {
+        title: 'Online Diff Checker',
+        description: 'Compare two text files or blocks and find differences.',
+        keywords: 'diff checker, text compare, compare files, diff tool',
+        h1: 'Diff Checker',
+        content: `
 <p> Our <strong> Online Diff Checker </strong> is a powerful tool for comparing two versions of text, code, or documents. Instantly identify additions, deletions, and changes between two inputs, making it invaluable for developers, writers, and anyone needing to track revisions or merge content.</p>
 
 <h3>Why Use a Diff Checker ? </h3>
@@ -1695,13 +1695,13 @@ content: `
 <li><strong>Analyze: </strong> Review the changes and make necessary adjustments.</li>
 </ol>
 `,
-},
-'remove-line-breaks': {
-title: 'Remove Line Breaks - Remove Line Breaks from Text Online Free',
-description: 'Free tool to remove line breaks from text. Clean up copied text, remove unwanted line breaks instantly. Perfect for formatting and editing.',
-keywords: 'remove line breaks, remove newlines, clean text, format text, remove carriage return',
-h1: 'Remove Line Breaks Tool',
-content: `
+    },
+    'remove-line-breaks': {
+        title: 'Remove Line Breaks - Remove Line Breaks from Text Online Free',
+        description: 'Free tool to remove line breaks from text. Clean up copied text, remove unwanted line breaks instantly. Perfect for formatting and editing.',
+        keywords: 'remove line breaks, remove newlines, clean text, format text, remove carriage return',
+        h1: 'Remove Line Breaks Tool',
+        content: `
 <p> Our <strong> Online Line Break Remover </strong> is a lifesaver when you are copying text from PDFs, emails, or old documents that have awkward formatting. Instead of manually deleting every newline, our tool cleans your text instantly, turning fragmented paragraphs into a single, cohesive block of text.</p>
 
 <h3>Key Features </h3>
@@ -1714,26 +1714,26 @@ content: `
 <h3> Why Use This Tool ? </h3>
 <p> PDFs often add hard breaks at the end of every visible line.When you paste this into a Word document or a website, the layout looks broken.Our tool identifies these unnecessary breaks and merges the sentences perfectly, saving you minutes of tedious editing.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Remove Line Breaks',
-description: 'Remove line breaks and newlines from text',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Why remove line breaks?', answer: 'Removing line breaks helps clean up copied text, prepare content for formatting, or create single-line text.' },
-{ question: 'Does it preserve paragraphs?', answer: 'The tool removes all line breaks. For selective removal, use our find & replace feature.' }
-]
-},
-'reverse-text': {
-title: 'Reverse Text Generator - Backwards Text Online Free',
-description: 'Free reverse text generator. Flip text backwards instantly. Perfect for fun messages, social media, and creative content. No signup required.',
-keywords: 'reverse text, backwards text, flip text, reverse text generator, text reverser online',
-h1: 'Reverse Text Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Remove Line Breaks',
+            description: 'Remove line breaks and newlines from text',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Why remove line breaks?', answer: 'Removing line breaks helps clean up copied text, prepare content for formatting, or create single-line text.' },
+            { question: 'Does it preserve paragraphs?', answer: 'The tool removes all line breaks. For selective removal, use our find & replace feature.' }
+        ]
+    },
+    'reverse-text': {
+        title: 'Reverse Text Generator - Backwards Text Online Free',
+        description: 'Free reverse text generator. Flip text backwards instantly. Perfect for fun messages, social media, and creative content. No signup required.',
+        keywords: 'reverse text, backwards text, flip text, reverse text generator, text reverser online',
+        h1: 'Reverse Text Generator',
+        content: `
 <p> Want to see how your name looks backwards ? Or need to create a cryptic message for a riddle ? Our <strong> Online Reverse Text Generator </strong> is the fastest way to flip your text in any direction. Whether it's reversing the entire order of letters or flipping words, we handle it all instantly.</p>
 
 <h3>What Can This Tool Do ? </h3>
@@ -1746,40 +1746,40 @@ content: `
 <h3> Why Use Reversed Text ? </h3>
 <p> Reversed text is highly popular for social media usernames, creative bio descriptions on Instagram / TikTok, and for creating unique puzzles.It's also a fun way to send secret messages to friends that they have to "decode" by reversing back.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Reverse Text Generator',
-description: 'Reverse and flip text backwards online',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: {
-'@type': 'Offer',
-price: '0',
-priceCurrency: 'USD'
-}
-},
-faq: [
-{
-question: 'How do I reverse text?',
-answer: 'Simply paste your text into the input box and click "Reverse Text". The tool will instantly flip your text backwards.'
-},
-{
-question: 'What is reversed text used for?',
-answer: 'Reversed text is popular for creating fun social media posts, puzzles, creative content, and artistic effects.',
-},
-{
-question: 'Can I reverse multiple lines?',
-answer: 'Yes! Paste any amount of text including multiple paragraphs and lines. The entire text will be reversed.'
-}
-]
-},
-'bold-text': {
-title: 'Bold Text Generator - Make Bold Text for Social Media Free',
-description: 'Free bold text generator using Unicode. Create bold text for Instagram, Facebook, Twitter, WhatsApp. Copy and paste bold letters instantly.',
-keywords: 'bold text generator, bold text, make text bold, bold letters, unicode bold text, bold font generator',
-h1: 'Bold Text Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Reverse Text Generator',
+            description: 'Reverse and flip text backwards online',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD'
+            }
+        },
+        faq: [
+            {
+                question: 'How do I reverse text?',
+                answer: 'Simply paste your text into the input box and click "Reverse Text". The tool will instantly flip your text backwards.'
+            },
+            {
+                question: 'What is reversed text used for?',
+                answer: 'Reversed text is popular for creating fun social media posts, puzzles, creative content, and artistic effects.',
+            },
+            {
+                question: 'Can I reverse multiple lines?',
+                answer: 'Yes! Paste any amount of text including multiple paragraphs and lines. The entire text will be reversed.'
+            }
+        ]
+    },
+    'bold-text': {
+        title: 'Bold Text Generator - Make Bold Text for Social Media Free',
+        description: 'Free bold text generator using Unicode. Create bold text for Instagram, Facebook, Twitter, WhatsApp. Copy and paste bold letters instantly.',
+        keywords: 'bold text generator, bold text, make text bold, bold letters, unicode bold text, bold font generator',
+        h1: 'Bold Text Generator',
+        content: `
 <p> Make your messages stand out with our <strong> Bold Text Generator </strong>! This free online tool converts your regular text into bold Unicode characters that can be used across various social media platforms, messaging apps, and websites. Perfect for emphasizing points, creating eye-catching headlines, or adding flair to your profiles.</p>
 
 <h3>How Does It Work ? </h3>
@@ -1801,40 +1801,40 @@ content: `
 <li><strong>Messaging: </strong> Add emphasis to messages in chat applications.</li>
 </ul>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Bold Text Generator',
-description: 'Generate bold Unicode text for social media',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: {
-'@type': 'Offer',
-price: '0',
-priceCurrency: 'USD'
-}
-},
-faq: [
-{
-question: 'How does the bold text generator work?',
-answer: 'Our tool converts regular text to bold Unicode characters that work on social media platforms like Instagram, Facebook, and Twitter.'
-},
-{
-question: 'Can I use bold text on Instagram?',
-answer: 'Yes! The bold text generated uses Unicode characters that display properly on Instagram bio, captions, and comments.'
-},
-{
-question: 'Is this different from HTML bold?',
-answer: 'Yes, this uses Unicode mathematical bold characters that work in plain text, not HTML <b> tags.'
-}
-]
-},
-'lorem-ipsum': {
-title: 'Lorem Ipsum Generator - Placeholder Text Generator Free',
-description: 'Free Lorem Ipsum generator. Create dummy placeholder text for your designs. Generate 1-5 paragraphs instantly. Perfect for web designers and developers.',
-keywords: 'lorem ipsum generator, placeholder text, dummy text, lorem ipsum, filler text generator',
-h1: 'Lorem Ipsum Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Bold Text Generator',
+            description: 'Generate bold Unicode text for social media',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD'
+            }
+        },
+        faq: [
+            {
+                question: 'How does the bold text generator work?',
+                answer: 'Our tool converts regular text to bold Unicode characters that work on social media platforms like Instagram, Facebook, and Twitter.'
+            },
+            {
+                question: 'Can I use bold text on Instagram?',
+                answer: 'Yes! The bold text generated uses Unicode characters that display properly on Instagram bio, captions, and comments.'
+            },
+            {
+                question: 'Is this different from HTML bold?',
+                answer: 'Yes, this uses Unicode mathematical bold characters that work in plain text, not HTML <b> tags.'
+            }
+        ]
+    },
+    'lorem-ipsum': {
+        title: 'Lorem Ipsum Generator - Placeholder Text Generator Free',
+        description: 'Free Lorem Ipsum generator. Create dummy placeholder text for your designs. Generate 1-5 paragraphs instantly. Perfect for web designers and developers.',
+        keywords: 'lorem ipsum generator, placeholder text, dummy text, lorem ipsum, filler text generator',
+        h1: 'Lorem Ipsum Generator',
+        content: `
 <p> Looking for placeholder text for your next design project ? Our <strong> Lorem Ipsum Generator </strong> provides the standard "dummy text" used by the printing and typesetting industry since the 1500s. It helps designers visualize layouts without being distracted by readable content.</p>
 
 <h3>How to Generate Placeholder Text </h3>
@@ -1846,42 +1846,42 @@ content: `
 <h3> The History of Lorem Ipsum </h3>
 <p> Contrary to popular belief, Lorem Ipsum is not simply random text.It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Using it in your mockups is a professional standard that prevents clients from focusing on the literal words, allowing them to focus on the <strong> visual design and typography </strong>.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Lorem Ipsum Generator',
-description: 'Generate Lorem Ipsum placeholder text',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: {
-'@type': 'Offer',
-price: '0',
-priceCurrency: 'USD'
-}
-},
-faq: [
-{
-question: 'What is Lorem Ipsum?',
-answer: 'Lorem Ipsum is standard placeholder text used in design and publishing since the 1500s to demonstrate visual form without meaningful content.'
-},
-{
-question: 'How many paragraphs can I generate?',
-answer: 'You can generate 1-5 paragraphs of Lorem Ipsum text using our simple slider control.'
-},
-{
-question: 'Is Lorem Ipsum the same every time?',
-answer: 'Yes, Lorem Ipsum follows a standard text pattern. Our generator provides the classic Lorem Ipsum passages.'
-}
-]
-},
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Lorem Ipsum Generator',
+            description: 'Generate Lorem Ipsum placeholder text',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD'
+            }
+        },
+        faq: [
+            {
+                question: 'What is Lorem Ipsum?',
+                answer: 'Lorem Ipsum is standard placeholder text used in design and publishing since the 1500s to demonstrate visual form without meaningful content.'
+            },
+            {
+                question: 'How many paragraphs can I generate?',
+                answer: 'You can generate 1-5 paragraphs of Lorem Ipsum text using our simple slider control.'
+            },
+            {
+                question: 'Is Lorem Ipsum the same every time?',
+                answer: 'Yes, Lorem Ipsum follows a standard text pattern. Our generator provides the classic Lorem Ipsum passages.'
+            }
+        ]
+    },
 
-// === YOUTUBE TOOLS ===
-'youtube-thumbnail-downloader': {
-title: 'YouTube Thumbnail Downloader - Get HD & 4K Thumbnails Free Online',
-description: 'Master YouTube growth with our 1200+ word guide on thumbnails. Download high-quality YouTube thumbnails in HD, 4K, and 1080p instantly. 100% free and secure.',
-keywords: 'youtube thumbnail downloader, download yt thumbnail hd, high quality youtube thumbnail, youtube thumbnail grabber, 4k thumbnail downloader, save youtube thumbnail online',
-h1: 'YouTube Thumbnail Downloader: The Ultimate Guide to Viral Video CTR',
-content: `
+    // === YOUTUBE TOOLS ===
+    'youtube-thumbnail-downloader': {
+        title: 'YouTube Thumbnail Downloader - Get HD & 4K Thumbnails Free Online',
+        description: 'Master YouTube growth with our 1200+ word guide on thumbnails. Download high-quality YouTube thumbnails in HD, 4K, and 1080p instantly. 100% free and secure.',
+        keywords: 'youtube thumbnail downloader, download yt thumbnail hd, high quality youtube thumbnail, youtube thumbnail grabber, 4k thumbnail downloader, save youtube thumbnail online',
+        h1: 'YouTube Thumbnail Downloader: The Ultimate Guide to Viral Video CTR',
+        content: `
 <p> In the competitive ecosystem of digital video, the <strong> Click - Through Rate(CTR) </strong> is the metric that determines the success or failure of a channel. While your video content is crucial for retention, your <strong>YouTube thumbnail</strong> is the primary gatekeeper of your audience.At Aynzo Tools, we provide the most reliable <strong> YouTube Thumbnail Downloader </strong> to help creators, marketers, and researchers access high-resolution assets instantly.</p>
 <p>In this high - authority guide, we will explore the science of visual marketing, legal best practices for using thumbnails, and exactly how to use our tool to grab full-size HD and 4K covers directly from the YouTube CDN.</p>
 
@@ -1945,26 +1945,26 @@ content: `
 
 <p> Need more tools for your channel ? Check out our < a href = "/en/tools/youtube-tag-generator" > YouTube Tag Generator </a> to find the best keywords, or use our <a href="/en / tools / youtube - title - generator">YouTube Title Generator</a> to craft viral headlines.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'YouTube Thumbnail Downloader',
-description: 'Download YouTube thumbnails in HD and 4K quality',
-applicationCategory: 'MultimediaApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Is it legal to download thumbnails?', answer: 'Yes, downloading thumbnails for personal use or reference is generally acceptable. However, do not use copyrighted images for your own videos without permission.' },
-{ question: 'Does this work for Shorts?', answer: 'Yes! Simply paste the link to the YouTube Short, and our tool will grab the thumbnail.' }
-]
-},
-'youtube-tag-generator': {
-title: 'YouTube Tag Generator - Boost Video SEO & Ranking Free Online',
-description: 'Discover the secret to viral video growth with our 1200+ word guide on YouTube tags. Generate optimized SEO tags instantly. 100% free YouTube keyword tool.',
-keywords: 'youtube tag generator, yt tag finder, best tags for youtube views, youtube seo tool, viral video tags, generate tags for youtube',
-h1: 'YouTube Tag Generator: The Master Guide to Algorithm Optimization',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'YouTube Thumbnail Downloader',
+            description: 'Download YouTube thumbnails in HD and 4K quality',
+            applicationCategory: 'MultimediaApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is it legal to download thumbnails?', answer: 'Yes, downloading thumbnails for personal use or reference is generally acceptable. However, do not use copyrighted images for your own videos without permission.' },
+            { question: 'Does this work for Shorts?', answer: 'Yes! Simply paste the link to the YouTube Short, and our tool will grab the thumbnail.' }
+        ]
+    },
+    'youtube-tag-generator': {
+        title: 'YouTube Tag Generator - Boost Video SEO & Ranking Free Online',
+        description: 'Discover the secret to viral video growth with our 1200+ word guide on YouTube tags. Generate optimized SEO tags instantly. 100% free YouTube keyword tool.',
+        keywords: 'youtube tag generator, yt tag finder, best tags for youtube views, youtube seo tool, viral video tags, generate tags for youtube',
+        h1: 'YouTube Tag Generator: The Master Guide to Algorithm Optimization',
+        content: `
 <p> In the age of AI - driven content discovery, many creators ask: <strong>"Do YouTube tags still matter?" </strong> While the YouTube Studio interface now suggests that tags play a "minimal" role, the reality is more nuanced. Tags serve as a critical <strong>semantic bridge</strong> for the algorithm, helping it understand the context of your video when your title and description might be too creative or vague.At Aynzo Tools, our <strong> YouTube Tag Generator </strong> is designed to help you bridge that gap and appear in front of the right audience.</p>
 <p>This 1200 + word authority guide will walk you through the evolution of YouTube SEO, the "Triple Match" technique, and exactly how to use our generator to outrank your competition.</p>
 
@@ -2001,29 +2001,29 @@ content: `
 
 <p> Looking for more ways to grow ? Use our < a href = "/en/tools/youtube-title-generator" > YouTube Title Generator </a> to craft high-CTR headlines, or check our <a href="/en / tools / youtube - thumbnail - downloader">Thumbnail Downloader</a> to analyze what the top 1% of creators are doing visually.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'YouTube Tag Generator',
-description: 'Generate optimized YouTube tags to boost video SEO and improve search rankings.',
-applicationCategory: 'MultimediaApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Do tags really help with video views?', answer: 'Yes, but indirectly. Tags help the algorithm categorize your content, which leads to your video appearing in "Search Results" and "Suggested Videos" for the correct audience.' },
-{ question: 'What is the "Triple Match" in YouTube SEO?', answer: 'It is the practice of including your primary keyword in your Title, the first line of your Description, and your first Tag. This creates a high relevance signal for the algorithm.' },
-{ question: 'How many tags should I use?', answer: 'While you have a 500-character limit, we recommend focus over quantity. Using 10-15 highly relevant tags is usually more effective than using 50 low-relevance ones.' },
-{ question: 'Are YouTube tags hidden?', answer: 'Yes, they are not visible to the general public on the video page. However, they are visible in the page source code and are fully indexed by the YouTube algorithm.' },
-{ question: 'Is this tag generator free?', answer: 'Yes. Aynzo Tools provides unlimited YouTube SEO tag generation for free, with no account or subscription required.' }
-]
-},
-'youtube-embed-code-generator': {
-title: 'YouTube Embed Code Generator - Custom Player',
-description: 'Generate advanced YouTube embed codes. Customize autoplay, loop, controls, and more. Clean and responsive Iframe code.',
-keywords: 'youtube embed code, custom youtube player, embed youtube video, autoplay embed, loop youtube',
-h1: 'Advanced Embed Code Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'YouTube Tag Generator',
+            description: 'Generate optimized YouTube tags to boost video SEO and improve search rankings.',
+            applicationCategory: 'MultimediaApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Do tags really help with video views?', answer: 'Yes, but indirectly. Tags help the algorithm categorize your content, which leads to your video appearing in "Search Results" and "Suggested Videos" for the correct audience.' },
+            { question: 'What is the "Triple Match" in YouTube SEO?', answer: 'It is the practice of including your primary keyword in your Title, the first line of your Description, and your first Tag. This creates a high relevance signal for the algorithm.' },
+            { question: 'How many tags should I use?', answer: 'While you have a 500-character limit, we recommend focus over quantity. Using 10-15 highly relevant tags is usually more effective than using 50 low-relevance ones.' },
+            { question: 'Are YouTube tags hidden?', answer: 'Yes, they are not visible to the general public on the video page. However, they are visible in the page source code and are fully indexed by the YouTube algorithm.' },
+            { question: 'Is this tag generator free?', answer: 'Yes. Aynzo Tools provides unlimited YouTube SEO tag generation for free, with no account or subscription required.' }
+        ]
+    },
+    'youtube-embed-code-generator': {
+        title: 'YouTube Embed Code Generator - Custom Player',
+        description: 'Generate advanced YouTube embed codes. Customize autoplay, loop, controls, and more. Clean and responsive Iframe code.',
+        keywords: 'youtube embed code, custom youtube player, embed youtube video, autoplay embed, loop youtube',
+        h1: 'Advanced Embed Code Generator',
+        content: `
 <p> Standard YouTube embed codes are limited.Our <strong> Advanced YouTube Embed Generator </strong> allows you to customize the video player exactly the way you want it on your website or blog. Control how users interact with your videos without writing a single line of code.</p>
 
 <h3>Customization Options </h3>
@@ -2037,13 +2037,13 @@ content: `
 <h3> Benefits for Webmasters </h3>
 <p> Using a customized player improves user experience and can keep visitors on your site longer.By disabling related videos from other channels, you ensure that users stay focused on your content after the video ends.</p>
 `
-},
-'qr-code-generator': {
-title: 'QR Code Generator - Create Custom QR Codes Online Free',
-description: 'Free QR code generator. Create custom QR codes for URLs, text, and WiFi. Customize colors, margins, and size. High-quality PNG downloads.',
-keywords: 'qr code generator, create qr code, custom qr code, qr code maker, free qr generator',
-h1: 'Custom QR Code Generator',
-content: `
+    },
+    'qr-code-generator': {
+        title: 'QR Code Generator - Create Custom QR Codes Online Free',
+        description: 'Free QR code generator. Create custom QR codes for URLs, text, and WiFi. Customize colors, margins, and size. High-quality PNG downloads.',
+        keywords: 'qr code generator, create qr code, custom qr code, qr code maker, free qr generator',
+        h1: 'Custom QR Code Generator',
+        content: `
 <p> Our <strong> QR Code Generator </strong> allows you to create fully customized QR codes in seconds. Whether it is for a website URL, contact information, social media profiles, or Wi-Fi credentials, our tool ensures your QR codes are high-quality, professional, and easily scannable.</p>
 
 <h3>Why Use Our QR Generator ? </h3>
@@ -2072,26 +2072,26 @@ content: `
 <h3> Privacy & Security </h3>
 <p> We do not track the data you put into your QR codes.Since the tool runs entirely in your browser, the information stays between you and your users.Our static QR codes never expire and contain no hidden redirects.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'QR Code Generator',
-description: 'Create custom QR codes with color and size options',
-applicationCategory: 'UtilitiesApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Do these QR codes expire?', answer: 'No, the QR codes generated are static and will work forever as long as the underlying link is active.' },
-{ question: 'Is it free for commercial use?', answer: 'Yes, all QR codes generated are 100% free for both personal and commercial use.' }
-]
-},
-'xml-sitemap-generator': {
-title: 'XML Sitemap Generator - Create Google Sitemaps Online',
-description: 'Free XML sitemap generator for Google, Bing, and Yahoo. Generate professional sitemaps with custom priority and frequency for better SEO.',
-keywords: 'xml sitemap generator, google sitemap maker, website sitemap tool, create sitemap online',
-h1: 'Online XML Sitemap Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'QR Code Generator',
+            description: 'Create custom QR codes with color and size options',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Do these QR codes expire?', answer: 'No, the QR codes generated are static and will work forever as long as the underlying link is active.' },
+            { question: 'Is it free for commercial use?', answer: 'Yes, all QR codes generated are 100% free for both personal and commercial use.' }
+        ]
+    },
+    'xml-sitemap-generator': {
+        title: 'XML Sitemap Generator - Create Google Sitemaps Online',
+        description: 'Free XML sitemap generator for Google, Bing, and Yahoo. Generate professional sitemaps with custom priority and frequency for better SEO.',
+        keywords: 'xml sitemap generator, google sitemap maker, website sitemap tool, create sitemap online',
+        h1: 'Online XML Sitemap Generator',
+        content: `
 <p> An XML sitemap acts as a roadmap for search engines.It lists every page on your website, ensuring that Google, Bing, and other crawlers can find and index your content efficiently.Our <strong> Online XML Sitemap Generator </strong> creates a perfectly formatted schema that you can submit directly to Google Search Console.</p>
 
 <h3>Why Do You Need a Sitemap ? </h3>
@@ -2109,22 +2109,22 @@ content: `
 <li><strong>Upload: </strong> Download the file and upload it to your root directory (e.g., domain.com/sitemap.xml).</li>
 </ol>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'XML Sitemap Generator',
-description: 'Generate XML sitemaps for search engine indexing',
-applicationCategory: 'SEOApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'google-serp-simulator': {
-title: 'Google SERP Simulator - SEO Title & Meta Description Preview',
-description: 'Visualize how your website appears on Google search results. Optimize your SEO title and meta description with our live SERP preview tool.',
-keywords: 'serp simulator, google search preview, seo title checker, meta description preview, google snippet tool',
-h1: 'Google SERP Simulator & Preview',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'XML Sitemap Generator',
+            description: 'Generate XML sitemaps for search engine indexing',
+            applicationCategory: 'SEOApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'google-serp-simulator': {
+        title: 'Google SERP Simulator - SEO Title & Meta Description Preview',
+        description: 'Visualize how your website appears on Google search results. Optimize your SEO title and meta description with our live SERP preview tool.',
+        keywords: 'serp simulator, google search preview, seo title checker, meta description preview, google snippet tool',
+        h1: 'Google SERP Simulator & Preview',
+        content: `
 <p> First impressions matter, especially in search results.Our <strong> Google SERP Simulator </strong> (Search Engine Results Page) allows you to visualize exactly how your website will appear to potential visitors on Google. By optimizing your title and meta description, you can significantly increase your **Click-Through Rate (CTR)**.</p>
 
 <h3>Features of the Simulator </h3>
@@ -2137,25 +2137,25 @@ content: `
 <h3> How to Optimize for CTR </h3>
 <p> Use compelling, action - oriented language in your meta description.A well - written description acts like an "ad" for your page.Our simulator helps you find the perfect balance between informative content and click - worthy copywriting.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Google SERP Simulator',
-description: 'Visualize and optimize SEO title and meta description for Google search results.',
-applicationCategory: 'SEOApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Why use a SERP simulator?', answer: 'It helps you ensure your titles and descriptions are not cut off by Google and look appealing to users.' }
-]
-},
-'meta-tag-generator': {
-title: 'Meta Tag Generator - Google & Social Media Tags',
-description: 'Generate SEO-optimized meta tags for Google, Facebook Open Graph, and Twitter Cards instantly.',
-keywords: 'meta tag generator, seo tags, open graph generator, twitter cards maker',
-h1: 'Meta Tag Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Google SERP Simulator',
+            description: 'Visualize and optimize SEO title and meta description for Google search results.',
+            applicationCategory: 'SEOApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Why use a SERP simulator?', answer: 'It helps you ensure your titles and descriptions are not cut off by Google and look appealing to users.' }
+        ]
+    },
+    'meta-tag-generator': {
+        title: 'Meta Tag Generator - Google & Social Media Tags',
+        description: 'Generate SEO-optimized meta tags for Google, Facebook Open Graph, and Twitter Cards instantly.',
+        keywords: 'meta tag generator, seo tags, open graph generator, twitter cards maker',
+        h1: 'Meta Tag Generator',
+        content: `
 <p> Meta tags are the foundation of on - page SEO.Our <strong> Meta Tag Generator </strong> helps you create the essential code snippets that search engines and social media platforms use to understand your website. Proper tags ensure your site looks professional in search results and when shared on apps like WhatsApp or Slack.</p>
 
 <h3>Why Meta Tags Matter </h3>
@@ -2165,22 +2165,22 @@ content: `
 <li><strong>Crawl Instructions: </strong> Tell bots which pages to index and which to ignore.</li>
 </ul>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Meta Tag Generator',
-description: 'Generate SEO and social media meta tags',
-applicationCategory: 'SEOApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'robots-txt-generator': {
-title: 'Robots.txt Generator - Manage Search Engine Crawling',
-description: 'Create a custom robots.txt file to control how search engines crawl your website. Safe and easy to use.',
-keywords: 'robots.txt generator, create robots.txt, robots file maker, crawl control',
-h1: 'Robots.txt Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Meta Tag Generator',
+            description: 'Generate SEO and social media meta tags',
+            applicationCategory: 'SEOApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'robots-txt-generator': {
+        title: 'Robots.txt Generator - Manage Search Engine Crawling',
+        description: 'Create a custom robots.txt file to control how search engines crawl your website. Safe and easy to use.',
+        keywords: 'robots.txt generator, create robots.txt, robots file maker, crawl control',
+        h1: 'Robots.txt Generator',
+        content: `
 <p> A <strong> Robots.txt file </strong> tells search engine bots which pages of your site they can and cannot visit. Our generator makes it easy to create a protocol-compliant file that protects your private directories and optimizes your crawl budget.</p>
 
 <h3>What to Include in Robots.txt </h3>
@@ -2190,22 +2190,22 @@ content: `
 <li> <strong>Sitemap: </strong> The location of your XML sitemap.</li>
 </ul>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Robots.txt Generator',
-description: 'Generate robots.txt files for website crawl control',
-applicationCategory: 'SEOApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'whatsapp-link-generator': {
-title: 'WhatsApp Link Generator - Create Click-to-Chat Links',
-description: 'Generate free WhatsApp click-to-chat links with custom messages. Perfect for Instagram bios, Facebook ads, and business websites.',
-keywords: 'whatsapp link generator, click to chat whatsapp, wa.me link maker, whatsapp chat link',
-h1: 'WhatsApp Link Generator',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Robots.txt Generator',
+            description: 'Generate robots.txt files for website crawl control',
+            applicationCategory: 'SEOApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'whatsapp-link-generator': {
+        title: 'WhatsApp Link Generator - Create Click-to-Chat Links',
+        description: 'Generate free WhatsApp click-to-chat links with custom messages. Perfect for Instagram bios, Facebook ads, and business websites.',
+        keywords: 'whatsapp link generator, click to chat whatsapp, wa.me link maker, whatsapp chat link',
+        h1: 'WhatsApp Link Generator',
+        content: `
 <p> Our <strong> WhatsApp Link Generator </strong> is the perfect tool for businesses, freelancers, and influencers. It allows you to create a "Click-to-Chat" link that lets people message you instantly without having to save your phone number to their contacts. This reduces friction and increases your conversion rate for customer inquiries.</p>
 
 <h3>How it Works </h3>
@@ -2218,22 +2218,22 @@ content: `
 <li><strong>Websites: </strong> Add a "Chat with us" button to your contact page.</li>
 </ul>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'WhatsApp Link Generator',
-description: 'Generate WhatsApp direct chat links',
-applicationCategory: 'CommunicationApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-}
-},
-'pdf-to-word': {
-title: 'How to Convert PDF to Word Editable Free - The Expert Guide',
-description: 'Master PDF to Word conversion with our 1200+ word expert guide. Learn to preserve formatting, use OCR for scanned files, and ensure document security. 100% free.',
-keywords: 'how to convert pdf to word, pdf to word editable free, convert pdf to docx without losing formatting, best pdf to word converter online, scanned pdf to word doc',
-h1: 'How to Convert PDF to Word Editable Free: The Ultimate Document Guide',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'WhatsApp Link Generator',
+            description: 'Generate WhatsApp direct chat links',
+            applicationCategory: 'CommunicationApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        }
+    },
+    'pdf-to-word': {
+        title: 'How to Convert PDF to Word Editable Free - The Expert Guide',
+        description: 'Master PDF to Word conversion with our 1200+ word expert guide. Learn to preserve formatting, use OCR for scanned files, and ensure document security. 100% free.',
+        keywords: 'how to convert pdf to word, pdf to word editable free, convert pdf to docx without losing formatting, best pdf to word converter online, scanned pdf to word doc',
+        h1: 'How to Convert PDF to Word Editable Free: The Ultimate Document Guide',
+        content: `
 <p> Documents are the backbone of professional life, but they often come in the most rigid format possible: the <strong> PDF(Portable Document Format) </strong>. While PDFs are excellent for ensuring that a document looks the same on every screen, they are notoriously difficult to edit. If you've ever received a proposal, a contract, or a report that you needed to update, you know the frustration of not being able to simply click and type.</p>
 <p>In this comprehensive guide, we'll show you exactly <strong>how to convert PDF to Word editable free</strong> using our advanced reconstruction engine, while exploring the technical secrets that keep your fonts, tables, and layouts intact.</p>
 
@@ -2264,53 +2264,53 @@ content: `
 <h2>Conclusion: Reclaim Your Productivity </h2>
 <p> Don't let a static format slow down your workflow. By bridging the gap between the stability of PDF and the flexibility of Word, you can collaborate faster and produce better results. If you need more document tools, consider checking out our <a href="/en/tools/merge-pdf">Merge PDF</a> utility or our <a href="/en/tools/split-pdf">Split PDF</a> tool to organize your digital office.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'PDF to Word Converter',
-description: 'Convert PDF files to editable Word documents online with high layout preservation.',
-applicationCategory: 'MultimediaApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Will the converted Word document be editable?', answer: 'Yes! Our tool reconstructs the PDF as a standard .docx file, allowing you to change text, delete images, and modify tables just like any other Word document.' },
-{ question: 'Does it support scanned PDFs?', answer: 'Yes, our converter includes an OCR (Optical Character Recognition) layer that can extract text from scanned images and "flat" PDF files.' },
-{ question: 'Is my document formatting preserved?', answer: 'We use advanced structural analysis to preserve headers, footers, page numbers, and complex table layouts as accurately as possible.' },
-{ question: 'Is there a limit to how many PDFs I can convert?', answer: 'No. Aynzo Tools provides unlimited PDF to Word conversions for all users without any daily or monthly caps.' },
-{ question: 'Can I convert back from Word to PDF?', answer: 'While this tool is for PDF-to-Word, most modern word processors like Word or Google Docs allow you to "Save as PDF" directly from their file menus.' }
-]
-},
-'youtube-title-generator': {
-title: 'YouTube Title Generator - Viral Video Title Ideas',
-description: 'Generate catchy, SEO-friendly titles for your YouTube videos to improve click-through rates and rankings.',
-keywords: 'youtube title generator, video title ideas, viral yt titles, seo titles for youtube',
-h1: 'YouTube Title Generator'
-},
-'youtube-timestamp-link-generator': {
-title: 'YouTube Timestamp Link Generator - Share Specific Time',
-description: 'Create YouTube links that start at a specific timestamp. Perfect for sharing highlights and specific moments.',
-keywords: 'youtube timestamp link, share youtube time, youtube start at time link',
-h1: 'YouTube Timestamp Link Generator'
-},
-'open-graph-generator': {
-title: 'Open Graph Meta Tag Generator - Facebook & LinkedIn SEO',
-description: 'Generate Open Graph meta tags for your website to control how your content appears on Facebook, LinkedIn, and Slack.',
-keywords: 'open graph generator, og tag generator, facebook meta tags, og title og image',
-h1: 'Open Graph Generator'
-},
-'twitter-card-generator': {
-title: 'Twitter Card Generator - Optimize Your Tweets',
-description: 'Create Twitter Card meta tags to ensure your website looks great when shared on X (Twitter).',
-keywords: 'twitter card generator, twitter meta tags, x card generator, twitter card validator',
-h1: 'Twitter Card Generator'
-},
-'keyword-density-checker': {
-title: 'Keyword Density Checker - Avoid SEO Penalties & Stuffing',
-description: 'Check keyword frequency to avoid Google stuffing penalties. Free SEO text analyzer. Find overused words and optimize for 1-2% density. 100% private.',
-keywords: 'keyword density checker, check keyword stuffing, seo text analyzer, word frequency counter, keyword optimizer tool, tf-idf analyzer',
-h1: 'Keyword Density Checker: The Anti-Stuffing Audit Tool',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'PDF to Word Converter',
+            description: 'Convert PDF files to editable Word documents online with high layout preservation.',
+            applicationCategory: 'MultimediaApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Will the converted Word document be editable?', answer: 'Yes! Our tool reconstructs the PDF as a standard .docx file, allowing you to change text, delete images, and modify tables just like any other Word document.' },
+            { question: 'Does it support scanned PDFs?', answer: 'Yes, our converter includes an OCR (Optical Character Recognition) layer that can extract text from scanned images and "flat" PDF files.' },
+            { question: 'Is my document formatting preserved?', answer: 'We use advanced structural analysis to preserve headers, footers, page numbers, and complex table layouts as accurately as possible.' },
+            { question: 'Is there a limit to how many PDFs I can convert?', answer: 'No. Aynzo Tools provides unlimited PDF to Word conversions for all users without any daily or monthly caps.' },
+            { question: 'Can I convert back from Word to PDF?', answer: 'While this tool is for PDF-to-Word, most modern word processors like Word or Google Docs allow you to "Save as PDF" directly from their file menus.' }
+        ]
+    },
+    'youtube-title-generator': {
+        title: 'YouTube Title Generator - Viral Video Title Ideas',
+        description: 'Generate catchy, SEO-friendly titles for your YouTube videos to improve click-through rates and rankings.',
+        keywords: 'youtube title generator, video title ideas, viral yt titles, seo titles for youtube',
+        h1: 'YouTube Title Generator'
+    },
+    'youtube-timestamp-link-generator': {
+        title: 'YouTube Timestamp Link Generator - Share Specific Time',
+        description: 'Create YouTube links that start at a specific timestamp. Perfect for sharing highlights and specific moments.',
+        keywords: 'youtube timestamp link, share youtube time, youtube start at time link',
+        h1: 'YouTube Timestamp Link Generator'
+    },
+    'open-graph-generator': {
+        title: 'Open Graph Meta Tag Generator - Facebook & LinkedIn SEO',
+        description: 'Generate Open Graph meta tags for your website to control how your content appears on Facebook, LinkedIn, and Slack.',
+        keywords: 'open graph generator, og tag generator, facebook meta tags, og title og image',
+        h1: 'Open Graph Generator'
+    },
+    'twitter-card-generator': {
+        title: 'Twitter Card Generator - Optimize Your Tweets',
+        description: 'Create Twitter Card meta tags to ensure your website looks great when shared on X (Twitter).',
+        keywords: 'twitter card generator, twitter meta tags, x card generator, twitter card validator',
+        h1: 'Twitter Card Generator'
+    },
+    'keyword-density-checker': {
+        title: 'Keyword Density Checker - Avoid SEO Penalties & Stuffing',
+        description: 'Check keyword frequency to avoid Google stuffing penalties. Free SEO text analyzer. Find overused words and optimize for 1-2% density. 100% private.',
+        keywords: 'keyword density checker, check keyword stuffing, seo text analyzer, word frequency counter, keyword optimizer tool, tf-idf analyzer',
+        h1: 'Keyword Density Checker: The Anti-Stuffing Audit Tool',
+        content: `
 <p> In the early days of SEO, ranking was easy: pick a keyword like "cheap flights" and repeat it 50 times in your text.Today, that strategy is a one - way ticket to a Google penalty.The <strong> Panda Algorithm </strong> and subsequent "Helpful Content" updates aggressively punish <strong>Keyword Stuffing</strong>.</p>
 <p> At Aynzo Tools, our <strong> Keyword Density Checker </strong> is designed to help you write naturally while ensuring the search engine understands your topic. This guide covers the "Golden Ratio" of keyword frequency, how to use LSI keywords, and how to audit your content for semantic relevance.</p>
 
@@ -2343,136 +2343,197 @@ content: `
 <h2> Conclusion: Optimize for Humans First </h2>
 <p> The best SEO advice is to write for humans first and search engines second.Use our density checker as a final "sanity check" before hitting publish.If you need to fix formatting issues before checking, try our < a href = "/en/tools/remove-extra-spaces" > Remove Extra Spaces </a> tool or clean up your text with our <a href="/en / tools /case -converter">Case Converter</a>.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'Keyword Density Checker',
-description: 'Analyze content for keyword stuffing and optimize density for SEO. Detect overused words and improving semantic relevance.',
-applicationCategory: 'SEOApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'What is a good keyword density percentage?', answer: 'Most experts recommend maintaining a primary keyword density between 1% and 2%. Anything over 3% risks looking like spam to search engines.' },
-{ question: 'Does this tool check for LSI keywords?', answer: 'We provide frequency counts for 1-word, 2-word, and 3-word phrases. You can use these lists to identify related terms (LSI) and ensure you are using varied vocabulary.' },
-{ question: 'Does it count "Stop Words"?', answer: 'By default, we filter out common stop words (like "the", "a", "in") to show you the meaningful topics of your text. You can toggle this setting if needed.' },
-{ question: 'Is there a word limit?', answer: 'No. Because the analysis happens locally on your device, you can check entire e-books or long-form guides without hitting a server limit.' }
-]
-},
-'keyword-cleaner': {
-title: 'Keyword List Cleaner - Remove Duplicates & Empty Lines',
-description: 'Clean up your keyword lists by removing duplicates, extra spaces, and empty lines. Perfect for PPC and SEO campaigns.',
-keywords: 'keyword cleaner, deduplicate keywords, clean keyword list, seo tool',
-h1: 'Keyword List Cleaner'
-},
-'long-tail-keyword-generator': {
-title: 'Long Tail Keyword Generator - SEO Keyword Research',
-description: 'Find long-tail keyword variations for your seed keywords to target niche search traffic and improve SEO.',
-keywords: 'long tail keywords, keyword research tool, seo keyword generator, find keywords',
-h1: 'Long Tail Keyword Generator'
-},
-'slug-generator': {
-title: 'URL Slug Generator - SEO Friendly URLs',
-description: 'Convert any text into a clean, SEO-friendly URL slug. Remove special characters and replace spaces with hyphens.',
-keywords: 'slug generator, url slug, seo url maker, permalink generator',
-h1: 'URL Slug Generator'
-},
-'htaccess-redirect-generator': {
-title: 'htaccess Redirect Generator - 301 & 302 Redirects',
-description: 'Easily generate .htaccess redirect code for 301 (permanent) or 302 (temporary) redirects for your Apache server.',
-keywords: 'htaccess generator, 301 redirect, 302 redirect, htaccess maker',
-h1: 'htaccess Redirect Generator'
-},
-'my-ip-address': {
-title: 'My IP Address - Check Your Public IP & Location',
-description: 'Instantly find your public IP address (IPv4/IPv6) and see your general location and ISP details.',
-keywords: 'what is my ip, check ip address, my ip location, public ip finder',
-h1: 'My IP Address'
-},
-'browser-info': {
-title: 'Browser Information Tool - Detect User Agent & Details',
-description: 'Get detailed information about your web browser, screen resolution, operating system, and user agent string.',
-keywords: 'browser info, detect browser, user agent finder, browser details',
-h1: 'Browser Information'
-},
-'screen-resolution-simulator': {
-title: 'Screen Resolution Simulator - Test Website on All Devices',
-description: 'Preview how your website looks on different screen resolutions and monitor sizes.',
-keywords: 'screen resolution simulator, test screen size, display simulator, website preview',
-h1: 'Screen Resolution Simulator'
-},
-'responsive-checker': {
-title: 'Responsive Website Checker - Test Mobile View',
-description: 'Check if your website is responsive across various device sizes (Mobile, Tablet, Desktop).',
-keywords: 'responsive checker, mobile friendly test, website responsiveness, device simulator',
-h1: 'Responsive Checker'
-},
-'telegram-link-generator': {
-title: 'Telegram Link Generator - Create Direct Message Links',
-description: 'Generate direct links to your Telegram profile or channel for easy sharing on social media.',
-keywords: 'telegram link generator, create telegram link, t.me link maker, telegram channel link',
-h1: 'Telegram Link Generator'
-},
-'paypal-link-generator': {
-title: 'PayPal Link Generator - Create Payment & Donation Links',
-description: 'Generate custom PayPal.me links for receiving payments or donations quickly and safely.',
-keywords: 'paypal link generator, paypal.me maker, payment link generator, donation link',
-h1: 'PayPal Link Generator'
-},
-'email-validator': {
-title: 'Email Validator - Check Email Address Format',
-description: 'Validate the format of any email address instantly. Check for syntax errors and common typos.',
-keywords: 'email validator, check email, email syntax checker, validate email online',
-h1: 'Email Validator'
-},
-'url-opener': {
-title: 'Bulk URL Opener - Open Multiple Links at Once',
-description: 'Open multiple URLs at the same time in new tabs with a single click. Save time on link checking.',
-keywords: 'bulk url opener, open multiple links, url list opener, link opener',
-h1: 'Bulk URL Opener'
-},
-'user-agent-parser': {
-title: 'User Agent Parser - Analyze User Agent Strings',
-description: 'Decode and analyze any User Agent string to find browser, OS, and device information.',
-keywords: 'user agent parser, ua string analyzer, parse user agent, browser detect',
-h1: 'User Agent Parser'
-},
-'wordpress-password-hash': {
-title: 'WordPress Password Hash Generator',
-description: 'Generate WordPress-compatible password hashes using the phpass library for direct database insertion.',
-keywords: 'wordpress password hash, wp hash generator, wordpress password encrypt',
-h1: 'WP Password Hash Generator'
-},
-'age-calculator': {
-title: 'Age Calculator - Exact Age by Date of Birth (Years, Months, Days)',
-description: 'Free online age calculator. Calculate your exact age from date of birth in years, months, and days. Find your chronological age and birthday countdown easily.',
-keywords: 'age calculator, age calculator by date of birth, calculate age in years months days, exact age calculator online, chronological age calculator, birthday countdown timer, how old am i today, age finder online',
-h1: 'Online Age Calculator by Date of Birth'
-},
-'bmi-calculator': {
-title: 'BMI Calculator Online - Check Body Mass Index & Health',
-description: 'Calculate your Body Mass Index (BMI) easily. Free tool for adults and children to check weight status (Underweight, Normal, Overweight, Obese) based on height and weight.',
-keywords: 'bmi calculator, body mass index, check bmi online, healthy weight calculator, obesity checker, body fat calculator, height weight ratio',
-h1: 'Free Online BMI Calculator'
-},
-'emi-calculator': {
-title: 'EMI Calculator - Calculate Loan & Mortgage Monthly Payments',
-description: 'Free Loan EMI Calculator to determine monthly installments for home loans, car loans, and personal loans. View total interest payable and amortization schedule.',
-keywords: 'emi calculator, loan emi calculator, mortgage calculator, calculate monthly installments, home loan emi, car loan emi, interest rate calculator',
-h1: 'Loan EMI Calculator Online'
-},
-'instagram-hashtag-generator': {
-title: 'Instagram Hashtag Generator - Trending & Viral Hashtags 2024',
-description: 'Generate trending and viral Instagram hashtags for reels and posts using AI. Boost your growth, engagement, and reach with the best copy-and-paste hashtags.',
-keywords: 'instagram hashtag generator, trending instagram hashtags for reels, viral instagram hashtags 2024, ai hashtag finder, hashtags for growth, instagram engagement tags, hashtag generator free',
-h1: 'Trending Instagram Hashtag Generator'
-},
-'seo-score-checker': {
-title: 'Free SEO Score Checker - Real-Time Website Audit',
-description: 'Conduct a live SEO audit of any website. Our tool fetches real-time data to analyze meta tags, headers, and images. Get an instant health score and actionable fix list.',
-keywords: 'real seo checker, live website audit, free seo analysis, check meta tags, technical seo scan, website health check',
-h1: 'Live SEO Health & Score Analyzer',
-content: `
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Keyword Density Checker',
+            description: 'Analyze content for keyword stuffing and optimize density for SEO. Detect overused words and improving semantic relevance.',
+            applicationCategory: 'SEOApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What is a good keyword density percentage?', answer: 'Most experts recommend maintaining a primary keyword density between 1% and 2%. Anything over 3% risks looking like spam to search engines.' },
+            { question: 'Does this tool check for LSI keywords?', answer: 'We provide frequency counts for 1-word, 2-word, and 3-word phrases. You can use these lists to identify related terms (LSI) and ensure you are using varied vocabulary.' },
+            { question: 'Does it count "Stop Words"?', answer: 'By default, we filter out common stop words (like "the", "a", "in") to show you the meaningful topics of your text. You can toggle this setting if needed.' },
+            { question: 'Is there a word limit?', answer: 'No. Because the analysis happens locally on your device, you can check entire e-books or long-form guides without hitting a server limit.' }
+        ]
+    },
+    'keyword-cleaner': {
+        title: 'Keyword List Cleaner - Remove Duplicates & Empty Lines',
+        description: 'Clean up your keyword lists by removing duplicates, extra spaces, and empty lines. Perfect for PPC and SEO campaigns.',
+        keywords: 'keyword cleaner, deduplicate keywords, clean keyword list, seo tool',
+        h1: 'Keyword List Cleaner'
+    },
+    'long-tail-keyword-generator': {
+        title: 'Long Tail Keyword Generator - SEO Keyword Research',
+        description: 'Find long-tail keyword variations for your seed keywords to target niche search traffic and improve SEO.',
+        keywords: 'long tail keywords, keyword research tool, seo keyword generator, find keywords',
+        h1: 'Long Tail Keyword Generator'
+    },
+    'slug-generator': {
+        title: 'URL Slug Generator - SEO Friendly URLs',
+        description: 'Convert any text into a clean, SEO-friendly URL slug. Remove special characters and replace spaces with hyphens.',
+        keywords: 'slug generator, url slug, seo url maker, permalink generator',
+        h1: 'URL Slug Generator'
+    },
+    'htaccess-redirect-generator': {
+        title: 'htaccess Redirect Generator - 301 & 302 Redirects',
+        description: 'Easily generate .htaccess redirect code for 301 (permanent) or 302 (temporary) redirects for your Apache server.',
+        keywords: 'htaccess generator, 301 redirect, 302 redirect, htaccess maker',
+        h1: 'htaccess Redirect Generator'
+    },
+    'my-ip-address': {
+        title: 'My IP Address - Check Your Public IP & Location',
+        description: 'Instantly find your public IP address (IPv4/IPv6) and see your general location and ISP details.',
+        keywords: 'what is my ip, check ip address, my ip location, public ip finder',
+        h1: 'My IP Address'
+    },
+    'browser-info': {
+        title: 'Browser Information Tool - Detect User Agent & Details',
+        description: 'Get detailed information about your web browser, screen resolution, operating system, and user agent string.',
+        keywords: 'browser info, detect browser, user agent finder, browser details',
+        h1: 'Browser Information'
+    },
+    'screen-resolution-simulator': {
+        title: 'Screen Resolution Simulator - Test Website on All Devices',
+        description: 'Preview how your website looks on different screen resolutions and monitor sizes.',
+        keywords: 'screen resolution simulator, test screen size, display simulator, website preview',
+        h1: 'Screen Resolution Simulator'
+    },
+    'responsive-checker': {
+        title: 'Responsive Website Checker - Test Mobile View',
+        description: 'Check if your website is responsive across various device sizes (Mobile, Tablet, Desktop).',
+        keywords: 'responsive checker, mobile friendly test, website responsiveness, device simulator',
+        h1: 'Responsive Checker'
+    },
+    'telegram-link-generator': {
+        title: 'Telegram Link Generator - Create Direct Message Links',
+        description: 'Generate direct links to your Telegram profile or channel for easy sharing on social media.',
+        keywords: 'telegram link generator, create telegram link, t.me link maker, telegram channel link',
+        h1: 'Telegram Link Generator',
+        content: `
+<p>In the digital marketing landscape of 2026, <strong>Telegram</strong> has evolved from a simple messaging app into a business powerhouse. Whether you are running a crypto community, a customer support channel for your SaaS, or simply want a direct line to your audience, a <strong>Telegram Link (t.me)</strong> is your gateway.</p>
+<p>Our <strong>Telegram Link Generator</strong> removes the friction between you and your customers. Instead of asking users to "Search for my username," you provide a single clickable link that opens a direct chat with you instantly.</p>
+
+<h2>What is a Telegram Direct Link?</h2>
+<p>A Telegram direct link follows the format <code>https://t.me/username</code>. When a user clicks this link on a mobile device, it bypasses the browser and launches the Telegram app directly into a chat window with you. Ideally, it's the "Magic Carpet" to your inbox.</p>
+
+<h3> Why Use a Link Generator? </h3>
+<p>While you can manually type the URL, our generator ensures accuracy and adds advanced features:</p>
+<ul>
+<li><strong>Error-Free Formatting:</strong> We validate your username to ensure you don't send traffic to a broken link.</li>
+<li><strong>Pre-filled Messages:</strong> (Coming Soon) You will be able to add a default "Hello, I want to buy..." message that appears when the user clicks.</li>
+<li><strong>QR Code Generation:</strong> Perfect for print marketing (business cards, flyers).</li>
+</ul>
+
+<h2>Top 5 Business Use Cases for Telegram Links</h2>
+<p>Smart businesses are using Telegram links to bypass email clutter.</p>
+
+<h3>1. Customer Support</h3>
+<p>Place your Telegram link in your website's footer or "Contact Us" page. "Need help? Chat with us on Telegram." It's faster than email and feels more personal.</p>
+
+<h3>2. Instagram & Twitter Bios</h3>
+<p>Social media algorithms hate it when users leave the platform, but users love direct connections. A <code>t.me</code> link in your bio is a low-friction way to move followers into a community where you own the audience.</p>
+
+<h3>3. Crypto & Trading Communities</h3>
+<p>If you run a Signal group or a DAO, Telegram is your HQ. Use our generator to create a professional entry link for your landing page.</p>
+
+<h3>4. E-commerce Order Updates</h3>
+<p>Send a Telegram link in your order confirmation email. "Click here to get updates on your package." It allows for real-time notifications that don't get lost in the Spam folder.</p>
+
+<h3>5. Lead Generation</h3>
+<p>Offer a free PDF or consultation. "Click here to claim on Telegram." It acts as a lead magnet that also starts a conversation.</p>
+
+<h2>How to Create Your Telegram Link</h2>
+<ol>
+<li><strong>Enter Username:</strong> Type your exact Telegram username (without the @ symbol). E.g., if your handle is @mynews, just type <code>mynews</code>.</li>
+<li><strong>Verify:</strong> Ensure there are no spaces or special characters other than underscores.</li>
+<li><strong>Generate:</strong> Click the button to create your custom URL.</li>
+<li><strong>Test:</strong> Always click the link yourself to ensure it opens the correct profile.</li>
+</ol>
+
+<h2>Privacy & Security</h2>
+<p>We believe in privacy. We do not store your Telegram username or track who clicks your links. The generation happens entirely in your browser using client-side JavaScript. Your data remains yours.</p>
+
+<h2>Conclusion</h2>
+<p>Don't let potential clients get lost searching for your name. Create a direct, professional <strong>Telegram Link</strong> today and streamline your communication funnel.</p>
+`,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Telegram Link Generator',
+            description: 'Generate direct click-to-chat links for Telegram profiles and channels.',
+            applicationCategory: 'SocialNetworkingApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What is a t.me link?', answer: 'It is a shortened URL format used by Telegram to open chats directly. It effectively turns your username into a website link.' },
+            { question: ' Can I use this for Channels?', answer: 'Yes! Just enter your Channel username (e.g., "cnn_news") and the link will take users directly to join your channel.' },
+            { question: 'Does the link work if I don’t have the app?', answer: 'Yes. If a user does not have Telegram installed, the link will open a web page prompting them to download the app or view the channel in the browser.' }
+        ]
+    },
+    'paypal-link-generator': {
+        title: 'PayPal Link Generator - Create Payment & Donation Links',
+        description: 'Generate custom PayPal.me links for receiving payments or donations quickly and safely.',
+        keywords: 'paypal link generator, paypal.me maker, payment link generator, donation link',
+        h1: 'PayPal Link Generator'
+    },
+    'email-validator': {
+        title: 'Email Validator - Check Email Address Format',
+        description: 'Validate the format of any email address instantly. Check for syntax errors and common typos.',
+        keywords: 'email validator, check email, email syntax checker, validate email online',
+        h1: 'Email Validator'
+    },
+    'url-opener': {
+        title: 'Bulk URL Opener - Open Multiple Links at Once',
+        description: 'Open multiple URLs at the same time in new tabs with a single click. Save time on link checking.',
+        keywords: 'bulk url opener, open multiple links, url list opener, link opener',
+        h1: 'Bulk URL Opener'
+    },
+    'user-agent-parser': {
+        title: 'User Agent Parser - Analyze User Agent Strings',
+        description: 'Decode and analyze any User Agent string to find browser, OS, and device information.',
+        keywords: 'user agent parser, ua string analyzer, parse user agent, browser detect',
+        h1: 'User Agent Parser'
+    },
+    'wordpress-password-hash': {
+        title: 'WordPress Password Hash Generator',
+        description: 'Generate WordPress-compatible password hashes using the phpass library for direct database insertion.',
+        keywords: 'wordpress password hash, wp hash generator, wordpress password encrypt',
+        h1: 'WP Password Hash Generator'
+    },
+    'age-calculator': {
+        title: 'Age Calculator - Exact Age by Date of Birth (Years, Months, Days)',
+        description: 'Free online age calculator. Calculate your exact age from date of birth in years, months, and days. Find your chronological age and birthday countdown easily.',
+        keywords: 'age calculator, age calculator by date of birth, calculate age in years months days, exact age calculator online, chronological age calculator, birthday countdown timer, how old am i today, age finder online',
+        h1: 'Online Age Calculator by Date of Birth'
+    },
+    'bmi-calculator': {
+        title: 'BMI Calculator Online - Check Body Mass Index & Health',
+        description: 'Calculate your Body Mass Index (BMI) easily. Free tool for adults and children to check weight status (Underweight, Normal, Overweight, Obese) based on height and weight.',
+        keywords: 'bmi calculator, body mass index, check bmi online, healthy weight calculator, obesity checker, body fat calculator, height weight ratio',
+        h1: 'Free Online BMI Calculator'
+    },
+    'emi-calculator': {
+        title: 'EMI Calculator - Calculate Loan & Mortgage Monthly Payments',
+        description: 'Free Loan EMI Calculator to determine monthly installments for home loans, car loans, and personal loans. View total interest payable and amortization schedule.',
+        keywords: 'emi calculator, loan emi calculator, mortgage calculator, calculate monthly installments, home loan emi, car loan emi, interest rate calculator',
+        h1: 'Loan EMI Calculator Online'
+    },
+    'instagram-hashtag-generator': {
+        title: 'Instagram Hashtag Generator - Trending & Viral Hashtags 2024',
+        description: 'Generate trending and viral Instagram hashtags for reels and posts using AI. Boost your growth, engagement, and reach with the best copy-and-paste hashtags.',
+        keywords: 'instagram hashtag generator, trending instagram hashtags for reels, viral instagram hashtags 2024, ai hashtag finder, hashtags for growth, instagram engagement tags, hashtag generator free',
+        h1: 'Trending Instagram Hashtag Generator'
+    },
+    'seo-score-checker': {
+        title: 'Free SEO Score Checker - Real-Time Website Audit',
+        description: 'Conduct a live SEO audit of any website. Our tool fetches real-time data to analyze meta tags, headers, and images. Get an instant health score and actionable fix list.',
+        keywords: 'real seo checker, live website audit, free seo analysis, check meta tags, technical seo scan, website health check',
+        h1: 'Live SEO Health & Score Analyzer',
+        content: `
 <p> Stop guessing why your website isn't ranking. Our **Live SEO Score Checker** doesn't just pretend to analyze your site—it actually fetches your live code in real - time.Unlike generic tools that give random numbers, we parse your HTML structure to find the ** exact technical flaws ** holding you back.</p>
 
 <h3> How Our Real - Time Scanner Works </h3>
@@ -2495,23 +2556,23 @@ content: `
 <h3> Actionable "Fix-It" List </h3>
 <p> We don't just give you a number. We provide a checklist of **Failed** vs **Passed** tests. If your Meta Description is too short, we tell you. If your H1 is missing, we alert you. This tool is your personal SEO assistant, working 24/7 for free.</p>
 `,
-schema: {
-'@context': 'https://schema.org',
-'@type': 'WebApplication',
-name: 'SEO Score Checker',
-description: 'Live website analysis tool for real-time SEO scoring.',
-applicationCategory: 'SEOApplication',
-operatingSystem: 'Any',
-offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-},
-faq: [
-{ question: 'Is this scan real or simulated?', answer: 'It is 100% real. We fetch your actual page content and analyze the HTML code live in your browser.' },
-{ question: 'Why did my score change?', answer: 'Since we check real data, any change you make to your websites compiled HTML will immediately reflect in your new score.' }
-]
-}
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'SEO Score Checker',
+            description: 'Live website analysis tool for real-time SEO scoring.',
+            applicationCategory: 'SEOApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is this scan real or simulated?', answer: 'It is 100% real. We fetch your actual page content and analyze the HTML code live in your browser.' },
+            { question: 'Why did my score change?', answer: 'Since we check real data, any change you make to your websites compiled HTML will immediately reflect in your new score.' }
+        ]
+    }
 };
 
 // Helper function to get tool SEO data
 export function getToolSEO(slug: string) {
-return toolSEO[slug as keyof typeof toolSEO] || null;
+    return toolSEO[slug as keyof typeof toolSEO] || null;
 }
