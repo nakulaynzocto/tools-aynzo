@@ -325,7 +325,7 @@ export default function PdfTools({ type }: PdfToolProps) {
                                 dragActive ? "border-accent bg-accent/5 scale-[0.99]" : "border-border bg-muted/20"
                             )}
                         >
-                            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform">
+                            <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform">
                                 <FileText className="w-8 h-8 text-white" />
                             </div>
                             <h2 className="text-lg md:text-2xl font-black text-foreground mb-2 text-center">
@@ -350,8 +350,8 @@ export default function PdfTools({ type }: PdfToolProps) {
                                 {/* Summary Header */}
                                 <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border flex items-center justify-between">
                                     <div className="flex items-center gap-4">
-                                        <div className="p-3 bg-red-500/10 rounded-xl">
-                                            <FileText className="text-red-500 w-6 h-6" />
+                                        <div className="p-3 bg-primary/10 rounded-xl">
+                                            <FileText className="text-primary w-6 h-6" />
                                         </div>
                                         <div>
                                             <h3 className="font-black text-lg text-foreground">{tActions('filesSelected', { count: files.length })}</h3>
@@ -366,10 +366,10 @@ export default function PdfTools({ type }: PdfToolProps) {
                                 {/* Preview Section */}
                                 {(files.find(f => f.id === selectedFileId)?.file || files[0]?.file) && (
                                     <div className="bg-card p-4 rounded-3xl border-2 border-border shadow-sm relative overflow-hidden group">
-                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-500 to-red-500 opacity-50" />
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-50" />
                                         <div className="flex items-center justify-between mb-3">
                                             <div className="flex items-center gap-2">
-                                                <div className="p-1.5 bg-red-500/10 rounded-lg text-red-500">
+                                                <div className="p-1.5 bg-primary/10 rounded-lg text-primary">
                                                     <FileText size={14} />
                                                 </div>
                                                 <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">PDF Preview</span>
@@ -396,11 +396,11 @@ export default function PdfTools({ type }: PdfToolProps) {
                                             onClick={() => setSelectedFileId(file.id)}
                                             className={cn(
                                                 "bg-card p-4 rounded-xl border-2 flex items-center gap-4 transition-all relative overflow-hidden shadow-sm cursor-pointer",
-                                                (selectedFileId === file.id || (!selectedFileId && idx === 0)) ? "border-red-500 ring-2 ring-red-500/20 bg-red-500/5" : "border-border hover:border-red-500/50"
+                                                (selectedFileId === file.id || (!selectedFileId && idx === 0)) ? "border-primary ring-2 ring-primary/20 bg-primary/5" : "border-border hover:border-primary/50"
                                             )}
                                         >
-                                            <div className="w-12 h-12 rounded-lg bg-red-50 flex items-center justify-center border border-red-100 flex-shrink-0">
-                                                <FileText className="text-red-500 w-6 h-6" />
+                                            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 flex-shrink-0">
+                                                <FileText className="text-primary w-6 h-6" />
                                             </div>
                                             <div className="flex-1 min-w-0">
                                                 <p className="font-bold text-sm truncate text-foreground">{file.file.name}</p>
@@ -471,7 +471,7 @@ export default function PdfTools({ type }: PdfToolProps) {
                                         <button
                                             onClick={processAll}
                                             disabled={processing || files.length === 0}
-                                            className="w-full py-5 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] hover:shadow-red-500/20 transition-all flex flex-col items-center justify-center gap-1 disabled:opacity-50 border border-white/10"
+                                            className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] hover:shadow-primary/20 transition-all flex flex-col items-center justify-center gap-1 disabled:opacity-50 border border-white/10"
                                         >
                                             <div className="flex items-center gap-3 text-lg">
                                                 {processing ? (
