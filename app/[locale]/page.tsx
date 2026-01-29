@@ -58,7 +58,8 @@ export default function Home({ params: { locale } }: { params: { locale: string 
   // Actually, tools.ts uses English keys. We display them localized.
 
   tools.forEach(tool => {
-    if (tool.hidden) return;
+    // tool.hidden is ignored to show all tools as requested
+    // if (tool.hidden) return;
     if (!toolsByCategory[tool.category]) {
       toolsByCategory[tool.category] = [];
     }
