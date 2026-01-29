@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 
-import { Download, Copy, Link as LinkIcon, Play, Settings, RefreshCw, Info, Video, Check, Image, Tags, Type, Code, Clock } from 'lucide-react';
+import { Download, Copy, Link as LinkIcon, Play, Settings, RefreshCw, Info, Video, Check, Image, Tags, Type, Code, Clock, CheckCircle2, Wand2, Lock } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { ScrollableNav } from '@/components/ScrollableNav';
 import { cn } from '@/utils/cn';
@@ -204,165 +204,185 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
     };
 
     return (
-        <div className="max-w-6xl mx-auto space-y-6">
+        <div className="max-w-6xl mx-auto space-y-4">
             {/* YouTube Navigation */}
             <ScrollableNav items={youtubeNavTools} activeToolId={type} />
-            <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
-                <div className="p-8">
-                    <div className="grid lg:grid-cols-2 gap-10">
-                        <div className="space-y-6">
-                            <div className="bg-muted/30 p-8 rounded-[2rem] border-2 border-border space-y-6 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
-                                    <Settings size={120} />
-                                </div>
-                                <h3 className="text-sm font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
-                                    <Settings size={14} /> {t('configuration')}
-                                </h3>
-                                <div className="space-y-4 relative z-10">
-                                    <label className="block text-xs font-black uppercase tracking-widest text-muted-foreground">
+            <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
+                <div className="p-4 md:p-6">
+                    {!result ? (
+                        <div className="min-h-[300px] flex flex-col items-center justify-center transition-all py-12 px-4 relative">
+                            <div className="relative z-10 w-full max-w-2xl text-center space-y-8">
+                                <div className="space-y-4">
+                                    <label className="block text-xs font-black uppercase tracking-[0.2em] text-muted-foreground opacity-60">
                                         {type === 'youtube-tag-generator' || type === 'youtube-title-generator'
                                             ? t('enterTopic')
                                             : t('videoUrl')}
                                     </label>
-                                    <div className="space-y-4">
-                                        <input
-                                            type="text"
-                                            value={input}
-                                            onChange={(e) => setInput(e.target.value)}
-                                            placeholder={type.includes('generator') && !type.includes('embed') && !type.includes('link')
-                                                ? t('topicPlaceholder')
-                                                : t('urlPlaceholder')}
-                                            className="w-full p-4 border-2 border-border rounded-2xl bg-input hover:border-accent focus:border-accent outline-none transition-all text-foreground font-medium"
-                                        />
-                                        {renderSettings()}
+                                    <input
+                                        type="text"
+                                        value={input}
+                                        onChange={(e) => setInput(e.target.value)}
+                                        placeholder={type.includes('generator') && !type.includes('embed') && !type.includes('link')
+                                            ? t('topicPlaceholder')
+                                            : t('urlPlaceholder')}
+                                        className="w-full p-6 text-xl border-2 border-border rounded-3xl bg-input hover:border-primary focus:border-primary outline-none transition-all text-foreground font-medium text-center shadow-inner"
+                                    />
+                                </div>
+
+                                <button
+                                    onClick={() => {
+                                        if (input.trim()) {
+                                            setLoading(true);
+                                            setTimeout(() => setLoading(false), 800);
+                                        }
+                                    }}
+                                    className="px-12 py-5 bg-primary text-white dark:bg-gradient-to-r dark:from-sky-500 dark:to-blue-600 dark:border-none text-xl font-black rounded-2xl shadow-[0_20px_40px_-15px_rgba(var(--primary-rgb),0.4)] dark:shadow-[0_0_30px_-5px_rgba(14,165,233,0.4)] hover:scale-[1.05] hover:shadow-[0_25px_50px_-12px_rgba(var(--primary-rgb),0.5)] dark:hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.5)] active:scale-95 transition-all duration-300"
+                                >
+                                    {loading ? <RefreshCw className="w-6 h-6 animate-spin mx-auto" /> : t('analyze')}
+                                </button>
+
+                                <div className="pt-8 flex justify-center gap-8 border-t border-border/50">
+                                    <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-40">
+                                        <Play size={14} className="text-red-500" /> Fast Extract
+                                    </div>
+                                    <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-40">
+                                        <CheckCircle2 size={14} className="text-emerald-500" /> 100% Free
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="p-6 bg-blue-500/5 rounded-2xl border-2 border-blue-500/10 space-y-2">
-                                <div className="flex items-center gap-2 text-blue-500">
-                                    <Info size={16} />
-                                    <span className="text-xs font-black uppercase tracking-widest">{t('growthTip')}</span>
-                                </div>
-                                <p className="text-[10px] text-muted-foreground leading-relaxed font-medium">
-                                    {t('tipText')}
-                                </p>
                             </div>
                         </div>
-
-                        <div className="space-y-6 flex flex-col h-full">
-                            <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('generatedOutput')}</h3>
-
-                            {/* Live Preview for Embed Code */}
-                            {type === 'youtube-embed-code-generator' && result && (
-                                <div className="bg-card rounded-2xl border-2 border-border p-4 shadow-lg animate-in fade-in slide-in-from-top-4 duration-500 mb-6">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <div className="p-1.5 bg-red-500/10 rounded-lg text-red-500">
-                                            <Play size={12} fill="currentColor" />
+                    ) : (
+                        <div className="grid lg:grid-cols-[1fr,350px] gap-8 items-stretch lg:h-[500px] h-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
+                            {/* Main Content Area */}
+                            <div className="flex flex-col gap-6 h-full min-h-0">
+                                {/* Header Info */}
+                                <div className="flex items-center justify-between px-6 py-4 bg-muted/50 rounded-2xl border border-border">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                                            <Video className="w-5 h-5" />
                                         </div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Live Player Preview</span>
+                                        <div className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">
+                                            {type.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                                        </div>
                                     </div>
-                                    <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-inner border border-white/10" dangerouslySetInnerHTML={{ __html: result }} />
+                                    <button onClick={() => { setInput(''); setResult(null); }} className="text-[10px] font-black uppercase tracking-widest text-destructive hover:underline">New Analysis</button>
                                 </div>
-                            )}
 
-                            {result ? (
-                                <div className="flex-1 animate-in fade-in slide-in-from-right-5 duration-500">
-                                    {/* Thumbnail Results */}
+                                {/* Results Viewport - internal scroll */}
+                                <div className="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-1">
                                     {type === 'youtube-thumbnail-downloader' && (
-                                        <div className="grid grid-cols-1 gap-4 overflow-y-auto max-h-[600px] pr-2 custom-scrollbar">
+                                        <div className="grid grid-cols-2 gap-6 pb-6">
                                             {Object.entries(result).map(([quality, url]: [string, any]) => (
-                                                <div key={quality} className="bg-card p-4 rounded-2xl border-2 border-border group overflow-hidden shadow-sm">
-                                                    <div className="relative aspect-video rounded-xl overflow-hidden mb-4 border border-border">
-                                                        <img src={url} alt={`${quality} thumbnail`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                                        <div className="absolute top-2 left-2 px-3 py-1 bg-black/60 backdrop-blur-md text-[10px] text-white font-black uppercase tracking-tighter rounded-full border border-white/10">
-                                                            {t('qualityLabel', { quality })}
+                                                <div key={quality} className="bg-card p-4 rounded-3xl border-2 border-border group overflow-hidden shadow-xl hover:border-primary/30 transition-all">
+                                                    <div className="relative aspect-video rounded-2xl overflow-hidden mb-4 border border-border">
+                                                        <img src={url} alt={quality} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                                        <div className="absolute top-2 left-2 px-3 py-1 bg-black/60 backdrop-blur-md text-[9px] text-white font-black uppercase tracking-widest rounded-full">
+                                                            {quality}
                                                         </div>
                                                     </div>
-                                                    <a
-                                                        href={url}
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                        download
-                                                        className="w-full py-3 bg-secondary hover:bg-muted text-foreground rounded-xl font-black text-center transition-all text-xs flex items-center justify-center gap-2 border border-border"
-                                                    >
-                                                        <Download size={14} /> {t('downloadImage')}
+                                                    <a href={url} target="_blank" rel="noreferrer" download className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-black text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2">
+                                                        <Download size={14} /> Download
                                                     </a>
                                                 </div>
                                             ))}
                                         </div>
                                     )}
 
-                                    {/* Tag Results */}
                                     {type === 'youtube-tag-generator' && (
-                                        <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border relative group flex flex-col flex-1">
-                                            <div className="flex justify-between items-center mb-4">
-                                                <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">{t('seoTags')}</span>
-                                                <button onClick={() => copyToClipboard(result)} className={cn("text-xs font-black flex items-center gap-1 transition-all", copied ? "text-emerald-500" : "text-primary hover:text-accent")}>
-                                                    {copied ? <Check size={12} /> : <Copy size={12} />}
-                                                    {copied ? 'Copied!' : t('copyAll')}
+                                        <div className="bg-card p-8 rounded-[2.5rem] border-2 border-border relative group h-full flex flex-col shadow-2xl">
+                                            <div className="flex justify-between items-center mb-6">
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Generated Tags</span>
+                                                <button onClick={() => copyToClipboard(result as string)} className={cn("text-[10px] font-black uppercase tracking-wider flex items-center gap-2 px-5 py-2.5 rounded-xl transition-all", copied ? "bg-emerald-500 text-white" : "bg-primary text-primary-foreground")}>
+                                                    {copied ? <Check size={14} /> : <Copy size={14} />} {copied ? 'Copied' : 'Copy All'}
                                                 </button>
                                             </div>
-                                            <div className="flex-1 p-4 bg-card rounded-xl border-2 border-border font-mono text-sm break-all text-foreground pr-12 min-h-[200px] shadow-inner overflow-y-auto">
+                                            <div className="flex-1 p-8 bg-muted rounded-2xl font-mono text-sm leading-relaxed text-foreground shadow-inner border border-border overflow-y-auto">
                                                 {result}
                                             </div>
                                         </div>
                                     )}
 
-                                    {/* Title Results */}
                                     {type === 'youtube-title-generator' && (
-                                        <div className="space-y-3 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
+                                        <div className="grid gap-3 pb-6">
                                             {(result as string[]).map((title, i) => (
-                                                <div key={i} className="flex items-center justify-between p-4 bg-card rounded-xl border-2 border-border hover:border-primary/30 hover:bg-primary/5 transition-all group shadow-sm">
-                                                    <span className="text-sm font-bold text-foreground leading-snug">{title}</span>
-                                                    <button
-                                                        onClick={() => copyToClipboard(title, i)}
-                                                        className={cn(
-                                                            "p-2 rounded-lg transition-all",
-                                                            copiedIndex === i
-                                                                ? "bg-emerald-500/10 text-emerald-500 opacity-100"
-                                                                : "bg-muted text-muted-foreground hover:text-primary opacity-0 group-hover:opacity-100"
-                                                        )}
-                                                    >
-                                                        {copiedIndex === i ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                                                <div key={i} className="flex items-center justify-between p-6 bg-card rounded-2xl border border-border hover:border-primary/50 transition-all group shadow-sm">
+                                                    <span className="text-sm font-bold text-foreground pr-8 leading-snug">{title}</span>
+                                                    <button onClick={() => copyToClipboard(title, i)} className={cn("p-3 rounded-xl transition-all flex-shrink-0", copiedIndex === i ? "bg-emerald-500 text-white" : "bg-muted text-muted-foreground hover:bg-primary hover:text-white")}>
+                                                        {copiedIndex === i ? <Check size={16} /> : <Copy size={16} />}
                                                     </button>
                                                 </div>
                                             ))}
                                         </div>
                                     )}
 
-                                    {/* Embed Code & Link Results */}
                                     {(type === 'youtube-embed-code-generator' || type === 'youtube-timestamp-link-generator') && (
-                                        <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4 h-full flex flex-col">
-                                            <div className="flex justify-between items-center">
-                                                <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">{t(type.includes('embed') ? 'generatedCode' : 'generatedLink')}</span>
-                                                <button onClick={() => copyToClipboard(result)} className={cn("text-xs font-black flex items-center gap-1 transition-all", copied ? "text-emerald-500" : "text-primary hover:text-accent")}>
-                                                    {copied ? <Check size={12} /> : <Copy size={12} />}
-                                                    {copied ? 'Copied!' : t('copy')}
-                                                </button>
-                                            </div>
-                                            <div className="flex-1 p-6 bg-muted/50 rounded-2xl font-mono text-sm text-primary overflow-x-auto shadow-inner border-2 border-border">
-                                                {result}
-                                            </div>
-                                            {type.includes('link') && (
-                                                <a href={result} target="_blank" rel="noopener noreferrer" className="block w-full py-4 bg-card hover:bg-muted text-foreground rounded-xl font-bold text-center transition-all text-xs border-2 border-border">
-                                                    {t('openLink')} <LinkIcon className="inline-block ml-1 w-3 h-3" />
-                                                </a>
+                                        <div className="space-y-6 pb-6 h-full flex flex-col">
+                                            {type === 'youtube-embed-code-generator' && (
+                                                <div className="aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl border-2 border-border" dangerouslySetInnerHTML={{ __html: result }} />
                                             )}
+                                            <div className="bg-card p-8 rounded-[2.5rem] border-2 border-border space-y-4 shadow-2xl flex-1 flex flex-col">
+                                                <div className="flex justify-between items-center mb-2">
+                                                    <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Source Output</span>
+                                                    <button onClick={() => copyToClipboard(result)} className={cn("text-[10px] font-black uppercase tracking-wider flex items-center gap-2 px-5 py-2.5 rounded-xl transition-all", copied ? "bg-emerald-500 text-white" : "bg-primary text-primary-foreground")}>
+                                                        {copied ? <Check size={14} /> : <Copy size={14} />} {copied ? 'Copied' : 'Copy'}
+                                                    </button>
+                                                </div>
+                                                <div className="flex-1 p-8 bg-muted rounded-2xl font-mono text-sm text-primary overflow-y-auto shadow-inner border border-border">
+                                                    {result}
+                                                </div>
+                                                {type.includes('link') && (
+                                                    <a href={result} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-5 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-2xl font-black uppercase tracking-widest transition-all text-[11px] group border border-primary/20">
+                                                        Open Link <LinkIcon className="w-4 h-4" />
+                                                    </a>
+                                                )}
+                                            </div>
                                         </div>
                                     )}
                                 </div>
-                            ) : (
-                                <div className="flex-1 min-h-[300px] bg-muted/10 border-2 border-dashed border-border rounded-[2rem] flex flex-col items-center justify-center text-muted-foreground gap-4 opacity-50">
-                                    <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
-                                        <Video size={32} />
+                            </div>
+
+                            {/* Sidebar Options Panel */}
+                            <div className="h-full flex flex-col gap-6">
+                                <div className="bg-card flex-1 p-8 rounded-[2.5rem] border border-border shadow-2xl flex flex-col">
+                                    <div className="flex-1 space-y-8 overflow-y-auto no-scrollbar pr-1">
+                                        <div className="flex items-center gap-3 text-primary border-b border-border pb-6">
+                                            <Settings className="w-5 h-5" />
+                                            <h4 className="font-black uppercase tracking-[0.2em] text-xs leading-none">Parameters</h4>
+                                        </div>
+
+                                        <div className="space-y-8">
+                                            <div className="space-y-3">
+                                                <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground opacity-60">Input URL / ID</label>
+                                                <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className="w-full p-4 border-2 border-border rounded-xl bg-muted focus:border-primary outline-none transition-all text-xs font-bold" />
+                                            </div>
+
+                                            <div className="space-y-4">
+                                                {renderSettings()}
+                                            </div>
+                                        </div>
+
+                                        <div className="p-6 bg-blue-500/5 rounded-2xl border border-blue-500/10 space-y-2">
+                                            <div className="flex items-center gap-2 text-blue-500">
+                                                <Wand2 size={16} />
+                                                <span className="text-[10px] font-black uppercase tracking-widest">Growth Expert Tip</span>
+                                            </div>
+                                            <p className="text-[10px] text-muted-foreground leading-relaxed font-medium">
+                                                {t('tipText')}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <p className="text-xs font-black uppercase tracking-widest text-center">{t('inputRequired')}<br /><span className="text-[10px] lowercase italic opacity-60">{t('resultsPlaceholder')}</span></p>
+
+                                    <div className="pt-8 mt-auto space-y-4 border-t border-border">
+                                        <div className="flex items-center justify-center gap-6 text-[9px] font-black uppercase tracking-widest text-muted-foreground/30">
+                                            <div className="flex items-center gap-1.5"><Lock size={12} /> Secure</div>
+                                            <div className="flex items-center gap-1.5"><RefreshCw size={12} /> Real-time</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            )}
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </div>
             </div>
         </div>

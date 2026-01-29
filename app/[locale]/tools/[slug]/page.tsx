@@ -176,6 +176,7 @@ export default async function ToolPage({ params }: Props) {
 
       // PDF Tools
       case 'pdf-to-word':
+      case 'word-to-pdf':
       case 'merge-pdf':
       case 'split-pdf':
         return <PdfTools type={params.slug as any} />;
@@ -282,7 +283,6 @@ export default async function ToolPage({ params }: Props) {
       case 'browser-info':
       case 'screen-resolution-simulator':
       case 'responsive-checker':
-      case 'responsive-checker':
         return <WebTools type={params.slug as any} />;
 
       // Social & Links
@@ -366,7 +366,7 @@ export default async function ToolPage({ params }: Props) {
 
 
         {/* Tool Content */}
-        <div className="mb-12">
+        <div className="mb-6">
           {renderTool()}
         </div>
 

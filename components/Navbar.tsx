@@ -2,10 +2,11 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { Link } from '@/navigation';
-import { Menu, X, ChevronDown, Search } from 'lucide-react';
+import { Menu, X, ChevronDown, Search, Image as ImageIcon, FileText, Type, Code, ArrowRightLeft, Settings as SettingsIcon, Shield, Hash, Layout, Share2, Youtube, Search as SearchIcon, Globe, Smartphone, Calculator } from 'lucide-react';
 import { toolCategories, searchTools } from '@/lib/tools';
 import LanguageSwitcher from './LanguageSwitcher';
 import { ModeToggle } from './ModeToggle';
+import { cn } from '@/utils/cn';
 
 import { useTranslations } from 'next-intl';
 
@@ -15,6 +16,7 @@ export default function Navbar() {
     const tCategories = useTranslations('Categories');
     const tNavbar = useTranslations('NavbarCategories');
     const tTools = useTranslations('Tools');
+    const tImageGroups = useTranslations('ImageGroups');
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
@@ -75,6 +77,7 @@ export default function Navbar() {
 
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex items-center gap-1 flex-1 justify-center xl:max-w-none">
+                        {/* Existing Dynamic Categories */}
                         {/* 
                          Dynamic Responsive Logic:
                          Calculates how many items fit based on character length of the executed translation.
@@ -155,73 +158,132 @@ export default function Navbar() {
                                                 onMouseEnter={() => handleMouseEnter(category)}
                                                 onMouseLeave={handleMouseLeave}
                                             >
-                                                <button className="px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-all flex items-center gap-1 font-medium text-sm whitespace-nowrap">
+                                                <button className="px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-all flex items-center gap-1 font-medium text-[15.5px] whitespace-nowrap">
                                                     {tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category.replace(' Tools', ''))}
                                                     <ChevronDown className="h-3.5 w-3.5" />
                                                 </button>
 
                                                 {/* Mega Menu Dropdown */}
                                                 {activeCategory === category && (
-                                                    <div className={`absolute ${index > 2 ? 'right-0' : 'left-0'} mt-1 ${toolCategories[category as keyof typeof toolCategories].length > 20 ? 'w-[750px]' : 'w-[500px]'} bg-card rounded-lg shadow-2xl border border-border overflow-hidden z-50`}>
-                                                        <div className="p-3 bg-secondary/50 border-b border-border">
-                                                            <h3 className="text-foreground font-semibold text-sm">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}</h3>
-                                                        </div>
-                                                        <div className={`grid ${toolCategories[category as keyof typeof toolCategories].length > 20 ? 'grid-cols-3' : 'grid-cols-2'} gap-0 p-2`}>
-                                                            {toolCategories[category as keyof typeof toolCategories].map((tool) => (
-                                                                <Link
-                                                                    key={tool.slug}
-                                                                    href={`/tools/${tool.slug}`}
-                                                                    className="block px-3 py-2.5 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-sm rounded-md m-1"
-                                                                    onClick={() => setActiveCategory(null)}
-                                                                >
-                                                                    {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
-                                                                </Link>
-                                                            ))}
-                                                        </div>
+                                                    <div className={cn(
+                                                        "mt-1 bg-card rounded-xl shadow-2xl border border-border overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-200",
+                                                        toolCategories[category as keyof typeof toolCategories].some(tool => tool.group)
+                                                            ? "fixed left-1/2 -translate-x-1/2 top-16 w-[1100px] p-8" // Centered on screen
+                                                            : cn("absolute", index > 2 ? 'right-0' : 'left-0', toolCategories[category as keyof typeof toolCategories].length > 20 ? 'w-[750px]' : 'w-[500px]')
+                                                    )}>
+                                                        {!toolCategories[category as keyof typeof toolCategories].some(tool => tool.group) ? (
+                                                            <>
+                                                                <div className="p-3 bg-secondary/50 border-b border-border">
+                                                                    <h3 className="text-foreground font-semibold text-sm">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}</h3>
+                                                                </div>
+                                                                <div className={`grid ${toolCategories[category as keyof typeof toolCategories].length > 20 ? 'grid-cols-3' : 'grid-cols-2'} gap-0 p-2`}>
+                                                                    {toolCategories[category as keyof typeof toolCategories].map((tool) => (
+                                                                        <Link
+                                                                            key={tool.slug}
+                                                                            href={`/tools/${tool.slug}`}
+                                                                            className="block px-3 py-2.5 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-xs rounded-md m-1"
+                                                                            onClick={() => setActiveCategory(null)}
+                                                                        >
+                                                                            {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                        </Link>
+                                                                    ))}
+                                                                </div>
+                                                            </>
+                                                        ) : (
+                                                            /* Grouped Layout (e.g., Image Tools) */
+                                                            <div className="grid grid-cols-5 gap-8">
+                                                                {(() => {
+                                                                    const groupedTools = toolCategories[category as keyof typeof toolCategories].reduce((acc, tool) => {
+                                                                        const g = tool.group || 'other';
+                                                                        if (!acc[g]) acc[g] = [];
+                                                                        acc[g].push(tool);
+                                                                        return acc;
+                                                                    }, {} as Record<string, typeof toolCategories[string]>);
+
+                                                                    return Object.entries(groupedTools).map(([group, tools]) => (
+                                                                        <div key={group} className="space-y-3">
+                                                                            <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary border-b border-border pb-1.5 mb-2">
+                                                                                {tImageGroups.has(group) ? tImageGroups(group) : group}
+                                                                            </h4>
+                                                                            <div className="flex flex-col gap-1.5">
+                                                                                {tools.map((tool) => (
+                                                                                    <Link
+                                                                                        key={tool.slug}
+                                                                                        href={`/tools/${tool.slug}`}
+                                                                                        className="text-[12.5px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200"
+                                                                                        onClick={() => setActiveCategory(null)}
+                                                                                    >
+                                                                                        {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                                    </Link>
+                                                                                ))}
+                                                                            </div>
+                                                                        </div>
+                                                                    ));
+                                                                })()}
+                                                            </div>
+                                                        )}
                                                     </div>
                                                 )}
                                             </div>
                                         )
                                     })}
 
-                                    {/* More Dropdown */}
+                                    {/* All Tools Mega Menu (Replacing 'More') */}
                                     <div
                                         className="relative group block"
-                                        onMouseEnter={() => handleMouseEnter('More')}
+                                        onMouseEnter={() => handleMouseEnter('AllTools')}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <button className="px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-all flex items-center gap-1 font-medium text-sm whitespace-nowrap">
-                                            {t('more')}
-                                            <ChevronDown className="h-3.5 w-3.5" />
+                                        <button className="px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-all flex items-center gap-1 font-medium text-[15.5px] whitespace-nowrap">
+                                            {t('allTools')}
+                                            <ChevronDown className={`h-4 w-4 transition-transform ${activeCategory === 'AllTools' ? 'rotate-180' : ''}`} />
                                         </button>
 
-                                        {activeCategory === 'More' && (
-                                            <div className="absolute right-0 mt-1 w-[250px] bg-card rounded-lg shadow-2xl border border-border z-[60] py-2">
-                                                <div className="space-y-0.5">
-                                                    {categories.map((category, idx) => {
-                                                        const displayClass = getVisibilityClasses(idx, true);
+                                        {/* MEGA MENU CONTAINER */}
+                                        {activeCategory === 'AllTools' && (
+                                            <div className="fixed top-16 left-0 w-full bg-card border-b border-border shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-[100] animate-in fade-in slide-in-from-top-2 duration-300">
+                                                <div className="max-w-[1400px] mx-auto p-8 max-h-[85vh] overflow-y-auto custom-scrollbar">
+                                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-8 gap-y-10">
+                                                        {Object.entries(toolCategories).map(([category, tools], idx) => {
+                                                            const displayClass = getVisibilityClasses(idx, true);
+                                                            // If displayClass hides it on all larger screens (lg/xl/2xl), we keep it in ALL TOOLS.
+                                                            // If it's visible in the top bar, we hide it here to avoid duplication.
 
-                                                        // Optimization: If displayClass is 'hidden hidden hidden hidden' (meaning hidden everywhere), don't render?
-                                                        // Actually, 'More' logic: if idx < countLG, it is hidden on LG. 
-                                                        // If idx is very large, it is ALWAYS block.
+                                                            // Map categories to icons
+                                                            const getCategoryIcon = (cat: string) => {
+                                                                const c = cat.toLowerCase();
+                                                                if (c.includes('image')) return <ImageIcon className="w-5 h-5 text-blue-500" />;
+                                                                if (c.includes('pdf')) return <FileText className="w-5 h-5 text-red-500" />;
+                                                                if (c.includes('text')) return <Type className="w-5 h-5 text-emerald-500" />;
+                                                                if (c.includes('developer') || c.includes('dev')) return <Code className="w-5 h-5 text-purple-500" />;
+                                                                if (c.includes('converter')) return <ArrowRightLeft className="w-5 h-5 text-orange-500" />;
+                                                                if (c.includes('utility')) return <SettingsIcon className="w-5 h-5 text-sky-500" />;
+                                                                if (c.includes('security')) return <Shield className="w-5 h-5 text-red-600" />;
+                                                                if (c.includes('crypto')) return <Hash className="w-5 h-5 text-amber-500" />;
+                                                                if (c.includes('seo')) return <SearchIcon className="w-5 h-5 text-indigo-500" />;
+                                                                if (c.includes('keyword')) return <Layout className="w-5 h-5 text-rose-500" />;
+                                                                if (c.includes('webmaster')) return <Globe className="w-5 h-5 text-blue-600" />;
+                                                                if (c.includes('social')) return <Share2 className="w-5 h-5 text-pink-500" />;
+                                                                if (c.includes('youtube')) return <Youtube className="w-5 h-5 text-red-500" />;
+                                                                if (c.includes('tech')) return <Smartphone className="w-5 h-5 text-zinc-500" />;
+                                                                if (c.includes('calculator')) return <Calculator className="w-5 h-5 text-green-600" />;
+                                                                return <SettingsIcon className="w-5 h-5" />;
+                                                            };
 
-                                                        return (
-                                                            <div key={category} className={`group/nested relative px-1 ${displayClass}`}>
-                                                                <button className="w-full text-left px-3 py-2.5 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-sm rounded-md flex justify-between items-center group-hover/nested:bg-secondary">
-                                                                    {tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category.replace(' Tools', ''))}
-                                                                    <ChevronDown className="h-3.5 w-3.5 -rotate-90 group-hover/nested:rotate-0 transition-transform duration-300" />
-                                                                </button>
-                                                                {/* Nested Sub-menu */}
-                                                                <div className="absolute top-0 right-full w-[280px] bg-card rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border z-[70] overflow-hidden invisible opacity-0 -translate-x-2 group-hover/nested:visible group-hover/nested:opacity-100 group-hover/nested:translate-x-0 transition-all duration-300">
-                                                                    <div className="p-4 bg-muted/30 border-b border-border">
-                                                                        <h3 className="text-foreground font-bold text-xs uppercase tracking-widest">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}</h3>
+                                                            return (
+                                                                <div key={category} className={cn("space-y-4", displayClass)}>
+                                                                    <div className="flex items-center gap-2 border-b border-border/50 pb-2">
+                                                                        {getCategoryIcon(category)}
+                                                                        <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-foreground">
+                                                                            {tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}
+                                                                        </h3>
                                                                     </div>
-                                                                    <div className="grid grid-cols-1 gap-0.5 p-1.5 max-h-[400px] overflow-y-auto">
-                                                                        {toolCategories[category as keyof typeof toolCategories].map((tool) => (
+                                                                    <div className="flex flex-col gap-2">
+                                                                        {tools.map((tool) => (
                                                                             <Link
                                                                                 key={tool.slug}
                                                                                 href={`/tools/${tool.slug}`}
-                                                                                className="block px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-sm rounded-md truncate"
+                                                                                className="text-[12.5px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200"
                                                                                 onClick={() => setActiveCategory(null)}
                                                                             >
                                                                                 {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
@@ -229,9 +291,18 @@ export default function Navbar() {
                                                                         ))}
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        );
-                                                    })}
+                                                            );
+                                                        })}
+                                                    </div>
+                                                </div>
+                                                <div className="bg-muted/30 py-4 border-t border-border">
+                                                    <div className="max-w-[1400px] mx-auto px-8 flex justify-between items-center text-xs text-muted-foreground font-bold uppercase tracking-widest">
+                                                        <span>Explore {Object.values(toolCategories).flat().length} free online tools</span>
+                                                        <div className="flex gap-6">
+                                                            <span>No Signup Required</span>
+                                                            <span className="text-emerald-500">Local Processing</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         )}
@@ -252,7 +323,7 @@ export default function Navbar() {
                                 onChange={(e) => handleSearch(e.target.value)}
                                 onFocus={() => searchQuery.length > 0 && setShowSearch(true)}
                                 onBlur={() => setTimeout(() => setShowSearch(false), 200)}
-                                className="pl-9 pr-4 py-2 w-32 xl:w-48 bg-secondary border border-border rounded-md text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-secondary/80 focus:w-48 xl:focus:w-64 transition-all text-sm"
+                                className="pl-9 pr-4 py-2 w-32 xl:w-48 bg-secondary border border-border rounded-md text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-secondary/80 focus:w-48 xl:focus:w-64 transition-all text-[15.5px]"
                             />
                         </div>
 

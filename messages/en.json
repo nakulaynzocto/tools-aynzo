@@ -12,6 +12,7 @@
         "description": "Professional Online Tools Suite"
     },
     "Navigation": {
+        "allTools": "All Tools",
         "more": "More",
         "searchPlaceholder": "Search tools...",
         "mobileMenu": "Menu",
@@ -317,6 +318,14 @@
             "seoDescription": "Convert PDF to Word (DOCX) online for free. 100% editable documents, high layout accuracy, and secure processing. No email required.",
             "seoKeywords": "pdf to word, convert pdf to word, pdf to word editable free, online pdf to word converter, free pdf to word without email",
             "seoH1": "Free Online PDF to Word Converter: Convert to Editable DOCX Instantly"
+        },
+        "word-to-pdf": {
+            "name": "Word to PDF",
+            "description": "Convert Microsoft Word (DOC/DOCX) documents to PDF format.",
+            "seoTitle": "Word to PDF Converter Online - Fast & Free (No Signup)",
+            "seoDescription": "Convert Word (DOC/DOCX) to PDF online for free. Maintain original formatting with our fast and secure converter. No email required.",
+            "seoKeywords": "word to pdf, convert word to pdf, doc to pdf online, free word to pdf converter",
+            "seoH1": "Free Online Word to PDF Converter: Professional PDF Results"
         },
         "word-counter": {
             "name": "Word Counter",
@@ -1189,5 +1198,35 @@
         "filesSelected": "{count} files selected",
         "pasteBase64": "Paste Base64",
         "batchReady": "Ready"
+    },
+    "ImageGroups": {
+        "image-optimize": "Optimize",
+        "image-convert": "Convert",
+        "image-edit": "Edit",
+        "image-effects": "Filters",
+        "image-dev": "Base64",
+        "pdf-convert": "PDF Convert",
+        "pdf-edit": "PDF Edit",
+        "text-analyze": "Analyze",
+        "text-edit": "Edit",
+        "text-style": "Style",
+        "dev-format": "Format",
+        "dev-tool": "Tools",
+        "dev-convert": "Convert",
+        "dev-optimize": "Optimize",
+        "conv-unit": "Units",
+        "conv-curr": "Currency",
+        "conv-color": "Colors",
+        "conv-data": "Data",
+        "util-rand": "Random",
+        "util-gen": "Generators",
+        "util-net": "Network & Web",
+        "sec-gen": "Security",
+        "yt-tool": "YouTube",
+        "seo-gen": "SEO Generators",
+        "seo-keyword": "Keywords",
+        "social-gen": "Social & Links",
+        "calc-util": "Health & Info",
+        "calc-math": "Finance & Math"
     }
 }

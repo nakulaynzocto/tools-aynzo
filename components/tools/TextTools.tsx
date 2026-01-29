@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Copy, Check, FileText, Hash, AlignLeft, Trash2, Download, Clock, Search, Type, MoveVertical, Eraser, Sparkles, RefreshCw } from 'lucide-react';
+import { Copy, Check, FileText, Hash, AlignLeft, Trash2, Download, Clock, Search, Type, MoveVertical, Eraser, Sparkles, RefreshCw, Activity } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { ScrollableNav } from '@/components/ScrollableNav';
 
@@ -147,65 +147,87 @@ export default function TextTools({ type }: TextToolProps) {
   };
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8 animate-in fade-in duration-500">
+    <div className="max-w-6xl mx-auto space-y-4 animate-in fade-in duration-500">
       {/* Text Navigation */}
       <ScrollableNav items={textNavTools} activeToolId={type} />
 
-      {/* Premium Header */}
-
-      {/* 1. Statistics Cards - Modern & Clean */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {[
-          { label: t('words'), value: stats.words, icon: FileText, color: 'text-blue-400', bg: 'bg-blue-500/10' },
-          { label: t('characters'), value: stats.chars, icon: Type, color: 'text-indigo-400', bg: 'bg-indigo-500/10' },
-          { label: t('sentences'), value: stats.sentences, icon: AlignLeft, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
-          { label: t('paragraphs'), value: stats.paragraphs, icon: MoveVertical, color: 'text-purple-400', bg: 'bg-purple-500/10' },
-          { label: t('lines'), value: stats.lines, icon: Hash, color: 'text-amber-400', bg: 'bg-amber-500/10' },
-          { label: t('readTime'), value: `${stats.readingTime}m`, icon: Clock, color: 'text-rose-400', bg: 'bg-rose-500/10' },
-        ].map((stat, i) => (
-          <div key={i} className="bg-card rounded-xl p-4 border border-border shadow-sm hover:shadow-md transition-all duration-300">
-            <div className="flex items-center gap-2 mb-2">
-              <div className={`p-1.5 rounded-lg ${stat.bg}`}>
-                <stat.icon className={`w-4 h-4 ${stat.color}`} />
-              </div>
-              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{stat.label}</span>
-            </div>
-            <div className={`text-2xl font-bold ${stat.color}`}>{stat.value}</div>
-          </div>
-        ))}
-      </div>
-
-      <div className="grid lg:grid-cols-3 gap-8">
-
-        {/* 2. Main Input Card - The "Workshop" */}
-        <div className="lg:col-span-2 space-y-6">
-          <div className="bg-card rounded-2xl border-2 border-border shadow-lg overflow-hidden flex flex-col h-[500px]">
+      <div className="grid lg:grid-cols-[1fr,300px] gap-6 items-stretch lg:h-[480px] h-auto">
+        {/* 1. Main Input Card - The "Workshop" */}
+        <div className="flex flex-col h-full min-h-0">
+          <div className="bg-card rounded-[2.5rem] border-2 border-border shadow-2xl overflow-hidden flex flex-col h-full transition-all">
             {/* Card Header with Actions */}
-            {/* Card Header with Actions */}
-            <div className="px-6 py-4 border-b border-border flex items-center justify-between bg-muted/30">
-              <div className="flex items-center gap-2">
-                <span className="flex h-3 w-3 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-                <span className="text-sm font-medium text-muted-foreground">{t('editor')}</span>
+            <div className="px-6 py-2.5 border-b border-border flex items-center justify-between bg-muted/30">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">{t('editor')}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <button onClick={downloadText} className="p-2 text-muted-foreground hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-colors" title={t('download')}>
+              <div className="flex items-center gap-1">
+                <button onClick={downloadText} className="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-xl transition-all" title={t('download')}>
                   <Download className="w-4 h-4" />
                 </button>
-                <button onClick={copyToClipboard} className={`p-2 rounded-lg transition-colors ${copied ? 'text-green-500 bg-green-500/10' : 'text-muted-foreground hover:text-green-400 hover:bg-green-500/10'}`} title={t('copy')}>
+                <button onClick={copyToClipboard} className={`p-2 rounded-xl transition-all ${copied ? 'text-emerald-500 bg-emerald-500/10' : 'text-muted-foreground hover:text-emerald-400 hover:bg-emerald-500/10'}`} title={t('copy')}>
                   {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 </button>
-                <button onClick={() => setInput('')} className="p-2 text-muted-foreground hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors" title={t('clear')}>
+                <button onClick={() => setInput('')} className="p-2 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl transition-all" title={t('clear')}>
                   <Trash2 className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
+            {/* Horizontal Transformation Bar */}
+            <div className="px-4 py-2 border-b border-border bg-muted/10 flex items-center gap-2 overflow-x-auto no-scrollbar">
+              <div className="flex items-center gap-1.5 px-2 border-r border-border mr-1">
+                <Sparkles size={12} className="text-amber-500" />
+                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground whitespace-nowrap">Transform:</span>
+              </div>
+              <button
+                onClick={() => handleAction('uppercase')}
+                className="px-3 py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1.5"
+              >
+                <Type size={12} /> UPPERCASE
+              </button>
+              <button
+                onClick={() => handleAction('lowercase')}
+                className="px-3 py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1.5"
+              >
+                <Type size={12} /> lowercase
+              </button>
+              <button
+                onClick={() => handleAction('title')}
+                className="px-3 py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1.5"
+              >
+                <Type size={12} /> Title Case
+              </button>
+              <button
+                onClick={() => handleAction('sentence')}
+                className="px-3 py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1.5"
+              >
+                <Type size={12} /> Sentence case
+              </button>
+              <div className="w-px h-4 bg-border mx-1" />
+              <button
+                onClick={() => handleAction('clean-spaces')}
+                className="px-3 py-1.5 rounded-lg border border-border bg-card hover:border-emerald-500/50 hover:bg-emerald-500/5 text-[11px] font-black transition-all flex items-center gap-1.5 whitespace-nowrap"
+              >
+                <Eraser size={12} className="text-emerald-500" /> Clean Spaces
+              </button>
+              <button
+                onClick={() => handleAction('remove-line-breaks')}
+                className="px-3 py-1.5 rounded-lg border border-border bg-card hover:border-rose-500/50 hover:bg-rose-500/5 text-[11px] font-black transition-all flex items-center gap-1.5 whitespace-nowrap"
+              >
+                <MoveVertical size={12} className="text-rose-500" /> No Breaks
+              </button>
+              <button
+                onClick={() => handleAction('reverse-text')}
+                className="px-3 py-1.5 rounded-lg border border-border bg-card hover:border-amber-500/50 hover:bg-amber-500/5 text-[11px] font-black transition-all flex items-center gap-1.5 whitespace-nowrap"
+              >
+                <RefreshCw size={12} className="text-amber-500" /> Reverse
+              </button>
+            </div>
+
             {/* Text Area */}
             <textarea
-              className="flex-1 w-full p-6 text-base leading-relaxed resize-none focus:outline-none text-foreground bg-input font-normal placeholder-muted-foreground"
+              className="flex-1 w-full p-6 text-[17.5px] leading-relaxed resize-none focus:outline-none text-foreground bg-input font-medium placeholder:opacity-30 scrollbar-hide"
               placeholder={t('placeholder')}
               value={input}
               onChange={e => setInput(e.target.value)}
@@ -214,11 +236,11 @@ export default function TextTools({ type }: TextToolProps) {
 
             {/* Quick Keyword Density Pill */}
             {keywordDensity.length > 0 && (
-              <div className="px-6 py-3 bg-muted border-t border-border flex items-center gap-2 overflow-x-auto">
-                <span className="text-xs font-bold text-muted-foreground uppercase whitespace-nowrap">{t('topKeywords')}:</span>
+              <div className="px-6 py-2 bg-muted/50 border-t border-border flex items-center gap-2 overflow-x-auto no-scrollbar">
+                <span className="text-[9px] font-black text-muted-foreground uppercase tracking-widest whitespace-nowrap">{t('topKeywords')}:</span>
                 {keywordDensity.slice(0, 5).map((k, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-card border border-border rounded-md text-foreground shadow-sm whitespace-nowrap">
-                    {k.word} <span className="text-muted-foreground">({k.count})</span>
+                  <span key={i} className="text-[11px] font-bold px-3 py-1 bg-card border border-border rounded-lg text-foreground shadow-sm whitespace-nowrap">
+                    {k.word} <span className="text-primary/60">{k.count}</span>
                   </span>
                 ))}
               </div>
@@ -226,96 +248,61 @@ export default function TextTools({ type }: TextToolProps) {
           </div>
         </div>
 
-        {/* 3. Sidebar Tools - "The Toolbox" */}
-        <div className="space-y-6">
-
-          {/* Quick Actions Card */}
-          <div className="bg-card rounded-2xl border-2 border-border shadow-md p-6">
-            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-amber-500" />
-              {t('quickTransformers')}
+        {/* 2. Sidebar Tools - "The Toolbox" */}
+        <div className="flex flex-col gap-4 h-full min-h-0 overflow-y-auto no-scrollbar pr-1">
+          {/* Analysis Card */}
+          <div className="bg-card rounded-3xl border-2 border-border shadow-xl p-5 space-y-4">
+            <h3 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+              <Activity size={12} className="text-primary" /> Metrics
             </h3>
-
-            <div className="grid grid-cols-2 gap-3">
-              <button onClick={() => handleAction('uppercase')} className="p-3 rounded-xl border border-border bg-input hover:bg-primary/10 hover:border-primary/30 text-left transition-all group">
-                <div className="text-xs font-semibold text-muted-foreground group-hover:text-primary mb-1">{t('allCaps')}</div>
-                <div className="text-sm font-bold text-foreground">{t('uppercase')}</div>
-              </button>
-              {type === 'reverse-text' && (
-                <button onClick={() => handleAction('reverse-text')} className="col-span-2 p-3 rounded-xl border border-border bg-input hover:bg-primary/10 hover:border-primary/30 text-left transition-all group">
-                  <div className="text-xs font-semibold text-muted-foreground group-hover:text-primary mb-1">{t('reverseString')}</div>
-                  <div className="text-sm font-bold text-foreground">{t('reverseText')}</div>
-                </button>
-              )}
-              <button onClick={() => handleAction('lowercase')} className="p-3 rounded-xl border border-border bg-input hover:bg-primary/10 hover:border-primary/30 text-left transition-all group">
-                <div className="text-xs font-semibold text-muted-foreground group-hover:text-primary mb-1">{t('allSmall')}</div>
-                <div className="text-sm font-bold text-foreground">{t('lowercase')}</div>
-              </button>
-              <button onClick={() => handleAction('title')} className="p-3 rounded-xl border border-border bg-input hover:bg-primary/10 hover:border-primary/30 text-left transition-all group">
-                <div className="text-xs font-semibold text-muted-foreground group-hover:text-primary mb-1">{t('headlineStyle')}</div>
-                <div className="text-sm font-bold text-foreground">{t('titleCase')}</div>
-              </button>
-              <button onClick={() => handleAction('sentence')} className="p-3 rounded-xl border border-border bg-input hover:bg-primary/10 hover:border-primary/30 text-left transition-all group">
-                <div className="text-xs font-semibold text-muted-foreground group-hover:text-primary mb-1">{t('naturalFlow')}</div>
-                <div className="text-sm font-bold text-foreground">{t('sentenceCase')}</div>
-              </button>
-              <button onClick={() => handleAction('clean-spaces')} className="col-span-2 p-3 rounded-xl border border-border bg-input hover:bg-green-500/10 hover:border-green-500/30 flex items-center justify-between transition-all group">
-                <div className="flex flex-col text-left">
-                  <div className="text-xs font-semibold text-muted-foreground group-hover:text-green-400">{t('fixSpacing')}</div>
-                  <div className="text-sm font-bold text-foreground">{t('removeExtraSpaces')}</div>
-                </div>
-                <Eraser className="w-5 h-5 text-muted-foreground group-hover:text-green-400" />
-              </button>
-              {(type === 'remove-line-breaks' || true) && (
-                <button onClick={() => handleAction('remove-line-breaks')} className="col-span-2 p-3 rounded-xl border border-border bg-input hover:bg-red-500/10 hover:border-red-500/30 flex items-center justify-between transition-all group">
-                  <div className="flex flex-col text-left">
-                    <div className="text-xs font-semibold text-muted-foreground group-hover:text-red-400">{t('joinText')}</div>
-                    <div className="text-sm font-bold text-foreground">{t('removeLineBreaks')}</div>
+            <div className="grid grid-cols-2 gap-2">
+              {[
+                { label: t('words'), value: stats.words, icon: FileText, color: 'text-blue-400' },
+                { label: t('characters'), value: stats.chars, icon: Type, color: 'text-indigo-400' },
+                { label: t('sentences'), value: stats.sentences, icon: AlignLeft, color: 'text-emerald-400' },
+                { label: t('paragraphs'), value: stats.paragraphs, icon: MoveVertical, color: 'text-purple-400' },
+                { label: t('lines'), value: stats.lines, icon: Hash, color: 'text-amber-400' },
+                { label: 'Time', value: `${stats.readingTime}m`, icon: Clock, color: 'text-rose-400' },
+              ].map((stat, i) => (
+                <div key={i} className="bg-muted/30 rounded-xl p-2.5 border border-border transition-all">
+                  <div className="flex items-center gap-1.5 mb-0.5 opacity-60">
+                    <stat.icon className={`w-2.5 h-2.5 ${stat.color}`} />
+                    <span className="text-[7px] font-black text-muted-foreground uppercase tracking-tighter">{stat.label}</span>
                   </div>
-                  <MoveVertical className="w-5 h-5 text-muted-foreground group-hover:text-red-400" />
-                </button>
-              )}
+                  <div className={`text-base font-black ${stat.color}`}>{stat.value}</div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Find & Replace Card (Condensed) */}
-          <div className="bg-card rounded-2xl border-2 border-border shadow-md p-6">
-            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-              <Search className="w-5 h-5 text-purple-400" />
-              {t('findReplace')}
+          {/* Search Card */}
+          <div className="bg-card rounded-3xl border-2 border-border shadow-xl p-5 mb-4">
+            <h3 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-3 flex items-center gap-2">
+              <Search className="w-3.5 h-3.5 text-primary" /> Replace
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <input
                 type="text"
                 value={findText}
                 onChange={(e) => setFindText(e.target.value)}
-                placeholder={t('find')}
-                className="w-full px-4 py-2 bg-input border border-border rounded-lg text-sm text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                placeholder="Find..."
+                className="w-full px-3 py-2 bg-muted border border-border rounded-xl text-[11px] font-bold text-foreground focus:outline-none focus:border-primary transition-all"
               />
               <input
                 type="text"
                 value={replaceText}
                 onChange={(e) => setReplaceText(e.target.value)}
-                placeholder={t('replaceWith')}
-                className="w-full px-4 py-2 bg-input border border-border rounded-lg text-sm text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                placeholder="Replace..."
+                className="w-full px-3 py-2 bg-muted border border-border rounded-xl text-[11px] font-bold text-foreground focus:outline-none focus:border-primary transition-all"
               />
-              <div className="grid grid-cols-2 gap-2 pt-2">
-                <button
-                  onClick={() => handleFindReplace('find')}
-                  className="px-4 py-2 bg-card border border-border text-foreground rounded-lg text-sm font-semibold hover:bg-secondary transition-all"
-                >
-                  {t('count')}
-                </button>
-                <button
-                  onClick={() => handleFindReplace('replaceAll')}
-                  className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-primary/90 shadow-sm hover:shadow-md transition-all"
-                >
-                  {t('replaceAll')}
-                </button>
-              </div>
+              <button
+                onClick={() => handleFindReplace('replaceAll')}
+                className="w-full py-2.5 bg-primary text-primary-foreground rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-primary/90 transition-all"
+              >
+                Replace All
+              </button>
             </div>
           </div>
-
         </div>
       </div>
     </div>

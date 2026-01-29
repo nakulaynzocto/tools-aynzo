@@ -235,7 +235,7 @@ export default function AdvancedTextTools({ type }: AdvancedTextToolsProps) {
             <div className="grid lg:grid-cols-2 gap-6">
 
                 {/* 1. Input Section */}
-                <div className="bg-card rounded-2xl border-2 border-border shadow-lg flex flex-col h-[600px]">
+                <div className="bg-card rounded-2xl border-2 border-border shadow-lg flex flex-col lg:h-[480px] h-auto">
                     <div className="px-6 py-4 border-b border-border flex items-center justify-between bg-muted/30">
                         <div className="flex items-center gap-2">
                             <div className="p-1.5 bg-blue-500/10 rounded-lg">
@@ -257,7 +257,7 @@ export default function AdvancedTextTools({ type }: AdvancedTextToolsProps) {
                 </div>
 
                 {/* 2. Configuration & Output Section */}
-                <div className="flex flex-col gap-6 h-[600px]">
+                <div className="flex flex-col gap-6 lg:h-[480px] h-auto">
 
                     {/* Controls Card */}
                     <div className="bg-card rounded-2xl border-2 border-border shadow-md p-6 flex-shrink-0">

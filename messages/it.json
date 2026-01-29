@@ -11,6 +11,7 @@
         "nameHighlight": "TOOLS"
     },
     "Navigation": {
+        "allTools": "Tutti gli Strumenti",
         "more": "Altro",
         "searchPlaceholder": "Cerca strumenti...",
         "mobileMenu": "Menu",
@@ -317,6 +318,14 @@
             "seoDescription": "Converti PDF in DOCX mantenendo la formattazione.",
             "seoKeywords": "pdf to word, convertitore pdf",
             "seoH1": "PDF a Word"
+        },
+        "word-to-pdf": {
+            "name": "Word a PDF",
+            "description": "Converti documenti Microsoft Word (DOC/DOCX) in formato PDF.",
+            "seoTitle": "Convertitore Word a PDF Online - Veloce e Gratuito",
+            "seoDescription": "Converti Word a PDF online gratuitamente. Mantieni la formattazione originale.",
+            "seoKeywords": "word to pdf, convertitore word pdf",
+            "seoH1": "Convertitore Word a PDF"
         },
         "word-counter": {
             "name": "Contatore Parole",
@@ -1162,5 +1171,35 @@
         "filesSelected": "{count} file selezionati",
         "pasteBase64": "Incolla Base64",
         "batchReady": "Batch pronto"
+    },
+    "ImageGroups": {
+        "image-optimize": "Ottimizza",
+        "image-convert": "Converti",
+        "image-edit": "Modifica",
+        "image-effects": "Filtri",
+        "image-dev": "Base64",
+        "pdf-convert": "PDF Converti",
+        "pdf-edit": "PDF Modifica",
+        "text-analyze": "Analizza",
+        "text-edit": "Modifica",
+        "text-style": "Stile",
+        "dev-format": "Formatta",
+        "dev-tool": "Strumenti",
+        "dev-convert": "Converti",
+        "dev-optimize": "Ottimizza",
+        "conv-unit": "Unità",
+        "conv-curr": "Valuta",
+        "conv-color": "Colori",
+        "conv-data": "Dati",
+        "util-rand": "Casuale",
+        "util-gen": "Generatori",
+        "util-net": "Rete & Web",
+        "sec-gen": "Sicurezza",
+        "yt-tool": "YouTube",
+        "seo-gen": "Generatori SEO",
+        "seo-keyword": "Parole Chiave",
+        "social-gen": "Social & Link",
+        "calc-util": "Salute & Info",
+        "calc-math": "Finanza & Mate"
     }
 }

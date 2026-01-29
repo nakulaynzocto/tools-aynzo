@@ -6,6 +6,7 @@ export const tools = [
         slug: 'image-compressor',
         description: 'Compress JPG, PNG, and WebP images without losing quality.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Free Image Compressor', description: 'Best online image compressor.' },
         status: 'published'
     },
@@ -15,6 +16,7 @@ export const tools = [
         slug: 'image-resizer',
         description: 'Resize your images to exact pixel dimensions or percentage.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Free Image Resizer', description: 'Resize images online for free.' },
         status: 'published',
     },
@@ -24,6 +26,7 @@ export const tools = [
         slug: 'jpg-to-png',
         description: 'Convert JPG images to PNG format with transparent background support.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'JPG to PNG Converter', description: 'Convert JPG to PNG online.' },
         status: 'published',
     },
@@ -33,6 +36,7 @@ export const tools = [
         slug: 'png-to-jpg',
         description: 'Convert PNG images to JPG format instantly.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'PNG to JPG Converter', description: 'Convert PNG to JPG online.' },
         status: 'published',
     },
@@ -42,6 +46,7 @@ export const tools = [
         slug: 'webp-converter',
         description: 'Convert images to and from WebP format for web optimization.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'WebP Image Converter', description: 'Convert to WebP format.' },
         status: 'published',
     },
@@ -51,6 +56,7 @@ export const tools = [
         slug: 'image-format-converter',
         description: 'Convert between JPG, PNG, WebP and other formats.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'Universal Image Converter', description: 'Convert image formats online.' },
         status: 'published',
     },
@@ -60,6 +66,7 @@ export const tools = [
         slug: 'image-to-base64',
         description: 'Convert images to Base64 strings for embedding.',
         category: 'image',
+        group: 'image-dev',
         seo: { title: 'Image to Base64', description: 'Convert image to Base64 string.' },
         status: 'published',
     },
@@ -69,6 +76,7 @@ export const tools = [
         slug: 'image-cropper',
         description: 'Crop images online with custom aspect ratios.',
         category: 'image',
+        group: 'image-edit',
         seo: { title: 'Image Cropper', description: 'Crop images online.' },
         status: 'published',
     },
@@ -78,6 +86,7 @@ export const tools = [
         slug: 'flip-image',
         description: 'Flip images horizontally or vertically online.',
         category: 'image',
+        group: 'image-edit',
         seo: { title: 'Flip Image Online', description: 'Flip pictures horizontally or vertically.' },
         status: 'published',
     },
@@ -87,6 +96,7 @@ export const tools = [
         slug: 'rotate-image',
         description: 'Rotate images 90, 180, or 270 degrees online.',
         category: 'image',
+        group: 'image-edit',
         seo: { title: 'Rotate Image Online', description: 'Rotate photos quickly and easily.' },
         status: 'published',
     },
@@ -96,6 +106,7 @@ export const tools = [
         slug: 'image-enlarger',
         description: 'Upscale small images without losing quality.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Image Enlarger', description: 'Enlarge images online.' },
         status: 'published',
     },
@@ -105,6 +116,7 @@ export const tools = [
         slug: 'image-brightness',
         description: 'Adjust the brightness of your photos online.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Adjust Image Brightness', description: 'Change image brightness online.' },
         status: 'published',
     },
@@ -114,6 +126,7 @@ export const tools = [
         slug: 'image-contrast',
         description: 'Adjust the contrast of your photos online.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Adjust Image Contrast', description: 'Change image contrast online.' },
         status: 'published',
     },
@@ -123,6 +136,7 @@ export const tools = [
         slug: 'grayscale-image',
         description: 'Convert color photos to black and white.',
         category: 'image',
+        group: 'image-effects',
         seo: { title: 'Grayscale Image Converter', description: 'Make images black and white.' },
         status: 'published',
     },
@@ -132,6 +146,7 @@ export const tools = [
         slug: 'blur-image',
         description: 'Add blur effect to your images online.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Blur Image Online', description: 'Blur photos easily.' },
         status: 'published',
     },
@@ -141,6 +156,7 @@ export const tools = [
         slug: 'sepia-converter',
         description: 'Apply a vintage sepia filter to your photos.',
         category: 'image',
+        group: 'image-effects',
         seo: { title: 'Sepia Image Filter', description: 'Add sepia effect to photos.' },
         status: 'published',
     },
@@ -150,6 +166,7 @@ export const tools = [
         slug: 'invert-image',
         description: 'Invert the colors of your image (negative effect).',
         category: 'image',
+        group: 'image-effects',
         seo: { title: 'Invert Image Colors', description: 'Create negative images online.' },
         status: 'published',
     },
@@ -159,6 +176,7 @@ export const tools = [
         slug: 'saturate-image',
         description: 'Adjust the color saturation of your photos.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Adjust Image Saturation', description: 'Change photo saturation online.' },
         status: 'published',
     },
@@ -168,6 +186,7 @@ export const tools = [
         slug: 'hue-rotate-image',
         description: 'Shift the hue of your images for creative effects.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Hue Rotate Image', description: 'Change image colors with hue rotation.' },
         status: 'published',
     },
@@ -177,6 +196,7 @@ export const tools = [
         slug: 'image-opacity',
         description: 'Change the transparency/opacity of your images.',
         category: 'image',
+        group: 'image-optimize',
         seo: { title: 'Change Image Opacity', description: 'Adjust image transparency online.' },
         status: 'published',
     },
@@ -186,6 +206,7 @@ export const tools = [
         slug: 'round-corners-image',
         description: 'Add rounded corners to your images.',
         category: 'image',
+        group: 'image-effects',
         seo: { title: 'Round Image Corners', description: 'Make circular or rounded images.' },
         status: 'published',
     },
@@ -195,6 +216,7 @@ export const tools = [
         slug: 'image-border',
         description: 'Add colorful borders to your images.',
         category: 'image',
+        group: 'image-effects',
         seo: { title: 'Add Image Border', description: 'Add frames to photos online.' },
         status: 'published',
     },
@@ -204,6 +226,7 @@ export const tools = [
         slug: 'image-shadow',
         description: 'Add drop shadows to your images.',
         category: 'image',
+        group: 'image-effects',
         seo: { title: 'Add Image Shadow', description: 'Create shadow effects for photos.' },
         status: 'published',
     },
@@ -213,6 +236,7 @@ export const tools = [
         slug: 'pixelate-image',
         description: 'Pixelate your images to hide details or create art.',
         category: 'image',
+        group: 'image-effects',
         seo: { title: 'Pixelate Image', description: 'Pixelate photos online.' },
         status: 'published',
     },
@@ -222,6 +246,7 @@ export const tools = [
         slug: 'svg-to-png',
         description: 'Convert SVG vector files to PNG images.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'SVG to PNG Converter', description: 'Convert SVG to PNG high quality.' },
         status: 'published',
     },
@@ -231,6 +256,7 @@ export const tools = [
         slug: 'png-to-svg',
         description: 'Convert PNG raster images to SVG vectors.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'PNG to SVG Converter', description: 'Convert PNG to vector SVG.' },
         status: 'published',
     },
@@ -240,6 +266,7 @@ export const tools = [
         slug: 'webp-to-jpg',
         description: 'Convert WebP images to standard JPG format.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'WebP to JPG Converter', description: 'Convert WebP to JPG online.' },
         status: 'published',
     },
@@ -249,6 +276,7 @@ export const tools = [
         slug: 'webp-to-png',
         description: 'Convert WebP images to transparent PNG format.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'WebP to PNG Converter', description: 'Convert WebP to PNG online.' },
         status: 'published',
     },
@@ -258,6 +286,7 @@ export const tools = [
         slug: 'jpg-to-webp',
         description: 'Convert JPG images to modern WebP format.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'JPG to WebP Converter', description: 'Convert JPG to WebP online.' },
         status: 'published',
     },
@@ -267,6 +296,7 @@ export const tools = [
         slug: 'png-to-webp',
         description: 'Convert PNG images to modern WebP format.',
         category: 'image',
+        group: 'image-convert',
         seo: { title: 'PNG to WebP Converter', description: 'Convert PNG to WebP online.' },
         status: 'published',
     },
@@ -276,6 +306,7 @@ export const tools = [
         slug: 'base64-to-image',
         description: 'Convert Base64 strings back to image files.',
         category: 'image',
+        group: 'image-dev',
         seo: { title: 'Base64 to Image', description: 'Decode Base64 to image.' },
         status: 'published',
     },
@@ -287,7 +318,18 @@ export const tools = [
         slug: 'pdf-to-word',
         description: 'Convert PDF documents to editable Word (DOCX) files.',
         category: 'pdf',
+        group: 'pdf-convert',
         seo: { title: 'PDF to Word Converter', description: 'Convert PDF to Word online.' },
+        status: 'published'
+    },
+    {
+        _id: '125',
+        name: 'Word to PDF',
+        slug: 'word-to-pdf',
+        description: 'Convert Microsoft Word (DOC/DOCX) documents to PDF format.',
+        category: 'pdf',
+        group: 'pdf-convert',
+        seo: { title: 'Word to PDF Converter', description: 'Convert Word to PDF online.' },
         status: 'published'
     },
     {
@@ -296,6 +338,7 @@ export const tools = [
         slug: 'merge-pdf',
         description: 'Combine multiple PDF files into a single document.',
         category: 'pdf',
+        group: 'pdf-edit',
         seo: { title: 'Merge PDF Online', description: 'Merge multiple PDF files into one.' },
         status: 'published',
     },
@@ -305,6 +348,7 @@ export const tools = [
         slug: 'split-pdf',
         description: 'Split a PDF file into multiple separate documents.',
         category: 'pdf',
+        group: 'pdf-edit',
         seo: { title: 'Split PDF Online', description: 'Split PDF files into individual pages.' },
         status: 'published',
     },
@@ -316,6 +360,7 @@ export const tools = [
         slug: 'word-counter',
         description: 'Count words, characters, sentences, and paragraphs.',
         category: 'text',
+        group: 'text-analyze',
         seo: { title: 'Word Counter Tool', description: 'Free online word counter.' },
         status: 'published'
     },
@@ -325,6 +370,7 @@ export const tools = [
         slug: 'character-counter',
         description: 'Count characters with or without spaces.',
         category: 'text',
+        group: 'text-analyze',
         seo: { title: 'Character Counter', description: 'Online character counter.' },
         status: 'published',
     },
@@ -334,6 +380,7 @@ export const tools = [
         slug: 'text-case-converter',
         description: 'Convert text to UPPERCASE, lowercase, Title Case, etc.',
         category: 'text',
+        group: 'text-edit',
         seo: { title: 'Case Converter', description: 'Convert text case online.' },
         status: 'published',
     },
@@ -343,6 +390,7 @@ export const tools = [
         slug: 'remove-line-breaks',
         description: 'Remove all line breaks and newlines from your text.',
         category: 'text',
+        group: 'text-edit',
         seo: { title: 'Remove Line Breaks', description: 'Online line break remover.' },
         status: 'published',
     },
@@ -352,6 +400,7 @@ export const tools = [
         slug: 'italic-text',
         description: 'Generate italic text using unicode characters.',
         category: 'text',
+        group: 'text-style',
         seo: { title: 'Italic Text Generator', description: 'Generate italic text online.' },
         status: 'published',
     },
@@ -361,6 +410,7 @@ export const tools = [
         slug: 'strikethrough-text',
         description: 'Generate strikethrough text for social media.',
         category: 'text',
+        group: 'text-style',
         seo: { title: 'Strikethrough Text', description: 'Cross out text online.' },
         status: 'published',
     },
@@ -370,6 +420,7 @@ export const tools = [
         slug: 'underline-text',
         description: 'Generate underlined text for social media.',
         category: 'text',
+        group: 'text-style',
         seo: { title: 'Underline Text Generator', description: 'Underline text online.' },
         status: 'published',
     },
@@ -379,6 +430,7 @@ export const tools = [
         slug: 'double-underline-text',
         description: 'Generate double underlined text for social media.',
         category: 'text',
+        group: 'text-style',
         seo: { title: 'Double Underline Text Generator', description: 'Double underline text online.' },
         status: 'published',
     },
@@ -388,6 +440,7 @@ export const tools = [
         slug: 'bold-text',
         description: 'Generate bold text using unicode characters.',
         category: 'text',
+        group: 'text-style',
         seo: { title: 'Bold Text Generator', description: 'Generate bold text online.' },
         status: 'published'
     },
@@ -397,6 +450,7 @@ export const tools = [
         slug: 'cursive-text',
         description: 'Generate cursive / script text for social media.',
         category: 'text',
+        group: 'text-style',
         seo: { title: 'Cursive Text Generator', description: 'Generate cursive text online.' },
         status: 'published',
     },
@@ -406,6 +460,7 @@ export const tools = [
         slug: 'reverse-text',
         description: 'Reverse your text, flip it, or reverse words.',
         category: 'text',
+        group: 'text-style',
         seo: { title: 'Reverse Text Generator - Flip & Mirror Text', description: 'Free online tool to reverse strings, flip words, and generate mirror text instantly for social media.' },
         status: 'published',
     },
@@ -442,6 +497,7 @@ export const tools = [
         slug: 'duplicate-line-remover',
         description: 'Remove duplicate lines from your text or list.',
         category: 'text',
+        group: 'text-edit',
         seo: { title: 'Duplicate Line Remover', description: 'Remove duplicates online.' },
         status: 'published'
     },
@@ -451,6 +507,7 @@ export const tools = [
         slug: 'sort-alphabetically',
         description: 'Sort lists and text lines alphabetically.',
         category: 'text',
+        group: 'text-edit',
         seo: { title: 'Sort Text Alphabetically', description: 'Sort lists A-Z online.' },
         status: 'published'
     },
@@ -460,6 +517,7 @@ export const tools = [
         slug: 'text-replace',
         description: 'Find and replace text online.',
         category: 'text',
+        group: 'text-edit',
         seo: { title: 'Text Replacer', description: 'Replace words in text.' },
         status: 'published'
     },
@@ -469,6 +527,7 @@ export const tools = [
         slug: 'whitespace-remover',
         description: 'Trim extra whitespace, tabs, and line breaks.',
         category: 'text',
+        group: 'text-edit',
         seo: { title: 'Whitespace Remover', description: 'Remove extra spaces.' },
         status: 'published'
     },
@@ -478,6 +537,7 @@ export const tools = [
         slug: 'word-frequency',
         description: 'Analyze word usage frequency in your text.',
         category: 'text',
+        group: 'text-analyze',
         seo: { title: 'Word Frequency Counter', description: 'Count word occurrences.' },
         status: 'published'
     },
@@ -487,6 +547,7 @@ export const tools = [
         slug: 'find-replace',
         description: 'Advanced find and replace tool with Regex.',
         category: 'text',
+        group: 'text-edit',
         seo: { title: 'Advanced Find & Replace', description: 'Regex find and replace.' },
         status: 'published'
     },
@@ -498,6 +559,7 @@ export const tools = [
         slug: 'json-formatter',
         description: 'Beautify and validate your JSON data.',
         category: 'developer',
+        group: 'dev-format',
         seo: { title: 'JSON Formatter & Validator', description: 'Format JSON online.' },
         status: 'published'
     },
@@ -507,6 +569,7 @@ export const tools = [
         slug: 'url-encoder-decoder',
         description: 'Encode or decode URLs safely.',
         category: 'developer',
+        group: 'dev-tool',
         seo: { title: 'URL Encoder Decoder', description: 'Online URL encode decode.' },
         status: 'published',
     },
@@ -516,6 +579,7 @@ export const tools = [
         slug: 'html-formatter',
         description: 'Format and beautify HTML code.',
         category: 'developer',
+        group: 'dev-format',
         seo: { title: 'HTML Formatter', description: 'Beautify HTML code.' },
         status: 'published',
     },
@@ -525,6 +589,7 @@ export const tools = [
         slug: 'css-formatter',
         description: 'Format and beautify CSS code.',
         category: 'developer',
+        group: 'dev-format',
         seo: { title: 'CSS Formatter', description: 'Clean CSS code.' },
         status: 'published',
     },
@@ -534,6 +599,7 @@ export const tools = [
         slug: 'javascript-formatter',
         description: 'Format and beautify JavaScript code.',
         category: 'developer',
+        group: 'dev-format',
         seo: { title: 'JavaScript Formatter', description: 'Beautify JS code.' },
         status: 'published',
     },
@@ -543,6 +609,7 @@ export const tools = [
         slug: 'xml-formatter',
         description: 'Format and beautify XML code.',
         category: 'developer',
+        group: 'dev-format',
         seo: { title: 'XML Formatter', description: 'Beautify XML data.' },
         status: 'published',
     },
@@ -552,6 +619,7 @@ export const tools = [
         slug: 'sql-formatter',
         description: 'Format and beautify SQL queries.',
         category: 'developer',
+        group: 'dev-format',
         seo: { title: 'SQL Formatter', description: 'Format SQL queries.' },
         status: 'published',
     },
@@ -561,6 +629,7 @@ export const tools = [
         slug: 'markdown-to-html',
         description: 'Convert Markdown to HTML code.',
         category: 'developer',
+        group: 'dev-convert',
         seo: { title: 'Markdown to HTML', description: 'Convert MD to HTML.' },
         status: 'published',
     },
@@ -570,6 +639,7 @@ export const tools = [
         slug: 'html-to-markdown',
         description: 'Convert HTML to Markdown format.',
         category: 'developer',
+        group: 'dev-convert',
         seo: { title: 'HTML to Markdown', description: 'Convert HTML to MD.' },
         status: 'published',
     },
@@ -579,6 +649,7 @@ export const tools = [
         slug: 'csv-to-json',
         description: 'Convert CSV data to JSON format.',
         category: 'developer',
+        group: 'dev-convert',
         seo: { title: 'CSV to JSON Converter', description: 'Convert CSV to JSON.' },
         status: 'published',
     },
@@ -588,6 +659,7 @@ export const tools = [
         slug: 'json-to-csv',
         description: 'Convert JSON data to CSV format.',
         category: 'developer',
+        group: 'dev-convert',
         seo: { title: 'JSON to CSV Converter', description: 'Convert JSON to CSV.' },
         status: 'published',
     },
@@ -597,6 +669,7 @@ export const tools = [
         slug: 'code-minifier',
         description: 'Minify HTML, CSS, and JS code.',
         category: 'developer',
+        group: 'dev-optimize',
         seo: { title: 'Code Minifier', description: 'Minify code online.' },
         status: 'published',
     },
@@ -607,6 +680,7 @@ export const tools = [
         slug: 'diff-checker',
         description: 'Compare two texts to find differences.',
         category: 'developer',
+        group: 'dev-tool',
         seo: { title: 'Online Diff Checker', description: 'Compare text differences.' },
         status: 'published',
     },
@@ -616,6 +690,7 @@ export const tools = [
         slug: 'regex-tester',
         description: 'Test regular expressions against text.',
         category: 'developer',
+        group: 'dev-tool',
         seo: { title: 'Regex Tester', description: 'Test regex patterns online.' },
         status: 'published',
     },
@@ -627,6 +702,7 @@ export const tools = [
         slug: 'unit-converter',
         description: 'Convert length, weight, temperature, and more.',
         category: 'converter',
+        group: 'conv-unit',
         seo: { title: 'Unit Converter', description: 'Universal unit converter.' },
         status: 'published'
     },
@@ -636,6 +712,7 @@ export const tools = [
         slug: 'currency-converter',
         description: 'Convert between different currencies with live rates.',
         category: 'converter',
+        group: 'conv-curr',
         seo: { title: 'Currency Converter Calculator - Live Exchange Rates', description: 'Convert global currencies instantly with real-time exchange rates. Supports USD, EUR, INR, GBP, and more.' },
         status: 'published'
     },
@@ -645,6 +722,7 @@ export const tools = [
         slug: 'color-converter',
         description: 'Convert HEX, RGB, HSL colors.',
         category: 'converter',
+        group: 'conv-color',
         seo: { title: 'Color Converter', description: 'Convert color codes.' },
         status: 'published',
     },
@@ -654,6 +732,7 @@ export const tools = [
         slug: 'binary-to-text',
         description: 'Translate binary code to text.',
         category: 'converter',
+        group: 'conv-data',
         seo: { title: 'Binary to Text', description: 'Convert binary to text.' },
         status: 'published',
     },
@@ -663,6 +742,7 @@ export const tools = [
         slug: 'hex-to-decimal',
         description: 'Convert Hexadecimal to Decimal.',
         category: 'converter',
+        group: 'conv-data',
         seo: { title: 'Hex to Decimal', description: 'Convert hex numbers.' },
         status: 'published',
     },
@@ -672,6 +752,7 @@ export const tools = [
         slug: 'roman-numeral',
         description: 'Convert numbers to Roman numerals.',
         category: 'converter',
+        group: 'conv-data',
         seo: { title: 'Roman Numeral Converter', description: 'Roman numerals tool.' },
         status: 'published',
     },
@@ -683,6 +764,7 @@ export const tools = [
         slug: 'random-number',
         description: 'Generate random numbers within a range.',
         category: 'utility',
+        group: 'util-rand',
         seo: { title: 'Random Number Generator', description: 'Generate random numbers.' },
         status: 'published'
     },
@@ -692,6 +774,7 @@ export const tools = [
         slug: 'random-string',
         description: 'Generate random strings and passwords.',
         category: 'utility',
+        group: 'util-rand',
         seo: { title: 'Random String Generator', description: 'Generate random strings.' },
         status: 'published',
     },
@@ -701,6 +784,7 @@ export const tools = [
         slug: 'random-color',
         description: 'Generate random colors.',
         category: 'utility',
+        group: 'util-rand',
         seo: { title: 'Random Color Generator', description: 'Generate random colors.' },
         status: 'published',
     },
@@ -710,6 +794,7 @@ export const tools = [
         slug: 'random-date',
         description: 'Generate random dates.',
         category: 'utility',
+        group: 'util-rand',
         seo: { title: 'Random Date Generator', description: 'Generate random dates.' },
         status: 'published',
     },
@@ -719,6 +804,7 @@ export const tools = [
         slug: 'random-ip',
         description: 'Generate random IP addresses.',
         category: 'utility',
+        group: 'util-rand',
         seo: { title: 'Random IP Generator', description: 'Generate random IPs.' },
         status: 'published',
     },
@@ -730,6 +816,7 @@ export const tools = [
         slug: 'password-generator',
         description: 'Generate strong, secure passwords.',
         category: 'security',
+        group: 'sec-gen',
         seo: { title: 'Password Generator', description: 'Generate secure passwords.' },
         status: 'published'
     },
@@ -739,6 +826,7 @@ export const tools = [
         slug: 'bcrypt-generator',
         description: 'Generate Bcrypt password hashes.',
         category: 'security',
+        group: 'sec-gen',
         seo: { title: 'Bcrypt Generator', description: 'Generate Bcrypt hash.' },
         status: 'published'
     },
@@ -748,6 +836,7 @@ export const tools = [
         slug: 'base64-encoder',
         description: 'Encode/Decode Base64.',
         category: 'crypto',
+        group: 'sec-gen',
         seo: { title: 'Base64 Encoder', description: 'Base64 encode decode.' },
         status: 'published'
     },
@@ -757,6 +846,7 @@ export const tools = [
         slug: 'md5-hash',
         description: 'Generate MD5 hash.',
         category: 'crypto',
+        group: 'sec-gen',
         seo: { title: 'MD5 Generator', description: 'Generate MD5 hash.' },
         status: 'published'
     },
@@ -766,6 +856,7 @@ export const tools = [
         slug: 'sha256-hash',
         description: 'Generate SHA-256 hash.',
         category: 'crypto',
+        group: 'sec-gen',
         seo: { title: 'SHA-256 Generator', description: 'Generate SHA-256 hash.' },
         status: 'published'
     },
@@ -775,6 +866,7 @@ export const tools = [
         slug: 'sha512-hash',
         description: 'Generate SHA-512 hash.',
         category: 'crypto',
+        group: 'sec-gen',
         seo: { title: 'SHA-512 Generator', description: 'Generate SHA-512 hash.' },
         status: 'published'
     },
@@ -784,6 +876,7 @@ export const tools = [
         slug: 'uuid-generator',
         description: 'Generate UUID v4.',
         category: 'crypto',
+        group: 'sec-gen',
         seo: { title: 'UUID Generator', description: 'Generate UUIDs.' },
         status: 'published'
     },
@@ -793,6 +886,7 @@ export const tools = [
         slug: 'qr-code-generator',
         description: 'Generate QR codes.',
         category: 'utility',
+        group: 'util-rand',
         seo: { title: 'QR Code Generator', description: 'Generate QR codes.' },
         status: 'published'
     },
@@ -804,6 +898,7 @@ export const tools = [
         slug: 'lorem-ipsum',
         description: 'Generate placeholder text.',
         category: 'utility',
+        group: 'util-gen',
         seo: { title: 'Lorem Ipsum Generator', description: 'Generate dummy text.' },
         status: 'published'
     },
@@ -815,6 +910,7 @@ export const tools = [
         slug: 'youtube-thumbnail-downloader',
         description: 'Download high-quality thumbnails from any YouTube video.',
         category: 'youtube',
+        group: 'yt-tool',
         seo: { title: 'YouTube Thumbnail Downloader', description: 'Download YouTube thumbnails in HD, SD, and 4K.' },
         status: 'published'
     },
@@ -824,6 +920,7 @@ export const tools = [
         slug: 'youtube-tag-generator',
         description: 'Generate optimized tags for your YouTube videos to improve ranking.',
         category: 'youtube',
+        group: 'yt-tool',
         seo: { title: 'YouTube Tag Generator', description: 'Free YouTube tag generator for SEO.' },
         status: 'published'
     },
@@ -833,6 +930,7 @@ export const tools = [
         slug: 'youtube-title-generator',
         description: 'Generate catchy, SEO-friendly titles for your YouTube videos.',
         category: 'youtube',
+        group: 'yt-tool',
         seo: { title: 'YouTube Title Generator', description: 'Create viral YouTube titles.' },
         status: 'published'
     },
@@ -842,6 +940,7 @@ export const tools = [
         slug: 'youtube-embed-code-generator',
         description: 'Generate advanced embed codes with autoplay, loop, and hide controls.',
         category: 'youtube',
+        group: 'yt-tool',
         seo: { title: 'YouTube Embed Code Generator', description: 'Custom YouTube embed code generator.' },
         status: 'published'
     },
@@ -851,6 +950,7 @@ export const tools = [
         slug: 'youtube-timestamp-link-generator',
         description: 'Create YouTube links that start at a specific time.',
         category: 'youtube',
+        group: 'yt-tool',
         seo: { title: 'YouTube Timestamp Link Generator', description: 'Share YouTube video at specific time.' },
         status: 'published'
     },
@@ -862,6 +962,7 @@ export const tools = [
         slug: 'meta-tag-generator',
         description: 'Generate SEO-friendly meta tags for your website.',
         category: 'seo',
+        group: 'seo-gen',
         seo: { title: 'Meta Tag Generator', description: 'Free Meta Tag Generator for SEO.' },
         status: 'published'
     },
@@ -871,6 +972,7 @@ export const tools = [
         slug: 'open-graph-generator',
         description: 'Create Open Graph meta tags for Facebook and LinkedIn sharing.',
         category: 'seo',
+        group: 'seo-gen',
         seo: { title: 'Open Graph Generator', description: 'Facebook Open Graph Meta Tags Generator.' },
         status: 'published'
     },
@@ -880,6 +982,7 @@ export const tools = [
         slug: 'twitter-card-generator',
         description: 'Generate Twitter Card meta tags for better social sharing.',
         category: 'seo',
+        group: 'seo-gen',
         seo: { title: 'Twitter Card Generator', description: 'Create Twitter Card meta tags.' },
         status: 'published'
     },
@@ -889,6 +992,7 @@ export const tools = [
         slug: 'robots-txt-generator',
         description: 'Create proper robots.txt files to control crawler access.',
         category: 'seo',
+        group: 'seo-gen',
         seo: { title: 'Robots.txt Generator', description: 'Generate robots.txt file online.' },
         status: 'published'
     },
@@ -898,6 +1002,7 @@ export const tools = [
         slug: 'xml-sitemap-generator',
         description: 'Generate XML sitemaps for easier search engine indexing.',
         category: 'seo',
+        group: 'seo-gen',
         seo: { title: 'XML Sitemap Generator', description: 'Free XML Sitemap Generator.' },
         status: 'published'
     },
@@ -909,6 +1014,7 @@ export const tools = [
         slug: 'keyword-density-checker',
         description: 'Analyze keyword usage and density in your content.',
         category: 'seo',
+        group: 'seo-keyword',
         seo: { title: 'Keyword Density Checker', description: 'Check keyword density online.' },
         status: 'published'
     },
@@ -918,6 +1024,7 @@ export const tools = [
         slug: 'keyword-cleaner',
         description: 'Clean up keyword lists: remove duplicates, empty lines, and specific characters.',
         category: 'seo',
+        group: 'seo-keyword',
         seo: { title: 'Free Keyword Cleaner', description: 'Clean and format keyword lists.' },
         status: 'published'
     },
@@ -927,6 +1034,7 @@ export const tools = [
         slug: 'long-tail-keyword-generator',
         description: 'Generate long-tail keyword variations from seed keywords.',
         category: 'seo',
+        group: 'seo-keyword',
         seo: { title: 'Long Tail Keyword Generator', description: 'Find long tail keywords for SEO.' },
         status: 'published'
     },
@@ -936,6 +1044,7 @@ export const tools = [
         slug: 'slug-generator',
         description: 'Convert text into SEO-friendly URL slugs.',
         category: 'seo',
+        group: 'seo-gen',
         seo: { title: 'URL Slug Generator', description: 'Create clean URL slugs.' },
         status: 'published'
     },
@@ -947,6 +1056,7 @@ export const tools = [
         slug: 'google-serp-simulator',
         description: 'Preview how your website will appear in Google search results.',
         category: 'seo',
+        group: 'seo-gen',
         seo: { title: 'Google SERP Simulator', description: 'SEO Search Result Preview Tool.' },
         status: 'published'
     },
@@ -956,6 +1066,7 @@ export const tools = [
         slug: 'htaccess-redirect-generator',
         description: 'Generate .htaccess redirect code for 301/302 redirects.',
         category: 'seo',
+        group: 'seo-gen',
         seo: { title: 'Htaccess Redirect Generator', description: 'Create .htaccess redirects.' },
         status: 'published'
     },
@@ -965,6 +1076,7 @@ export const tools = [
         slug: 'my-ip-address',
         description: 'Check your public IP address and location details.',
         category: 'utility',
+        group: 'util-net',
         seo: { title: 'What Is My IP Address', description: 'Check your IP address online.' },
         status: 'published'
     },
@@ -974,6 +1086,7 @@ export const tools = [
         slug: 'browser-info',
         description: 'Get detailed information about your current browser and system.',
         category: 'utility',
+        group: 'util-net',
         seo: { title: 'Browser Information Tool', description: 'Check browser details.' },
         status: 'published'
     },
@@ -983,6 +1096,7 @@ export const tools = [
         slug: 'screen-resolution-simulator',
         description: 'Test your website on different screen resolutions.',
         category: 'utility',
+        group: 'util-net',
         seo: { title: 'Screen Resolution Simulator', description: 'Test website resolution.' },
         status: 'published'
     },
@@ -992,6 +1106,7 @@ export const tools = [
         slug: 'responsive-checker',
         description: 'Check if your website is responsive across devices.',
         category: 'utility',
+        group: 'util-net',
         seo: { title: 'Responsive Website Checker - Test Mobile View', description: 'Test your website responsiveness on mobile, tablet, and desktop devices instantly. Free responsive design tester.' },
         status: 'published'
     },
@@ -1003,6 +1118,7 @@ export const tools = [
         slug: 'whatsapp-link-generator',
         description: 'Create direct click-to-chat WhatsApp links.',
         category: 'social',
+        group: 'social-gen',
         seo: { title: 'WhatsApp Link Generator', description: 'Create WhatsApp links.' },
         status: 'published'
     },
@@ -1012,6 +1128,7 @@ export const tools = [
         slug: 'telegram-link-generator',
         description: 'Create direct links to Telegram users or channels.',
         category: 'social',
+        group: 'social-gen',
         seo: { title: 'Telegram Link Generator', description: 'Create Telegram links.' },
         status: 'published'
     },
@@ -1021,6 +1138,7 @@ export const tools = [
         slug: 'paypal-link-generator',
         description: 'Generate PayPal payment and donation links.',
         category: 'social',
+        group: 'social-gen',
         seo: { title: 'PayPal Link Generator', description: 'Create custom PayPal links.' },
         status: 'published'
     },
@@ -1030,6 +1148,7 @@ export const tools = [
         slug: 'email-validator',
         description: 'Validate email address format using regex.',
         category: 'utility',
+        group: 'util-net',
         seo: { title: 'Email Address Validator', description: 'Check email validity.' },
         status: 'published'
     },
@@ -1039,6 +1158,7 @@ export const tools = [
         slug: 'url-opener',
         description: 'Open multiple URLs at once in new tabs.',
         category: 'utility',
+        group: 'util-net',
         seo: { title: 'Bulk URL Opener', description: 'Open multiple links simultaneously.' },
         status: 'published'
     },
@@ -1059,6 +1179,7 @@ export const tools = [
         slug: 'wordpress-password-hash',
         description: 'Generate WordPress compatible password hashes (phpass).',
         category: 'security',
+        group: 'sec-gen',
         status: 'published'
     },
     // === CALCULATOR TOOLS ===
@@ -1068,6 +1189,7 @@ export const tools = [
         slug: 'age-calculator',
         description: 'Calculate your exact age in years, months, and days.',
         category: 'calculator',
+        group: 'calc-util',
         seo: { title: 'Online Age Calculator', description: 'Calculate age from date of birth.' },
         status: 'published'
     },
@@ -1077,6 +1199,7 @@ export const tools = [
         slug: 'bmi-calculator',
         description: 'Calculate your Body Mass Index (BMI) and health status.',
         category: 'calculator',
+        group: 'calc-util',
         seo: { title: 'BMI Calculator Online', description: 'Check your BMI and health status.' },
         status: 'published'
     },
@@ -1086,6 +1209,7 @@ export const tools = [
         slug: 'percentage-calculator',
         description: 'Quickly calculate percentages, increases, and decreases.',
         category: 'calculator',
+        group: 'calc-math',
         seo: { title: 'Online Percentage Calculator', description: 'Calculate percentages easily.' },
         status: 'published'
     },
@@ -1095,6 +1219,7 @@ export const tools = [
         slug: 'gst-calculator',
         description: 'Calculate GST (Goods and Services Tax) for any amount.',
         category: 'calculator',
+        group: 'calc-math',
         seo: { title: 'Online GST Calculator', description: 'Calculate GST with tax inclusive/exclusive.' },
         status: 'published'
     },
@@ -1104,6 +1229,7 @@ export const tools = [
         slug: 'emi-calculator',
         description: 'Calculate monthly loan EMI and total interest payable.',
         category: 'calculator',
+        group: 'calc-math',
         seo: { title: 'Loan EMI Calculator', description: 'Calculate mortgage and loan EMIs.' },
         status: 'published'
     },
@@ -1113,6 +1239,7 @@ export const tools = [
         slug: 'discount-calculator',
         description: 'Calculate final price after discount and savings.',
         category: 'calculator',
+        group: 'calc-math',
         seo: { title: 'Online Discount Calculator', description: 'Calculate sale prices and discounts.' },
         status: 'published'
     },
@@ -1124,6 +1251,7 @@ export const tools = [
         slug: 'instagram-hashtag-generator',
         description: 'Generate popular and trending hashtags for Instagram.',
         category: 'social',
+        group: 'social-gen',
         seo: { title: 'Instagram Hashtag Generator', description: 'Find trending tags for Instagram.' },
         status: 'published'
     },
@@ -1133,6 +1261,7 @@ export const tools = [
         slug: 'html-to-jsx',
         description: 'Convert standard HTML code into React JSX syntax.',
         category: 'developer',
+        group: 'dev-convert',
         seo: { title: 'HTML to JSX Converter', description: 'Convert HTML to React JSX online.' },
         status: 'published'
     }
@@ -1167,6 +1296,7 @@ export interface Tool {
         description: string;
     };
     hidden?: boolean;
+    group?: string;
 }
 
 // Get all tools
@@ -1180,13 +1310,13 @@ export function getToolBySlug(slug: string): Tool | undefined {
 }
 
 // Get tools organized by categories (Dynamic)
-export const toolCategories: Record<string, { name: string; slug: string }[]> = tools.reduce((acc, tool) => {
+export const toolCategories: Record<string, { name: string; slug: string; group?: string }[]> = tools.reduce((acc, tool) => {
     // Hidden tools are now included in the menu (Navbar)
     const label = categoryMap[tool.category] || tool.category;
     if (!acc[label]) acc[label] = [];
-    acc[label].push({ name: tool.name, slug: tool.slug });
+    acc[label].push({ name: tool.name, slug: tool.slug, group: tool.group });
     return acc;
-}, {} as Record<string, { name: string; slug: string }[]>);
+}, {} as Record<string, { name: string; slug: string; group?: string }[]>);
 
 // Search tools
 export function searchTools(query: string) {

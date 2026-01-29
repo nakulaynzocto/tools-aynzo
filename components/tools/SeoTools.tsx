@@ -134,25 +134,29 @@ ${items}
         <div className="max-w-6xl mx-auto py-4">
             {/* SEO Tool Navigation */}
             <ScrollableNav items={seoNavTools} activeToolId={type} />
-            <div className="bg-card rounded-[2.5rem] border-2 border-border shadow-2xl overflow-hidden min-h-[700px] flex flex-col">
-                <div className="flex-1 grid lg:grid-cols-2">
+            <div className="bg-card rounded-[2.5rem] border-2 border-border shadow-2xl overflow-hidden lg:h-[500px] h-auto flex flex-col">
+                <div className="flex-1 grid lg:grid-cols-2 divide-x-2 divide-border">
                     {/* Form Pane */}
-                    <div className="p-8 border-r-2 border-border space-y-8 h-full overflow-y-auto">
+                    <div className="p-8 space-y-6 h-full overflow-y-auto no-scrollbar bg-muted/5">
                         <section className="space-y-6">
                             {type === 'meta-tag-generator' && (
                                 <div className="space-y-4">
+                                    <div className="flex items-center gap-2 text-primary border-b border-border pb-4">
+                                        <Code size={16} />
+                                        <h4 className="text-[10px] font-black uppercase tracking-widest leading-none">Global Metadata</h4>
+                                    </div>
                                     <div className="grid gap-4">
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground mr-2">Title</label>
-                                            <input value={meta.title} onChange={e => setMeta({ ...meta, title: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none" placeholder="Primary Title" />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Page Title</label>
+                                            <input value={meta.title} onChange={e => setMeta({ ...meta, title: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder="Safe title: 50-60 chars" />
                                         </div>
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground">Description</label>
-                                            <textarea value={meta.description} onChange={e => setMeta({ ...meta, description: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none h-24" placeholder="Brief site info..." />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">SEO Description</label>
+                                            <textarea value={meta.description} onChange={e => setMeta({ ...meta, description: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none h-24 text-sm font-medium leading-relaxed" placeholder="Brief site info..." />
                                         </div>
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground">Keywords</label>
-                                            <input value={meta.keywords} onChange={e => setMeta({ ...meta, keywords: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none" placeholder="seo, free, tool" />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Focus Keywords</label>
+                                            <input value={meta.keywords} onChange={e => setMeta({ ...meta, keywords: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder="comma, separated, tags" />
                                         </div>
                                     </div>
                                 </div>
@@ -160,18 +164,22 @@ ${items}
 
                             {type === 'open-graph-generator' && (
                                 <div className="space-y-4">
+                                    <div className="flex items-center gap-2 text-primary border-b border-border pb-4">
+                                        <Share2 size={16} />
+                                        <h4 className="text-[10px] font-black uppercase tracking-widest leading-none">Social Graph</h4>
+                                    </div>
                                     <div className="grid gap-4">
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground">OG Title</label>
-                                            <input value={og.title} onChange={e => setOg({ ...og, title: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none" />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Share Title</label>
+                                            <input value={og.title} onChange={e => setOg({ ...og, title: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" />
                                         </div>
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground">Image URL</label>
-                                            <input value={og.image} onChange={e => setOg({ ...og, image: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none" placeholder="https://..." />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Thumbnail Preview URL</label>
+                                            <input value={og.image} onChange={e => setOg({ ...og, image: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder="https://..." />
                                         </div>
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground">Description</label>
-                                            <textarea value={og.description} onChange={e => setOg({ ...og, description: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none h-24" />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">OG Description</label>
+                                            <textarea value={og.description} onChange={e => setOg({ ...og, description: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none h-24 text-sm font-medium" />
                                         </div>
                                     </div>
                                 </div>
@@ -179,18 +187,22 @@ ${items}
 
                             {type === 'twitter-card-generator' && (
                                 <div className="space-y-4">
+                                    <div className="flex items-center gap-2 text-primary border-b border-border pb-4">
+                                        <Share2 size={16} />
+                                        <h4 className="text-[10px] font-black uppercase tracking-widest leading-none">X/Twitter Integration</h4>
+                                    </div>
                                     <div className="grid gap-4">
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground">Twitter Handle</label>
-                                            <input value={twitter.site} onChange={e => setTwitter({ ...twitter, site: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none" />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Author Handle</label>
+                                            <input value={twitter.site} onChange={e => setTwitter({ ...twitter, site: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" />
                                         </div>
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground">Card Title</label>
-                                            <input value={twitter.title} onChange={e => setTwitter({ ...twitter, title: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none" />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Card Headline</label>
+                                            <input value={twitter.title} onChange={e => setTwitter({ ...twitter, title: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" />
                                         </div>
-                                        <div className="space-y-1">
-                                            <label className="text-xs font-black uppercase text-muted-foreground">Image URL</label>
-                                            <input value={twitter.image} onChange={e => setTwitter({ ...twitter, image: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input focus:border-blue-500 outline-none" />
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Hero Image URL</label>
+                                            <input value={twitter.image} onChange={e => setTwitter({ ...twitter, image: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" />
                                         </div>
                                     </div>
                                 </div>
@@ -198,89 +210,101 @@ ${items}
 
                             {type === 'robots-txt-generator' && (
                                 <div className="space-y-4">
+                                    <div className="flex items-center gap-2 text-primary border-b border-border pb-4">
+                                        <Settings size={16} />
+                                        <h4 className="text-[10px] font-black uppercase tracking-widest leading-none">Crawler Rules</h4>
+                                    </div>
                                     <div className="space-y-4">
-                                        <div className="flex gap-4">
-                                            <button onClick={() => setRobots({ ...robots, allAgents: true })} className={cn("px-4 py-2 rounded-xl text-xs font-bold transition-all", robots.allAgents ? "bg-primary text-primary-foreground shadow-lg" : "bg-muted text-muted-foreground")}>All Robots</button>
-                                            <button onClick={() => setRobots({ ...robots, allAgents: false })} className={cn("px-4 py-2 rounded-xl text-xs font-bold transition-all", !robots.allAgents ? "bg-primary text-primary-foreground shadow-lg" : "bg-muted text-muted-foreground")}>Googlebot Only</button>
+                                        <div className="flex gap-2">
+                                            <button onClick={() => setRobots({ ...robots, allAgents: true })} className={cn("px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-[0.1em] transition-all", robots.allAgents ? "bg-primary text-white" : "bg-muted text-muted-foreground/50 border border-border")}>All Agents</button>
+                                            <button onClick={() => setRobots({ ...robots, allAgents: false })} className={cn("px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-[0.1em] transition-all", !robots.allAgents ? "bg-primary text-white" : "bg-muted text-muted-foreground/50 border border-border")}>Google Only</button>
                                         </div>
-                                        <input value={robots.allow} onChange={e => setRobots({ ...robots, allow: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input" placeholder="Allow Path" />
-                                        <input value={robots.disallow} onChange={e => setRobots({ ...robots, disallow: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input" placeholder="Disallow Path" />
+                                        <div className="grid gap-4">
+                                            <div className="space-y-1.5">
+                                                <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Allow Indexing</label>
+                                                <input value={robots.allow} onChange={e => setRobots({ ...robots, allow: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card" placeholder="Allow Path" />
+                                            </div>
+                                            <div className="space-y-1.5">
+                                                <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Block Path</label>
+                                                <input value={robots.disallow} onChange={e => setRobots({ ...robots, disallow: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card" placeholder="Disallow Path" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             )}
 
                             {type === 'xml-sitemap-generator' && (
                                 <div className="space-y-4">
-                                    <textarea value={sitemap.urls} onChange={e => setSitemap({ ...sitemap, urls: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-input h-48 font-mono" placeholder="https://example.com/&#10;https://example.com/about" />
+                                    <div className="flex items-center justify-between border-b border-border pb-4">
+                                        <div className="flex items-center gap-2 text-primary">
+                                            <List size={16} />
+                                            <h4 className="text-[10px] font-black uppercase tracking-widest">URL Discovery</h4>
+                                        </div>
+                                    </div>
+                                    <textarea value={sitemap.urls} onChange={e => setSitemap({ ...sitemap, urls: e.target.value })} className="w-full p-4 border-2 border-border rounded-2xl bg-card h-64 font-mono text-xs leading-relaxed focus:border-primary outline-none" placeholder="https://example.com/&#10;https://example.com/about" />
                                 </div>
                             )}
                         </section>
-
                     </div>
 
                     {/* Preview/Output Pane */}
-                    <div className="bg-muted/20 p-8 flex flex-col h-full overflow-hidden border-l-2 border-border">
-                        <div className="flex-1 flex flex-col space-y-10">
-                            {/* Visual Preview */}
+                    <div className="bg-muted px-8 py-6 flex flex-col h-full overflow-hidden">
+                        <div className="flex-1 flex flex-col space-y-6 overflow-y-auto no-scrollbar pr-1">
                             {/* Visual Preview */}
                             {(type === 'open-graph-generator' || type === 'twitter-card-generator' || type === 'meta-tag-generator') && (
-                                <div className="space-y-4">
+                                <div className="space-y-3">
                                     <div className="flex items-center justify-between">
-                                        <h3 className="text-xs font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
-                                            <Eye size={14} className="text-primary" /> Visual Simulation
+                                        <h3 className="text-[9px] font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
+                                            <Eye size={12} className="text-primary" /> Visual Simulation
                                         </h3>
-                                        <span className="px-2 py-0.5 bg-primary/10 text-primary rounded-md text-[10px] font-black uppercase">Live Mockup</span>
+                                        <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-md text-[8px] font-black uppercase tracking-tighter leading-none border border-emerald-500/20">Live Sync</span>
                                     </div>
 
                                     {type === 'meta-tag-generator' ? (
-                                        <div className="bg-card rounded-[1.5rem] border-2 border-border p-6 shadow-sm">
-                                            <div className="font-sans max-w-[600px]">
+                                        <div className="bg-card rounded-2xl border border-border p-5 shadow-sm space-y-3">
+                                            <div className="font-sans">
                                                 <div className="flex items-center gap-3 mb-2">
-                                                    <div className="w-7 h-7 bg-muted rounded-full flex items-center justify-center p-1">
-                                                        <Globe className="w-4 h-4 text-muted-foreground" />
+                                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                                        <Globe className="w-3.5 h-3.5 text-muted-foreground/60" />
                                                     </div>
                                                     <div className="flex flex-col">
-                                                        <span className="text-xs text-foreground font-medium">example.com</span>
-                                                        <span className="text-[10px] text-muted-foreground">https://example.com › page</span>
+                                                        <span className="text-[10px] text-foreground font-bold leading-none">example.com</span>
+                                                        <span className="text-[9px] text-muted-foreground tracking-tight opacity-60">https://example.com › page</span>
                                                     </div>
                                                 </div>
-                                                <h3 className="text-xl text-[#1a0dab] dark:text-[#8ab4f8] hover:underline cursor-pointer font-medium truncate mb-1">
-                                                    {meta.title || 'Page Title | Your Brand'}
+                                                <h3 className="text-lg text-[#1a0dab] dark:text-[#8ab4f8] font-medium leading-tight mb-1">
+                                                    {meta.title || 'Optimal SEO Title for Growth'}
                                                 </h3>
-                                                <p className="text-sm text-[#4d5156] dark:text-[#bdc1c6] leading-relaxed line-clamp-2">
-                                                    {meta.description || 'This is how your page description will appear in search results. Keep it concise, relevant, and engaging to improve your click-through rate.'}
+                                                <p className="text-[13px] text-[#4d5156] dark:text-[#bdc1c6] leading-snug line-clamp-2">
+                                                    {meta.description || 'This meta description will appear in search engine results. Keep it between 150-160 characters for maximum efficiency and click-through rates.'}
                                                 </p>
                                             </div>
                                         </div>
                                     ) : (
-                                        <div className="bg-card rounded-[2.5rem] border-2 border-border shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden group transition-all duration-500 hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)]">
-                                            <div className="aspect-[1200/630] bg-muted relative overflow-hidden flex items-center justify-center">
+                                        <div className="bg-card rounded-3xl border border-border shadow-xl overflow-hidden">
+                                            <div className="aspect-[1200/630] bg-muted/30 relative flex items-center justify-center overflow-hidden">
                                                 {(type === 'open-graph-generator' ? og.image : twitter.image) ? (
-                                                    <img
-                                                        src={type === 'open-graph-generator' ? og.image : twitter.image}
-                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
-                                                        alt="Preview"
-                                                    />
+                                                    <img src={type === 'open-graph-generator' ? og.image : twitter.image} className="w-full h-full object-cover" alt="Preview" />
                                                 ) : (
-                                                    <div className="flex flex-col items-center gap-3 opacity-20">
-                                                        <Share2 size={64} />
-                                                        <span className="font-black text-sm uppercase tracking-widest">Image Mockup</span>
+                                                    <div className="flex flex-col items-center gap-2 opacity-20">
+                                                        <Share2 size={40} />
+                                                        <span className="font-black text-[9px] uppercase tracking-widest">Asset Preview</span>
                                                     </div>
                                                 )}
-                                                <div className="absolute top-6 left-6 px-4 py-2 bg-black/40 backdrop-blur-xl rounded-full text-[10px] text-white font-black border border-white/20 uppercase tracking-widest shadow-2xl">
-                                                    {type === 'open-graph-generator' ? 'Open Graph' : 'X Card'}
+                                                <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[8px] text-white font-black uppercase tracking-widest border border-white/10">
+                                                    {type === 'open-graph-generator' ? 'Open Graph' : 'X-Card'}
                                                 </div>
                                             </div>
-                                            <div className="p-8 space-y-3 bg-gradient-to-b from-card to-muted/10 border-t-2 border-border">
-                                                <div className="flex items-center gap-2 opacity-50">
-                                                    <Globe size={12} />
-                                                    <p className="text-[10px] font-black uppercase tracking-[0.2em]">example.com</p>
+                                            <div className="p-5 space-y-2 bg-card border-t border-border">
+                                                <div className="flex items-center gap-1.5 opacity-40">
+                                                    <Globe size={10} />
+                                                    <p className="text-[9px] font-black uppercase tracking-widest">EXAMPLE.COM</p>
                                                 </div>
-                                                <h4 className="text-2xl font-black leading-tight line-clamp-2 text-foreground tracking-tight">
-                                                    {(type === 'open-graph-generator' ? og.title : twitter.title) || 'Enter a Captivating Title'}
+                                                <h4 className="text-base font-black leading-tight line-clamp-1 text-foreground">
+                                                    {(type === 'open-graph-generator' ? og.title : twitter.title) || 'Compelling Shared Title'}
                                                 </h4>
-                                                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 font-medium opacity-80">
-                                                    {(type === 'open-graph-generator' ? og.description : twitter.description) || 'A brief summary of your content will appear here when your link is shared on social platforms.'}
+                                                <p className="text-[11px] text-muted-foreground leading-snug line-clamp-2 font-medium">
+                                                    {(type === 'open-graph-generator' ? og.description : twitter.description) || 'A brief summary that encourages users to click your link on social platforms.'}
                                                 </p>
                                             </div>
                                         </div>
@@ -290,37 +314,29 @@ ${items}
 
                             {/* Code Output */}
                             <div className="flex-1 flex flex-col min-h-0">
-                                <div className="flex justify-between items-center mb-5">
-                                    <h3 className="text-xs font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
-                                        <Code size={14} className="text-accent" /> Generated Code
+                                <div className="flex justify-between items-center mb-3">
+                                    <h3 className="text-[9px] font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
+                                        <Code size={12} className="text-primary" /> Markup Output
                                     </h3>
                                     {result && (
-                                        <button
-                                            onClick={copyCode}
-                                            className="px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-xl text-xs font-black flex items-center gap-2 transition-all"
-                                        >
-                                            {copied ? <CheckCircle2 size={14} className="text-emerald-500" /> : <Copy size={14} />}
-                                            {copied ? 'COPIED' : 'COPY SNIPPET'}
+                                        <button onClick={copyCode} className={cn("px-4 py-1.5 rounded-xl text-[9px] font-black flex items-center gap-2 transition-all uppercase tracking-widest border", copied ? "bg-emerald-500 text-white border-emerald-500" : "bg-card text-primary border-primary/20 hover:border-primary/50")}>
+                                            {copied ? <CheckCircle2 size={12} /> : <Copy size={12} />}
+                                            {copied ? 'Copied' : 'Copy Snippet'}
                                         </button>
                                     )}
                                 </div>
-                                <div className="flex-1 bg-muted/30 rounded-[2rem] border-2 border-border p-8 font-mono text-sm text-primary overflow-auto shadow-inner relative group group">
+                                <div className="flex-1 bg-card rounded-2xl border border-border p-6 font-mono text-[11px] text-primary overflow-auto shadow-inner relative group">
                                     {result ? (
-                                        <div className="animate-in fade-in duration-500">
+                                        <div className="animate-in fade-in duration-300">
                                             <pre className="whitespace-pre-wrap break-all leading-relaxed opacity-90">{result}</pre>
-                                            <div className="absolute top-4 right-4 text-[10px] font-black text-white/20 group-hover:text-white/40 transition-colors uppercase tracking-[0.25em]">
-                                                {type === 'xml-sitemap-generator' ? 'XML' : 'HTML'}
+                                            <div className="absolute top-3 right-3 text-[8px] font-black text-foreground/10 uppercase tracking-widest">
+                                                {type === 'xml-sitemap-generator' ? 'XML' : 'SOURCE'}
                                             </div>
                                         </div>
                                     ) : (
-                                        <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/40 gap-4">
-                                            <div className="p-4 bg-muted/30 rounded-2xl border border-border">
-                                                <Info size={32} />
-                                            </div>
-                                            <p className="font-black text-xs uppercase tracking-[0.2em] text-center">
-                                                Awaiting Data...<br />
-                                                <span className="text-[10px] font-medium lowercase italic opacity-60 text-muted-foreground/60">Ready to build your metadata</span>
-                                            </p>
+                                        <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/30 gap-3">
+                                            <Info size={24} />
+                                            <p className="font-black text-[9px] uppercase tracking-[0.2em] text-center">Awaiting Data</p>
                                         </div>
                                     )}
                                 </div>

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Upload, FileText, X, Settings, CheckCircle2, RefreshCw, Wand2, FileArchive, Download, Copy } from 'lucide-react';
+import { Upload, FileText, X, Settings, CheckCircle2, RefreshCw, Wand2, FileArchive, Download, Copy, Trash2, Lock } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
@@ -10,7 +10,7 @@ import { PDFDocument } from 'pdf-lib/dist/pdf-lib.min.js';
 import { ScrollableNav } from '@/components/ScrollableNav';
 
 interface PdfToolProps {
-    type: 'pdf-to-word' | 'merge-pdf' | 'split-pdf';
+    type: 'pdf-to-word' | 'merge-pdf' | 'split-pdf' | 'word-to-pdf';
 }
 
 interface ProcessedFile {
@@ -25,6 +25,7 @@ interface ProcessedFile {
 export default function PdfTools({ type }: PdfToolProps) {
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
+    const tTools = useTranslations('Tools');
     const [files, setFiles] = useState<ProcessedFile[]>([]);
     const [dragActive, setDragActive] = useState(false);
     const [processing, setProcessing] = useState(false);
@@ -46,7 +47,7 @@ export default function PdfTools({ type }: PdfToolProps) {
             status: 'pending'
         }));
 
-        if (type === 'split-pdf' || type === 'pdf-to-word') {
+        if (type === 'split-pdf' || type === 'pdf-to-word' || type === 'word-to-pdf') {
             setFiles(prev => [...prev, ...newBatch]);
             if (!selectedFileId && newBatch.length > 0) setSelectedFileId(newBatch[0].id);
         } else {
@@ -257,12 +258,73 @@ export default function PdfTools({ type }: PdfToolProps) {
         }
     };
 
+    const processWordToPdf = async () => {
+        try {
+            const mammoth = await import('mammoth');
+            const { jsPDF } = await import('jspdf');
+
+            const updatedFiles = [...files];
+
+            for (let i = 0; i < updatedFiles.length; i++) {
+                const pf = updatedFiles[i];
+                pf.status = 'processing';
+                setFiles([...updatedFiles]);
+
+                try {
+                    const arrayBuffer = await pf.file.arrayBuffer();
+                    // Extract text using mammoth
+                    const result = await mammoth.extractRawText({ arrayBuffer });
+                    const text = result.value;
+
+                    // Create PDF using jsPDF
+                    const doc = new jsPDF();
+
+                    // Add Title
+                    doc.setFontSize(18);
+                    doc.text(pf.file.name.replace(/\.[^/.]+$/, ""), 15, 20);
+
+                    // Add Body Text with word wrap
+                    doc.setFontSize(11);
+                    const splitText = doc.splitTextToSize(text, 180);
+                    let y = 30;
+
+                    for (let line of splitText) {
+                        if (y > 280) {
+                            doc.addPage();
+                            y = 20;
+                        }
+                        doc.text(line, 15, y);
+                        y += 6;
+                    }
+
+                    const pdfBlob = doc.output('blob');
+                    pf.resultBlob = pdfBlob;
+                    pf.resultName = pf.file.name.replace(/\.[^/.]+$/, "") + ".pdf";
+                    pf.status = 'done';
+
+                    download(pdfBlob, pf.resultName);
+                    toast.success(`Converted: ${pf.file.name}`);
+
+                } catch (error) {
+                    console.error('Word processing error:', error);
+                    pf.status = 'error';
+                    toast.error(`Error converting: ${pf.file.name}`);
+                }
+            }
+            setFiles([...updatedFiles]);
+        } catch (error) {
+            console.error('Initialization error:', error);
+            toast.error('Failed to initialize converter.');
+        }
+    };
+
     const processAll = async () => {
         setProcessing(true);
         try {
             if (type === 'merge-pdf') await processMerge();
             else if (type === 'split-pdf') await processSplit();
             else if (type === 'pdf-to-word') await processPdfToWord();
+            else if (type === 'word-to-pdf') await processWordToPdf();
         } catch (e) {
             toast.error('An unexpected error occurred');
         } finally {
@@ -287,6 +349,7 @@ export default function PdfTools({ type }: PdfToolProps) {
             category: 'Convert',
             tools: [
                 { id: 'pdf-to-word', label: 'PDF to Word', icon: FileText },
+                { id: 'word-to-pdf', label: 'Word to PDF', icon: FileText },
             ]
         },
         {
@@ -299,7 +362,7 @@ export default function PdfTools({ type }: PdfToolProps) {
     ];
 
     return (
-        <div className="max-w-6xl mx-auto space-y-6">
+        <div className="max-w-6xl mx-auto space-y-4">
             {/* PDF Tools Navigation */}
             {/* PDF Tools Navigation */}
             {/* PDF Tools Navigation */}
@@ -310,178 +373,122 @@ export default function PdfTools({ type }: PdfToolProps) {
                 type="file"
                 multiple
                 className="hidden"
-                accept=".pdf"
+                accept={type === 'word-to-pdf' ? ".doc,.docx" : ".pdf"}
                 onChange={(e) => addFiles(e.target.files)}
             />
 
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
-                <div className="p-8">
+                <div className="p-4 md:p-6">
                     {files.length === 0 ? (
                         <div
                             onDragOver={handleDrag} onDragEnter={handleDrag} onDragLeave={handleDrag} onDrop={handleDrop}
-                            onClick={() => document.getElementById('pdf-input')?.click()}
                             className={cn(
-                                "min-h-[280px] border-4 border-dashed rounded-[1.5rem] flex flex-col items-center justify-center transition-all cursor-pointer group hover:border-accent hover:bg-accent/5 py-8",
-                                dragActive ? "border-accent bg-accent/5 scale-[0.99]" : "border-border bg-muted/20"
+                                "min-h-[200px] flex flex-col items-center justify-center transition-all py-6 px-4 relative",
+                                dragActive ? "bg-accent/5" : "bg-transparent"
                             )}
                         >
-                            <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform">
-                                <FileText className="w-8 h-8 text-white" />
-                            </div>
-                            <h2 className="text-lg md:text-2xl font-black text-foreground mb-2 text-center">
-                                {tActions('chooseFile')}
-                            </h2>
-                            <p className="text-muted-foreground text-sm mb-6 text-center px-4 font-medium max-w-lg mx-auto">
-                                {t.rich ? t.rich('dragDrop', {
-                                    b: (chunks) => <span className="text-accent font-bold">{chunks}</span>
-                                }) : t('dragDrop')}
-                                <span className="text-xs opacity-60 block mt-1">Supports PDF</span>
-                            </p>
-
-                            <div className="flex flex-wrap justify-center gap-3">
-                                <div className="px-4 py-1.5 bg-card border border-border rounded-full text-[10px] font-bold text-muted-foreground flex items-center gap-1.5 shadow-sm whitespace-nowrap">
-                                    <CheckCircle2 size={12} className="text-emerald-500" /> {t('privacyGuaranteed')}
+                            <div className="relative z-10 text-center">
+                                <button
+                                    onClick={() => document.getElementById('pdf-input')?.click()}
+                                    className="px-12 py-6 bg-primary text-white dark:bg-gradient-to-r dark:from-sky-500 dark:to-blue-600 dark:border-none text-2xl font-black rounded-2xl shadow-[0_20px_40px_-15px_rgba(var(--primary-rgb),0.4)] dark:shadow-[0_0_30px_-5px_rgba(14,165,233,0.4)] hover:scale-[1.05] hover:shadow-[0_25px_50px_-12px_rgba(var(--primary-rgb),0.5)] dark:hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.5)] active:scale-95 transition-all duration-300"
+                                >
+                                    {tActions('chooseFile')}
+                                </button>
+                                <div className="mt-6 text-muted-foreground font-bold text-sm uppercase tracking-[0.2em] opacity-40">
+                                    or drop files here
                                 </div>
                             </div>
                         </div>
                     ) : (
-                        <div className="grid lg:grid-cols-3 gap-8 items-start">
-                            <div className="lg:col-span-2 space-y-6">
-                                {/* Summary Header */}
-                                <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border flex items-center justify-between">
+                        <div className="grid lg:grid-cols-[1fr,350px] gap-8 items-stretch lg:h-[500px] h-auto">
+                            {/* Main File Management Area */}
+                            <div className="flex flex-col gap-6 h-full min-h-0">
+                                {/* Batch Info Header */}
+                                <div className="flex items-center justify-between bg-muted/50 px-6 py-4 rounded-2xl border border-border">
                                     <div className="flex items-center gap-4">
-                                        <div className="p-3 bg-primary/10 rounded-xl">
-                                            <FileText className="text-primary w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-black text-lg text-foreground">{tActions('filesSelected', { count: files.length })}</h3>
-                                            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{tActions('batchReady')}</p>
+                                        <div className="px-3 py-1 bg-primary/10 text-primary rounded-lg text-[10px] font-black uppercase tracking-widest border border-primary/20">
+                                            {files.length} {tActions('filesSelected', { count: files.length })}
                                         </div>
                                     </div>
-                                    <button onClick={() => setFiles([])} className="text-sm font-black text-destructive hover:bg-destructive/10 px-5 py-2.5 rounded-xl transition-all border border-transparent hover:border-destructive/20">
-                                        {tActions('clearAll')}
-                                    </button>
+                                    <div className="flex items-center gap-4">
+                                        <button onClick={() => document.getElementById('pdf-input')?.click()} className="text-[10px] font-black uppercase tracking-widest text-primary hover:underline flex items-center gap-2">
+                                            <Upload size={14} /> Add More
+                                        </button>
+                                        <button onClick={() => setFiles([])} className="text-[10px] font-black uppercase tracking-widest text-destructive hover:underline uppercase">{tActions('clearAll')}</button>
+                                    </div>
                                 </div>
 
-                                {/* Preview Section */}
-                                {(files.find(f => f.id === selectedFileId)?.file || files[0]?.file) && (
-                                    <div className="bg-card p-4 rounded-3xl border-2 border-border shadow-sm relative overflow-hidden group">
-                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-50" />
-                                        <div className="flex items-center justify-between mb-3">
-                                            <div className="flex items-center gap-2">
-                                                <div className="p-1.5 bg-primary/10 rounded-lg text-primary">
-                                                    <FileText size={14} />
-                                                </div>
-                                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">PDF Preview</span>
-                                            </div>
-                                            <span className="text-[10px] font-bold bg-muted text-muted-foreground px-2 py-0.5 rounded-md truncate max-w-[150px]">
-                                                {files.find(f => f.id === selectedFileId)?.file.name || files[0].file.name}
-                                            </span>
-                                        </div>
-                                        <div className="relative rounded-xl overflow-hidden bg-muted/30 border-2 border-border/50 h-[300px] flex items-center justify-center checkered-bg">
-                                            <iframe
-                                                src={URL.createObjectURL(files.find(f => f.id === selectedFileId)?.file || files[0].file) + "#toolbar=0&view=FitH"}
-                                                className="w-full h-full"
-                                                title="PDF Preview"
-                                            />
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* File List */}
-                                <div className="space-y-3">
-                                    {files.map((file, idx) => (
-                                        <div
-                                            key={file.id}
-                                            onClick={() => setSelectedFileId(file.id)}
-                                            className={cn(
-                                                "bg-card p-4 rounded-xl border-2 flex items-center gap-4 transition-all relative overflow-hidden shadow-sm cursor-pointer",
-                                                (selectedFileId === file.id || (!selectedFileId && idx === 0)) ? "border-primary ring-2 ring-primary/20 bg-primary/5" : "border-border hover:border-primary/50"
-                                            )}
-                                        >
-                                            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 flex-shrink-0">
-                                                <FileText className="text-primary w-6 h-6" />
+                                {/* File List - Internal Scroll */}
+                                <div className="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-1 space-y-3">
+                                    {files.map((file) => (
+                                        <div key={file.id} className={cn("p-5 bg-card rounded-2xl border-2 border-border transition-all flex items-center gap-5 group hover:border-primary/30", file.status === 'done' ? "border-emerald-500/30 bg-emerald-500/5 shadow-[0_0_20px_rgba(16,185,129,0.05)]" : "shadow-sm")}>
+                                            <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center transition-all shadow-lg", file.status === 'done' ? "bg-emerald-500 text-white scale-110" : "bg-primary text-white")}>
+                                                <FileText size={24} />
                                             </div>
                                             <div className="flex-1 min-w-0">
-                                                <p className="font-bold text-sm truncate text-foreground">{file.file.name}</p>
-                                                <p className="text-[10px] text-muted-foreground flex items-center gap-2 uppercase tracking-tight font-black">
-                                                    {(file.file.size / 1024).toFixed(0)} KB
-                                                </p>
-                                            </div>
-                                            <div className="flex items-center gap-2">
-                                                {file.status === 'processing' && <RefreshCw className="w-4 h-4 animate-spin text-accent" />}
-                                                {file.status === 'done' && <CheckCircle2 className="w-4 h-4 text-emerald-500" />}
-                                                {file.status === 'done' && (type === 'pdf-to-word') && (file as any).extractedText && (
-                                                    <button
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            navigator.clipboard.writeText((file as any).extractedText);
-                                                            toast.success('Text copied to clipboard');
-                                                        }}
-                                                        className="p-2 hover:bg-emerald-500/10 text-emerald-500 rounded-lg transition-colors"
-                                                        title="Copy Text"
-                                                    >
-                                                        <Copy size={16} />
-                                                    </button>
-                                                )}
-                                                {file.status === 'error' && <X className="w-4 h-4 text-destructive" />}
-                                                <button onClick={(e) => { e.stopPropagation(); removeFile(file.id); }} className="p-2 hover:bg-destructive/10 text-muted-foreground hover:text-destructive rounded-lg transition-colors">
-                                                    <X size={16} />
-                                                </button>
-                                            </div>
-                                            {/* Order badge for merge */}
-                                            {type === 'merge-pdf' && (
-                                                <div className="absolute left-0 top-0 bg-muted px-2 py-0.5 text-[10px] font-mono text-muted-foreground rounded-br-lg border-r border-b border-border">
-                                                    #{idx + 1}
+                                                <p className="font-bold text-base truncate text-foreground">{file.file.name}</p>
+                                                <div className="flex items-center gap-3 mt-1">
+                                                    <span className="text-[10px] font-black text-muted-foreground uppercase opacity-40">{(file.file.size / 1024).toFixed(0)} KB</span>
+                                                    {file.status === 'done' && <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Ready</span>}
                                                 </div>
-                                            )}
+                                            </div>
+                                            <div className="flex items-center gap-3">
+                                                {file.status === 'processing' && <RefreshCw className="w-5 h-5 animate-spin text-primary" />}
+                                                {file.status === 'done' && <CheckCircle2 className="w-6 h-6 text-emerald-500 animate-in zoom-in-50" />}
+                                                <button onClick={() => removeFile(file.id)} className="p-2.5 hover:bg-destructive/10 text-muted-foreground hover:text-destructive rounded-xl transition-all opacity-0 group-hover:opacity-100"><Trash2 size={18} /></button>
+                                            </div>
                                         </div>
                                     ))}
-
-                                    <button
-                                        onClick={() => document.getElementById('pdf-input')?.click()}
-                                        className="w-full border-2 border-dashed border-border rounded-xl flex items-center justify-center p-4 hover:bg-muted/50 hover:border-accent group transition-all"
-                                    >
-                                        <div className="flex items-center gap-2 text-muted-foreground group-hover:text-accent">
-                                            <Upload size={16} />
-                                            <span className="text-xs font-black uppercase tracking-widest">{t('addMore')}</span>
-                                        </div>
-                                    </button>
                                 </div>
                             </div>
 
-                            {/* Controls */}
-                            <div className="lg:sticky lg:top-8 space-y-6">
-                                <div className="bg-card p-8 rounded-[2rem] border-2 border-border shadow-2xl relative overflow-hidden">
-                                    <h3 className="text-xl font-black mb-8 flex items-center gap-3 text-foreground">
-                                        <Settings className="text-accent" /> {t('settings')}
-                                    </h3>
-
-                                    <div className="space-y-8">
-
-                                        {/* Dynamic content based on type */}
-                                        <div className="p-5 bg-muted/50 rounded-2xl border-2 border-border">
-                                            <p className="text-xs text-muted-foreground font-medium leading-relaxed">
-                                                {type === 'merge-pdf' && "All files will be merged in the order shown."}
-                                                {type === 'split-pdf' && "Each page will be saved as a separate PDF file."}
-                                                {type === 'pdf-to-word' && "Files will be converted to Docx format."}
-                                            </p>
+                            {/* Sidebar Options */}
+                            <div className="h-full flex flex-col gap-6">
+                                <div className="bg-card flex-1 p-8 rounded-[2.5rem] border border-border shadow-2xl flex flex-col">
+                                    <div className="flex-1 space-y-8 overflow-y-auto no-scrollbar pr-1">
+                                        <div className="flex items-center gap-3 text-primary border-b border-border pb-6">
+                                            <Settings className="w-5 h-5" />
+                                            <h4 className="font-black uppercase tracking-[0.2em] text-[13.5px] leading-none">Process Config</h4>
                                         </div>
 
-                                        <button
-                                            onClick={processAll}
-                                            disabled={processing || files.length === 0}
-                                            className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] hover:shadow-primary/20 transition-all flex flex-col items-center justify-center gap-1 disabled:opacity-50 border border-white/10"
-                                        >
-                                            <div className="flex items-center gap-3 text-lg">
-                                                {processing ? (
-                                                    <RefreshCw className="w-6 h-6 animate-spin" />
-                                                ) : (
-                                                    <Wand2 className="w-6 h-6" />
-                                                )}
-                                                {processing ? tActions('processing') : type === 'merge-pdf' ? 'Merge PDFs' : type === 'split-pdf' ? 'Split PDF' : 'Convert to Word'}
+                                        <div className="space-y-6">
+                                            <div className="p-6 bg-muted/50 rounded-2xl border border-border space-y-3">
+                                                <div className="text-[11px] font-black uppercase tracking-widest text-primary">{type === 'merge-pdf' ? 'Merge Sequence' : 'Process Logic'}</div>
+                                                <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+                                                    {type === 'merge-pdf' && "Combined files appear in the exact order as the physical list on the left."}
+                                                    {type === 'split-pdf' && "Extracting every single page into individual standalone documents."}
+                                                    {type === 'pdf-to-word' && "Optimizing document layers for maximum editability in Word files."}
+                                                    {type === 'word-to-pdf' && "Executing high-fidelity PDF render with full CSS text mapping."}
+                                                </p>
                                             </div>
+
+                                            <div className="p-6 bg-emerald-500/5 rounded-2xl border border-emerald-500/10 space-y-2">
+                                                <div className="flex items-center gap-2 text-emerald-500">
+                                                    <Lock size={14} />
+                                                    <span className="text-[11px] font-black uppercase tracking-widest">Encrypted Tunnel</span>
+                                                </div>
+                                                <p className="text-[9px] text-muted-foreground leading-relaxed font-medium opacity-60">
+                                                    Your documents are processed locally in-browser and never stored on any cloud server.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="pt-8 mt-auto space-y-4 border-t border-border">
+                                        <button onClick={processAll} disabled={processing || files.length === 0} className="w-full py-5 bg-primary text-primary-foreground dark:bg-gradient-to-r dark:from-sky-500 dark:to-blue-600 dark:border-none rounded-2xl font-black text-lg shadow-[0_20px_40px_-15px_rgba(var(--primary-rgb),0.4)] dark:shadow-[0_0_30px_-5px_rgba(14,165,233,0.4)] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 transition-all flex items-center justify-center gap-3 border border-white/10">
+                                            {processing ? (
+                                                <RefreshCw className="w-6 h-6 animate-spin" />
+                                            ) : (
+                                                <>
+                                                    {type === 'merge-pdf' ? <FileArchive size={24} /> : <Wand2 size={24} />}
+                                                    <span className="uppercase tracking-[0.05em]">{type === 'merge-pdf' ? 'Merge Now' : type === 'split-pdf' ? 'Split Now' : (type === 'word-to-pdf' ? 'Create PDF' : 'Convert Now')}</span>
+                                                </>
+                                            )}
                                         </button>
+                                        <div className="flex items-center justify-center gap-6 text-[9px] font-black uppercase tracking-widest text-muted-foreground/30">
+                                            <div className="flex items-center gap-1.5"><Lock size={12} /> Privacy First</div>
+                                            <div className="flex items-center gap-1.5"><CheckCircle2 size={12} /> Secure</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -489,6 +496,6 @@ export default function PdfTools({ type }: PdfToolProps) {
                     )}
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
