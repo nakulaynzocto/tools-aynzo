@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Hash, Copy, Check, Download, Lock, RefreshCw, Settings, CheckCircle2 } from 'lucide-react';
+import { Hash, Copy, Check, Download, Lock, RefreshCw, Settings, CheckCircle2, KeyRound, Shield, Binary, Fingerprint, QrCode } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
 import CryptoJS from 'crypto-js';
 import bcrypt from 'bcryptjs';
 import { v4 as uuidv4 } from 'uuid';
@@ -12,6 +13,33 @@ interface CryptoToolsProps {
 }
 
 export default function CryptoTools({ type }: CryptoToolsProps) {
+    // Navigation Configuration
+    const securityNavTools = [
+        {
+            category: 'Security',
+            tools: [
+                { id: 'password-generator', label: 'Password', icon: KeyRound },
+                { id: 'bcrypt-generator', label: 'Bcrypt', icon: Shield },
+            ]
+        },
+        {
+            category: 'Hashing',
+            tools: [
+                { id: 'base64-encoder', label: 'Base64', icon: Binary },
+                { id: 'md5-hash', label: 'MD5', icon: Hash },
+                { id: 'sha256-hash', label: 'SHA256', icon: Hash },
+                { id: 'sha512-hash', label: 'SHA512', icon: Hash },
+            ]
+        },
+        {
+            category: 'Generators',
+            tools: [
+                { id: 'uuid-generator', label: 'UUID', icon: Fingerprint },
+                { id: 'qr-code-generator', label: 'QR Code', icon: QrCode },
+            ]
+        }
+    ];
+
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [mode, setMode] = useState<'encode' | 'decode'>('encode');
@@ -130,6 +158,8 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
 
     return (
         <div className="max-w-6xl mx-auto space-y-6 pb-20">
+            {/* Security Navigation */}
+            <ScrollableNav items={securityNavTools} activeToolId={type} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-8">
                     <div className="space-y-8">
@@ -138,8 +168,8 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                             <div className="bg-muted p-1 rounded-2xl border-2 border-border shadow-inner flex gap-1 w-fit">
                                 <button
                                     className={cn(
-                                        "px-10 py-3 rounded-xl font-black transition-all text-xs uppercase tracking-widest",
-                                        mode === 'encode' ? "bg-card text-primary shadow-lg border border-border" : "text-muted-foreground hover:text-primary"
+                                        "px-10 py-3 rounded-xl font-black transition-all text-xs uppercase tracking-widest border",
+                                        mode === 'encode' ? "bg-primary text-primary-foreground border-primary shadow-lg" : "bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95"
                                     )}
                                     onClick={() => setMode('encode')}
                                 >
@@ -147,8 +177,8 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                                 </button>
                                 <button
                                     className={cn(
-                                        "px-10 py-3 rounded-xl font-black transition-all text-xs uppercase tracking-widest",
-                                        mode === 'decode' ? "bg-card text-primary shadow-lg border border-border" : "text-muted-foreground hover:text-primary"
+                                        "px-10 py-3 rounded-xl font-black transition-all text-xs uppercase tracking-widest border",
+                                        mode === 'decode' ? "bg-primary text-primary-foreground border-primary shadow-lg" : "bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95"
                                     )}
                                     onClick={() => setMode('decode')}
                                 >
@@ -158,7 +188,7 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                         )}
 
                         <div className="grid lg:grid-cols-12 gap-10">
-                            <div className={cn("space-y-6", isQRCode ? "lg:col-span-7" : "lg:col-span-12")}>
+                            <div className={cn("space-y-6", isQRCode ? "lg:col-span-7" : "lg:col-span-6")}>
                                 {showInput && (
                                     <div className="space-y-4">
                                         <div className="flex justify-between items-end">
@@ -166,11 +196,11 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                                             <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} Chars</span>
                                         </div>
                                         <textarea
-                                            className="w-full p-6 border-2 border-border rounded-3xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground placeholder-muted-foreground min-h-[250px] shadow-inner transition-all"
+                                            className="w-full p-6 border-2 border-border rounded-3xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground placeholder-muted-foreground min-h-[300px] shadow-inner transition-all"
                                             placeholder={getPlaceholder()}
                                             value={input}
                                             onChange={e => setInput(e.target.value)}
-                                            rows={6}
+                                            rows={8}
                                         />
                                     </div>
                                 )}
@@ -213,9 +243,8 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                                 )}
                             </div>
 
-                            {/* QR Sidebar */}
-                            {isQRCode && (
-                                <div className="lg:col-span-5">
+                            <div className={cn("space-y-6", isQRCode ? "lg:col-span-5" : "lg:col-span-6")}>
+                                {isQRCode ? (
                                     <div className="bg-muted/30 p-8 rounded-[2rem] border-2 border-border space-y-8 relative overflow-hidden h-full">
                                         <h3 className="text-sm font-black uppercase tracking-widest flex items-center gap-2 text-foreground">
                                             <Settings className="w-4 h-4 text-accent" /> Styles
@@ -240,11 +269,35 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                                                 </div>
                                                 <input type="range" min="0" max="10" value={qrOptions.margin} onChange={e => setQrOptions({ ...qrOptions, margin: parseInt(e.target.value) })} className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-accent" />
                                             </div>
-
                                         </div>
                                     </div>
-                                </div>
-                            )}
+                                ) : (
+                                    <div className="space-y-4 animate-in fade-in slide-in-from-right-4 duration-500">
+                                        <div className="flex items-center justify-between">
+                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Output</label>
+                                            <button
+                                                onClick={copyToClipboard}
+                                                disabled={!output}
+                                                className={cn(
+                                                    "px-4 py-1.5 rounded-xl text-[10px] font-black flex items-center gap-2 transition-all disabled:opacity-30",
+                                                    copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary/10 text-primary hover:bg-primary/20'
+                                                )}
+                                            >
+                                                {copied ? <CheckCircle2 size={12} /> : <Copy size={12} />}
+                                                {copied ? 'COPIED' : 'COPY'}
+                                            </button>
+                                        </div>
+                                        <div className="w-full p-6 bg-muted/30 border-2 border-border rounded-3xl font-mono text-sm break-all text-primary shadow-inner min-h-[300px] whitespace-pre-wrap flex flex-col items-center justify-center">
+                                            {output ? output : (
+                                                <div className="text-muted-foreground/30 flex flex-col items-center gap-2">
+                                                    <RefreshCw className="w-10 h-10 animate-spin-slow opacity-10" />
+                                                    <span className="text-[10px] font-black uppercase tracking-widest">Waiting for input...</span>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                         </div>
 
                         {/* Results section */}
@@ -262,23 +315,7 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
                             </div>
                         )}
 
-                        {output && !isQRCode && (
-                            <div className="space-y-6 mt-10">
-                                <div className="flex items-center justify-between">
-                                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Output</h3>
-                                    <button
-                                        onClick={copyToClipboard}
-                                        className={`px-4 py-2 rounded-xl text-xs font-black flex items-center gap-2 ${copied ? 'bg-emerald-500/10 text-emerald-500' : 'bg-primary/10 text-primary'}`}
-                                    >
-                                        {copied ? <CheckCircle2 size={14} /> : <Copy size={14} />}
-                                        {copied ? 'COPIED' : 'COPY'}
-                                    </button>
-                                </div>
-                                <div className="p-8 bg-muted/50 border-2 border-border rounded-[2rem] font-mono text-base break-all text-primary shadow-inner">
-                                    {output}
-                                </div>
-                            </div>
-                        )}
+
                     </div>
                 </div>
             </div>

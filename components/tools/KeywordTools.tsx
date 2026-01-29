@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { List, RefreshCw, Copy, Settings, Info, Hash } from 'lucide-react';
+import { List, RefreshCw, Copy, Settings, Info, Hash, Search, Globe, Share2, FileText, Code, Link as LinkIcon } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
 interface KeywordToolProps {
@@ -12,6 +13,36 @@ interface KeywordToolProps {
 }
 
 export default function KeywordTools({ type }: KeywordToolProps) {
+    // Navigation Configuration (Shared with SeoTools)
+    const seoNavTools = [
+        {
+            category: 'Meta & Optimisation',
+            tools: [
+                { id: 'meta-tag-generator', label: 'Meta Tags', icon: Code },
+                { id: 'open-graph-generator', label: 'Open Graph', icon: Share2 },
+                { id: 'twitter-card-generator', label: 'Twitter Card', icon: Share2 },
+                { id: 'robots-txt-generator', label: 'Robots.txt', icon: Settings },
+                { id: 'xml-sitemap-generator', label: 'Sitemap', icon: List },
+            ]
+        },
+        {
+            category: 'Keywords',
+            tools: [
+                { id: 'keyword-density-checker', label: 'Density', icon: Hash },
+                { id: 'keyword-cleaner', label: 'Cleaner', icon: RefreshCw },
+                { id: 'long-tail-keyword-generator', label: 'Long Tail', icon: Search },
+                { id: 'slug-generator', label: 'Slug', icon: LinkIcon },
+            ]
+        },
+        {
+            category: 'Webmaster',
+            tools: [
+                { id: 'google-serp-simulator', label: 'SERP Sim', icon: Globe },
+                { id: 'htaccess-redirect-generator', label: '.htaccess', icon: Settings },
+            ]
+        }
+    ];
+
     const [input, setInput] = useState('');
     const [result, setResult] = useState<any>(null);
     const [loading, setLoading] = useState(false);
@@ -94,6 +125,8 @@ export default function KeywordTools({ type }: KeywordToolProps) {
 
     return (
         <div className="max-w-6xl mx-auto space-y-6">
+            {/* SEO Tool Navigation */}
+            <ScrollableNav items={seoNavTools} activeToolId={type} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
                 <div className="p-8">

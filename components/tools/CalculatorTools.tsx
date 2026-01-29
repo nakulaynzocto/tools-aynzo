@@ -1,13 +1,38 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Calculator, Calendar, Activity, Percent, IndianRupee, Banknote, Tag, RefreshCw, Copy, CheckCircle2 } from 'lucide-react';
+import { Calculator, Calendar, Activity, Percent, IndianRupee, Banknote, Tag, RefreshCw, Copy, CheckCircle2, DollarSign, PieChart } from 'lucide-react';
 import { cn } from '@/utils/cn';
+import { ScrollableNav } from '@/components/ScrollableNav';
 
 interface CalculatorToolsProps {
     type: 'age-calculator' | 'bmi-calculator' | 'percentage-calculator' | 'gst-calculator' | 'emi-calculator' | 'discount-calculator';
 }
 
 export default function CalculatorTools({ type }: CalculatorToolsProps) {
+    const calculatorNavTools = [
+        {
+            category: 'Health & Life',
+            tools: [
+                { id: 'age-calculator', label: 'Age', icon: Calendar },
+                { id: 'bmi-calculator', label: 'BMI', icon: Activity },
+            ]
+        },
+        {
+            category: 'Finance',
+            tools: [
+                { id: 'gst-calculator', label: 'GST', icon: DollarSign },
+                { id: 'emi-calculator', label: 'EMI', icon: PieChart },
+                { id: 'discount-calculator', label: 'Discount', icon: Percent },
+            ]
+        },
+        {
+            category: 'Math',
+            tools: [
+                { id: 'percentage-calculator', label: 'Percentage', icon: Calculator },
+            ]
+        }
+    ];
+
     const [result, setResult] = useState<any>(null);
     const [copied, setCopied] = useState(false);
 
@@ -123,7 +148,9 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
     };
 
     return (
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-6xl mx-auto space-y-6">
+            {/* Calculator Navigation */}
+            <ScrollableNav items={calculatorNavTools} activeToolId={type} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden p-8">
                 <div className="grid lg:grid-cols-2 gap-10">
                     {/* INPUTS */}

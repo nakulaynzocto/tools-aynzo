@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
-import { Copy, Download, Type, Settings, Info, CheckCircle2 } from 'lucide-react';
+import { Copy, Download, Type, Settings, Info, CheckCircle2, Monitor, Smartphone, Globe2, AtSign } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
 interface UtilityToolsProps {
@@ -8,6 +9,30 @@ interface UtilityToolsProps {
 }
 
 export default function UtilityTools({ type }: UtilityToolsProps) {
+    const utilityNavTools = [
+        {
+            category: 'Device & Network',
+            tools: [
+                { id: 'my-ip-address', label: 'My IP', icon: Globe2 },
+                { id: 'browser-info', label: 'Browser Info', icon: Info },
+            ]
+        },
+        {
+            category: 'Design & Layout',
+            tools: [
+                { id: 'screen-resolution-simulator', label: 'Screen Res', icon: Monitor },
+                { id: 'responsive-checker', label: 'Responsive', icon: Smartphone },
+            ]
+        },
+        {
+            category: 'Content',
+            tools: [
+                { id: 'lorem-ipsum', label: 'Lorem Ipsum', icon: Type },
+                { id: 'email-validator', label: 'Email Validator', icon: AtSign },
+            ]
+        }
+    ];
+
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [copied, setCopied] = useState(false);
@@ -85,6 +110,8 @@ export default function UtilityTools({ type }: UtilityToolsProps) {
 
     return (
         <div className="max-w-6xl mx-auto space-y-6 pb-20">
+            {/* Utility Navigation */}
+            <ScrollableNav items={utilityNavTools} activeToolId={type} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
                 <div className="p-8">

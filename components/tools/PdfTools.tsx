@@ -1,12 +1,13 @@
 "use client";
-import { useState } from 'react';
-import { Upload, FileText, X, Settings, CheckCircle2, RefreshCw, Wand2, FileArchive, Download } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Upload, FileText, X, Settings, CheckCircle2, RefreshCw, Wand2, FileArchive, Download, Copy } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
 import JSZip from 'jszip';
 // @ts-ignore
 import { PDFDocument } from 'pdf-lib/dist/pdf-lib.min.js';
+import { ScrollableNav } from '@/components/ScrollableNav';
 
 interface PdfToolProps {
     type: 'pdf-to-word' | 'merge-pdf' | 'split-pdf';
@@ -18,6 +19,7 @@ interface ProcessedFile {
     status: 'pending' | 'processing' | 'done' | 'error';
     resultBlob?: Blob;
     resultName?: string;
+    extractedText?: string;
 }
 
 export default function PdfTools({ type }: PdfToolProps) {
@@ -134,15 +136,125 @@ export default function PdfTools({ type }: PdfToolProps) {
         }
     };
 
+    // PDF.js is loaded via CDN script tag to avoid webpack bundling issues
+    // Using jsDelivr CDN with a stable version that's known to work
+    const PDFJS_CDN = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build';
+    const [pdfjsLoaded, setPdfjsLoaded] = useState(false);
+
+    useEffect(() => {
+        // Check if already loaded
+        if ((window as any).pdfjsLib) {
+            setPdfjsLoaded(true);
+            return;
+        }
+
+        // Load PDF.js from CDN
+        const script = document.createElement('script');
+        script.src = `${PDFJS_CDN}/pdf.min.js`;
+        script.async = true;
+        script.onload = () => {
+            // Set worker source
+            (window as any).pdfjsLib.GlobalWorkerOptions.workerSrc = `${PDFJS_CDN}/pdf.worker.min.js`;
+            setPdfjsLoaded(true);
+        };
+        script.onerror = () => {
+            console.error('Failed to load PDF.js');
+            toast.error('Failed to load PDF library');
+        };
+        document.head.appendChild(script);
+
+        return () => {
+            // Cleanup if needed
+        };
+    }, []);
+
     const processPdfToWord = async () => {
-        // Placeholder for PDF to Word
-        // This is complex client-side. 
-        // We will simulate a "processing" and then maybe fail or show informative toast.
+        if (!pdfjsLoaded || !(window as any).pdfjsLib) {
+            toast.error('PDF library not loaded. Please refresh the page.');
+            return;
+        }
 
-        toast.error("Client-side PDF to Word conversion is limited. Please connect a backend API.");
+        try {
+            // Dynamic import for docx library
+            const { Document, Packer, Paragraph, TextRun } = await import('docx');
+            const pdfjsLib = (window as any).pdfjsLib;
 
-        // Mark as error to show feedback
-        setFiles(files.map(f => ({ ...f, status: 'error' })));
+            const updatedFiles = [...files];
+
+            for (let i = 0; i < updatedFiles.length; i++) {
+                const pf = updatedFiles[i];
+                pf.status = 'processing';
+                setFiles([...updatedFiles]);
+
+                try {
+                    const arrayBuffer = await pf.file.arrayBuffer();
+                    const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+                    const numPages = pdf.numPages;
+                    const paragraphs: any[] = [];
+
+                    // Process each page
+                    for (let j = 1; j <= numPages; j++) {
+                        const page = await pdf.getPage(j);
+                        const textContent = await page.getTextContent();
+
+                        // Extract and filter text items
+                        const textItems = textContent.items
+                            .filter((item: any) => item.str && item.str.trim())
+                            .map((item: any) => item.str);
+
+                        const pageText = textItems.join(' ');
+
+                        // Accumulate text for copy function
+                        if (pageText.trim()) {
+                            (pf as any).extractedText = ((pf as any).extractedText || '') + pageText + '\n\n';
+                        }
+
+                        // Add page header for multi-page documents
+                        if (numPages > 1) {
+                            paragraphs.push(new Paragraph({
+                                children: [new TextRun({ text: `— Page ${j} —`, bold: true, size: 24 })],
+                                spacing: { before: 400, after: 200 }
+                            }));
+                        }
+
+                        // Add extracted text
+                        if (pageText.trim()) {
+                            paragraphs.push(new Paragraph({
+                                children: [new TextRun({ text: pageText, size: 22 })],
+                                spacing: { after: 200 }
+                            }));
+                        }
+                    }
+
+                    // Create Word document
+                    const doc = new Document({
+                        sections: [{
+                            properties: {},
+                            children: paragraphs.length > 0 ? paragraphs : [
+                                new Paragraph({ children: [new TextRun('No text content found in this PDF.')] })
+                            ],
+                        }],
+                    });
+
+                    const blob = await Packer.toBlob(doc);
+                    pf.resultBlob = blob;
+                    pf.resultName = pf.file.name.replace('.pdf', '.docx');
+                    pf.status = 'done';
+
+                    download(blob, pf.resultName);
+                    toast.success(`Successfully converted: ${pf.file.name}`);
+
+                } catch (error) {
+                    console.error('PDF processing error:', error);
+                    pf.status = 'error';
+                    toast.error(`Failed to convert: ${pf.file.name}`);
+                }
+            }
+            setFiles([...updatedFiles]);
+        } catch (error) {
+            console.error('Conversion error:', error);
+            toast.error('Failed to initialize converter. Please try again.');
+        }
     };
 
     const processAll = async () => {
@@ -167,8 +279,32 @@ export default function PdfTools({ type }: PdfToolProps) {
         URL.revokeObjectURL(url);
     };
 
+
+    // Navigation Tools Configuration
+    // Navigation Tools Configuration
+    const pdfNavTools = [
+        {
+            category: 'Convert',
+            tools: [
+                { id: 'pdf-to-word', label: 'PDF to Word', icon: FileText },
+            ]
+        },
+        {
+            category: 'Organize',
+            tools: [
+                { id: 'merge-pdf', label: 'Merge', icon: FileArchive },
+                { id: 'split-pdf', label: 'Split', icon: FileArchive },
+            ]
+        }
+    ];
+
     return (
         <div className="max-w-6xl mx-auto space-y-6">
+            {/* PDF Tools Navigation */}
+            {/* PDF Tools Navigation */}
+            {/* PDF Tools Navigation */}
+            <ScrollableNav items={pdfNavTools} activeToolId={type} />
+
             <input
                 id="pdf-input"
                 type="file"
@@ -275,6 +411,19 @@ export default function PdfTools({ type }: PdfToolProps) {
                                             <div className="flex items-center gap-2">
                                                 {file.status === 'processing' && <RefreshCw className="w-4 h-4 animate-spin text-accent" />}
                                                 {file.status === 'done' && <CheckCircle2 className="w-4 h-4 text-emerald-500" />}
+                                                {file.status === 'done' && (type === 'pdf-to-word') && (file as any).extractedText && (
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            navigator.clipboard.writeText((file as any).extractedText);
+                                                            toast.success('Text copied to clipboard');
+                                                        }}
+                                                        className="p-2 hover:bg-emerald-500/10 text-emerald-500 rounded-lg transition-colors"
+                                                        title="Copy Text"
+                                                    >
+                                                        <Copy size={16} />
+                                                    </button>
+                                                )}
                                                 {file.status === 'error' && <X className="w-4 h-4 text-destructive" />}
                                                 <button onClick={(e) => { e.stopPropagation(); removeFile(file.id); }} className="p-2 hover:bg-destructive/10 text-muted-foreground hover:text-destructive rounded-lg transition-colors">
                                                     <X size={16} />

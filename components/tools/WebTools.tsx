@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Globe, Code, Monitor, Smartphone, Eye, Server, RefreshCw, Copy, ExternalLink, Shield, Settings, Info, Check, Search, CheckCircle2, ZoomIn } from 'lucide-react';
+import { Globe, Code, Monitor, Smartphone, Eye, Server, RefreshCw, Copy, ExternalLink, Shield, Settings, Info, Check, Search, CheckCircle2, ZoomIn, Share2, FileText, List, Hash, Link as LinkIcon, Type, AtSign, Globe2, RotateCcw } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
 interface WebToolProps {
@@ -14,6 +15,63 @@ interface WebToolProps {
 }
 
 export default function WebTools({ type }: WebToolProps) {
+    // Navigation Configuration
+    const seoNavTools = [
+        {
+            category: 'Meta & Optimisation',
+            tools: [
+                { id: 'meta-tag-generator', label: 'Meta Tags', icon: Code },
+                { id: 'open-graph-generator', label: 'Open Graph', icon: Share2 },
+                { id: 'twitter-card-generator', label: 'Twitter Card', icon: Share2 },
+                { id: 'robots-txt-generator', label: 'Robots.txt', icon: Settings },
+                { id: 'xml-sitemap-generator', label: 'Sitemap', icon: List },
+            ]
+        },
+        {
+            category: 'Keywords',
+            tools: [
+                { id: 'keyword-density-checker', label: 'Density', icon: Hash },
+                { id: 'keyword-cleaner', label: 'Cleaner', icon: RefreshCw },
+                { id: 'long-tail-keyword-generator', label: 'Long Tail', icon: Search },
+                { id: 'slug-generator', label: 'Slug', icon: LinkIcon },
+            ]
+        },
+        {
+            category: 'Webmaster',
+            tools: [
+                { id: 'google-serp-simulator', label: 'SERP Sim', icon: Globe },
+                { id: 'htaccess-redirect-generator', label: '.htaccess', icon: Settings },
+            ]
+        }
+    ];
+
+    const utilityNavTools = [
+        {
+            category: 'Device & Network',
+            tools: [
+                { id: 'my-ip-address', label: 'My IP', icon: Globe2 },
+                { id: 'browser-info', label: 'Browser Info', icon: Info },
+            ]
+        },
+        {
+            category: 'Design & Layout',
+            tools: [
+                { id: 'screen-resolution-simulator', label: 'Screen Res', icon: Monitor },
+                { id: 'responsive-checker', label: 'Responsive', icon: Smartphone },
+            ]
+        },
+        {
+            category: 'Content',
+            tools: [
+                { id: 'lorem-ipsum', label: 'Lorem Ipsum', icon: Type },
+                { id: 'email-validator', label: 'Email Validator', icon: AtSign },
+            ]
+        }
+    ];
+
+    const isSeoTool = seoNavTools.some(cat => cat.tools.some(t => t.id === type));
+    const isUtilityTool = utilityNavTools.some(cat => cat.tools.some(t => t.id === type));
+
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState<any>(null);
     const [copied, setCopied] = useState(false);
@@ -210,6 +268,10 @@ export default function WebTools({ type }: WebToolProps) {
 
     return (
         <div className="max-w-6xl mx-auto space-y-6 pb-20">
+            {/* Tool Navigation */}
+            {(isSeoTool || isUtilityTool) && (
+                <ScrollableNav items={isSeoTool ? seoNavTools : utilityNavTools} activeToolId={type} />
+            )}
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-8">
                     {/* SERP SIMULATOR */}
@@ -271,37 +333,52 @@ export default function WebTools({ type }: WebToolProps) {
 
                     {/* REDIRECT GENERATOR */}
                     {type === 'htaccess-redirect-generator' && (
-                        <div className="space-y-10">
-                            <div className="grid md:grid-cols-3 gap-6">
-                                <div className="space-y-3">
-                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Type</label>
-                                    <select value={redirect.type} onChange={e => setRedirect({ ...redirect, type: e.target.value })} className="w-full p-5 border-2 border-border rounded-2xl bg-input font-black text-sm appearance-none outline-none focus:border-accent">
-                                        <option value="301">301 - Permanent</option>
-                                        <option value="302">302 - Temporary</option>
-                                    </select>
-                                </div>
-                                <div className="space-y-3">
-                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Source Path</label>
-                                    <input value={redirect.from} onChange={e => setRedirect({ ...redirect, from: e.target.value })} className="w-full p-5 border-2 border-border rounded-2xl bg-input font-bold" placeholder="/old-link" />
-                                </div>
-                                <div className="space-y-3">
-                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Destination</label>
-                                    <input value={redirect.to} onChange={e => setRedirect({ ...redirect, to: e.target.value })} className="w-full p-5 border-2 border-border rounded-2xl bg-input font-bold" placeholder="https://new-link.com" />
+                        <div className="grid lg:grid-cols-2 gap-10">
+                            <div className="space-y-6">
+                                <div className="bg-muted/30 p-8 rounded-[2rem] border-2 border-border space-y-6 relative overflow-hidden h-full">
+                                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                                        <Settings size={14} /> Redirection Settings
+                                    </h3>
+                                    <div className="space-y-4">
+                                        <div className="space-y-2">
+                                            <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Type</label>
+                                            <select value={redirect.type} onChange={e => setRedirect({ ...redirect, type: e.target.value })} className="w-full p-4 border-2 border-border rounded-xl bg-input font-black text-sm appearance-none outline-none focus:border-accent">
+                                                <option value="301">301 - Permanent</option>
+                                                <option value="302">302 - Temporary</option>
+                                            </select>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Source Path</label>
+                                            <input value={redirect.from} onChange={e => setRedirect({ ...redirect, from: e.target.value })} className="w-full p-4 border-2 border-border rounded-xl bg-input font-bold" placeholder="/old-link" />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Destination</label>
+                                            <input value={redirect.to} onChange={e => setRedirect({ ...redirect, to: e.target.value })} className="w-full p-4 border-2 border-border rounded-xl bg-input font-bold" placeholder="https://newsite.com/link" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            {result && (
-                                <div className="space-y-4 animate-in slide-in-from-bottom-10">
-                                    <div className="flex justify-between items-center px-2">
-                                        <span className="text-[10px] font-black uppercase text-muted-foreground tracking-[0.2em]">Apache Config Output</span>
-                                        <button onClick={() => copy(result)} className={`px-4 py-2 rounded-xl text-[10px] font-black flex items-center gap-2 transition-all ${copied ? 'bg-emerald-500/10 text-emerald-500' : 'bg-primary/10 text-primary hover:bg-primary/20'}`}>
+
+                            <div className="space-y-6 flex flex-col h-full">
+                                <div className="flex justify-between items-center">
+                                    <h3 className="text-xs font-black uppercase text-muted-foreground tracking-widest">Apache Config Output</h3>
+                                    {result && (
+                                        <button onClick={() => copy(result)} className={cn("px-4 py-1.5 rounded-xl text-[10px] font-black flex items-center gap-2 transition-all", copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary/10 text-primary hover:bg-primary/20')}>
                                             {copied ? <CheckCircle2 size={12} /> : <Copy size={12} />} {copied ? 'COPIED' : 'COPY ALL'}
                                         </button>
-                                    </div>
-                                    <div className="p-8 bg-muted/50 border-2 border-border rounded-[2rem] font-mono text-sm text-emerald-500 shadow-2xl overflow-x-auto">
-                                        <pre>{result}</pre>
-                                    </div>
+                                    )}
                                 </div>
-                            )}
+                                <div className="flex-1 p-8 bg-muted/30 border-2 border-border rounded-3xl font-mono text-sm text-primary shadow-inner min-h-[300px] flex flex-col items-center justify-center">
+                                    {result ? (
+                                        <pre className="w-full whitespace-pre-wrap break-all">{result}</pre>
+                                    ) : (
+                                        <div className="flex flex-col items-center gap-2 text-muted-foreground/30">
+                                            <RotateCcw className="w-10 h-10 animate-spin-slow opacity-10" />
+                                            <span className="text-[10px] font-black uppercase tracking-widest">Waiting for input...</span>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     )}
 
@@ -375,7 +452,7 @@ export default function WebTools({ type }: WebToolProps) {
                                             onClick={() => handleResolutionChange(device)}
                                             className={cn(
                                                 "px-6 py-3 rounded-2xl flex items-center gap-3 transition-all",
-                                                resolution.label === device.label ? "bg-card shadow-xl text-primary border border-border" : "text-muted-foreground hover:bg-card/50"
+                                                resolution.label === device.label ? "bg-primary shadow-xl text-primary-foreground border-2 border-primary" : "bg-transparent border border-border text-foreground hover:bg-primary/10 hover:border-primary active:scale-95"
                                             )}
                                         >
                                             <device.icon size={18} />

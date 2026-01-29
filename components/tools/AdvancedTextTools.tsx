@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Copy, Download, RotateCcw, Search, Settings, Type, ArrowRightLeft, Trash2, ArrowDownAZ, Repeat, CheckCircle2 } from 'lucide-react';
+import { Copy, Download, RotateCcw, Search, Settings, Type, ArrowRightLeft, Trash2, ArrowDownAZ, Repeat, CheckCircle2, ChevronRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { ScrollableNav } from '@/components/ScrollableNav';
 
 
 interface AdvancedTextToolsProps {
@@ -47,6 +48,24 @@ export default function AdvancedTextTools({ type }: AdvancedTextToolsProps) {
             K: 'ʞ', L: '˥', M: 'W', N: 'N', O: 'O', P: 'Ԁ', Q: 'Ό', R: 'ɹ', S: 'S', T: '⊥',
             U: '∩', V: 'Λ', W: 'M', X: 'X', Y: '⅄', Z: 'Z',
         },
+        bold: {
+            a: '𝐚', b: '𝐛', c: '𝐜', d: '𝐝', e: '𝐞', f: '𝐟', g: '𝐠', h: '𝐡', i: '𝐢', j: '𝐣',
+            k: '𝐤', l: '𝐥', m: '𝐦', n: '𝐧', o: '𝐨', p: '𝐩', q: '𝐪', r: '𝐫', s: '𝐬', t: '𝐭',
+            u: '𝐮', v: '𝐯', w: '𝐰', x: '𝐱', y: '𝐲', z: '𝐳',
+            A: '𝐀', B: '𝐁', C: '𝐂', D: '𝐃', E: '𝐄', F: '𝐅', G: '𝐆', H: '𝐇', I: '𝐈', J: '𝐉',
+            K: '𝐊', L: '𝐋', M: '𝐌', N: '𝐍', O: '𝐎', P: '𝐏', Q: '𝐐', R: '𝐑', S: '𝐒', T: '𝐓',
+            U: '𝐔', V: '𝐕', W: '𝐖', X: '𝐗', Y: '𝐘', Z: '𝐙',
+            0: '𝟎', 1: '𝟏', 2: '𝟐', 3: '𝟑', 4: '𝟒', 5: '𝟓', 6: '𝟔', 7: '𝟕', 8: '𝟖', 9: '𝟗'
+        },
+        cursive: {
+            a: '𝒶', b: '𝒷', c: '𝒸', d: '𝒹', e: 'ℯ', f: '𝒻', g: 'ℊ', h: '𝒽', i: '𝒾', j: '𝒿',
+            k: '𝓀', l: '𝓁', m: '𝓂', n: '𝓃', o: 'ℴ', p: '𝓅', q: '𝓆', r: '𝓇', s: '𝓈', t: '𝓉',
+            u: '𝓊', v: '𝓋', w: '𝓌', x: '𝓍', y: '𝓎', z: '𝓏',
+            A: '𝒜', B: 'ℬ', C: '𝒞', D: '𝒟', E: 'ℰ', F: 'ℱ', G: '𝒢', H: 'ℋ', I: 'ℐ', J: '𝒥',
+            K: '𝒦', L: 'ℒ', M: 'ℳ', N: '𝒩', O: '𝒪', P: '𝒫', Q: '𝒬', R: 'ℛ', S: '𝒮', T: '𝒯',
+            U: '𝒰', V: '𝒱', W: '𝒲', X: '𝒳', Y: '𝒴', Z: '𝒵'
+        },
+        doubleUnderline: (char: string) => char + '\u0333',
     };
 
     useEffect(() => {
@@ -65,6 +84,15 @@ export default function AdvancedTextTools({ type }: AdvancedTextToolsProps) {
                 break;
             case 'underline-text':
                 result = input.split('').map(char => unicodeMaps.underline(char)).join('');
+                break;
+            case 'double-underline-text':
+                result = input.split('').map(char => unicodeMaps.doubleUnderline(char)).join('');
+                break;
+            case 'bold-text':
+                result = input.split('').map(char => (unicodeMaps.bold as any)[char] || char).join('');
+                break;
+            case 'cursive-text':
+                result = input.split('').map(char => (unicodeMaps.cursive as any)[char] || char).join('');
                 break;
             case 'small-text':
                 result = input.split('').map(char => (unicodeMaps.small as any)[char] || char).join('');
@@ -164,14 +192,44 @@ export default function AdvancedTextTools({ type }: AdvancedTextToolsProps) {
             case 'sort-alphabetically': return { icon: ArrowDownAZ, label: t('sortAZ') };
             case 'duplicate-line-remover': return { icon: Trash2, label: t('removeDuplicates') };
             case 'find-replace': return { icon: Search, label: t('findReplace') };
+            case 'bold-text': return { icon: Type, label: t('boldText') };
+            case 'cursive-text': return { icon: Type, label: t('cursiveText') };
+            case 'double-underline-text': return { icon: Type, label: t('doubleUnderline') };
             default: return { icon: Settings, label: t('textTool') };
         }
     };
 
     const toolInfo = getToolInfo();
 
+    // Define text style tools for the group navigation
+    const textStyleTools = [
+        { id: 'bold-text', icon: '𝐁', label: 'Bold' },
+        { id: 'italic-text', icon: '𝐼', label: 'Italic' },
+        { id: 'cursive-text', icon: '𝒞', label: 'Cursive' },
+        { id: 'underline-text', icon: 'U̲', label: 'Underline' },
+        { id: 'double-underline-text', icon: 'U̳', label: 'Double' },
+        { id: 'strikethrough-text', icon: 'S̶', label: 'Strike' },
+        { id: 'small-text', icon: 'Sₘ', label: 'Small' },
+        { id: 'upside-down-text', icon: 'uʍoᗡ', label: 'Flip' },
+        { id: 'mirror-text', icon: 'ЯR', label: 'Mirror' },
+    ];
+
+    const navItems = [
+        {
+            category: 'Styles',
+            tools: textStyleTools
+        }
+    ];
+
+    const isTextStyleTool = textStyleTools.some(t => t.id === type);
+
     return (
         <div className="max-w-6xl mx-auto space-y-6 animate-in fade-in duration-500">
+            {/* Text Style Navigation Tabs */}
+            {isTextStyleTool && (
+                <ScrollableNav items={navItems} activeToolId={type} />
+            )}
+
             {/* Premium Header */}
 
             <div className="grid lg:grid-cols-2 gap-6">

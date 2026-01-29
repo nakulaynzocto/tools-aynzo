@@ -1,7 +1,9 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Download, Copy, Link as LinkIcon, Play, Settings, RefreshCw, Info, Video, Check } from 'lucide-react';
+
+import { Download, Copy, Link as LinkIcon, Play, Settings, RefreshCw, Info, Video, Check, Image, Tags, Type, Code, Clock } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { ScrollableNav } from '@/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
 interface YouTubeToolProps {
@@ -14,6 +16,18 @@ interface YouTubeToolProps {
 }
 
 export default function YouTubeTools({ type }: YouTubeToolProps) {
+    const youtubeNavTools = [
+        {
+            category: 'YouTube Tools',
+            tools: [
+                { id: 'youtube-thumbnail-downloader', label: 'Thumbnail', icon: Image },
+                { id: 'youtube-tag-generator', label: 'Tags', icon: Tags },
+                { id: 'youtube-title-generator', label: 'Titles', icon: Type },
+                { id: 'youtube-embed-code-generator', label: 'Embed', icon: Code },
+                { id: 'youtube-timestamp-link-generator', label: 'Timestamp', icon: Clock },
+            ]
+        }
+    ];
     const t = useTranslations('YouTubeTools');
     const [input, setInput] = useState('');
     const [result, setResult] = useState<any>(null);
@@ -123,9 +137,7 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
         return () => clearTimeout(timeoutId);
     }, [input, type, settings]);
 
-    const handleProcess = () => {
-        // Logic moved to useEffect
-    };
+
 
 
     const copyToClipboard = (text: string, index?: number) => {
@@ -193,6 +205,8 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
 
     return (
         <div className="max-w-6xl mx-auto space-y-6">
+            {/* YouTube Navigation */}
+            <ScrollableNav items={youtubeNavTools} activeToolId={type} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
                 <div className="p-8">
@@ -237,12 +251,12 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
                             </div>
                         </div>
 
-                        <div className="space-y-6">
+                        <div className="space-y-6 flex flex-col h-full">
                             <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('generatedOutput')}</h3>
 
                             {/* Live Preview for Embed Code */}
                             {type === 'youtube-embed-code-generator' && result && (
-                                <div className="bg-card rounded-2xl border-2 border-border p-4 shadow-lg animate-in fade-in slide-in-from-top-4 duration-500">
+                                <div className="bg-card rounded-2xl border-2 border-border p-4 shadow-lg animate-in fade-in slide-in-from-top-4 duration-500 mb-6">
                                     <div className="flex items-center gap-2 mb-3">
                                         <div className="p-1.5 bg-red-500/10 rounded-lg text-red-500">
                                             <Play size={12} fill="currentColor" />
@@ -254,7 +268,7 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
                             )}
 
                             {result ? (
-                                <div className="animate-in fade-in slide-in-from-right-5 duration-500">
+                                <div className="flex-1 animate-in fade-in slide-in-from-right-5 duration-500">
                                     {/* Thumbnail Results */}
                                     {type === 'youtube-thumbnail-downloader' && (
                                         <div className="grid grid-cols-1 gap-4 overflow-y-auto max-h-[600px] pr-2 custom-scrollbar">
@@ -282,7 +296,7 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
 
                                     {/* Tag Results */}
                                     {type === 'youtube-tag-generator' && (
-                                        <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border relative group">
+                                        <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border relative group flex flex-col flex-1">
                                             <div className="flex justify-between items-center mb-4">
                                                 <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">{t('seoTags')}</span>
                                                 <button onClick={() => copyToClipboard(result)} className={cn("text-xs font-black flex items-center gap-1 transition-all", copied ? "text-emerald-500" : "text-primary hover:text-accent")}>
@@ -290,7 +304,7 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
                                                     {copied ? 'Copied!' : t('copyAll')}
                                                 </button>
                                             </div>
-                                            <div className="p-4 bg-card rounded-xl border-2 border-border font-mono text-sm break-all text-foreground pr-12 min-h-[200px] shadow-inner">
+                                            <div className="flex-1 p-4 bg-card rounded-xl border-2 border-border font-mono text-sm break-all text-foreground pr-12 min-h-[200px] shadow-inner overflow-y-auto">
                                                 {result}
                                             </div>
                                         </div>
@@ -320,7 +334,7 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
 
                                     {/* Embed Code & Link Results */}
                                     {(type === 'youtube-embed-code-generator' || type === 'youtube-timestamp-link-generator') && (
-                                        <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4">
+                                        <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4 h-full flex flex-col">
                                             <div className="flex justify-between items-center">
                                                 <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">{t(type.includes('embed') ? 'generatedCode' : 'generatedLink')}</span>
                                                 <button onClick={() => copyToClipboard(result)} className={cn("text-xs font-black flex items-center gap-1 transition-all", copied ? "text-emerald-500" : "text-primary hover:text-accent")}>
@@ -328,7 +342,7 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
                                                     {copied ? 'Copied!' : t('copy')}
                                                 </button>
                                             </div>
-                                            <div className="p-6 bg-muted/50 rounded-2xl font-mono text-sm text-primary overflow-x-auto shadow-inner border-2 border-border">
+                                            <div className="flex-1 p-6 bg-muted/50 rounded-2xl font-mono text-sm text-primary overflow-x-auto shadow-inner border-2 border-border">
                                                 {result}
                                             </div>
                                             {type.includes('link') && (
@@ -340,7 +354,7 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
                                     )}
                                 </div>
                             ) : (
-                                <div className="h-full min-h-[300px] bg-muted/10 border-2 border-dashed border-border rounded-[2rem] flex flex-col items-center justify-center text-muted-foreground gap-4 opacity-50">
+                                <div className="flex-1 min-h-[300px] bg-muted/10 border-2 border-dashed border-border rounded-[2rem] flex flex-col items-center justify-center text-muted-foreground gap-4 opacity-50">
                                     <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
                                         <Video size={32} />
                                     </div>

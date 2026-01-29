@@ -9,6 +9,8 @@ import JSZip from 'jszip';
 import ReactCrop, { type Crop, type PixelCrop, centerCrop, makeAspectCrop } from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
 
+import { ScrollableNav } from '@/components/ScrollableNav';
+
 // Helper for centering crop
 function centerAspectCrop(mediaWidth: number, mediaHeight: number, aspect: number) {
     return centerCrop(
@@ -413,8 +415,53 @@ export default function ImageTools({ type }: ImageToolProps) {
     }, [files, selectedFileId, rotation, flipH, flipV, filterValue, color, size, width, height, maintainAspectRatio, targetFormat, type]);
 
 
+
+    // Navigation Tools Configuration
+    const imageNavTools = [
+        {
+            category: 'Edit',
+            tools: [
+                { id: 'image-compressor', label: 'Compress', icon: FileArchive },
+                { id: 'image-resizer', label: 'Resize', icon: Sliders },
+                { id: 'image-cropper', label: 'Crop', icon: Upload },
+                { id: 'rotate-image', label: 'Rotate', icon: RotateCw },
+                { id: 'flip-image', label: 'Flip', icon: MoveHorizontal },
+            ]
+        },
+        {
+            category: 'Convert',
+            tools: [
+                { id: 'jpg-to-png', label: 'JPG to PNG', icon: ImageIcon },
+                { id: 'png-to-jpg', label: 'PNG to JPG', icon: ImageIcon },
+                { id: 'webp-converter', label: 'WebP', icon: ImageIcon },
+                { id: 'svg-to-png', label: 'SVG to PNG', icon: ImageIcon },
+                { id: 'image-to-base64', label: 'Base64', icon: FileArchive },
+            ]
+        },
+        {
+            category: 'Effects',
+            tools: [
+                { id: 'blur-image', label: 'Blur', icon: Wand2 },
+                { id: 'grayscale-image', label: 'Grayscale', icon: Wand2 },
+                { id: 'round-corners-image', label: 'Round', icon: CheckCircle2 },
+                { id: 'image-brightness', label: 'Bright', icon: Zap },
+            ]
+        }
+    ];
+
+    const isImageTool = imageNavTools.some(cat => cat.tools.some(t => t.id === type));
+
+
     return (
         <div className="max-w-6xl mx-auto space-y-6">
+            {/* Image Tools Navigation */}
+            {isImageTool && (
+                <>
+                    {/* Image Tools Navigation - Updated with ScrollableNav */}
+                    <ScrollableNav items={imageNavTools} activeToolId={type} />
+                </>
+            )}
+
             <input id="image-input" type="file" multiple={isBatchSupported} className="hidden" accept="image/*" onChange={(e) => addFiles(e.target.files)} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 

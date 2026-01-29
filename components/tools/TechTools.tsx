@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Check, RefreshCw, Copy } from 'lucide-react';
+import { Check, RefreshCw, Copy, Code, Link2, FileJson, FileText, FileCode, Braces, Split, Terminal, Minimize2, Search } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
+import { cn } from '@/utils/cn';
 
 
 interface TechToolProps {
@@ -11,6 +13,40 @@ interface TechToolProps {
 }
 
 export default function TechTools({ type }: TechToolProps) {
+    // Navigation Configuration (Shared with DevTools)
+    const devNavTools = [
+        {
+            category: 'Formatters',
+            tools: [
+                { id: 'json-formatter', label: 'JSON', icon: FileJson },
+                { id: 'html-formatter', label: 'HTML', icon: Code },
+                { id: 'css-formatter', label: 'CSS', icon: FileCode },
+                { id: 'javascript-formatter', label: 'JS', icon: Braces },
+                { id: 'xml-formatter', label: 'XML', icon: FileCode },
+                { id: 'sql-formatter', label: 'SQL', icon: FileText },
+            ]
+        },
+        {
+            category: 'Converters',
+            tools: [
+                { id: 'markdown-to-html', label: 'MD to HTML', icon: FileText },
+                { id: 'html-to-markdown', label: 'HTML to MD', icon: Code },
+                { id: 'csv-to-json', label: 'CSV to JSON', icon: FileText },
+                { id: 'html-to-jsx', label: 'HTML to JSX', icon: Code },
+            ]
+        },
+        {
+            category: 'Utilities',
+            tools: [
+                { id: 'url-encoder-decoder', label: 'URL Encoder', icon: Link2 },
+                { id: 'diff-checker', label: 'Diff Checker', icon: Split },
+                { id: 'user-agent-parser', label: 'User Agent', icon: Terminal },
+                { id: 'code-minifier', label: 'Minifier', icon: Minimize2 },
+                { id: 'regex-tester', label: 'Regex Tester', icon: Search },
+            ]
+        }
+    ];
+
     const [input, setInput] = useState('');
     const [result, setResult] = useState<any>(null);
     const [loading, setLoading] = useState(false);
@@ -69,9 +105,7 @@ export default function TechTools({ type }: TechToolProps) {
         return () => clearTimeout(timeoutId);
     }, [input, type]);
 
-    const handleProcess = () => {
-        // Kept for reference
-    };
+
 
     const copyToClipboard = () => {
         const text = typeof result === 'string' ? result : JSON.stringify(result, null, 2);
@@ -82,6 +116,8 @@ export default function TechTools({ type }: TechToolProps) {
 
     return (
         <div className="max-w-4xl mx-auto space-y-6">
+            {/* Dev Tools Navigation */}
+            <ScrollableNav items={devNavTools} activeToolId={type} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-8 space-y-8">
                     <div>

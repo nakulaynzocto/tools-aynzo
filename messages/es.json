@@ -3,7 +3,8 @@
         "title": "Herramientas Gratuitas para Desarrolladores",
         "description": "Una colección de herramientas simples, rápidas y seguras para tus tareas diarias.",
         "noAds": "Sin anuncios, sin seguimiento, solo herramientas.",
-        "toolsCount": "{count} Herramientas"
+        "toolsCount": "{count} Herramientas",
+        "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Potencia tu Flujo de Trabajo Digital con Aynzo Tools</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  Bienvenido a <strong>Aynzo Tools</strong>, tu destino definitivo de <strong>herramientas online gratuitas</strong> de alta calidad, diseñadas para simplificar tus tareas digitales diarias. En un mundo donde la productividad es fundamental, ofrecemos un entorno limpio, rápido y seguro para manejar desde conversiones de archivos complejas hasta formateo de texto simple. Nuestra misión es ofrecer una plataforma profesional de \"utilidades como servicio\" que elimine la necesidad de software costoso o alternativas llenas de anuncios.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Una Suite Completa de Utilidades Online</h3>\n<p class=\"text-muted-foreground mb-6\">\n  En Aynzo Tools, categorizamos nuestras ofertas para ayudarte a encontrar exactamente lo que necesitas en segundos:\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">Conversor de Imágenes Online y Editores:</strong> Nuestra suite de imágenes está diseñada para la velocidad. Ya sea que necesites un <strong>conversor de imágenes online</strong> para cambiar entre JPG, PNG y WebP, o necesites comprimir fotos para optimización web, te tenemos cubierto. También puedes recortar, rotar y añadir filtros con cero pérdida de calidad.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Herramientas PDF Esenciales:</strong> Los documentos no deberían ser un problema. Nuestras <strong>herramientas PDF gratuitas</strong> te permiten convertir PDFs a Word, combinar archivos o extraer imágenes sin comprometer la integridad del documento.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Utilidades de Texto y Programación:</strong> Para desarrolladores y escritores, ofrecemos formateadores de texto avanzados, conversores de mayúsculas/minúsculas y minificadores de código. Valide tu JSON, embellece tu CSS o convierte Markdown a HTML con un solo clic.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Herramientas de SEO y Redes Sociales:</strong> Posiciónate mejor y comparte más. Usa nuestros generadores de meta-tags, verificadores de densidad de palabras clave y descargadores de miniaturas de YouTube para ganar una ventaja competitiva en los resultados de búsqueda.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">¿Por qué Elegir Aynzo Tools?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Internet está lleno de sitios \"gratuitos\" que rastrean tus datos o te bombardean con anuncios intrusivos. Aynzo Tools es diferente. Priorizamos la <strong>Privacidad y Seguridad</strong>, asegurando que tus archivos se procesen localmente o se eliminen inmediatamente después de su uso. Nuestra plataforma es <strong>100% Libre de Anúncios</strong>, lo que significa que puedes concentrarte en tu trabajo sin distracciones. Cada herramienta está optimizada para un <strong>Rendimiento Ultra Rápido</strong>, utilizando las últimas tecnologías web para entregar resultados en milisegundos.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">¿Para quién es Aynzo Tools?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Nuestra plataforma está meticulosamente diseñada para:\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Desarrolladores:</strong> Depuración rápida de código, formateo de datos o generación de hashes.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Creadores de Contenido:</strong> Optimización de imágenes, análisis de SEO y activos sociales.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Estudiantes y Profesionales:</strong> Conversión de documentos y cálculos rápidos.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Usuarios Cotidianos:</strong> Herramientas utilitarias online simples que solo funcionan.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"Deja de saltar entre docenas de pestañas. Añade Aynzo Tools a tus marcadores hoy y experimenta el poder de una suite de herramientas profesional directamente en tu navegador.\"\n  </p>\n</div>"
     },
     "App": {
         "name": "AYNZO",
@@ -61,12 +62,13 @@
         "viewAll": "Ver todas las herramientas",
         "backToTools": "Volver a herramientas",
         "image-compressor": {
-            "name": "Compresor de Imágenes",
-            "description": "Comprime imágenes JPG, PNG y WebP sin pérdida de calidad.",
-            "seoTitle": "Compresor de Imágenes - Herramienta Gratuita Online",
-            "seoDescription": "Comprime imágenes sin pérdida de calidad. 100% gratis, rápido y seguro.",
-            "seoKeywords": "compresor imágenes, comprimir imagen, herramienta gratuita",
-            "seoH1": "Compresor de Imágenes"
+            "name": "Compresor de Imágenes Online",
+            "description": "Comprime imágenes JPG, PNG y WebP sin perder calidad.",
+            "seoTitle": "Compresor de Imágenes Online Gratis: Reducir Tamaño de Fotos",
+            "seoDescription": "Optimiza tus imágenes con nuestro guía experto. Comprime JPG, PNG y WebP online gratis sin perder calidad. Procesamiento 100% privado en tu navegador.",
+            "seoKeywords": "compresor de imágenes online gratis, reducir tamaño imagen sin perder calidad, optimizar fotos para web, comprimir jpeg online",
+            "seoH1": "Compresor de Imágenes Online Gratis: La Guía Definitiva de Optimización",
+            "content": "\n<p>En el mundo digital actual, la velocidad es clave. Las imágenes pesadas ralentizan tu sitio web y afectan negativamente tu SEO. El <strong>Compresor de Imágenes Aynzo</strong> te permite reducir el tamaño de tus archivos drásticamente sin sacrificar la nitidez.</p>\n\n<h2>¿Por qué comprimir tus imágenes?</h2>\n<ul>\n    <li><strong>Velocidad de Carga:</strong> Google premia a los sitios rápidos. Imágenes ligeras significan mejores posiciones en buscadores.</li>\n    <li><strong>Ahorro de Datos:</strong> Ideal para usuarios móviles que navegan con planes de datos limitados.</li>\n    <li><strong>Privacidade Total:</strong> A diferencia de otros sitios, nosotros no subimos tus fotos a ningún servidor. Todo ocurre en tu propio navegador.</li>\n</ul>\n"
         },
         "image-resizer": {
             "name": "Redimensionador de Imágenes",
@@ -733,12 +735,13 @@
             "seoH1": "Generador de Incrustación YouTube"
         },
         "youtube-timestamp-link-generator": {
-            "name": "Enlace con Marca de Tiempo YouTube",
-            "description": "Crea enlaces que comienzan en un momento específico.",
-            "seoTitle": "Generador de Enlace con Marca de Tiempo YouTube",
-            "seoDescription": "Inicia el video en el punto exacto.",
-            "seoKeywords": "enlace marca tiempo youtube",
-            "seoH1": "Enlace con Marca de Tiempo YouTube"
+            "name": "Enlace con Timestamp de YouTube",
+            "description": "Crea enlaces que comienzan en un momento específico del vídeo.",
+            "seoTitle": "Generador de Enlaces con Timestamp de YouTube: Comparte Momentos Exactos",
+            "seoDescription": "Crea enlaces personalizados de YouTube que comienzan exactamente donde tú quieras. Mejora el engagement y el SEO de tus vídeos compartidos.",
+            "seoKeywords": "enlace timestamp youtube, compartir tiempo específico youtube, generador de links youtube tiempo, crear enlace minuto exacto",
+            "seoH1": "Generador de Enlaces con Timestamp de YouTube: Precisión al Compartir",
+            "content": "\n<p>¿Quieres compartir solo la parte divertida de un vídeo largo? Nuestra herramienta te permite generar un enlace que salta directamente al segundo exacto. Ahorra tiempo a tus espectadores y ve directo al grano.</p>\n\n<h2>Ventajas de usar Timestamps</h2>\n<ul>\n    <li><strong>Mejor Retención:</strong> Los usuarios ven exactamente lo que les prometiste, evitando que abandonen el vídeo.</li>\n    <li><strong>SEO en Google:</strong> Google suele mostrar \"Momentos clave\" en los resultados de búsqueda basados en estos parámetros.</li>\n    <li><strong>Privacidad:</strong> No guardamos tus enlaces ni rastreamos tus preferencias. Todo el proceso es anónimo y seguro.</li>\n</ul>\n"
         },
         "meta-tag-generator": {
             "name": "Generador de Meta Tags",
@@ -790,11 +793,12 @@
         },
         "keyword-cleaner": {
             "name": "Limpiador de Palabras Clave",
-            "description": "Limpia listas de palabras clave.",
-            "seoTitle": "Limpiador de Lista de Palabras Clave",
-            "seoDescription": "Elimina duplicados y basura.",
-            "seoKeywords": "limpiador palabras clave",
-            "seoH1": "Limpiador de Palabras Clave"
+            "description": "Limpia y organiza tus listas de palabras clave para SEO y SEM.",
+            "seoTitle": "Limpiador de Listas de Palabras Clave: Eliminar Duplicados Gratis",
+            "seoDescription": "Limpia listas masivas de palabras clave al instante. Elimina duplicados, líneas vacías y espacios extra con 100% de privacidad. Ideal para gestores de Google Ads.",
+            "seoKeywords": "limpiador de palabras clave, eliminar duplicados keywords, herramienta seo gratis, ppc keyword list cleaner",
+            "seoH1": "Limpiador de Palabras Clave: Datos Limpios para mejores Campañas",
+            "content": "\n<p>La higiene de datos es fundamental en el marketing digital. Al trabajar con grandes volúmenes de palabras clave para SEO o PPC, los duplicados pueden ensuciar tus informes y hacerte perder tiempo. El <strong>Limpiador de Palabras Clave Aynzo</strong> procesa tus listas en milisegundos de forma segura y privada.</p>\n\n<h2>Funciones Principales</h2>\n<ul>\n    <li><strong>Eliminar Duplicados:</strong> Limpia tu lista de términos repetidos automáticamente.</li>\n    <li><strong>Eliminar Espacios:</strong> Corrige errores de formato y espacios accidentais.</li>\n    <li><strong>Velocidade y Privacidad:</strong> Sin esperas y sin que tus palabras clave salgan de tu navegador.</li>\n</ul>\n"
         },
         "long-tail-keyword-generator": {
             "name": "Generador de Palabras Clave Long Tail",

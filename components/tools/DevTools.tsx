@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Code, Link2, Copy, CheckCircle2, Download, FileJson, FileText, FileCode, Minimize2, Maximize2, AlertCircle, X } from 'lucide-react';
+import { Code, Link2, Copy, CheckCircle2, Download, FileJson, FileText, FileCode, Minimize2, Maximize2, AlertCircle, X, Split, Braces, Terminal, Search } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
+import { cn } from '@/utils/cn';
 
 
 interface DevToolsProps {
@@ -8,6 +10,40 @@ interface DevToolsProps {
 }
 
 export default function DevTools({ type }: DevToolsProps) {
+  // Navigation Configuration
+  const devNavTools = [
+    {
+      category: 'Formatters',
+      tools: [
+        { id: 'json-formatter', label: 'JSON', icon: FileJson },
+        { id: 'html-formatter', label: 'HTML', icon: Code },
+        { id: 'css-formatter', label: 'CSS', icon: FileCode },
+        { id: 'javascript-formatter', label: 'JS', icon: Braces },
+        { id: 'xml-formatter', label: 'XML', icon: FileCode },
+        { id: 'sql-formatter', label: 'SQL', icon: FileText },
+      ]
+    },
+    {
+      category: 'Converters',
+      tools: [
+        { id: 'markdown-to-html', label: 'MD to HTML', icon: FileText },
+        { id: 'html-to-markdown', label: 'HTML to MD', icon: Code },
+        { id: 'csv-to-json', label: 'CSV to JSON', icon: FileText },
+        { id: 'html-to-jsx', label: 'HTML to JSX', icon: Code },
+      ]
+    },
+    {
+      category: 'Utilities',
+      tools: [
+        { id: 'url-encoder-decoder', label: 'URL Encoder', icon: Link2 },
+        { id: 'diff-checker', label: 'Diff Checker', icon: Split },
+        { id: 'user-agent-parser', label: 'User Agent', icon: Terminal },
+        { id: 'code-minifier', label: 'Minifier', icon: Minimize2 },
+        { id: 'regex-tester', label: 'Regex Tester', icon: Search },
+      ]
+    }
+  ];
+
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [mode, setMode] = useState<'encode' | 'decode'>('encode');
@@ -232,6 +268,8 @@ export default function DevTools({ type }: DevToolsProps) {
 
   return (
     <div className="max-w-6xl mx-auto space-y-6">
+      {/* Dev Tools Navigation */}
+      <ScrollableNav items={devNavTools} activeToolId={type} />
       <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
         <div className="p-8 space-y-8">
@@ -239,9 +277,9 @@ export default function DevTools({ type }: DevToolsProps) {
             {type === 'json-formatter' && (
               <div className="bg-muted p-1 rounded-xl border-2 border-border shadow-sm flex gap-1">
                 <button
-                  className={`px-5 py-2 rounded-lg font-bold transition-all flex items-center gap-2 text-sm ${jsonMode === 'beautify'
-                    ? 'bg-primary text-white shadow-md'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-card'
+                  className={`px-5 py-2 rounded-lg font-bold transition-all flex items-center gap-2 text-sm border ${jsonMode === 'beautify'
+                    ? 'bg-primary text-primary-foreground border-primary shadow-lg'
+                    : 'bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95'
                     }`}
                   onClick={() => setJsonMode('beautify')}
                 >
@@ -249,9 +287,9 @@ export default function DevTools({ type }: DevToolsProps) {
                   Beautify
                 </button>
                 <button
-                  className={`px-5 py-2 rounded-lg font-bold transition-all flex items-center gap-2 text-sm ${jsonMode === 'minify'
-                    ? 'bg-primary text-white shadow-md'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-card'
+                  className={`px-5 py-2 rounded-lg font-bold transition-all flex items-center gap-2 text-sm border ${jsonMode === 'minify'
+                    ? 'bg-primary text-primary-foreground border-primary shadow-lg'
+                    : 'bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95'
                     }`}
                   onClick={() => setJsonMode('minify')}
                 >
@@ -264,18 +302,18 @@ export default function DevTools({ type }: DevToolsProps) {
             {type === 'url-encoder-decoder' && (
               <div className="bg-muted p-1 rounded-xl border-2 border-border shadow-sm flex gap-1">
                 <button
-                  className={`px-6 py-2 rounded-lg font-bold transition-all text-sm ${mode === 'encode'
-                    ? 'bg-primary text-white shadow-md'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-card'
+                  className={`px-6 py-2 rounded-lg font-bold transition-all text-sm border ${mode === 'encode'
+                    ? 'bg-primary text-primary-foreground border-primary shadow-lg'
+                    : 'bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95'
                     }`}
                   onClick={() => handleModeChange('encode')}
                 >
                   Encode
                 </button>
                 <button
-                  className={`px-6 py-2 rounded-lg font-bold transition-all text-sm ${mode === 'decode'
-                    ? 'bg-primary text-white shadow-md'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-card'
+                  className={`px-6 py-2 rounded-lg font-bold transition-all text-sm border ${mode === 'decode'
+                    ? 'bg-primary text-primary-foreground border-primary shadow-lg'
+                    : 'bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95'
                     }`}
                   onClick={() => handleModeChange('decode')}
                 >
@@ -337,22 +375,24 @@ export default function DevTools({ type }: DevToolsProps) {
           )}
 
           {/* Input/Output Grid */}
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Input Panel */}
-            <div className="bg-muted/30 rounded-2xl border-2 border-border overflow-hidden">
-              <div className="bg-muted px-4 py-3 flex items-center gap-2 border-b border-border">
-                {type === 'json-formatter' ? (
-                  <Code className="h-4 w-4 text-primary" />
-                ) : (
-                  <Link2 className="h-4 w-4 text-primary" />
-                )}
-                <h3 className="text-foreground font-bold text-sm uppercase tracking-wider">Input</h3>
+            <div className="bg-muted/30 rounded-[2.5rem] border-2 border-border overflow-hidden shadow-inner flex flex-col min-h-[500px]">
+              <div className="p-6 flex items-center gap-3 border-b-2 border-border bg-muted/50">
+                <div className="p-2 bg-primary/10 rounded-xl">
+                  {type === 'json-formatter' ? (
+                    <Code className="h-5 w-5 text-primary" />
+                  ) : (
+                    <Link2 className="h-5 w-5 text-primary" />
+                  )}
+                </div>
+                <h3 className="text-foreground font-black text-sm uppercase tracking-[0.2em]">Input Area</h3>
               </div>
               <textarea
-                className="w-full h-[300px] md:h-[450px] p-4 text-sm leading-relaxed resize-none focus:outline-none text-foreground bg-input font-mono"
+                className="flex-1 w-full p-8 text-sm leading-relaxed resize-none focus:outline-none text-foreground bg-input font-mono placeholder:opacity-30"
                 placeholder={
                   type === 'json-formatter'
-                    ? 'Paste your JSON here...\\n\\nExample:\\n{"name":"John","age":30}'
+                    ? 'Paste your JSON here...\n\nExample:\n{"name":"John","age":30}'
                     : mode === 'encode'
                       ? 'Enter URL to encode...'
                       : 'Enter encoded URL to decode...'
@@ -363,29 +403,31 @@ export default function DevTools({ type }: DevToolsProps) {
             </div>
 
             {/* Output Panel */}
-            <div className="bg-muted/30 rounded-2xl border-2 border-border overflow-hidden">
-              <div className="bg-muted px-4 py-3 flex items-center justify-between border-b border-border">
-                <div className="flex items-center gap-2">
-                  {type === 'json-formatter' ? (
-                    <FileJson className="h-4 w-4 text-accent" />
-                  ) : (
-                    <Link2 className="h-4 w-4 text-accent" />
-                  )}
-                  <h3 className="text-foreground font-bold text-sm uppercase tracking-wider">Output</h3>
+            <div className="bg-muted/30 rounded-[2.5rem] border-2 border-border overflow-hidden shadow-inner flex flex-col min-h-[500px]">
+              <div className="p-6 flex items-center justify-between border-b-2 border-border bg-muted/50">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-accent/10 rounded-xl">
+                    {type === 'json-formatter' ? (
+                      <FileJson className="h-5 w-5 text-accent" />
+                    ) : (
+                      <Link2 className="h-5 w-5 text-accent" />
+                    )}
+                  </div>
+                  <h3 className="text-foreground font-black text-sm uppercase tracking-[0.2em]">Output Result</h3>
                 </div>
                 {output && (
                   <button
                     onClick={handleCopy}
-                    className={`px-4 py-2 rounded-lg transition-all font-bold flex items-center gap-2 text-xs ${copied ? 'bg-emerald-500 text-white' : 'bg-primary text-white'}`}
+                    className={`px-6 py-2 rounded-xl transition-all font-black flex items-center gap-3 text-xs ${copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary text-white hover:scale-105 active:scale-95'}`}
                   >
-                    {copied ? <CheckCircle2 className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
-                    {copied ? 'Copied!' : 'Copy'}
+                    {copied ? <CheckCircle2 className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    {copied ? 'COPIED' : 'COPY ALL'}
                   </button>
                 )}
               </div>
               <textarea
                 readOnly
-                className="w-full h-[300px] md:h-[450px] p-4 text-sm leading-relaxed resize-none focus:outline-none text-foreground bg-input font-mono"
+                className="flex-1 w-full p-8 text-sm leading-relaxed resize-none focus:outline-none text-foreground bg-input font-mono placeholder:opacity-20"
                 value={output}
                 placeholder="Output will appear here..."
               />

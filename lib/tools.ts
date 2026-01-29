@@ -16,7 +16,8 @@ export const tools = [
         description: 'Resize your images to exact pixel dimensions or percentage.',
         category: 'image',
         seo: { title: 'Free Image Resizer', description: 'Resize images online for free.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '3',
@@ -25,7 +26,8 @@ export const tools = [
         description: 'Convert JPG images to PNG format with transparent background support.',
         category: 'image',
         seo: { title: 'JPG to PNG Converter', description: 'Convert JPG to PNG online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '4',
@@ -34,7 +36,8 @@ export const tools = [
         description: 'Convert PNG images to JPG format instantly.',
         category: 'image',
         seo: { title: 'PNG to JPG Converter', description: 'Convert PNG to JPG online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '5',
@@ -43,7 +46,8 @@ export const tools = [
         description: 'Convert images to and from WebP format for web optimization.',
         category: 'image',
         seo: { title: 'WebP Image Converter', description: 'Convert to WebP format.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '6',
@@ -52,7 +56,8 @@ export const tools = [
         description: 'Convert between JPG, PNG, WebP and other formats.',
         category: 'image',
         seo: { title: 'Universal Image Converter', description: 'Convert image formats online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '7',
@@ -61,7 +66,8 @@ export const tools = [
         description: 'Convert images to Base64 strings for embedding.',
         category: 'image',
         seo: { title: 'Image to Base64', description: 'Convert image to Base64 string.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '8',
@@ -70,7 +76,8 @@ export const tools = [
         description: 'Crop images online with custom aspect ratios.',
         category: 'image',
         seo: { title: 'Image Cropper', description: 'Crop images online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '100',
@@ -79,7 +86,8 @@ export const tools = [
         description: 'Flip images horizontally or vertically online.',
         category: 'image',
         seo: { title: 'Flip Image Online', description: 'Flip pictures horizontally or vertically.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '101',
@@ -88,7 +96,8 @@ export const tools = [
         description: 'Rotate images 90, 180, or 270 degrees online.',
         category: 'image',
         seo: { title: 'Rotate Image Online', description: 'Rotate photos quickly and easily.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '102',
@@ -97,7 +106,8 @@ export const tools = [
         description: 'Upscale small images without losing quality.',
         category: 'image',
         seo: { title: 'Image Enlarger', description: 'Enlarge images online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '103',
@@ -106,7 +116,8 @@ export const tools = [
         description: 'Adjust the brightness of your photos online.',
         category: 'image',
         seo: { title: 'Adjust Image Brightness', description: 'Change image brightness online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '104',
@@ -115,7 +126,8 @@ export const tools = [
         description: 'Adjust the contrast of your photos online.',
         category: 'image',
         seo: { title: 'Adjust Image Contrast', description: 'Change image contrast online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '105',
@@ -124,7 +136,8 @@ export const tools = [
         description: 'Convert color photos to black and white.',
         category: 'image',
         seo: { title: 'Grayscale Image Converter', description: 'Make images black and white.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '106',
@@ -133,7 +146,8 @@ export const tools = [
         description: 'Add blur effect to your images online.',
         category: 'image',
         seo: { title: 'Blur Image Online', description: 'Blur photos easily.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '107',
@@ -142,7 +156,8 @@ export const tools = [
         description: 'Apply a vintage sepia filter to your photos.',
         category: 'image',
         seo: { title: 'Sepia Image Filter', description: 'Add sepia effect to photos.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '108',
@@ -151,7 +166,8 @@ export const tools = [
         description: 'Invert the colors of your image (negative effect).',
         category: 'image',
         seo: { title: 'Invert Image Colors', description: 'Create negative images online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '109',
@@ -160,7 +176,8 @@ export const tools = [
         description: 'Adjust the color saturation of your photos.',
         category: 'image',
         seo: { title: 'Adjust Image Saturation', description: 'Change photo saturation online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '110',
@@ -169,7 +186,8 @@ export const tools = [
         description: 'Shift the hue of your images for creative effects.',
         category: 'image',
         seo: { title: 'Hue Rotate Image', description: 'Change image colors with hue rotation.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '111',
@@ -178,7 +196,8 @@ export const tools = [
         description: 'Change the transparency/opacity of your images.',
         category: 'image',
         seo: { title: 'Change Image Opacity', description: 'Adjust image transparency online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '112',
@@ -187,7 +206,8 @@ export const tools = [
         description: 'Add rounded corners to your images.',
         category: 'image',
         seo: { title: 'Round Image Corners', description: 'Make circular or rounded images.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '113',
@@ -196,7 +216,8 @@ export const tools = [
         description: 'Add colorful borders to your images.',
         category: 'image',
         seo: { title: 'Add Image Border', description: 'Add frames to photos online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '114',
@@ -205,7 +226,8 @@ export const tools = [
         description: 'Add drop shadows to your images.',
         category: 'image',
         seo: { title: 'Add Image Shadow', description: 'Create shadow effects for photos.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '115',
@@ -214,7 +236,8 @@ export const tools = [
         description: 'Pixelate your images to hide details or create art.',
         category: 'image',
         seo: { title: 'Pixelate Image', description: 'Pixelate photos online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '116',
@@ -223,7 +246,8 @@ export const tools = [
         description: 'Convert SVG vector files to PNG images.',
         category: 'image',
         seo: { title: 'SVG to PNG Converter', description: 'Convert SVG to PNG high quality.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '117',
@@ -232,7 +256,8 @@ export const tools = [
         description: 'Convert PNG raster images to SVG vectors.',
         category: 'image',
         seo: { title: 'PNG to SVG Converter', description: 'Convert PNG to vector SVG.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '118',
@@ -241,7 +266,8 @@ export const tools = [
         description: 'Convert WebP images to standard JPG format.',
         category: 'image',
         seo: { title: 'WebP to JPG Converter', description: 'Convert WebP to JPG online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '119',
@@ -250,7 +276,8 @@ export const tools = [
         description: 'Convert WebP images to transparent PNG format.',
         category: 'image',
         seo: { title: 'WebP to PNG Converter', description: 'Convert WebP to PNG online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '120',
@@ -259,7 +286,8 @@ export const tools = [
         description: 'Convert JPG images to modern WebP format.',
         category: 'image',
         seo: { title: 'JPG to WebP Converter', description: 'Convert JPG to WebP online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '121',
@@ -268,7 +296,8 @@ export const tools = [
         description: 'Convert PNG images to modern WebP format.',
         category: 'image',
         seo: { title: 'PNG to WebP Converter', description: 'Convert PNG to WebP online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '122',
@@ -277,7 +306,8 @@ export const tools = [
         description: 'Convert Base64 strings back to image files.',
         category: 'image',
         seo: { title: 'Base64 to Image', description: 'Decode Base64 to image.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
 
     // === PDF TOOLS ===
@@ -297,7 +327,8 @@ export const tools = [
         description: 'Combine multiple PDF files into a single document.',
         category: 'pdf',
         seo: { title: 'Merge PDF Online', description: 'Merge multiple PDF files into one.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '124',
@@ -306,7 +337,8 @@ export const tools = [
         description: 'Split a PDF file into multiple separate documents.',
         category: 'pdf',
         seo: { title: 'Split PDF Online', description: 'Split PDF files into individual pages.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
 
     // === TEXT TOOLS (Basic & Advanced) ===
@@ -326,7 +358,8 @@ export const tools = [
         description: 'Count characters with or without spaces.',
         category: 'text',
         seo: { title: 'Character Counter', description: 'Online character counter.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '12',
@@ -335,7 +368,8 @@ export const tools = [
         description: 'Convert text to UPPERCASE, lowercase, Title Case, etc.',
         category: 'text',
         seo: { title: 'Case Converter', description: 'Convert text case online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '13',
@@ -344,7 +378,8 @@ export const tools = [
         description: 'Remove all line breaks and newlines from your text.',
         category: 'text',
         seo: { title: 'Remove Line Breaks', description: 'Online line break remover.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '14',
@@ -353,7 +388,8 @@ export const tools = [
         description: 'Generate italic text using unicode characters.',
         category: 'text',
         seo: { title: 'Italic Text Generator', description: 'Generate italic text online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '15',
@@ -362,7 +398,8 @@ export const tools = [
         description: 'Generate strikethrough text for social media.',
         category: 'text',
         seo: { title: 'Strikethrough Text', description: 'Cross out text online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '16',
@@ -371,7 +408,47 @@ export const tools = [
         description: 'Generate underlined text for social media.',
         category: 'text',
         seo: { title: 'Underline Text Generator', description: 'Underline text online.' },
+        status: 'published',
+        hidden: true
+    },
+    {
+        _id: '162',
+        name: 'Double Underline Text',
+        slug: 'double-underline-text',
+        description: 'Generate double underlined text for social media.',
+        category: 'text',
+        seo: { title: 'Double Underline Text Generator', description: 'Double underline text online.' },
+        status: 'published',
+        hidden: true
+    },
+    {
+        _id: '163',
+        name: 'Bold Text Generator',
+        slug: 'bold-text',
+        description: 'Generate bold text using unicode characters.',
+        category: 'text',
+        seo: { title: 'Bold Text Generator', description: 'Generate bold text online.' },
         status: 'published'
+    },
+    {
+        _id: '164',
+        name: 'Cursive Text Generator',
+        slug: 'cursive-text',
+        description: 'Generate cursive / script text for social media.',
+        category: 'text',
+        seo: { title: 'Cursive Text Generator', description: 'Generate cursive text online.' },
+        status: 'published',
+        hidden: true
+    },
+    {
+        _id: '165',
+        name: 'Reverse Text Generator',
+        slug: 'reverse-text',
+        description: 'Reverse your text, flip it, or reverse words.',
+        category: 'text',
+        seo: { title: 'Reverse Text Generator - Flip & Mirror Text', description: 'Free online tool to reverse strings, flip words, and generate mirror text instantly for social media.' },
+        status: 'published',
+        hidden: true
     },
     {
         _id: '17',
@@ -380,7 +457,8 @@ export const tools = [
         description: 'Generate tiny text (subscript/superscript).',
         category: 'text',
         seo: { title: 'Small Text Generator', description: 'Make text smaller online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '18',
@@ -389,7 +467,8 @@ export const tools = [
         description: 'Flip your text upside down instantly.',
         category: 'text',
         seo: { title: 'Upside Down Text', description: 'Flip text 180 degrees.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '19',
@@ -398,7 +477,8 @@ export const tools = [
         description: 'Create mirrored text reflection.',
         category: 'text',
         seo: { title: 'Mirror Text Generator', description: 'Reverse text reflection.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '20',
@@ -472,7 +552,8 @@ export const tools = [
         description: 'Encode or decode URLs safely.',
         category: 'developer',
         seo: { title: 'URL Encoder Decoder', description: 'Online URL encode decode.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '28',
@@ -481,7 +562,8 @@ export const tools = [
         description: 'Format and beautify HTML code.',
         category: 'developer',
         seo: { title: 'HTML Formatter', description: 'Beautify HTML code.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '29',
@@ -490,7 +572,8 @@ export const tools = [
         description: 'Format and beautify CSS code.',
         category: 'developer',
         seo: { title: 'CSS Formatter', description: 'Clean CSS code.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '30',
@@ -499,7 +582,8 @@ export const tools = [
         description: 'Format and beautify JavaScript code.',
         category: 'developer',
         seo: { title: 'JavaScript Formatter', description: 'Beautify JS code.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '31',
@@ -508,7 +592,8 @@ export const tools = [
         description: 'Format and beautify XML code.',
         category: 'developer',
         seo: { title: 'XML Formatter', description: 'Beautify XML data.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '32',
@@ -517,7 +602,8 @@ export const tools = [
         description: 'Format and beautify SQL queries.',
         category: 'developer',
         seo: { title: 'SQL Formatter', description: 'Format SQL queries.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '33',
@@ -526,7 +612,8 @@ export const tools = [
         description: 'Convert Markdown to HTML code.',
         category: 'developer',
         seo: { title: 'Markdown to HTML', description: 'Convert MD to HTML.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '34',
@@ -535,7 +622,8 @@ export const tools = [
         description: 'Convert HTML to Markdown format.',
         category: 'developer',
         seo: { title: 'HTML to Markdown', description: 'Convert HTML to MD.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '35',
@@ -544,7 +632,8 @@ export const tools = [
         description: 'Convert CSV data to JSON format.',
         category: 'developer',
         seo: { title: 'CSV to JSON Converter', description: 'Convert CSV to JSON.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '36',
@@ -553,7 +642,8 @@ export const tools = [
         description: 'Convert JSON data to CSV format.',
         category: 'developer',
         seo: { title: 'JSON to CSV Converter', description: 'Convert JSON to CSV.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '37',
@@ -562,7 +652,8 @@ export const tools = [
         description: 'Minify HTML, CSS, and JS code.',
         category: 'developer',
         seo: { title: 'Code Minifier', description: 'Minify code online.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
 
     {
@@ -572,7 +663,18 @@ export const tools = [
         description: 'Compare two texts to find differences.',
         category: 'developer',
         seo: { title: 'Online Diff Checker', description: 'Compare text differences.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
+    },
+    {
+        _id: '150',
+        name: 'Regex Tester',
+        slug: 'regex-tester',
+        description: 'Test regular expressions against text.',
+        category: 'developer',
+        seo: { title: 'Regex Tester', description: 'Test regex patterns online.' },
+        status: 'published',
+        hidden: true
     },
 
     // === CONVERTER TOOLS ===
@@ -586,13 +688,23 @@ export const tools = [
         status: 'published'
     },
     {
+        _id: '166',
+        name: 'Currency Converter',
+        slug: 'currency-converter',
+        description: 'Convert between different currencies with live rates.',
+        category: 'converter',
+        seo: { title: 'Currency Converter Calculator - Live Exchange Rates', description: 'Convert global currencies instantly with real-time exchange rates. Supports USD, EUR, INR, GBP, and more.' },
+        status: 'published'
+    },
+    {
         _id: '41',
         name: 'Color Converter',
         slug: 'color-converter',
         description: 'Convert HEX, RGB, HSL colors.',
         category: 'converter',
         seo: { title: 'Color Converter', description: 'Convert color codes.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '42',
@@ -601,7 +713,8 @@ export const tools = [
         description: 'Translate binary code to text.',
         category: 'converter',
         seo: { title: 'Binary to Text', description: 'Convert binary to text.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '43',
@@ -610,7 +723,8 @@ export const tools = [
         description: 'Convert Hexadecimal to Decimal.',
         category: 'converter',
         seo: { title: 'Hex to Decimal', description: 'Convert hex numbers.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '44',
@@ -619,7 +733,8 @@ export const tools = [
         description: 'Convert numbers to Roman numerals.',
         category: 'converter',
         seo: { title: 'Roman Numeral Converter', description: 'Roman numerals tool.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
 
     // === GENERATOR TOOLS ===
@@ -639,7 +754,8 @@ export const tools = [
         description: 'Generate random strings and passwords.',
         category: 'utility',
         seo: { title: 'Random String Generator', description: 'Generate random strings.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '47',
@@ -648,7 +764,8 @@ export const tools = [
         description: 'Generate random colors.',
         category: 'utility',
         seo: { title: 'Random Color Generator', description: 'Generate random colors.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '48',
@@ -657,7 +774,8 @@ export const tools = [
         description: 'Generate random dates.',
         category: 'utility',
         seo: { title: 'Random Date Generator', description: 'Generate random dates.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
     {
         _id: '49',
@@ -666,7 +784,8 @@ export const tools = [
         description: 'Generate random IP addresses.',
         category: 'utility',
         seo: { title: 'Random IP Generator', description: 'Generate random IPs.' },
-        status: 'published'
+        status: 'published',
+        hidden: true
     },
 
     // === SECURITY & CRYPTO TOOLS ===
@@ -938,7 +1057,7 @@ export const tools = [
         slug: 'responsive-checker',
         description: 'Check if your website is responsive across devices.',
         category: 'utility',
-        seo: { title: 'Responsive Website Checker', description: 'Test mobile responsiveness.' },
+        seo: { title: 'Responsive Website Checker - Test Mobile View', description: 'Test your website responsiveness on mobile, tablet, and desktop devices instantly. Free responsive design tester.' },
         status: 'published'
     },
 
@@ -1009,7 +1128,7 @@ export const tools = [
     },
     // === CALCULATOR TOOLS ===
     {
-        _id: '150',
+        _id: '180',
         name: 'Age Calculator',
         slug: 'age-calculator',
         description: 'Calculate your exact age in years, months, and days.',
@@ -1112,6 +1231,7 @@ export interface Tool {
         title: string;
         description: string;
     };
+    hidden?: boolean;
 }
 
 // Get all tools
@@ -1126,6 +1246,7 @@ export function getToolBySlug(slug: string): Tool | undefined {
 
 // Get tools organized by categories (Dynamic)
 export const toolCategories: Record<string, { name: string; slug: string }[]> = tools.reduce((acc, tool) => {
+    // Hidden tools are now included in the menu (Navbar)
     const label = categoryMap[tool.category] || tool.category;
     if (!acc[label]) acc[label] = [];
     acc[label].push({ name: tool.name, slug: tool.slug });

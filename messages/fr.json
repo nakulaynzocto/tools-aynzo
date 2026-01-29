@@ -3,7 +3,8 @@
         "title": "Outils Gratuits pour Développeurs",
         "description": "Une collection d'outils simples, rapides et sécurisés pour vos tâches quotidiennes.",
         "noAds": "Pas de pub, pas de suivi, juste des outils.",
-        "toolsCount": "{count} Outils"
+        "toolsCount": "{count} Outils",
+        "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Boostez votre flux de travail numérique avec les outils Aynzo</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  Bienvenue sur <strong>Aynzo Tools</strong>, votre destination ultime pour des <strong>outils en ligne gratuits</strong> de haute qualité, conçus pour simplifier vos tâches numériques quotidiennes. Dans un monde où la productivité est primordiale, nous offrons un environnement propre, rapide et sécurisé pour tout gérer, des conversions de fichiers complexes au simple formatage de texte. Notre mission est de proposer une plateforme professionnelle d'\"utilitaires en tant que service\" qui élimine le besoin de logiciels coûteux ou d'alternatives encombrantes et truffées de publicités.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Une suite complète d'utilitaires en ligne</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Chez Aynzo Tools, nous catégorisons nos offres pour vous aider à trouver exactement ce dont vous avez besoin en quelques secondes :\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">Convertisseur d'images en ligne et éditeurs :</strong> Notre suite d'images est conçue pour la vitesse. Que vous ayez besoin d'un <strong>convertisseur d'images en ligne</strong> pour passer du JPG, PNG au WebP, ou que vous ayez besoin de compresser des photos pour l'optimisation web, nous avons ce qu'il vous faut. Vous pouvez également recadrer, faire pivoter et ajouter des filtres sans aucune perte de qualité.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Outils PDF essentiels :</strong> Les documents ne devraient pas être une corvée. Nos <strong>outils PDF gratuits</strong> vous permettent de convertir des PDF en Word, de fusionner des fichiers ou d'extraire des images sans compromettre l'intégrité du document.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Utilitaires de texte et de codage :</strong> Pour les développeurs et les rédacteurs, nous proposons des formateurs de texte avancés, des convertisseurs de casse et des minificateurs de code. Validez votre JSON, embellissez votre CSS ou convertissez du Markdown en HTML en un seul clic.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Outils SEO et réseaux sociaux :</strong> Classez-vous mieux et partagez plus. Utilisez nos générateurs de balises méta, nos vérificateurs de densité de mots-clés et nos téléchargeurs de miniatures YouTube pour prendre l'avantage dans les résultats de recherche.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Pourquoi choisir Aynzo Tools ?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Internet regorge de sites \"gratuits\" qui tracent vos données ou vous bombardent de publicités intrusives. Aynzo Tools est différent. Nous accordons la priorité à la <strong>confidentialité et à la sécurité</strong>, en veillant à ce que vos fichiers soient traités localement ou supprimés immédiatement après usage. Notre plateforme est <strong>100 % sans publicité</strong>, ce qui signifie que vous pouvez vous concentrer sur votre travail sans distractions. Chaque outil est optimisé pour des <strong>performances ultra-rapides</strong>, utilisant les dernières technologies web pour fournir des résultats en millisecondes.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">À qui s'adresse Aynzo Tools ?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Notre plateforme est méticuleusement conçue pour :\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Développeurs :</strong> débogage rapide de code, formatage de données ou génération de hachages.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Créateurs de contenu :</strong> optimisation d'images, analyse SEO et actifs sociaux.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Étudiants et professionnels :</strong> conversion de documents et calculs rapides.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Utilisateurs quotidiens :</strong> des outils utilitaires en ligne simples qui fonctionnent, tout simplement.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"Arrêtez de jongler entre des dizaines d'onglets. Ajoutez Aynzo Tools à vos favoris dès aujourd'hui et découvrez la puissance d'une suite d'outils professionnels directement dans votre navigateur.\"\n  </p>\n</div>"
     },
     "App": {
         "name": "AYNZO",
@@ -61,12 +62,13 @@
         "viewAll": "Voir tous les outils",
         "backToTools": "Retour aux outils",
         "image-compressor": {
-            "name": "Compresseur d'images",
-            "description": "Compressez les images JPG, PNG et WebP sans perte de qualité.",
-            "seoTitle": "Compresseur d'images - Outil gratuit en ligne",
-            "seoDescription": "Compressez vos images sans perte de qualité. 100% gratuit, rapide et sécurisé.",
-            "seoKeywords": "compresseur image, compression image, outil gratuit",
-            "seoH1": "Compresseur d'images"
+            "name": "Compresseur d'Images Online",
+            "description": "Compressez des images JPG, PNG et WebP sans perte de qualité.",
+            "seoTitle": "Compresseur d'Images Online Gratuit : Réduire la Taille des Photos",
+            "seoDescription": "Optimisez vos images avec notre guide expert. Compressez JPG, PNG et WebP gratuitement en ligne sans perte de qualité. Traitement 100% privé.",
+            "seoKeywords": "compresseur d'images gratuit, réduire taille image sans perte de qualité, optimiser photo pour le web, compresseur jpeg en ligne",
+            "seoH1": "Compresseur d'Images Online Gratuit : Le Guide de l'Optimisation Web",
+            "content": "\n<p>À l'ère du numérique, la vitesse de chargement est cruciale. Des images lourdes ralentissent votre site et nuisent à votre SEO. Le <strong>Compresseur d'Images Aynzo</strong> vous permet de réduire la taille de vos fichiers instantanément tout en préservant leur netteté.</p>\n\n<h2>Pourquoi compresser vos images ?</h2>\n<ul>\n    <li><strong>Vitesse du Site :</strong> Google favorise les sites rapides. Des images légères améliorent vos scores Core Web Vitals.</li>\n    <li><strong>Économie de Stockage :</strong> Réduisez l'espace disque sur vos serveurs et appareils mobiles jusqu'à 90%.</li>\n    <li><strong>Confidentialité Totale :</strong> Contrairement à d'autres outils, nous ne téléchargeons jamais vos photos sur un serveur. Tout se passe dans votre navigateur.</li>\n</ul>\n"
         },
         "image-resizer": {
             "name": "Redimensionneur d'images",
@@ -733,12 +735,13 @@
             "seoH1": "Générateur d'intégration YouTube"
         },
         "youtube-timestamp-link-generator": {
-            "name": "Lien avec horodatage YouTube",
-            "description": "Créez des liens qui démarrent à un moment précis.",
-            "seoTitle": "Générateur de lien horodaté YouTube",
-            "seoDescription": "Démarrer la vidéo à l'endroit exact.",
-            "seoKeywords": "lien horodatage youtube",
-            "seoH1": "Lien avec horodatage YouTube"
+            "name": "Lien avec Timestamp YouTube",
+            "description": "Créez des liens qui commencent à un moment précis de la vidéo.",
+            "seoTitle": "Générateur de Lien avec Horodatage YouTube : Partagez des Moments Précis",
+            "seoDescription": "Créez des liens YouTube personnalisés qui commencent exactement là où vous le souhaitez. Améliorez l'engagement de vos partages sociaux.",
+            "seoKeywords": "lien timestamp youtube, partager moment précis youtube, générateur lien youtube temps, créer lien minute exacte",
+            "seoH1": "Générateur de Lien avec Horodatage YouTube : Précision du Partage",
+            "content": "\n<p>Pourquoi obliger vos spectateurs à regarder une vidéo de 10 minutes pour trouver un clip de 30 secondes ? Le <strong>Générateur de Lien Aynzo</strong> vous permet de créer une URL directe vers l'instant T. Gagnez du temps et allez droit au but.</p>\n\n<h2>Les Avantages des Timestamps</h2>\n<ul>\n    <li><strong>Meilleure Rétention :</strong> Les utilisateurs voient immédiatement ce que vous leur avez promis.</li>\n    <li><strong>SEO Google :</strong> Google affiche souvent des \"Moments clés\" dans les résultats de recherche basés sur ces paramètres.</li>\n    <li><strong>Simplicité :</strong> Pas besoin de logiciel, tout se fait en deux clics.</li>\n</ul>\n"
         },
         "meta-tag-generator": {
             "name": "Générateur de meta tags",

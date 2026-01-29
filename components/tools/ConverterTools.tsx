@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Copy, RotateCcw } from 'lucide-react';
+import { Copy, RotateCcw, ArrowRightLeft, Palette, Binary, Coins, Hash } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
 
 
 interface ConverterToolsProps {
@@ -70,9 +71,7 @@ export default function ConverterTools({ type }: ConverterToolsProps) {
         }
     }, [input, type, fromUnit, toUnit, rates]);
 
-    const convert = () => {
-        // Function kept for reference, logic moved to useEffect
-    };
+
 
     const convertUnit = (value: number, from: string, to: string): string => {
         const conversions: { [key: string]: number } = {
@@ -326,8 +325,35 @@ export default function ConverterTools({ type }: ConverterToolsProps) {
         };
         return placeholders[type] || 'Enter value to convert...';
     };
+    // Navigation Tools Configuration
+    const converterNavTools = [
+        {
+            category: 'General',
+            tools: [
+                { id: 'unit-converter', label: 'Unit', icon: ArrowRightLeft },
+                { id: 'currency-converter', label: 'Currency', icon: Coins },
+            ]
+        },
+        {
+            category: 'Tech & Dev',
+            tools: [
+                { id: 'color-converter', label: 'Color', icon: Palette },
+                { id: 'binary-to-text', label: 'Binary', icon: Binary },
+                { id: 'hex-to-decimal', label: 'Hex', icon: Hash },
+                { id: 'roman-numeral', label: 'Roman', icon: Hash },
+            ]
+        }
+    ];
+
+    const isConverterTool = converterNavTools.some(cat => cat.tools.some(t => t.id === type));
+
     return (
         <div className="max-w-4xl mx-auto space-y-6">
+            {/* Converter Tools Navigation */}
+            {isConverterTool && (
+                <ScrollableNav items={converterNavTools} activeToolId={type} />
+            )}
+
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
                 <div className="p-8 space-y-8">

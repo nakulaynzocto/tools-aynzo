@@ -1,6 +1,8 @@
 "use client";
 import { useState } from 'react';
-import { Copy, RefreshCw } from 'lucide-react';
+import { Copy, RefreshCw, Hash, Type, Palette, Calendar, Globe, Settings, CheckCircle2 } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
+import { cn } from '@/utils/cn';
 
 
 interface GeneratorToolsProps {
@@ -111,152 +113,190 @@ export default function GeneratorTools({ type }: GeneratorToolsProps) {
         return names[type] || 'Random Generator';
     };
 
+    // Navigation Tools Configuration
+    const generatorNavTools = [
+        {
+            category: 'Data',
+            tools: [
+                { id: 'random-number', label: 'Number', icon: Hash },
+                { id: 'random-string', label: 'String', icon: Type },
+                { id: 'random-date', label: 'Date', icon: Calendar },
+            ]
+        },
+        {
+            category: 'Tech',
+            tools: [
+                { id: 'random-color', label: 'Color', icon: Palette },
+                { id: 'random-ip', label: 'IP', icon: Globe },
+            ]
+        }
+    ];
+
+    const isGeneratorTool = generatorNavTools.some(cat => cat.tools.some(t => t.id === type));
+
     return (
         <div className="max-w-4xl mx-auto space-y-6">
+            {/* Generator Tools Navigation */}
+            {isGeneratorTool && (
+                <ScrollableNav items={generatorNavTools} activeToolId={type} />
+            )}
+
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
                 <div className="p-8 space-y-8">
-                    {/* Options */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                            <label className="block text-sm font-bold text-foreground uppercase tracking-wider">
-                                Number of Items
-                            </label>
-                            <input
-                                type="number"
-                                value={count}
-                                onChange={(e) => setCount(Math.max(1, Math.min(100, parseInt(e.target.value) || 1)))}
-                                min="1"
-                                max="100"
-                                className="w-full p-4 border-2 border-border rounded-xl focus:border-accent focus:outline-none bg-input text-foreground font-bold"
-                            />
-                        </div>
-
-                        {type === 'random-number' && (
-                            <>
-                                <div>
-                                    <label className="block text-sm font-medium text-foreground mb-2">
-                                        Minimum Value
-                                    </label>
-                                    <input
-                                        type="number"
-                                        value={min}
-                                        onChange={(e) => setMin(parseInt(e.target.value) || 1)}
-                                        className="w-full p-3 border-2 border-border rounded-lg focus:border-accent focus:outline-none bg-input text-foreground"
-                                    />
+                    <div className="grid lg:grid-cols-2 gap-10">
+                        {/* Left Column: Configuration */}
+                        <div className="space-y-8">
+                            <div className="bg-muted/30 p-8 rounded-[2rem] border-2 border-border space-y-6 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
+                                    <Settings size={120} />
                                 </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-foreground mb-2">
-                                        Maximum Value
-                                    </label>
-                                    <input
-                                        type="number"
-                                        value={max}
-                                        onChange={(e) => setMax(parseInt(e.target.value) || 100)}
-                                        className="w-full p-3 border-2 border-border rounded-lg focus:border-accent focus:outline-none bg-input text-foreground"
-                                    />
-                                </div>
-                            </>
-                        )}
+                                <h3 className="text-sm font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                                    <Settings size={14} /> Configuration
+                                </h3>
 
-                        {type === 'random-string' && (
-                            <>
-                                <div>
-                                    <label className="block text-sm font-medium text-foreground mb-2">
-                                        String Length
-                                    </label>
-                                    <input
-                                        type="number"
-                                        value={length}
-                                        onChange={(e) => setLength(Math.max(1, Math.min(256, parseInt(e.target.value) || 16)))}
-                                        min="1"
-                                        max="256"
-                                        className="w-full p-3 border-2 border-border rounded-lg focus:border-accent focus:outline-none bg-input text-foreground"
-                                    />
-                                </div>
-                            </>
-                        )}
-                    </div>
+                                <div className="space-y-6 relative z-10">
+                                    <div className="grid grid-cols-1 gap-6">
+                                        <div className="space-y-2">
+                                            <label className="block text-xs font-black uppercase tracking-widest text-muted-foreground">
+                                                Number of Items
+                                            </label>
+                                            <input
+                                                type="number"
+                                                value={count}
+                                                onChange={(e) => setCount(Math.max(1, Math.min(100, parseInt(e.target.value) || 1)))}
+                                                min="1"
+                                                max="100"
+                                                className="w-full p-4 border-2 border-border rounded-xl focus:border-accent focus:outline-none bg-input text-foreground font-bold"
+                                            />
+                                        </div>
 
-                    {type === 'random-string' && (
-                        <div className="flex flex-wrap gap-4">
-                            <label className="flex items-center gap-2 cursor-pointer">
-                                <input
-                                    type="checkbox"
-                                    checked={includeLetters}
-                                    onChange={(e) => setIncludeLetters(e.target.checked)}
-                                    className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
-                                />
-                                <span className="text-sm text-foreground">Include Letters</span>
-                            </label>
-                            <label className="flex items-center gap-2 cursor-pointer">
-                                <input
-                                    type="checkbox"
-                                    checked={includeNumbers}
-                                    onChange={(e) => setIncludeNumbers(e.target.checked)}
-                                    className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
-                                />
-                                <span className="text-sm text-foreground">Include Numbers</span>
-                            </label>
-                            <label className="flex items-center gap-2 cursor-pointer">
-                                <input
-                                    type="checkbox"
-                                    checked={includeSymbols}
-                                    onChange={(e) => setIncludeSymbols(e.target.checked)}
-                                    className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
-                                />
-                                <span className="text-sm text-foreground">Include Symbols</span>
-                            </label>
-                        </div>
-                    )}
+                                        {type === 'random-number' && (
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-2">
+                                                    <label className="block text-xs font-black uppercase tracking-widest text-muted-foreground">
+                                                        Min
+                                                    </label>
+                                                    <input
+                                                        type="number"
+                                                        value={min}
+                                                        onChange={(e) => setMin(parseInt(e.target.value) || 0)}
+                                                        className="w-full p-3 border-2 border-border rounded-lg focus:border-accent focus:outline-none bg-input text-foreground font-bold text-sm"
+                                                    />
+                                                </div>
+                                                <div className="space-y-2">
+                                                    <label className="block text-xs font-black uppercase tracking-widest text-muted-foreground">
+                                                        Max
+                                                    </label>
+                                                    <input
+                                                        type="number"
+                                                        value={max}
+                                                        onChange={(e) => setMax(parseInt(e.target.value) || 100)}
+                                                        className="w-full p-3 border-2 border-border rounded-lg focus:border-accent focus:outline-none bg-input text-foreground font-bold text-sm"
+                                                    />
+                                                </div>
+                                            </div>
+                                        )}
 
-                    {/* Generate Button Tag */}
-                    <div className="pt-4">
-                        <button
-                            onClick={generate}
-                            className="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
-                        >
-                            <RefreshCw className="h-5 w-5" />
-                            Generate Data
-                        </button>
-                    </div>
-
-                    {output.length > 0 && (
-                        <div className="mt-8 pt-8 border-t border-border space-y-6 animate-in slide-in-from-bottom-4 duration-500">
-                            <div className="flex items-center justify-between">
-                                <label className="block text-sm font-bold text-muted-foreground uppercase tracking-widest">
-                                    Generated Results ({output.length})
-                                </label>
-                                <button
-                                    onClick={copyAllToClipboard}
-                                    className="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-xl font-bold hover:bg-primary/20 transition-all flex items-center gap-2 text-sm"
-                                >
-                                    {copiedAll ? <RefreshCw className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                                    {copiedAll ? 'Copied All' : 'Copy All'}
-                                </button>
-                            </div>
-                            <div className="grid gap-3 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
-                                {output.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex items-center justify-between p-4 bg-muted/50 border border-border rounded-2xl group hover:border-accent transition-all animate-in zoom-in-95 duration-200"
-                                    >
-                                        <span className="font-mono text-lg font-bold text-foreground flex-1 break-all">{item}</span>
-                                        <button
-                                            onClick={() => {
-                                                navigator.clipboard.writeText(item);
-                                                setCopiedIndex(index);
-                                                setTimeout(() => setCopiedIndex(null), 2000);
-                                            }}
-                                            className={`ml-4 p-3 border rounded-xl transition-all shadow-sm ${copiedIndex === index ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-500' : 'bg-card border-border text-primary hover:bg-primary hover:text-white'}`}
-                                        >
-                                            {copiedIndex === index ? <RefreshCw className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                                        </button>
+                                        {type === 'random-string' && (
+                                            <div className="space-y-2">
+                                                <label className="block text-xs font-black uppercase tracking-widest text-muted-foreground">
+                                                    String Length
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    value={length}
+                                                    onChange={(e) => setLength(Math.max(1, Math.min(256, parseInt(e.target.value) || 16)))}
+                                                    className="w-full p-4 border-2 border-border rounded-xl focus:border-accent focus:outline-none bg-input text-foreground font-bold"
+                                                />
+                                            </div>
+                                        )}
                                     </div>
-                                ))}
+
+                                    {type === 'random-string' && (
+                                        <div className="flex flex-wrap gap-3">
+                                            {[
+                                                { id: 'letters', label: 'Letters', checked: includeLetters, onChange: setIncludeLetters },
+                                                { id: 'numbers', label: 'Numbers', checked: includeNumbers, onChange: setIncludeNumbers },
+                                                { id: 'symbols', label: 'Symbols', checked: includeSymbols, onChange: setIncludeSymbols },
+                                            ].map(opt => (
+                                                <label key={opt.id} className={cn(
+                                                    "flex items-center gap-2 px-4 py-2 border-2 rounded-xl cursor-pointer transition-all text-[10px] font-black uppercase tracking-widest",
+                                                    opt.checked ? "bg-primary/5 border-primary text-primary" : "bg-card border-border text-muted-foreground hover:border-border/80"
+                                                )}>
+                                                    <input type="checkbox" checked={opt.checked} onChange={e => opt.onChange(e.target.checked)} className="hidden" />
+                                                    <div className={cn("w-4 h-4 rounded border-2 flex items-center justify-center", opt.checked ? "bg-primary border-primary" : "border-border")}>
+                                                        {opt.checked && <CheckCircle2 className="w-2.5 h-2.5 text-white" />}
+                                                    </div>
+                                                    {opt.label}
+                                                </label>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    <button
+                                        onClick={generate}
+                                        className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
+                                    >
+                                        <RefreshCw className="h-6 w-6" />
+                                        GENERATE DATA
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    )}
+
+                        {/* Right Column: Generated Results */}
+                        <div className="space-y-6">
+                            <div className="flex items-center justify-between">
+                                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Generated Output</h3>
+                                {output.length > 0 && (
+                                    <button
+                                        onClick={copyAllToClipboard}
+                                        className={cn(
+                                            "px-5 py-2 rounded-xl text-[10px] font-black flex items-center gap-2 transition-all",
+                                            copiedAll ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary/10 text-primary hover:bg-primary/20'
+                                        )}
+                                    >
+                                        {copiedAll ? <RefreshCw className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                                        {copiedAll ? 'COPIED ALL' : 'COPY ALL'}
+                                    </button>
+                                )}
+                            </div>
+
+                            <div className="w-full p-2 bg-muted/30 border-2 border-border rounded-3xl min-h-[400px] flex flex-col shadow-inner">
+                                {output.length > 0 ? (
+                                    <div className="p-4 grid gap-3 overflow-y-auto max-h-[500px] custom-scrollbar">
+                                        {output.map((item, index) => (
+                                            <div
+                                                key={index}
+                                                className="flex items-center justify-between p-4 bg-card border-2 border-border rounded-2xl group hover:border-accent transition-all animate-in zoom-in-95 duration-200 shadow-sm"
+                                            >
+                                                <span className="font-mono text-base font-bold text-foreground flex-1 break-all">{item}</span>
+                                                <button
+                                                    onClick={() => {
+                                                        navigator.clipboard.writeText(item);
+                                                        setCopiedIndex(index);
+                                                        setTimeout(() => setCopiedIndex(null), 2000);
+                                                    }}
+                                                    className={cn(
+                                                        "ml-4 p-2.5 border-2 rounded-xl transition-all",
+                                                        copiedIndex === index ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-500' : 'bg-muted border-border text-muted-foreground hover:text-primary hover:border-primary/30'
+                                                    )}
+                                                >
+                                                    {copiedIndex === index ? <CheckCircle2 className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <div className="flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
+                                        <RefreshCw className="w-12 h-12 animate-spin-slow opacity-10" />
+                                        <span className="text-[10px] font-black uppercase tracking-[0.3em]">Awaiting Generation</span>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

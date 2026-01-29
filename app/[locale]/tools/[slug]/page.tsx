@@ -60,9 +60,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const name = tTools.has(`${params.slug}.name`) ? tTools(`${params.slug}.name`) : (seo?.h1 || params.slug);
 
-    const localizedTitle = tTools.has(`${params.slug}.seoTitle`) ? tTools(`${params.slug}.seoTitle`) : (seo?.title || fallbackSeo?.title);
-    const localizedDesc = tTools.has(`${params.slug}.seoDescription`) ? tTools(`${params.slug}.seoDescription`) : (seo?.description || fallbackSeo?.description);
-    const localizedKeywords = tTools.has(`${params.slug}.seoKeywords`) ? tTools(`${params.slug}.seoKeywords`) : (seo?.keywords || fallbackSeo?.keywords);
+    const localizedTitle = tTools.has(`${params.slug}.seoTitle`)
+      ? tTools(`${params.slug}.seoTitle`)
+      : (params.locale === 'en' ? (seo?.title || fallbackSeo?.title) : (fallbackSeo?.title || seo?.title));
+
+    const localizedDesc = tTools.has(`${params.slug}.seoDescription`)
+      ? tTools(`${params.slug}.seoDescription`)
+      : (params.locale === 'en' ? (seo?.description || fallbackSeo?.description) : (fallbackSeo?.description || seo?.description));
+
+    const localizedKeywords = tTools.has(`${params.slug}.seoKeywords`)
+      ? tTools(`${params.slug}.seoKeywords`)
+      : (params.locale === 'en' ? (seo?.keywords || fallbackSeo?.keywords) : (fallbackSeo?.keywords || seo?.keywords));
 
     // Final fallback if nothing exists (should be covered by fallbackSeo now)
     const finalTitle = localizedTitle || `Free Online ${name} | AYNZO TOOLS`;
@@ -193,6 +201,9 @@ export default async function ToolPage({ params }: Props) {
       case 'whitespace-remover':
       case 'word-frequency':
       case 'find-replace':
+      case 'bold-text':
+      case 'cursive-text':
+      case 'double-underline-text':
         return <AdvancedTextTools type={params.slug} />;
 
       // Developer Tools
@@ -235,7 +246,6 @@ export default async function ToolPage({ params }: Props) {
         return <SecurityTools type={params.slug as 'password-generator'} />;
 
       // Utility Tools
-      case 'bold-text':
       case 'lorem-ipsum':
         return <UtilityTools type={params.slug as any} />;
 
@@ -374,7 +384,7 @@ export default async function ToolPage({ params }: Props) {
             <ToolInfoSection
               name={translatedName}
               description={translatedDesc}
-              content={params.locale === 'en' ? seo?.content : undefined}
+              content={tTools.has(`${params.slug}.content`) ? tTools.raw(`${params.slug}.content`) : (params.locale === 'en' ? seo?.content : undefined)}
             />
 
             <ShareButtons

@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Copy, Download, RotateCcw, Check } from 'lucide-react';
+import { Copy, Download, RotateCcw, Check, Code, Link2, FileJson, FileText, FileCode, Braces, Split, Terminal, Minimize2, Search } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
+import { cn } from '@/utils/cn';
 
 import { html as beautifyHtml, css as beautifyCss, js as beautifyJs } from 'js-beautify';
 // @ts-ignore
@@ -94,9 +96,7 @@ export default function FormatterTools({ type }: FormatterToolsProps) {
         }
     }, [input, type, indentSize]);
 
-    const formatCode = () => {
-        // Function kept for reference
-    };
+
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(output);
@@ -164,10 +164,54 @@ export default function FormatterTools({ type }: FormatterToolsProps) {
         return placeholders[type] || 'Paste your code here...';
     };
 
+
+
     const showIndentOption = ['html-formatter', 'css-formatter', 'javascript-formatter', 'xml-formatter', 'sql-formatter', 'csv-to-json'].includes(type);
+
+    // Navigation Tools Configuration
+    // Navigation Configuration (Shared)
+    const devNavTools = [
+        {
+            category: 'Formatters',
+            tools: [
+                { id: 'json-formatter', label: 'JSON', icon: FileJson },
+                { id: 'html-formatter', label: 'HTML', icon: Code },
+                { id: 'css-formatter', label: 'CSS', icon: FileCode },
+                { id: 'javascript-formatter', label: 'JS', icon: Braces },
+                { id: 'xml-formatter', label: 'XML', icon: FileCode },
+                { id: 'sql-formatter', label: 'SQL', icon: FileText },
+            ]
+        },
+        {
+            category: 'Converters',
+            tools: [
+                { id: 'markdown-to-html', label: 'MD to HTML', icon: FileText },
+                { id: 'html-to-markdown', label: 'HTML to MD', icon: Code },
+                { id: 'csv-to-json', label: 'CSV to JSON', icon: FileText },
+                { id: 'html-to-jsx', label: 'HTML to JSX', icon: Code },
+            ]
+        },
+        {
+            category: 'Utilities',
+            tools: [
+                { id: 'url-encoder-decoder', label: 'URL Encoder', icon: Link2 },
+                { id: 'diff-checker', label: 'Diff Checker', icon: Split },
+                { id: 'user-agent-parser', label: 'User Agent', icon: Terminal },
+                { id: 'code-minifier', label: 'Minifier', icon: Minimize2 },
+                { id: 'regex-tester', label: 'Regex Tester', icon: Search },
+            ]
+        }
+    ];
+
+    const isCodeTool = devNavTools.some(cat => cat.tools.some(t => t.id === type));
 
     return (
         <div className="max-w-6xl mx-auto space-y-6">
+            {/* Code Tools Navigation */}
+            {isCodeTool && (
+                <ScrollableNav items={devNavTools} activeToolId={type} />
+            )}
+
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
                 <div className="p-8 space-y-8">
@@ -182,7 +226,7 @@ export default function FormatterTools({ type }: FormatterToolsProps) {
                                     <button
                                         key={size}
                                         onClick={() => setIndentSize(size)}
-                                        className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${indentSize === size ? 'bg-primary text-white shadow-md' : 'text-muted-foreground hover:bg-card'}`}
+                                        className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all border ${indentSize === size ? 'bg-primary text-primary-foreground border-primary shadow-lg' : 'bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95'}`}
                                     >
                                         {size} Spaces
                                     </button>
@@ -191,70 +235,71 @@ export default function FormatterTools({ type }: FormatterToolsProps) {
                         </div>
                     )}
 
-                    <div className="grid lg:grid-cols-2 gap-6">
+                    <div className="grid lg:grid-cols-2 gap-8 items-stretch">
                         {/* Input Section */}
-                        <div className="space-y-4">
+                        <div className="flex flex-col space-y-4">
                             <div className="flex items-center justify-between">
-                                <label className="block text-sm font-bold text-muted-foreground uppercase tracking-widest">
+                                <label className="block text-sm font-black text-muted-foreground uppercase tracking-widest">
                                     Input Code
                                 </label>
                                 <button
                                     onClick={clearAll}
-                                    className="text-xs font-bold text-destructive hover:bg-destructive/10 px-3 py-1.5 rounded-lg transition-colors flex items-center gap-2"
+                                    className="text-xs font-black text-destructive hover:bg-destructive/10 px-4 py-2 rounded-xl transition-all flex items-center gap-2 border border-transparent hover:border-destructive/20"
                                 >
-                                    <RotateCcw className="h-3 w-3" />
-                                    Clear
+                                    <RotateCcw className="h-4 w-4" />
+                                    Clear All
                                 </button>
                             </div>
                             <textarea
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 placeholder={getPlaceholder()}
-                                rows={16}
-                                className="w-full p-4 border-2 border-border rounded-2xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground resize-none leading-relaxed"
+                                className="flex-1 w-full p-6 border-2 border-border rounded-[2rem] focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground resize-none leading-relaxed shadow-inner min-h-[450px]"
+                                spellCheck={false}
                             />
                         </div>
 
                         {/* Output Section */}
-                        <div className="space-y-4">
-                            <div className="flex items-center justify-between h-9">
-                                <label className="block text-sm font-bold text-muted-foreground uppercase tracking-widest">
+                        <div className="flex flex-col space-y-4">
+                            <div className="flex items-center justify-between">
+                                <label className="block text-sm font-black text-muted-foreground uppercase tracking-widest">
                                     Formatted Output
                                 </label>
                                 {output && (
                                     <div className="flex gap-2">
                                         <button
                                             onClick={copyToClipboard}
-                                            className={`px-3 py-1.5 border rounded-lg font-bold transition-all flex items-center gap-2 text-xs ${copied ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20' : 'bg-primary/10 text-primary border-primary/20 hover:bg-primary/20'}`}
+                                            className={cn("px-5 py-2 rounded-xl font-black transition-all flex items-center gap-2 text-xs", copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary/10 text-primary hover:bg-primary/20')}
                                         >
-                                            {copied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
-                                            {copied ? 'Copied' : 'Copy'}
+                                            {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                                            {copied ? 'COPIED' : 'COPY'}
                                         </button>
                                         <button
                                             onClick={downloadCode}
-                                            className="px-3 py-1.5 bg-accent/10 text-accent border border-accent/20 rounded-lg font-bold hover:bg-accent/20 transition-all flex items-center gap-2 text-xs"
+                                            className="px-5 py-2 bg-accent/10 text-accent border-2 border-accent/10 rounded-xl font-black hover:bg-accent/20 transition-all flex items-center gap-2 text-xs"
                                         >
-                                            <Download className="h-3 w-3" />
-                                            Save
+                                            <Download className="h-4 w-4" />
+                                            SAVE
                                         </button>
                                     </div>
                                 )}
                             </div>
-                            {type === 'markdown-to-html' ? (
-                                <div
-                                    className="w-full h-full min-h-[400px] p-4 border-2 border-border rounded-2xl bg-muted/30 font-mono text-sm overflow-auto text-foreground leading-relaxed shadow-inner"
-                                    dangerouslySetInnerHTML={{ __html: output }}
-                                />
-                            ) : (
-                                <div
-                                    className="w-full h-full min-h-[400px] p-4 border-2 border-border rounded-2xl bg-muted/30 font-mono text-sm overflow-auto text-foreground leading-relaxed shadow-inner"
-                                >
-                                    {output || <div className="h-full flex flex-col items-center justify-center text-muted-foreground opacity-40">
-                                        <Download size={48} className="mb-2" />
-                                        <p className="text-xs font-bold uppercase tracking-widest">Results will appear here</p>
-                                    </div>}
-                                </div>
-                            )}
+                            <div className="flex-1 w-full p-6 border-2 border-border rounded-[2rem] bg-muted/20 font-mono text-sm overflow-auto text-foreground leading-relaxed shadow-inner min-h-[450px]">
+                                {type === 'markdown-to-html' ? (
+                                    <div dangerouslySetInnerHTML={{ __html: output }} className="prose prose-sm dark:prose-invert max-w-none" />
+                                ) : (
+                                    output ? (
+                                        <pre className="whitespace-pre-wrap break-all">{output}</pre>
+                                    ) : (
+                                        <div className="h-full flex flex-col items-center justify-center text-muted-foreground/30 gap-4 py-20">
+                                            <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
+                                                <Download size={32} className="opacity-20" />
+                                            </div>
+                                            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-center">Results will appear here</p>
+                                        </div>
+                                    )
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>

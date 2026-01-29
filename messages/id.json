@@ -3,7 +3,8 @@
         "title": "Alat Pengembang Gratis",
         "description": "Kumpulan alat sederhana, cepat, dan aman untuk tugas sehari-hari Anda.",
         "noAds": "Tanpa iklan, tanpa pelacakan, hanya alat.",
-        "toolsCount": "{count} Alat"
+        "toolsCount": "{count} Alat",
+        "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Berdayakan Alur Kerja Digital Anda dengan Aynzo Tools</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  Selamat datang di <strong>Aynzo Tools</strong>, tujuan akhir Anda untuk <strong>alat online gratis</strong> berkualitas tinggi yang dirancang untuk menyederhanakan tugas digital harian Anda. Di dunia di mana produktivitas adalah yang utama, kami menyediakan lingkungan yang bersih, cepat, dan aman untuk menangani semuanya, mulai dari konversi file yang kompleks hingga pemformatan teks sederhana. Misi kami adalah menawarkan platform \"utilitas sebagai layanan\" profesional yang menghilangkan kebutuhan akan perangkat lunak mahal atau alternatif yang penuh iklan.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Rangkaian Utilitas Online yang Komprehensif</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Di Aynzo Tools, kami mengategorikan penawaran kami untuk membantu Anda menemukan apa yang Anda butuhkan dalam hitungan detik:\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">Konverter Gambar Online & Editor:</strong> Suite gambar kami dibuat untuk kecepatan. Baik Anda memerlukan <strong>konverter gambar online</strong> untuk beralih antara JPG, PNG, dan WebP, atau Anda perlu mengompres foto untuk optimasi web, kami siap membantu Anda. Anda juga dapat memotong, memutar, dan menambahkan filter dengan nol kehilangan kualitas.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Alat PDF Penting:</strong> Dokumen tidak seharusnya merepotkan. <strong>Alat PDF gratis</strong> kami memungkinkan Anda mengonversi PDF ke Word, menggabungkan file, atau mengekstrak gambar tanpa mengorbankan integritas dokumen.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Utilitas Teks & Coding:</strong> Untuk pengembang dan penulis, kami menawarkan pemformat teks canggih, konverter huruf, dan minifier kode. Validasi JSON Anda, percantik CSS Anda, atau konversi Markdown ke HTML dengan satu klik.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Alat SEO & Media Sosial:</strong> Peringkat lebih tinggi dan berbagi lebih baik. Gunakan generator meta-tag kami, pemeriksa kepadatan kata kunci, dan pengunduh miniatur YouTube untuk mendapatkan keunggulan kompetitif dalam hasil pencarian.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Mengapa Memilih Aynzo Tools?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Internet penuh dengan situs \"gratis\" yang melacak data Anda atau membombardir Anda dengan iklan yang mengganggu. Aynzo Tools berbeda. Kami memprioritaskan <strong>Privasi dan Keamanan</strong>, memastikan bahwa file Anda diproses secara lokal atau dihapus segera setelah digunakan. Platform kami <strong>100% Bebas Iklan</strong>, yang berarti Anda dapat fokus pada pekerjaan Anda tanpa gangguan. Setiap alat dioptimalkan untuk <strong>Performa Sangat Cepat</strong>, menggunakan teknologi web terbaru untuk memberikan hasil dalam hitungan milidetik.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Untuk Siapa Aynzo Tools?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Platform kami dibuat dengan cermat untuk:\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Pengembang:</strong> Men-debug kode dengan cepat, memformat data, atau membuat hash.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Pembuat Konten:</strong> Mengoptimalkan gambar, analisis SEO, dan aset sosial.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Siswa & Profesional:</strong> Mengonversi dokumen dan perhitungan cepat.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Pengguna Sehari-hari:</strong> Alat utilitas online sederhana yang berfungsi dengan baik.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"Berhenti berpindah-pindah di antara lusinan tab. Tandai Aynzo Tools hari ini dan rasakan kekuatan rangkaian alat profesional langsung di browser Anda.\"\n  </p>\n</div>"
     },
     "App": {
         "name": "AYNZO",
@@ -61,12 +62,13 @@
         "viewAll": "Lihat Semua Alat",
         "backToTools": "Kembali ke Alat",
         "image-compressor": {
-            "name": "Kompresor Gambar",
+            "name": "Kompres Gambar Online Gratis",
             "description": "Kompres gambar JPG, PNG, dan WebP tanpa kehilangan kualitas.",
-            "seoTitle": "Kompresor Gambar - Alat Gratis Online",
-            "seoDescription": "Kompres gambar tanpa kehilangan kualitas. 100% gratis, cepat dan aman.",
-            "seoKeywords": "kompresor gambar, kompres gambar, alat gratis",
-            "seoH1": "Kompresor Gambar"
+            "seoTitle": "Kompres Gambar Online Gratis: Kurangi Ukuran Foto Tanpa Pecah",
+            "seoDescription": "Optimalkan gambar Anda dengan panduan ahli kami. Kompres JPG, PNG, dan WebP online secara gratis. Proses 100% pribadi di browser Anda.",
+            "seoKeywords": "kompres gambar online gratis, kurangi ukuran foto tanpa pecah, optimasi gambar web, kompres jpeg online",
+            "seoH1": "Kompres Gambar Online Gratis: Panduan Utama Optimasi Web",
+            "content": "\n<p>Di era kecepatan digital, memiliki gambar yang dioptimalkan sangat penting untuk situs web atau media sosial apa pun. Gambar yang berat meningkatkan waktu pemuatan. <strong>Kompresor Gambar Aynzo</strong> membantu Anda mengurangi ukuran file secara instan sambil menjaga ketajaman.</p>\n\n<h2>Mengapa Mengompres Gambar Anda?</h2>\n<ul>\n    <li><strong>Kecepatan Situs:</strong> Google menyukai situs yang cepat. Gambar ringan meningkatkan peringkat SEO Anda.</li>\n    <li><strong>Hemat Penyimpanan:</strong> Kurangi ruang yang digunakan pada server dan perangkat seluler hingga 90%.</li>\n    <li><strong>Privasi Penuh:</strong> Tidak seperti alat lain, kami tidak pernah mengunggah foto Anda ke server. Semua pemrosesan dilakukan di browser Anda.</li>\n</ul>\n"
         },
         "image-resizer": {
             "name": "Pengubah Ukuran Gambar",
@@ -483,14 +485,6 @@
             "seoDescription": "Format kode JS yang rapi.",
             "seoKeywords": "pemformat js",
             "seoH1": "Pemformat JavaScript"
-        },
-        "xml-formatter": {
-            "name": "Pemformat XML",
-            "description": "Format dan indahkan kode XML.",
-            "seoTitle": "Pemformat XML",
-            "seoDescription": "Rapikan XML.",
-            "seoKeywords": "pemformat xml",
-            "seoH1": "Pemformat XML"
         },
         "sql-formatter": {
             "name": "Pemformat SQL",

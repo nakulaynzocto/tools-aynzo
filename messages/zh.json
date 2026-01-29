@@ -3,7 +3,8 @@
         "title": "免费开发者工具",
         "description": "日常任务的简单、快速、安全工具集合。",
         "noAds": "无广告、无跟踪，只有工具。",
-        "toolsCount": "{count} 个工具"
+        "toolsCount": "{count} 个工具",
+        "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">通过 Aynzo Tools 增强您的数字工作流</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  欢迎来到 <strong>Aynzo Tools</strong>，这是您获取高品质 <strong>免费在线工具</strong> 的终极目的地，旨在简化您的日常数字任务。在一个生产力至上的世界里，我们提供一个干净、快速且安全的环境来处理从复杂的文件转换到简单的文本格式化的所有事务。我们的使命是提供一个专业的“公用事业即服务”平台，消除对昂贵软件或充满广告的拙劣替代品的需求。\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">全面的在线公用事业套件</h3>\n<p class=\"text-muted-foreground mb-6\">\n  在 Aynzo Tools，我们将我们的产品进行分类，以帮助您在几秒钟内找到所需的内容：\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">在线图片转换器和编辑器：</strong> 我们的图片套件专为速度而生。无论您是需要 <strong>在线图片转换器</strong> 在 JPG、PNG 和 WebP 之间切换，还是需要压缩照片进行网页优化，我们都能满足您的需求。您还可以进行裁剪、旋转和添加滤镜，且零画质损失。\n  </li>\n  <li>\n    <strong class=\"text-foreground\">核心 PDF 工具：</strong> 文档处理不应成为负担。我们的 <strong>免费 PDF 工具</strong> 允许您将 PDF 转换为 Word、合并文件或提取图片，且不会损害文档的完整性。\n  </li>\n  <li>\n    <strong class=\"text-foreground\">文本和编码工具：</strong> 为开发人员和作家提供高级文本格式化程序、大小写转换器和代码压缩器。只需点击一下即可验证您的 JSON、优化您的 CSS 或将 Markdown 转换为 HTML。\n  </li>\n  <li>\n    <strong class=\"text-foreground\">SEO 和社交媒体工具：</strong> 获得更高的排名和更好的分享。使用我们的元标签生成器、关键词密度检查器和 YouTube 缩略图下载器，在搜索结果中获得竞争优势。\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">为什么选择 Aynzo Tools？</h3>\n<p class=\"text-muted-foreground mb-6\">\n  互联网上充斥着追踪您的数据或用侵入性广告骚扰您的“免费”网站。Aynzo Tools 与众不同。我们优先考虑 <strong>隐私和安全</strong>，确保您的文件在本地处理或在使用后立即删除。我们的平台 <strong>100% 无广告</strong>，这意味着您可以专注于工作而不会分心。每个工具都针对 <strong>极速性能</strong> 进行了优化，使用最新的 Web 技术在毫秒内提供结果。\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Aynzo Tools 适合谁？</h3>\n<p class=\"text-muted-foreground mb-6\">\n  我们的平台专为以下人群精心打造：\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>开发人员：</strong> 快速调试代码、格式化数据或生成哈希。</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>内容创作者：</strong> 图片优化、SEO 分析和社交素材。</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>学生与职场人士：</strong> 转换文档和快速计算。</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>日常用户：</strong> 即插即用、简单好用的 <strong>在线实用工具</strong>。</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    “别再在几十个标签页之间跳来跳去了。今天就收藏 Aynzo Tools，直接在浏览器中体验专业工具套件的强大功能。”\n  </p>\n</div>"
     },
     "App": {
         "name": "AYNZO",
@@ -61,12 +62,13 @@
         "viewAll": "查看所有工具",
         "backToTools": "返回工具",
         "image-compressor": {
-            "name": "图像压缩器",
-            "description": "无损压缩JPG、PNG、WebP图像。",
-            "seoTitle": "图像压缩器 - 免费在线工具",
-            "seoDescription": "无损压缩图像。100%免费、快速、安全。",
-            "seoKeywords": "图像压缩, 图片压缩, 免费工具",
-            "seoH1": "图像压缩器"
+            "name": "在线图片压缩工具 (Image Compressor)",
+            "description": "在不损失质量的情况下压缩 JPG、PNG 和 WebP 图片。",
+            "seoTitle": "在线图片压缩免费工具：不失真减小照片大小",
+            "seoDescription": "通过我们的专业指南掌握图片优化。在线免费压缩 JPG、PNG 和 WebP，保持原画质。100% 浏览器本地处理，隐私安全。",
+            "seoKeywords": "在线图片压缩免费, 图片无损压缩, 减小图片大小, 在线照片压缩",
+            "seoH1": "在线图片压缩免费工具：网页优化终极指南",
+            "content": "\n<p>在数字化速度至上的时代，拥有优化过的图片对于任何网站或社交媒体都至关重要表现。过大的图片会增加加载时间并损害用户体验。<strong>Aynzo 图片压缩工具</strong> 旨在快速、安全地解决这一问题。</p>\n\n<h2>为什么要压缩图片？</h2>\n<ul>\n    <li><strong>提升网站速度：</strong> Google 偏好速度快的网站。轻量化的图片可以改善您的 SEO 排名。</li>\n    <li><strong>节省存储空间：</strong> 将服务器和移动设备上的图片占用空间减少高达 90%。</li>\n    <li><strong>完全隐私：</strong> 与其他网站不同，我们不会将您的照片上传到服务器。所有处理都在您的浏览器本地完成。</li>\n</ul>\n"
         },
         "image-resizer": {
             "name": "图像大小调整",

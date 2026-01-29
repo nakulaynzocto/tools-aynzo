@@ -1,9 +1,37 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Copy, RefreshCw, CheckCircle2, Shield, Lock, Download, Repeat, Settings, X, Check } from 'lucide-react';
+import { Copy, RefreshCw, CheckCircle2, Shield, Lock, Download, Repeat, Settings, X, Check, Hash, Binary, Fingerprint, QrCode, KeyRound } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
 export default function SecurityTools({ type }: { type: 'password-generator' }) {
+  // Navigation Configuration
+  const securityNavTools = [
+    {
+      category: 'Security',
+      tools: [
+        { id: 'password-generator', label: 'Password', icon: KeyRound },
+        { id: 'bcrypt-generator', label: 'Bcrypt', icon: Shield },
+      ]
+    },
+    {
+      category: 'Hashing',
+      tools: [
+        { id: 'base64-encoder', label: 'Base64', icon: Binary },
+        { id: 'md5-hash', label: 'MD5', icon: Hash },
+        { id: 'sha256-hash', label: 'SHA256', icon: Hash },
+        { id: 'sha512-hash', label: 'SHA512', icon: Hash },
+      ]
+    },
+    {
+      category: 'Generators',
+      tools: [
+        { id: 'uuid-generator', label: 'UUID', icon: Fingerprint },
+        { id: 'qr-code-generator', label: 'QR Code', icon: QrCode },
+      ]
+    }
+  ];
+
   const [password, setPassword] = useState('');
   const [length, setLength] = useState(16);
   const [copied, setCopied] = useState(false);
@@ -121,6 +149,8 @@ export default function SecurityTools({ type }: { type: 'password-generator' }) 
 
   return (
     <div className="max-w-6xl mx-auto space-y-6">
+      {/* Security Navigation */}
+      <ScrollableNav items={securityNavTools} activeToolId={type} />
       <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
         <div className="p-8">
           <div className="grid lg:grid-cols-2 gap-10">

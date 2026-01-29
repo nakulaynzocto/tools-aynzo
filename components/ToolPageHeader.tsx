@@ -25,7 +25,7 @@ export function ToolPageHeader({ name, description, category, h1 }: ToolPageHead
                     <span className="text-sm">{t('backToTools')}</span>
                 </Link>
                 <div className="inline-block">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-accent bg-secondary px-2.5 py-1 rounded-lg">
+                    <span className="text-xs font-black uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-lg">
                         {category}
                     </span>
                 </div>

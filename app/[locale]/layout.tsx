@@ -69,11 +69,12 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     },
     icons: {
       icon: [
-        { url: '/favicon.ico', sizes: 'any' },
-        { url: '/logo.png', type: 'image/png' },
+        { url: '/logo.png', sizes: 'any', type: 'image/png' },
+        { url: '/logo.png', sizes: '32x32', type: "image/png" },
+        { url: '/logo.png', sizes: '16x16', type: "image/png" },
       ],
       shortcut: '/logo.png',
-      apple: '/logo.png',
+      apple: [{ url: '/logo.png', sizes: '180x180', type: 'image/png' }],
     }
   };
 }
@@ -98,13 +99,16 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="shortcut icon" href="/logo.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Aynzo Tools",
+              "name": "Aynzo",
               "url": "https://tools.aynzo.com",
               "logo": "https://tools.aynzo.com/logo.png",
               "sameAs": [
@@ -131,6 +135,16 @@ export default async function RootLayout({
               "@type": "WebSite",
               "name": "Aynzo Tools",
               "url": "https://tools.aynzo.com",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Aynzo",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://tools.aynzo.com/logo.png",
+                  "width": 1200,
+                  "height": 630,
+                },
+              },
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": "https://tools.aynzo.com/en?q={search_term_string}",

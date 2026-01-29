@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Send, ExternalLink, RefreshCw, Copy, Check, Settings, X } from 'lucide-react';
+import { Send, ExternalLink, RefreshCw, Copy, Check, Settings, X, MessageSquare, BadgeDollarSign, Hash, CheckCircle } from 'lucide-react';
+import { ScrollableNav } from '@/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
 interface SocialLinkToolProps {
@@ -14,6 +15,35 @@ interface SocialLinkToolProps {
 }
 
 export default function SocialLinkTools({ type }: SocialLinkToolProps) {
+    const socialNavTools = [
+        {
+            category: 'Messaging',
+            tools: [
+                { id: 'whatsapp-link-generator', label: 'WhatsApp', icon: MessageSquare },
+                { id: 'telegram-link-generator', label: 'Telegram', icon: Send },
+            ]
+        },
+        {
+            category: 'Payment',
+            tools: [
+                { id: 'paypal-link-generator', label: 'PayPal', icon: BadgeDollarSign },
+            ]
+        },
+        {
+            category: 'Social',
+            tools: [
+                { id: 'instagram-hashtag-generator', label: 'Hashtags', icon: Hash },
+            ]
+        },
+        {
+            category: 'Utility',
+            tools: [
+                { id: 'email-validator', label: 'Email Verify', icon: CheckCircle },
+                { id: 'url-opener', label: 'URL Opener', icon: ExternalLink },
+            ]
+        }
+    ];
+
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState<any>(null);
     const [copied, setCopied] = useState(false);
@@ -170,6 +200,8 @@ export default function SocialLinkTools({ type }: SocialLinkToolProps) {
 
     return (
         <div className="max-w-6xl mx-auto space-y-6">
+            {/* Social Navigation */}
+            <ScrollableNav items={socialNavTools} activeToolId={type} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
                 <div className="p-8">

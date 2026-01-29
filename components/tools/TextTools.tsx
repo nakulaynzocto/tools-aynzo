@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Copy, Check, FileText, Hash, AlignLeft, Trash2, Download, Clock, Search, Type, MoveVertical, Eraser, Sparkles } from 'lucide-react';
+import { Copy, Check, FileText, Hash, AlignLeft, Trash2, Download, Clock, Search, Type, MoveVertical, Eraser, Sparkles, RefreshCw } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { ScrollableNav } from '@/components/ScrollableNav';
 
 
 interface TextToolProps {
@@ -9,6 +10,24 @@ interface TextToolProps {
 }
 
 export default function TextTools({ type }: TextToolProps) {
+  const textNavTools = [
+    {
+      category: 'Analysis',
+      tools: [
+        { id: 'word-counter', label: 'Word Count', icon: FileText },
+        { id: 'character-counter', label: 'Char Count', icon: Hash },
+      ]
+    },
+    {
+      category: 'Manipulation',
+      tools: [
+        { id: 'text-case-converter', label: 'Case Converter', icon: Type },
+        { id: 'remove-line-breaks', label: 'Line Breaks', icon: MoveVertical },
+        { id: 'reverse-text', label: 'Reverse Text', icon: RefreshCw },
+      ]
+    }
+  ];
+
   const t = useTranslations('TextTools');
   const [input, setInput] = useState('');
   const [stats, setStats] = useState({ words: 0, chars: 0, charsNoSpace: 0, sentences: 0, paragraphs: 0, lines: 0, readingTime: 0 });
@@ -70,14 +89,7 @@ export default function TextTools({ type }: TextToolProps) {
         case 'uppercase':
           result = input.toUpperCase();
           break;
-        case 'capitalize':
-          result = input.replace(/\b\w/g, l => l.toUpperCase());
-          break;
-        case 'alternating':
-          result = input.split('').map((char, i) =>
-            i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
-          ).join('');
-          break;
+
         case 'title':
           const smallWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'in', 'of'];
           result = input.toLowerCase().replace(/\b\w+/g, (word, index) => {
@@ -86,11 +98,6 @@ export default function TextTools({ type }: TextToolProps) {
             }
             return word;
           });
-          break;
-        case 'inverse':
-          result = input.split('').map(char =>
-            char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
-          ).join('');
           break;
         case 'remove-line-breaks':
         case 'remove-breaks':
@@ -141,6 +148,8 @@ export default function TextTools({ type }: TextToolProps) {
 
   return (
     <div className="max-w-6xl mx-auto space-y-8 animate-in fade-in duration-500">
+      {/* Text Navigation */}
+      <ScrollableNav items={textNavTools} activeToolId={type} />
 
       {/* Premium Header */}
 
@@ -233,8 +242,8 @@ export default function TextTools({ type }: TextToolProps) {
                 <div className="text-sm font-bold text-foreground">{t('uppercase')}</div>
               </button>
               {type === 'reverse-text' && (
-                <button onClick={() => handleAction('inverse')} className="col-span-2 p-3 rounded-xl border border-border bg-input hover:bg-primary/10 hover:border-primary/30 text-left transition-all group">
-                  <div className="text-xs font-semibold text-muted-foreground group-hover:text-primary mb-1">{t('mirrorMode')}</div>
+                <button onClick={() => handleAction('reverse-text')} className="col-span-2 p-3 rounded-xl border border-border bg-input hover:bg-primary/10 hover:border-primary/30 text-left transition-all group">
+                  <div className="text-xs font-semibold text-muted-foreground group-hover:text-primary mb-1">{t('reverseString')}</div>
                   <div className="text-sm font-bold text-foreground">{t('reverseText')}</div>
                 </button>
               )}
