@@ -111,7 +111,7 @@ export default function ImageTools({ type }: ImageToolProps) {
     };
 
     const addFiles = (newFiles: FileList | null) => {
-        if (!newFiles) return;
+        if (!newFiles || newFiles.length === 0) return;
         const newBatch: ProcessedFile[] = Array.from(newFiles).map(f => ({
             id: Math.random().toString(36).substring(7),
             file: f,
@@ -119,9 +119,13 @@ export default function ImageTools({ type }: ImageToolProps) {
             preview: URL.createObjectURL(f)
         }));
 
+        if (newBatch.length === 0) return;
+
         if (!isBatchSupported) {
-            setFiles([newBatch[0]]);
-            setSelectedFileId(newBatch[0].id);
+            if (newBatch[0]) {
+                setFiles([newBatch[0]]);
+                setSelectedFileId(newBatch[0].id);
+            }
         } else {
             setFiles(prev => [...prev, ...newBatch]);
             if (!selectedFileId && newBatch.length > 0) {
