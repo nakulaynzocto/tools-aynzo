@@ -80,18 +80,18 @@
         },
         "jpg-to-png": {
             "name": "JPG to PNG",
-            "description": "Convert JPG images to PNG format with transparent background support.",
-            "seoTitle": "JPG to PNG Converter - Free Online Tool",
-            "seoDescription": "Convert JPG to PNG with transparency. 100% free.",
-            "seoKeywords": "jpg to png, convert jpg to png",
+            "description": "Convert JPG images to PNG format instantly for free. High quality.",
+            "seoTitle": "JPG to PNG Converter Online Free - High Quality",
+            "seoDescription": "Convert JPG images to PNG format instantly for free. Maintain high image quality and transparency support. Secure and fast.",
+            "seoKeywords": "jpg to png, convert jpg to png, jpg to png converter, free online image converter",
             "seoH1": "JPG to PNG Converter"
         },
         "png-to-jpg": {
             "name": "PNG to JPG",
-            "description": "Convert PNG images to JPG format instantly.",
-            "seoTitle": "PNG to JPG Converter - Free Online Tool",
-            "seoDescription": "Convert PNG to JPG online. 100% free.",
-            "seoKeywords": "png to jpg, convert png to jpg",
+            "description": "Convert PNG images to JPG format online and reduce file size.",
+            "seoTitle": "PNG to JPG Converter Online Free - Convert & Compress",
+            "seoDescription": "Convert PNG to JPG online for free. Reduce file size instantly while maintaining high image quality. Perfect for photos and web.",
+            "seoKeywords": "png to jpg, convert png to jpg, png to jpg converter, online image converter, png in jpg",
             "seoH1": "PNG to JPG Converter"
         },
         "webp-converter": {
@@ -313,10 +313,10 @@
         "pdf-to-word": {
             "name": "PDF to Word",
             "description": "Convert PDF documents to editable Word files with OCR support.",
-            "seoTitle": "How to Convert PDF to Word Editable Free (Step-by-Step Guide)",
-            "seoDescription": "Master PDF to Word conversion with our expert guide. Learn how to preserve formatting and use OCR for scanned documents. 100% free and secure.",
-            "seoKeywords": "how to convert pdf to word, pdf to word editable free, scanned pdf to word doc, free pdf converter",
-            "seoH1": "How to Convert PDF to Word Editable Free: The Ultimate Document Guide"
+            "seoTitle": "Free PDF to Word Converter Online - 100% Editable (No Signup)",
+            "seoDescription": "Convert PDF to Word (DOCX) online for free. 100% editable documents, high layout accuracy, and secure processing. No email required.",
+            "seoKeywords": "pdf to word, convert pdf to word, pdf to word editable free, online pdf to word converter, free pdf to word without email",
+            "seoH1": "Free Online PDF to Word Converter: Convert to Editable DOCX Instantly"
         },
         "word-counter": {
             "name": "Word Counter",
@@ -352,27 +352,27 @@
         },
         "italic-text": {
             "name": "Italic Text Generator",
-            "description": "Generate italic text using Unicode.",
-            "seoTitle": "Italic Text Generator",
-            "seoDescription": "Create italic text for social media.",
-            "seoKeywords": "italic text, fancy text",
-            "seoH1": "Italic Text Generator"
+            "description": "Generate fancy italic text for Instagram bio and social media.",
+            "seoTitle": "Italic Text Generator - Fancy Italic Font for Instagram Bio",
+            "seoDescription": "Generate fancy italic text for Instagram bio, Twitter, and TikTok. Copy and paste italic letters instantly with our free converter.",
+            "seoKeywords": "italic text generator, italic font, fancy italic text, instagram bio font, copy paste italics",
+            "seoH1": "Italic Text Generator (𝒞𝑜𝓅𝓎 & 𝒫𝒶𝓈𝓉𝑒)"
         },
         "strikethrough-text": {
             "name": "Strikethrough Text",
-            "description": "Generate strikethrough text.",
-            "seoTitle": "Strikethrough Text Generator",
-            "seoDescription": "Cross out text easily.",
-            "seoKeywords": "strikethrough text",
-            "seoH1": "Strikethrough Text Generator"
+            "description": "Generate strikethrough text for social media. Cross out words instantly.",
+            "seoTitle": "Strikethrough Text Generator - Cross Out Text for Social Media",
+            "seoDescription": "Generate strikethrough text for Instagram, Facebook, and Twitter. Easily cross out text and copy-paste it anywhere.",
+            "seoKeywords": "strikethrough text generator, cross out text, strike text generator, line through text, instagram strikethrough",
+            "seoH1": "Strikethrough Text Generator (C̶r̶o̶s̶s̶ ̶O̶u̶t̶)"
         },
         "underline-text": {
             "name": "Underline Text",
-            "description": "Generate underlined text using Unicode.",
-            "seoTitle": "Underline Text Generator",
-            "seoDescription": "Create underlined text.",
-            "seoKeywords": "underline text",
-            "seoH1": "Underline Text Generator"
+            "description": "Generate underlined text for Instagram and Facebook bios.",
+            "seoTitle": "Underline Text Generator - Fancy Underline Font Online",
+            "seoDescription": "Generate underlined text for Instagram, Facebook, and Twitter bios. Create fancy underlined font and copy-paste it instantly.",
+            "seoKeywords": "underline text generator, underline font, text underline online, instagram underline",
+            "seoH1": "Underline Text Generator (U̲n̲d̲e̲r̲l̲i̲n̲e̲)"
         },
         "double-underline-text": {
             "name": "Double Underline Text",

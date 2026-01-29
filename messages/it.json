@@ -935,12 +935,12 @@
             "seoH1": "Calcolatore BMI"
         },
         "percentage-calculator": {
-            "name": "Calcolatore Percentuale",
-            "description": "Calcola percentuali, aumenti, diminuzioni.",
-            "seoTitle": "Calcolatore Percentuale",
-            "seoDescription": "Multipli strumenti percentuale.",
-            "seoKeywords": "calcolatore percentuale",
-            "seoH1": "Calcolatore Percentuale"
+            "name": "Calcolo Percentuale",
+            "description": "Calcola percentuali, aumenti, diminuzioni e variazioni.",
+            "seoTitle": "Calcolo Percentuale Online Gratis - Calcolatore Veloce",
+            "seoDescription": "Il miglior strumento per il calcolo percentuale online. Calcola aumenti, sconti e variazioni in pochi secondi. Gratis e sicuro.",
+            "seoKeywords": "calcolo percentuale, calcolatore percentuale, calcolare percentuale, calcolo sconto percentuale",
+            "seoH1": "Calcolo Percentuale Online"
         },
         "gst-calculator": {
             "name": "Calcolatore IVA",

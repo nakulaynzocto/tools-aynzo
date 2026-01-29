@@ -591,12 +591,12 @@
             "seoH1": "Convertisseur de chiffres romains"
         },
         "random-number": {
-            "name": "Générateur de nombres aléatoires",
-            "description": "Générez des nombres aléatoires dans une plage.",
-            "seoTitle": "Générateur de nombres aléatoires",
-            "seoDescription": "Nombres vraiment aléatoires.",
-            "seoKeywords": "générateur nombres aléatoires",
-            "seoH1": "Générateur de nombres aléatoires"
+            "name": "Chiffre Aléatoire & Nombre Aléatoire",
+            "description": "Générez des nombres aléatoires dans une plage personnalisée. Tirage au sort gratuit.",
+            "seoTitle": "Générateur de Chiffre Aléatoire - Tirage au Sort Gratuit",
+            "seoDescription": "Générez un chiffre aléatoire ou un nombre aléatoire instantanément. Parfait pour les tirages au sort, les jeux et les statistiques. 100% gratuit.",
+            "seoKeywords": "chiffre aleatoir, nombre aléatoire, générateur de nombre, tirage au sort en ligne, chiffre au hasard",
+            "seoH1": "Générateur de Nombre Aléatoire"
         },
         "random-string": {
             "name": "Générateur de chaînes aléatoires",
@@ -936,12 +936,12 @@
             "seoH1": "Calculatrice IMC"
         },
         "percentage-calculator": {
-            "name": "Calculatrice de pourcentage",
-            "description": "Calculez les pourcentages, augmentations, diminutions.",
-            "seoTitle": "Calculatrice de pourcentage",
-            "seoDescription": "Outils de calcul de pourcentage multiples.",
-            "seoKeywords": "calculatrice pourcentage",
-            "seoH1": "Calculatrice de pourcentage"
+            "name": "Calculatrice de Pourcentage",
+            "description": "Calculez les pourcentages, augmentations, diminutions et taux de variation.",
+            "seoTitle": "Calculatrice de Pourcentage Online Gratuite - Rapide",
+            "seoDescription": "Le meilleur outil pour calculer un pourcentage en ligne. Calculez les remises, les siphons et les marges facilement. 100% gratuit.",
+            "seoKeywords": "calculatrice pourcentage, calculer un pourcentage, calcul de pourcentage en ligne, calculatrice de remise",
+            "seoH1": "Calculatrice de Pourcentage en Ligne"
         },
         "gst-calculator": {
             "name": "Calculatrice TVA",
