@@ -52,9 +52,9 @@ export const tools = [
     },
     {
         _id: '6',
-        name: 'Image Format Converter',
-        slug: 'image-format-converter',
-        description: 'Convert between JPG, PNG, WebP and other formats.',
+        name: 'JPG to PNG',
+        slug: 'jpg-to-png',
+        description: 'Convert JPG images to PNG format with transparency support.',
         category: 'image',
         group: 'image-convert',
         seo: { title: 'Universal Image Converter', description: 'Convert image formats online.' },

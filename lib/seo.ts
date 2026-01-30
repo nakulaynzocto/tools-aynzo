@@ -1821,36 +1821,6 @@ export const toolSEO: { [key: string]: ToolSEO } = {
             { question: 'Is this tool free?', answer: 'Yes, convert as many images as you need for free.' }
         ]
     },
-    'image-format-converter': {
-        title: 'Universal Image Format Converter',
-        description: 'Convert between JPG, PNG, WebP, GIF, and BMP formats. The swiss-army knife of image compatibility.',
-        keywords: 'image converter, picture converter, change image format, photo converter online',
-        h1: 'Universal Image Format Converter',
-        content: `
-<p> Different platforms need different formats. Twitter handles JPGs best; Discord loves PNGs; websites need WebP. Our <strong> Universal Image Converter </strong> lets you switch between formats effortlessly without needing expensive software like Adobe Photoshop.</p>
-
-<h3> Supported Conversions </h3>
-<ul>
-<li><strong>Input: </strong> JPG, PNG, WebP, GIF, BMP, TIFF, ICO.</li>
-<li><strong>Output: </strong> JPG, PNG, WebP.</li>
-</ul>
-
-<h3> Privacy First </h3>
-<p> Unlike other sites that upload your photos to a cloud server, our converter runs <strong>locally in your browser</strong>. Your personal photos never leave your device.</p>
-`,
-        schema: {
-            '@context': 'https://schema.org',
-            '@type': 'WebApplication',
-            name: 'Image Converter',
-            description: 'Convert between various image formats.',
-            applicationCategory: 'MultimediaApplication',
-            operatingSystem: 'Any',
-            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-        },
-        faq: [
-            { question: 'Can I convert GIFs?', answer: 'You can convert GIFs to static formats (JPG/PNG/WebP), but currently, we do not support preserving animation.' }
-        ]
-    },
     'image-to-base64': {
         title: 'Image to Base64 Converter - Embed Images in Code',
         description: 'Convert images to Base64 strings for direct embedding in HTML, CSS, or JSON. Reduce HTTP requests.',
@@ -4312,7 +4282,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         <h3>Why Use an Age Calculator ? </h3>
             < ul >
             <li><strong>Precision : </strong> Know exactly how many days you have been alive.</li >
-        <li><strong>Planning: </strong> Calculate how many days are left until your next birthday or a special anniversary.</li >
+        <li><strong>Planning: </strong> Calculate how many days are left until your next birthday or special occasion.</li >
             <li><strong>Fun: </strong> See your age in different units (e.g., "I am 10,000 days old").</li >
                 </ul>
 

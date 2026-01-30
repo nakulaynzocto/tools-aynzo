@@ -102,14 +102,6 @@
             "seoKeywords": "محول webp, webp jpg png",
             "seoH1": "محول WebP"
         },
-        "image-format-converter": {
-            "name": "محول صيغ الصور",
-            "description": "التحويل بين JPG و PNG و WebP وغيرها.",
-            "seoTitle": "محول صيغ الصور - أداة مجانية",
-            "seoDescription": "تغيير صيغ الصور عبر الإنترنت. 100% مجاني.",
-            "seoKeywords": "محول صيغ صور, تغيير صيغة صورة",
-            "seoH1": "محول صيغ الصور"
-        },
         "image-to-base64": {
             "name": "صورة إلى Base64",
             "description": "تحويل الصور إلى نصوص Base64 لتضمينها في الكود.",

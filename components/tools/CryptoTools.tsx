@@ -40,6 +40,8 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
         }
     ];
 
+    const activeCategory = securityNavTools.find((cat: any) => (cat.tools as any[]).some((t: any) => t.id === type));
+
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [mode, setMode] = useState<'encode' | 'decode'>('encode');
@@ -159,7 +161,9 @@ export default function CryptoTools({ type }: CryptoToolsProps) {
     return (
         <div className="max-w-6xl mx-auto space-y-6 pb-20">
             {/* Security Navigation */}
-            <ScrollableNav items={securityNavTools} activeToolId={type} />
+            {activeCategory && (
+                <ScrollableNav items={[{ category: activeCategory.category, tools: activeCategory.tools }]} activeToolId={type} />
+            )}
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-8">
                     <div className="space-y-8">

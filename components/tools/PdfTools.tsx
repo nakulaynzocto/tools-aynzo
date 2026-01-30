@@ -26,6 +26,7 @@ export default function PdfTools({ type }: PdfToolProps) {
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     const tTools = useTranslations('Tools');
+
     const [files, setFiles] = useState<ProcessedFile[]>([]);
     const [dragActive, setDragActive] = useState(false);
     const [processing, setProcessing] = useState(false);
@@ -361,12 +362,14 @@ export default function PdfTools({ type }: PdfToolProps) {
         }
     ];
 
+    const activeCategory = pdfNavTools.find((cat: any) => (cat.tools as any[]).some((t: any) => t.id === type));
+
     return (
         <div className="max-w-6xl mx-auto space-y-4">
             {/* PDF Tools Navigation */}
-            {/* PDF Tools Navigation */}
-            {/* PDF Tools Navigation */}
-            <ScrollableNav items={pdfNavTools} activeToolId={type} />
+            {activeCategory && (
+                <ScrollableNav items={[{ category: activeCategory.category, tools: activeCategory.tools }]} activeToolId={type} />
+            )}
 
             <input
                 id="pdf-input"

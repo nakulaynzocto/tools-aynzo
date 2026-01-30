@@ -52,9 +52,13 @@ export default function SocialLinkTools({ type }: SocialLinkToolProps) {
     const [whatsapp, setWhatsapp] = useState({ phone: '', message: '' });
     const [telegram, setTelegram] = useState('');
     const [paypal, setPaypal] = useState({ email: '', item: '', amount: '', currency: 'USD' });
-    const [email, setEmail] = useState('');
+
+    const activeCategory = socialNavTools.find(cat => cat.tools.some(t => t.id === type));
+
+    const [input, setInput] = useState('');
     const [urls, setUrls] = useState('');
     const [hashtag, setHashtag] = useState('');
+    const [email, setEmail] = useState('');
 
     useEffect(() => {
         if (type === 'url-opener') return;
@@ -201,7 +205,9 @@ export default function SocialLinkTools({ type }: SocialLinkToolProps) {
     return (
         <div className="max-w-6xl mx-auto space-y-6">
             {/* Social Navigation */}
-            <ScrollableNav items={socialNavTools} activeToolId={type} />
+            {activeCategory && (
+                <ScrollableNav items={[{ category: activeCategory.category, tools: activeCategory.tools }]} activeToolId={type} />
+            )}
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
 
                 <div className="p-8">

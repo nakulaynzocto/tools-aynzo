@@ -71,6 +71,9 @@ export default function WebTools({ type }: WebToolProps) {
 
     const isSeoTool = seoNavTools.some(cat => cat.tools.some(t => t.id === type));
     const isUtilityTool = utilityNavTools.some(cat => cat.tools.some(t => t.id === type));
+    
+    const activeSeoCategory = seoNavTools.find(cat => cat.tools.some(t => t.id === type));
+    const activeUtilityCategory = utilityNavTools.find(cat => cat.tools.some(t => t.id === type));
 
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState<any>(null);
@@ -269,8 +272,11 @@ export default function WebTools({ type }: WebToolProps) {
     return (
         <div className="max-w-6xl mx-auto space-y-6 pb-20">
             {/* Tool Navigation */}
-            {(isSeoTool || isUtilityTool) && (
-                <ScrollableNav items={isSeoTool ? seoNavTools : utilityNavTools} activeToolId={type} />
+            {(isSeoTool && activeSeoCategory) && (
+                <ScrollableNav items={[{ category: activeSeoCategory.category, tools: activeSeoCategory.tools }]} activeToolId={type} />
+            )}
+            {(isUtilityTool && activeUtilityCategory) && (
+                <ScrollableNav items={[{ category: activeUtilityCategory.category, tools: activeUtilityCategory.tools }]} activeToolId={type} />
             )}
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-8">

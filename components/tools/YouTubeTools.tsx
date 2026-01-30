@@ -28,6 +28,9 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
             ]
         }
     ];
+
+    const activeCategory = youtubeNavTools.find(cat => cat.tools.some(t => t.id === type));
+    
     const t = useTranslations('YouTubeTools');
     const [input, setInput] = useState('');
     const [result, setResult] = useState<any>(null);
@@ -206,7 +209,9 @@ export default function YouTubeTools({ type }: YouTubeToolProps) {
     return (
         <div className="max-w-6xl mx-auto space-y-4">
             {/* YouTube Navigation */}
-            <ScrollableNav items={youtubeNavTools} activeToolId={type} />
+            {activeCategory && (
+                <ScrollableNav items={[{ category: activeCategory.category, tools: activeCategory.tools }]} activeToolId={type} />
+            )}
 
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-4 md:p-6">

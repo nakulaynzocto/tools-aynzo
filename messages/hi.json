@@ -102,14 +102,6 @@
             "seoKeywords": "webp कन्वर्टर, webp jpg png",
             "seoH1": "WebP कन्वर्टर"
         },
-        "image-format-converter": {
-            "name": "इमेज फॉर्मेट कन्वर्टर",
-            "description": "JPG, PNG, WebP आदि फॉर्मेट के बीच कन्वर्ट करें।",
-            "seoTitle": "इमेज फॉर्मेट कन्वर्टर - मुफ्त टूल",
-            "seoDescription": "ऑनलाइन इमेज फॉर्मेट बदलें। 100% मुफ्त।",
-            "seoKeywords": "इमेज फॉर्मेट कन्वर्टर, फॉर्मेट बदलें",
-            "seoH1": "इमेज फॉर्मेट कन्वर्टर"
-        },
         "image-to-base64": {
             "name": "इमेज → Base64",
             "description": "इमेज को कोड में एम्बेड करने के लिए Base64 स्ट्रिंग में बदलें।",

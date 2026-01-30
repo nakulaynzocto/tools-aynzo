@@ -102,14 +102,6 @@
             "seoKeywords": "webp 변환기, webp jpg png",
             "seoH1": "WebP 변환기"
         },
-        "image-format-converter": {
-            "name": "이미지 형식 변환기",
-            "description": "JPG, PNG, WebP 등 다양한 형식 간 변환합니다.",
-            "seoTitle": "이미지 형식 변환기 - 무료 도구",
-            "seoDescription": "이미지 형식을 온라인으로 변경. 100% 무료.",
-            "seoKeywords": "이미지 형식 변환기, 형식 변경",
-            "seoH1": "이미지 형식 변환기"
-        },
         "image-to-base64": {
             "name": "이미지 → Base64",
             "description": "이미지를 코드에 삽입할 Base64 문자열로 변환합니다.",

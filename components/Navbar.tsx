@@ -164,14 +164,52 @@ export default function Navbar() {
                                                 </button>
 
                                                 {/* Mega Menu Dropdown */}
-                                                {activeCategory === category && (
-                                                    <div className={cn(
-                                                        "mt-1 bg-card rounded-xl shadow-2xl border border-border overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-200",
-                                                        toolCategories[category as keyof typeof toolCategories].some(tool => tool.group)
-                                                            ? "fixed left-1/2 -translate-x-1/2 top-16 w-[1100px] p-8" // Centered on screen
-                                                            : cn("absolute", index > 2 ? 'right-0' : 'left-0', toolCategories[category as keyof typeof toolCategories].length > 20 ? 'w-[750px]' : 'w-[500px]')
-                                                    )}>
-                                                        {!toolCategories[category as keyof typeof toolCategories].some(tool => tool.group) ? (
+                                                {activeCategory === category && (() => {
+                                                    const hasGroups = toolCategories[category as keyof typeof toolCategories].some(tool => tool.group);
+                                                    
+                                                    // Calculate grouped tools once for reuse
+                                                    const groupedTools = hasGroups ? toolCategories[category as keyof typeof toolCategories].reduce((acc, tool) => {
+                                                        const g = tool.group || 'other';
+                                                        if (!acc[g]) acc[g] = [];
+                                                        acc[g].push(tool);
+                                                        return acc;
+                                                    }, {} as Record<string, typeof toolCategories[string]>) : {};
+                                                    
+                                                    const groupCount = Object.keys(groupedTools).length;
+                                                    let dropdownWidth = "";
+                                                    
+                                                    if (hasGroups) {
+                                                        // Dynamic width based on number of columns to prevent text overlap
+                                                        // Each column needs ~180-200px + gaps + padding
+                                                        if (groupCount <= 2) {
+                                                            dropdownWidth = "w-auto min-w-[500px] max-w-[95vw] lg:min-w-[600px] lg:max-w-[700px]";
+                                                        } else if (groupCount <= 3) {
+                                                            dropdownWidth = "w-auto min-w-[650px] max-w-[95vw] lg:min-w-[750px] lg:max-w-[900px]";
+                                                        } else if (groupCount <= 4) {
+                                                            dropdownWidth = "w-auto min-w-[750px] max-w-[95vw] lg:min-w-[850px] lg:max-w-[1050px]";
+                                                        } else if (groupCount <= 5) {
+                                                            dropdownWidth = "w-auto min-w-[900px] max-w-[95vw] lg:min-w-[1050px] lg:max-w-[1250px]";
+                                                        } else {
+                                                            dropdownWidth = "w-auto min-w-[1000px] max-w-[95vw] lg:min-w-[1200px] lg:max-w-[1500px]";
+                                                        }
+                                                    }
+                                                    
+                                                    // Dynamic grid columns based on number of groups
+                                                    let gridCols = 'grid-cols-2';
+                                                    if (groupCount <= 2) gridCols = 'grid-cols-2';
+                                                    else if (groupCount <= 3) gridCols = 'grid-cols-3';
+                                                    else if (groupCount <= 4) gridCols = 'grid-cols-4';
+                                                    else if (groupCount <= 5) gridCols = 'grid-cols-5';
+                                                    else gridCols = 'grid-cols-6';
+                                                    
+                                                    return (
+                                                        <div className={cn(
+                                                            "mt-1 bg-card rounded-xl shadow-2xl border border-border overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-200",
+                                                            hasGroups
+                                                                ? `fixed left-1/2 -translate-x-1/2 top-16 ${dropdownWidth} p-6 lg:p-8`
+                                                                : cn("absolute", index > 2 ? 'right-0' : 'left-0', "w-auto min-w-[300px] max-w-[500px] lg:max-w-[750px]", toolCategories[category as keyof typeof toolCategories].length > 20 && "lg:max-w-[750px]")
+                                                        )}>
+                                                            {!hasGroups ? (
                                                             <>
                                                                 <div className="p-3 bg-secondary/50 border-b border-border">
                                                                     <h3 className="text-foreground font-semibold text-sm">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}</h3>
@@ -181,7 +219,7 @@ export default function Navbar() {
                                                                         <Link
                                                                             key={tool.slug}
                                                                             href={`/tools/${tool.slug}`}
-                                                                            className="block px-3 py-2.5 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-xs rounded-md m-1"
+                                                                            className="block px-3 py-2.5 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-[15.6px] rounded-md m-1"
                                                                             onClick={() => setActiveCategory(null)}
                                                                         >
                                                                             {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
@@ -190,40 +228,31 @@ export default function Navbar() {
                                                                 </div>
                                                             </>
                                                         ) : (
-                                                            /* Grouped Layout (e.g., Image Tools) */
-                                                            <div className="grid grid-cols-5 gap-8">
-                                                                {(() => {
-                                                                    const groupedTools = toolCategories[category as keyof typeof toolCategories].reduce((acc, tool) => {
-                                                                        const g = tool.group || 'other';
-                                                                        if (!acc[g]) acc[g] = [];
-                                                                        acc[g].push(tool);
-                                                                        return acc;
-                                                                    }, {} as Record<string, typeof toolCategories[string]>);
-
-                                                                    return Object.entries(groupedTools).map(([group, tools]) => (
-                                                                        <div key={group} className="space-y-3">
-                                                                            <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary border-b border-border pb-1.5 mb-2">
-                                                                                {tImageGroups.has(group) ? tImageGroups(group) : group}
-                                                                            </h4>
-                                                                            <div className="flex flex-col gap-1.5">
-                                                                                {tools.map((tool) => (
-                                                                                    <Link
-                                                                                        key={tool.slug}
-                                                                                        href={`/tools/${tool.slug}`}
-                                                                                        className="text-[12.5px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200"
-                                                                                        onClick={() => setActiveCategory(null)}
-                                                                                    >
-                                                                                        {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
-                                                                                    </Link>
-                                                                                ))}
-                                                                            </div>
+                                                            <div className={`grid ${gridCols} gap-6 lg:gap-8`}>
+                                                                {Object.entries(groupedTools).map(([group, tools]) => (
+                                                                    <div key={group} className="space-y-3 min-w-[160px]">
+                                                                        <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary border-b border-border pb-1.5 mb-2 whitespace-nowrap">
+                                                                            {tImageGroups.has(group) ? tImageGroups(group) : group}
+                                                                        </h4>
+                                                                        <div className="flex flex-col gap-1.5">
+                                                                            {tools.map((tool) => (
+                                                                                <Link
+                                                                                    key={tool.slug}
+                                                                                    href={`/tools/${tool.slug}`}
+                                                                                    className="text-[16.25px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200 break-words"
+                                                                                    onClick={() => setActiveCategory(null)}
+                                                                                >
+                                                                                    {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                                </Link>
+                                                                            ))}
                                                                         </div>
-                                                                    ));
-                                                                })()}
+                                                                    </div>
+                                                                ))}
                                                             </div>
                                                         )}
-                                                    </div>
-                                                )}
+                                                        </div>
+                                                    );
+                                                })()}
                                             </div>
                                         )
                                     })}
@@ -283,7 +312,7 @@ export default function Navbar() {
                                                                             <Link
                                                                                 key={tool.slug}
                                                                                 href={`/tools/${tool.slug}`}
-                                                                                className="text-[12.5px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200"
+                                                                                className="text-[16.25px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200"
                                                                                 onClick={() => setActiveCategory(null)}
                                                                             >
                                                                                 {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}

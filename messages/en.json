@@ -103,14 +103,6 @@
             "seoKeywords": "webp converter, webp to jpg, jpg to webp",
             "seoH1": "WebP Converter"
         },
-        "image-format-converter": {
-            "name": "Image Format Converter",
-            "description": "Convert between JPG, PNG, WebP, and other formats.",
-            "seoTitle": "Image Format Converter - Free Online Tool",
-            "seoDescription": "Convert image formats online. 100% free.",
-            "seoKeywords": "image format converter, convert image",
-            "seoH1": "Image Format Converter"
-        },
         "image-to-base64": {
             "name": "Image to Base64",
             "description": "Convert images to Base64 strings for embedding in code.",

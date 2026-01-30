@@ -102,14 +102,6 @@
             "seoKeywords": "webp 转换, webp jpg png",
             "seoH1": "WebP转换器"
         },
-        "image-format-converter": {
-            "name": "图像格式转换器",
-            "description": "在JPG、PNG、WebP等格式之间转换。",
-            "seoTitle": "图像格式转换器 - 免费工具",
-            "seoDescription": "在线更改图像格式。100%免费。",
-            "seoKeywords": "图像格式转换, 格式更改",
-            "seoH1": "图像格式转换器"
-        },
         "image-to-base64": {
             "name": "图像 → Base64",
             "description": "将图像转换为用于代码嵌入的Base64字符串。",

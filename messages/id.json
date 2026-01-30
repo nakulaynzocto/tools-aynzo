@@ -102,14 +102,6 @@
             "seoKeywords": "konverter webp, webp jpg png",
             "seoH1": "Konverter WebP"
         },
-        "image-format-converter": {
-            "name": "Konverter Format Gambar",
-            "description": "Konversi antara JPG, PNG, WebP dan format lainnya.",
-            "seoTitle": "Konverter Format Gambar - Alat Gratis",
-            "seoDescription": "Ubah format gambar online. 100% gratis.",
-            "seoKeywords": "konverter format gambar, ubah format gambar",
-            "seoH1": "Konverter Format Gambar"
-        },
         "image-to-base64": {
             "name": "Gambar ke Base64",
             "description": "Konversi gambar ke string Base64 untuk disematkan dalam kode.",

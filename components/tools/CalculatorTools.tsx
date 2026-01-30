@@ -33,6 +33,8 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
         }
     ];
 
+    const activeCategory = calculatorNavTools.find(cat => cat.tools.some(t => t.id === type));
+
     const [result, setResult] = useState<any>(null);
     const [copied, setCopied] = useState(false);
 
@@ -150,7 +152,9 @@ export default function CalculatorTools({ type }: CalculatorToolsProps) {
     return (
         <div className="max-w-6xl mx-auto space-y-6">
             {/* Calculator Navigation */}
-            <ScrollableNav items={calculatorNavTools} activeToolId={type} />
+            {activeCategory && (
+                <ScrollableNav items={[{ category: activeCategory.category, tools: activeCategory.tools }]} activeToolId={type} />
+            )}
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden p-8">
                 <div className="grid lg:grid-cols-2 gap-10">
                     {/* INPUTS */}
