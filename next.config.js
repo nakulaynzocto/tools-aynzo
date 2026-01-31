@@ -32,6 +32,7 @@ const nextConfig = {
     },
   },
   webpack: (config, { isServer }) => {
+    // Configure fallbacks for client-side
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -40,11 +41,23 @@ const nextConfig = {
         crypto: false,
         canvas: false, // Exclude canvas from client bundle
       };
-    } else {
-      // Server-side: exclude canvas if not needed
-      config.externals = config.externals || [];
-      // Only include canvas if actually used (check your usage)
     }
+    
+    // Ignore canvas import from pdfjs-dist (it's optional and not needed in browser)
+    const webpack = require('webpack');
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^canvas$/,
+        contextRegExp: /pdfjs-dist/,
+      })
+    );
+    
+    // Also add alias as fallback
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      canvas: false,
+    };
+    
     return config;
   },
 };
