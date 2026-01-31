@@ -98,15 +98,39 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
 
     const handleProcess = () => {
         if (type === 'url-opener') {
-            const urlList = urls.split('\n').filter(u => u.trim());
-            if (urlList.length > 0) {
-                const newWindow = window.open(urlList[0], '_blank');
-                if (newWindow) {
-                    urlList.forEach((url, i) => {
-                        if (i > 0) window.open(url.trim(), '_blank');
-                    });
-                    setResult(`Attempted to open ${urlList.length} links.`);
+            const urlList = urls.split('\n').filter(u => u.trim()).map(u => {
+                let url = u.trim();
+                if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                    url = 'https://' + url;
                 }
+                return url;
+            });
+            
+            if (urlList.length === 0) {
+                setResult('Please enter at least one URL.');
+                return;
+            }
+            
+            let openedCount = 0;
+            let blockedCount = 0;
+            
+            urlList.forEach((url, i) => {
+                try {
+                    const newWindow = window.open(url, '_blank');
+                    if (newWindow) {
+                        openedCount++;
+                    } else {
+                        blockedCount++;
+                    }
+                } catch (error) {
+                    blockedCount++;
+                }
+            });
+            
+            if (blockedCount > 0) {
+                setResult(`Opened ${openedCount} link(s). ${blockedCount} link(s) were blocked by popup blocker. Please allow popups for this site.`);
+            } else {
+                setResult(`Successfully opened ${openedCount} link(s) in new tabs.`);
             }
         }
     };

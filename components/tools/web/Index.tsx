@@ -42,24 +42,12 @@ export default function WebToolsIndex({ type }: WebToolProps) {
 
     const utilityNavTools = [
         {
-            category: 'Device & Network',
+            category: 'NETWORK & WEB',
             tools: [
-                { id: 'my-ip-address', label: 'My IP', icon: Globe2 },
-                { id: 'browser-info', label: 'Browser Info', icon: Info },
-            ]
-        },
-        {
-            category: 'Design & Layout',
-            tools: [
-                { id: 'screen-resolution-simulator', label: 'Screen Res', icon: Monitor },
-                { id: 'responsive-checker', label: 'Responsive', icon: Smartphone },
-            ]
-        },
-        {
-            category: 'Content',
-            tools: [
-                { id: 'lorem-ipsum', label: 'Lorem Ipsum', icon: Type },
-                { id: 'email-validator', label: 'Email Validator', icon: AtSign },
+                { id: 'my-ip-address', label: 'My IP Address', icon: Globe2 },
+                { id: 'browser-info', label: 'Browser Information', icon: Info },
+                { id: 'screen-resolution-simulator', label: 'Screen Resolution Tester', icon: Monitor },
+                { id: 'responsive-checker', label: 'Responsive Design Checker', icon: Smartphone },
             ]
         }
     ];
