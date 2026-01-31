@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import { Document, Packer, Paragraph, TextRun } from 'docx';
 
 export function PdfToWord() {
-    const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     const [file, setFile] = useState<File | null>(null);
     const [processing, setProcessing] = useState(false);

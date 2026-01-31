@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import { PDFDocument } from 'pdf-lib';
 
 export function MergePdf() {
-    const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     const [files, setFiles] = useState<File[]>([]);
     const [processing, setProcessing] = useState(false);
@@ -79,7 +78,7 @@ export function MergePdf() {
             }
 
             const pdfBytes = await mergedPdf.save();
-            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const blob = new Blob([new Uint8Array(pdfBytes)], { type: 'application/pdf' });
             const url = URL.createObjectURL(blob);
             setDownloadUrl(url);
         } catch (e) {

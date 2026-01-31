@@ -3,7 +3,7 @@ export interface TextToolProps {
 }
 
 export interface AdvancedTextToolProps {
-    type: 'italic-text' | 'strikethrough-text' | 'underline-text' | 'small-text' | 'upside-down-text' | 'mirror-text' | 'duplicate-line-remover' | 'sort-alphabetically' | 'text-replace' | 'whitespace-remover' | 'word-frequency' | 'find-replace' | 'bold-text' | 'cursive-text' | 'double-underline-text';
+    type: 'italic-text' | 'strikethrough-text' | 'underline-text' | 'small-text' | 'upside-down-text' | 'mirror-text' | 'duplicate-line-remover' | 'sort-alphabetically' | 'whitespace-remover' | 'word-frequency' | 'find-replace' | 'bold-text' | 'cursive-text' | 'double-underline-text';
 }
 
 export interface TextStats {

@@ -513,16 +513,6 @@ export const tools = [
     },
     {
         _id: '22',
-        name: 'Text Replacer',
-        slug: 'text-replace',
-        description: 'Find and replace text online.',
-        category: 'text',
-        group: 'text-edit',
-        seo: { title: 'Text Replacer', description: 'Replace words in text.' },
-        status: 'published'
-    },
-    {
-        _id: '23',
         name: 'Whitespace Remover',
         slug: 'whitespace-remover',
         description: 'Trim extra whitespace, tabs, and line breaks.',
@@ -532,7 +522,7 @@ export const tools = [
         status: 'published'
     },
     {
-        _id: '24',
+        _id: '23',
         name: 'Word Frequency',
         slug: 'word-frequency',
         description: 'Analyze word usage frequency in your text.',
@@ -542,7 +532,7 @@ export const tools = [
         status: 'published'
     },
     {
-        _id: '25',
+        _id: '24',
         name: 'Find & Replace',
         slug: 'find-replace',
         description: 'Advanced find and replace tool with Regex.',

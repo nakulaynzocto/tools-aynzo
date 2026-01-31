@@ -7,7 +7,6 @@ import { PDFDocument } from 'pdf-lib';
 import JSZip from 'jszip';
 
 export function SplitPdf() {
-    const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     const [file, setFile] = useState<File | null>(null);
     const [processing, setProcessing] = useState(false);

@@ -98,10 +98,12 @@ export function ScrollableNav({ items, activeToolId }: ScrollableNavProps) {
                                                 : "hover:bg-muted text-muted-foreground hover:text-foreground"
                                         )}
                                     >
-                                        {typeof tool.icon === 'string' ? (
-                                            <span className="text-sm">{tool.icon}</span>
-                                        ) : (
-                                            <tool.icon size={14} />
+                                        {tool.icon && (
+                                            typeof tool.icon === 'string' ? (
+                                                <span className="text-sm">{tool.icon}</span>
+                                            ) : (
+                                                <tool.icon size={14} />
+                                            )
                                         )}
                                         <span>{tool.label}</span>
                                     </Link>

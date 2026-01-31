@@ -9,33 +9,44 @@ import { URLEncoderDecoder } from './URLEncoderDecoder';
 export default function DevToolsIndex({ type }: DevToolProps) {
     const devNavTools = [
         {
-            category: 'Formatters',
+            category: 'FORMAT',
             tools: [
-                { id: 'json-formatter', label: 'JSON', icon: FileJson },
-                { id: 'html-formatter', label: 'HTML', icon: Code },
-                { id: 'css-formatter', label: 'CSS', icon: FileCode },
-                { id: 'javascript-formatter', label: 'JS', icon: Braces },
-                { id: 'xml-formatter', label: 'XML', icon: FileCode },
-                { id: 'sql-formatter', label: 'SQL', icon: FileText },
+                { id: 'json-formatter', label: 'JSON Formatter', icon: FileJson },
+                { id: 'html-formatter', label: 'HTML Formatter', icon: Code },
+                { id: 'css-formatter', label: 'CSS Formatter', icon: FileCode },
+                { id: 'javascript-formatter', label: 'JavaScript Formatter', icon: Braces },
+                { id: 'xml-formatter', label: 'XML Formatter', icon: FileCode },
+                { id: 'sql-formatter', label: 'SQL Formatter', icon: FileText },
             ]
         },
         {
-            category: 'Converters',
+            category: 'TOOLS',
             tools: [
-                { id: 'markdown-to-html', label: 'MD to HTML', icon: FileText },
-                { id: 'html-to-markdown', label: 'HTML to MD', icon: Code },
+                { id: 'url-encoder-decoder', label: 'URL Encoder/Decoder', icon: Link2 },
+                { id: 'diff-checker', label: 'Text Diff Checker', icon: Split },
+                { id: 'regex-tester', label: 'Regex Tester', icon: Search },
+            ]
+        },
+        {
+            category: 'CONVERT',
+            tools: [
+                { id: 'markdown-to-html', label: 'Markdown to HTML', icon: FileText },
+                { id: 'html-to-markdown', label: 'HTML to Markdown', icon: Code },
                 { id: 'csv-to-json', label: 'CSV to JSON', icon: FileText },
+                { id: 'json-to-csv', label: 'JSON to CSV', icon: FileText },
                 { id: 'html-to-jsx', label: 'HTML to JSX', icon: Code },
             ]
         },
         {
-            category: 'Utilities',
+            category: 'OPTIMIZE',
             tools: [
-                { id: 'url-encoder-decoder', label: 'URL Encoder', icon: Link2 },
-                { id: 'diff-checker', label: 'Diff Checker', icon: Split },
-                { id: 'user-agent-parser', label: 'User Agent', icon: Terminal },
-                { id: 'code-minifier', label: 'Minifier', icon: Minimize2 },
-                { id: 'regex-tester', label: 'Regex Tester', icon: Search },
+                { id: 'code-minifier', label: 'Code Minifier', icon: Minimize2 },
+            ]
+        },
+        {
+            category: 'OTHER',
+            tools: [
+                { id: 'user-agent-parser', label: 'User Agent Parser', icon: Terminal },
             ]
         }
     ];

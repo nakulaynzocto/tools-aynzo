@@ -7,7 +7,6 @@ import mammoth from 'mammoth';
 import jsPDF from 'jspdf';
 
 export function WordToPdf() {
-    const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     const [file, setFile] = useState<File | null>(null);
     const [processing, setProcessing] = useState(false);

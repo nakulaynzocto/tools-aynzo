@@ -38,6 +38,23 @@ export default function TextToolsIndex({ type }: TextToolProps) {
 
     const { stats, keywordDensity } = useTextProcessing(input);
 
+    // Auto-apply tool-specific transformations
+    const getProcessedInput = () => {
+        if (!input) return input;
+        
+        switch (type) {
+            case 'remove-line-breaks':
+                return transformText(input, 'remove-line-breaks');
+            case 'reverse-text':
+                return transformText(input, 'reverse-text');
+            default:
+                return input;
+        }
+    };
+
+    const displayInput = getProcessedInput();
+    const processedStats = useTextProcessing(displayInput);
+
     const handleAction = (action: string) => {
         setCleaning(true);
         setTimeout(() => {
@@ -81,25 +98,44 @@ export default function TextToolsIndex({ type }: TextToolProps) {
             <div className="grid lg:grid-cols-[1fr,300px] gap-6 items-stretch lg:h-[480px] h-auto">
                 <div className="flex flex-col h-full min-h-0">
                     <TextEditor
-                        input={input}
+                        input={type === 'remove-line-breaks' || type === 'reverse-text' ? displayInput : input}
                         setInput={setInput}
                         copied={copied}
-                        onCopy={copyToClipboard}
-                        onDownload={downloadText}
+                        onCopy={() => {
+                            const textToCopy = (type === 'remove-line-breaks' || type === 'reverse-text') ? displayInput : input;
+                            navigator.clipboard.writeText(textToCopy);
+                            setCopied(true);
+                            setTimeout(() => setCopied(false), 2000);
+                        }}
+                        onDownload={() => {
+                            const textToDownload = (type === 'remove-line-breaks' || type === 'reverse-text') ? displayInput : input;
+                            const blob = new Blob([textToDownload], { type: 'text/plain' });
+                            const url = window.URL.createObjectURL(blob);
+                            const link = document.createElement('a');
+                            link.href = url;
+                            link.download = 'text.txt';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                            window.URL.revokeObjectURL(url);
+                        }}
                         onClear={() => setInput('')}
                         onAction={handleAction}
                         keywordDensity={keywordDensity}
+                        toolType={type}
                     />
                 </div>
                 <div className="flex flex-col gap-4 h-full min-h-0 overflow-y-auto no-scrollbar pr-1">
-                    <TextMetrics stats={stats} />
-                    <TextFindReplace
-                        findText={findText}
-                        setFindText={setFindText}
-                        replaceText={replaceText}
-                        setReplaceText={setReplaceText}
-                        onReplaceAll={() => handleFindReplace('replaceAll')}
-                    />
+                    <TextMetrics stats={type === 'word-counter' || type === 'character-counter' ? processedStats.stats : stats} />
+                    {(type === 'text-case-converter' || type === 'word-counter' || type === 'character-counter') && (
+                        <TextFindReplace
+                            findText={findText}
+                            setFindText={setFindText}
+                            replaceText={replaceText}
+                            setReplaceText={setReplaceText}
+                            onReplaceAll={() => handleFindReplace('replaceAll')}
+                        />
+                    )}
                 </div>
             </div>
         </div>

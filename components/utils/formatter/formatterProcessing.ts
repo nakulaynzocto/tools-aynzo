@@ -48,6 +48,7 @@ export const minifyCode = (input: string, type: string): string => {
             case 'html-formatter':
             case 'css-formatter':
             case 'javascript-formatter':
+                // Basic minification - remove extra whitespace
                 return input.replace(/\s+/g, ' ').trim();
             
             default:
@@ -59,12 +60,35 @@ export const minifyCode = (input: string, type: string): string => {
 };
 
 export const markdownToHTML = (markdown: string): string => {
-    const result = marked(markdown);
-    return typeof result === 'string' ? result : '';
+    if (typeof window === 'undefined') {
+        // Server-side: return empty or basic conversion
+        return markdown;
+    }
+    
+    try {
+        // marked.parse() is synchronous by default
+        const result = marked.parse(markdown);
+        if (typeof result === 'string') {
+            return result;
+        }
+        // If it returns a Promise, we'll handle it synchronously (shouldn't happen in v17)
+        return String(result);
+    } catch (error: any) {
+        throw new Error(error.message || 'Markdown conversion failed');
+    }
 };
 
 export const htmlToMarkdown = (html: string): string => {
-    const turndownService = new TurndownService();
-    return turndownService.turndown(html);
+    if (typeof window === 'undefined') {
+        // Server-side: return empty
+        return html;
+    }
+    
+    try {
+        const turndownService = new TurndownService();
+        return turndownService.turndown(html);
+    } catch (error: any) {
+        throw new Error(error.message || 'HTML to Markdown conversion failed');
+    }
 };
 

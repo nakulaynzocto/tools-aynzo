@@ -198,7 +198,6 @@ export default async function ToolPage({ params }: Props) {
       case 'mirror-text':
       case 'duplicate-line-remover':
       case 'sort-alphabetically':
-      case 'text-replace':
       case 'whitespace-remover':
       case 'word-frequency':
       case 'find-replace':

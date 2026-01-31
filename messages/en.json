@@ -439,14 +439,6 @@
             "seoKeywords": "sort lines, alphabetical sorter",
             "seoH1": "Sort Alphabetically"
         },
-        "text-replace": {
-            "name": "Find and Replace",
-            "description": "Search and replace text.",
-            "seoTitle": "Find and Replace Tool",
-            "seoDescription": "Powerful text replacement.",
-            "seoKeywords": "find replace, text replacer",
-            "seoH1": "Find and Replace"
-        },
         "whitespace-remover": {
             "name": "Remove Extra Spaces",
             "description": "Remove extra whitespace and tabs.",
