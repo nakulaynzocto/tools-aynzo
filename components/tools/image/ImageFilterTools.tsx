@@ -29,6 +29,7 @@ export function ImageFilterTools({ type }: ImageFilterToolsProps) {
     const [quality, setQuality] = useState(80);
     const [filterValue, setFilterValue] = useState(type === 'round-corners-image' ? 20 : 100);
     const [size, setSize] = useState(type === 'pixelate-image' ? 10 : (type === 'image-shadow' ? 20 : 10));
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
     // Update defaults when type changes
     useEffect(() => {
@@ -164,7 +165,7 @@ export function ImageFilterTools({ type }: ImageFilterToolsProps) {
                     dragActive={dragActive}
                     onDrag={handleDrag}
                     onDrop={handleDrop}
-                    onFileSelect={() => document.getElementById('image-input')?.click()}
+                    onFileSelect={() => fileInputRef.current?.click()}
                     inputId="image-input"
                     multiple={false}
                     onChange={(e) => e.target.files && addFiles(e.target.files)}
@@ -222,6 +223,21 @@ export function ImageFilterTools({ type }: ImageFilterToolsProps) {
                     </div>
                 </>
             )}
+
+            <input
+                ref={fileInputRef}
+                id="image-input"
+                type="file"
+                multiple={false}
+                className="hidden"
+                accept="image/*"
+                onChange={(e) => {
+                    if (e.target.files && e.target.files.length > 0) {
+                        addFiles(e.target.files);
+                        e.target.value = '';
+                    }
+                }}
+            />
         </div>
     );
 }

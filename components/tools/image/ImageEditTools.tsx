@@ -46,6 +46,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
     const [borderWidth, setBorderWidth] = useState(10);
     const [borderColor, setBorderColor] = useState('#000000');
     const imgRef = useRef<HTMLImageElement>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null);
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
     const processingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -189,7 +190,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
                     dragActive={dragActive}
                     onDrag={handleDrag}
                     onDrop={handleDrop}
-                    onFileSelect={() => document.getElementById('image-input')?.click()}
+                    onFileSelect={() => fileInputRef.current?.click()}
                     inputId="image-input"
                     multiple={false}
                     onChange={(e) => e.target.files && addFiles(e.target.files)}
@@ -298,12 +299,18 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
             )}
 
             <input
+                ref={fileInputRef}
                 id="image-input"
                 type="file"
                 multiple={false}
                 className="hidden"
                 accept="image/*"
-                onChange={(e) => e.target.files && addFiles(e.target.files)}
+                onChange={(e) => {
+                    if (e.target.files && e.target.files.length > 0) {
+                        addFiles(e.target.files);
+                        e.target.value = '';
+                    }
+                }}
             />
         </div>
     );

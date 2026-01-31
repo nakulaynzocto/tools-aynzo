@@ -38,6 +38,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
     const [base64Error, setBase64Error] = useState<string | null>(null);
     const [processing, setProcessing] = useState(false);
     const base64OutputRef = useRef<HTMLDivElement>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
     // Scroll to Base64 output when it appears
     useEffect(() => {
@@ -218,18 +219,24 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                             <p className="text-xs text-muted-foreground mt-1">{t('supports')}</p>
                                         </div>
                                         <button
-                                            onClick={() => document.getElementById('image-input')?.click()}
+                                            onClick={() => fileInputRef.current?.click()}
                                             className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold"
                                         >
                                             {t('selectImage')}
                                         </button>
                                         <input
+                                            ref={fileInputRef}
                                             id="image-input"
                                             type="file"
                                             accept="image/*"
                                             multiple
                                             className="hidden"
-                                            onChange={(e) => e.target.files && addFiles(e.target.files)}
+                                            onChange={(e) => {
+                                                if (e.target.files && e.target.files.length > 0) {
+                                                    addFiles(e.target.files);
+                                                    e.target.value = '';
+                                                }
+                                            }}
                                         />
                                     </div>
                                 );
