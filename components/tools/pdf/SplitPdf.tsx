@@ -192,7 +192,7 @@ export function SplitPdf() {
                                         className={cn(
                                             "flex-1 py-2 px-4 rounded-lg text-sm font-bold transition-all",
                                             splitMode === 'all'
-                                                ? "bg-primary text-white"
+                                                ? "bg-primary text-primary-foreground"
                                                 : "bg-background text-foreground border border-border hover:bg-muted"
                                         )}
                                     >
@@ -203,7 +203,7 @@ export function SplitPdf() {
                                         className={cn(
                                             "flex-1 py-2 px-4 rounded-lg text-sm font-bold transition-all",
                                             splitMode === 'range'
-                                                ? "bg-primary text-white"
+                                                ? "bg-primary text-primary-foreground"
                                                 : "bg-background text-foreground border border-border hover:bg-muted"
                                         )}
                                     >
@@ -241,7 +241,7 @@ export function SplitPdf() {
                                 "w-full py-3 px-6 rounded-xl font-bold text-sm transition-all",
                                 processing || (splitMode === 'range' && !pageRange.trim())
                                     ? "bg-muted text-muted-foreground cursor-not-allowed"
-                                    : "bg-primary text-white hover:bg-primary/90"
+                                    : "bg-primary text-primary-foreground hover:bg-primary/90"
                             )}
                         >
                             {processing ? 'Splitting PDF...' : 'Split PDF'}
@@ -259,7 +259,7 @@ export function SplitPdf() {
                             </div>
                             <button
                                 onClick={handleDownload}
-                                className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                                className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                             >
                                 <Download size={20} />
                                 {tActions('download') || 'Download ZIP'}

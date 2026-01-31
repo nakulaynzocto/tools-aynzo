@@ -148,7 +148,7 @@ export function MergePdf() {
                             <div className="flex gap-2">
                                 <button
                                     onClick={() => fileInputRef.current?.click()}
-                                    className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-all flex items-center gap-2"
+                                    className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-bold hover:bg-primary/90 transition-all flex items-center gap-2"
                                 >
                                     <Plus size={16} />
                                     Add More
@@ -234,7 +234,7 @@ export function MergePdf() {
                                 "w-full py-3 px-6 rounded-xl font-bold text-sm transition-all",
                                 processing || files.length < 2
                                     ? "bg-muted text-muted-foreground cursor-not-allowed"
-                                    : "bg-primary text-white hover:bg-primary/90"
+                                    : "bg-primary text-primary-foreground hover:bg-primary/90"
                             )}
                         >
                             {processing ? 'Merging PDFs...' : 'Merge PDFs'}
@@ -252,7 +252,7 @@ export function MergePdf() {
                             </div>
                             <button
                                 onClick={handleDownload}
-                                className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                                className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                             >
                                 <Download size={20} />
                                 {tActions('download') || 'Download Merged PDF'}

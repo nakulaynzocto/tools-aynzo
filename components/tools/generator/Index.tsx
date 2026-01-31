@@ -187,7 +187,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                         </div>
                         <button
                             onClick={handleGenerate}
-                            className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                            className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
                             <RefreshCw size={16} />
                             Generate Random Numbers
@@ -243,7 +243,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                         </div>
                         <button
                             onClick={handleGenerate}
-                            className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                            className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
                             <RefreshCw size={16} />
                             Generate Random String
@@ -264,7 +264,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                                         className={cn(
                                             "flex-1 py-2 px-4 rounded-lg text-sm font-bold transition-all",
                                             colorFormat === format
-                                                ? "bg-primary text-white"
+                                                ? "bg-primary text-primary-foreground"
                                                 : "bg-muted text-foreground hover:bg-muted/80"
                                         )}
                                     >
@@ -275,7 +275,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                         </div>
                         <button
                             onClick={handleGenerate}
-                            className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                            className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
                             <RefreshCw size={16} />
                             Generate Random Color
@@ -311,7 +311,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                         </div>
                         <button
                             onClick={handleGenerate}
-                            className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                            className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
                             <RefreshCw size={16} />
                             Generate Random Date
@@ -335,7 +335,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                         </div>
                         <button
                             onClick={handleGenerate}
-                            className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                            className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
                             <RefreshCw size={16} />
                             Generate Random IPs

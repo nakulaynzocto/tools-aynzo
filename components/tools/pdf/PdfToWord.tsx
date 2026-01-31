@@ -171,7 +171,7 @@ export function PdfToWord() {
                                 "w-full py-3 px-6 rounded-xl font-bold text-sm transition-all",
                                 processing
                                     ? "bg-muted text-muted-foreground cursor-not-allowed"
-                                    : "bg-primary text-white hover:bg-primary/90"
+                                    : "bg-primary text-primary-foreground hover:bg-primary/90"
                             )}
                         >
                             {processing ? 'Processing...' : 'Convert to Word'}
@@ -189,7 +189,7 @@ export function PdfToWord() {
                             </div>
                             <button
                                 onClick={handleDownload}
-                                className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                                className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                             >
                                 <Download size={20} />
                                 {tActions('download') || 'Download Word Document'}

@@ -10,7 +10,7 @@ import { TextEditor } from './TextEditor';
 import { TextMetrics } from './TextMetrics';
 import { TextFindReplace } from './TextFindReplace';
 
-export default function TextToolsIndex({ type }: TextToolProps) {
+export default function TextToolsIndex({ type, hideNavigation = false }: TextToolProps) {
     const t = useTranslations('TextTools');
     const textNavTools = [
         {
@@ -93,10 +93,10 @@ export default function TextToolsIndex({ type }: TextToolProps) {
     };
 
     return (
-        <div className="max-w-6xl mx-auto space-y-4 animate-in fade-in duration-500">
-            <ScrollableNav items={textNavTools} activeToolId={type} />
-            <div className="grid lg:grid-cols-[1fr,300px] gap-6 items-stretch lg:h-[480px] h-auto">
-                <div className="flex flex-col h-full min-h-0">
+        <div className="max-w-6xl mx-auto space-y-3 sm:space-y-4 px-2 sm:px-4 animate-in fade-in duration-500">
+            {!hideNavigation && <ScrollableNav items={textNavTools} activeToolId={type} />}
+            <div className="grid lg:grid-cols-[1fr,300px] gap-4 sm:gap-6 items-stretch lg:h-[480px] h-auto">
+                <div className="flex flex-col h-full min-h-0 order-2 lg:order-1">
                     <TextEditor
                         input={type === 'remove-line-breaks' || type === 'reverse-text' ? displayInput : input}
                         setInput={setInput}
@@ -125,7 +125,7 @@ export default function TextToolsIndex({ type }: TextToolProps) {
                         toolType={type}
                     />
                 </div>
-                <div className="flex flex-col gap-4 h-full min-h-0 overflow-y-auto no-scrollbar pr-1">
+                <div className="flex flex-col gap-3 sm:gap-4 h-full min-h-0 overflow-y-auto no-scrollbar pr-1 order-1 lg:order-2">
                     <TextMetrics stats={type === 'word-counter' || type === 'character-counter' ? processedStats.stats : stats} />
                     {(type === 'text-case-converter' || type === 'word-counter' || type === 'character-counter') && (
                         <TextFindReplace

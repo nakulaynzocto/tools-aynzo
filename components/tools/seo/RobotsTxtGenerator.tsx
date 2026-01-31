@@ -22,8 +22,8 @@ export function RobotsTxtGenerator({ robots, setRobots, result, copied, onCopy }
                     </div>
                     <div className="space-y-4">
                         <div className="flex gap-2">
-                            <button onClick={() => setRobots({ ...robots, allAgents: true })} className={cn("px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-[0.1em] transition-all", robots.allAgents ? "bg-primary text-white" : "bg-muted text-muted-foreground/50 border border-border")}>All Agents</button>
-                            <button onClick={() => setRobots({ ...robots, allAgents: false })} className={cn("px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-[0.1em] transition-all", !robots.allAgents ? "bg-primary text-white" : "bg-muted text-muted-foreground/50 border border-border")}>Google Only</button>
+                            <button onClick={() => setRobots({ ...robots, allAgents: true })} className={cn("px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-[0.1em] transition-all", robots.allAgents ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground/50 border border-border")}>All Agents</button>
+                            <button onClick={() => setRobots({ ...robots, allAgents: false })} className={cn("px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-[0.1em] transition-all", !robots.allAgents ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground/50 border border-border")}>Google Only</button>
                         </div>
                         <div className="grid gap-4">
                             <div className="space-y-1.5">

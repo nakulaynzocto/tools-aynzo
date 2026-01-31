@@ -344,7 +344,7 @@ export function ImageOptimizeTools({ type }: ImageOptimizeToolsProps) {
                                     onClick={async () => {
                                         await downloadResults([selectedFile], type, false);
                                     }}
-                                    className="w-full py-4 bg-primary text-white rounded-xl font-black text-sm uppercase tracking-widest shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                    className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-black text-sm uppercase tracking-widest shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                 >
                                     <Download size={20} />
                                     {tActions('download')}

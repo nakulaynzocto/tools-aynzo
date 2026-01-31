@@ -6,6 +6,7 @@ import Navbar from "@/components/common/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,7 +46,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       images: ["/og-image.png"]
     },
     verification: {
-      google: "your-google-verification-code",
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
     },
     alternates: {
       canonical: `https://tools.aynzo.com/${locale}`,
@@ -152,6 +153,23 @@ export default async function RootLayout({
             })
           }}
         />
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>

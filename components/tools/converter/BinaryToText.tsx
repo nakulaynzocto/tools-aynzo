@@ -83,7 +83,7 @@ export function BinaryToText() {
                                     "px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2",
                                     copied === 'binary'
                                         ? "bg-emerald-500 text-white"
-                                        : "bg-primary text-white hover:bg-primary/90"
+                                        : "bg-primary text-primary-foreground hover:bg-primary/90"
                                 )}
                             >
                                 {copied === 'binary' ? <CheckCircle2 size={14} /> : <Copy size={14} />}
@@ -108,7 +108,7 @@ export function BinaryToText() {
                                     "px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2",
                                     copied === 'text'
                                         ? "bg-emerald-500 text-white"
-                                        : "bg-primary text-white hover:bg-primary/90"
+                                        : "bg-primary text-primary-foreground hover:bg-primary/90"
                                 )}
                             >
                                 {copied === 'text' ? <CheckCircle2 size={14} /> : <Copy size={14} />}
@@ -128,7 +128,7 @@ export function BinaryToText() {
                 <div className="flex items-center justify-center my-4 lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:my-0">
                     <button
                         onClick={handleSwap}
-                        className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg z-10"
+                        className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg z-10"
                     >
                         <ArrowLeftRight size={20} />
                     </button>

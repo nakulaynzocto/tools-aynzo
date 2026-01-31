@@ -61,7 +61,7 @@ export function WordFrequency() {
                     className={cn(
                         "w-full py-3 px-6 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2",
                         input.trim()
-                            ? "bg-primary text-white hover:bg-primary/90"
+                            ? "bg-primary text-primary-foreground hover:bg-primary/90"
                             : "bg-muted text-muted-foreground cursor-not-allowed"
                     )}
                 >
@@ -80,14 +80,14 @@ export function WordFrequency() {
                         <div className="flex gap-2">
                             <button
                                 onClick={handleCopy}
-                                className="px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-primary text-white hover:bg-primary/90"
+                                className="px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
                             >
                                 {copied ? <CheckCircle2 size={14} /> : <Copy size={14} />}
                                 Copy
                             </button>
                             <button
                                 onClick={handleDownload}
-                                className="px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-primary text-white hover:bg-primary/90"
+                                className="px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
                             >
                                 <Download size={14} />
                                 Download

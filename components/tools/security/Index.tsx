@@ -108,7 +108,7 @@ export default function SecurityToolsIndex({ type }: SecurityToolProps) {
                                 </div>
                                 <button
                                     onClick={handleGenerate}
-                                    className="w-full py-3 px-6 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                                    className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                                 >
                                     <RefreshCw size={16} />
                                     Generate Password

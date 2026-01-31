@@ -1,6 +1,5 @@
 import { ToolCard } from '@/components/common/components/ToolCard';
 import { tools } from '@/lib/tools';
-import { useTranslations } from 'next-intl';
 import {
     FileText, Image as ImageIcon, Lock, Code, Search, Youtube, Link as LinkIcon,
     RefreshCw, Shuffle, CreditCard, Wand2
@@ -19,10 +18,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     };
 }
 
-export default function ToolsPage({ params: { locale } }: { params: { locale: string } }) {
-    const tCategories = useTranslations('Categories');
-    const tTools = useTranslations('Tools');
-    const tNav = useTranslations('Navigation'); // Assuming 'tools' is in Navigation
+export default async function ToolsPage({ params: { locale } }: { params: { locale: string } }) {
+    const tCategories = await getTranslations({ locale, namespace: 'Categories' });
+    const tTools = await getTranslations({ locale, namespace: 'Tools' });
+    const tNav = await getTranslations({ locale, namespace: 'Navigation' }); // Assuming 'tools' is in Navigation
 
     // Group tools by category
     const toolsByCategory: Record<string, typeof tools> = {};

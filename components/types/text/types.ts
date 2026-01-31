@@ -1,5 +1,6 @@
 export interface TextToolProps {
     type: 'word-counter' | 'character-counter' | 'text-case-converter' | 'remove-line-breaks' | 'reverse-text';
+    hideNavigation?: boolean;
 }
 
 export interface AdvancedTextToolProps {

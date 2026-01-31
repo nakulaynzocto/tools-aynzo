@@ -300,7 +300,7 @@ export default function DevToolsIndex({ type }: DevToolProps) {
                                 {output && (
                                     <button
                                         onClick={handleCopy}
-                                        className={`px-6 py-2 rounded-xl transition-all font-black flex items-center gap-3 text-xs ${copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary text-white hover:scale-105 active:scale-95'}`}
+                                        className={`px-6 py-2 rounded-xl transition-all font-black flex items-center gap-3 text-xs ${copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary text-primary-foreground hover:scale-105 active:scale-95'}`}
                                     >
                                         {copied ? 'COPIED' : 'COPY ALL'}
                                     </button>

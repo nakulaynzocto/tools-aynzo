@@ -100,7 +100,7 @@ export default function KeywordToolsIndex({ type }: KeywordToolProps) {
                                 className={cn(
                                     "w-full py-3 px-6 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2",
                                     input && (type !== 'keyword-density-checker' || keyword)
-                                        ? "bg-primary text-white hover:bg-primary/90"
+                                        ? "bg-primary text-primary-foreground hover:bg-primary/90"
                                         : "bg-muted/50 text-muted-foreground cursor-not-allowed"
                                 )}
                             >

@@ -86,7 +86,7 @@ export function CurrencyConverter() {
                         <button
                             onClick={fetchRate}
                             disabled={loading}
-                            className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 disabled:opacity-50 transition-all flex items-center gap-2"
+                            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-bold hover:bg-primary/90 disabled:opacity-50 transition-all flex items-center gap-2"
                         >
                             <RefreshCw size={16} className={loading ? 'animate-spin' : ''} />
                             Refresh
@@ -163,7 +163,7 @@ export function CurrencyConverter() {
                                     "absolute right-3 top-1/2 -translate-y-1/2 px-3 py-2 rounded-lg text-xs font-bold transition-all",
                                     copied
                                         ? "bg-emerald-500 text-white"
-                                        : "bg-primary text-white hover:bg-primary/90"
+                                        : "bg-primary text-primary-foreground hover:bg-primary/90"
                                 )}
                             >
                                 {copied ? <CheckCircle2 size={16} /> : <Copy size={16} />}
@@ -176,7 +176,7 @@ export function CurrencyConverter() {
                 <div className="flex items-center justify-center my-4 lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:my-0">
                     <button
                         onClick={handleSwap}
-                        className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg z-10"
+                        className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg z-10"
                     >
                         <ArrowLeftRight size={20} />
                     </button>

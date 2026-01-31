@@ -220,7 +220,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                         </div>
                                         <button
                                             onClick={() => fileInputRef.current?.click()}
-                                            className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold"
+                                            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-bold"
                                         >
                                             {t('selectImage')}
                                         </button>
@@ -301,7 +301,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                 }}
                                 className={cn(
                                     "px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest transition-all flex items-center gap-2",
-                                    copied ? "bg-emerald-500 text-white" : "bg-primary text-white hover:bg-primary/90"
+                                    copied ? "bg-emerald-500 text-white" : "bg-primary text-primary-foreground hover:bg-primary/90"
                                 )}
                             >
                                 {copied ? <CheckCircle2 size={16} /> : <FileText size={16} />}
@@ -320,7 +320,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                         className={cn(
                                             "flex-1 py-2 rounded-md text-[10px] font-black uppercase tracking-wider transition-all",
                                             outputFormat === 'datauri' 
-                                                ? "bg-primary text-white shadow-md" 
+                                                ? "bg-primary text-primary-foreground shadow-md" 
                                                 : "text-muted-foreground hover:text-foreground bg-transparent"
                                         )}
                                     >
@@ -331,7 +331,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                         className={cn(
                                             "flex-1 py-2 rounded-md text-[10px] font-black uppercase tracking-wider transition-all",
                                             outputFormat === 'base64' 
-                                                ? "bg-primary text-white shadow-md" 
+                                                ? "bg-primary text-primary-foreground shadow-md" 
                                                 : "text-muted-foreground hover:text-foreground bg-transparent"
                                         )}
                                     >
@@ -416,7 +416,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                 <button
                     onClick={processAll}
                     disabled={!base64Input.trim() || !!base64Error || processing}
-                    className="w-full mt-4 py-3 bg-primary text-white rounded-xl font-bold transition-all text-sm hover:bg-primary/90 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full mt-4 py-3 bg-primary text-primary-foreground rounded-xl font-bold transition-all text-sm hover:bg-primary/90 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     {processing ? (
                         <>
@@ -441,7 +441,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                     </div>
                     <button
                         onClick={downloadBase64Image}
-                        className="w-full mt-4 py-3 bg-primary text-white rounded-xl font-bold transition-all text-sm hover:bg-primary/90 shadow-lg flex items-center justify-center gap-2"
+                        className="w-full mt-4 py-3 bg-primary text-primary-foreground rounded-xl font-bold transition-all text-sm hover:bg-primary/90 shadow-lg flex items-center justify-center gap-2"
                     >
                         <Download size={20} />
                         Download Image

@@ -102,7 +102,7 @@ export function AdvancedTextGenerator({ type }: AdvancedTextGeneratorProps) {
                                     copied
                                         ? "bg-emerald-500 text-white"
                                         : output
-                                            ? "bg-primary text-white hover:bg-primary/90"
+                                            ? "bg-primary text-primary-foreground hover:bg-primary/90"
                                             : "bg-muted text-muted-foreground cursor-not-allowed"
                                 )}
                             >
@@ -115,7 +115,7 @@ export function AdvancedTextGenerator({ type }: AdvancedTextGeneratorProps) {
                                 className={cn(
                                     "px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2",
                                     output
-                                        ? "bg-primary text-white hover:bg-primary/90"
+                                        ? "bg-primary text-primary-foreground hover:bg-primary/90"
                                         : "bg-muted text-muted-foreground cursor-not-allowed"
                                 )}
                             >

@@ -144,7 +144,7 @@ export function ColorConverter() {
                             "px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2",
                             copied === 'hex'
                                 ? "bg-emerald-500 text-white"
-                                : "bg-primary text-white hover:bg-primary/90"
+                                : "bg-primary text-primary-foreground hover:bg-primary/90"
                         )}
                     >
                         {copied === 'hex' ? <CheckCircle2 size={14} /> : <Copy size={14} />}
@@ -187,7 +187,7 @@ export function ColorConverter() {
                             "px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2",
                             copied === 'rgb'
                                 ? "bg-emerald-500 text-white"
-                                : "bg-primary text-white hover:bg-primary/90"
+                                : "bg-primary text-primary-foreground hover:bg-primary/90"
                         )}
                     >
                         {copied === 'rgb' ? <CheckCircle2 size={14} /> : <Copy size={14} />}
@@ -246,7 +246,7 @@ export function ColorConverter() {
                             "px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2",
                             copied === 'hsl'
                                 ? "bg-emerald-500 text-white"
-                                : "bg-primary text-white hover:bg-primary/90"
+                                : "bg-primary text-primary-foreground hover:bg-primary/90"
                         )}
                     >
                         {copied === 'hsl' ? <CheckCircle2 size={14} /> : <Copy size={14} />}

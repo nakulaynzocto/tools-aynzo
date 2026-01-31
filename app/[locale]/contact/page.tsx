@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { Mail } from 'lucide-react';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
@@ -14,8 +13,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     };
 }
 
-export default function ContactPage() {
-    const t = useTranslations('Footer'); // Reusing footer translations for now or we might need a Contact namespace
+export default async function ContactPage({ params: { locale } }: { params: { locale: string } }) {
+    const t = await getTranslations({ locale, namespace: 'Footer' }); // Reusing footer translations for now or we might need a Contact namespace
 
     return (
         <div className="max-w-4xl mx-auto px-6 py-20">

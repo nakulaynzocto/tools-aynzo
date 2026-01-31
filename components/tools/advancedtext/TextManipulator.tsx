@@ -73,7 +73,7 @@ export function TextManipulator({ type }: TextManipulatorProps) {
                         className={cn(
                             "w-full py-3 px-6 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2",
                             input.trim()
-                                ? "bg-primary text-white hover:bg-primary/90"
+                                ? "bg-primary text-primary-foreground hover:bg-primary/90"
                                 : "bg-muted text-muted-foreground cursor-not-allowed"
                         )}
                     >
@@ -94,7 +94,7 @@ export function TextManipulator({ type }: TextManipulatorProps) {
                                     copied
                                         ? "bg-emerald-500 text-white"
                                         : output
-                                            ? "bg-primary text-white hover:bg-primary/90"
+                                            ? "bg-primary text-primary-foreground hover:bg-primary/90"
                                             : "bg-muted text-muted-foreground cursor-not-allowed"
                                 )}
                             >
@@ -107,7 +107,7 @@ export function TextManipulator({ type }: TextManipulatorProps) {
                                 className={cn(
                                     "px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2",
                                     output
-                                        ? "bg-primary text-white hover:bg-primary/90"
+                                        ? "bg-primary text-primary-foreground hover:bg-primary/90"
                                         : "bg-muted text-muted-foreground cursor-not-allowed"
                                 )}
                             >
