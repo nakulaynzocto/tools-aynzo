@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: ['/api/'],
+            // Disallow non-locale tool URLs to prevent duplicate content
+            disallow: ['/api/', '/tools/'],
         },
         sitemap: 'https://tools.aynzo.com/sitemap.xml',
     };

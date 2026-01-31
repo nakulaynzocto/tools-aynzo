@@ -328,6 +328,44 @@ export default async function ToolPage({ params }: Props) {
     }
   };
 
+  // WebPage Schema for better indexing
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: translatedName,
+    description: translatedDesc,
+    url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`,
+    inLanguage: params.locale,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'AYNZO TOOLS',
+      url: 'https://tools.aynzo.com'
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `https://tools.aynzo.com/${params.locale}`
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Tools',
+          item: `https://tools.aynzo.com/${params.locale}/tools`
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: translatedName,
+          item: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background pb-12">
       {/* Schema Markup for SEO */}
@@ -346,11 +384,20 @@ export default async function ToolPage({ params }: Props) {
         />
       )}
 
+      {/* WebPage Schema for better indexing */}
+      <Script
+        id="webpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageSchema)
+        }}
+      />
+
       <div className="w-full max-w-7xl mx-auto py-4 px-4 md:px-6">
         {/* Breadcrumbs for SEO */}
         <Breadcrumbs
           items={[
-            { label: tNav('tools'), href: '/' },
+            { label: tNav('tools'), href: '/tools' },
             { label: translatedName, href: `/tools/${params.slug}` }
           ]}
         />
