@@ -64,347 +64,347 @@
         "image-compressor": {
             "name": "オンライン画像圧縮 (Image Compressor)",
             "description": "画質を落とさずにJPG、PNG、WebP画像を圧縮します。",
-            "seoTitle": "オンライン画像圧縮ツール無料：画質を落とさずファイルサイズを削減",
-            "seoDescription": "専門ガイドで画像最適化をマスターしましょう。JPG、PNG、WebPをオンラインで無料で圧縮。画質はそのまま、100%プライベートなブラウザ処理。",
-            "seoKeywords": "画像圧縮 オンライン 無料, 画質落とさず画像圧縮, 画像サイズ 削減, 写真 圧縮 オンライン",
-            "seoH1": "オンライン画像圧縮ツール無料：ウェブ最適化の決定版ガイド",
+            "seoTitle": "無料 Image Compressor オンライン - Compress JPG, PNG, WebP images 登録不要",
+            "seoDescription": "Compress JPG, PNG, WebP images オンライン 無料. Reduce file size up to 90% without losing quality. ログイン不要, 高速, 安全. に最適 web optimization and social media.",
+            "seoKeywords": "compress image file size online free without losing quality, reduce image file size online free, compress jpg to 50kb online, bulk image compressor free no watermark",
+            "seoH1": "Image Compressor 無料 オンライン: Compress JPG, PNG, WebP images",
             "content": "\n<p>デジタルスピードの時代において、最適化された画像を持つことは、ウェブ网站やSNSにとって不可欠です。重い画像は読み込み時間を増やし、ユーザー体験を損ないます。<strong>Aynzo画像圧縮ツール</strong>は、この問題を迅速かつ安全に解決するために開発されました。</p>\n\n<h2>なぜ画像を圧縮するのか？</h2>\n<ul>\n    <li><strong>サイトスピードの向上:</strong> Googleは速いサイトを好みます。軽い画像はCore Web Vitalsを改善し、ランキングを上げます。</li>\n    <li><strong>ストレージの節約:</strong> サーバーやモバイルデバイスの容量を最大90%削減できます。</li>\n    <li><strong>完全なプライバシー:</strong> 他のサイトとは異なり、写真をサーバーにアップロードすることはありません。すべての処理はブラウザ内で行われます。</li>\n</ul>\n"
         },
         "image-resizer": {
             "name": "이미지 크기 조정기",
             "description": "이미지를 정확한 픽셀 또는 퍼센트로 크기 조정합니다.",
-            "seoTitle": "이미지 크기 조정기 - 무료 온라인 도구",
-            "seoDescription": "이미지 크기를 쉽게 변경. 100% 무료 및 안전합니다.",
-            "seoKeywords": "이미지 크기 조정, 이미지 리사이즈",
-            "seoH1": "이미지 크기 조정기"
+            "seoTitle": "無料 Image Resizer オンライン - Resize JPG, PNG, WebP images 登録不要",
+            "seoDescription": "Resize JPG, PNG, WebP images オンライン 無料. Change dimensions to exact pixels or percentage. ログイン不要, 高速, 安全. に最適 social media and web.",
+            "seoKeywords": "resize image online free, change image dimensions online, resize photo for passport, image resizer 20kb, resize image to 100kb",
+            "seoH1": "Image Resizer 無料 オンライン: Resize JPG, PNG, WebP images"
         },
         "jpg-to-png": {
             "name": "JPG → PNG",
             "description": "JPG 이미지를 투명 배경 지원 PNG로 변환합니다.",
-            "seoTitle": "JPG에서 PNG 변환기 - 무료 도구",
-            "seoDescription": "JPG를 투명 PNG로 변환. 100% 무료.",
-            "seoKeywords": "jpg to png, jpg png 변환",
-            "seoH1": "JPG → PNG 변환기"
+            "seoTitle": "無料 JPG to PNG オンライン - 変換 JPG to PNG 登録不要",
+            "seoDescription": "変換 JPG to PNG オンライン 無料. High quality conversion with transparency support. ログイン不要, 高速, 安全. に最適 web graphics and logos.",
+            "seoKeywords": "jpg to png converter free, convert jpg to png online, jpg to png high quality, free image format converter, jpg to png transparent background",
+            "seoH1": "JPG to PNG 無料 オンライン: 変換 JPG to PNG"
         },
         "png-to-jpg": {
             "name": "PNG → JPG",
             "description": "PNG 이미지를 즉시 JPG로 변환합니다.",
-            "seoTitle": "PNG에서 JPG 변환기 - 무료 도구",
-            "seoDescription": "PNG를 JPG로 변환. 100% 무료.",
-            "seoKeywords": "png to jpg, png jpg 변환",
-            "seoH1": "PNG → JPG 변환기"
+            "seoTitle": "無料 PNG to JPG オンライン - 変換 PNG to JPG 登録不要",
+            "seoDescription": "変換 PNG to JPG オンライン 無料. Reduce file size with high quality. ログイン不要, 高速, 安全. に最適 photos and web optimization.",
+            "seoKeywords": "png to jpg converter free, convert png to jpg online, png to jpg high quality, free image format converter, png to jpg reduce size",
+            "seoH1": "PNG to JPG 無料 オンライン: 変換 PNG to JPG"
         },
         "webp-converter": {
             "name": "WebP 변환기",
             "description": "이미지를 WebP 형식으로 또는 WebP에서 변환합니다.",
-            "seoTitle": "WebP 변환기 - 무료 온라인 도구",
-            "seoDescription": "WebP 변환 쉽게. 100% 무료.",
-            "seoKeywords": "webp 변환기, webp jpg png",
-            "seoH1": "WebP 변환기"
+            "seoTitle": "無料 WebP 変換er オンライン - 変換 JPG, PNG, GIF to WebP or WebP to JPG/PNG 登録不要",
+            "seoDescription": "変換 JPG, PNG, GIF to WebP or WebP to JPG/PNG オンライン 無料. Modern フォーマット conversion. ログイン不要, 高速, 安全. に最適 web optimization.",
+            "seoKeywords": "webp converter free, convert to webp online, webp to jpg converter, jpg to webp converter, free webp converter",
+            "seoH1": "WebP 変換er 無料 オンライン: 変換 JPG, PNG, GIF to WebP or WebP to JPG/PNG"
         },
         "image-to-base64": {
             "name": "이미지 → Base64",
             "description": "이미지를 코드에 삽입할 Base64 문자열로 변환합니다.",
-            "seoTitle": "이미지에서 Base64 변환기",
-            "seoDescription": "이미지를 Base64로 변환. 100% 무료.",
-            "seoKeywords": "image to base64, base64 인코더",
-            "seoH1": "이미지 → Base64"
+            "seoTitle": "無料 Image to Base64 オンライン - Use Image to Base64 登録不要",
+            "seoDescription": "Use Image to Base64 オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "image-to-base64, free image to base64, image to base64 tool",
+            "seoH1": "Image to Base64 無料 オンライン: Use Image to Base64"
         },
         "image-cropper": {
             "name": "이미지 자르기",
             "description": "커스텀 비율로 이미지를 온라인에서 자릅니다.",
-            "seoTitle": "이미지 자르기 - 무료 도구",
-            "seoDescription": "원하는 대로 이미지 자르기. 100% 무료.",
-            "seoKeywords": "이미지 자르기, crop image online",
-            "seoH1": "이미지 자르기"
+            "seoTitle": "無料 Image Cropper オンライン - Use Image Cropper 登録不要",
+            "seoDescription": "Use Image Cropper オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "image-cropper, free image cropper, image cropper tool",
+            "seoH1": "Image Cropper 無料 オンライン: Use Image Cropper"
         },
         "flip-image": {
             "name": "이미지 뒤집기",
             "description": "이미지를 수평 또는 수직으로 뒤집습니다.",
-            "seoTitle": "이미지 뒤집기 - 무료 도구",
-            "seoDescription": "이미지를 즉시 뒤집기. 100% 무료.",
-            "seoKeywords": "이미지 뒤집기, flip image",
-            "seoH1": "이미지 뒤집기"
+            "seoTitle": "無料 Flip Image オンライン - Use Flip Image 登録不要",
+            "seoDescription": "Use Flip Image オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "flip-image, free flip image, flip image tool",
+            "seoH1": "Flip Image 無料 オンライン: Use Flip Image"
         },
         "rotate-image": {
             "name": "이미지 회전",
             "description": "이미지를 90, 180, 270도로 회전합니다.",
-            "seoTitle": "이미지 회전 - 무료 도구",
-            "seoDescription": "이미지를 쉽게 회전. 100% 무료.",
-            "seoKeywords": "이미지 회전, rotate image",
-            "seoH1": "이미지 회전"
+            "seoTitle": "無料 Rotate Image オンライン - Use Rotate Image 登録不要",
+            "seoDescription": "Use Rotate Image オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "rotate-image, free rotate image, rotate image tool",
+            "seoH1": "Rotate Image 無料 オンライン: Use Rotate Image"
         },
         "image-enlarger": {
             "name": "이미지 확대기",
             "description": "작은 이미지를 품질 손실 없이 확대합니다.",
-            "seoTitle": "이미지 확대기 - 무료 도구",
-            "seoDescription": "최대 4배 확대. 100% 무료.",
-            "seoKeywords": "이미지 확대, upscale image",
-            "seoH1": "이미지 확대기"
+            "seoTitle": "無料 Image Enlarger オンライン - Use Image Enlarger 登録不要",
+            "seoDescription": "Use Image Enlarger オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "image-enlarger, free image enlarger, image enlarger tool",
+            "seoH1": "Image Enlarger 無料 オンライン: Use Image Enlarger"
         },
         "image-brightness": {
             "name": "이미지 밝기 조정",
             "description": "이미지 밝기를 조정합니다.",
-            "seoTitle": "밝기 조정",
-            "seoDescription": "밝기를 증가 또는 감소. 100% 무료.",
-            "seoKeywords": "이미지 밝기, brightness adjust",
-            "seoH1": "밝기 조정"
+            "seoTitle": "無料 Image Brightness オンライン - Use Image Brightness 登録不要",
+            "seoDescription": "Use Image Brightness オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "image-brightness, free image brightness, image brightness tool",
+            "seoH1": "Image Brightness 無料 オンライン: Use Image Brightness"
         },
         "image-contrast": {
             "name": "이미지 대비 조정",
             "description": "이미지 대비를 조정합니다.",
-            "seoTitle": "대비 조정",
-            "seoDescription": "대비 향상. 100% 무료.",
-            "seoKeywords": "이미지 대비, contrast adjust",
-            "seoH1": "대비 조정"
+            "seoTitle": "無料 Image Contrast オンライン - Use Image Contrast 登録不要",
+            "seoDescription": "Use Image Contrast オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "image-contrast, free image contrast, image contrast tool",
+            "seoH1": "Image Contrast 無料 オンライン: Use Image Contrast"
         },
         "grayscale-image": {
             "name": "흑백 변환",
             "description": "컬러 이미지를 흑백으로 변환합니다.",
-            "seoTitle": "흑백 변환기",
-            "seoDescription": "즉시 흑백으로 변환. 100% 무료.",
-            "seoKeywords": "흑백, grayscale",
-            "seoH1": "흑백 변환"
+            "seoTitle": "無料 Grayscale Image オンライン - Use Grayscale Image 登録不要",
+            "seoDescription": "Use Grayscale Image オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "grayscale-image, free grayscale image, grayscale image tool",
+            "seoH1": "Grayscale Image 無料 オンライン: Use Grayscale Image"
         },
         "blur-image": {
             "name": "이미지 블러",
             "description": "이미지에 블러 효과를 추가합니다.",
-            "seoTitle": "이미지 블러 도구",
-            "seoDescription": "가우시안 블러 적용. 100% 무료.",
-            "seoKeywords": "이미지 블러, blur image",
-            "seoH1": "이미지 블러"
+            "seoTitle": "無料 Blur Image オンライン - Use Blur Image 登録不要",
+            "seoDescription": "Use Blur Image オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "blur-image, free blur image, blur image tool",
+            "seoH1": "Blur Image 無料 オンライン: Use Blur Image"
         },
         "sepia-converter": {
             "name": "세피아 필터",
             "description": "사진에 빈티지 세피아 효과를 적용합니다.",
-            "seoTitle": "세피아 필터 도구",
-            "seoDescription": "클래식 세피아 톤 제공. 100% 무료.",
-            "seoKeywords": "세피아 필터, 빈티지 효과",
-            "seoH1": "세피아 효과"
+            "seoTitle": "無料 Sepia 変換er オンライン - Use Sepia 変換er 登録不要",
+            "seoDescription": "Use Sepia 変換er オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "sepia-converter, free sepia converter, sepia converter tool",
+            "seoH1": "Sepia 変換er 無料 オンライン: Use Sepia 変換er"
         },
         "invert-image": {
             "name": "색상 반전",
             "description": "이미지 색상을 반전합니다 (네거티브 효과).",
-            "seoTitle": "색상 반전 도구",
-            "seoDescription": "네거티브 효과 생성. 100% 무료.",
-            "seoKeywords": "색상 반전, invert colors",
-            "seoH1": "색상 반전"
+            "seoTitle": "無料 Invert Colors オンライン - Use Invert Colors 登録不要",
+            "seoDescription": "Use Invert Colors オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "invert-image, free invert colors, invert colors tool",
+            "seoH1": "Invert Colors 無料 オンライン: Use Invert Colors"
         },
         "saturate-image": {
             "name": "채도 조정",
             "description": "이미지 색상 채도를 조정합니다.",
-            "seoTitle": "채도 조정",
-            "seoDescription": "색상 강도 변경. 100% 무료.",
-            "seoKeywords": "채도 조정, saturation adjust",
-            "seoH1": "채도 조정"
+            "seoTitle": "無料 Saturate Image オンライン - Use Saturate Image 登録不要",
+            "seoDescription": "Use Saturate Image オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "saturate-image, free saturate image, saturate image tool",
+            "seoH1": "Saturate Image 無料 オンライン: Use Saturate Image"
         },
         "hue-rotate-image": {
             "name": "색상 회전",
             "description": "창의적인 효과를 위해 색상을 변경합니다.",
-            "seoTitle": "색상 회전 도구",
-            "seoDescription": "색상을 창의적으로 이동. 100% 무료.",
-            "seoKeywords": "색상 회전, hue rotate",
-            "seoH1": "색상 회전"
+            "seoTitle": "無料 Hue Rotate オンライン - Use Hue Rotate 登録不要",
+            "seoDescription": "Use Hue Rotate オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "hue-rotate-image, free hue rotate, hue rotate tool",
+            "seoH1": "Hue Rotate 無料 オンライン: Use Hue Rotate"
         },
         "image-opacity": {
             "name": "이미지 투명도",
             "description": "이미지 투명도/불투명도를 조정합니다.",
-            "seoTitle": "이미지 투명도 도구",
-            "seoDescription": "이미지를 투명하게. 100% 무료.",
-            "seoKeywords": "이미지 투명도, opacity adjust",
-            "seoH1": "투명도 조정"
+            "seoTitle": "無料 Image Opacity オンライン - Use Image Opacity 登録不要",
+            "seoDescription": "Use Image Opacity オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "image-opacity, free image opacity, image opacity tool",
+            "seoH1": "Image Opacity 無料 オンライン: Use Image Opacity"
         },
         "round-corners-image": {
             "name": "둥근 모서리",
             "description": "이미지에 둥근 모서리를 추가합니다.",
-            "seoTitle": "둥근 모서리 도구",
-            "seoDescription": "둥근 모서리 이미지 생성. 100% 무료.",
-            "seoKeywords": "둥근 모서리, rounded corners",
-            "seoH1": "둥근 모서리"
+            "seoTitle": "無料 Round Corners オンライン - Use Round Corners 登録不要",
+            "seoDescription": "Use Round Corners オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "round-corners-image, free round corners, round corners tool",
+            "seoH1": "Round Corners 無料 オンライン: Use Round Corners"
         },
         "image-border": {
             "name": "이미지 테두리",
             "description": "이미지에 색상 테두리를 추가합니다.",
-            "seoTitle": "테두리 추가",
-            "seoDescription": "커스텀 테두리. 100% 무료.",
-            "seoKeywords": "이미지 테두리, image border",
-            "seoH1": "테두리 추가"
+            "seoTitle": "無料 Image Border オンライン - Use Image Border 登録不要",
+            "seoDescription": "Use Image Border オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "image-border, free image border, image border tool",
+            "seoH1": "Image Border 無料 オンライン: Use Image Border"
         },
         "image-shadow": {
             "name": "이미지 그림자",
             "description": "이미지에 드롭 섀도우를 추가합니다.",
-            "seoTitle": "그림자 도구",
-            "seoDescription": "현실적인 그림자. 100% 무료.",
-            "seoKeywords": "이미지 그림자, drop shadow",
-            "seoH1": "그림자 추가"
+            "seoTitle": "無料 Image Shadow オンライン - Use Image Shadow 登録不要",
+            "seoDescription": "Use Image Shadow オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "image-shadow, free image shadow, image shadow tool",
+            "seoH1": "Image Shadow 無料 オンライン: Use Image Shadow"
         },
         "pixelate-image": {
             "name": "픽셀화",
             "description": "세부 정보를 숨기거나 아트를 만들기 위해 이미지를 픽셀화합니다.",
-            "seoTitle": "픽셀화 도구",
-            "seoDescription": "픽셀 효과 적용. 100% 무료.",
-            "seoKeywords": "픽셀화, pixelate image",
-            "seoH1": "이미지 픽셀화"
+            "seoTitle": "無料 Pixelate Image オンライン - Use Pixelate Image 登録不要",
+            "seoDescription": "Use Pixelate Image オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "pixelate-image, free pixelate image, pixelate image tool",
+            "seoH1": "Pixelate Image 無料 オンライン: Use Pixelate Image"
         },
         "svg-to-png": {
             "name": "SVG → PNG",
             "description": "SVG 벡터 파일을 PNG 이미지로 변환합니다.",
-            "seoTitle": "SVG에서 PNG 변환기",
-            "seoDescription": "SVG를 PNG로 변환. 100% 무료.",
-            "seoKeywords": "svg to png, svg 변환",
-            "seoH1": "SVG → PNG 변환기"
+            "seoTitle": "無料 SVG to PNG オンライン - Use SVG to PNG 登録不要",
+            "seoDescription": "Use SVG to PNG オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "svg-to-png, free svg to png, svg to png tool",
+            "seoH1": "SVG to PNG 無料 オンライン: Use SVG to PNG"
         },
         "png-to-svg": {
             "name": "PNG → SVG",
             "description": "PNG 래스터 이미지를 SVG 벡터로 변환합니다.",
-            "seoTitle": "PNG에서 SVG 변환기",
-            "seoDescription": "PNG 벡터화. 100% 무료.",
-            "seoKeywords": "png to svg, vectorize image",
-            "seoH1": "PNG → SVG 변환기"
+            "seoTitle": "無料 PNG to SVG オンライン - Use PNG to SVG 登録不要",
+            "seoDescription": "Use PNG to SVG オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "png-to-svg, free png to svg, png to svg tool",
+            "seoH1": "PNG to SVG 無料 オンライン: Use PNG to SVG"
         },
         "webp-to-jpg": {
             "name": "WebP → JPG",
             "description": "WebP를 표준 JPG 형식으로 변환합니다.",
-            "seoTitle": "WebP에서 JPG 변환기",
-            "seoDescription": "WebP를 JPG로 변환. 100% 무료.",
-            "seoKeywords": "webp to jpg",
-            "seoH1": "WebP → JPG 변환기"
+            "seoTitle": "無料 WebP to JPG オンライン - Use WebP to JPG 登録不要",
+            "seoDescription": "Use WebP to JPG オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "webp-to-jpg, free webp to jpg, webp to jpg tool",
+            "seoH1": "WebP to JPG 無料 オンライン: Use WebP to JPG"
         },
         "webp-to-png": {
             "name": "WebP → PNG",
             "description": "WebP를 투명 PNG로 변환합니다.",
-            "seoTitle": "WebP에서 PNG 변환기",
-            "seoDescription": "투명도 지원 변환.",
-            "seoKeywords": "webp to png",
-            "seoH1": "WebP → PNG 변환기"
+            "seoTitle": "無料 WebP to PNG オンライン - Use WebP to PNG 登録不要",
+            "seoDescription": "Use WebP to PNG オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "webp-to-png, free webp to png, webp to png tool",
+            "seoH1": "WebP to PNG 無料 オンライン: Use WebP to PNG"
         },
         "jpg-to-webp": {
             "name": "JPG → WebP",
             "description": "JPG를 최신 WebP 형식으로 변환합니다.",
-            "seoTitle": "JPG에서 WebP 변환기",
-            "seoDescription": "파일 크기 감소.",
-            "seoKeywords": "jpg to webp",
-            "seoH1": "JPG → WebP 변환기"
+            "seoTitle": "無料 JPG to WebP オンライン - Use JPG to WebP 登録不要",
+            "seoDescription": "Use JPG to WebP オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "jpg-to-webp, free jpg to webp, jpg to webp tool",
+            "seoH1": "JPG to WebP 無料 オンライン: Use JPG to WebP"
         },
         "png-to-webp": {
             "name": "PNG → WebP",
             "description": "PNG를 WebP 형식으로 변환합니다.",
-            "seoTitle": "PNG에서 WebP 변환기",
-            "seoDescription": "투명도 지원 WebP.",
-            "seoKeywords": "png to webp",
-            "seoH1": "PNG → WebP 변환기"
+            "seoTitle": "無料 PNG to WebP オンライン - Use PNG to WebP 登録不要",
+            "seoDescription": "Use PNG to WebP オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "png-to-webp, free png to webp, png to webp tool",
+            "seoH1": "PNG to WebP 無料 オンライン: Use PNG to WebP"
         },
         "base64-to-image": {
             "name": "Base64 → 이미지",
             "description": "Base64 문자열을 이미지 파일로 되돌립니다.",
-            "seoTitle": "Base64에서 이미지 디코더",
-            "seoDescription": "Base64를 이미지로 디코딩. 100% 무료.",
-            "seoKeywords": "base64 to image",
-            "seoH1": "Base64 → 이미지"
+            "seoTitle": "無料 Base64 to Image オンライン - Use Base64 to Image 登録不要",
+            "seoDescription": "Use Base64 to Image オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "base64-to-image, free base64 to image, base64 to image tool",
+            "seoH1": "Base64 to Image 無料 オンライン: Use Base64 to Image"
         },
         "pdf-to-word": {
             "name": "PDF → Word",
             "description": "PDF 문서를 편집 가능한 Word 파일로 변환합니다.",
-            "seoTitle": "PDF에서 Word 변환기",
-            "seoDescription": "서식 유지하며 DOCX로 변환.",
-            "seoKeywords": "pdf to word, pdf 변환기",
-            "seoH1": "PDF → Word 변환기"
+            "seoTitle": "PDF to Word 無料 - 変換 オンライン 登録不要",
+            "seoDescription": "変換 PDF to Word DOCX オンライン 無料. 100% editable documents, high accuracy. ログイン不要, 高速, 安全. に最適 editing PDFs instantly.",
+            "seoKeywords": "pdf to word converter free, convert pdf to word online, pdf to word editable free, online pdf to word converter, pdf to docx free",
+            "seoH1": "PDF to Word 無料: 変換 PDF to Word DOCX"
         },
         "word-counter": {
             "name": "단어 수 세기",
             "description": "단어, 문자, 문장, 단락 수를 셉니다.",
-            "seoTitle": "단어 수 세기 도구",
-            "seoDescription": "정확한 단어 및 문자 수.",
-            "seoKeywords": "단어 수 세기, word counter",
-            "seoH1": "단어 수 세기"
+            "seoTitle": "Word Counter 無料 オンライン - Count words, characters, sentences",
+            "seoDescription": "Count words, characters, sentences オンライン 無料. Real-time analysis with reading time. ログイン不要, 高速, 安全. に最適 writers and students.",
+            "seoKeywords": "word counter free, character counter online, word count tool, essay word count, reading time calculator, real time word count",
+            "seoH1": "Word Counter 無料: Count words, characters, sentences"
         },
         "character-counter": {
             "name": "문자 수 세기",
             "description": "공백 포함/미포함 문자 수를 셉니다.",
-            "seoTitle": "문자 수 세기",
-            "seoDescription": "트위터, SMS 등에 이상적.",
-            "seoKeywords": "문자 수 세기",
-            "seoH1": "문자 수 세기"
+            "seoTitle": "Character Counter 無料 オンライン - Count characters with/without spaces",
+            "seoDescription": "Count characters with/without spaces オンライン 無料. Real-time counting. ログイン不要, 高速, 安全. に最適 Twitter, SMS, meta descriptions.",
+            "seoKeywords": "character counter free, count characters online, character count with spaces, twitter character counter, sms character counter",
+            "seoH1": "Character Counter 無料: Count characters with/without spaces"
         },
         "text-case-converter": {
             "name": "대소문자 변환기",
             "description": "텍스트를 대문자, 소문자, 제목 형식 등으로 변환합니다.",
-            "seoTitle": "대소문자 변환기",
-            "seoDescription": "다양한 텍스트 변환 옵션.",
-            "seoKeywords": "대소문자 변환기, uppercase lowercase",
-            "seoH1": "대소문자 변환기"
+            "seoTitle": "Text Case 変換er 無料 オンライン - 変換 text case",
+            "seoDescription": "変換 text case オンライン 無料. Uppercase, lowercase, title case, sentence case. ログイン不要, 高速, 安全. に最適 フォーマットting text instantly.",
+            "seoKeywords": "text case converter free, uppercase to lowercase, title case converter, sentence case converter, text transformer online",
+            "seoH1": "Text Case 変換er 無料: 変換 text case"
         },
         "remove-line-breaks": {
             "name": "줄 바꿈 제거",
             "description": "텍스트에서 모든 줄 바꿈을 제거합니다.",
-            "seoTitle": "줄 바꿈 제거 도구",
-            "seoDescription": "텍스트 정리.",
-            "seoKeywords": "줄 바꿈 제거",
-            "seoH1": "줄 바꿈 제거"
+            "seoTitle": "Remove Line Breaks 無料 オンライン - Use Remove Line Breaks",
+            "seoDescription": "Use Remove Line Breaks オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "remove-line-breaks, free remove line breaks, remove line breaks tool",
+            "seoH1": "Remove Line Breaks 無料: Use Remove Line Breaks"
         },
         "italic-text": {
             "name": "이탤릭 텍스트 생성기",
             "description": "유니코드로 이탤릭 텍스트 생성.",
-            "seoTitle": "이탤릭 텍스트 생성기",
-            "seoDescription": "소셜 미디어용 이탤릭 문자.",
-            "seoKeywords": "이탤릭 텍스트, fancy text",
-            "seoH1": "이탤릭 텍스트 생성기"
+            "seoTitle": "Italic Text Generator 無料 オンライン - Use Italic Text Generator",
+            "seoDescription": "Use Italic Text Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "italic-text, free italic text generator, italic text generator tool",
+            "seoH1": "Italic Text Generator 無料: Use Italic Text Generator"
         },
         "strikethrough-text": {
             "name": "취소선 텍스트",
             "description": "취소선 텍스트 생성.",
-            "seoTitle": "취소선 텍스트 생성기",
-            "seoDescription": "텍스트에 선 긋기.",
-            "seoKeywords": "취소선 텍스트",
-            "seoH1": "취소선 텍스트"
+            "seoTitle": "Strikethrough Text 無料 オンライン - Use Strikethrough Text",
+            "seoDescription": "Use Strikethrough Text オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "strikethrough-text, free strikethrough text, strikethrough text tool",
+            "seoH1": "Strikethrough Text 無料: Use Strikethrough Text"
         },
         "underline-text": {
             "name": "밑줄 텍스트",
             "description": "유니코드로 밑줄 텍스트 생성.",
-            "seoTitle": "밑줄 텍스트 생성기",
-            "seoDescription": "밑줄 문자.",
-            "seoKeywords": "밑줄 텍스트",
-            "seoH1": "밑줄 텍스트"
+            "seoTitle": "Underline Text 無料 オンライン - Use Underline Text",
+            "seoDescription": "Use Underline Text オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "underline-text, free underline text, underline text tool",
+            "seoH1": "Underline Text 無料: Use Underline Text"
         },
         "small-text": {
             "name": "작은 텍스트 생성기",
             "description": "작은 아래첨자/위첨자 텍스트 생성.",
-            "seoTitle": "작은 텍스트 생성기",
-            "seoDescription": "작은 글자.",
-            "seoKeywords": "작은 텍스트, tiny text",
-            "seoH1": "작은 텍스트 생성기"
+            "seoTitle": "Small Text Generator 無料 オンライン - Use Small Text Generator",
+            "seoDescription": "Use Small Text Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "small-text, free small text generator, small text generator tool",
+            "seoH1": "Small Text Generator 無料: Use Small Text Generator"
         },
         "upside-down-text": {
             "name": "거꾸로 텍스트",
             "description": "텍스트를 거꾸로 만듭니다.",
-            "seoTitle": "거꾸로 텍스트 생성기",
-            "seoDescription": "재미있는 거꾸로 문자.",
-            "seoKeywords": "거꾸로 텍스트, upside down text",
-            "seoH1": "거꾸로 텍스트 생성기"
+            "seoTitle": "Upside Down Text 無料 オンライン - Use Upside Down Text",
+            "seoDescription": "Use Upside Down Text オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "upside-down-text, free upside down text, upside down text tool",
+            "seoH1": "Upside Down Text 無料: Use Upside Down Text"
         },
         "mirror-text": {
             "name": "거울 텍스트",
             "description": "거울처럼 반전된 텍스트 생성.",
-            "seoTitle": "거울 텍스트 생성기",
-            "seoDescription": "거울 문자.",
-            "seoKeywords": "거울 텍스트, mirror text",
-            "seoH1": "거울 텍스트 생성기"
+            "seoTitle": "Mirror Text Generator 無料 オンライン - Use Mirror Text Generator",
+            "seoDescription": "Use Mirror Text Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "mirror-text, free mirror text generator, mirror text generator tool",
+            "seoH1": "Mirror Text Generator 無料: Use Mirror Text Generator"
         },
         "duplicate-line-remover": {
             "name": "중복 줄 제거",
             "description": "텍스트 또는 목록에서 중복 줄 제거.",
-            "seoTitle": "중복 제거 도구",
-            "seoDescription": "목록 정리.",
-            "seoKeywords": "중복 제거",
-            "seoH1": "중복 줄 제거"
+            "seoTitle": "Duplicate Line Remover 無料 オンライン - Use Duplicate Line Remover",
+            "seoDescription": "Use Duplicate Line Remover オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "duplicate-line-remover, free duplicate line remover, duplicate line remover tool",
+            "seoH1": "Duplicate Line Remover 無料: Use Duplicate Line Remover"
         },
         "sort-alphabetically": {
             "name": "알파벳 순 정렬",
             "description": "줄을 알파벳 순으로 정렬합니다.",
-            "seoTitle": "알파벳 순 정렬",
-            "seoDescription": "목록을 A-Z 또는 Z-A로 정렬.",
-            "seoKeywords": "알파벳 순 정렬",
-            "seoH1": "알파벳 순 정렬"
+            "seoTitle": "Sort Alphabetically 無料 オンライン - Use Sort Alphabetically",
+            "seoDescription": "Use Sort Alphabetically オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "sort-alphabetically, free sort alphabetically, sort alphabetically tool",
+            "seoH1": "Sort Alphabetically 無料: Use Sort Alphabetically"
         },
         "text-replace": {
             "name": "찾기 및 바꾸기",
@@ -417,562 +417,562 @@
         "whitespace-remover": {
             "name": "여분 공백 제거",
             "description": "여분 공백, 탭, 줄 바꿈 제거.",
-            "seoTitle": "여분 공백 제거",
-            "seoDescription": "엉망인 텍스트 정리.",
-            "seoKeywords": "공백 제거",
-            "seoH1": "여분 공백 제거"
+            "seoTitle": "Whitespace Remover 無料 オンライン - Use Whitespace Remover",
+            "seoDescription": "Use Whitespace Remover オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "whitespace-remover, free whitespace remover, whitespace remover tool",
+            "seoH1": "Whitespace Remover 無料: Use Whitespace Remover"
         },
         "word-frequency": {
             "name": "단어 빈도 수",
             "description": "텍스트에서 가장 자주 사용되는 단어 분석.",
-            "seoTitle": "단어 빈도 분석",
-            "seoDescription": "단어 사용 빈도 표시.",
-            "seoKeywords": "단어 빈도, keyword density",
-            "seoH1": "단어 빈도 수"
+            "seoTitle": "Word Frequency 無料 オンライン - Use Word Frequency",
+            "seoDescription": "Use Word Frequency オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "word-frequency, free word frequency, word frequency tool",
+            "seoH1": "Word Frequency 無料: Use Word Frequency"
         },
         "find-replace": {
             "name": "고급 찾기 및 바꾸기",
             "description": "정규식 지원 고급 검색 및 바꾸기.",
-            "seoTitle": "고급 찾기 바꾸기",
-            "seoDescription": "정규식 사용 강력한 교체.",
-            "seoKeywords": "regex 찾기 바꾸기",
-            "seoH1": "고급 찾기 및 바꾸기"
+            "seoTitle": "Find & Replace 無料 オンライン - Use Find & Replace",
+            "seoDescription": "Use Find & Replace オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "find-replace, free find & replace, find & replace tool",
+            "seoH1": "Find & Replace 無料: Use Find & Replace"
         },
         "json-formatter": {
             "name": "JSON 포매터",
             "description": "JSON 데이터 포맷, 보기 좋게 만들기 및 검증.",
-            "seoTitle": "JSON 포매터 및 검증기",
-            "seoDescription": "JSON을 보기 좋게 표시.",
-            "seoKeywords": "json 포매터, json beautifier",
-            "seoH1": "JSON 포매터"
+            "seoTitle": "JSON フォーマットter 無料 - フォーマット, beautify, validate JSON Code",
+            "seoDescription": "フォーマット, beautify, validate JSON code オンライン 無料. Minify JSON instantly. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "json formatter free, beautify json online, format json code, validate json, json beautifier tool",
+            "seoH1": "JSON フォーマットter 無料: フォーマット, beautify, validate JSON"
         },
         "url-encoder-decoder": {
             "name": "URL 인코더/디코더",
             "description": "URL 인코딩 또는 디코딩.",
-            "seoTitle": "URL 인코더 디코더",
-            "seoDescription": "URL 퍼센트 인코딩.",
-            "seoKeywords": "url encode decode",
-            "seoH1": "URL 인코더/디코더"
+            "seoTitle": "URL Encoder / Decoder 無料 - Use URL Encoder / Decoder Code",
+            "seoDescription": "Use URL Encoder / Decoder code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "url-encoder-decoder, free url encoder / decoder, url encoder / decoder tool",
+            "seoH1": "URL Encoder / Decoder 無料: Use URL Encoder / Decoder"
         },
         "html-formatter": {
             "name": "HTML 포매터",
             "description": "HTML 코드 포맷 및 보기 좋게 만들기.",
-            "seoTitle": "HTML 포매터",
-            "seoDescription": "HTML을 보기 좋게 표시.",
-            "seoKeywords": "html 포매터",
-            "seoH1": "HTML 포매터"
+            "seoTitle": "HTML フォーマットter 無料 - フォーマット and beautify HTML code Code",
+            "seoDescription": "フォーマット and beautify HTML code code オンライン 無料. Fix indentation instantly. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "html formatter free, beautify html online, format html code, clean html code, html beautifier tool",
+            "seoH1": "HTML フォーマットter 無料: フォーマット and beautify HTML code"
         },
         "css-formatter": {
             "name": "CSS 포매터",
             "description": "CSS 코드 포맷 및 보기 좋게 만들기.",
-            "seoTitle": "CSS 포매터",
-            "seoDescription": "CSS 정리.",
-            "seoKeywords": "css 포매터",
-            "seoH1": "CSS 포매터"
+            "seoTitle": "CSS フォーマットter 無料 - フォーマット and beautify CSS code Code",
+            "seoDescription": "フォーマット and beautify CSS code code オンライン 無料. Minify or expand CSS. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "css formatter free, beautify css online, format css code, clean css code, css beautifier tool",
+            "seoH1": "CSS フォーマットter 無料: フォーマット and beautify CSS code"
         },
         "javascript-formatter": {
             "name": "JavaScript 포매터",
             "description": "JavaScript 코드 포맷 및 보기 좋게 만들기.",
-            "seoTitle": "JavaScript 포매터",
-            "seoDescription": "JS 코드 보기 좋게 표시.",
-            "seoKeywords": "js 포매터",
-            "seoH1": "JavaScript 포매터"
+            "seoTitle": "JS フォーマットter 無料 - フォーマット and beautify JavaScript code Code",
+            "seoDescription": "フォーマット and beautify JavaScript code code オンライン 無料. Fix indentation instantly. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "javascript formatter free, beautify js online, format javascript code, clean js code, js beautifier tool",
+            "seoH1": "JS フォーマットter 無料: フォーマット and beautify JavaScript code"
         },
         "xml-formatter": {
             "name": "XML 포매터",
             "description": "XML 코드 포맷 및 보기 좋게 만들기.",
-            "seoTitle": "XML 포매터",
-            "seoDescription": "XML 정리.",
-            "seoKeywords": "xml 포매터",
-            "seoH1": "XML 포매터"
+            "seoTitle": "XML フォーマットter 無料 - Use XML フォーマットter Code",
+            "seoDescription": "Use XML フォーマットter code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "xml-formatter, free xml formatter, xml formatter tool",
+            "seoH1": "XML フォーマットter 無料: Use XML フォーマットter"
         },
         "sql-formatter": {
             "name": "SQL 포매터",
             "description": "SQL 쿼리 포맷 및 보기 좋게 만들기.",
-            "seoTitle": "SQL 포매터",
-            "seoDescription": "SQL 쿼리 읽기 쉽게.",
-            "seoKeywords": "sql 포매터",
-            "seoH1": "SQL 포매터"
+            "seoTitle": "SQL フォーマットter 無料 - Use SQL フォーマットter Code",
+            "seoDescription": "Use SQL フォーマットter code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "sql-formatter, free sql formatter, sql formatter tool",
+            "seoH1": "SQL フォーマットter 無料: Use SQL フォーマットter"
         },
         "markdown-to-html": {
             "name": "Markdown → HTML",
             "description": "Markdown을 HTML 코드로 변환.",
-            "seoTitle": "Markdown에서 HTML 변환기",
-            "seoDescription": "MD를 HTML로 변환.",
-            "seoKeywords": "markdown to html",
-            "seoH1": "Markdown → HTML"
+            "seoTitle": "Markdown to HTML 無料 - Use Markdown to HTML Code",
+            "seoDescription": "Use Markdown to HTML code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "markdown-to-html, free markdown to html, markdown to html tool",
+            "seoH1": "Markdown to HTML 無料: Use Markdown to HTML"
         },
         "html-to-markdown": {
             "name": "HTML → Markdown",
             "description": "HTML을 Markdown 형식으로 변환.",
-            "seoTitle": "HTML에서 Markdown 변환기",
-            "seoDescription": "HTML을 깔끔한 Markdown으로.",
-            "seoKeywords": "html to markdown",
-            "seoH1": "HTML → Markdown"
+            "seoTitle": "HTML to Markdown 無料 - Use HTML to Markdown Code",
+            "seoDescription": "Use HTML to Markdown code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "html-to-markdown, free html to markdown, html to markdown tool",
+            "seoH1": "HTML to Markdown 無料: Use HTML to Markdown"
         },
         "csv-to-json": {
             "name": "CSV → JSON",
             "description": "CSV 데이터를 JSON 형식으로 변환.",
-            "seoTitle": "CSV에서 JSON 변환기",
-            "seoDescription": "CSV를 JSON으로 변환.",
-            "seoKeywords": "csv to json",
-            "seoH1": "CSV → JSON"
+            "seoTitle": "CSV to JSON 無料 - Use CSV to JSON Code",
+            "seoDescription": "Use CSV to JSON code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "csv-to-json, free csv to json, csv to json tool",
+            "seoH1": "CSV to JSON 無料: Use CSV to JSON"
         },
         "json-to-csv": {
             "name": "JSON → CSV",
             "description": "JSON 데이터를 CSV 형식으로 변환.",
-            "seoTitle": "JSON에서 CSV 변환기",
-            "seoDescription": "JSON을 CSV로 변환.",
-            "seoKeywords": "json to csv",
-            "seoH1": "JSON → CSV"
+            "seoTitle": "JSON to CSV 無料 - Use JSON to CSV Code",
+            "seoDescription": "Use JSON to CSV code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "json-to-csv, free json to csv, json to csv tool",
+            "seoH1": "JSON to CSV 無料: Use JSON to CSV"
         },
         "code-minifier": {
             "name": "코드 압축기",
             "description": "HTML, CSS, JS 코드 압축.",
-            "seoTitle": "코드 압축기",
-            "seoDescription": "파일 크기 감소.",
-            "seoKeywords": "코드 압축기, minify code",
-            "seoH1": "코드 압축기"
+            "seoTitle": "Code Minifier 無料 - Use Code Minifier Code",
+            "seoDescription": "Use Code Minifier code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "code-minifier, free code minifier, code minifier tool",
+            "seoH1": "Code Minifier 無料: Use Code Minifier"
         },
         "diff-checker": {
             "name": "텍스트 차이 비교기",
             "description": "두 텍스트를 비교하고 차이점 강조.",
-            "seoTitle": "텍스트 차이 비교기",
-            "seoDescription": "텍스트 간 차이점 찾기.",
-            "seoKeywords": "diff checker, 텍스트 비교",
-            "seoH1": "텍스트 차이 비교기"
+            "seoTitle": "Diff Checker 無料 - Use Diff Checker Code",
+            "seoDescription": "Use Diff Checker code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "diff-checker, free diff checker, diff checker tool",
+            "seoH1": "Diff Checker 無料: Use Diff Checker"
         },
         "unit-converter": {
             "name": "단위 변환기",
             "description": "다양한 측정 단위 간 변환.",
-            "seoTitle": "단위 변환기",
-            "seoDescription": "길이, 무게, 온도 등.",
-            "seoKeywords": "단위 변환기",
-            "seoH1": "단위 변환기"
+            "seoTitle": "Unit 変換er 無料 - 変換 オンライン 登録不要",
+            "seoDescription": "変換 length, weight, temperature, volume オンライン 無料. All units supported. ログイン不要, 高速, 安全. に最適 daily conversions.",
+            "seoKeywords": "unit converter free, length converter, weight converter, temperature converter, measurement converter online, metric to imperial",
+            "seoH1": "Unit 変換er 無料: 変換 length, weight, temperature, volume"
         },
         "color-converter": {
             "name": "색상 변환기",
             "description": "HEX, RGB, HSL 간 변환.",
-            "seoTitle": "색상 변환기",
-            "seoDescription": "색상 코드 변환.",
-            "seoKeywords": "색상 변환기, hex rgb",
-            "seoH1": "색상 변환기"
+            "seoTitle": "Color 変換er 無料 - 変換 オンライン 登録不要",
+            "seoDescription": "変換 colors between HEX, RGB, HSL オンライン 無料. Color picker included. ログイン不要, 高速, 安全. に最適 designers.",
+            "seoKeywords": "color converter free, hex to rgb converter, rgb to hex converter, hex to hsl converter, color picker online, color code converter",
+            "seoH1": "Color 変換er 無料: 変換 colors between HEX, RGB, HSL"
         },
         "binary-to-text": {
             "name": "바이너리 → 텍스트",
             "description": "바이너리 코드를 텍스트로 변환.",
-            "seoTitle": "바이너리에서 텍스트 변환기",
-            "seoDescription": "바이너리를 ASCII로 디코딩.",
-            "seoKeywords": "binary to text",
-            "seoH1": "바이너리 → 텍스트"
+            "seoTitle": "Binary to Text 無料 - 変換 オンライン 登録不要",
+            "seoDescription": "Use Binary to Text オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "binary-to-text, free binary to text, binary to text tool",
+            "seoH1": "Binary to Text 無料: Use Binary to Text"
         },
         "hex-to-decimal": {
             "name": "16진 → 10진",
             "description": "16진수를 10진수로 변환.",
-            "seoTitle": "16진에서 10진 변환기",
-            "seoDescription": "16진수 변환.",
-            "seoKeywords": "hex to decimal",
-            "seoH1": "16진 → 10진"
+            "seoTitle": "Hex to Decimal 無料 - 変換 オンライン 登録不要",
+            "seoDescription": "Use Hex to Decimal オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "hex-to-decimal, free hex to decimal, hex to decimal tool",
+            "seoH1": "Hex to Decimal 無料: Use Hex to Decimal"
         },
         "roman-numeral": {
             "name": "로마 숫자 변환기",
             "description": "아라비아 숫자와 로마 숫자 간 변환.",
-            "seoTitle": "로마 숫자 변환기",
-            "seoDescription": "숫자를 로마 숫자로 변환.",
-            "seoKeywords": "로마 숫자 변환기",
-            "seoH1": "로마 숫자 변환기"
+            "seoTitle": "Roman Numeral 無料 - 変換 オンライン 登録不要",
+            "seoDescription": "Use Roman Numeral オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "roman-numeral, free roman numeral, roman numeral tool",
+            "seoH1": "Roman Numeral 無料: Use Roman Numeral"
         },
         "random-number": {
             "name": "랜덤 숫자 생성기",
             "description": "범위 내 랜덤 숫자 생성.",
-            "seoTitle": "랜덤 숫자 생성기",
-            "seoDescription": "진정한 랜덤 숫자.",
-            "seoKeywords": "랜덤 숫자 생성기",
-            "seoH1": "랜덤 숫자 생성기"
+            "seoTitle": "Random Number 無料 - 生成 random number",
+            "seoDescription": "生成 random number オンライン 無料. Custom range support. ログイン不要, 高速, 安全. に最適 lotteries and games.",
+            "seoKeywords": "random number generator free, generate random numbers online, random number picker, dice roller, lottery number generator",
+            "seoH1": "Random Number 無料: 生成 random numbers"
         },
         "random-string": {
             "name": "랜덤 문자열 생성기",
             "description": "랜덤 문자열과 강력한 비밀번호 생성.",
-            "seoTitle": "랜덤 문자열 및 비밀번호 생성기",
-            "seoDescription": "강력한 비밀번호 생성.",
-            "seoKeywords": "랜덤 문자열, 비밀번호 생성기",
-            "seoH1": "랜덤 문자열 생성기"
+            "seoTitle": "Random String 無料 - 生成 random string",
+            "seoDescription": "生成 random string オンライン 無料. Customizable length and characters. ログイン不要, 高速, 安全. に最適 passwords.",
+            "seoKeywords": "random string generator free, generate random strings online, secure password generator, random text generator, alphanumeric generator",
+            "seoH1": "Random String 無料: 生成 random strings"
         },
         "random-color": {
             "name": "랜덤 색상 생성기",
             "description": "HEX 코드와 함께 랜덤 색상 생성.",
-            "seoTitle": "랜덤 색상 생성기",
-            "seoDescription": "랜덤 색상 얻기.",
-            "seoKeywords": "랜덤 색상 생성기",
-            "seoH1": "랜덤 색상 생성기"
+            "seoTitle": "Random Color 無料 - 生成 random color",
+            "seoDescription": "生成 random color オンライン 無料. Get HEX, RGB, HSL codes. ログイン不要, 高速, 安全. に最適 design inspiration.",
+            "seoKeywords": "random color generator free, generate random colors online, color palette generator, random hex color, design inspiration, color picker",
+            "seoH1": "Random Color 無料: 生成 random colors"
         },
         "random-date": {
             "name": "랜덤 날짜 생성기",
             "description": "랜덤 날짜 생성.",
-            "seoTitle": "랜덤 날짜 생성기",
-            "seoDescription": "테스트용 랜덤 날짜.",
-            "seoKeywords": "랜덤 날짜 생성기",
-            "seoH1": "랜덤 날짜 생성기"
+            "seoTitle": "Random Date 無料 - 生成 random date",
+            "seoDescription": "生成 random date オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "random-date, free random date, random date tool",
+            "seoH1": "Random Date 無料: Use Random Date"
         },
         "random-ip": {
             "name": "랜덤 IP 생성기",
             "description": "랜덤 IP 주소 생성.",
-            "seoTitle": "랜덤 IP 생성기",
-            "seoDescription": "유효한 랜덤 IP.",
-            "seoKeywords": "랜덤 ip 생성기",
-            "seoH1": "랜덤 IP 생성기"
+            "seoTitle": "Random IP 無料 - 生成 random ip",
+            "seoDescription": "生成 random ip オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "random-ip, free random ip, random ip tool",
+            "seoH1": "Random IP 無料: Use Random IP"
         },
         "password-generator": {
             "name": "비밀번호 생성기",
             "description": "강력하고 안전한 비밀번호 생성.",
-            "seoTitle": "강력 비밀번호 생성기",
-            "seoDescription": "옵션과 함께 안전한 비밀번호.",
-            "seoKeywords": "비밀번호 생성기, password generator",
-            "seoH1": "비밀번호 생성기"
+            "seoTitle": "Password Generator 無料 - 生成 strong 安全 passwords",
+            "seoDescription": "生成 strong 安全 passwords オンライン 無料. Customizable length and characters. ログイン不要, 100% private. に最適 安全 accounts.",
+            "seoKeywords": "password generator free, strong password generator, random password maker, secure password tool, hack proof passwords, offline password generator",
+            "seoH1": "Password Generator 無料: 生成 strong 安全 passwords"
         },
         "bcrypt-generator": {
             "name": "Bcrypt 생성기",
             "description": "비밀번호용 Bcrypt 해시 생성.",
-            "seoTitle": "Bcrypt 해시 생성기",
-            "seoDescription": "안전한 Bcrypt 해시.",
-            "seoKeywords": "bcrypt 생성기",
-            "seoH1": "Bcrypt 생성기"
+            "seoTitle": "Bcrypt Generator 無料 - Use Bcrypt Generator",
+            "seoDescription": "Use Bcrypt Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 100% private. に最適 daily tasks.",
+            "seoKeywords": "bcrypt-generator, free bcrypt generator, bcrypt generator tool",
+            "seoH1": "Bcrypt Generator 無料: Use Bcrypt Generator"
         },
         "base64-encoder": {
             "name": "Base64 인코더/디코더",
             "description": "Base64 문자열 인코딩 및 디코딩.",
-            "seoTitle": "Base64 인코더 디코더",
-            "seoDescription": "Base64 처리.",
-            "seoKeywords": "base64 encode decode",
-            "seoH1": "Base64 인코더/디코더"
+            "seoTitle": "Base64 Encoder 無料 - 生成 base64 encoder",
+            "seoDescription": "生成 base64 encoder オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "base64-encoder, free base64 encoder, base64 encoder tool",
+            "seoH1": "Base64 Encoder 無料: Use Base64 Encoder"
         },
         "md5-hash": {
             "name": "MD5 해시 생성기",
             "description": "MD5 체크섬 생성.",
-            "seoTitle": "MD5 생성기",
-            "seoDescription": "MD5 해시 생성.",
-            "seoKeywords": "md5 생성기",
-            "seoH1": "MD5 생성기"
+            "seoTitle": "MD5 Generator 無料 - 生成 md5 generator",
+            "seoDescription": "生成 md5 generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "md5-hash, free md5 generator, md5 generator tool",
+            "seoH1": "MD5 Generator 無料: Use MD5 Generator"
         },
         "sha256-hash": {
             "name": "SHA-256 해시 생성기",
             "description": "SHA-256 해시 생성.",
-            "seoTitle": "SHA-256 생성기",
-            "seoDescription": "안전한 암호화 해시.",
-            "seoKeywords": "sha256 생성기",
-            "seoH1": "SHA-256 생성기"
+            "seoTitle": "SHA-256 無料 - 生成 sha-256",
+            "seoDescription": "生成 sha-256 オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "sha256-hash, free sha-256, sha-256 tool",
+            "seoH1": "SHA-256 無料: Use SHA-256"
         },
         "sha512-hash": {
             "name": "SHA-512 해시 생성기",
             "description": "SHA-512 해시 생성.",
-            "seoTitle": "SHA-512 생성기",
-            "seoDescription": "가장 안전한 SHA 해시.",
-            "seoKeywords": "sha512 생성기",
-            "seoH1": "SHA-512 생성기"
+            "seoTitle": "SHA-512 無料 - 生成 sha-512",
+            "seoDescription": "生成 sha-512 オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "sha512-hash, free sha-512, sha-512 tool",
+            "seoH1": "SHA-512 無料: Use SHA-512"
         },
         "uuid-generator": {
             "name": "UUID 생성기",
             "description": "UUID v4 식별자 생성.",
-            "seoTitle": "UUID 생성기",
-            "seoDescription": "고유 ID 생성.",
-            "seoKeywords": "uuid 생성기",
-            "seoH1": "UUID 생성기"
+            "seoTitle": "UUID Generator 無料 - 生成 uuid generator",
+            "seoDescription": "生成 uuid generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "uuid-generator, free uuid generator, uuid generator tool",
+            "seoH1": "UUID Generator 無料: Use UUID Generator"
         },
         "qr-code-generator": {
             "name": "QR 코드 생성기",
             "description": "링크, 텍스트 등용 QR 코드 생성.",
-            "seoTitle": "QR 코드 생성기",
-            "seoDescription": "커스텀 QR 코드.",
-            "seoKeywords": "qr code 생성기",
-            "seoH1": "QR 코드 생성기"
+            "seoTitle": "QR Code 無料 - 生成 qr code",
+            "seoDescription": "生成 qr code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "qr-code-generator, free qr code, qr code tool",
+            "seoH1": "QR Code 無料: Use QR Code"
         },
         "lorem-ipsum": {
             "name": "Lorem Ipsum 생성기",
             "description": "레이아웃용 더미 텍스트 생성.",
-            "seoTitle": "Lorem Ipsum 생성기",
-            "seoDescription": "다국어 더미 텍스트.",
-            "seoKeywords": "lorem ipsum",
-            "seoH1": "Lorem Ipsum 생성기"
+            "seoTitle": "Lorem Ipsum 無料 - 生成 lorem ipsum",
+            "seoDescription": "生成 lorem ipsum オンライン 無料. Custom paragraphs. ログイン不要, 高速, 安全. に最適 designers.",
+            "seoKeywords": "lorem ipsum generator free, placeholder text generator, dummy text generator, lorem ipsum text, filler text generator",
+            "seoH1": "Lorem Ipsum 無料: 生成 Lorem Ipsum placeholder text"
         },
         "youtube-thumbnail-downloader": {
             "name": "YouTube 썸네일 다운로더",
             "description": "YouTube 동영상에서 고품질 썸네일 다운로드.",
-            "seoTitle": "YouTube 썸네일 다운로더",
-            "seoDescription": "HD YouTube 썸네일 얻기.",
-            "seoKeywords": "youtube 썸네일 다운로드",
-            "seoH1": "YouTube 썸네일 다운로더"
+            "seoTitle": "YouTube Thumbnail Downloader 無料 - Use YouTube Thumbnail Downloader",
+            "seoDescription": "Use YouTube Thumbnail Downloader オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 content creators.",
+            "seoKeywords": "youtube-thumbnail-downloader, free youtube thumbnail downloader, youtube thumbnail downloader tool",
+            "seoH1": "YouTube Thumbnail Downloader 無料: Use YouTube Thumbnail Downloader"
         },
         "youtube-tag-generator": {
             "name": "YouTube 태그 생성기",
             "description": "랭킹 향상을 위한 최적화 태그 생성.",
-            "seoTitle": "YouTube 태그 생성기",
-            "seoDescription": "관련 태그로 SEO 향상.",
-            "seoKeywords": "youtube 태그 생성기",
-            "seoH1": "YouTube 태그 생성기"
+            "seoTitle": "YouTube Tag Generator 無料 - 生成 YouTube SEO tags",
+            "seoDescription": "生成 YouTube SEO tags オンライン 無料. 最適化 video rankings. ログイン不要, 高速, 安全. に最適 content creators.",
+            "seoKeywords": "youtube tag generator free, generate youtube tags online, youtube seo tool, viral video tags, generate tags for youtube",
+            "seoH1": "YouTube Tag Generator 無料: 生成 YouTube SEO tags"
         },
         "youtube-title-generator": {
             "name": "YouTube 제목 생성기",
             "description": "클릭 유도 및 SEO 친화적 제목 생성.",
-            "seoTitle": "YouTube 제목 생성기",
-            "seoDescription": "좋은 제목으로 클릭 증가.",
-            "seoKeywords": "youtube 제목 생성기",
-            "seoH1": "YouTube 제목 생성기"
+            "seoTitle": "YouTube Title Generator 無料 - 生成 catchy YouTube titles",
+            "seoDescription": "生成 catchy YouTube titles オンライン 無料. SEO-friendly titles for better CTR. ログイン不要, 高速, 安全. に最適 content creators.",
+            "seoKeywords": "youtube title generator free, generate youtube titles online, video title ideas, viral yt titles, seo titles for youtube",
+            "seoH1": "YouTube Title Generator 無料: 生成 catchy YouTube titles"
         },
         "youtube-embed-code-generator": {
             "name": "YouTube 임베드 코드 생성기",
             "description": "커스텀 임베드 코드 생성.",
-            "seoTitle": "YouTube 임베드 생성기",
-            "seoDescription": "자동 재생, 반복 등 지원.",
-            "seoKeywords": "youtube embed code",
-            "seoH1": "YouTube 임베드 생성기"
+            "seoTitle": "YouTube Embed Code Generator 無料 - Use YouTube Embed Code Generator",
+            "seoDescription": "Use YouTube Embed Code Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 content creators.",
+            "seoKeywords": "youtube-embed-code-generator, free youtube embed code generator, youtube embed code generator tool",
+            "seoH1": "YouTube Embed Code Generator 無料: Use YouTube Embed Code Generator"
         },
         "youtube-timestamp-link-generator": {
             "name": "YouTube 타임스탬프 링크",
             "description": "특정 시간부터 시작하는 링크 생성.",
-            "seoTitle": "YouTube 타임스탬프 링크 생성기",
-            "seoDescription": "정확한 위치에서 동영상 시작.",
-            "seoKeywords": "youtube timestamp link",
-            "seoH1": "YouTube 타임스탬프 링크"
+            "seoTitle": "YouTube Timestamp Link 無料 - Use YouTube Timestamp Link",
+            "seoDescription": "Use YouTube Timestamp Link オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 content creators.",
+            "seoKeywords": "youtube-timestamp-link-generator, free youtube timestamp link, youtube timestamp link tool",
+            "seoH1": "YouTube Timestamp Link 無料: Use YouTube Timestamp Link"
         },
         "meta-tag-generator": {
             "name": "메타 태그 생성기",
             "description": "SEO 친화적 메타 태그 생성.",
-            "seoTitle": "메타 태그 생성기",
-            "seoDescription": "제목 및 설명 태그.",
-            "seoKeywords": "meta tag 생성기",
-            "seoH1": "메타 태그 생성기"
+            "seoTitle": "Meta Tag Generator 無料 - Use Meta Tag Generator",
+            "seoDescription": "Use Meta Tag Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "meta-tag-generator, free meta tag generator, meta tag generator tool",
+            "seoH1": "Meta Tag Generator 無料: Use Meta Tag Generator"
         },
         "open-graph-generator": {
             "name": "Open Graph 생성기",
             "description": "소셜 공유용 Open Graph 태그 생성.",
-            "seoTitle": "Open Graph 생성기",
-            "seoDescription": "소셜 미디어에서 더 나은 표시.",
-            "seoKeywords": "open graph 생성기",
-            "seoH1": "Open Graph 생성기"
+            "seoTitle": "Open Graph Generator 無料 - 生成 Open Graph meta tags",
+            "seoDescription": "生成 Open Graph meta tags オンライン 無料. Facebook, LinkedIn, Slack. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "open graph generator free, generate og tags online, facebook meta tags, og title og image, social media tags",
+            "seoH1": "Open Graph Generator 無料: 生成 Open Graph meta tags"
         },
         "twitter-card-generator": {
             "name": "Twitter Card 생성기",
             "description": "Twitter Card 메타 태그 생성.",
-            "seoTitle": "Twitter Card 생성기",
-            "seoDescription": "Twitter에서 더 나은 표시.",
-            "seoKeywords": "twitter card 생성기",
-            "seoH1": "Twitter Card 생성기"
+            "seoTitle": "Twitter Card Generator 無料 - 生成 Twitter Card meta tags",
+            "seoDescription": "生成 Twitter Card meta tags オンライン 無料. 最適化 X/Twitter shares. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "twitter card generator free, generate twitter cards online, twitter meta tags, x card generator, twitter card validator",
+            "seoH1": "Twitter Card Generator 無料: 生成 Twitter Card meta tags"
         },
         "robots-txt-generator": {
             "name": "robots.txt 생성기",
             "description": "robots.txt 파일 생성.",
-            "seoTitle": "robots.txt 생성기",
-            "seoDescription": "크롤러 접근 제어.",
-            "seoKeywords": "robots.txt 생성기",
-            "seoH1": "robots.txt 생성기"
+            "seoTitle": "Robots.txt Generator 無料 - Use Robots.txt Generator",
+            "seoDescription": "Use Robots.txt Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "robots-txt-generator, free robots.txt generator, robots.txt generator tool",
+            "seoH1": "Robots.txt Generator 無料: Use Robots.txt Generator"
         },
         "xml-sitemap-generator": {
             "name": "XML 사이트맵 생성기",
             "description": "SEO용 XML 사이트맵 생성.",
-            "seoTitle": "XML 사이트맵 생성기",
-            "seoDescription": "페이지 인덱싱 용이하게.",
-            "seoKeywords": "xml sitemap 생성기",
-            "seoH1": "XML 사이트맵 생성기"
+            "seoTitle": "XML Sitemap Generator 無料 - Use XML Sitemap Generator",
+            "seoDescription": "Use XML Sitemap Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "xml-sitemap-generator, free xml sitemap generator, xml sitemap generator tool",
+            "seoH1": "XML Sitemap Generator 無料: Use XML Sitemap Generator"
         },
         "keyword-density-checker": {
             "name": "키워드 밀도 검사기",
             "description": "키워드 사용 및 밀도 분석.",
-            "seoTitle": "키워드 밀도 검사기",
-            "seoDescription": "키워드 빈도 확인.",
-            "seoKeywords": "키워드 밀도",
-            "seoH1": "키워드 밀도 검사기"
+            "seoTitle": "Keyword Density Checker 無料 - Check keyword density",
+            "seoDescription": "Check keyword density オンライン 無料. Avoid SEO penalties. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "keyword density checker free, check keyword stuffing, seo text analyzer, word frequency counter, keyword optimizer tool",
+            "seoH1": "Keyword Density Checker 無料: Check keyword density"
         },
         "keyword-cleaner": {
             "name": "키워드 정리기",
             "description": "키워드 목록 정리.",
-            "seoTitle": "키워드 목록 정리기",
-            "seoDescription": "중복 및 불필요 제거.",
-            "seoKeywords": "키워드 정리기",
-            "seoH1": "키워드 정리기"
+            "seoTitle": "Keyword Cleaner 無料 - Use Keyword Cleaner",
+            "seoDescription": "Use Keyword Cleaner オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "keyword-cleaner, free keyword cleaner, keyword cleaner tool",
+            "seoH1": "Keyword Cleaner 無料: Use Keyword Cleaner"
         },
         "long-tail-keyword-generator": {
             "name": "롱테일 키워드 생성기",
             "description": "롱테일 키워드 변형 생성.",
-            "seoTitle": "롱테일 키워드 생성기",
-            "seoDescription": "시드 키워드 확장.",
-            "seoKeywords": "롱테일 키워드",
-            "seoH1": "롱테일 키워드"
+            "seoTitle": "Long Tail Keyword Generator 無料 - Use Long Tail Keyword Generator",
+            "seoDescription": "Use Long Tail Keyword Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "long-tail-keyword-generator, free long tail keyword generator, long tail keyword generator tool",
+            "seoH1": "Long Tail Keyword Generator 無料: Use Long Tail Keyword Generator"
         },
         "slug-generator": {
             "name": "URL 슬러그 생성기",
             "description": "텍스트를 SEO 친화적 URL 슬러그로 변환.",
-            "seoTitle": "슬러그 생성기",
-            "seoDescription": "깨끗하고 읽기 쉬운 URL 생성.",
-            "seoKeywords": "slug 생성기, url slug",
-            "seoH1": "URL 슬러그 생성기"
+            "seoTitle": "Slug Generator 無料 - Use Slug Generator",
+            "seoDescription": "Use Slug Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "slug-generator, free slug generator, slug generator tool",
+            "seoH1": "Slug Generator 無料: Use Slug Generator"
         },
         "google-serp-simulator": {
             "name": "Google SERP 미리보기",
             "description": "Google 검색 결과에서 페이지 표시 미리보기.",
-            "seoTitle": "Google SERP 시뮬레이터",
-            "seoDescription": "검색 결과 미리보기 테스트.",
-            "seoKeywords": "google serp preview",
-            "seoH1": "Google SERP 미리보기"
+            "seoTitle": "Google SERP Simulator 無料 - Use Google SERP Simulator",
+            "seoDescription": "Use Google SERP Simulator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "google-serp-simulator, free google serp simulator, google serp simulator tool",
+            "seoH1": "Google SERP Simulator 無料: Use Google SERP Simulator"
         },
         "htaccess-redirect-generator": {
             "name": ".htaccess 리디렉션 생성기",
             "description": "301/302 리디렉션 코드 생성.",
-            "seoTitle": ".htaccess 리디렉션 생성기",
-            "seoDescription": "리디렉션 규칙 생성.",
-            "seoKeywords": "htaccess redirect 생성기",
-            "seoH1": ".htaccess 리디렉션 생성기"
+            "seoTitle": "Htaccess Redirect Generator 無料 - Use Htaccess Redirect Generator",
+            "seoDescription": "Use Htaccess Redirect Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 website optimization.",
+            "seoKeywords": "htaccess-redirect-generator, free htaccess redirect generator, htaccess redirect generator tool",
+            "seoH1": "Htaccess Redirect Generator 無料: Use Htaccess Redirect Generator"
         },
         "my-ip-address": {
             "name": "내 IP 주소",
             "description": "공개 IP 주소 및 위치 정보 확인.",
-            "seoTitle": "내 IP 주소는?",
-            "seoDescription": "공개 IP 찾기.",
-            "seoKeywords": "내 ip 주소, what is my ip",
-            "seoH1": "내 IP 주소"
+            "seoTitle": "My IP Address 無料 - 生成 my ip address",
+            "seoDescription": "生成 my ip address オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "my-ip-address, free my ip address, my ip address tool",
+            "seoH1": "My IP Address 無料: Use My IP Address"
         },
         "browser-info": {
             "name": "브라우저 정보",
             "description": "브라우저 및 기기 정보 얻기.",
-            "seoTitle": "브라우저 정보 도구",
-            "seoDescription": "브라우저, OS, 화면 크기 등.",
-            "seoKeywords": "브라우저 정보, user agent",
-            "seoH1": "브라우저 정보"
+            "seoTitle": "Browser Info 無料 - 生成 browser info",
+            "seoDescription": "生成 browser info オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "browser-info, free browser info, browser info tool",
+            "seoH1": "Browser Info 無料: Use Browser Info"
         },
         "screen-resolution-simulator": {
             "name": "화면 해상도 테스터",
             "description": "다양한 해상도에서 사이트 테스트.",
-            "seoTitle": "화면 해상도 시뮬레이터",
-            "seoDescription": "다양한 기기에서 미리보기.",
-            "seoKeywords": "화면 해상도 테스터",
-            "seoH1": "화면 해상도 테스터"
+            "seoTitle": "Screen Resolution Simulator 無料 - 生成 screen resolution simulator",
+            "seoDescription": "生成 screen resolution simulator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "screen-resolution-simulator, free screen resolution simulator, screen resolution simulator tool",
+            "seoH1": "Screen Resolution Simulator 無料: Use Screen Resolution Simulator"
         },
         "responsive-checker": {
             "name": "반응형 디자인 검사기",
             "description": "사이트가 모바일 친화적인지 확인.",
-            "seoTitle": "반응형 사이트 테스터",
-            "seoDescription": "반응형 테스트.",
-            "seoKeywords": "반응형 검사기",
-            "seoH1": "반응형 검사기"
+            "seoTitle": "Responsive Checker 無料 - 生成 responsive checker",
+            "seoDescription": "生成 responsive checker オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 daily tasks.",
+            "seoKeywords": "responsive-checker, free responsive checker, responsive checker tool",
+            "seoH1": "Responsive Checker 無料: Use Responsive Checker"
         },
         "whatsapp-link-generator": {
             "name": "WhatsApp 링크 생성기",
             "description": "WhatsApp 클릭하여 채팅 링크 생성.",
-            "seoTitle": "WhatsApp 링크 생성기",
-            "seoDescription": "wa.me 링크 생성.",
-            "seoKeywords": "whatsapp 링크 생성기",
-            "seoH1": "WhatsApp 링크 생성기"
+            "seoTitle": "WhatsApp Link Generator 無料 - 生成 WhatsApp click-to-chat links",
+            "seoDescription": "生成 WhatsApp click-to-chat links オンライン 無料. Custom messages. ログイン不要, 高速, 安全. に最適 social media.",
+            "seoKeywords": "whatsapp link generator free, generate whatsapp links online, click to chat whatsapp, wa.me link maker, whatsapp chat link",
+            "seoH1": "WhatsApp Link Generator 無料: 生成 WhatsApp click-to-chat links"
         },
         "telegram-link-generator": {
             "name": "Telegram 링크 생성기",
             "description": "Telegram 사용자 또는 채널로 직접 링크 생성.",
-            "seoTitle": "Telegram 링크 생성기",
-            "seoDescription": "t.me 링크 생성.",
-            "seoKeywords": "telegram 링크 생성기",
-            "seoH1": "Telegram 링크 생성기"
+            "seoTitle": "Telegram Link Generator 無料 - Use Telegram Link Generator",
+            "seoDescription": "Use Telegram Link Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 social media.",
+            "seoKeywords": "telegram-link-generator, free telegram link generator, telegram link generator tool",
+            "seoH1": "Telegram Link Generator 無料: Use Telegram Link Generator"
         },
         "paypal-link-generator": {
             "name": "PayPal 링크 생성기",
             "description": "PayPal 결제 및 기부 링크 생성.",
-            "seoTitle": "PayPal 링크 생성기",
-            "seoDescription": "PayPal.me 및 결제 링크.",
-            "seoKeywords": "paypal 링크 생성기",
-            "seoH1": "PayPal 링크 생성기"
+            "seoTitle": "PayPal Link Generator 無料 - Use PayPal Link Generator",
+            "seoDescription": "Use PayPal Link Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 social media.",
+            "seoKeywords": "paypal-link-generator, free paypal link generator, paypal link generator tool",
+            "seoH1": "PayPal Link Generator 無料: Use PayPal Link Generator"
         },
         "email-validator": {
             "name": "이메일 검증기",
             "description": "이메일 주소 형식 검증.",
-            "seoTitle": "이메일 주소 검증기",
-            "seoDescription": "이메일 구문 확인.",
-            "seoKeywords": "이메일 검증기",
-            "seoH1": "이메일 검증기"
+            "seoTitle": "Email Validator 無料 - 生成 email validator",
+            "seoDescription": "生成 email validator オンライン 無料. Check syntax and フォーマット. ログイン不要, 高速, 安全. に最適 forms.",
+            "seoKeywords": "email validator free, validate email online, email syntax checker, email verifier, check email format",
+            "seoH1": "Email Validator 無料: Validate email addresses"
         },
         "url-opener": {
             "name": "대량 URL 열기",
             "description": "여러 URL을 동시에 열기.",
-            "seoTitle": "다중 URL 열기",
-            "seoDescription": "많은 링크를 동시에 열기.",
-            "seoKeywords": "대량 url 열기",
-            "seoH1": "대량 URL 열기"
+            "seoTitle": "URL Opener 無料 - 生成 url opener",
+            "seoDescription": "生成 url opener オンライン 無料. Bulk link opener. ログイン不要, 高速, 安全. に最適 research.",
+            "seoKeywords": "bulk url opener free, open multiple links online, url list opener, link opener, multiple url opener",
+            "seoH1": "URL Opener 無料: Open multiple URLs in new tabs"
         },
         "user-agent-parser": {
             "name": "User Agent 파서",
             "description": "User-Agent 문자열 분석.",
-            "seoTitle": "User Agent 파서",
-            "seoDescription": "브라우저 및 기기 정보 추출.",
-            "seoKeywords": "user agent 파서",
-            "seoH1": "User Agent 파서"
+            "seoTitle": "User Agent Parser 無料 - Use User Agent Parser Code",
+            "seoDescription": "Use User Agent Parser code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "user-agent-parser, free user agent parser, user agent parser tool",
+            "seoH1": "User Agent Parser 無料: Use User Agent Parser"
         },
         "wordpress-password-hash": {
             "name": "WordPress 비밀번호 해시",
             "description": "WordPress 호환 해시 생성.",
-            "seoTitle": "WordPress 해시 생성기",
-            "seoDescription": "phpass 해시 생성.",
-            "seoKeywords": "wordpress password hash",
-            "seoH1": "WordPress 비밀번호 해시"
+            "seoTitle": "WordPress Password Hash 無料 - Use WordPress Password Hash",
+            "seoDescription": "Use WordPress Password Hash オンライン 無料. 高速 and 安全 processing. ログイン不要, 100% private. に最適 daily tasks.",
+            "seoKeywords": "wordpress-password-hash, free wordpress password hash, wordpress password hash tool",
+            "seoH1": "WordPress Password Hash 無料: Use WordPress Password Hash"
         },
         "age-calculator": {
             "name": "나이 계산기",
             "description": "정확한 나이를 년, 월, 일로 계산.",
-            "seoTitle": "나이 계산기",
-            "seoDescription": "생년월일로부터 정확한 나이.",
-            "seoKeywords": "나이 계산기",
-            "seoH1": "나이 계산기"
+            "seoTitle": "Age Calculator 無料 オンライン - 計算 Age Calculator",
+            "seoDescription": "計算 Age Calculator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, accurate. に最適 daily tasks.",
+            "seoKeywords": "age-calculator, free age calculator, age calculator tool",
+            "seoH1": "Age Calculator 無料: Use Age Calculator"
         },
         "bmi-calculator": {
             "name": "BMI 계산기",
             "description": "체질량지수 및 건강 상태 계산.",
-            "seoTitle": "BMI 계산기",
-            "seoDescription": "BMI 확인.",
-            "seoKeywords": "bmi 계산기",
-            "seoH1": "BMI 계산기"
+            "seoTitle": "BMI Calculator 無料 オンライン - 計算 BMI Calculator",
+            "seoDescription": "計算 BMI Calculator オンライン 無料. Check healthy weight range. ログイン不要, 高速, accurate. に最適 health tracking.",
+            "seoKeywords": "bmi calculator free, body mass index calculator, healthy weight calculator, obesity calculator, height weight chart, bmi calculator online",
+            "seoH1": "BMI Calculator 無料: 計算 BMI"
         },
         "percentage-calculator": {
             "name": "퍼센트 계산기",
             "description": "퍼센트, 증가, 감소 계산.",
-            "seoTitle": "퍼센트 계산기",
-            "seoDescription": "다양한 퍼센트 도구.",
-            "seoKeywords": "퍼센트 계산기",
-            "seoH1": "퍼센트 계산기"
+            "seoTitle": "Percentage Calculator 無料 オンライン - 計算 Percentage Calculator",
+            "seoDescription": "計算 Percentage Calculator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, accurate. に最適 daily tasks.",
+            "seoKeywords": "percentage-calculator, free percentage calculator, percentage calculator tool",
+            "seoH1": "Percentage Calculator 無料: Use Percentage Calculator"
         },
         "gst-calculator": {
             "name": "세금 계산기",
             "description": "세금 금액 및 총 가격 계산.",
-            "seoTitle": "세금 계산기",
-            "seoDescription": "세금 쉽게 계산.",
-            "seoKeywords": "세금 계산기",
-            "seoH1": "세금 계산기"
+            "seoTitle": "GST Calculator 無料 オンライン - 計算 GST Calculator",
+            "seoDescription": "計算 GST Calculator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, accurate. に最適 daily tasks.",
+            "seoKeywords": "gst-calculator, free gst calculator, gst calculator tool",
+            "seoH1": "GST Calculator 無料: Use GST Calculator"
         },
         "emi-calculator": {
             "name": "대출 상환 계산기",
             "description": "월 상환액 및 총 이자 계산.",
-            "seoTitle": "EMI 계산기",
-            "seoDescription": "대출 상환액 계산.",
-            "seoKeywords": "emi 계산기, 대출 계산기",
-            "seoH1": "EMI 계산기"
+            "seoTitle": "Loan EMI Calculator 無料 オンライン - 計算 Loan EMI Calculator",
+            "seoDescription": "計算 Loan EMI Calculator オンライン 無料. Home, car, personal loans. Amortization schedule. ログイン不要, 高速, accurate. に最適 loan planning.",
+            "seoKeywords": "emi calculator free, loan calculator online, mortgage calculator, monthly installment calculator, interest rate calculator, home loan calculator",
+            "seoH1": "Loan EMI Calculator 無料: 計算 loan EMI"
         },
         "discount-calculator": {
             "name": "할인 계산기",
             "description": "할인 금액 및 최종 가격 계산.",
-            "seoTitle": "할인 계산기",
-            "seoDescription": "세일에서 절약액 확인.",
-            "seoKeywords": "할인 계산기",
-            "seoH1": "할인 계산기"
+            "seoTitle": "Discount Calculator 無料 オンライン - 計算 Discount Calculator",
+            "seoDescription": "計算 Discount Calculator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, accurate. に最適 daily tasks.",
+            "seoKeywords": "discount-calculator, free discount calculator, discount calculator tool",
+            "seoH1": "Discount Calculator 無料: Use Discount Calculator"
         },
         "instagram-hashtag-generator": {
             "name": "Instagram 해시태그 생성기",
             "description": "Instagram용 인기 및 관련 해시태그 생성.",
-            "seoTitle": "Instagram 해시태그 생성기",
-            "seoDescription": "게시물 도달 범위 증가.",
-            "seoKeywords": "instagram 해시태그",
-            "seoH1": "Instagram 해시태그 생성기"
+            "seoTitle": "Instagram Hashtag Generator 無料 - Use Instagram Hashtag Generator",
+            "seoDescription": "Use Instagram Hashtag Generator オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 social media.",
+            "seoKeywords": "instagram-hashtag-generator, free instagram hashtag generator, instagram hashtag generator tool",
+            "seoH1": "Instagram Hashtag Generator 無料: Use Instagram Hashtag Generator"
         },
         "html-to-jsx": {
             "name": "HTML → JSX",
             "description": "HTML 코드를 React JSX 구문으로 변환.",
-            "seoTitle": "HTML에서 JSX 변환기",
-            "seoDescription": "React 개발용 변환.",
-            "seoKeywords": "html to jsx",
-            "seoH1": "HTML → JSX 변환기"
+            "seoTitle": "HTML to JSX 無料 - Use HTML to JSX Code",
+            "seoDescription": "Use HTML to JSX code オンライン 無料. 高速 and 安全 processing. ログイン不要, 高速, 安全. に最適 developers.",
+            "seoKeywords": "html-to-jsx, free html to jsx, html to jsx tool",
+            "seoH1": "HTML to JSX 無料: Use HTML to JSX"
         }
     },
     "Common": {

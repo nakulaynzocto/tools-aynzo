@@ -132,3 +132,4 @@ export const fetchIPAddress = async (): Promise<string> => {
     return data.ip;
 };
 
+

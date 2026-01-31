@@ -37,3 +37,4 @@ export const useWebProcessing = (type: WebToolProps['type'], redirect?: Redirect
     return { result, loading, analyzeSEOUrl };
 };
 
+

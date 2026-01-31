@@ -66,3 +66,4 @@ export function SERPSimulator({ serp, setSerp }: SERPSimulatorProps) {
     );
 }
 
+

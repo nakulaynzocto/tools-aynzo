@@ -27,3 +27,4 @@ export function EmbedCodeGenerator({ result, copied, onCopy }: EmbedCodeGenerato
     );
 }
 
+

@@ -12,10 +12,10 @@ interface ToolSEO {
 export const toolSEO: { [key: string]: ToolSEO } = {
     // === EXISTING TOOLS ===
     'word-counter': {
-        title: 'Word Counter & Character Count Tool - Real-Time Analysis',
-        description: 'Count words, characters, sentences, and paragraphs in real-time. The ultimate free word counter for writers, students, and SEOs. Checks reading time and speaking time instantly.',
-        keywords: 'word counter, character counter, check word count, essay word count, reading time calculator, sentence counter, real time word count, twitter character counter',
-        h1: 'Word Counter: The Writer\'s Ultimate Productivity Tool',
+        title: 'Word Counter Free Online - Count Words Characters',
+        description: 'Count words, characters, sentences online free. Real-time analysis with reading time. No login, fast, secure. Perfect for writers and students.',
+        keywords: 'word counter free, character counter online, word count tool, essay word count, reading time calculator, real time word count',
+        h1: 'Word Counter Free Online: Count Words & Characters Instantly',
         content: `
 <p>In the digital age, length matters. Whether you are a student strictly adhering to a 1000-word essay limit, a social media manager crafting the perfect 280-character tweet, or an SEO specialist optimizing a meta description, precision is key. The **Aynzo Word Counter**is not just a calculator; it is a comprehensive writing assistant designed to give you deep insights into your text's structure, flow, and impact.</p>
 <p>This authoritative guide will explore why word count is a critical metric in modern communication, the standard limits for every major platform, and how our privacy-first tool protects your intellectual property while you work.</p>
@@ -93,7 +93,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'character-counter': {
-        title: 'Character Counter Online - 100% Free Text Count Tool',
+        title: 'Character Counter Free Online - Count characters with/without spaces',
         description: 'Free character counter online. Count characters with and without spaces, words, sentences instantly. Ideal for Twitter, SMS, and meta descriptions.',
         keywords: 'character counter, count characters, character count online, text character counter, character counter with spaces, character count online free',
         h1: 'Character Counter Online (100% Free)',
@@ -132,7 +132,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'text-case-converter': {
-        title: 'Text Case Converter - Uppercase, Lowercase, Title Case Tool',
+        title: 'Text Case Converter Free Online - Convert text case',
         description: 'Convert text case online instantly. Switch between uppercase, lowercase, title case, sentence case, and alternating case. Free, fast, and secure text transformer.',
         keywords: 'case converter, text converter, uppercase to lowercase, title case converter, sentence case, text transformer',
         h1: 'Online Text Case Converter',
@@ -183,7 +183,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'json-formatter': {
-        title: 'JSON Formatter & Validator - Beautify and Fix JSON Online Free',
+        title: 'JSON Formatter Free - Format, beautify, validate JSON Code',
         description: 'Master JSON data with our 1200+ word guide. Learn to validate, beautify, and minify JSON instantly. 100% private, browser-based JSON formatter for developers.',
         keywords: 'json formatter, json validator, beautify json online, fix json syntax, json parser, online json editor, minify json, format json string',
         h1: 'JSON Formatter & Validator: The Complete Guide to Data Optimization',
@@ -270,7 +270,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'password-generator': {
-        title: 'Strong Password Generator - Create Hack-Proof Passwords',
+        title: 'Password Generator Free - Generate strong secure passwords',
         description: 'Generate 100% secure, high-entropy passwords instantly. Uses military-grade browser encryption to ensure your data never leaves your device. Free and offline-capable.',
         keywords: 'strong password generator, random password maker, secure password tool, hack proof passwords, offline password generator, password entropy calculator',
         h1: 'Military-Grade Password Generator: Security Starts Here',
@@ -328,7 +328,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-compressor': {
-        title: 'Image Compressor Online Free - Reduce File Size without Quality Loss',
+        title: 'Free Image Compressor Online - Compress JPG, PNG, WebP images No Signup',
         description: 'Compress JPG, PNG, and WebP images online for free. Master image optimization with our 1200+ word guide. 100% private, browser-based compression.',
         keywords: 'image compressor online free, compress image without losing quality, reduce image file size, bulk image compressor, online image optimizer, compress jpg to 50kb',
         h1: 'Image Compressor Online Free: The Ultimate Guide to Web Optimization',
@@ -388,7 +388,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-resizer': {
-        title: 'Image Resizer - Resize JPG/PNG to 20KB, 50KB, 100KB Online',
+        title: 'Free Image Resizer Online - Resize JPG, PNG, WebP images No Signup',
         description: 'Free online image resizer. Resize images to specific pixel dimensions or file sizes like 20KB, 50KB, 100KB. Perfect for passport photos, social media, and web optimization.',
         keywords: 'image resizer, resize image to 50kb, change image dimensions online, resize photo for passport, image resizer 20kb, resize image to 100kb, bulk image resizer, free online photo resizer',
         h1: 'Resize Image to Specific Dimensions & Size',
@@ -428,7 +428,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
     },
 
     'url-encoder-decoder': {
-        title: 'URL Encoder Decoder - Encode & Decode URLs Online',
+        title: 'URL Encoder / Decoder Free - Use URL Encoder / Decoder Code',
         description: 'Free URL encoder and decoder. Encode URLs for safe transmission. Decode percent-encoded URLs.',
         keywords: 'url encoder, url decoder, encode url, decode url online, url encoding tool',
         h1: 'URL Encoder & Decoder',
@@ -462,7 +462,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
     },
     // === ADVANCED TEXT TOOLS ===
     'italic-text': {
-        title: 'Italic Text Generator - Fancy Italic Font for Instagram Bio',
+        title: 'Italic Text Generator Free Online - Use Italic Text Generator',
         description: 'Generate fancy italic text for Instagram bio, Twitter, and TikTok. Copy and paste italic letters instantly with our free Unicode italic font generator.',
         keywords: 'italic text generator, italic font, fancy italic text, instagram bio font, italic text for instagram, copy paste italics, unicode italic text',
         h1: 'Italic Text Generator (𝒞𝑜𝓅𝓎 & 𝒫𝒶𝓈𝓉𝑒)',
@@ -516,7 +516,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'strikethrough-text': {
-        title: 'Strikethrough Text Generator - Cross Out Text for Social Media',
+        title: 'Strikethrough Text Free Online - Use Strikethrough Text',
         description: 'Generate strikethrough text for Instagram, Facebook, and Twitter. Easily cross out text and copy-paste it anywhere with our free online strike text maker.',
         keywords: 'strikethrough text generator, cross out text, strike text generator, line through text, instagram strikethrough, strikethrough generator online',
         h1: 'Strikethrough Text Generator (C̶r̶o̶s̶s̶ ̶O̶u̶t̶)',
@@ -550,7 +550,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'underline-text': {
-        title: 'Underline Text Generator - Fancy Underline Font Online',
+        title: 'Underline Text Free Online - Use Underline Text',
         description: 'Generate underlined text for Instagram, Facebook, and Twitter bios. Create fancy underlined font and copy-paste it instantly. 100% free.',
         keywords: 'underline text generator, underline font, text underline online, instagram underline, underline text generator online, fancy underline text',
         h1: 'Underline Text Generator (U̲n̲d̲e̲r̲l̲i̲n̲e̲)',
@@ -588,7 +588,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'small-text': {
-        title: 'Small Text Generator - ˢᵐᵃˡˡ ᵗᵉˣᵗ Copy & Paste',
+        title: 'Small Text Generator Free Online - Use Small Text Generator',
         description: 'Generate tiny text (subscript/superscript) for social media bios and usernames.',
         keywords: 'small text generator, tiny text, subscript generator, superscript generator, tiny font',
         h1: 'Small Text Generator (ˢᵐᵃˡˡ ᵗᵉˣᵗ)',
@@ -625,7 +625,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'upside-down-text': {
-        title: 'Upside Down Text Generator - Flip Text 180°',
+        title: 'Upside Down Text Free Online - Use Upside Down Text',
         description: 'Flip your text upside down instantly. Copy and paste flipped text.',
         keywords: 'upside down text, flip text, rotate text 180, reverse text, upside down font',
         h1: 'Upside Down Text Generator (dᴉlℲ)',
@@ -656,7 +656,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'mirror-text': {
-        title: 'Mirror Text Generator - Reflect & Flip Text Horizontally',
+        title: 'Mirror Text Generator Free Online - Use Mirror Text Generator',
         description: 'Create mirrored text reflection instantly. Flip text horizontally (mirror writing) for Instagram, TikTok, and creative designs. Free mirror text maker.',
         keywords: 'mirror text generator, mirror text, reverse text reflection, mirror writing generator, backwards text, mirrored text',
         h1: 'Mirror Text Generator (ɿoɿɿiM)',
@@ -682,7 +682,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'duplicate-line-remover': {
-        title: 'Remove Duplicate Lines - Clean Up Text Lists',
+        title: 'Duplicate Line Remover Free Online - Use Duplicate Line Remover',
         description: 'Remove duplicate lines from your text or list instantly. Sort and clean unique lines.',
         keywords: 'remove duplicate lines, delete duplicates, deduplicate text, unique lines filter, clean email list',
         h1: 'Duplicate Line Remover',
@@ -714,7 +714,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'sort-alphabetically': {
-        title: 'Sort Text Alphabetically - Sort Lists A-Z / Z-A',
+        title: 'Sort Alphabetically Free Online - Use Sort Alphabetically',
         description: 'Sort lists and text lines alphabetically (A-Z or Z-A) or numerically. Fast and free.',
         keywords: 'sort alphabetically, sort text a-z, alphabetize list, sort lines, sort names',
         h1: 'Alphabetical Sorter (A-Z Cleaner)',
@@ -775,7 +775,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'whitespace-remover': {
-        title: 'Whitespace Remover - Remove Extra Spaces & Tabs',
+        title: 'Whitespace Remover Free Online - Use Whitespace Remover',
         description: 'Trim extra whitespace, tabs, and line breaks. Clean up your code or text.',
         keywords: 'whitespace remover, remove spaces, trim text, remove tabs, clean text online',
         h1: 'Whitespace Remover & Trimmer',
@@ -806,7 +806,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'word-frequency': {
-        title: 'Word Frequency Counter - Text Analysis Tool',
+        title: 'Word Frequency Free Online - Use Word Frequency',
         description: 'Analyze word usage frequency in your text. Find most repeated words and keyword density.',
         keywords: 'word frequency counter, text analyzer, keyword density, word usage count, essay analyzer',
         h1: 'Word Frequency Analyzer',
@@ -836,7 +836,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'find-replace': {
-        title: 'Advanced Find & Replace - Regex Supported',
+        title: 'Find & Replace Free Online - Use Find & Replace',
         description: 'Advanced find and replace tool with Regex support. Case sensitive matching and global replacement.',
         keywords: 'regex find replace, advanced replace, regular expression replace, grep tool online',
         h1: 'Advanced Find & Replace (Regex)',
@@ -869,7 +869,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
 
     // === FORMATTER TOOLS ===
     'html-formatter': {
-        title: 'HTML Formatter & Beautifier - Format HTML Code',
+        title: 'HTML Formatter Free - Format and beautify HTML code Code',
         description: 'Format, beautify and indent your HTML code online. Fix messy HTML instantly.',
         keywords: 'html formatter, html beautifier, format html, clean html code',
         h1: 'HTML Formatter',
@@ -897,7 +897,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         }
     },
     'css-formatter': {
-        title: 'CSS Formatter & Beautifier - Clean CSS Code',
+        title: 'CSS Formatter Free - Format and beautify CSS code Code',
         description: 'Beautify and format CSS code. Minify or expand CSS for better readability.',
         keywords: 'css formatter, css beautifier, format css, clean css',
         h1: 'CSS Formatter',
@@ -925,7 +925,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         }
     },
     'javascript-formatter': {
-        title: 'JavaScript Formatter - Beautify JS Code',
+        title: 'JS Formatter Free - Format and beautify JavaScript code Code',
         description: 'Format and beautify JavaScript/JSON code. Fix indentation and spacing.',
         keywords: 'javascript formatter, js beautifier, format javascript, clean js code',
         h1: 'JavaScript Formatter',
@@ -953,7 +953,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         }
     },
     'xml-formatter': {
-        title: 'XML Formatter - Beautify & Minify XML Online',
+        title: 'XML Formatter Free - Use XML Formatter Code',
         description: 'Format, validate, and beautify XML strings instantly. Convert ugly XML into a readable tree view or minify it for production.',
         keywords: 'xml formatter, xml beautifier, format xml online, xml validator, minify xml, xml pretty print',
         h1: 'XML Formatter & Beautifier',
@@ -989,7 +989,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'sql-formatter': {
-        title: 'SQL Formatter - Beautify SQL Queries Online',
+        title: 'SQL Formatter Free - Use SQL Formatter Code',
         description: 'Format messy SQL queries into clean, readable code. Supports standard SQL, MySQL, PostgreSQL, and more.',
         keywords: 'sql formatter, beautify sql, format sql query, sql pretty printer, online sql formatter',
         h1: 'SQL Formatter & Beautifier',
@@ -1025,7 +1025,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'markdown-to-html': {
-        title: 'Markdown to HTML Converter - Instant Live Preview',
+        title: 'Markdown to HTML Free - Use Markdown to HTML Code',
         description: 'Convert Markdown syntax to raw HTML code instantly. Real-time preview editor for writers and developers.',
         keywords: 'markdown to html, convert md to html, markdown editor online, markdown preview',
         h1: 'Markdown to HTML Converter',
@@ -1062,7 +1062,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'html-to-markdown': {
-        title: 'HTML to Markdown Converter - Clean & Accurate',
+        title: 'HTML to Markdown Free - Use HTML to Markdown Code',
         description: 'Convert HTML code into clean Markdown format. Perfect for migrating content from websites to CMS or documentation.',
         keywords: 'html to markdown, convert html to md, html converter, scrape to markdown',
         h1: 'HTML to Markdown Converter',
@@ -1094,7 +1094,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'csv-to-json': {
-        title: 'CSV to JSON Converter - Free Online Data Tool',
+        title: 'CSV to JSON Free - Use CSV to JSON Code',
         description: 'Convert CSV (Comma Separated Values) files to valid JSON arrays or objects. Fast, client-side conversion for developers.',
         keywords: 'csv to json, convert csv, csv parser, csv to json online, data converter',
         h1: 'CSV to JSON Converter',
@@ -1127,7 +1127,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'json-to-csv': {
-        title: 'JSON to CSV Converter - Export Data to Excel',
+        title: 'JSON to CSV Free - Use JSON to CSV Code',
         description: 'Convert JSON data into CSV format for Excel, Google Sheets, or database imports. Flatten nested objects easily.',
         keywords: 'json to csv, convert json, json parser, json to excel, transform json',
         h1: 'JSON to CSV Converter',
@@ -1159,7 +1159,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'code-minifier': {
-        title: 'Code Minifier - Minify HTML, CSS, & JS Online',
+        title: 'Code Minifier Free - Use Code Minifier Code',
         description: 'Minify HTML, CSS, and JavaScript code to reduce file size and improve website loading speed. Free online optimization tool.',
         keywords: 'code minifier, minify html, minify css, minify js, code compressor, web performance',
         h1: 'Universal Code Minifier',
@@ -1197,7 +1197,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
 
     // === CONVERTER TOOLS ===
     'unit-converter': {
-        title: 'Universal Unit Converter - Engineering Precision',
+        title: 'Unit Converter Free - Convert Online No Signup',
         description: 'Convert length, weight, temperature, and more with scientific accuracy. The last converter you will ever need. Fast, ad-free, and mobile-friendly.',
         keywords: 'unit converter, engineering converter, length conversion, weight converter, temperature calculator, metric to imperial',
         h1: 'Engineering-Grade Unit Converter',
@@ -1233,7 +1233,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'color-converter': {
-        title: 'Color Converter - HEX, RGB, HSL',
+        title: 'Color Converter Free - Convert Online No Signup',
         description: 'Convert color codes between HEX, RGB, and HSL formats. Visual color picker included.',
         keywords: 'color converter, hex to rgb, rgb to hex, hex to hsl, color picker',
         h1: 'Color Code Converter',
@@ -1261,7 +1261,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         }
     },
     'binary-to-text': {
-        title: 'Binary to Text Converter - Binary Translator',
+        title: 'Binary to Text Free - Convert Online No Signup',
         description: 'Translate binary code to text and text to binary. Instant conversion.',
         keywords: 'binary to text, text to binary, binary translator, binary code converter',
         h1: 'Binary <-> Text Converter',
@@ -1297,7 +1297,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         }
     },
     'hex-to-decimal': {
-        title: 'Hex to Decimal Converter - Base 16 to Base 10',
+        title: 'Hex to Decimal Free - Convert Online No Signup',
         description: 'Convert Hexadecimal numbers to Decimal and vice versa. Essential tool for low-level programming and color codes.',
         keywords: 'hex to decimal, decimal to hex, hexadecimal converter, base 16 to base 10, hex calculator',
         h1: 'Hex to Decimal Converter',
@@ -1330,7 +1330,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'roman-numeral': {
-        title: 'Roman Numeral Converter - Date & Number Tool',
+        title: 'Roman Numeral Free - Convert Online No Signup',
         description: 'Convert numbers to Roman numerals (e.g., 2024 to MMXXIV) and back. Great for tattoos, copyright dates, and history.',
         keywords: 'roman numeral converter, numbers to roman, roman numerals date, roman numeral chart, year to roman',
         h1: 'Roman Numeral Converter',
@@ -1373,7 +1373,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
 
     // === GENERATOR TOOLS ===
     'random-number': {
-        title: 'Random Number Generator - True Randomness Online',
+        title: 'Random Number Free - Generate random number',
         description: 'Generate true random numbers within your custom range. Perfect for lotteries, giveaways, dice rolling, and scientific sampling.',
         keywords: 'random number generator, rng, randomize numbers, random picker, dice roller, lottery number generator',
         h1: 'Random Number Generator (RNG)',
@@ -1409,7 +1409,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'random-string': {
-        title: 'Random String Generator - Secure Password Tool',
+        title: 'Random String Free - Generate random string',
         description: 'Generate strong, random strings for passwords, API keys, and security tokens. Customize length and character sets.',
         keywords: 'random string generator, secure password generator, generate api key, random text, alphanumeric generator',
         h1: 'Random String & Password Generator',
@@ -1445,7 +1445,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'random-color': {
-        title: 'Random Color Generator - Palette Inspiration',
+        title: 'Random Color Free - Generate random color',
         description: 'Generate beautiful random colors and palettes. Get HEX, RGB, and HSL codes instantly for your design projects.',
         keywords: 'random color generator, color palette generator, random hex color, design inspiration, color picker',
         h1: 'Random Color Generator',
@@ -1473,7 +1473,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'random-date': {
-        title: 'Random Date Generator - Test Data Tool',
+        title: 'Random Date Free - Generate random date',
         description: 'Generate random dates and times within a specific range. Essential for software testing and database population.',
         keywords: 'random date generator, generate date, random time, date picker, test data generator',
         h1: 'Random Date Generator',
@@ -1507,7 +1507,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'random-ip': {
-        title: 'Random IP Address Generator - IPv4 & IPv6',
+        title: 'Random IP Free - Generate random ip',
         description: 'Generate valid, random IPv4 and IPv6 addresses. Useful for network testing, security drills, and mocking user data.',
         keywords: 'random ip generator, generate ip address, fake ip, ip spoofer, ipv4 generator, ipv6 generator',
         h1: 'Random IP Generator',
@@ -1537,7 +1537,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
 
     // === CRYPTO TOOLS (Expanded) ===
     'base64-encoder': {
-        title: 'Base64 Encoder & Decoder - Secure Online Tool',
+        title: 'Base64 Encoder Free - Generate base64 encoder',
         description: 'Encode text, files, and images to Base64 instantly. Decode Base64 strings back to readable text. Free, fast, and runs locally in your browser for 100% privacy.',
         keywords: 'base64 encode, base64 decode, base64 converter, string to base64, base64 image decoder, data uri generator',
         h1: 'Base64 Encoder / Decoder: The Developer\'s Essential Tool',
@@ -1578,7 +1578,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'md5-hash': {
-        title: 'MD5 Hash Generator - Online Encryption',
+        title: 'MD5 Generator Free - Generate md5 generator',
         description: 'Generate MD5 hashes from any text. Use for checksums, file integrity verification, and non-secure indexing.',
         keywords: 'md5 generator, md5 hash, create md5, hash calculator, checksum generator',
         h1: 'MD5 Hash Generator',
@@ -1610,7 +1610,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'sha256-hash': {
-        title: 'SHA-256 Hash Generator - Secure Hashing',
+        title: 'SHA-256 Free - Generate sha-256',
         description: 'Generate SHA-256 hashes online. The standard for maximum security, Bitcoin, and SSL certificates.',
         keywords: 'sha256 generator, sha256 hash, online hash generator, crypto hash, secure hashing',
         h1: 'SHA-256 Generator',
@@ -1638,7 +1638,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'sha512-hash': {
-        title: 'SHA-512 Hash Generator - Ultra Secure Encryption',
+        title: 'SHA-512 Free - Generate sha-512',
         description: 'Generate SHA-512 hashes. 512-bit security for military-grade protection and verification.',
         keywords: 'sha512 generator, secure hash, crypto tool, sha512 online, hash text',
         h1: 'SHA-512 Generator',
@@ -1667,7 +1667,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'bcrypt-generator': {
-        title: 'Bcrypt Generator - Secure Password Hashing',
+        title: 'Bcrypt Generator Free - Use Bcrypt Generator',
         description: 'Generate and check Bcrypt hashes. The industry standard for salting and hashing passwords securely.',
         keywords: 'bcrypt generator, password hash, salt rounds, bcrypt online, hash password',
         h1: 'Bcrypt Generator',
@@ -1701,7 +1701,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'uuid-generator': {
-        title: 'Random UUID Generator - Create V4 GUIDs Online Free',
+        title: 'UUID Generator Free - Generate uuid generator',
         description: 'Generate random UUIDs (Universally Unique Identifiers).',
         keywords: 'uuid generator, guid generator, v4 uuid',
         h1: 'UUID Generator',
@@ -1729,7 +1729,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         },
     },
     'jpg-to-png': {
-        title: 'JPG to PNG Converter Online Free - High Quality',
+        title: 'Free JPG to PNG Online - Convert JPG to PNG No Signup',
         description: 'Convert JPG images to PNG format instantly for free. Maintain high image quality and transparency support. Secure, fast, and no signup required.',
         keywords: 'jpg to png, convert jpg to png, jpg to png converter, free online image converter, high quality jpg to png',
         h1: 'JPG to PNG Converter',
@@ -1759,7 +1759,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'png-to-jpg': {
-        title: 'PNG to JPG Converter Online Free - Convert & Compress',
+        title: 'Free PNG to JPG Online - Convert PNG to JPG No Signup',
         description: 'Convert PNG to JPG online for free. Reduce file size instantly while maintaining high image quality. Perfect for photos, screenshots, and web optimization.',
         keywords: 'png to jpg, convert png to jpg, png to jpg converter, online image converter, png in jpg, png to jpg converter online, free png to jpg converter',
         h1: 'PNG to JPG Converter',
@@ -1793,7 +1793,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'webp-converter': {
-        title: 'Universal WebP Converter - To and From WebP',
+        title: 'Free WebP Converter Online - Convert JPG, PNG, GIF to WebP or WebP to JPG/PNG No Signup',
         description: 'Convert JPG, PNG, and GIF to WebP format, or convert WebP back to standard image formats. The all-in-one WebP tool.',
         keywords: 'webp converter, weppy, convert to webp, webp to jpg, webp to png, google image format',
         h1: 'Universal WebP Converter',
@@ -1822,7 +1822,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-to-base64': {
-        title: 'Image to Base64 Converter - Embed Images in Code',
+        title: 'Free Image to Base64 Online - Use Image to Base64 No Signup',
         description: 'Convert images to Base64 strings for direct embedding in HTML, CSS, or JSON. Reduce HTTP requests.',
         keywords: 'image to base64, picture to code, base64 image generator, data uri generator, css background base64',
         h1: 'Image to Base64 Converter',
@@ -1854,7 +1854,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-cropper': {
-        title: 'Image Cropper - Crop Images Online Free',
+        title: 'Free Image Cropper Online - Use Image Cropper No Signup',
         description: 'Crop images online quickly and easily. Cut out parts of your photos with precision.',
         keywords: 'image cropper, crop image, crop photo online, free image cropper',
         h1: 'Online Image Cropper',
@@ -1893,7 +1893,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'base64-to-image': {
-        title: 'Base64 to Image Converter',
+        title: 'Free Base64 to Image Online - Use Base64 to Image No Signup',
         description: 'Convert Base64 strings back to images (PNG, JPG, GIF). Preview instant.',
         keywords: 'base64 to image, base64 decoder, convert base64',
         h1: 'Base64 to Image',
@@ -1932,7 +1932,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'flip-image': {
-        title: 'Flip Image Online - Mirror Image',
+        title: 'Free Flip Image Online - Use Flip Image No Signup',
         description: 'Flip images horizontally or vertically online. Create mirror effects instantly.',
         keywords: 'flip image, mirror image, flip photo, reverse image',
         h1: 'Flip Image Tool',
@@ -1984,7 +1984,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'rotate-image': {
-        title: 'Rotate Image Online - Turn Photos',
+        title: 'Free Rotate Image Online - Use Rotate Image No Signup',
         description: 'Rotate images by 90, 180, or custom degrees. Fix sideways photos.',
         keywords: 'rotate image, turn photo, rotate picture, fix image orientation',
         h1: 'Rotate Image Tool',
@@ -2023,7 +2023,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-enlarger': {
-        title: 'Image Enlarger - Upscale Images',
+        title: 'Free Image Enlarger Online - Use Image Enlarger No Signup',
         description: 'Enlarge images online. Increase image size with simple scaling.',
         keywords: 'image enlarger, upscale image, make image bigger, resize up',
         h1: 'Image Enlarger',
@@ -2063,7 +2063,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-brightness': {
-        title: 'Image Brightness Adjuster',
+        title: 'Free Image Brightness Online - Use Image Brightness No Signup',
         description: 'Adjust image brightness online. Lighten or darken photos easily.',
         keywords: 'image brightness, brighten photo, darken photo, adjust brightness',
         h1: 'Image Brightness Tool',
@@ -2103,7 +2103,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-contrast': {
-        title: 'Image Contrast Adjuster',
+        title: 'Free Image Contrast Online - Use Image Contrast No Signup',
         description: 'Adjust image contrast online. Enhance photo colors and depth.',
         keywords: 'image contrast, enhance photo, fix contrast',
         h1: 'Image Contrast Tool',
@@ -2143,7 +2143,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'grayscale-image': {
-        title: 'Grayscale Image Converter - Black & White',
+        title: 'Free Grayscale Image Online - Use Grayscale Image No Signup',
         description: 'Convert images to grayscale (black and white) online instantly.',
         keywords: 'grayscale converter, black and white photo, make monochrome',
         h1: 'Grayscale Image Converter',
@@ -2183,7 +2183,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'blur-image': {
-        title: 'Blur Image Tool - Add Blur Effect',
+        title: 'Free Blur Image Online - Use Blur Image No Signup',
         description: 'Add blur effect to images online. Soften photos or hide details.',
         keywords: 'blur image, blur photo, soften image, blur effect',
         h1: 'Blur Image Tool',
@@ -2223,7 +2223,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'sepia-converter': {
-        title: 'Sepia Image Filter - Vintage Effect',
+        title: 'Free Sepia Converter Online - Use Sepia Converter No Signup',
         description: 'Add sepia filter to photos. Create vintage, old-style images.',
         keywords: 'sepia filter, vintage effect, old photo effect',
         h1: 'Sepia Image Converter',
@@ -2263,7 +2263,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'invert-image': {
-        title: 'Invert Image Colors - Negative Effect',
+        title: 'Free Invert Colors Online - Use Invert Colors No Signup',
         description: 'Invert colors of an image. Create negative photo effect.',
         keywords: 'invert colors, negative image, invert photo',
         h1: 'Invert Image Colors',
@@ -2303,7 +2303,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'saturate-image': {
-        title: 'Image Saturation Adjuster',
+        title: 'Free Saturate Image Online - Use Saturate Image No Signup',
         description: 'Adjust color saturation. Make colors more vivid or muted.',
         keywords: 'image saturation, vivid colors, saturate photo',
         h1: 'Saturate Image Tool',
@@ -2343,7 +2343,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'hue-rotate-image': {
-        title: 'Hue Rotate Image - Change Colors',
+        title: 'Free Hue Rotate Online - Use Hue Rotate No Signup',
         description: 'Rotate image hue to shift colors. Create psychedelic effects.',
         keywords: 'hue rotate, change image colors, shift hue',
         h1: 'Hue Rotate Tool',
@@ -2383,7 +2383,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-opacity': {
-        title: 'Image Opacity Changer - Transparent Image',
+        title: 'Free Image Opacity Online - Use Image Opacity No Signup',
         description: 'Change image opacity level. Make images semi-transparent.',
         keywords: 'image opacity, transparent image, see-through photo',
         h1: 'Image Opacity Tool',
@@ -2423,7 +2423,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'round-corners-image': {
-        title: 'Round Image Corners - Border Radius',
+        title: 'Free Round Corners Online - Use Round Corners No Signup',
         description: 'Add rounded corners to images. Create circular or soft-edged photos.',
         keywords: 'round corners, image border radius, rounded photo',
         h1: 'Round Image Corners',
@@ -2463,7 +2463,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-border': {
-        title: 'Add Border to Image',
+        title: 'Free Image Border Online - Use Image Border No Signup',
         description: 'Add custom borders to images. Choose color and thickness.',
         keywords: 'add image border, photo frame, image stroke',
         h1: 'Image Border Tool',
@@ -2507,7 +2507,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'image-shadow': {
-        title: 'Add Shadow to Image',
+        title: 'Free Image Shadow Online - Use Image Shadow No Signup',
         description: 'Add drop shadow to images. Create depth and 3D effects.',
         keywords: 'image shadow, drop shadow, photo shadow',
         h1: 'Image Shadow Tool',
@@ -2547,7 +2547,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'pixelate-image': {
-        title: 'Pixelate Image - Pixel Art Effect',
+        title: 'Free Pixelate Image Online - Use Pixelate Image No Signup',
         description: 'Pixelate images online. Censor parts or create pixel art style.',
         keywords: 'pixelate image, pixel art, censor image, blur faces',
         h1: 'Pixelate Image Tool',
@@ -2587,7 +2587,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'svg-to-png': {
-        title: 'SVG to PNG Converter',
+        title: 'Free SVG to PNG Online - Use SVG to PNG No Signup',
         description: 'Convert SVG vectors to PNG images. High resolution support.',
         keywords: 'svg to png, convert svg, rasterize svg',
         h1: 'SVG to PNG Converter',
@@ -2626,7 +2626,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'png-to-svg': {
-        title: 'PNG to SVG Converter',
+        title: 'Free PNG to SVG Online - Use PNG to SVG No Signup',
         description: 'Convert PNG images to SVG vectors. Trace bitmaps to vectors.',
         keywords: 'png to svg, vectorize image, bitmap to vector',
         h1: 'PNG to SVG Converter',
@@ -2665,7 +2665,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'webp-to-jpg': {
-        title: 'WebP to JPG Converter',
+        title: 'Free WebP to JPG Online - Use WebP to JPG No Signup',
         description: 'Convert WebP images to standard JPG format.',
         keywords: 'webp to jpg, convert webp',
         h1: 'WebP to JPG',
@@ -2704,7 +2704,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'webp-to-png': {
-        title: 'How to Convert WebP to PNG Online for Free (Step-by-Step Guide)',
+        title: 'Free WebP to PNG Online - Use WebP to PNG No Signup',
         description: 'Master WebP to PNG conversion with our 1200+ word guide. Learn how to preserve transparency, convert in batch, and why PNG is essential for designers in 2026. Free tool included.',
         keywords: 'how to convert webp to png, webp to png converter, convert webp to png without losing quality, webp to transparent png, free online image converter, open webp files in photoshop',
         h1: 'How to Convert WebP to PNG Online for Free: The Ultimate Guide',
@@ -2776,7 +2776,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'jpg-to-webp': {
-        title: 'JPG to WebP Converter',
+        title: 'Free JPG to WebP Online - Use JPG to WebP No Signup',
         description: 'Convert JPG to modern WebP format for fast web loading.',
         keywords: 'jpg to webp, compress to webp',
         h1: 'JPG to WebP',
@@ -2815,7 +2815,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'png-to-webp': {
-        title: 'PNG to WebP Converter',
+        title: 'Free PNG to WebP Online - Use PNG to WebP No Signup',
         description: 'Convert PNG to optimized WebP format.',
         keywords: 'png to webp, convert png',
         h1: 'PNG to WebP',
@@ -2856,7 +2856,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
 
     // === REGEX & DIFF TOOLS ===
     'regex-tester': {
-        title: 'Regex Tester & Debugger',
+        title: 'Regex Tester Free - Use Regex Tester Code',
         description: 'Test and debug regular expressions online with real-time highlighting.',
         keywords: 'regex tester, regex debug, regular expression tester',
         h1: 'Regex Tester',
@@ -2896,7 +2896,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'diff-checker': {
-        title: 'Online Diff Checker',
+        title: 'Diff Checker Free - Use Diff Checker Code',
         description: 'Compare two text files or blocks and find differences.',
         keywords: 'diff checker, text compare, compare files, diff tool',
         h1: 'Diff Checker',
@@ -2936,7 +2936,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'remove-line-breaks': {
-        title: 'Remove Line Breaks - Remove Line Breaks from Text Online Free',
+        title: 'Remove Line Breaks Free Online - Use Remove Line Breaks',
         description: 'Free tool to remove line breaks from text. Clean up copied text, remove unwanted line breaks instantly. Perfect for formatting and editing.',
         keywords: 'remove line breaks, remove newlines, clean text, format text, remove carriage return',
         h1: 'Remove Line Breaks Tool',
@@ -2968,7 +2968,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'reverse-text': {
-        title: 'Reverse Text Generator - Backwards Text Online Free',
+        title: 'Reverse Text Generator Free Online - Use Reverse Text Generator',
         description: 'Free reverse text generator. Flip text backwards instantly. Perfect for fun messages, social media, and creative content. No signup required.',
         keywords: 'reverse text, backwards text, flip text, reverse text generator, text reverser online',
         h1: 'Reverse Text Generator',
@@ -3014,7 +3014,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'bold-text': {
-        title: 'Bold Text Generator - Make Bold Text for Social Media Free',
+        title: 'Bold Text Generator Free Online - Use Bold Text Generator',
         description: 'Free bold text generator using Unicode. Create bold text for Instagram, Facebook, Twitter, WhatsApp. Copy and paste bold letters instantly.',
         keywords: 'bold text generator, bold text, make text bold, bold letters, unicode bold text, bold font generator',
         h1: 'Bold Text Generator',
@@ -3069,7 +3069,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'lorem-ipsum': {
-        title: 'Lorem Ipsum Generator - Placeholder Text Generator Free',
+        title: 'Lorem Ipsum Free - Generate lorem ipsum',
         description: 'Free Lorem Ipsum generator. Create dummy placeholder text for your designs. Generate 1-5 paragraphs instantly. Perfect for web designers and developers.',
         keywords: 'lorem ipsum generator, placeholder text, dummy text, lorem ipsum, filler text generator',
         h1: 'Lorem Ipsum Generator',
@@ -3116,7 +3116,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
 
     // === YOUTUBE TOOLS ===
     'youtube-thumbnail-downloader': {
-        title: 'YouTube Thumbnail Downloader - Get HD & 4K Thumbnails Free Online',
+        title: 'YouTube Thumbnail Downloader Free - Use YouTube Thumbnail Downloader',
         description: 'Master YouTube growth with our 1200+ word guide on thumbnails. Download high-quality YouTube thumbnails in HD, 4K, and 1080p instantly. 100% free and secure.',
         keywords: 'youtube thumbnail downloader, download yt thumbnail hd, high quality youtube thumbnail, youtube thumbnail grabber, 4k thumbnail downloader, save youtube thumbnail online',
         h1: 'YouTube Thumbnail Downloader: The Ultimate Guide to Viral Video CTR',
@@ -3199,7 +3199,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'youtube-tag-generator': {
-        title: 'YouTube Tag Generator - Boost Video SEO & Ranking Free Online',
+        title: 'YouTube Tag Generator Free - Generate YouTube SEO tags',
         description: 'Discover the secret to viral video growth with our 1200+ word guide on YouTube tags. Generate optimized SEO tags instantly. 100% free YouTube keyword tool.',
         keywords: 'youtube tag generator, yt tag finder, best tags for youtube views, youtube seo tool, viral video tags, generate tags for youtube',
         h1: 'YouTube Tag Generator: The Master Guide to Algorithm Optimization',
@@ -3258,7 +3258,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'youtube-embed-code-generator': {
-        title: 'YouTube Embed Code Generator - Custom Player',
+        title: 'YouTube Embed Code Generator Free - Use YouTube Embed Code Generator',
         description: 'Generate advanced YouTube embed codes. Customize autoplay, loop, controls, and more. Clean and responsive Iframe code.',
         keywords: 'youtube embed code, custom youtube player, embed youtube video, autoplay embed, loop youtube',
         h1: 'Advanced Embed Code Generator',
@@ -3290,7 +3290,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'qr-code-generator': {
-        title: 'QR Code Generator - Create Custom QR Codes Online Free',
+        title: 'QR Code Free - Generate qr code',
         description: 'Free QR code generator. Create custom QR codes for URLs, text, and WiFi. Customize colors, margins, and size. High-quality PNG downloads.',
         keywords: 'qr code generator, create qr code, custom qr code, qr code maker, free qr generator',
         h1: 'Custom QR Code Generator',
@@ -3338,7 +3338,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'xml-sitemap-generator': {
-        title: 'XML Sitemap Generator - Create Google Sitemaps Online',
+        title: 'XML Sitemap Generator Free - Use XML Sitemap Generator',
         description: 'Free XML sitemap generator for Google, Bing, and Yahoo. Generate professional sitemaps with custom priority and frequency for better SEO.',
         keywords: 'xml sitemap generator, google sitemap maker, website sitemap tool, create sitemap online',
         h1: 'Online XML Sitemap Generator',
@@ -3374,7 +3374,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'google-serp-simulator': {
-        title: 'Google SERP Simulator - SEO Title & Meta Description Preview',
+        title: 'Google SERP Simulator Free - Use Google SERP Simulator',
         description: 'Visualize how your website appears on Google search results. Optimize your SEO title and meta description with our live SERP preview tool.',
         keywords: 'serp simulator, google search preview, seo title checker, meta description preview, google snippet tool',
         h1: 'Google SERP Simulator & Preview',
@@ -3405,7 +3405,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'meta-tag-generator': {
-        title: 'Meta Tag Generator - Google & Social Media Tags',
+        title: 'Meta Tag Generator Free - Use Meta Tag Generator',
         description: 'Generate SEO-optimized meta tags for Google, Facebook Open Graph, and Twitter Cards instantly.',
         keywords: 'meta tag generator, seo tags, open graph generator, twitter cards maker',
         h1: 'Meta Tag Generator',
@@ -3433,7 +3433,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'robots-txt-generator': {
-        title: 'Robots.txt Generator - Manage Search Engine Crawling',
+        title: 'Robots.txt Generator Free - Use Robots.txt Generator',
         description: 'Create a custom robots.txt file to control how search engines crawl your website. Safe and easy to use.',
         keywords: 'robots.txt generator, create robots.txt, robots file maker, crawl control',
         h1: 'Robots.txt Generator',
@@ -3461,7 +3461,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'whatsapp-link-generator': {
-        title: 'WhatsApp Link Generator - Create Click-to-Chat Links',
+        title: 'WhatsApp Link Generator Free - Generate WhatsApp click-to-chat links',
         description: 'Generate free WhatsApp click-to-chat links with custom messages. Perfect for Instagram bios, Facebook ads, and business websites.',
         keywords: 'whatsapp link generator, click to chat whatsapp, wa.me link maker, whatsapp chat link',
         h1: 'WhatsApp Link Generator',
@@ -3492,7 +3492,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'word-to-pdf': {
-        title: 'Word to PDF Converter Online - Fast & Free (No Signup)',
+        title: 'Word to PDF Free - Convert Online No Signup',
         description: 'Convert Word (DOC/DOCX) to PDF online for free. Maintain original formatting with our fast and secure converter. No email required. Professional quality Word to PDF results instantly.',
         keywords: 'word to pdf, convert word to pdf, doc to pdf online, free word to pdf converter, docx to pdf, online doc to pdf, word to pdf no signup',
         h1: 'Free Online Word to PDF Converter: Professional PDF Results',
@@ -3544,7 +3544,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'pdf-to-word': {
-        title: 'Free PDF to Word Converter Online - 100% Editable (No Signup)',
+        title: 'PDF to Word Free - Convert Online No Signup',
         description: 'Convert PDF to Word (DOCX) online for free. 100% editable documents, high layout accuracy, and secure processing. No email required. Fast, free, and accurate PDF to Word conversion.',
         keywords: 'pdf to word, convert pdf to word, pdf to word editable free, online pdf to word converter, pdf to docx, free pdf to word without email, scanned pdf to word converter',
         h1: 'Free Online PDF to Word Converter: Convert to Editable DOCX Instantly',
@@ -3606,7 +3606,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'youtube-title-generator': {
-        title: 'YouTube Title Generator - Viral Video Title Ideas',
+        title: 'YouTube Title Generator Free - Generate catchy YouTube titles',
         description: 'Generate catchy, SEO-friendly titles for your YouTube videos to improve click-through rates and rankings.',
         keywords: 'youtube title generator, video title ideas, viral yt titles, seo titles for youtube',
         h1: 'YouTube Title Generator',
@@ -3641,7 +3641,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'youtube-timestamp-link-generator': {
-        title: 'YouTube Timestamp Link Generator - Share Specific Time',
+        title: 'YouTube Timestamp Link Free - Use YouTube Timestamp Link',
         description: 'Create YouTube links that start at a specific timestamp. Perfect for sharing highlights and specific moments.',
         keywords: 'youtube timestamp link, share youtube time, youtube start at time link',
         h1: 'YouTube Timestamp Link Generator',
@@ -3675,7 +3675,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'open-graph-generator': {
-        title: 'Open Graph Meta Tag Generator - Facebook & LinkedIn SEO',
+        title: 'Open Graph Generator Free - Generate Open Graph meta tags',
         description: 'Generate Open Graph meta tags for your website to control how your content appears on Facebook, LinkedIn, and Slack.',
         keywords: 'open graph generator, og tag generator, facebook meta tags, og title og image',
         h1: 'Open Graph Generator',
@@ -3707,7 +3707,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'twitter-card-generator': {
-        title: 'Twitter Card Generator - Optimize Your Tweets',
+        title: 'Twitter Card Generator Free - Generate Twitter Card meta tags',
         description: 'Create Twitter Card meta tags to ensure your website looks great when shared on X (Twitter).',
         keywords: 'twitter card generator, twitter meta tags, x card generator, twitter card validator',
         h1: 'Twitter Card Generator',
@@ -3738,7 +3738,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'keyword-density-checker': {
-        title: 'Keyword Density Checker - Avoid SEO Penalties & Stuffing',
+        title: 'Keyword Density Checker Free - Check keyword density',
         description: 'Check keyword frequency to avoid Google stuffing penalties. Free SEO text analyzer. Find overused words and optimize for 1-2% density. 100% private.',
         keywords: 'keyword density checker, check keyword stuffing, seo text analyzer, word frequency counter, keyword optimizer tool, tf-idf analyzer',
         h1: 'Keyword Density Checker: The Anti-Stuffing Audit Tool',
@@ -3792,7 +3792,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'keyword-cleaner': {
-        title: 'Keyword List Cleaner Online - Remove Duplicates & Empty Lines',
+        title: 'Keyword Cleaner Free - Use Keyword Cleaner',
         description: 'Clean your keyword lists instantly with our free online keyword list cleaner. Remove duplicates, trim whitespace, and delete empty lines for better SEO & PPC management.',
         keywords: 'keyword list cleaner, keyword cleaner, deduplicate keywords, clean keyword list, seo keyword tool, ppc keyword cleaner, remove duplicate keywords',
         h1: 'Keyword List Cleaner & Deduplicator',
@@ -3826,7 +3826,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'long-tail-keyword-generator': {
-        title: 'Long Tail Keyword Generator - SEO Research Tool',
+        title: 'Long Tail Keyword Generator Free - Use Long Tail Keyword Generator',
         description: 'Find long-tail keyword variations for your seed keywords to target niche search traffic and improve SEO rankings.',
         keywords: 'long tail keywords, keyword research tool, seo keyword generator, find keywords, google suggest scraper',
         h1: 'Long Tail Keyword Generator',
@@ -3856,7 +3856,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'slug-generator': {
-        title: 'URL Slug Generator - Clean SEO URLs',
+        title: 'Slug Generator Free - Use Slug Generator',
         description: 'Convert any text into a clean, SEO-friendly URL slug. Remove special characters and replace spaces with hyphens automatically.',
         keywords: 'slug generator, url slug, seo url maker, permalink generator, clean url tool',
         h1: 'URL Slug Generator',
@@ -3888,7 +3888,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'htaccess-redirect-generator': {
-        title: 'htaccess Redirect Generator - 301 & 302 Redirects',
+        title: 'Htaccess Redirect Generator Free - Use Htaccess Redirect Generator',
         description: 'Easily generate .htaccess redirect code for 301 (permanent) or 302 (temporary) redirects for your Apache server.',
         keywords: 'htaccess generator, 301 redirect, 302 redirect, htaccess maker, apache redirect generator',
         h1: '.htaccess Redirect Generator',
@@ -3918,7 +3918,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'my-ip-address': {
-        title: 'What is My IP Address? - IPv4 & IPv6 Checker',
+        title: 'My IP Address Free - Generate my ip address',
         description: 'Instantly find your public IP address, location, ISP, and connection details. Free IP lookup tool.',
         keywords: 'what is my ip, check ip address, my ip location, public ip finder, my isp',
         h1: 'What is My IP Address?',
@@ -3953,7 +3953,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'browser-info': {
-        title: 'My Browser Info - Detect User Agent & Version',
+        title: 'Browser Info Free - Generate browser info',
         description: 'Get detailed information about your browser, operating system, screen resolution, and cookies.',
         keywords: 'browser info, detect browser, user agent finder, screen size checker, javascript enabled',
         h1: 'Browser Information Tool',
@@ -3988,7 +3988,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'screen-resolution-simulator': {
-        title: 'Screen Resolution Simulator - Website Tester',
+        title: 'Screen Resolution Simulator Free - Generate screen resolution simulator',
         description: 'Preview how your website looks on different screen resolutions. Test layouts for monitors, laptops, and tablets.',
         keywords: 'screen resolution simulator, test screen size, display simulator, website preview, viewport tester',
         h1: 'Screen Resolution Simulator',
@@ -4019,7 +4019,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'responsive-checker': {
-        title: 'Responsive Website Checker - Mobile View Tester',
+        title: 'Responsive Checker Free - Generate responsive checker',
         description: 'Check if your website is responsive across iPhone, iPad, Android, and Desktop sizes. Mobile-friendly test tool.',
         keywords: 'responsive checker, mobile friendly test, website responsiveness, device simulator, mobile view',
         h1: 'Responsive Website Checker',
@@ -4050,7 +4050,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'telegram-link-generator': {
-        title: 'Telegram Link Generator - Create Custom Direct Chat Links',
+        title: 'Telegram Link Generator Free - Use Telegram Link Generator',
         description: 'Generate free t.me Telegram links for your profile, channel, or group. No @ required. Fast, secure, and professional Telegram link maker for social media bios.',
         keywords: 'telegram link generator, create telegram link, t.me link maker, telegram channel link, generate telegram link, how to generate telegram link, telegram direct message link',
         h1: 'Custom Telegram Link Generator',
@@ -4117,7 +4117,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'paypal-link-generator': {
-        title: 'PayPal Link Generator - Create Payment & Donation Links',
+        title: 'PayPal Link Generator Free - Use PayPal Link Generator',
         description: 'Generate custom PayPal.me links for receiving payments or donations quickly and safely.',
         keywords: 'paypal link generator, paypal.me maker, payment link generator, donation link',
         h1: 'PayPal Link Generator',
@@ -4152,7 +4152,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'email-validator': {
-        title: 'Email Validator - Check Email Address Syntax',
+        title: 'Email Validator Free - Generate email validator',
         description: 'Validate the format of any email address instantly. Check for syntax errors, typos, and proper domain formatting.',
         keywords: 'email validator, check email, email syntax checker, validate email online, email verifier',
         h1: 'Free Email Syntax Validator',
@@ -4183,7 +4183,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'url-opener': {
-        title: 'Bulk URL Opener - Open Multiple Links',
+        title: 'URL Opener Free - Generate url opener',
         description: 'Open multiple URLs at the same time in new tabs with a single click. Save time on link checking and research.',
         keywords: 'bulk url opener, open multiple links, url list opener, link opener, multiple url opener',
         h1: 'Bulk URL Opener',
@@ -4211,7 +4211,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'user-agent-parser': {
-        title: 'User Agent Parser - Analyze UA Strings',
+        title: 'User Agent Parser Free - Use User Agent Parser Code',
         description: 'Decode any User Agent string to identify the browser, engine, OS, and device type. Useful for log analysis.',
         keywords: 'user agent parser, ua string analyzer, parse user agent, browser detect, ua lookup',
         h1: 'User Agent Parser',
@@ -4241,7 +4241,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'wordpress-password-hash': {
-        title: 'WordPress Password Hash Generator',
+        title: 'WordPress Password Hash Free - Use WordPress Password Hash',
         description: 'Generate WordPress-compatible password hashes using the phpass library for direct database insertion.',
         keywords: 'wordpress password hash, wp hash generator, wordpress password encrypt',
         h1: 'WP Password Hash Generator',
@@ -4272,7 +4272,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'age-calculator': {
-        title: 'Age Calculator - Exact Age by Date of Birth',
+        title: 'Age Calculator Free Online - Calculate Age Calculator',
         description: 'Calculate your exact age in years, months, days, and even seconds. Find out your next birthday and total days lived.',
         keywords: 'age calculator, calculate age, date of birth calculator, how old am i, birthday countdown',
         h1: 'Online Age Calculator',
@@ -4303,7 +4303,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'bmi-calculator': {
-        title: 'BMI Calculator - Check Body Mass Index',
+        title: 'BMI Calculator Free Online - Calculate BMI Calculator',
         description: 'Calculate your BMI (Body Mass Index) instantly. Check if you are in a healthy weight range based on your height and weight.',
         keywords: 'bmi calculator, body mass index, healthy weight calculator, obesity calculator, height weight chart',
         h1: 'BMI Calculator (Body Mass Index)',
@@ -4335,7 +4335,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'emi-calculator': {
-        title: 'EMI Calculator - Loan & Mortgage Planner',
+        title: 'Loan EMI Calculator Free Online - Calculate Loan EMI Calculator',
         description: 'Calculate your monthly loan EMI (Equated Monthly Installment) for home, car, or personal loans. View amortization schedule.',
         keywords: 'emi calculator, loan calculator, mortgage calculator, monthly installment, interest rate calculator',
         h1: 'Loan EMI Calculator',
@@ -4364,7 +4364,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'instagram-hashtag-generator': {
-        title: 'Instagram Hashtag Generator - Trending & Viral Hashtags 2026',
+        title: 'Instagram Hashtag Generator Free - Use Instagram Hashtag Generator',
         description: 'Generate viral Instagram hashtags for reels and posts using AI. Boost your reach, engagement, and growth with the best trending hashtags for 2026. Free copy-and-paste tool.',
         keywords: 'instagram hashtag generator, hashtags instagram generator, hashtags for instagram, trending instagram hashtags, viral hashtags for reels, instagram engagement tags, hashtag maker for instagram',
         h1: 'Trending Instagram Hashtag Generator',

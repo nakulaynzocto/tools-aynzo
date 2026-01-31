@@ -22,3 +22,4 @@ export function BrowserInfo({ result, onCopy }: BrowserInfoProps) {
     );
 }
 
+

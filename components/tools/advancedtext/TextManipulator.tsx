@@ -128,3 +128,4 @@ export function TextManipulator({ type }: TextManipulatorProps) {
     );
 }
 
+

@@ -23,3 +23,4 @@ export function TitleGenerator({ result, copiedIndex, onCopy }: TitleGeneratorPr
     );
 }
 
+

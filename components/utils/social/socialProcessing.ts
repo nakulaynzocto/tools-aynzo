@@ -42,3 +42,4 @@ export const validateEmail = (email: string): { valid: boolean; message: string 
     return { valid: true, message: 'Valid email address' };
 };
 
+

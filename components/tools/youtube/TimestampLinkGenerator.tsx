@@ -29,3 +29,4 @@ export function TimestampLinkGenerator({ result, copied, onCopy }: TimestampLink
     );
 }
 
+

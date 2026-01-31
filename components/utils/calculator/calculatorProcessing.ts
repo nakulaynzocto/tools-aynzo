@@ -69,3 +69,4 @@ export const calculateDiscount = (data: DiscountData): { discountAmount: number;
     };
 };
 
+

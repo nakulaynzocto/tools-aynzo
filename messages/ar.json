@@ -64,347 +64,347 @@
         "image-compressor": {
             "name": "ضاغط الصور",
             "description": "ضغط صور JPG و PNG و WebP بدون فقدان الجودة.",
-            "seoTitle": "ضاغط الصور - أداة مجانية عبر الإنترنت",
-            "seoDescription": "ضغط الصور بدون فقدان الجودة. 100% مجاني وسريع وآمن.",
-            "seoKeywords": "ضاغط صور, تصغير صور, أداة مجانية",
-            "seoH1": "ضاغط الصور",
+            "seoTitle": "مجاني Image Compressor عبر الإنترنت - Compress JPG, PNG, WebP images بدون تسجيل",
+            "seoDescription": "Compress JPG, PNG, WebP images عبر الإنترنت مجاني. Reduce file size up to 90% without losing quality. بدون تسجيل دخول, سريع, آمن. مثالي لـ web optimization and social media.",
+            "seoKeywords": "compress image file size online free without losing quality, reduce image file size online free, compress jpg to 50kb online, bulk image compressor free no watermark",
+            "seoH1": "Image Compressor مجاني عبر الإنترنت: Compress JPG, PNG, WebP images",
             "content": "\n<p>في عصر السرعة الرقمية، يعد امتلاك صور محسنة أمرًا ضروريًا لأي موقع ويب أو وسيلة تواصل اجتماعي. تزيد الصور الثقيلة من وقت التحميل وتضر بتجربة المستخدم. تم تطوير <strong>مكبس صور Aynzo</strong> لحل هذه المشكلة بسرعة وأمان.</p>\n\n<h2>لماذا تضغط صورك؟</h2>\n<ul>\n    <li><strong>تحسين سرعة الموقع:</strong> جوجل يفضل المواقع السريعة. الصور الخفيفة تحسن ترتيبك في محركات البحث.</li>\n    <li><strong>توفير مساحة التخزين:</strong> قلل المساحة التي تشغلها الصور على الخوادم والأجهزة المحمولة حتى 90%.</li>\n    <li><strong>خصوصية تامة:</strong> على عكس المواقع الأخرى، نحن لا نرفع صورك على أي خادم. تتم المعالجة بالكامل داخل متصفحك.</li>\n</ul>\n"
         },
         "image-resizer": {
             "name": "مُغيّر حجم الصور",
             "description": "تغيير حجم الصور إلى أبعاد دقيقة أو نسبة مئوية.",
-            "seoTitle": "مُغيّر حجم الصور - أداة مجانية عبر الإنترنت",
-            "seoDescription": "تغيير حجم الصور بسهولة. 100% مجاني وآمن.",
-            "seoKeywords": "تغيير حجم صورة, resize image",
-            "seoH1": "مُغيّر حجم الصور"
+            "seoTitle": "مجاني Image Resizer عبر الإنترنت - Resize JPG, PNG, WebP images بدون تسجيل",
+            "seoDescription": "Resize JPG, PNG, WebP images عبر الإنترنت مجاني. Change dimensions to exact pixels or percentage. بدون تسجيل دخول, سريع, آمن. مثالي لـ social media and web.",
+            "seoKeywords": "resize image online free, change image dimensions online, resize photo for passport, image resizer 20kb, resize image to 100kb",
+            "seoH1": "Image Resizer مجاني عبر الإنترنت: Resize JPG, PNG, WebP images"
         },
         "jpg-to-png": {
             "name": "JPG إلى PNG",
             "description": "تحويل صور JPG إلى PNG مع دعم الخلفية الشفافة.",
-            "seoTitle": "محول JPG إلى PNG - أداة مجانية",
-            "seoDescription": "تحويل JPG إلى PNG شفاف. 100% مجاني.",
-            "seoKeywords": "jpg to png, تحويل jpg png",
-            "seoH1": "JPG إلى PNG"
+            "seoTitle": "مجاني JPG to PNG عبر الإنترنت - تحويل JPG to PNG بدون تسجيل",
+            "seoDescription": "تحويل JPG to PNG عبر الإنترنت مجاني. High quality conversion with transparency support. بدون تسجيل دخول, سريع, آمن. مثالي لـ web graphics and logos.",
+            "seoKeywords": "jpg to png converter free, convert jpg to png online, jpg to png high quality, free image format converter, jpg to png transparent background",
+            "seoH1": "JPG to PNG مجاني عبر الإنترنت: تحويل JPG to PNG"
         },
         "png-to-jpg": {
             "name": "PNG إلى JPG",
             "description": "تحويل صور PNG إلى JPG فوراً.",
-            "seoTitle": "محول PNG إلى JPG - أداة مجانية",
-            "seoDescription": "تحويل PNG إلى JPG. 100% مجاني.",
-            "seoKeywords": "png to jpg, تحويل png jpg",
-            "seoH1": "PNG إلى JPG"
+            "seoTitle": "مجاني PNG to JPG عبر الإنترنت - تحويل PNG to JPG بدون تسجيل",
+            "seoDescription": "تحويل PNG to JPG عبر الإنترنت مجاني. Reduce file size with high quality. بدون تسجيل دخول, سريع, آمن. مثالي لـ photos and web optimization.",
+            "seoKeywords": "png to jpg converter free, convert png to jpg online, png to jpg high quality, free image format converter, png to jpg reduce size",
+            "seoH1": "PNG to JPG مجاني عبر الإنترنت: تحويل PNG to JPG"
         },
         "webp-converter": {
             "name": "محول WebP",
             "description": "تحويل الصور إلى أو من صيغة WebP لتحسين الويب.",
-            "seoTitle": "محول WebP - أداة مجانية عبر الإنترنت",
-            "seoDescription": "تحويل WebP بسهولة. 100% مجاني.",
-            "seoKeywords": "محول webp, webp jpg png",
-            "seoH1": "محول WebP"
+            "seoTitle": "مجاني WebP تحويلer عبر الإنترنت - تحويل JPG, PNG, GIF to WebP or WebP to JPG/PNG بدون تسجيل",
+            "seoDescription": "تحويل JPG, PNG, GIF to WebP or WebP to JPG/PNG عبر الإنترنت مجاني. Modern تنسيق conversion. بدون تسجيل دخول, سريع, آمن. مثالي لـ web optimization.",
+            "seoKeywords": "webp converter free, convert to webp online, webp to jpg converter, jpg to webp converter, free webp converter",
+            "seoH1": "WebP تحويلer مجاني عبر الإنترنت: تحويل JPG, PNG, GIF to WebP or WebP to JPG/PNG"
         },
         "image-to-base64": {
             "name": "صورة إلى Base64",
             "description": "تحويل الصور إلى نصوص Base64 لتضمينها في الكود.",
-            "seoTitle": "صورة إلى Base64",
-            "seoDescription": "تحويل صورة إلى Base64. 100% مجاني.",
-            "seoKeywords": "image to base64, base64 encoder",
-            "seoH1": "صورة إلى Base64"
+            "seoTitle": "مجاني Image to Base64 عبر الإنترنت - Use Image to Base64 بدون تسجيل",
+            "seoDescription": "Use Image to Base64 عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "image-to-base64, free image to base64, image to base64 tool",
+            "seoH1": "Image to Base64 مجاني عبر الإنترنت: Use Image to Base64"
         },
         "image-cropper": {
             "name": "قص الصور",
             "description": "قص الصور عبر الإنترنت بنسب مخصصة.",
-            "seoTitle": "قص الصور - أداة مجانية",
-            "seoDescription": "قص الصور حسب رغبتك. 100% مجاني.",
-            "seoKeywords": "قص صورة, crop image online",
-            "seoH1": "قص الصور"
+            "seoTitle": "مجاني Image Cropper عبر الإنترنت - Use Image Cropper بدون تسجيل",
+            "seoDescription": "Use Image Cropper عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "image-cropper, free image cropper, image cropper tool",
+            "seoH1": "Image Cropper مجاني عبر الإنترنت: Use Image Cropper"
         },
         "flip-image": {
             "name": "قلب الصورة",
             "description": "قلب الصور أفقيًا أو عموديًا.",
-            "seoTitle": "قلب الصورة - أداة مجانية",
-            "seoDescription": "قلب الصور فوراً. 100% مجاني.",
-            "seoKeywords": "قلب صورة, flip image",
-            "seoH1": "قلب الصورة"
+            "seoTitle": "مجاني Flip Image عبر الإنترنت - Use Flip Image بدون تسجيل",
+            "seoDescription": "Use Flip Image عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "flip-image, free flip image, flip image tool",
+            "seoH1": "Flip Image مجاني عبر الإنترنت: Use Flip Image"
         },
         "rotate-image": {
             "name": "تدوير الصورة",
             "description": "تدوير الصور 90 أو 180 أو 270 درجة.",
-            "seoTitle": "تدوير الصورة - أداة مجانية",
-            "seoDescription": "تدوير الصور بسهولة. 100% مجاني.",
-            "seoKeywords": "تدوير صورة, rotate image",
-            "seoH1": "تدوير الصورة"
+            "seoTitle": "مجاني Rotate Image عبر الإنترنت - Use Rotate Image بدون تسجيل",
+            "seoDescription": "Use Rotate Image عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "rotate-image, free rotate image, rotate image tool",
+            "seoH1": "Rotate Image مجاني عبر الإنترنت: Use Rotate Image"
         },
         "image-enlarger": {
             "name": "مكبر الصور",
             "description": "تكبير الصور الصغيرة بدون فقدان الجودة.",
-            "seoTitle": "مكبر الصور - أداة مجانية",
-            "seoDescription": "تكبير حتى 4 أضعاف. 100% مجاني.",
-            "seoKeywords": "تكبير صورة, upscale image",
-            "seoH1": "مكبر الصور"
+            "seoTitle": "مجاني Image Enlarger عبر الإنترنت - Use Image Enlarger بدون تسجيل",
+            "seoDescription": "Use Image Enlarger عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "image-enlarger, free image enlarger, image enlarger tool",
+            "seoH1": "Image Enlarger مجاني عبر الإنترنت: Use Image Enlarger"
         },
         "image-brightness": {
             "name": "إضاءة الصورة",
             "description": "ضبط إضاءة الصور.",
-            "seoTitle": "ضبط الإضاءة",
-            "seoDescription": "زيادة أو تقليل الإضاءة. 100% مجاني.",
-            "seoKeywords": "إضاءة صورة, brightness adjust",
-            "seoH1": "ضبط الإضاءة"
+            "seoTitle": "مجاني Image Brightness عبر الإنترنت - Use Image Brightness بدون تسجيل",
+            "seoDescription": "Use Image Brightness عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "image-brightness, free image brightness, image brightness tool",
+            "seoH1": "Image Brightness مجاني عبر الإنترنت: Use Image Brightness"
         },
         "image-contrast": {
             "name": "تباين الصورة",
             "description": "ضبط تباين الصور.",
-            "seoTitle": "ضبط التباين",
-            "seoDescription": "تحسين التباين. 100% مجاني.",
-            "seoKeywords": "تباين صورة, contrast adjust",
-            "seoH1": "ضبط التباين"
+            "seoTitle": "مجاني Image Contrast عبر الإنترنت - Use Image Contrast بدون تسجيل",
+            "seoDescription": "Use Image Contrast عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "image-contrast, free image contrast, image contrast tool",
+            "seoH1": "Image Contrast مجاني عبر الإنترنت: Use Image Contrast"
         },
         "grayscale-image": {
             "name": "التدرج الرمادي",
             "description": "تحويل الصور الملونة إلى أبيض وأسود.",
-            "seoTitle": "محول التدرج الرمادي",
-            "seoDescription": "تحويل إلى أبيض وأسود. 100% مجاني.",
-            "seoKeywords": "تدرج رمادي, أبيض أسود",
-            "seoH1": "التدرج الرمادي"
+            "seoTitle": "مجاني Grayscale Image عبر الإنترنت - Use Grayscale Image بدون تسجيل",
+            "seoDescription": "Use Grayscale Image عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "grayscale-image, free grayscale image, grayscale image tool",
+            "seoH1": "Grayscale Image مجاني عبر الإنترنت: Use Grayscale Image"
         },
         "blur-image": {
             "name": "طمس الصورة",
             "description": "إضافة تأثير طمس إلى الصور.",
-            "seoTitle": "طمس الصورة - أداة مجانية",
-            "seoDescription": "تطبيق طمس غاوسي. 100% مجاني.",
-            "seoKeywords": "طمس صورة, blur image",
-            "seoH1": "طمس الصورة"
+            "seoTitle": "مجاني Blur Image عبر الإنترنت - Use Blur Image بدون تسجيل",
+            "seoDescription": "Use Blur Image عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "blur-image, free blur image, blur image tool",
+            "seoH1": "Blur Image مجاني عبر الإنترنت: Use Blur Image"
         },
         "sepia-converter": {
             "name": "فلتر سيبيا",
             "description": "تطبيق تأثير سيبيا قديم على الصور.",
-            "seoTitle": "فلتر سيبيا - أداة مجانية",
-            "seoDescription": "إعطاء لون سيبيا كلاسيكي.",
-            "seoKeywords": "فلتر سيبيا, تأثير قديم",
-            "seoH1": "تأثير سيبيا"
+            "seoTitle": "مجاني Sepia تحويلer عبر الإنترنت - Use Sepia تحويلer بدون تسجيل",
+            "seoDescription": "Use Sepia تحويلer عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "sepia-converter, free sepia converter, sepia converter tool",
+            "seoH1": "Sepia تحويلer مجاني عبر الإنترنت: Use Sepia تحويلer"
         },
         "invert-image": {
             "name": "عكس الألوان",
             "description": "عكس ألوان الصورة (تأثير نيجاتيف).",
-            "seoTitle": "عكس الألوان - أداة مجانية",
-            "seoDescription": "إنشاء تأثير نيجاتيف. 100% مجاني.",
-            "seoKeywords": "عكس ألوان, invert colors",
-            "seoH1": "عكس الألوان"
+            "seoTitle": "مجاني Invert Colors عبر الإنترنت - Use Invert Colors بدون تسجيل",
+            "seoDescription": "Use Invert Colors عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "invert-image, free invert colors, invert colors tool",
+            "seoH1": "Invert Colors مجاني عبر الإنترنت: Use Invert Colors"
         },
         "saturate-image": {
             "name": "تشبع الألوان",
             "description": "ضبط تشبع ألوان الصور.",
-            "seoTitle": "ضبط التشبع",
-            "seoDescription": "تغيير كثافة اللون. 100% مجاني.",
-            "seoKeywords": "تشبع ألوان, saturation adjust",
-            "seoH1": "ضبط التشبع"
+            "seoTitle": "مجاني Saturate Image عبر الإنترنت - Use Saturate Image بدون تسجيل",
+            "seoDescription": "Use Saturate Image عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "saturate-image, free saturate image, saturate image tool",
+            "seoH1": "Saturate Image مجاني عبر الإنترنت: Use Saturate Image"
         },
         "hue-rotate-image": {
             "name": "تدوير اللون",
             "description": "تغيير اللون لتأثيرات إبداعية.",
-            "seoTitle": "تدوير اللون - أداة مجانية",
-            "seoDescription": "تحريك الألوان بطريقة إبداعية. 100% مجاني.",
-            "seoKeywords": "تدوير لون, hue rotate",
-            "seoH1": "تدوير اللون"
+            "seoTitle": "مجاني Hue Rotate عبر الإنترنت - Use Hue Rotate بدون تسجيل",
+            "seoDescription": "Use Hue Rotate عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "hue-rotate-image, free hue rotate, hue rotate tool",
+            "seoH1": "Hue Rotate مجاني عبر الإنترنت: Use Hue Rotate"
         },
         "image-opacity": {
             "name": "شفافية الصورة",
             "description": "ضبط شفافية الصور.",
-            "seoTitle": "شفافية الصورة - أداة مجانية",
-            "seoDescription": "جعل الصور شفافة. 100% مجاني.",
-            "seoKeywords": "شفافية صورة, opacity adjust",
-            "seoH1": "ضبط الشفافية"
+            "seoTitle": "مجاني Image Opacity عبر الإنترنت - Use Image Opacity بدون تسجيل",
+            "seoDescription": "Use Image Opacity عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "image-opacity, free image opacity, image opacity tool",
+            "seoH1": "Image Opacity مجاني عبر الإنترنت: Use Image Opacity"
         },
         "round-corners-image": {
             "name": "زوايا مستديرة",
             "description": "إضافة زوايا مستديرة إلى الصور.",
-            "seoTitle": "زوايا مستديرة - أداة مجانية",
-            "seoDescription": "إنشاء زوايا مستديرة. 100% مجاني.",
-            "seoKeywords": "زوايا مستديرة, rounded corners",
-            "seoH1": "زوايا مستديرة"
+            "seoTitle": "مجاني Round Corners عبر الإنترنت - Use Round Corners بدون تسجيل",
+            "seoDescription": "Use Round Corners عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "round-corners-image, free round corners, round corners tool",
+            "seoH1": "Round Corners مجاني عبر الإنترنت: Use Round Corners"
         },
         "image-border": {
             "name": "إطار الصورة",
             "description": "إضافة إطارات ملونة إلى الصور.",
-            "seoTitle": "إضافة إطار",
-            "seoDescription": "إطارات مخصصة. 100% مجاني.",
-            "seoKeywords": "إطار صورة, image border",
-            "seoH1": "إضافة إطار"
+            "seoTitle": "مجاني Image Border عبر الإنترنت - Use Image Border بدون تسجيل",
+            "seoDescription": "Use Image Border عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "image-border, free image border, image border tool",
+            "seoH1": "Image Border مجاني عبر الإنترنت: Use Image Border"
         },
         "image-shadow": {
             "name": "ظل الصورة",
             "description": "إضافة ظلال إلى الصور.",
-            "seoTitle": "ظل الصورة - أداة مجانية",
-            "seoDescription": "ظلال واقعية. 100% مجاني.",
-            "seoKeywords": "ظل صورة, drop shadow",
-            "seoH1": "إضافة ظل"
+            "seoTitle": "مجاني Image Shadow عبر الإنترنت - Use Image Shadow بدون تسجيل",
+            "seoDescription": "Use Image Shadow عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "image-shadow, free image shadow, image shadow tool",
+            "seoH1": "Image Shadow مجاني عبر الإنترنت: Use Image Shadow"
         },
         "pixelate-image": {
             "name": "بكسلة الصورة",
             "description": "بكسلة الصور لإخفاء التفاصيل أو إنشاء فن.",
-            "seoTitle": "بكسلة الصورة - أداة مجانية",
-            "seoDescription": "تطبيق تأثير بكسل. 100% مجاني.",
-            "seoKeywords": "بكسلة صورة, pixelate image",
-            "seoH1": "بكسلة الصورة"
+            "seoTitle": "مجاني Pixelate Image عبر الإنترنت - Use Pixelate Image بدون تسجيل",
+            "seoDescription": "Use Pixelate Image عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "pixelate-image, free pixelate image, pixelate image tool",
+            "seoH1": "Pixelate Image مجاني عبر الإنترنت: Use Pixelate Image"
         },
         "svg-to-png": {
             "name": "SVG إلى PNG",
             "description": "تحويل ملفات SVG المتجهة إلى صور PNG.",
-            "seoTitle": "SVG إلى PNG - محول مجاني",
-            "seoDescription": "تحويل SVG إلى PNG. 100% مجاني.",
-            "seoKeywords": "svg to png, تحويل svg",
-            "seoH1": "SVG إلى PNG"
+            "seoTitle": "مجاني SVG to PNG عبر الإنترنت - Use SVG to PNG بدون تسجيل",
+            "seoDescription": "Use SVG to PNG عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "svg-to-png, free svg to png, svg to png tool",
+            "seoH1": "SVG to PNG مجاني عبر الإنترنت: Use SVG to PNG"
         },
         "png-to-svg": {
             "name": "PNG إلى SVG",
             "description": "تحويل صور PNG إلى متجهات SVG.",
-            "seoTitle": "PNG إلى SVG - محول مجاني",
-            "seoDescription": "تحويل PNG إلى متجه. 100% مجاني.",
-            "seoKeywords": "png to svg, vectorize image",
-            "seoH1": "PNG إلى SVG"
+            "seoTitle": "مجاني PNG to SVG عبر الإنترنت - Use PNG to SVG بدون تسجيل",
+            "seoDescription": "Use PNG to SVG عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "png-to-svg, free png to svg, png to svg tool",
+            "seoH1": "PNG to SVG مجاني عبر الإنترنت: Use PNG to SVG"
         },
         "webp-to-jpg": {
             "name": "WebP إلى JPG",
             "description": "تحويل WebP إلى صيغة JPG القياسية.",
-            "seoTitle": "WebP إلى JPG - محول مجاني",
-            "seoDescription": "تحويل WebP إلى JPG. 100% مجاني.",
-            "seoKeywords": "webp to jpg",
-            "seoH1": "WebP إلى JPG"
+            "seoTitle": "مجاني WebP to JPG عبر الإنترنت - Use WebP to JPG بدون تسجيل",
+            "seoDescription": "Use WebP to JPG عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "webp-to-jpg, free webp to jpg, webp to jpg tool",
+            "seoH1": "WebP to JPG مجاني عبر الإنترنت: Use WebP to JPG"
         },
         "webp-to-png": {
             "name": "WebP إلى PNG",
             "description": "تحويل WebP إلى PNG شفاف.",
-            "seoTitle": "WebP إلى PNG - محول مجاني",
-            "seoDescription": "تحويل WebP إلى PNG مع الشفافية.",
-            "seoKeywords": "webp to png",
-            "seoH1": "WebP إلى PNG"
+            "seoTitle": "مجاني WebP to PNG عبر الإنترنت - Use WebP to PNG بدون تسجيل",
+            "seoDescription": "Use WebP to PNG عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "webp-to-png, free webp to png, webp to png tool",
+            "seoH1": "WebP to PNG مجاني عبر الإنترنت: Use WebP to PNG"
         },
         "jpg-to-webp": {
             "name": "JPG إلى WebP",
             "description": "تحويل JPG إلى صيغة WebP الحديثة.",
-            "seoTitle": "JPG إلى WebP - محول مجاني",
-            "seoDescription": "تقليل حجم الملف باستخدام WebP.",
-            "seoKeywords": "jpg to webp",
-            "seoH1": "JPG إلى WebP"
+            "seoTitle": "مجاني JPG to WebP عبر الإنترنت - Use JPG to WebP بدون تسجيل",
+            "seoDescription": "Use JPG to WebP عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "jpg-to-webp, free jpg to webp, jpg to webp tool",
+            "seoH1": "JPG to WebP مجاني عبر الإنترنت: Use JPG to WebP"
         },
         "png-to-webp": {
             "name": "PNG إلى WebP",
             "description": "تحويل PNG إلى صيغة WebP.",
-            "seoTitle": "PNG إلى WebP - محول مجاني",
-            "seoDescription": "تحويل PNG إلى WebP مع الشفافية.",
-            "seoKeywords": "png to webp",
-            "seoH1": "PNG إلى WebP"
+            "seoTitle": "مجاني PNG to WebP عبر الإنترنت - Use PNG to WebP بدون تسجيل",
+            "seoDescription": "Use PNG to WebP عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "png-to-webp, free png to webp, png to webp tool",
+            "seoH1": "PNG to WebP مجاني عبر الإنترنت: Use PNG to WebP"
         },
         "base64-to-image": {
             "name": "Base64 إلى صورة",
             "description": "تحويل نصوص Base64 إلى ملفات صور.",
-            "seoTitle": "Base64 إلى صورة - فك تشفير مجاني",
-            "seoDescription": "فك Base64 إلى صورة. 100% مجاني.",
-            "seoKeywords": "base64 to image",
-            "seoH1": "Base64 إلى صورة"
+            "seoTitle": "مجاني Base64 to Image عبر الإنترنت - Use Base64 to Image بدون تسجيل",
+            "seoDescription": "Use Base64 to Image عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "base64-to-image, free base64 to image, base64 to image tool",
+            "seoH1": "Base64 to Image مجاني عبر الإنترنت: Use Base64 to Image"
         },
         "pdf-to-word": {
             "name": "PDF إلى Word",
             "description": "تحويل مستندات PDF إلى ملفات Word قابلة للتحرير.",
-            "seoTitle": "PDF إلى Word - محول مجاني",
-            "seoDescription": "تحويل PDF إلى DOCX مع الحفاظ على التنسيق.",
-            "seoKeywords": "pdf to word, محول pdf",
-            "seoH1": "PDF إلى Word"
+            "seoTitle": "PDF to Word مجاني - تحويل عبر الإنترنت بدون تسجيل",
+            "seoDescription": "تحويل PDF to Word DOCX عبر الإنترنت مجاني. 100% editable documents, high accuracy. بدون تسجيل دخول, سريع, آمن. مثالي لـ editing PDFs instantly.",
+            "seoKeywords": "pdf to word converter free, convert pdf to word online, pdf to word editable free, online pdf to word converter, pdf to docx free",
+            "seoH1": "PDF to Word مجاني: تحويل PDF to Word DOCX"
         },
         "word-counter": {
             "name": "عدّاد الكلمات",
             "description": "عد الكلمات والأحرف والجمل والفقرات.",
-            "seoTitle": "عدّاد الكلمات - أداة مجانية",
-            "seoDescription": "عد دقيق للكلمات والأحرف.",
-            "seoKeywords": "عد كلمات, word counter",
-            "seoH1": "عدّاد الكلمات"
+            "seoTitle": "Word Counter مجاني عبر الإنترنت - Count words, characters, sentences",
+            "seoDescription": "Count words, characters, sentences عبر الإنترنت مجاني. Real-time analysis with reading time. بدون تسجيل دخول, سريع, آمن. مثالي لـ writers and students.",
+            "seoKeywords": "word counter free, character counter online, word count tool, essay word count, reading time calculator, real time word count",
+            "seoH1": "Word Counter مجاني: Count words, characters, sentences"
         },
         "character-counter": {
             "name": "عدّاد الأحرف",
             "description": "عد الأحرف مع أو بدون مسافات.",
-            "seoTitle": "عدّاد الأحرف",
-            "seoDescription": "مثالي لتويتر والرسائل القصيرة.",
-            "seoKeywords": "عد أحرف",
-            "seoH1": "عدّاد الأحرف"
+            "seoTitle": "Character Counter مجاني عبر الإنترنت - Count characters with/without spaces",
+            "seoDescription": "Count characters with/without spaces عبر الإنترنت مجاني. Real-time counting. بدون تسجيل دخول, سريع, آمن. مثالي لـ Twitter, SMS, meta descriptions.",
+            "seoKeywords": "character counter free, count characters online, character count with spaces, twitter character counter, sms character counter",
+            "seoH1": "Character Counter مجاني: Count characters with/without spaces"
         },
         "text-case-converter": {
             "name": "محول حالة النص",
             "description": "تحويل النص إلى أحرف كبيرة أو صغيرة أو عنوان إلخ.",
-            "seoTitle": "محول حالة النص",
-            "seoDescription": "خيارات تحويل نص متعددة.",
-            "seoKeywords": "محول حالة نص, uppercase lowercase",
-            "seoH1": "محول حالة النص"
+            "seoTitle": "Text Case تحويلer مجاني عبر الإنترنت - تحويل text case",
+            "seoDescription": "تحويل text case عبر الإنترنت مجاني. Uppercase, lowercase, title case, sentence case. بدون تسجيل دخول, سريع, آمن. مثالي لـ تنسيقting text instantly.",
+            "seoKeywords": "text case converter free, uppercase to lowercase, title case converter, sentence case converter, text transformer online",
+            "seoH1": "Text Case تحويلer مجاني: تحويل text case"
         },
         "remove-line-breaks": {
             "name": "إزالة فواصل الأسطر",
             "description": "إزالة جميع فواصل الأسطر من النص.",
-            "seoTitle": "إزالة فواصل الأسطر",
-            "seoDescription": "تنظيف النص.",
-            "seoKeywords": "إزالة فواصل أسطر",
-            "seoH1": "إزالة فواصل الأسطر"
+            "seoTitle": "Remove Line Breaks مجاني عبر الإنترنت - Use Remove Line Breaks",
+            "seoDescription": "Use Remove Line Breaks عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "remove-line-breaks, free remove line breaks, remove line breaks tool",
+            "seoH1": "Remove Line Breaks مجاني: Use Remove Line Breaks"
         },
         "italic-text": {
             "name": "مولد نص مائل",
             "description": "إنشاء نص مائل باستخدام يونيكود.",
-            "seoTitle": "مولد نص مائل",
-            "seoDescription": "نص مائل للتواصل الاجتماعي.",
-            "seoKeywords": "نص مائل, fancy text",
-            "seoH1": "مولد نص مائل"
+            "seoTitle": "Italic Text Generator مجاني عبر الإنترنت - Use Italic Text Generator",
+            "seoDescription": "Use Italic Text Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "italic-text, free italic text generator, italic text generator tool",
+            "seoH1": "Italic Text Generator مجاني: Use Italic Text Generator"
         },
         "strikethrough-text": {
             "name": "نص مشطوب",
             "description": "إنشاء نص مشطوب.",
-            "seoTitle": "مولد نص مشطوب",
-            "seoDescription": "شطب النص.",
-            "seoKeywords": "نص مشطوب",
-            "seoH1": "نص مشطوب"
+            "seoTitle": "Strikethrough Text مجاني عبر الإنترنت - Use Strikethrough Text",
+            "seoDescription": "Use Strikethrough Text عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "strikethrough-text, free strikethrough text, strikethrough text tool",
+            "seoH1": "Strikethrough Text مجاني: Use Strikethrough Text"
         },
         "underline-text": {
             "name": "نص مسطر",
             "description": "إنشاء نص مسطر باستخدام يونيكود.",
-            "seoTitle": "مولد نص مسطر",
-            "seoDescription": "نص مسطر.",
-            "seoKeywords": "نص مسطر",
-            "seoH1": "نص مسطر"
+            "seoTitle": "Underline Text مجاني عبر الإنترنت - Use Underline Text",
+            "seoDescription": "Use Underline Text عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "underline-text, free underline text, underline text tool",
+            "seoH1": "Underline Text مجاني: Use Underline Text"
         },
         "small-text": {
             "name": "مولد نص صغير",
             "description": "إنشاء نص صغير (أسفل/أعلى).",
-            "seoTitle": "مولد نص صغير",
-            "seoDescription": "حروف صغيرة.",
-            "seoKeywords": "نص صغير, tiny text",
-            "seoH1": "مولد نص صغير"
+            "seoTitle": "Small Text Generator مجاني عبر الإنترنت - Use Small Text Generator",
+            "seoDescription": "Use Small Text Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "small-text, free small text generator, small text generator tool",
+            "seoH1": "Small Text Generator مجاني: Use Small Text Generator"
         },
         "upside-down-text": {
             "name": "نص مقلوب",
             "description": "قلب النص رأسًا على عقب.",
-            "seoTitle": "مولد نص مقلوب",
-            "seoDescription": "نص مقلوب للمتعة.",
-            "seoKeywords": "نص مقلوب, upside down text",
-            "seoH1": "مولد نص مقلوب"
+            "seoTitle": "Upside Down Text مجاني عبر الإنترنت - Use Upside Down Text",
+            "seoDescription": "Use Upside Down Text عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "upside-down-text, free upside down text, upside down text tool",
+            "seoH1": "Upside Down Text مجاني: Use Upside Down Text"
         },
         "mirror-text": {
             "name": "نص مرآة",
             "description": "إنشاء نص مرآة.",
-            "seoTitle": "مولد نص مرآة",
-            "seoDescription": "نص مرآة.",
-            "seoKeywords": "نص مرآة, mirror text",
-            "seoH1": "مولد نص مرآة"
+            "seoTitle": "Mirror Text Generator مجاني عبر الإنترنت - Use Mirror Text Generator",
+            "seoDescription": "Use Mirror Text Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "mirror-text, free mirror text generator, mirror text generator tool",
+            "seoH1": "Mirror Text Generator مجاني: Use Mirror Text Generator"
         },
         "duplicate-line-remover": {
             "name": "إزالة الأسطر المكررة",
             "description": "إزالة الأسطر المكررة من النص أو القائمة.",
-            "seoTitle": "إزالة المكرر",
-            "seoDescription": "تنظيف القوائم.",
-            "seoKeywords": "إزالة مكرر",
-            "seoH1": "إزالة الأسطر المكررة"
+            "seoTitle": "Duplicate Line Remover مجاني عبر الإنترنت - Use Duplicate Line Remover",
+            "seoDescription": "Use Duplicate Line Remover عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "duplicate-line-remover, free duplicate line remover, duplicate line remover tool",
+            "seoH1": "Duplicate Line Remover مجاني: Use Duplicate Line Remover"
         },
         "sort-alphabetically": {
             "name": "ترتيب أبجدي",
             "description": "ترتيب الأسطر أبجديًا.",
-            "seoTitle": "ترتيب أبجدي",
-            "seoDescription": "ترتيب القوائم من أ إلى ي أو العكس.",
-            "seoKeywords": "ترتيب أبجدي",
-            "seoH1": "ترتيب أبجدي"
+            "seoTitle": "Sort Alphabetically مجاني عبر الإنترنت - Use Sort Alphabetically",
+            "seoDescription": "Use Sort Alphabetically عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "sort-alphabetically, free sort alphabetically, sort alphabetically tool",
+            "seoH1": "Sort Alphabetically مجاني: Use Sort Alphabetically"
         },
         "text-replace": {
             "name": "البحث والاستبدال",
@@ -417,562 +417,562 @@
         "whitespace-remover": {
             "name": "إزالة المسافات الزائدة",
             "description": "إزالة المسافات والتبويبات وفواصل الأسطر الزائدة.",
-            "seoTitle": "إزالة المسافات الزائدة",
-            "seoDescription": "تنظيف النص الفوضوي.",
-            "seoKeywords": "إزالة مسافات",
-            "seoH1": "إزالة المسافات الزائدة"
+            "seoTitle": "Whitespace Remover مجاني عبر الإنترنت - Use Whitespace Remover",
+            "seoDescription": "Use Whitespace Remover عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "whitespace-remover, free whitespace remover, whitespace remover tool",
+            "seoH1": "Whitespace Remover مجاني: Use Whitespace Remover"
         },
         "word-frequency": {
             "name": "تكرار الكلمات",
             "description": "تحليل الكلمات الأكثر استخدامًا في النص.",
-            "seoTitle": "تحليل تكرار الكلمات",
-            "seoDescription": "عرض استخدام الكلمات.",
-            "seoKeywords": "تكرار كلمات, keyword density",
-            "seoH1": "تكرار الكلمات"
+            "seoTitle": "Word Frequency مجاني عبر الإنترنت - Use Word Frequency",
+            "seoDescription": "Use Word Frequency عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "word-frequency, free word frequency, word frequency tool",
+            "seoH1": "Word Frequency مجاني: Use Word Frequency"
         },
         "find-replace": {
             "name": "بحث واستبدال متقدم",
             "description": "بحث واستبدال بدعم التعبيرات المنتظمة.",
-            "seoTitle": "بحث واستبدال متقدم",
-            "seoDescription": "بحث قوي بالتعبيرات المنتظمة.",
-            "seoKeywords": "regex بحث استبدال",
-            "seoH1": "بحث واستبدال متقدم"
+            "seoTitle": "Find & Replace مجاني عبر الإنترنت - Use Find & Replace",
+            "seoDescription": "Use Find & Replace عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "find-replace, free find & replace, find & replace tool",
+            "seoH1": "Find & Replace مجاني: Use Find & Replace"
         },
         "json-formatter": {
             "name": "مُنسق JSON",
             "description": "تنسيق وتجميل وفحص بيانات JSON.",
-            "seoTitle": "مُنسق ومدقق JSON",
-            "seoDescription": "عرض JSON بشكل جميل.",
-            "seoKeywords": "منسق json, json beautifier",
-            "seoH1": "مُنسق JSON"
+            "seoTitle": "JSON تنسيقter مجاني - تنسيق, beautify, validate JSON Code",
+            "seoDescription": "تنسيق, beautify, validate JSON code عبر الإنترنت مجاني. Minify JSON instantly. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "json formatter free, beautify json online, format json code, validate json, json beautifier tool",
+            "seoH1": "JSON تنسيقter مجاني: تنسيق, beautify, validate JSON"
         },
         "url-encoder-decoder": {
             "name": "مشفر/مفكك URL",
             "description": "تشفير أو فك تشفير الروابط.",
-            "seoTitle": "مشفر/مفكك URL",
-            "seoDescription": "تشفير بالنسبة المئوية للروابط.",
-            "seoKeywords": "url encode decode",
-            "seoH1": "مشفر/مفكك URL"
+            "seoTitle": "URL Encoder / Decoder مجاني - Use URL Encoder / Decoder Code",
+            "seoDescription": "Use URL Encoder / Decoder code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "url-encoder-decoder, free url encoder / decoder, url encoder / decoder tool",
+            "seoH1": "URL Encoder / Decoder مجاني: Use URL Encoder / Decoder"
         },
         "html-formatter": {
             "name": "مُنسق HTML",
             "description": "تنسيق وتجميل كود HTML.",
-            "seoTitle": "مُنسق HTML",
-            "seoDescription": "عرض HTML بشكل جميل.",
-            "seoKeywords": "منسق html",
-            "seoH1": "مُنسق HTML"
+            "seoTitle": "HTML تنسيقter مجاني - تنسيق and beautify HTML code Code",
+            "seoDescription": "تنسيق and beautify HTML code code عبر الإنترنت مجاني. Fix indentation instantly. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "html formatter free, beautify html online, format html code, clean html code, html beautifier tool",
+            "seoH1": "HTML تنسيقter مجاني: تنسيق and beautify HTML code"
         },
         "css-formatter": {
             "name": "مُنسق CSS",
             "description": "تنسيق وتجميل كود CSS.",
-            "seoTitle": "مُنسق CSS",
-            "seoDescription": "ترتيب CSS.",
-            "seoKeywords": "منسق css",
-            "seoH1": "مُنسق CSS"
+            "seoTitle": "CSS تنسيقter مجاني - تنسيق and beautify CSS code Code",
+            "seoDescription": "تنسيق and beautify CSS code code عبر الإنترنت مجاني. Minify or expand CSS. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "css formatter free, beautify css online, format css code, clean css code, css beautifier tool",
+            "seoH1": "CSS تنسيقter مجاني: تنسيق and beautify CSS code"
         },
         "javascript-formatter": {
             "name": "مُنسق JavaScript",
             "description": "تنسيق وتجميل كود JavaScript.",
-            "seoTitle": "مُنسق JavaScript",
-            "seoDescription": "عرض كود JS بشكل جميل.",
-            "seoKeywords": "منسق js",
-            "seoH1": "مُنسق JavaScript"
+            "seoTitle": "JS تنسيقter مجاني - تنسيق and beautify JavaScript code Code",
+            "seoDescription": "تنسيق and beautify JavaScript code code عبر الإنترنت مجاني. Fix indentation instantly. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "javascript formatter free, beautify js online, format javascript code, clean js code, js beautifier tool",
+            "seoH1": "JS تنسيقter مجاني: تنسيق and beautify JavaScript code"
         },
         "xml-formatter": {
             "name": "مُنسق XML",
             "description": "تنسيق وتجميل كود XML.",
-            "seoTitle": "مُنسق XML",
-            "seoDescription": "ترتيب XML.",
-            "seoKeywords": "منسق xml",
-            "seoH1": "مُنسق XML"
+            "seoTitle": "XML تنسيقter مجاني - Use XML تنسيقter Code",
+            "seoDescription": "Use XML تنسيقter code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "xml-formatter, free xml formatter, xml formatter tool",
+            "seoH1": "XML تنسيقter مجاني: Use XML تنسيقter"
         },
         "sql-formatter": {
             "name": "مُنسق SQL",
             "description": "تنسيق وتجميل استعلامات SQL.",
-            "seoTitle": "مُنسق SQL",
-            "seoDescription": "جعل استعلامات SQL قابلة للقراءة.",
-            "seoKeywords": "منسق sql",
-            "seoH1": "مُنسق SQL"
+            "seoTitle": "SQL تنسيقter مجاني - Use SQL تنسيقter Code",
+            "seoDescription": "Use SQL تنسيقter code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "sql-formatter, free sql formatter, sql formatter tool",
+            "seoH1": "SQL تنسيقter مجاني: Use SQL تنسيقter"
         },
         "markdown-to-html": {
             "name": "Markdown إلى HTML",
             "description": "تحويل Markdown إلى كود HTML.",
-            "seoTitle": "Markdown إلى HTML - محول",
-            "seoDescription": "تحويل MD إلى HTML.",
-            "seoKeywords": "markdown to html",
-            "seoH1": "Markdown إلى HTML"
+            "seoTitle": "Markdown to HTML مجاني - Use Markdown to HTML Code",
+            "seoDescription": "Use Markdown to HTML code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "markdown-to-html, free markdown to html, markdown to html tool",
+            "seoH1": "Markdown to HTML مجاني: Use Markdown to HTML"
         },
         "html-to-markdown": {
             "name": "HTML إلى Markdown",
             "description": "تحويل HTML إلى صيغة Markdown.",
-            "seoTitle": "HTML إلى Markdown - محول",
-            "seoDescription": "تحويل HTML إلى Markdown نظيف.",
-            "seoKeywords": "html to markdown",
-            "seoH1": "HTML إلى Markdown"
+            "seoTitle": "HTML to Markdown مجاني - Use HTML to Markdown Code",
+            "seoDescription": "Use HTML to Markdown code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "html-to-markdown, free html to markdown, html to markdown tool",
+            "seoH1": "HTML to Markdown مجاني: Use HTML to Markdown"
         },
         "csv-to-json": {
             "name": "CSV إلى JSON",
             "description": "تحويل بيانات CSV إلى صيغة JSON.",
-            "seoTitle": "CSV إلى JSON - محول",
-            "seoDescription": "تحويل CSV إلى JSON.",
-            "seoKeywords": "csv to json",
-            "seoH1": "CSV إلى JSON"
+            "seoTitle": "CSV to JSON مجاني - Use CSV to JSON Code",
+            "seoDescription": "Use CSV to JSON code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "csv-to-json, free csv to json, csv to json tool",
+            "seoH1": "CSV to JSON مجاني: Use CSV to JSON"
         },
         "json-to-csv": {
             "name": "JSON إلى CSV",
             "description": "تحويل بيانات JSON إلى صيغة CSV.",
-            "seoTitle": "JSON إلى CSV - محول",
-            "seoDescription": "تحويل JSON إلى CSV.",
-            "seoKeywords": "json to csv",
-            "seoH1": "JSON إلى CSV"
+            "seoTitle": "JSON to CSV مجاني - Use JSON to CSV Code",
+            "seoDescription": "Use JSON to CSV code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "json-to-csv, free json to csv, json to csv tool",
+            "seoH1": "JSON to CSV مجاني: Use JSON to CSV"
         },
         "code-minifier": {
             "name": "مُصغّر الكود",
             "description": "تصغير كود HTML و CSS و JS.",
-            "seoTitle": "مُصغّر الكود",
-            "seoDescription": "تقليل حجم الملفات.",
-            "seoKeywords": "مصغر كود, minify code",
-            "seoH1": "مُصغّر الكود"
+            "seoTitle": "Code Minifier مجاني - Use Code Minifier Code",
+            "seoDescription": "Use Code Minifier code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "code-minifier, free code minifier, code minifier tool",
+            "seoH1": "Code Minifier مجاني: Use Code Minifier"
         },
         "diff-checker": {
             "name": "مقارن الفروق",
             "description": "مقارنة نصين وإبراز الفروق.",
-            "seoTitle": "مقارن الفروق",
-            "seoDescription": "البحث عن الفروق بين النصوص.",
-            "seoKeywords": "مقارن فروق, diff checker",
-            "seoH1": "مقارن الفروق"
+            "seoTitle": "Diff Checker مجاني - Use Diff Checker Code",
+            "seoDescription": "Use Diff Checker code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "diff-checker, free diff checker, diff checker tool",
+            "seoH1": "Diff Checker مجاني: Use Diff Checker"
         },
         "unit-converter": {
             "name": "محول الوحدات",
             "description": "التحويل بين وحدات قياس مختلفة.",
-            "seoTitle": "محول الوحدات",
-            "seoDescription": "الطول والوزن والحرارة إلخ.",
-            "seoKeywords": "محول وحدات",
-            "seoH1": "محول الوحدات"
+            "seoTitle": "Unit تحويلer مجاني - تحويل عبر الإنترنت بدون تسجيل",
+            "seoDescription": "تحويل length, weight, temperature, volume عبر الإنترنت مجاني. All units supported. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily conversions.",
+            "seoKeywords": "unit converter free, length converter, weight converter, temperature converter, measurement converter online, metric to imperial",
+            "seoH1": "Unit تحويلer مجاني: تحويل length, weight, temperature, volume"
         },
         "color-converter": {
             "name": "محول الألوان",
             "description": "التحويل بين HEX و RGB و HSL.",
-            "seoTitle": "محول الألوان",
-            "seoDescription": "تحويل رموز الألوان.",
-            "seoKeywords": "محول ألوان, hex rgb",
-            "seoH1": "محول الألوان"
+            "seoTitle": "Color تحويلer مجاني - تحويل عبر الإنترنت بدون تسجيل",
+            "seoDescription": "تحويل colors between HEX, RGB, HSL عبر الإنترنت مجاني. Color picker included. بدون تسجيل دخول, سريع, آمن. مثالي لـ designers.",
+            "seoKeywords": "color converter free, hex to rgb converter, rgb to hex converter, hex to hsl converter, color picker online, color code converter",
+            "seoH1": "Color تحويلer مجاني: تحويل colors between HEX, RGB, HSL"
         },
         "binary-to-text": {
             "name": "ثنائي إلى نص",
             "description": "تحويل الرمز الثنائي إلى نص.",
-            "seoTitle": "ثنائي إلى نص - محول",
-            "seoDescription": "فك الثنائي إلى ASCII.",
-            "seoKeywords": "binary to text",
-            "seoH1": "ثنائي إلى نص"
+            "seoTitle": "Binary to Text مجاني - تحويل عبر الإنترنت بدون تسجيل",
+            "seoDescription": "Use Binary to Text عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "binary-to-text, free binary to text, binary to text tool",
+            "seoH1": "Binary to Text مجاني: Use Binary to Text"
         },
         "hex-to-decimal": {
             "name": "سداسي عشري إلى عشري",
             "description": "تحويل الأعداد السداسية العشرية إلى عشرية.",
-            "seoTitle": "سداسي إلى عشري - محول",
-            "seoDescription": "تحويل أعداد hex.",
-            "seoKeywords": "hex to decimal",
-            "seoH1": "سداسي إلى عشري"
+            "seoTitle": "Hex to Decimal مجاني - تحويل عبر الإنترنت بدون تسجيل",
+            "seoDescription": "Use Hex to Decimal عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "hex-to-decimal, free hex to decimal, hex to decimal tool",
+            "seoH1": "Hex to Decimal مجاني: Use Hex to Decimal"
         },
         "roman-numeral": {
             "name": "محول الأرقام الرومانية",
             "description": "التحويل بين الأرقام العربية والرومانية.",
-            "seoTitle": "محول الأرقام الرومانية",
-            "seoDescription": "تحويل إلى أرقام رومانية.",
-            "seoKeywords": "محول أرقام رومانية",
-            "seoH1": "محول الأرقام الرومانية"
+            "seoTitle": "Roman Numeral مجاني - تحويل عبر الإنترنت بدون تسجيل",
+            "seoDescription": "Use Roman Numeral عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "roman-numeral, free roman numeral, roman numeral tool",
+            "seoH1": "Roman Numeral مجاني: Use Roman Numeral"
         },
         "random-number": {
             "name": "مولد أرقام عشوائية",
             "description": "إنشاء أرقام عشوائية ضمن نطاق.",
-            "seoTitle": "مولد أرقام عشوائية",
-            "seoDescription": "أرقام عشوائية حقيقية.",
-            "seoKeywords": "مولد أرقام عشوائية",
-            "seoH1": "مولد أرقام عشوائية"
+            "seoTitle": "Random Number مجاني - إنشاء random number",
+            "seoDescription": "إنشاء random number عبر الإنترنت مجاني. Custom range support. بدون تسجيل دخول, سريع, آمن. مثالي لـ lotteries and games.",
+            "seoKeywords": "random number generator free, generate random numbers online, random number picker, dice roller, lottery number generator",
+            "seoH1": "Random Number مجاني: إنشاء random numbers"
         },
         "random-string": {
             "name": "مولد نصوص عشوائية",
             "description": "إنشاء نصوص عشوائية وكلمات مرور قوية.",
-            "seoTitle": "مولد نصوص وكلمات مرور عشوائية",
-            "seoDescription": "إنشاء كلمات مرور قوية.",
-            "seoKeywords": "مولد نصوص عشوائية, مولد كلمة مرور",
-            "seoH1": "مولد نصوص عشوائية"
+            "seoTitle": "Random String مجاني - إنشاء random string",
+            "seoDescription": "إنشاء random string عبر الإنترنت مجاني. Customizable length and characters. بدون تسجيل دخول, سريع, آمن. مثالي لـ passwords.",
+            "seoKeywords": "random string generator free, generate random strings online, secure password generator, random text generator, alphanumeric generator",
+            "seoH1": "Random String مجاني: إنشاء random strings"
         },
         "random-color": {
             "name": "مولد ألوان عشوائية",
             "description": "إنشاء ألوان عشوائية برموز HEX.",
-            "seoTitle": "مولد ألوان عشوائية",
-            "seoDescription": "الحصول على ألوان عشوائية.",
-            "seoKeywords": "مولد ألوان عشوائية",
-            "seoH1": "مولد ألوان عشوائية"
+            "seoTitle": "Random Color مجاني - إنشاء random color",
+            "seoDescription": "إنشاء random color عبر الإنترنت مجاني. Get HEX, RGB, HSL codes. بدون تسجيل دخول, سريع, آمن. مثالي لـ design inspiration.",
+            "seoKeywords": "random color generator free, generate random colors online, color palette generator, random hex color, design inspiration, color picker",
+            "seoH1": "Random Color مجاني: إنشاء random colors"
         },
         "random-date": {
             "name": "مولد تواريخ عشوائية",
             "description": "إنشاء تواريخ عشوائية.",
-            "seoTitle": "مولد تواريخ عشوائية",
-            "seoDescription": "تواريخ عشوائية للاختبار.",
-            "seoKeywords": "مولد تاريخ عشوائي",
-            "seoH1": "مولد تواريخ عشوائية"
+            "seoTitle": "Random Date مجاني - إنشاء random date",
+            "seoDescription": "إنشاء random date عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "random-date, free random date, random date tool",
+            "seoH1": "Random Date مجاني: Use Random Date"
         },
         "random-ip": {
             "name": "مولد IP عشوائي",
             "description": "إنشاء عناوين IP عشوائية.",
-            "seoTitle": "مولد IP عشوائي",
-            "seoDescription": "عناوين IP صالحة عشوائية.",
-            "seoKeywords": "مولد ip عشوائي",
-            "seoH1": "مولد IP عشوائي"
+            "seoTitle": "Random IP مجاني - إنشاء random ip",
+            "seoDescription": "إنشاء random ip عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "random-ip, free random ip, random ip tool",
+            "seoH1": "Random IP مجاني: Use Random IP"
         },
         "password-generator": {
             "name": "مولد كلمات المرور",
             "description": "إنشاء كلمات مرور قوية وآمنة.",
-            "seoTitle": "مولد كلمات مرور قوية",
-            "seoDescription": "كلمات مرور آمنة مع خيارات.",
-            "seoKeywords": "مولد كلمة مرور, password generator",
-            "seoH1": "مولد كلمات المرور"
+            "seoTitle": "Password Generator مجاني - إنشاء strong آمن passwords",
+            "seoDescription": "إنشاء strong آمن passwords عبر الإنترنت مجاني. Customizable length and characters. بدون تسجيل دخول, 100% private. مثالي لـ آمن accounts.",
+            "seoKeywords": "password generator free, strong password generator, random password maker, secure password tool, hack proof passwords, offline password generator",
+            "seoH1": "Password Generator مجاني: إنشاء strong آمن passwords"
         },
         "bcrypt-generator": {
             "name": "مولد Bcrypt",
             "description": "إنشاء تجزئة Bcrypt لكلمات المرور.",
-            "seoTitle": "مولد تجزئة Bcrypt",
-            "seoDescription": "تجزئة Bcrypt آمنة.",
-            "seoKeywords": "مولد bcrypt",
-            "seoH1": "مولد Bcrypt"
+            "seoTitle": "Bcrypt Generator مجاني - Use Bcrypt Generator",
+            "seoDescription": "Use Bcrypt Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, 100% private. مثالي لـ daily tasks.",
+            "seoKeywords": "bcrypt-generator, free bcrypt generator, bcrypt generator tool",
+            "seoH1": "Bcrypt Generator مجاني: Use Bcrypt Generator"
         },
         "base64-encoder": {
             "name": "مشفر/مفكك Base64",
             "description": "تشفير وفك تشفير نصوص Base64.",
-            "seoTitle": "مشفر/مفكك Base64",
-            "seoDescription": "معالجة Base64.",
-            "seoKeywords": "base64 encode decode",
-            "seoH1": "مشفر/مفكك Base64"
+            "seoTitle": "Base64 Encoder مجاني - إنشاء base64 encoder",
+            "seoDescription": "إنشاء base64 encoder عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "base64-encoder, free base64 encoder, base64 encoder tool",
+            "seoH1": "Base64 Encoder مجاني: Use Base64 Encoder"
         },
         "md5-hash": {
             "name": "مولد تجزئة MD5",
             "description": "إنشاء تجزئة MD5.",
-            "seoTitle": "مولد MD5",
-            "seoDescription": "إنشاء تجزئة MD5.",
-            "seoKeywords": "مولد md5",
-            "seoH1": "مولد MD5"
+            "seoTitle": "MD5 Generator مجاني - إنشاء md5 generator",
+            "seoDescription": "إنشاء md5 generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "md5-hash, free md5 generator, md5 generator tool",
+            "seoH1": "MD5 Generator مجاني: Use MD5 Generator"
         },
         "sha256-hash": {
             "name": "مولد تجزئة SHA-256",
             "description": "إنشاء تجزئة SHA-256.",
-            "seoTitle": "مولد SHA-256",
-            "seoDescription": "تجزئة تشفير آمنة.",
-            "seoKeywords": "مولد sha256",
-            "seoH1": "مولد SHA-256"
+            "seoTitle": "SHA-256 مجاني - إنشاء sha-256",
+            "seoDescription": "إنشاء sha-256 عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "sha256-hash, free sha-256, sha-256 tool",
+            "seoH1": "SHA-256 مجاني: Use SHA-256"
         },
         "sha512-hash": {
             "name": "مولد تجزئة SHA-512",
             "description": "إنشاء تجزئة SHA-512.",
-            "seoTitle": "مولد SHA-512",
-            "seoDescription": "أآمن تجزئة SHA.",
-            "seoKeywords": "مولد sha512",
-            "seoH1": "مولد SHA-512"
+            "seoTitle": "SHA-512 مجاني - إنشاء sha-512",
+            "seoDescription": "إنشاء sha-512 عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "sha512-hash, free sha-512, sha-512 tool",
+            "seoH1": "SHA-512 مجاني: Use SHA-512"
         },
         "uuid-generator": {
             "name": "مولد UUID",
             "description": "إنشاء معرفات UUID v4.",
-            "seoTitle": "مولد UUID",
-            "seoDescription": "إنشاء معرفات فريدة.",
-            "seoKeywords": "مولد uuid",
-            "seoH1": "مولد UUID"
+            "seoTitle": "UUID Generator مجاني - إنشاء uuid generator",
+            "seoDescription": "إنشاء uuid generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "uuid-generator, free uuid generator, uuid generator tool",
+            "seoH1": "UUID Generator مجاني: Use UUID Generator"
         },
         "qr-code-generator": {
             "name": "مولد رمز QR",
             "description": "إنشاء رموز QR للروابط والنصوص إلخ.",
-            "seoTitle": "مولد رمز QR",
-            "seoDescription": "رموز QR مخصصة.",
-            "seoKeywords": "مولد qr code",
-            "seoH1": "مولد رمز QR"
+            "seoTitle": "QR Code مجاني - إنشاء qr code",
+            "seoDescription": "إنشاء qr code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "qr-code-generator, free qr code, qr code tool",
+            "seoH1": "QR Code مجاني: Use QR Code"
         },
         "lorem-ipsum": {
             "name": "مولد Lorem Ipsum",
             "description": "إنشاء نص حشو للتصاميم.",
-            "seoTitle": "مولد Lorem Ipsum",
-            "seoDescription": "نص وهمي متعدد اللغات.",
-            "seoKeywords": "lorem ipsum",
-            "seoH1": "مولد Lorem Ipsum"
+            "seoTitle": "Lorem Ipsum مجاني - إنشاء lorem ipsum",
+            "seoDescription": "إنشاء lorem ipsum عبر الإنترنت مجاني. Custom paragraphs. بدون تسجيل دخول, سريع, آمن. مثالي لـ designers.",
+            "seoKeywords": "lorem ipsum generator free, placeholder text generator, dummy text generator, lorem ipsum text, filler text generator",
+            "seoH1": "Lorem Ipsum مجاني: إنشاء Lorem Ipsum placeholder text"
         },
         "youtube-thumbnail-downloader": {
             "name": "تنزيل صور مصغرة يوتيوب",
             "description": "تنزيل صور مصغرة عالية الجودة من فيديوهات يوتيوب.",
-            "seoTitle": "تنزيل صور مصغرة يوتيوب",
-            "seoDescription": "الحصول على صور مصغرة HD من يوتيوب.",
-            "seoKeywords": "تنزيل صورة مصغرة يوتيوب",
-            "seoH1": "تنزيل صور مصغرة يوتيوب"
+            "seoTitle": "YouTube Thumbnail Downloader مجاني - Use YouTube Thumbnail Downloader",
+            "seoDescription": "Use YouTube Thumbnail Downloader عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ content creators.",
+            "seoKeywords": "youtube-thumbnail-downloader, free youtube thumbnail downloader, youtube thumbnail downloader tool",
+            "seoH1": "YouTube Thumbnail Downloader مجاني: Use YouTube Thumbnail Downloader"
         },
         "youtube-tag-generator": {
             "name": "مولد وسمات يوتيوب",
             "description": "إنشاء وسمات محسنة لتحسين الترتيب.",
-            "seoTitle": "مولد وسمات يوتيوب",
-            "seoDescription": "وسمات ذات صلة لسيو أفضل.",
-            "seoKeywords": "مولد وسمات يوتيوب",
-            "seoH1": "مولد وسمات يوتيوب"
+            "seoTitle": "YouTube Tag Generator مجاني - إنشاء YouTube SEO tags",
+            "seoDescription": "إنشاء YouTube SEO tags عبر الإنترنت مجاني. تحسين video rankings. بدون تسجيل دخول, سريع, آمن. مثالي لـ content creators.",
+            "seoKeywords": "youtube tag generator free, generate youtube tags online, youtube seo tool, viral video tags, generate tags for youtube",
+            "seoH1": "YouTube Tag Generator مجاني: إنشاء YouTube SEO tags"
         },
         "youtube-title-generator": {
             "name": "مولد عناوين يوتيوب",
             "description": "إنشاء عناوين جذابة وصديقة للسيو.",
-            "seoTitle": "مولد عناوين يوتيوب",
-            "seoDescription": "زيادة النقرات بعناوين جيدة.",
-            "seoKeywords": "مولد عنوان يوتيوب",
-            "seoH1": "مولد عناوين يوتيوب"
+            "seoTitle": "YouTube Title Generator مجاني - إنشاء catchy YouTube titles",
+            "seoDescription": "إنشاء catchy YouTube titles عبر الإنترنت مجاني. SEO-friendly titles for better CTR. بدون تسجيل دخول, سريع, آمن. مثالي لـ content creators.",
+            "seoKeywords": "youtube title generator free, generate youtube titles online, video title ideas, viral yt titles, seo titles for youtube",
+            "seoH1": "YouTube Title Generator مجاني: إنشاء catchy YouTube titles"
         },
         "youtube-embed-code-generator": {
             "name": "مولد كود تضمين يوتيوب",
             "description": "إنشاء أكواد تضمين مخصصة.",
-            "seoTitle": "مولد تضمين يوتيوب",
-            "seoDescription": "مع تشغيل تلقائي وحلقة إلخ.",
-            "seoKeywords": "كود تضمين يوتيوب",
-            "seoH1": "مولد تضمين يوتيوب"
+            "seoTitle": "YouTube Embed Code Generator مجاني - Use YouTube Embed Code Generator",
+            "seoDescription": "Use YouTube Embed Code Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ content creators.",
+            "seoKeywords": "youtube-embed-code-generator, free youtube embed code generator, youtube embed code generator tool",
+            "seoH1": "YouTube Embed Code Generator مجاني: Use YouTube Embed Code Generator"
         },
         "youtube-timestamp-link-generator": {
             "name": "رابط توقيت يوتيوب",
             "description": "إنشاء روابط تبدأ من وقت معين.",
-            "seoTitle": "مولد رابط توقيت يوتيوب",
-            "seoDescription": "بدء الفيديو من المكان المحدد.",
-            "seoKeywords": "رابط توقيت يوتيوب",
-            "seoH1": "رابط توقيت يوتيوب"
+            "seoTitle": "YouTube Timestamp Link مجاني - Use YouTube Timestamp Link",
+            "seoDescription": "Use YouTube Timestamp Link عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ content creators.",
+            "seoKeywords": "youtube-timestamp-link-generator, free youtube timestamp link, youtube timestamp link tool",
+            "seoH1": "YouTube Timestamp Link مجاني: Use YouTube Timestamp Link"
         },
         "meta-tag-generator": {
             "name": "مولد وسمات ميتا",
             "description": "إنشاء وسمات ميتا صديقة للسيو.",
-            "seoTitle": "مولد وسمات ميتا",
-            "seoDescription": "وسمات العنوان والوصف.",
-            "seoKeywords": "مولد meta tag",
-            "seoH1": "مولد وسمات ميتا"
+            "seoTitle": "Meta Tag Generator مجاني - Use Meta Tag Generator",
+            "seoDescription": "Use Meta Tag Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "meta-tag-generator, free meta tag generator, meta tag generator tool",
+            "seoH1": "Meta Tag Generator مجاني: Use Meta Tag Generator"
         },
         "open-graph-generator": {
             "name": "مولد Open Graph",
             "description": "إنشاء وسمات Open Graph للمشاركة الاجتماعية.",
-            "seoTitle": "مولد Open Graph",
-            "seoDescription": "عرض أفضل في التواصل الاجتماعي.",
-            "seoKeywords": "مولد open graph",
-            "seoH1": "مولد Open Graph"
+            "seoTitle": "Open Graph Generator مجاني - إنشاء Open Graph meta tags",
+            "seoDescription": "إنشاء Open Graph meta tags عبر الإنترنت مجاني. Facebook, LinkedIn, Slack. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "open graph generator free, generate og tags online, facebook meta tags, og title og image, social media tags",
+            "seoH1": "Open Graph Generator مجاني: إنشاء Open Graph meta tags"
         },
         "twitter-card-generator": {
             "name": "مولد بطاقة تويتر",
             "description": "إنشاء وسمات بطاقة تويتر.",
-            "seoTitle": "مولد بطاقة تويتر",
-            "seoDescription": "عرض أفضل في تويتر.",
-            "seoKeywords": "مولد twitter card",
-            "seoH1": "مولد بطاقة تويتر"
+            "seoTitle": "Twitter Card Generator مجاني - إنشاء Twitter Card meta tags",
+            "seoDescription": "إنشاء Twitter Card meta tags عبر الإنترنت مجاني. تحسين X/Twitter shares. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "twitter card generator free, generate twitter cards online, twitter meta tags, x card generator, twitter card validator",
+            "seoH1": "Twitter Card Generator مجاني: إنشاء Twitter Card meta tags"
         },
         "robots-txt-generator": {
             "name": "مولد robots.txt",
             "description": "إنشاء ملف robots.txt.",
-            "seoTitle": "مولد robots.txt",
-            "seoDescription": "التحكم في وصول الزواحف.",
-            "seoKeywords": "مولد robots.txt",
-            "seoH1": "مولد robots.txt"
+            "seoTitle": "Robots.txt Generator مجاني - Use Robots.txt Generator",
+            "seoDescription": "Use Robots.txt Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "robots-txt-generator, free robots.txt generator, robots.txt generator tool",
+            "seoH1": "Robots.txt Generator مجاني: Use Robots.txt Generator"
         },
         "xml-sitemap-generator": {
             "name": "مولد خريطة الموقع XML",
             "description": "إنشاء خرائط موقع XML للسيو.",
-            "seoTitle": "مولد خريطة الموقع XML",
-            "seoDescription": "تسهيل فهرسة الصفحات.",
-            "seoKeywords": "مولد sitemap xml",
-            "seoH1": "مولد خريطة الموقع XML"
+            "seoTitle": "XML Sitemap Generator مجاني - Use XML Sitemap Generator",
+            "seoDescription": "Use XML Sitemap Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "xml-sitemap-generator, free xml sitemap generator, xml sitemap generator tool",
+            "seoH1": "XML Sitemap Generator مجاني: Use XML Sitemap Generator"
         },
         "keyword-density-checker": {
             "name": "فاحص كثافة الكلمات المفتاحية",
             "description": "تحليل استخدام وكثافة الكلمات المفتاحية.",
-            "seoTitle": "فاحص كثافة الكلمات المفتاحية",
-            "seoDescription": "فحص تكرار الكلمات المفتاحية.",
-            "seoKeywords": "كثافة كلمات مفتاحية",
-            "seoH1": "فاحص كثافة الكلمات المفتاحية"
+            "seoTitle": "Keyword Density Checker مجاني - Check keyword density",
+            "seoDescription": "Check keyword density عبر الإنترنت مجاني. Avoid SEO penalties. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "keyword density checker free, check keyword stuffing, seo text analyzer, word frequency counter, keyword optimizer tool",
+            "seoH1": "Keyword Density Checker مجاني: Check keyword density"
         },
         "keyword-cleaner": {
             "name": "منظف الكلمات المفتاحية",
             "description": "تنظيف قوائم الكلمات المفتاحية.",
-            "seoTitle": "منظف قائمة الكلمات المفتاحية",
-            "seoDescription": "إزالة المكرر والزائد.",
-            "seoKeywords": "منظف كلمات مفتاحية",
-            "seoH1": "منظف الكلمات المفتاحية"
+            "seoTitle": "Keyword Cleaner مجاني - Use Keyword Cleaner",
+            "seoDescription": "Use Keyword Cleaner عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "keyword-cleaner, free keyword cleaner, keyword cleaner tool",
+            "seoH1": "Keyword Cleaner مجاني: Use Keyword Cleaner"
         },
         "long-tail-keyword-generator": {
             "name": "مولد كلمات مفتاحية طويلة الذيل",
             "description": "إنشاء تنويعات كلمات مفتاحية طويلة الذيل.",
-            "seoTitle": "مولد كلمات مفتاحية طويلة الذيل",
-            "seoDescription": "توسيع الكلمات المفتاحية الأساسية.",
-            "seoKeywords": "كلمات مفتاحية طويلة الذيل",
-            "seoH1": "كلمات مفتاحية طويلة الذيل"
+            "seoTitle": "Long Tail Keyword Generator مجاني - Use Long Tail Keyword Generator",
+            "seoDescription": "Use Long Tail Keyword Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "long-tail-keyword-generator, free long tail keyword generator, long tail keyword generator tool",
+            "seoH1": "Long Tail Keyword Generator مجاني: Use Long Tail Keyword Generator"
         },
         "slug-generator": {
             "name": "مولد Slug URL",
             "description": "تحويل النص إلى slug URL صديق للسيو.",
-            "seoTitle": "مولد Slug",
-            "seoDescription": "إنشاء روابط نظيفة وقابلة للقراءة.",
-            "seoKeywords": "مولد slug, url slug",
-            "seoH1": "مولد Slug URL"
+            "seoTitle": "Slug Generator مجاني - Use Slug Generator",
+            "seoDescription": "Use Slug Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "slug-generator, free slug generator, slug generator tool",
+            "seoH1": "Slug Generator مجاني: Use Slug Generator"
         },
         "google-serp-simulator": {
             "name": "معاينة نتائج بحث جوجل",
             "description": "معاينة كيفية ظهور صفحتك في نتائج بحث جوجل.",
-            "seoTitle": "محاكي نتائج بحث جوجل",
-            "seoDescription": "اختبار معاينة نتائج البحث.",
-            "seoKeywords": "معاينة serp جوجل",
-            "seoH1": "معاينة نتائج بحث جوجل"
+            "seoTitle": "Google SERP Simulator مجاني - Use Google SERP Simulator",
+            "seoDescription": "Use Google SERP Simulator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "google-serp-simulator, free google serp simulator, google serp simulator tool",
+            "seoH1": "Google SERP Simulator مجاني: Use Google SERP Simulator"
         },
         "htaccess-redirect-generator": {
             "name": "مولد إعادة توجيه .htaccess",
             "description": "إنشاء كود إعادة توجيه 301/302.",
-            "seoTitle": "مولد إعادة توجيه .htaccess",
-            "seoDescription": "إنشاء قواعد إعادة توجيه.",
-            "seoKeywords": "مولد إعادة توجيه htaccess",
-            "seoH1": "مولد إعادة توجيه .htaccess"
+            "seoTitle": "Htaccess Redirect Generator مجاني - Use Htaccess Redirect Generator",
+            "seoDescription": "Use Htaccess Redirect Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ website optimization.",
+            "seoKeywords": "htaccess-redirect-generator, free htaccess redirect generator, htaccess redirect generator tool",
+            "seoH1": "Htaccess Redirect Generator مجاني: Use Htaccess Redirect Generator"
         },
         "my-ip-address": {
             "name": "عنوان IP الخاص بي",
             "description": "فحص عنوان IP العام ومعلومات الموقع.",
-            "seoTitle": "ما هو عنوان IP الخاص بي؟",
-            "seoDescription": "اكتشف عنوان IP العام.",
-            "seoKeywords": "عنوان ip الخاص بي, what is my ip",
-            "seoH1": "عنوان IP الخاص بي"
+            "seoTitle": "My IP Address مجاني - إنشاء my ip address",
+            "seoDescription": "إنشاء my ip address عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "my-ip-address, free my ip address, my ip address tool",
+            "seoH1": "My IP Address مجاني: Use My IP Address"
         },
         "browser-info": {
             "name": "معلومات المتصفح",
             "description": "الحصول على تفاصيل المتصفح والجهاز.",
-            "seoTitle": "معلومات المتصفح",
-            "seoDescription": "المتصفح ونظام التشغيل وحجم الشاشة إلخ.",
-            "seoKeywords": "معلومات متصفح, user agent",
-            "seoH1": "معلومات المتصفح"
+            "seoTitle": "Browser Info مجاني - إنشاء browser info",
+            "seoDescription": "إنشاء browser info عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "browser-info, free browser info, browser info tool",
+            "seoH1": "Browser Info مجاني: Use Browser Info"
         },
         "screen-resolution-simulator": {
             "name": "اختبار دقة الشاشة",
             "description": "اختبار الموقع على دقات مختلفة.",
-            "seoTitle": "محاكي دقة الشاشة",
-            "seoDescription": "معاينة على أجهزة مختلفة.",
-            "seoKeywords": "اختبار دقة شاشة",
-            "seoH1": "اختبار دقة الشاشة"
+            "seoTitle": "Screen Resolution Simulator مجاني - إنشاء screen resolution simulator",
+            "seoDescription": "إنشاء screen resolution simulator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "screen-resolution-simulator, free screen resolution simulator, screen resolution simulator tool",
+            "seoH1": "Screen Resolution Simulator مجاني: Use Screen Resolution Simulator"
         },
         "responsive-checker": {
             "name": "فاحص التصميم المتجاوب",
             "description": "التحقق مما إذا كان الموقع متوافقًا مع الجوال.",
-            "seoTitle": "اختبار الموقع المتجاوب",
-            "seoDescription": "اختبار التصميم المتجاوب.",
-            "seoKeywords": "فاحص متجاوب",
-            "seoH1": "فاحص التصميم المتجاوب"
+            "seoTitle": "Responsive Checker مجاني - إنشاء responsive checker",
+            "seoDescription": "إنشاء responsive checker عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ daily tasks.",
+            "seoKeywords": "responsive-checker, free responsive checker, responsive checker tool",
+            "seoH1": "Responsive Checker مجاني: Use Responsive Checker"
         },
         "whatsapp-link-generator": {
             "name": "مولد رابط واتساب",
             "description": "إنشاء روابط واتساب للدردشة بالنقر.",
-            "seoTitle": "مولد رابط واتساب",
-            "seoDescription": "إنشاء روابط wa.me.",
-            "seoKeywords": "مولد رابط واتساب",
-            "seoH1": "مولد رابط واتساب"
+            "seoTitle": "WhatsApp Link Generator مجاني - إنشاء WhatsApp click-to-chat links",
+            "seoDescription": "إنشاء WhatsApp click-to-chat links عبر الإنترنت مجاني. Custom messages. بدون تسجيل دخول, سريع, آمن. مثالي لـ social media.",
+            "seoKeywords": "whatsapp link generator free, generate whatsapp links online, click to chat whatsapp, wa.me link maker, whatsapp chat link",
+            "seoH1": "WhatsApp Link Generator مجاني: إنشاء WhatsApp click-to-chat links"
         },
         "telegram-link-generator": {
             "name": "مولد رابط تيليجرام",
             "description": "إنشاء روابط مباشرة لمستخدمي أو قنوات تيليجرام.",
-            "seoTitle": "مولد رابط تيليجرام",
-            "seoDescription": "إنشاء روابط t.me.",
-            "seoKeywords": "مولد رابط تيليجرام",
-            "seoH1": "مولد رابط تيليجرام"
+            "seoTitle": "Telegram Link Generator مجاني - Use Telegram Link Generator",
+            "seoDescription": "Use Telegram Link Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ social media.",
+            "seoKeywords": "telegram-link-generator, free telegram link generator, telegram link generator tool",
+            "seoH1": "Telegram Link Generator مجاني: Use Telegram Link Generator"
         },
         "paypal-link-generator": {
             "name": "مولد رابط باي بال",
             "description": "إنشاء روابط دفع وتبرع باي بال.",
-            "seoTitle": "مولد رابط باي بال",
-            "seoDescription": "روابط PayPal.me ودفع.",
-            "seoKeywords": "مولد رابط باي بال",
-            "seoH1": "مولد رابط باي بال"
+            "seoTitle": "PayPal Link Generator مجاني - Use PayPal Link Generator",
+            "seoDescription": "Use PayPal Link Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ social media.",
+            "seoKeywords": "paypal-link-generator, free paypal link generator, paypal link generator tool",
+            "seoH1": "PayPal Link Generator مجاني: Use PayPal Link Generator"
         },
         "email-validator": {
             "name": "مدقق البريد الإلكتروني",
             "description": "التحقق من صيغة عناوين البريد الإلكتروني.",
-            "seoTitle": "مدقق عنوان البريد الإلكتروني",
-            "seoDescription": "فحص صيغة البريد الإلكتروني.",
-            "seoKeywords": "مدقق بريد إلكتروني",
-            "seoH1": "مدقق البريد الإلكتروني"
+            "seoTitle": "Email Validator مجاني - إنشاء email validator",
+            "seoDescription": "إنشاء email validator عبر الإنترنت مجاني. Check syntax and تنسيق. بدون تسجيل دخول, سريع, آمن. مثالي لـ forms.",
+            "seoKeywords": "email validator free, validate email online, email syntax checker, email verifier, check email format",
+            "seoH1": "Email Validator مجاني: Validate email addresses"
         },
         "url-opener": {
             "name": "مفتاح روابط جماعي",
             "description": "فتح عدة روابط في نفس الوقت.",
-            "seoTitle": "مفتاح روابط متعددة",
-            "seoDescription": "فتح العديد من الروابط معًا.",
-            "seoKeywords": "مفتاح روابط جماعي",
-            "seoH1": "مفتاح روابط جماعي"
+            "seoTitle": "URL Opener مجاني - إنشاء url opener",
+            "seoDescription": "إنشاء url opener عبر الإنترنت مجاني. Bulk link opener. بدون تسجيل دخول, سريع, آمن. مثالي لـ research.",
+            "seoKeywords": "bulk url opener free, open multiple links online, url list opener, link opener, multiple url opener",
+            "seoH1": "URL Opener مجاني: Open multiple URLs in new tabs"
         },
         "user-agent-parser": {
             "name": "محلل User Agent",
             "description": "تحليل سلاسل User-Agent.",
-            "seoTitle": "محلل User Agent",
-            "seoDescription": "استخراج معلومات المتصفح والجهاز.",
-            "seoKeywords": "محلل user agent",
-            "seoH1": "محلل User Agent"
+            "seoTitle": "User Agent Parser مجاني - Use User Agent Parser Code",
+            "seoDescription": "Use User Agent Parser code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "user-agent-parser, free user agent parser, user agent parser tool",
+            "seoH1": "User Agent Parser مجاني: Use User Agent Parser"
         },
         "wordpress-password-hash": {
             "name": "تجزئة كلمة مرور ووردبريس",
             "description": "إنشاء تجزئة متوافقة مع ووردبريس.",
-            "seoTitle": "مولد تجزئة ووردبريس",
-            "seoDescription": "إنشاء تجزئة phpass.",
-            "seoKeywords": "تجزئة كلمة مرور ووردبريس",
-            "seoH1": "تجزئة كلمة مرور ووردبريس"
+            "seoTitle": "WordPress Password Hash مجاني - Use WordPress Password Hash",
+            "seoDescription": "Use WordPress Password Hash عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, 100% private. مثالي لـ daily tasks.",
+            "seoKeywords": "wordpress-password-hash, free wordpress password hash, wordpress password hash tool",
+            "seoH1": "WordPress Password Hash مجاني: Use WordPress Password Hash"
         },
         "age-calculator": {
             "name": "حاسبة العمر",
             "description": "حساب العمر الدقيق بالسنوات والأشهر والأيام.",
-            "seoTitle": "حاسبة العمر",
-            "seoDescription": "العمر الدقيق من تاريخ الميلاد.",
-            "seoKeywords": "حاسبة عمر",
-            "seoH1": "حاسبة العمر"
+            "seoTitle": "Age Calculator مجاني عبر الإنترنت - حساب Age Calculator",
+            "seoDescription": "حساب Age Calculator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, accurate. مثالي لـ daily tasks.",
+            "seoKeywords": "age-calculator, free age calculator, age calculator tool",
+            "seoH1": "Age Calculator مجاني: Use Age Calculator"
         },
         "bmi-calculator": {
             "name": "حاسبة مؤشر كتلة الجسم",
             "description": "حساب مؤشر كتلة الجسم وحالة الصحة.",
-            "seoTitle": "حاسبة BMI",
-            "seoDescription": "فحص BMI الخاص بك.",
-            "seoKeywords": "حاسبة bmi",
-            "seoH1": "حاسبة مؤشر كتلة الجسم"
+            "seoTitle": "BMI Calculator مجاني عبر الإنترنت - حساب BMI Calculator",
+            "seoDescription": "حساب BMI Calculator عبر الإنترنت مجاني. Check healthy weight range. بدون تسجيل دخول, سريع, accurate. مثالي لـ health tracking.",
+            "seoKeywords": "bmi calculator free, body mass index calculator, healthy weight calculator, obesity calculator, height weight chart, bmi calculator online",
+            "seoH1": "BMI Calculator مجاني: حساب BMI"
         },
         "percentage-calculator": {
             "name": "حاسبة النسبة المئوية",
             "description": "حساب النسب المئوية والزيادات والنقصان.",
-            "seoTitle": "حاسبة النسبة المئوية",
-            "seoDescription": "أدوات نسب مئوية متعددة.",
-            "seoKeywords": "حاسبة نسبة مئوية",
-            "seoH1": "حاسبة النسبة المئوية"
+            "seoTitle": "Percentage Calculator مجاني عبر الإنترنت - حساب Percentage Calculator",
+            "seoDescription": "حساب Percentage Calculator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, accurate. مثالي لـ daily tasks.",
+            "seoKeywords": "percentage-calculator, free percentage calculator, percentage calculator tool",
+            "seoH1": "Percentage Calculator مجاني: Use Percentage Calculator"
         },
         "gst-calculator": {
             "name": "حاسبة الضريبة",
             "description": "حساب مبلغ الضريبة والسعر الإجمالي.",
-            "seoTitle": "حاسبة الضريبة",
-            "seoDescription": "حساب الضريبة بسهولة.",
-            "seoKeywords": "حاسبة ضريبة",
-            "seoH1": "حاسبة الضريبة"
+            "seoTitle": "GST Calculator مجاني عبر الإنترنت - حساب GST Calculator",
+            "seoDescription": "حساب GST Calculator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, accurate. مثالي لـ daily tasks.",
+            "seoKeywords": "gst-calculator, free gst calculator, gst calculator tool",
+            "seoH1": "GST Calculator مجاني: Use GST Calculator"
         },
         "emi-calculator": {
             "name": "حاسبة قسط القرض",
             "description": "حساب القسط الشهري والفائدة الإجمالية.",
-            "seoTitle": "حاسبة EMI",
-            "seoDescription": "حساب أقساط القروض.",
-            "seoKeywords": "حاسبة emi, حاسبة قرض",
-            "seoH1": "حاسبة EMI"
+            "seoTitle": "Loan EMI Calculator مجاني عبر الإنترنت - حساب Loan EMI Calculator",
+            "seoDescription": "حساب Loan EMI Calculator عبر الإنترنت مجاني. Home, car, personal loans. Amortization schedule. بدون تسجيل دخول, سريع, accurate. مثالي لـ loan planning.",
+            "seoKeywords": "emi calculator free, loan calculator online, mortgage calculator, monthly installment calculator, interest rate calculator, home loan calculator",
+            "seoH1": "Loan EMI Calculator مجاني: حساب loan EMI"
         },
         "discount-calculator": {
             "name": "حاسبة الخصم",
             "description": "حساب مبلغ الخصم والسعر النهائي.",
-            "seoTitle": "حاسبة الخصم",
-            "seoDescription": "معرفة التوفير في العروض.",
-            "seoKeywords": "حاسبة خصم",
-            "seoH1": "حاسبة الخصم"
+            "seoTitle": "Discount Calculator مجاني عبر الإنترنت - حساب Discount Calculator",
+            "seoDescription": "حساب Discount Calculator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, accurate. مثالي لـ daily tasks.",
+            "seoKeywords": "discount-calculator, free discount calculator, discount calculator tool",
+            "seoH1": "Discount Calculator مجاني: Use Discount Calculator"
         },
         "instagram-hashtag-generator": {
             "name": "مولد هاشتاج إنستغرام",
             "description": "إنشاء هاشتاجات شائعة وذات صلة لإنستغرام.",
-            "seoTitle": "مولد هاشتاج إنستغرام",
-            "seoDescription": "زيادة مدى المنشورات.",
-            "seoKeywords": "هاشتاج إنستغرام",
-            "seoH1": "مولد هاشتاج إنستغرام"
+            "seoTitle": "Instagram Hashtag Generator مجاني - Use Instagram Hashtag Generator",
+            "seoDescription": "Use Instagram Hashtag Generator عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ social media.",
+            "seoKeywords": "instagram-hashtag-generator, free instagram hashtag generator, instagram hashtag generator tool",
+            "seoH1": "Instagram Hashtag Generator مجاني: Use Instagram Hashtag Generator"
         },
         "html-to-jsx": {
             "name": "HTML إلى JSX",
             "description": "تحويل كود HTML إلى صيغة JSX لـ React.",
-            "seoTitle": "HTML إلى JSX - محول",
-            "seoDescription": "للتطوير بـ React.",
-            "seoKeywords": "html to jsx",
-            "seoH1": "HTML إلى JSX"
+            "seoTitle": "HTML to JSX مجاني - Use HTML to JSX Code",
+            "seoDescription": "Use HTML to JSX code عبر الإنترنت مجاني. سريع and آمن processing. بدون تسجيل دخول, سريع, آمن. مثالي لـ developers.",
+            "seoKeywords": "html-to-jsx, free html to jsx, html to jsx tool",
+            "seoH1": "HTML to JSX مجاني: Use HTML to JSX"
         }
     },
     "Common": {

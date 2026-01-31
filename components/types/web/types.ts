@@ -38,3 +38,4 @@ export interface SEOAnalysisResult {
     issues: Array<{ type: 'success' | 'warning' | 'error'; title: string; desc: string }>;
 }
 
+

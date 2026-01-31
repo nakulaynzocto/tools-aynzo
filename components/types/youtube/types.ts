@@ -23,3 +23,4 @@ export interface YouTubeThumbnails {
 
 export type YouTubeResult = YouTubeThumbnails | string | string[];
 
+

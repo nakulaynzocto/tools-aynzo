@@ -37,3 +37,4 @@ export const calculateKeywordDensity = (text: string, keyword: string): { densit
     };
 };
 
+

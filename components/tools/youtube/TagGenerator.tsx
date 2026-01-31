@@ -24,3 +24,4 @@ export function TagGenerator({ result, copied, onCopy }: TagGeneratorProps) {
     );
 }
 
+
