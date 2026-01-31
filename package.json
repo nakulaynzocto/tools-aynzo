@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/post-build.js",
     "start": "node .next/standalone/server.js",
     "lint": "next lint",
     "translate-blog": "node scripts/translate-blog-content.js"
