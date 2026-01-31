@@ -5,7 +5,7 @@ interface AdUnitProps {
     slot: string;
     format?: 'auto' | 'rectangle' | 'horizontal' | 'vertical';
     className?: string;
-    label?: string; // For debugging
+    label?: string;
 }
 
 export function AdUnit({ slot, format = 'auto', className = '', label }: AdUnitProps) {

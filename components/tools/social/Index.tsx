@@ -260,7 +260,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                                 rel="noopener noreferrer"
                                                 className="block w-full py-4 bg-secondary hover:bg-secondary/80 text-foreground rounded-xl font-bold text-center transition-all text-sm border border-border"
                                             >
-                                                Test Link <ExternalLink className="inline-block ml-1 w-4 h-4" />
+                                                Open Link <ExternalLink className="inline-block ml-1 w-4 h-4" />
                                             </a>
                                         </div>
                                     )}
