@@ -1,10 +1,11 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Copy, CheckCircle2, Download, Code } from 'lucide-react';
+import { Copy, CheckCircle2, Download, Code, Shield, User } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { TechToolProps } from '@/components/types/tech/types';
 import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
+import { generateBcrypt } from '@/components/utils/crypto/cryptoProcessing';
 
 export default function TechToolsIndex({ type }: TechToolProps) {
     const t = useTranslations('Common');
@@ -17,9 +18,11 @@ export default function TechToolsIndex({ type }: TechToolProps) {
 
     const techNavTools = [
         {
-            category: 'OTHER',
+            category: 'TECH UTILITIES',
             tools: [
                 { id: 'html-to-jsx', label: 'HTML to JSX', icon: Code },
+                { id: 'wordpress-password-hash', label: 'WordPress Hash', icon: Shield },
+                { id: 'user-agent-parser', label: 'User Agent Parser', icon: User },
             ]
         }
     ];
@@ -31,20 +34,68 @@ export default function TechToolsIndex({ type }: TechToolProps) {
             return;
         }
 
-        try {
-            setError('');
-            let result = '';
+        const processInput = async () => {
+            try {
+                setError('');
+                let result = '';
 
-            if (type === 'html-to-jsx') {
-                result = convertHTMLToJSX(input);
+                if (type === 'html-to-jsx') {
+                    result = convertHTMLToJSX(input);
+                } else if (type === 'wordpress-password-hash') {
+                    result = await generateWordPressHash(input);
+                } else if (type === 'user-agent-parser') {
+                    result = parseUserAgent(input);
+                }
+
+                setOutput(result);
+            } catch (e: any) {
+                setError(e.message || 'Processing failed');
+                setOutput('');
             }
+        };
 
-            setOutput(result);
-        } catch (e: any) {
-            setError(e.message || 'Conversion failed');
-            setOutput('');
-        }
+        processInput();
     }, [input, type]);
+
+    const generateWordPressHash = async (password: string): Promise<string> => {
+        return await generateBcrypt(password, 10);
+    };
+
+    const parseUserAgent = (ua: string): string => {
+        const parser = {
+            browser: 'Unknown',
+            os: 'Unknown',
+            device: 'Unknown',
+            engine: 'Unknown',
+        };
+
+        // Browser detection
+        if (ua.includes('Chrome') && !ua.includes('Edg')) parser.browser = 'Chrome';
+        else if (ua.includes('Firefox')) parser.browser = 'Firefox';
+        else if (ua.includes('Safari') && !ua.includes('Chrome')) parser.browser = 'Safari';
+        else if (ua.includes('Edg')) parser.browser = 'Edge';
+        else if (ua.includes('Opera') || ua.includes('OPR')) parser.browser = 'Opera';
+
+        // OS detection
+        if (ua.includes('Windows')) parser.os = 'Windows';
+        else if (ua.includes('Mac OS')) parser.os = 'macOS';
+        else if (ua.includes('Linux')) parser.os = 'Linux';
+        else if (ua.includes('Android')) parser.os = 'Android';
+        else if (ua.includes('iOS') || ua.includes('iPhone') || ua.includes('iPad')) parser.os = 'iOS';
+
+        // Device detection
+        if (ua.includes('Mobile')) parser.device = 'Mobile';
+        else if (ua.includes('Tablet') || ua.includes('iPad')) parser.device = 'Tablet';
+        else parser.device = 'Desktop';
+
+        // Engine detection
+        if (ua.includes('Gecko')) parser.engine = 'Gecko';
+        else if (ua.includes('WebKit')) parser.engine = 'WebKit';
+        else if (ua.includes('Blink')) parser.engine = 'Blink';
+        else if (ua.includes('Trident')) parser.engine = 'Trident';
+
+        return JSON.stringify(parser, null, 2);
+    };
 
     const convertHTMLToJSX = (html: string): string => {
         return html
@@ -93,7 +144,7 @@ export default function TechToolsIndex({ type }: TechToolProps) {
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'converted.jsx';
+            a.download = type === 'html-to-jsx' ? 'converted.jsx' : type === 'wordpress-password-hash' ? 'hash.txt' : 'user-agent.json';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -115,19 +166,31 @@ export default function TechToolsIndex({ type }: TechToolProps) {
                     <div className="grid lg:grid-cols-2 gap-6">
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">HTML Input</label>
+                                <label className="text-sm font-bold">
+                                    {type === 'html-to-jsx' ? 'HTML Input' :
+                                     type === 'wordpress-password-hash' ? 'Password' :
+                                     'User Agent String'}
+                                </label>
                                 <button onClick={() => setInput('')} className="text-xs text-muted-foreground hover:text-foreground">Clear</button>
                             </div>
                             <textarea
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 className="w-full h-96 p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 focus:border-primary outline-none resize-none"
-                                placeholder="Paste HTML code here..."
+                                placeholder={
+                                    type === 'html-to-jsx' ? 'Paste HTML code here...' :
+                                    type === 'wordpress-password-hash' ? 'Enter password to hash...' :
+                                    'Paste user agent string here...'
+                                }
                             />
                         </div>
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">JSX Output</label>
+                                <label className="text-sm font-bold">
+                                    {type === 'html-to-jsx' ? 'JSX Output' :
+                                     type === 'wordpress-password-hash' ? 'WordPress Hash' :
+                                     'Parsed User Agent'}
+                                </label>
                                 <div className="flex gap-2">
                                     <button 
                                         onClick={handleCopy} 
@@ -156,7 +219,11 @@ export default function TechToolsIndex({ type }: TechToolProps) {
                                 value={output}
                                 readOnly
                                 className="w-full h-96 p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 resize-none"
-                                placeholder="JSX output will appear here..."
+                                placeholder={
+                                    type === 'html-to-jsx' ? 'JSX output will appear here...' :
+                                    type === 'wordpress-password-hash' ? 'WordPress hash will appear here...' :
+                                    'Parsed user agent data will appear here...'
+                                }
                             />
                         </div>
                     </div>
