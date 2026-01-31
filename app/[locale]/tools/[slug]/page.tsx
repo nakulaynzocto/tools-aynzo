@@ -3,43 +3,43 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
-import { ToolPageHeader } from '@/components/ToolPageHeader';
-import { ToolInfoSection } from '@/components/ToolInfoSection';
+import { ToolPageHeader } from '@/components/common/components/ToolPageHeader';
+import { ToolInfoSection } from '@/components/common/components/ToolInfoSection';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { getToolSEO } from '@/lib/seo';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { RelatedTools } from '@/components/RelatedTools';
-import { ShareButtons } from '@/components/ShareButtons';
+import { Breadcrumbs } from '@/components/common/components/Breadcrumbs';
+import { RelatedTools } from '@/components/common/components/RelatedTools';
+import { ShareButtons } from '@/components/common/components/ShareButtons';
 import Script from 'next/script';
 import { generateProgrammaticMetadata } from '@/utils/seo-utils';
 
-const ImageTools = dynamic(() => import('@/components/tools/ImageTools'));
-const PdfTools = dynamic(() => import('@/components/tools/PdfTools'));
-const TextTools = dynamic(() => import('@/components/tools/TextTools'));
-const AdvancedTextTools = dynamic(() => import('@/components/tools/AdvancedTextTools'));
-const FormatterTools = dynamic(() => import('@/components/tools/FormatterTools'));
-const ConverterTools = dynamic(() => import('@/components/tools/ConverterTools'));
-const GeneratorTools = dynamic(() => import('@/components/tools/GeneratorTools'));
-const DevTools = dynamic(() => import('@/components/tools/DevTools'));
-const SecurityTools = dynamic(() => import('@/components/tools/SecurityTools'));
-const FAQSection = dynamic(() => import('@/components/FAQSection'));
-const UtilityTools = dynamic(() => import('@/components/tools/UtilityTools'));
-const CryptoTools = dynamic(() => import('@/components/tools/CryptoTools'));
-const RegexDiffTools = dynamic(() => import('@/components/tools/RegexDiffTools'));
-const YouTubeTools = dynamic(() => import('@/components/tools/YouTubeTools'));
-const SeoTools = dynamic(() => import('@/components/tools/SeoTools'));
-const KeywordTools = dynamic(() => import('@/components/tools/KeywordTools'));
-const WebTools = dynamic(() => import('@/components/tools/WebTools'));
-const SocialLinkTools = dynamic(() => import('@/components/tools/SocialLinkTools'));
-const TechTools = dynamic(() => import('@/components/tools/TechTools'));
-const CalculatorTools = dynamic(() => import('@/components/tools/CalculatorTools'));
+const ImageTools = dynamic(() => import('@/components/tools/image/Index'));
+const PdfTools = dynamic(() => import('@/components/tools/pdf/Index'));
+const TextTools = dynamic(() => import('@/components/tools/text/Index'));
+const AdvancedTextTools = dynamic(() => import('@/components/tools/advancedtext/Index'));
+const FormatterTools = dynamic(() => import('@/components/tools/formatter/Index'));
+const ConverterTools = dynamic(() => import('@/components/tools/converter/Index'));
+const GeneratorTools = dynamic(() => import('@/components/tools/generator/Index'));
+const DevTools = dynamic(() => import('@/components/tools/dev/Index'));
+const SecurityTools = dynamic(() => import('@/components/tools/security/Index'));
+const FAQSection = dynamic(() => import('@/components/common/components/FAQSection'));
+const UtilityTools = dynamic(() => import('@/components/tools/utility/Index'));
+const CryptoTools = dynamic(() => import('@/components/tools/crypto/Index'));
+const RegexDiffTools = dynamic(() => import('@/components/tools/regex/Index'));
+const YouTubeTools = dynamic(() => import('@/components/tools/youtube/Index'));
+const SeoTools = dynamic(() => import('@/components/tools/seo/Index'));
+const KeywordTools = dynamic(() => import('@/components/tools/keyword/Index'));
+const WebTools = dynamic(() => import('@/components/tools/web/Index'));
+const SocialLinkTools = dynamic(() => import('@/components/tools/social/Index'));
+const TechTools = dynamic(() => import('@/components/tools/tech/Index'));
+const CalculatorTools = dynamic(() => import('@/components/tools/calculator/Index'));
 
 interface Props {
   params: { slug: string; locale: string };
 }
 import { tools } from '@/lib/tools';
-import { AdUnit } from '@/components/AdUnit';
+import { AdUnit } from '@/components/common/components/AdUnit';
 
 export function generateStaticParams() {
   return tools.map((tool) => ({

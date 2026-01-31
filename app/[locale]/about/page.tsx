@@ -1,4 +1,4 @@
-import InfoPageLayout from '@/components/InfoPageLayout';
+import InfoPageLayout from '@/components/common/components/InfoPageLayout';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 

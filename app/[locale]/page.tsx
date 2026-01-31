@@ -1,4 +1,4 @@
-import { ToolCard } from '@/components/ToolCard';
+import { ToolCard } from '@/components/common/components/ToolCard';
 import { tools } from '@/lib/tools';
 import { notFound } from 'next/navigation';
 import { useTranslations } from 'next-intl';

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { Toaster } from "sonner";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/common/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -78,7 +78,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-import Footer from "@/components/Footer";
+import Footer from "@/components/common/components/Footer";
 
 import { locales } from '@/i18n';
 
