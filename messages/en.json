@@ -1118,6 +1118,7 @@
         "textTool": "Text Tool"
     },
     "YouTubeTools": {
+        "analyze": "Analyze",
         "autoplay": "Autoplay",
         "loop": "Loop",
         "hideControls": "Hide Controls",
