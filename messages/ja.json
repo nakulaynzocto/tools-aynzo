@@ -1217,6 +1217,7 @@
         "textTool": "텍스트 도구"
     },
     "YouTubeTools": {
+        "analyze": "分析",
         "autoplay": "자동 재생",
         "loop": "반복",
         "hideControls": "컨트롤 숨기기",

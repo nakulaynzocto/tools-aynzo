@@ -1222,6 +1222,7 @@
         "replace": "바꾸기"
     },
     "YouTubeTools": {
+        "analyze": "분석",
         "autoplay": "Autoplay",
         "loop": "Loop",
         "hideControls": "Hide Controls",

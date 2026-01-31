@@ -1217,6 +1217,7 @@
         "textTool": "文本工具"
     },
     "YouTubeTools": {
+        "analyze": "分析",
         "autoplay": "自动播放",
         "loop": "循环",
         "hideControls": "隐藏控制",

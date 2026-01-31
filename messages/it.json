@@ -1223,6 +1223,7 @@
         "textTool": "Strumento testo"
     },
     "YouTubeTools": {
+        "analyze": "Analizza",
         "autoplay": "Riproduzione automatica",
         "loop": "Ripeti",
         "hideControls": "Nascondi controlli",

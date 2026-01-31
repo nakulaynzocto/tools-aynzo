@@ -1217,6 +1217,7 @@
         "textTool": "Metin aracı"
     },
     "YouTubeTools": {
+        "analyze": "Analiz et",
         "autoplay": "Otomatik oynatma",
         "loop": "Döngü",
         "hideControls": "Kontrolleri gizle",

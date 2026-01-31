@@ -1217,6 +1217,7 @@
         "textTool": "Ferramenta de texto"
     },
     "YouTubeTools": {
+        "analyze": "Analisar",
         "autoplay": "Reprodução automática",
         "loop": "Loop",
         "hideControls": "Ocultar controles",
