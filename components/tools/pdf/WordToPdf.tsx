@@ -5,6 +5,7 @@ import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 import mammoth from 'mammoth';
 import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 export function WordToPdf() {
     const tActions = useTranslations('ToolActions');
@@ -20,7 +21,7 @@ export function WordToPdf() {
             'application/msword',
             'application/vnd.ms-word.document.macroEnabled.12'
         ];
-        
+
         if (!validTypes.includes(selectedFile.type) && !selectedFile.name.endsWith('.docx') && !selectedFile.name.endsWith('.doc')) {
             setError('Please select a Word document (.doc or .docx)');
             return;
@@ -28,6 +29,9 @@ export function WordToPdf() {
         setFile(selectedFile);
         setError(null);
         setDownloadUrl(null);
+
+        // Auto-start conversion
+        processWord(selectedFile);
     };
 
     const handleDrop = (e: React.DragEvent) => {
@@ -40,49 +44,77 @@ export function WordToPdf() {
         e.preventDefault();
     };
 
-    const processWord = async () => {
-        if (!file) return;
+    const processWord = async (passedFile?: File) => {
+        const targetFile = passedFile || file;
+        if (!targetFile) return;
 
         setProcessing(true);
         setError(null);
 
         try {
-            const arrayBuffer = await file.arrayBuffer();
-            
-            // Convert Word to HTML
-            const result = await mammoth.convertToHtml({ arrayBuffer });
-            const html = result.value;
+            const arrayBuffer = await targetFile.arrayBuffer();
 
-            // Create a temporary div to parse HTML
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = html;
-
-            // Extract text content
-            const textContent = tempDiv.innerText || tempDiv.textContent || '';
-
-            // Create PDF
-            const pdf = new jsPDF();
-            const lines = pdf.splitTextToSize(textContent, 180);
-            
-            let y = 20;
-            const pageHeight = pdf.internal.pageSize.height;
-            const lineHeight = 7;
-
-            lines.forEach((line: string) => {
-                if (y + lineHeight > pageHeight - 20) {
-                    pdf.addPage();
-                    y = 20;
+            // Convert Word to HTML with better options
+            const result = await mammoth.convertToHtml(
+                { arrayBuffer },
+                {
+                    styleMap: [
+                        "p[style-name='Heading 1'] => h1:fresh",
+                        "p[style-name='Heading 2'] => h2:fresh",
+                        "p[style-name='Heading 3'] => h3:fresh",
+                        "u => u",
+                        "strike => del"
+                    ]
                 }
-                pdf.text(line, 20, y);
-                y += lineHeight;
+            );
+
+            const htmlContent = result.value;
+
+            // Create a hidden container for rendering
+            const container = document.createElement('div');
+            container.id = 'word-conversion-container';
+            container.style.position = 'fixed';
+            container.style.left = '0';
+            container.style.top = '0';
+            container.style.width = '794px'; // A4 width at 96 DPI
+            container.style.padding = '60px';
+            container.style.background = 'white';
+            container.style.color = 'black';
+            container.style.fontFamily = 'serif';
+            container.style.fontSize = '12pt';
+            container.style.lineHeight = '1.5';
+            container.style.zIndex = '-9999';
+            container.style.visibility = 'visible'; // Must be visible for html2canvas
+            container.innerHTML = htmlContent;
+            document.body.appendChild(container);
+
+            // Use jspdf's html method
+            const pdf = new jsPDF('p', 'pt', 'a4');
+
+            await pdf.html(container, {
+                callback: (doc) => {
+                    const blob = doc.output('blob');
+                    const url = URL.createObjectURL(blob);
+                    setDownloadUrl(url);
+                    setProcessing(false);
+                    document.body.removeChild(container);
+                },
+                x: 0,
+                y: 0,
+                html2canvas: {
+                    scale: 0.75, // Adjust scale to fit content properly
+                    useCORS: true,
+                    logging: false,
+                    letterRendering: true
+                },
+                width: 595, // A4 width in points
+                windowWidth: 794,
+                autoPaging: 'text' // Better for text-heavy Word docs
             });
 
-            const blob = pdf.output('blob');
-            const url = URL.createObjectURL(blob);
-            setDownloadUrl(url);
-        } catch (e) {
-            setError(e instanceof Error ? e.message : 'Failed to convert Word to PDF');
-        } finally {
+        } catch (e: any) {
+            console.error(e);
+            setError(e.message || 'Failed to convert Word to PDF');
             setProcessing(false);
         }
     };
@@ -133,62 +165,72 @@ export function WordToPdf() {
                         accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                         className="hidden"
                         onChange={(e) => {
-                            if (e.target.files && e.target.files[0]) {
+                            if (e.target.files?.[0]) {
                                 handleFileSelect(e.target.files[0]);
                             }
                         }}
                     />
                 </div>
             ) : (
-                <div className="bg-card rounded-2xl border-2 border-border p-6">
-                    <div className="flex items-center justify-between mb-4">
+                <div className="bg-card rounded-2xl border border-border p-6 shadow-sm">
+                    <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-3">
-                            <FileText className="text-primary" size={24} />
+                            <div className="p-2 bg-primary/10 rounded-lg">
+                                <FileText className="text-primary" size={24} />
+                            </div>
                             <div>
-                                <p className="font-bold text-foreground">{file.name}</p>
-                                <p className="text-xs text-muted-foreground">
+                                <p className="font-bold text-foreground leading-tight">{file.name}</p>
+                                <p className="text-xs text-muted-foreground mt-1">
                                     {(file.size / 1024 / 1024).toFixed(2)} MB
                                 </p>
                             </div>
                         </div>
                         <button
                             onClick={handleClear}
-                            className="p-2 hover:bg-muted rounded-lg transition-colors"
+                            className="p-2 hover:bg-muted rounded-full transition-colors"
                         >
                             <X size={20} />
                         </button>
                     </div>
-                    
-                    {!downloadUrl && (
-                        <button
-                            onClick={processWord}
-                            disabled={processing}
-                            className={cn(
-                                "w-full py-3 px-6 rounded-xl font-bold text-sm transition-all",
-                                processing
-                                    ? "bg-muted text-muted-foreground cursor-not-allowed"
-                                    : "bg-primary text-primary-foreground hover:bg-primary/90"
-                            )}
-                        >
-                            {processing ? 'Processing...' : 'Convert to PDF'}
-                        </button>
+
+                    {!downloadUrl && !processing && (
+                        <div className="py-12 text-center">
+                            <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto mb-4" />
+                            <p className="text-muted-foreground animate-pulse">Initializing conversion...</p>
+                        </div>
+                    )}
+
+                    {processing && (
+                        <div className="py-10 text-center space-y-4">
+                            <div className="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto" />
+                            <div>
+                                <h3 className="font-bold text-lg">Converting to PDF...</h3>
+                                <p className="text-sm text-muted-foreground">Preserving document layout and styles</p>
+                            </div>
+                        </div>
                     )}
 
                     {downloadUrl && (
-                        <div className="space-y-4">
-                            <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 flex items-center gap-3">
-                                <CheckCircle2 className="text-emerald-500" size={24} />
-                                <div className="flex-1">
-                                    <p className="font-bold text-emerald-500">Conversion Complete!</p>
-                                    <p className="text-xs text-muted-foreground">Your PDF document is ready to download.</p>
+                        <div className="space-y-5 animate-in fade-in zoom-in duration-300">
+                            <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-5 flex items-center gap-4">
+                                <CheckCircle2 className="text-emerald-600" size={28} />
+                                <div>
+                                    <p className="font-bold text-emerald-700">Conversion Complete!</p>
+                                    <p className="text-sm text-muted-foreground">Your PDF is ready for download</p>
                                 </div>
                             </div>
                             <button
                                 onClick={handleDownload}
-                                className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                                className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold text-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-3 shadow-md"
                             >
-                                <Download size={20} />
+                                <Download size={24} />
                                 {tActions('download') || 'Download PDF'}
+                            </button>
+                            <button
+                                onClick={handleClear}
+                                className="text-muted-foreground hover:text-foreground text-sm underline w-full"
+                            >
+                                Convert another file
                             </button>
                         </div>
                     )}

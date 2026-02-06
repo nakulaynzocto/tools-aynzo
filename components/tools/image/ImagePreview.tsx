@@ -2,6 +2,7 @@
 import { cn } from '@/utils/cn';
 import { ProcessedFile } from '@/components/types/image/types';
 
+
 interface ImagePreviewProps {
     files: ProcessedFile[];
     selectedFileId: string | null;
@@ -11,6 +12,7 @@ interface ImagePreviewProps {
     originalSize?: string;
     processedSize?: string;
     children?: React.ReactNode;
+    mobilePreview?: boolean;
 }
 
 export function ImagePreview({
@@ -22,12 +24,13 @@ export function ImagePreview({
     originalSize,
     processedSize,
     children,
+    mobilePreview = false,
 }: ImagePreviewProps) {
     const selectedFile = files.find(f => f.id === selectedFileId) || files[0];
 
     return (
         <div className={cn(
-            "flex-1 bg-gradient-to-br from-muted/20 to-muted/5 p-3 sm:p-4 lg:p-6 rounded-3xl border-2 border-border shadow-inner relative flex flex-col min-h-[200px] sm:min-h-[300px] overflow-hidden",
+            "flex-1 bg-gradient-to-br from-muted/20 to-muted/5 p-3 sm:p-4 lg:p-6 rounded-3xl border-2 border-border shadow-inner relative flex flex-col lg:min-h-[300px] overflow-hidden",
             className
         )}>
             {showComparison && originalSize && processedSize && (
@@ -44,7 +47,8 @@ export function ImagePreview({
             )}
 
             <div className={cn(
-                "flex-1 relative rounded-2xl overflow-hidden checkered-bg border-2 border-border shadow-lg flex items-center justify-center",
+                "flex-1 relative rounded-2xl overflow-hidden checkered-bg border-2 border-border shadow-lg items-center justify-center",
+                mobilePreview ? "flex" : "hidden lg:flex",
                 files.length > 4 ? "max-h-[400px] sm:max-h-[500px] lg:max-h-[600px] overflow-y-auto" : "max-h-none"
             )}>
                 {previewUrl ? (

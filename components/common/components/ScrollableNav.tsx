@@ -105,8 +105,7 @@ export function ScrollableNav({ items, activeToolId }: ScrollableNavProps) {
                                                 <tool.icon size={12} className="sm:w-[14px] sm:h-[14px]" />
                                             )
                                         )}
-                                        <span className="hidden sm:inline">{tool.label}</span>
-                                        <span className="sm:hidden">{tool.label.split(' ')[0]}</span>
+                                        <span className="">{tool.label}</span>
                                     </Link>
                                 ))}
                             </div>

@@ -3,6 +3,7 @@ import { Upload } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 
+
 interface FileUploadAreaProps {
     dragActive: boolean;
     onDrag: (e: React.DragEvent) => void;
@@ -12,6 +13,7 @@ interface FileUploadAreaProps {
     multiple?: boolean;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     children?: React.ReactNode;
+    isLoading?: boolean;
 }
 
 export function FileUploadArea({
@@ -23,6 +25,7 @@ export function FileUploadArea({
     multiple = false,
     onChange,
     children,
+    isLoading = false,
 }: FileUploadAreaProps) {
     const tActions = useTranslations('ToolActions');
     const t = useTranslations('Common');
@@ -34,7 +37,7 @@ export function FileUploadArea({
             onDragLeave={onDrag}
             onDrop={onDrop}
             className={cn(
-                "bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden transition-all",
+                "bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden transition-all relative",
                 dragActive ? "border-primary bg-accent/5" : ""
             )}
         >
@@ -47,12 +50,21 @@ export function FileUploadArea({
                 <div className="relative z-10 text-center">
                     <button
                         onClick={onFileSelect}
-                        className="px-4 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-3 md:py-4 lg:py-6 bg-primary text-primary-foreground dark:bg-gradient-to-r dark:from-sky-500 dark:to-blue-600 dark:border-none text-base sm:text-lg md:text-xl lg:text-2xl font-black rounded-2xl shadow-[0_20px_40px_-15px_rgba(var(--primary-rgb),0.4)] dark:shadow-[0_0_30px_-5px_rgba(14,165,233,0.4)] hover:scale-[1.05] hover:shadow-[0_25px_50px_-12px_rgba(var(--primary-rgb),0.5)] dark:hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.5)] active:scale-95 transition-all duration-300"
+                        disabled={isLoading}
+                        className={cn(
+                            "px-4 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-3 md:py-4 lg:py-6 bg-primary text-primary-foreground dark:bg-gradient-to-r dark:from-sky-500 dark:to-blue-600 dark:border-none text-base sm:text-lg md:text-xl lg:text-2xl font-black rounded-2xl shadow-[0_20px_40px_-15px_rgba(var(--primary-rgb),0.4)] dark:shadow-[0_0_30px_-5px_rgba(14,165,233,0.4)] hover:scale-[1.05] hover:shadow-[0_25px_50px_-12px_rgba(var(--primary-rgb),0.5)] dark:hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.5)] active:scale-95 transition-all duration-300",
+                            isLoading ? "opacity-50 cursor-not-allowed hover:scale-100" : ""
+                        )}
                     >
-                        {tActions('chooseFile')}
+                        {isLoading ? (
+                            <span className="flex items-center gap-2">
+                                <span className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></span>
+                                Processing...
+                            </span>
+                        ) : tActions('chooseFile')}
                     </button>
                     <div className="mt-4 sm:mt-6 text-muted-foreground font-bold text-xs sm:text-sm uppercase tracking-[0.2em] opacity-40">
-                        or drop images here
+                        {isLoading ? 'Please wait...' : 'or drop images here'}
                     </div>
                 </div>
                 {children}
@@ -63,8 +75,16 @@ export function FileUploadArea({
                     className="hidden"
                     accept="image/*"
                     onChange={onChange}
+                    disabled={isLoading}
                 />
             </div>
+
+            {/* Full Overlay for better visibility of loading state */}
+            {isLoading && (
+                <div className="absolute inset-0 z-50 bg-background/50 backdrop-blur-sm flex items-center justify-center">
+                    {/* Spinner is already in the button, but this blocks interactions */}
+                </div>
+            )}
         </div>
     );
 }

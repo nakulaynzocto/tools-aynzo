@@ -116,7 +116,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
                 // Final update after all processing is complete - ensure new array reference
                 const newFiles = updated.map(f => ({ ...f }));
                 setFiles(newFiles);
-                
+
                 // Create preview URL from processed result
                 const processedFile = newFiles.find(f => f.id === selectedFileId) || newFiles[0];
                 if (processedFile?.resultBlob) {
@@ -131,7 +131,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
                         setPreviewUrl(processedFile.resultBlob);
                     }
                 }
-                
+
                 // Auto-download only if explicitly requested (button click)
                 if (autoDownload) {
                     await downloadResults(newFiles, type, false);
@@ -169,7 +169,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
 
     const selectedFile = files.find(f => f.id === selectedFileId) || files[0];
     const originalSize = selectedFile?.file ? (selectedFile.file.size / 1024).toFixed(1) : '0';
-    
+
     // Calculate processed size - ensure it's always a valid number
     let processedSize = '0';
     if (selectedFile?.resultSize && selectedFile.resultSize > 0) {
@@ -230,6 +230,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
                                     showComparison={type !== 'image-cropper'}
                                     originalSize={originalSize}
                                     processedSize={processedSize}
+                                    mobilePreview={true}
                                 />
                             )}
                         </div>
@@ -260,7 +261,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
                                     <span className="text-xs font-bold text-primary uppercase tracking-wider">{tActions('processing')}</span>
                                 </div>
                             )}
-                            
+
                             {/* For cropper, show process button. For others, show download after processing */}
                             {type === 'image-cropper' ? (
                                 <button

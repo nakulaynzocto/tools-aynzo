@@ -6,6 +6,7 @@ export const useImageFileUpload = () => {
     const [files, setFiles] = useState<ProcessedFile[]>([]);
     const [dragActive, setDragActive] = useState(false);
     const [selectedFileId, setSelectedFileId] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     // Set default selection when files are added
     useEffect(() => {
@@ -16,26 +17,65 @@ export const useImageFileUpload = () => {
         }
     }, [files, selectedFileId]);
 
-    const addFiles = (fileList: FileList) => {
-        const newBatch: ProcessedFile[] = Array.from(fileList)
-            .filter(f => f.type.startsWith('image/'))
-            .map(f => ({
-                id: uuidv4(),
-                file: f,
-                status: 'pending' as const,
-                preview: URL.createObjectURL(f),
-            }));
+    const addFiles = async (fileList: FileList) => {
+        setIsLoading(true);
+        const fileArray = Array.from(fileList);
+        const newBatch: ProcessedFile[] = [];
 
-        if (newBatch.length === 0) return;
+        try {
+            for (const file of fileArray) {
+                const isHeic = file.type === 'image/heic' ||
+                    file.type === 'image/heif' ||
+                    file.name.toLowerCase().endsWith('.heic') ||
+                    file.name.toLowerCase().endsWith('.heif');
 
-        setFiles(prev => {
-            const existing = prev;
-            const combined = [...existing, ...newBatch];
-            return combined;
-        });
+                if (isHeic) {
+                    try {
+                        const heic2any = (await import('heic2any')).default;
+                        const convertedBlob = await heic2any({
+                            blob: file,
+                            toType: 'image/jpeg',
+                            quality: 0.9
+                        });
 
-        if (!selectedFileId && newBatch.length > 0) {
-            setSelectedFileId(newBatch[0].id);
+                        const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
+                        const newFile = new File([blob], file.name.replace(/\.(heic|heif)$/i, '.jpg'), {
+                            type: 'image/jpeg',
+                            lastModified: new Date().getTime()
+                        });
+
+                        newBatch.push({
+                            id: uuidv4(),
+                            file: newFile,
+                            status: 'pending',
+                            preview: URL.createObjectURL(newFile),
+                        });
+                    } catch (error) {
+                        console.error('HEIC conversion failed:', error);
+                    }
+                } else if (file.type.startsWith('image/')) {
+                    newBatch.push({
+                        id: uuidv4(),
+                        file: file,
+                        status: 'pending',
+                        preview: URL.createObjectURL(file),
+                    });
+                }
+            }
+
+            if (newBatch.length > 0) {
+                setFiles(prev => {
+                    const existing = prev;
+                    const combined = [...existing, ...newBatch];
+                    return combined;
+                });
+
+                if (!selectedFileId && newBatch.length > 0) {
+                    setSelectedFileId(newBatch[0].id);
+                }
+            }
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -68,5 +108,6 @@ export const useImageFileUpload = () => {
         addFiles,
         removeFile,
         clearAll,
+        isLoading,
     };
 };

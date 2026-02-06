@@ -27,6 +27,7 @@ export function ImageOptimizeTools({ type }: ImageOptimizeToolsProps) {
         addFiles,
         removeFile,
         clearAll,
+        isLoading,
     } = useImageFileUpload();
 
     const [processing, setProcessing] = useState(false);
@@ -62,7 +63,7 @@ export function ImageOptimizeTools({ type }: ImageOptimizeToolsProps) {
                 // Final update after all processing is complete - ensure new array reference
                 const newFiles = updated.map(f => ({ ...f }));
                 setFiles(newFiles);
-                
+
                 // Create preview URL from processed result
                 const processedFile = newFiles.find(f => f.id === selectedFileId) || newFiles[0];
                 if (processedFile?.resultBlob) {
@@ -185,17 +186,17 @@ export function ImageOptimizeTools({ type }: ImageOptimizeToolsProps) {
     // Handle percentage resize (always maintains aspect ratio)
     const handlePercentageResize = (percent: number) => {
         if (!originalImageDimensions) return;
-        
+
         const newWidth = Math.round((originalImageDimensions.width * percent) / 100);
         const newHeight = Math.round((originalImageDimensions.height * percent) / 100);
-        
+
         setWidth(newWidth);
         setHeight(newHeight);
     };
 
     const selectedFile = files.find(f => f.id === selectedFileId) || files[0];
     const originalSize = selectedFile?.file ? (selectedFile.file.size / 1024).toFixed(1) : '0';
-    
+
     // Calculate processed size - ensure it's always a valid number
     let processedSize = '0';
     if (selectedFile?.resultSize && selectedFile.resultSize > 0) {
@@ -220,6 +221,7 @@ export function ImageOptimizeTools({ type }: ImageOptimizeToolsProps) {
                     inputId="image-input"
                     multiple={true}
                     onChange={(e) => e.target.files && addFiles(e.target.files)}
+                    isLoading={isLoading}
                 />
             ) : (
                 <>
@@ -240,13 +242,13 @@ export function ImageOptimizeTools({ type }: ImageOptimizeToolsProps) {
                                             key={file.id}
                                             className={cn(
                                                 "relative flex-shrink-0 w-24 h-24 rounded-lg border-2 overflow-hidden cursor-pointer transition-all group",
-                                                isSelected 
-                                                    ? "border-primary ring-2 ring-primary/20 scale-105" 
+                                                isSelected
+                                                    ? "border-primary ring-2 ring-primary/20 scale-105"
                                                     : "border-border hover:border-primary/50"
                                             )}
                                         >
-                                            <img 
-                                                src={file.preview} 
+                                            <img
+                                                src={file.preview}
                                                 alt={`Image ${file.id}`}
                                                 onClick={() => setSelectedFileId(file.id)}
                                                 className="w-full h-full object-cover"
@@ -338,7 +340,7 @@ export function ImageOptimizeTools({ type }: ImageOptimizeToolsProps) {
                                     <span className="text-xs font-bold text-primary uppercase tracking-wider">{tActions('processing')}</span>
                                 </div>
                             )}
-                            
+
                             {selectedFile?.resultBlob && selectedFile?.resultSize && selectedFile.resultSize > 0 && !processing && (
                                 <button
                                     onClick={async () => {

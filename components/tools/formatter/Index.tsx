@@ -10,7 +10,7 @@ import { useTranslations } from 'next-intl';
 export default function FormatterToolsIndex({ type }: FormatterToolProps) {
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
-    
+
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [mode, setMode] = useState<'beautify' | 'minify'>('beautify');
@@ -91,10 +91,10 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
     const csvToJSON = useCallback((csv: string): string => {
         const lines = csv.trim().split('\n');
         if (lines.length === 0) return '[]';
-        
+
         const headers = lines[0].split(',').map(h => h.trim());
         const result = [];
-        
+
         for (let i = 1; i < lines.length; i++) {
             const values = lines[i].split(',').map(v => v.trim());
             const obj: any = {};
@@ -103,7 +103,7 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
             });
             result.push(obj);
         }
-        
+
         return JSON.stringify(result, null, 2);
     }, []);
 
@@ -113,10 +113,10 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
             if (!Array.isArray(data) || data.length === 0) {
                 throw new Error('JSON must be an array of objects');
             }
-            
+
             const headers = Object.keys(data[0]);
             let csv = headers.join(',') + '\n';
-            
+
             data.forEach((row: any) => {
                 const values = headers.map(header => {
                     const value = row[header] ?? '';
@@ -128,7 +128,7 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
                 });
                 csv += values.join(',') + '\n';
             });
-            
+
             return csv.trim();
         } catch (e: any) {
             throw new Error('Invalid JSON format. Expected an array of objects.');
@@ -145,15 +145,15 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
 
     const handleDownload = () => {
         if (output) {
-            const extension = type.includes('html') ? 'html' : 
-                             type.includes('css') ? 'css' : 
-                             type.includes('javascript') ? 'js' : 
-                             type.includes('xml') ? 'xml' : 
-                             type.includes('sql') ? 'sql' : 
-                             type.includes('markdown') ? 'md' : 
-                             type.includes('json') ? 'json' : 
-                             type.includes('csv') ? 'csv' : 'txt';
-            
+            const extension = type.includes('html') ? 'html' :
+                type.includes('css') ? 'css' :
+                    type.includes('javascript') ? 'js' :
+                        type.includes('xml') ? 'xml' :
+                            type.includes('sql') ? 'sql' :
+                                type.includes('markdown') ? 'md' :
+                                    type.includes('json') ? 'json' :
+                                        type.includes('csv') ? 'csv' : 'txt';
+
             const blob = new Blob([output], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -223,23 +223,23 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
                             <div className="flex items-center justify-between">
                                 <label className="text-sm font-bold">Output</label>
                                 <div className="flex gap-2">
-                                    <button 
-                                        onClick={handleCopy} 
+                                    <button
+                                        onClick={handleCopy}
                                         disabled={!output}
-                                        className={cn("p-2 rounded-lg transition-all", 
-                                            copied ? "bg-emerald-500 text-white" : 
-                                            output ? "bg-muted hover:bg-primary hover:text-primary-foreground" : 
-                                            "bg-muted/50 text-muted-foreground cursor-not-allowed"
+                                        className={cn("p-2 rounded-lg transition-all",
+                                            copied ? "bg-emerald-500 text-white" :
+                                                output ? "bg-muted hover:bg-primary hover:text-primary-foreground" :
+                                                    "bg-muted/50 text-muted-foreground cursor-not-allowed"
                                         )}
                                     >
                                         {copied ? <CheckCircle2 className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                                     </button>
-                                    <button 
-                                        onClick={handleDownload} 
+                                    <button
+                                        onClick={handleDownload}
                                         disabled={!output}
                                         className={cn("p-2 rounded-lg transition-all",
-                                            output ? "bg-muted hover:bg-primary hover:text-primary-foreground" : 
-                                            "bg-muted/50 text-muted-foreground cursor-not-allowed"
+                                            output ? "bg-muted hover:bg-primary hover:text-primary-foreground" :
+                                                "bg-muted/50 text-muted-foreground cursor-not-allowed"
                                         )}
                                     >
                                         <Download className="h-4 w-4" />

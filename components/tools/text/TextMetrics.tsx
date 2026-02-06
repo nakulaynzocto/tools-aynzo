@@ -15,7 +15,7 @@ export function TextMetrics({ stats }: TextMetricsProps) {
             <h3 className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-1.5 sm:gap-2">
                 <Activity size={10} className="sm:w-3 sm:h-3 text-primary" /> Metrics
             </h3>
-            <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+            <div className="grid grid-cols-2 gap-2 sm:gap-2">
                 {[
                     { label: t('words'), value: stats.words, icon: FileText, color: 'text-blue-400' },
                     { label: t('characters'), value: stats.chars, icon: Type, color: 'text-indigo-400' },

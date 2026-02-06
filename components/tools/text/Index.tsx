@@ -41,7 +41,7 @@ export default function TextToolsIndex({ type, hideNavigation = false }: TextToo
     // Auto-apply tool-specific transformations
     const getProcessedInput = () => {
         if (!input) return input;
-        
+
         switch (type) {
             case 'remove-line-breaks':
                 return transformText(input, 'remove-line-breaks');
@@ -95,8 +95,8 @@ export default function TextToolsIndex({ type, hideNavigation = false }: TextToo
     return (
         <div className="max-w-6xl mx-auto space-y-3 sm:space-y-4 px-2 sm:px-4 animate-in fade-in duration-500">
             {!hideNavigation && <ScrollableNav items={textNavTools} activeToolId={type} />}
-            <div className="grid lg:grid-cols-[1fr,300px] gap-4 sm:gap-6 items-stretch lg:h-[480px] h-auto">
-                <div className="flex flex-col h-full min-h-0 order-2 lg:order-1">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr,300px] gap-4 sm:gap-6 items-start lg:min-h-[480px]">
+                <div className="flex flex-col min-h-[300px] lg:h-full order-2 lg:order-1">
                     <TextEditor
                         input={type === 'remove-line-breaks' || type === 'reverse-text' ? displayInput : input}
                         setInput={setInput}
@@ -125,7 +125,7 @@ export default function TextToolsIndex({ type, hideNavigation = false }: TextToo
                         toolType={type}
                     />
                 </div>
-                <div className="flex flex-col gap-3 sm:gap-4 h-full min-h-0 overflow-y-auto no-scrollbar pr-1 order-1 lg:order-2">
+                <div className="flex flex-col gap-3 sm:gap-4 order-1 lg:order-2">
                     <TextMetrics stats={type === 'word-counter' || type === 'character-counter' ? processedStats.stats : stats} />
                     {(type === 'text-case-converter' || type === 'word-counter' || type === 'character-counter') && (
                         <TextFindReplace
