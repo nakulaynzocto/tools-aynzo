@@ -89,14 +89,20 @@ export default function Home({ params: { locale } }: { params: { locale: string 
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary opacity-[0.03]"></div>
 
         <div className="relative z-10 w-full px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight text-foreground">
-            {t('title')}
+          <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-none">
+            <span className="text-foreground">Aynzo</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent ml-4">
+              Tools
+            </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
             {t('description')}
-            <br className="hidden md:block" />
-            {t('noAds')}
           </p>
+          <div className="mt-8 flex items-center justify-center gap-2 text-primary font-bold tracking-widest uppercase text-xs">
+            <span className="w-8 h-px bg-primary/30"></span>
+            {t('noAds')}
+            <span className="w-8 h-px bg-primary/30"></span>
+          </div>
         </div>
       </section>
 

@@ -14,8 +14,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     metadataBase: new URL('https://tools.aynzo.com'),
     title: {
-      template: '%s | AYNZO TOOLS',
-      default: 'AYNZO TOOLS - Free Text, Image, Dev & Security Tools',
+      template: 'Aynzo — %s',
+      default: 'Aynzo | The All-in-One Professional Online Tools Suite',
     },
     description: "Professional online tools for developers and content creators. Free text tools, image compressor, JSON formatter, password generator, and more. Fast, secure, and easy to use.",
     keywords: "aynzo tools, online tools, text tools, image compressor, JSON formatter, password generator, URL encoder, word counter, character counter, developer tools, free tools",

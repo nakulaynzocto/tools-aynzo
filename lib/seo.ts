@@ -12,7 +12,7 @@ interface ToolSEO {
 export const toolSEO: { [key: string]: ToolSEO } = {
     // === EXISTING TOOLS ===
     'word-counter': {
-        title: 'Word Counter Free Online - Count Words Characters',
+        title: 'Word Counter | Online Word & Character Count Tool',
         description: 'Count words, characters, sentences online free. Real-time analysis with reading time. No login, fast, secure. Perfect for writers and students.',
         keywords: 'word counter free, character counter online, word count tool, essay word count, reading time calculator, real time word count',
         h1: 'Word Counter Free Online: Count Words & Characters Instantly',
@@ -93,7 +93,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'character-counter': {
-        title: 'Character Counter Free Online - Count characters with/without spaces',
+        title: 'Character Counter | Count Characters & Words Instantly',
         description: 'Free character counter online. Count characters with and without spaces, words, sentences instantly. Ideal for Twitter, SMS, and meta descriptions.',
         keywords: 'character counter, count characters, character count online, text character counter, character counter with spaces, character count online free',
         h1: 'Character Counter Online (100% Free)',
@@ -132,7 +132,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'text-case-converter': {
-        title: 'Text Case Converter Free Online - Convert text case',
+        title: 'Text Case Converter | Change Uppercase & Lowercase Online',
         description: 'Convert text case online instantly. Switch between uppercase, lowercase, title case, sentence case, and alternating case. Free, fast, and secure text transformer.',
         keywords: 'case converter, text converter, uppercase to lowercase, title case converter, sentence case, text transformer',
         h1: 'Online Text Case Converter',
@@ -183,7 +183,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'json-formatter': {
-        title: 'JSON Formatter Free - Format, beautify, validate JSON Code',
+        title: 'JSON Formatter | Beautify, Validate & Minify JSON Online',
         description: 'Master JSON data with our 1200+ word guide. Learn to validate, beautify, and minify JSON instantly. 100% private, browser-based JSON formatter for developers.',
         keywords: 'json formatter, json validator, beautify json online, fix json syntax, json parser, online json editor, minify json, format json string',
         h1: 'JSON Formatter & Validator: The Complete Guide to Data Optimization',
@@ -516,7 +516,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'strikethrough-text': {
-        title: 'Strikethrough Text Free Online - Use Strikethrough Text',
+        title: 'Strikethrough Text Generator | Cross Out Text Online',
         description: 'Generate strikethrough text for Instagram, Facebook, and Twitter. Easily cross out text and copy-paste it anywhere with our free online strike text maker.',
         keywords: 'strikethrough text generator, cross out text, strike text generator, line through text, instagram strikethrough, strikethrough generator online',
         h1: 'Strikethrough Text Generator (C̶r̶o̶s̶s̶ ̶O̶u̶t̶)',
