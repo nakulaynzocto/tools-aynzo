@@ -462,7 +462,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
     },
     // === ADVANCED TEXT TOOLS ===
     'italic-text': {
-        title: 'Italic Text Generator Free Online - Use Italic Text Generator',
+        title: 'Italic Text Generator | Convert Text to Fancy Cursive Italic',
         description: 'Generate fancy italic text for Instagram bio, Twitter, and TikTok. Copy and paste italic letters instantly with our free Unicode italic font generator.',
         keywords: 'italic text generator, italic font, fancy italic text, instagram bio font, italic text for instagram, copy paste italics, unicode italic text',
         h1: 'Italic Text Generator (𝒞𝑜𝓅𝓎 & 𝒫𝒶𝓈𝓉𝑒)',
@@ -588,7 +588,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'small-text': {
-        title: 'Small Text Generator Free Online - Use Small Text Generator',
+        title: 'Small Text Generator | Create Tiny Superscript & Subscript Font',
         description: 'Generate tiny text (subscript/superscript) for social media bios and usernames.',
         keywords: 'small text generator, tiny text, subscript generator, superscript generator, tiny font',
         h1: 'Small Text Generator (ˢᵐᵃˡˡ ᵗᵉˣᵗ)',
@@ -625,7 +625,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'upside-down-text': {
-        title: 'Upside Down Text Free Online - Use Upside Down Text',
+        title: 'Upside Down Text Generator | Flip & Rotate Text 180° Online',
         description: 'Flip your text upside down instantly. Copy and paste flipped text.',
         keywords: 'upside down text, flip text, rotate text 180, reverse text, upside down font',
         h1: 'Upside Down Text Generator (dᴉlℲ)',
@@ -656,7 +656,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'mirror-text': {
-        title: 'Mirror Text Generator Free Online - Use Mirror Text Generator',
+        title: 'Mirror Text Generator | Create Reverse Reflected Text Online',
         description: 'Create mirrored text reflection instantly. Flip text horizontally (mirror writing) for Instagram, TikTok, and creative designs. Free mirror text maker.',
         keywords: 'mirror text generator, mirror text, reverse text reflection, mirror writing generator, backwards text, mirrored text',
         h1: 'Mirror Text Generator (ɿoɿɿiM)',
@@ -3014,7 +3014,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'bold-text': {
-        title: 'Bold Text Generator Free Online - Use Bold Text Generator',
+        title: 'Bold Text Generator | Create Heavy & Bold Fonts for Social Media',
         description: 'Free bold text generator using Unicode. Create bold text for Instagram, Facebook, Twitter, WhatsApp. Copy and paste bold letters instantly.',
         keywords: 'bold text generator, bold text, make text bold, bold letters, unicode bold text, bold font generator',
         h1: 'Bold Text Generator',
