@@ -61,7 +61,10 @@ export function PdfToWord() {
                 if (i === 1) isLandscape = viewport.width > viewport.height;
                 const textContent = await page.getTextContent();
                 // Don't trim here, we need the spaces if they are separate items
-                const items = textContent.items.filter((item: any) => 'str' in item);
+                // Type guard to filter only TextItem objects (not TextMarkedContent)
+                type TextItem = any; // The actual type from pdfjs-dist
+                const isTextItem = (item: any): item is TextItem => 'str' in item && 'transform' in item;
+                const items = textContent.items.filter(isTextItem);
 
                 if (items.length === 0 && pdf.numPages === 1) {
                     setError('No selectable text found in this PDF.');
@@ -70,7 +73,7 @@ export function PdfToWord() {
                 }
 
                 // Sort by Y (top to bottom) then X (left to right)
-                items.sort((a: any, b: any) => b.transform[5] - a.transform[5] || a.transform[4] - b.transform[4]);
+                items.sort((a, b) => b.transform[5] - a.transform[5] || a.transform[4] - b.transform[4]);
 
                 let currentLine: any[] = [];
                 let lastY = items[0]?.transform[5] ?? 0;
