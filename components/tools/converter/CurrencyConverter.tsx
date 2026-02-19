@@ -164,7 +164,7 @@ const currencies = [
 ];
 
 export function CurrencyConverter() {
-    const t = useTranslations('Common');
+    const t = useTranslations('CurrencyConverter');
     const [fromCurrency, setFromCurrency] = useState('USD');
     const [toCurrency, setToCurrency] = useState('EUR');
     const [amount, setAmount] = useState('');
@@ -189,10 +189,10 @@ export function CurrencyConverter() {
                 setRate(data.rates[toCurrency]);
                 setLastUpdate(new Date());
             } else {
-                setError('Exchange rate not available');
+                setError(t('errorUnavailable'));
             }
         } catch (e) {
-            setError('Failed to fetch exchange rate');
+            setError(t('errorFetch'));
         } finally {
             setLoading(false);
         }
@@ -224,7 +224,7 @@ export function CurrencyConverter() {
                 <div className="bg-primary/10 border border-primary/20 rounded-xl p-4">
                     <div className="flex items-center justify-between">
                         <div>
-                            <div className="text-xs font-black uppercase tracking-widest text-primary mb-1">Exchange Rate</div>
+                            <div className="text-xs font-black uppercase tracking-widest text-primary mb-1">{t('exchangeRate')}</div>
                             <div className="text-2xl font-black text-primary">
                                 1 {fromCurrency} = {rate.toFixed(4)} {toCurrency}
                             </div>
@@ -235,12 +235,12 @@ export function CurrencyConverter() {
                             className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-bold hover:bg-primary/90 disabled:opacity-50 transition-all flex items-center gap-2"
                         >
                             <RefreshCw size={16} className={loading ? 'animate-spin' : ''} />
-                            Refresh
+                            {t('refresh')}
                         </button>
                     </div>
                     {lastUpdate && (
                         <div className="text-xs text-muted-foreground mt-2">
-                            Last updated: {lastUpdate.toLocaleTimeString()}
+                            {t('lastUpdated', { time: lastUpdate.toLocaleTimeString() })}
                         </div>
                     )}
                 </div>
@@ -258,7 +258,7 @@ export function CurrencyConverter() {
                     {/* From */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">From</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{t('from')}</label>
                             <select
                                 value={fromCurrency}
                                 onChange={(e) => setFromCurrency(e.target.value)}
@@ -275,7 +275,7 @@ export function CurrencyConverter() {
                             type="number"
                             value={amount}
                             onChange={(e) => setAmount(e.target.value)}
-                            placeholder="Enter amount"
+                            placeholder={t('amountPlaceholder')}
                             className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-2xl font-black text-foreground focus:border-primary focus:outline-none"
                         />
                     </div>
@@ -283,7 +283,7 @@ export function CurrencyConverter() {
                     {/* To */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">To</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{t('to')}</label>
                             <select
                                 value={toCurrency}
                                 onChange={(e) => setToCurrency(e.target.value)}

@@ -322,10 +322,10 @@
         "word-counter": {
             "name": "Word Counter",
             "description": "Calculate words, characters, and reading time in real-time.",
-            "seoTitle": "Word Counter Free Online - Count words, characters, sentences",
-            "seoDescription": "Count words, characters, sentences online free. Real-time analysis with reading time. No login, fast, secure. Perfect for writers and students.",
-            "seoKeywords": "word counter free, character counter online, word count tool, essay word count, reading time calculator, real time word count",
-            "seoH1": "Word Counter Free: Count words, characters, sentences"
+            "seoTitle": "Word Counter - Free Online Word Count Tool & Character Checker",
+            "seoDescription": "Best free word counter online. Instant word count checker, character counter, and essay word counter. Calculate words, sentences, and paragraphs in real-time.",
+            "seoKeywords": "word count, word counter, word count online, word counter free, word count checker, word count calculator, text word counter, online word counter, essay word counter, character count, words calculator",
+            "seoH1": "Word Counter: Free Online Word & Character Count Tool"
         },
         "character-counter": {
             "name": "Character Counter",
@@ -959,6 +959,14 @@
             "seoKeywords": "percentage-calculator, free percentage calculator, percentage calculator tool",
             "seoH1": "Percentage Calculator Free: Use Percentage Calculator"
         },
+        "currency-converter": {
+            "name": "Currency Converter",
+            "description": "Convert between 150+ world currencies with real-time exchange rates.",
+            "seoTitle": "Currency Converter Free Online - Real-time Exchange Rates",
+            "seoDescription": "Convert currencies online free. Real-time exchange rates for 150+ currencies. No login, fast, accurate. Perfect for travel and business.",
+            "seoKeywords": "currency converter free, exchange rate calculator, foreign exchange rates, convert money online, currency exchange tool",
+            "seoH1": "Currency Converter Free: Real-time Exchange Rates"
+        },
         "gst-calculator": {
             "name": "GST Calculator",
             "description": "Calculate GST amount and total price.",
@@ -1050,7 +1058,8 @@
         "input": "Input",
         "reset": "Reset",
         "shareThisTool": "Share this tool",
-        "copyLink": "Copy Link"
+        "copyLink": "Copy Link",
+        "pleaseWait": "Please wait..."
     },
     "NavbarCategories": {
         "Image Tools": "Image Tools",
@@ -1115,7 +1124,24 @@
         "boldText": "Bold Text",
         "cursiveText": "Cursive Text",
         "doubleUnderline": "Double Underline",
-        "textTool": "Text Tool"
+        "textTool": "Text Tool",
+        "uppercaseShort": "UPPER",
+        "lowercaseShort": "lower",
+        "titleCaseShort": "Title",
+        "sentenceCaseShort": "Sentence",
+        "cleanSpacesShort": "Clean",
+        "removeLineBreaksShort": "Breaks",
+        "reverseTextShort": "Rev"
+    },
+    "CurrencyConverter": {
+        "from": "From",
+        "to": "To",
+        "amountPlaceholder": "Enter amount",
+        "exchangeRate": "Exchange Rate",
+        "refresh": "Refresh",
+        "lastUpdated": "Last updated: {time}",
+        "errorUnavailable": "Exchange rate not available",
+        "errorFetch": "Failed to fetch exchange rate"
     },
     "YouTubeTools": {
         "analyze": "Analyze",
@@ -1146,6 +1172,17 @@
         "resultsPlaceholder": "Results will appear here",
         "duration": "Duration",
         "embedCode": "Embed Code"
+    },
+    "CalculatorNav": {
+        "healthLife": "Health & Life",
+        "finance": "Finance",
+        "math": "Math",
+        "age": "Age",
+        "bmi": "BMI",
+        "gst": "GST",
+        "emi": "EMI",
+        "discount": "Discount",
+        "percentage": "Percentage"
     },
     "Footer": {
         "topCategories": "Top Categories",
@@ -1185,6 +1222,41 @@
         "filesSelected": "{count} files selected",
         "pasteBase64": "Paste Base64",
         "batchReady": "Ready"
+    },
+    "TextToolContent": {
+        "word-counter": {
+            "title": "Free Online Word Counter & Character Count Tool",
+            "intro": "Our **Word Counter** is a free, real-time tool to count words, characters, sentences, and paragraphs. Perfect for writers, students, and professionals who need to check their text length instantly.",
+            "howToUseTitle": "How to Use the Word Count Calculator",
+            "howToUseSteps": [
+                "Paste or type your text into the input box.",
+                "The tool will automatically calculate the word count and character count.",
+                "Check detailed metrics like sentence count, paragraph count, and reading time.",
+                "Use the 'Copy' or 'Download' buttons to save your work."
+            ],
+            "featuresTitle": "Key Features of Our Word Counter Checker",
+            "features": [
+                "**Instant Calculation:** Results appear immediately as you type.",
+                "**Essay Word Counter:** Ideal for checking essay length requirements.",
+                "**Character Counter:** Includes spaces and excludes spaces for precise limits (like Twitter/X).",
+                "**100% Free & Secure:** No login required, and your text is processed locally in your browser."
+            ],
+            "faqTitle": "Common Questions (FAQ)",
+            "faq": [
+                {
+                    "q": "How many words is this text?",
+                    "a": "Simply paste your text above, and our tool will tell you exactly how many words, characters, and sentences it contains."
+                },
+                {
+                    "q": "Is this word counter free?",
+                    "a": "Yes, our word counter is completely free to use online with no limits."
+                },
+                {
+                    "q": "Can I use this for essays?",
+                    "a": "Absolutely! This tool is perfect as an essay word counter to ensure you meet your assignment's word count requirements."
+                }
+            ]
+        }
     },
     "ImageGroups": {
         "image-optimize": "Optimize",

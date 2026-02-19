@@ -1,6 +1,7 @@
 "use client";
 import { Calculator, Calendar, Activity, Percent, DollarSign, PieChart } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
+import { useTranslations } from 'next-intl';
 import { CalculatorToolProps } from '@/components/types/calculator/types';
 import { AgeCalculator } from './AgeCalculator';
 import { BMICalculator } from './BMICalculator';
@@ -10,26 +11,28 @@ import { EMICalculator } from './EMICalculator';
 import { DiscountCalculator } from './DiscountCalculator';
 
 export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
+    const t = useTranslations('CalculatorNav');
+
     const calculatorNavTools = [
         {
-            category: 'Health & Life',
+            category: t('healthLife'),
             tools: [
-                { id: 'age-calculator', label: 'Age', icon: Calendar },
-                { id: 'bmi-calculator', label: 'BMI', icon: Activity },
+                { id: 'age-calculator', label: t('age'), icon: Calendar },
+                { id: 'bmi-calculator', label: t('bmi'), icon: Activity },
             ]
         },
         {
-            category: 'Finance',
+            category: t('finance'),
             tools: [
-                { id: 'gst-calculator', label: 'GST', icon: DollarSign },
-                { id: 'emi-calculator', label: 'EMI', icon: PieChart },
-                { id: 'discount-calculator', label: 'Discount', icon: Percent },
+                { id: 'gst-calculator', label: t('gst'), icon: DollarSign },
+                { id: 'emi-calculator', label: t('emi'), icon: PieChart },
+                { id: 'discount-calculator', label: t('discount'), icon: Percent },
             ]
         },
         {
-            category: 'Math',
+            category: t('math'),
             tools: [
-                { id: 'percentage-calculator', label: 'Percentage', icon: Calculator },
+                { id: 'percentage-calculator', label: t('percentage'), icon: Calculator },
             ]
         }
     ];

@@ -17,7 +17,7 @@ interface TextEditorProps {
 
 export function TextEditor({ input, setInput, copied, onCopy, onDownload, onClear, onAction, keywordDensity, toolType }: TextEditorProps) {
     const t = useTranslations('TextTools');
-    
+
     const showTransformButtons = !toolType || toolType === 'text-case-converter' || toolType === 'word-counter' || toolType === 'character-counter';
     const isReadOnly = toolType === 'remove-line-breaks' || toolType === 'reverse-text';
     const showRemoveAndReverse = !toolType || (toolType !== 'remove-line-breaks' && toolType !== 'reverse-text');
@@ -46,31 +46,31 @@ export function TextEditor({ input, setInput, copied, onCopy, onDownload, onClea
                 <div className="px-2 sm:px-4 py-1.5 sm:py-2 border-b border-border bg-muted/10 flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar">
                     <div className="flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 border-r border-border mr-0.5 sm:mr-1 flex-shrink-0">
                         <Sparkles size={10} className="sm:w-3 sm:h-3 text-amber-500" />
-                        <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-muted-foreground whitespace-nowrap">Transform:</span>
+                        <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-muted-foreground whitespace-nowrap">{t('quickTransformers')}:</span>
                     </div>
                     <button onClick={() => onAction('uppercase')} className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[10px] sm:text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1 sm:gap-1.5 touch-manipulation active:scale-95 flex-shrink-0">
-                        <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">UPPERCASE</span><span className="sm:hidden">UPPER</span>
+                        <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">{t('allCaps')}</span><span className="sm:hidden">{t('uppercaseShort')}</span>
                     </button>
                     <button onClick={() => onAction('lowercase')} className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[10px] sm:text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1 sm:gap-1.5 touch-manipulation active:scale-95 flex-shrink-0">
-                        <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">lowercase</span><span className="sm:hidden">lower</span>
+                        <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">{t('lowercase')}</span><span className="sm:hidden">{t('lowercaseShort')}</span>
                     </button>
                     <button onClick={() => onAction('title')} className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[10px] sm:text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1 sm:gap-1.5 touch-manipulation active:scale-95 flex-shrink-0">
-                        <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">Title Case</span><span className="sm:hidden">Title</span>
+                        <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">{t('titleCase')}</span><span className="sm:hidden">{t('titleCaseShort')}</span>
                     </button>
                     <button onClick={() => onAction('sentence')} className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[10px] sm:text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1 sm:gap-1.5 touch-manipulation active:scale-95 flex-shrink-0">
-                        <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">Sentence case</span><span className="sm:hidden">Sentence</span>
+                        <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">{t('sentenceCase')}</span><span className="sm:hidden">{t('sentenceCaseShort')}</span>
                     </button>
                     <div className="w-px h-3 sm:h-4 bg-border mx-0.5 sm:mx-1 flex-shrink-0" />
                     <button onClick={() => onAction('clean-spaces')} className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-border bg-card hover:border-emerald-500/50 hover:bg-emerald-500/5 text-[10px] sm:text-[11px] font-black transition-all flex items-center gap-1 sm:gap-1.5 whitespace-nowrap touch-manipulation active:scale-95 flex-shrink-0">
-                        <Eraser size={10} className="sm:w-3 sm:h-3 text-emerald-500" /> <span className="hidden sm:inline">Clean Spaces</span><span className="sm:hidden">Clean</span>
+                        <Eraser size={10} className="sm:w-3 sm:h-3 text-emerald-500" /> <span className="hidden sm:inline">{t('removeExtraSpaces')}</span><span className="sm:hidden">{t('cleanSpacesShort')}</span>
                     </button>
                     {showRemoveAndReverse && (
                         <>
                             <button onClick={() => onAction('remove-line-breaks')} className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-border bg-card hover:border-rose-500/50 hover:bg-rose-500/5 text-[10px] sm:text-[11px] font-black transition-all flex items-center gap-1 sm:gap-1.5 whitespace-nowrap touch-manipulation active:scale-95 flex-shrink-0">
-                                <MoveVertical size={10} className="sm:w-3 sm:h-3 text-rose-500" /> <span className="hidden sm:inline">No Breaks</span><span className="sm:hidden">Breaks</span>
+                                <MoveVertical size={10} className="sm:w-3 sm:h-3 text-rose-500" /> <span className="hidden sm:inline">{t('removeLineBreaks')}</span><span className="sm:hidden">{t('removeLineBreaksShort')}</span>
                             </button>
                             <button onClick={() => onAction('reverse-text')} className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-border bg-card hover:border-amber-500/50 hover:bg-amber-500/5 text-[10px] sm:text-[11px] font-black transition-all flex items-center gap-1 sm:gap-1.5 whitespace-nowrap touch-manipulation active:scale-95 flex-shrink-0">
-                                <RefreshCw size={10} className="sm:w-3 sm:h-3 text-amber-500" /> <span className="hidden sm:inline">Reverse</span><span className="sm:hidden">Rev</span>
+                                <RefreshCw size={10} className="sm:w-3 sm:h-3 text-amber-500" /> <span className="hidden sm:inline">{t('reverseText')}</span><span className="sm:hidden">{t('reverseTextShort')}</span>
                             </button>
                         </>
                     )}

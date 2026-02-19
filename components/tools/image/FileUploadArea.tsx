@@ -59,12 +59,12 @@ export function FileUploadArea({
                         {isLoading ? (
                             <span className="flex items-center gap-2">
                                 <span className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></span>
-                                Processing...
+                                {tActions('processing')}
                             </span>
                         ) : tActions('chooseFile')}
                     </button>
                     <div className="mt-4 sm:mt-6 text-muted-foreground font-bold text-xs sm:text-sm uppercase tracking-[0.2em] opacity-40">
-                        {isLoading ? 'Please wait...' : 'or drop images here'}
+                        {isLoading ? t('pleaseWait') : t('dragDrop')}
                     </div>
                 </div>
                 {children}

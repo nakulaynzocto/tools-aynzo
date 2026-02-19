@@ -8,7 +8,8 @@ import { useTextProcessing } from '@/components/hooks/text/useTextProcessing';
 import { transformText, findReplace } from '@/components/utils/text/textProcessing';
 import { TextEditor } from './TextEditor';
 import { TextMetrics } from './TextMetrics';
-import { TextFindReplace } from './TextFindReplace';
+import { TextFindReplace } from './TextFindReplace'; // Re-adding this import
+import { TextToolContent } from './TextToolContent';
 
 export default function TextToolsIndex({ type, hideNavigation = false }: TextToolProps) {
     const t = useTranslations('TextTools');
@@ -138,7 +139,9 @@ export default function TextToolsIndex({ type, hideNavigation = false }: TextToo
                     )}
                 </div>
             </div>
+
+            {/* Add SEO Content */}
+            <TextToolContent type={type} />
         </div>
     );
 }
-
