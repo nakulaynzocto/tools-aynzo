@@ -17,9 +17,28 @@ export function ThumbnailDownloader({ result }: ThumbnailDownloaderProps) {
                             {quality}
                         </div>
                     </div>
-                    <a href={url} target="_blank" rel="noreferrer" download className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-black text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2">
+                    <button
+                        onClick={async () => {
+                            try {
+                                const response = await fetch(url);
+                                const blob = await response.blob();
+                                const blobUrl = window.URL.createObjectURL(blob);
+                                const link = document.createElement('a');
+                                link.href = blobUrl;
+                                link.download = `thumbnail-${quality}.jpg`;
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                                window.URL.revokeObjectURL(blobUrl);
+                            } catch (e) {
+                                console.error('Download failed', e);
+                                window.open(url, '_blank');
+                            }
+                        }}
+                        className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-black text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer hover:opacity-90 transition-opacity"
+                    >
                         <Download size={14} /> Download
-                    </a>
+                    </button>
                 </div>
             ))}
         </div>
