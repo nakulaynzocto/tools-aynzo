@@ -54,7 +54,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
     const [email, setEmail] = useState('');
 
     useEffect(() => {
-        if (type === 'url-opener') return;
+        if (type === 'url-opener' || type === 'instagram-hashtag-generator') return; // defined manually or via button
 
         const process = () => {
             let output = '';
@@ -76,15 +76,8 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                     output = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${paypal.email}&item_name=${encodeURIComponent(paypal.item)}&amount=${paypal.amount}&currency_code=${paypal.currency}`;
                     setResult(output);
                     break;
-                case 'instagram-hashtag-generator':
-                    if (!hashtag) { setResult(null); return; }
-                    const baseTags = hashtag.split(' ').filter(t => t.length > 2);
-                    const mockTags = baseTags.map(t => [
-                        `#${t}`, `#${t}life`, `#best${t}`, `#${t}gram`, `#${t}oftheday`, `#${t}photography`, `#love${t}`
-                    ]).flat();
-                    output = mockTags.length > 0 ? mockTags.join(' ') : '#trending #explore #viral #instagram #love #instagood #fashion #photography';
-                    setResult(output);
-                    break;
+                // case 'instagram-hashtag-generator': moved to handleProcess
+                //     break;
                 case 'email-validator':
                     if (!email) { setResult(null); return; }
                     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -105,15 +98,15 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 }
                 return url;
             });
-            
+
             if (urlList.length === 0) {
                 setResult('Please enter at least one URL.');
                 return;
             }
-            
+
             let openedCount = 0;
             let blockedCount = 0;
-            
+
             urlList.forEach((url, i) => {
                 try {
                     const newWindow = window.open(url, '_blank');
@@ -126,12 +119,46 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                     blockedCount++;
                 }
             });
-            
+
             if (blockedCount > 0) {
                 setResult(`Opened ${openedCount} link(s). ${blockedCount} link(s) were blocked by popup blocker. Please allow popups for this site.`);
             } else {
                 setResult(`Successfully opened ${openedCount} link(s) in new tabs.`);
             }
+        } else if (type === 'instagram-hashtag-generator') {
+            setLoading(true);
+            setTimeout(() => {
+                if (!hashtag) {
+                    setResult('#trending #explore #viral #instagram #love #instagood #fashion #photography');
+                } else {
+                    const baseTags = hashtag.split(/[\s,]+/).filter(t => t.length > 1);
+                    const mockTags = baseTags.map(t => {
+                        const cleanT = t.replace(/[^a-zA-Z0-9]/g, '');
+                        if (!cleanT) return [];
+                        return [
+                            `#${cleanT}`, `#${cleanT}life`, `#best${cleanT}`, `#${cleanT}gram`,
+                            `#${cleanT}oftheday`, `#${cleanT}photography`, `#love${cleanT}`,
+                            `#${cleanT}daily`, `#${cleanT}style`, `#${cleanT}lover`,
+                            `#${cleanT}inspiration`, `#${cleanT}time`, `#${cleanT}community`,
+                            `#${cleanT}blog`, `#${cleanT}blogger`, `#${cleanT}tips`,
+                            `#${cleanT}ideas`, `#${cleanT}goals`, `#${cleanT}addict`,
+                            `#${cleanT}vibes`, `#${cleanT}world`, `#${cleanT}art`,
+                            `#${cleanT}design`, `#${cleanT}porn`, `#${cleanT}guide`,
+                            `#${cleanT}feed`, `#${cleanT}style`, `#${cleanT}diaries`,
+                            `#${cleanT}posts`, `#${cleanT}forever`, `#${cleanT}everyday`,
+                            `#inst${cleanT}`, `#ig${cleanT}`, `#my${cleanT}`,
+                            `#explore${cleanT}`, `#top${cleanT}`, `#hot${cleanT}`,
+                            `#trending${cleanT}`, `#viral${cleanT}`, `#new${cleanT}`,
+                            `#${cleanT}lifestyle`, `#${cleanT}moments`, `#${cleanT}club`,
+                            `#${cleanT}society`, `#${cleanT}master`, `#${cleanT}expert`
+                        ];
+                    }).flat();
+                    const uniqueTags = Array.from(new Set(mockTags));
+                    const output = uniqueTags.length > 0 ? uniqueTags.join(' ') : '#trending #explore #viral #instagram #love #instagood #fashion #photography';
+                    setResult(output);
+                }
+                setLoading(false);
+            }, 600);
         }
     };
 
@@ -197,9 +224,19 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 );
             case 'instagram-hashtag-generator':
                 return (
-                    <div>
-                        <label className="block text-sm font-medium text-foreground mb-1">Enter Keyword or Topic</label>
-                        <input type="text" value={hashtag} onChange={e => setHashtag(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="e.g. travel, food, fitness" />
+                    <div className="space-y-4">
+                        <div>
+                            <label className="block text-sm font-medium text-foreground mb-1">Enter Keyword or Topic</label>
+                            <input type="text" value={hashtag} onChange={e => setHashtag(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="e.g. travel, food, fitness" />
+                        </div>
+                        <button
+                            onClick={handleProcess}
+                            disabled={loading}
+                            className="w-full py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white rounded-xl font-black shadow-lg hover:opacity-90 transition-all flex items-center justify-center gap-2"
+                        >
+                            {loading ? <RefreshCw className="w-5 h-5 animate-spin" /> : <Hash className="w-5 h-5" />}
+                            Generate Hashtags
+                        </button>
                     </div>
                 );
             case 'email-validator':
@@ -267,7 +304,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                     ) : (
                                         <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4 relative overflow-hidden group">
                                             <div className="flex items-center justify-between">
-                                                <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">Direct Link</span>
+                                                <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">{type === 'instagram-hashtag-generator' ? 'Generated Hashtags' : 'Direct Link'}</span>
                                                 <button
                                                     onClick={copyToClipboard}
                                                     className={`flex items-center gap-2 text-xs font-black transition-colors ${copied ? 'text-emerald-500' : 'text-primary hover:text-accent'}`}
@@ -282,7 +319,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                                 href={result}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="block w-full py-4 bg-secondary hover:bg-secondary/80 text-foreground rounded-xl font-bold text-center transition-all text-sm border border-border"
+                                                className={`block w-full py-4 bg-secondary hover:bg-secondary/80 text-foreground rounded-xl font-bold text-center transition-all text-sm border border-border ${type === 'instagram-hashtag-generator' ? 'hidden' : ''}`}
                                             >
                                                 Open Link <ExternalLink className="inline-block ml-1 w-4 h-4" />
                                             </a>
