@@ -1109,7 +1109,7 @@ export const tools = [
         description: 'Create direct click-to-chat WhatsApp links.',
         category: 'social',
         group: 'social-gen',
-        seo: { title: 'WhatsApp Link Generator', description: 'Create WhatsApp links.' },
+        seo: { title: 'WhatsApp Link Generator | Create Direct Click-to-Chat Links', description: 'Generate free WhatsApp click-to-chat links with custom messages instantly.' },
         status: 'published'
     },
     {
@@ -1119,7 +1119,7 @@ export const tools = [
         description: 'Create direct links to Telegram users or channels.',
         category: 'social',
         group: 'social-gen',
-        seo: { title: 'Telegram Link Generator', description: 'Create Telegram links.' },
+        seo: { title: 'Telegram Link Generator | Create Direct t.me Links', description: 'Create direct links to Telegram users, channels, or groups with custom messages.' },
         status: 'published'
     },
     {
@@ -1129,7 +1129,7 @@ export const tools = [
         description: 'Generate PayPal payment and donation links.',
         category: 'social',
         group: 'social-gen',
-        seo: { title: 'PayPal Link Generator', description: 'Create custom PayPal links.' },
+        seo: { title: 'PayPal Link Generator | Create Custom PayPal.me Links', description: 'Generate professional PayPal.me payment and donation links with custom amounts.' },
         status: 'published'
     },
     {
