@@ -38,7 +38,7 @@ export function AgeCalculator() {
     };
 
     return (
-        <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="space-y-6">
                 <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Calculator Inputs</h3>
                 <div className="space-y-2">
@@ -46,7 +46,7 @@ export function AgeCalculator() {
                     <input type="date" value={ageDate} onChange={e => setAgeDate(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                 </div>
             </div>
-            <div className="space-y-6">
+            <div className="flex flex-col gap-6">
                 <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Data</h3>
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[300px] flex flex-col items-center justify-center gap-6">
@@ -64,7 +64,7 @@ export function AgeCalculator() {
                         </button>
                     </div>
                 ) : (
-                    <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl h-full min-h-[300px] flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
+                    <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 min-h-[300px] flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
                         <span className="text-xs font-black uppercase tracking-widest text-center">Enter date of birth to calculate age</span>
                     </div>
                 )}

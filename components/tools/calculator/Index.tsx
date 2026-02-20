@@ -63,7 +63,7 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
             {activeCategory && (
                 <ScrollableNav items={[{ category: activeCategory.category, tools: activeCategory.tools }]} activeToolId={type} />
             )}
-            <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden p-8">
+            <div className="bg-card rounded-3xl border-2 border-border shadow-2xl p-8">
                 {renderCalculator()}
             </div>
         </div>
