@@ -39,7 +39,6 @@ interface Props {
   params: { slug: string; locale: string };
 }
 import { tools } from '@/lib/tools';
-import { AdUnit } from '@/components/common/components/AdUnit';
 
 export function generateStaticParams() {
   return tools.map((tool) => ({
