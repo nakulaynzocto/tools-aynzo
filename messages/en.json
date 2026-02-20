@@ -889,19 +889,19 @@
         },
         "telegram-link-generator": {
             "name": "Telegram Link Generator",
-            "description": "Create direct Telegram links.",
-            "seoTitle": "Telegram Link Generator Free - Use Telegram Link Generator",
-            "seoDescription": "Use Telegram Link Generator online free. Fast and secure processing. No login, fast, secure. Perfect for social media.",
-            "seoKeywords": "telegram-link-generator, free telegram link generator, telegram link generator tool",
-            "seoH1": "Telegram Link Generator Free: Use Telegram Link Generator"
+            "description": "Create a Telegram link instantly for your profile, channel, or group. Generate t.me direct chat links with custom messages for free.",
+            "seoTitle": "Telegram Link Generator | Create Direct t.me Link with Message",
+            "seoDescription": "How to generate a Telegram link? Use our free tool to create a Telegram direct link for your profile or channel. Perfect for 'telegram link create' and 'create telegram link with message'. Fast, free, and secure.",
+            "seoKeywords": "telegram link create, how to generate telegram link, telegram free link, telegram to direct link, create a telegram link, get link telegram, telegram url link free, link to telegram, create telegram link, create telegram link with message, telegram link creation, t.me/link, telegram click to chat",
+            "seoH1": "Free Telegram Link Generator: Create Direct t.me Links Instantly"
         },
         "paypal-link-generator": {
             "name": "PayPal Link Generator",
-            "description": "Create PayPal payment links.",
-            "seoTitle": "PayPal Link Generator Free - Use PayPal Link Generator",
-            "seoDescription": "Use PayPal Link Generator online free. Fast and secure processing. No login, fast, secure. Perfect for social media.",
-            "seoKeywords": "paypal-link-generator, free paypal link generator, paypal link generator tool",
-            "seoH1": "PayPal Link Generator Free: Use PayPal Link Generator"
+            "description": "Create professional PayPal.me payment links for clients and donations.",
+            "seoTitle": "PayPal Link Generator | Create Direct PayPal.me Payment Links",
+            "seoDescription": "Use PayPal Link Generator online free to create custom payment links. Fast and secure processing. No login, fast, secure. Perfect for freelancers and NGOs.",
+            "seoKeywords": "paypal link generator, free paypal link generator, paypal link generator tool, create paypal.me link",
+            "seoH1": "PayPal Link Generator: Get Paid Instantly"
         },
         "email-validator": {
             "name": "Email Validator",

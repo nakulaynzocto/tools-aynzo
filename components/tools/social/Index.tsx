@@ -43,7 +43,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
 
     // States
     const [whatsapp, setWhatsapp] = useState({ phone: '', message: '' });
-    const [telegram, setTelegram] = useState('');
+    const [telegram, setTelegram] = useState({ username: '', message: '' });
     const [paypal, setPaypal] = useState({ email: '', item: '', amount: '', currency: 'USD' });
 
     const activeCategory = socialNavTools.find(cat => cat.tools.some(t => t.id === type));
@@ -66,9 +66,14 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                     setResult(output);
                     break;
                 case 'telegram-link-generator':
-                    if (!telegram) { setResult(null); return; }
-                    const username = telegram.replace('@', '').trim();
-                    output = `https://t.me/${username}`;
+                    if (!telegram.username) { setResult(null); return; }
+                    let username = telegram.username.trim();
+                    if (username.includes('t.me/')) {
+                        username = username.split('t.me/').pop() || '';
+                    }
+                    username = username.replace('@', '').split('?')[0].split('/')[0].trim();
+                    if (!username) { setResult(null); return; }
+                    output = `https://t.me/${username}${telegram.message ? `?text=${encodeURIComponent(telegram.message)}` : ''}`;
                     setResult(output);
                     break;
                 case 'paypal-link-generator':
@@ -187,9 +192,15 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 );
             case 'telegram-link-generator':
                 return (
-                    <div>
-                        <label className="block text-sm font-medium text-foreground mb-1">Telegram Username</label>
-                        <input type="text" value={telegram} onChange={e => setTelegram(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="username" />
+                    <div className="space-y-4">
+                        <div>
+                            <label className="block text-sm font-medium text-foreground mb-1">Telegram Username / Channel Link</label>
+                            <input type="text" value={telegram.username} onChange={e => setTelegram({ ...telegram, username: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="username or t.me/username" />
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium text-foreground mb-1">Pre-filled Message (Optional)</label>
+                            <textarea value={telegram.message} onChange={e => setTelegram({ ...telegram, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-24 text-foreground" placeholder="Hi, I found you on Aynzo..." />
+                        </div>
                     </div>
                 );
             case 'paypal-link-generator':
