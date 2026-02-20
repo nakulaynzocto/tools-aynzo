@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const alternateLanguages = (path: string) => {
         const languages: Record<string, string> = {};
+        // Add x-default pointing to English
+        languages['x-default'] = `${baseUrl}/en${path}`;
         locales.forEach((l) => {
             languages[l] = `${baseUrl}/${l}${path}`;
         });

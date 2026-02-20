@@ -13,7 +13,24 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         title: t('tools'),
         description: "Browse our complete collection of free online tools for developers, designers, and writers.",
         alternates: {
-            canonical: `https://tools.aynzo.com/${locale}/tools`
+            canonical: `https://tools.aynzo.com/${locale}/tools`,
+            languages: {
+                'x-default': 'https://tools.aynzo.com/en/tools',
+                'en': 'https://tools.aynzo.com/en/tools',
+                'hi': 'https://tools.aynzo.com/hi/tools',
+                'pt': 'https://tools.aynzo.com/pt/tools',
+                'es': 'https://tools.aynzo.com/es/tools',
+                'id': 'https://tools.aynzo.com/id/tools',
+                'de': 'https://tools.aynzo.com/de/tools',
+                'fr': 'https://tools.aynzo.com/fr/tools',
+                'ja': 'https://tools.aynzo.com/ja/tools',
+                'ru': 'https://tools.aynzo.com/ru/tools',
+                'tr': 'https://tools.aynzo.com/tr/tools',
+                'it': 'https://tools.aynzo.com/it/tools',
+                'ko': 'https://tools.aynzo.com/ko/tools',
+                'zh': 'https://tools.aynzo.com/zh/tools',
+                'ar': 'https://tools.aynzo.com/ar/tools',
+            }
         }
     };
 }

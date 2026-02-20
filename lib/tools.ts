@@ -310,6 +310,16 @@ export const tools = [
         seo: { title: 'Base64 to Image', description: 'Decode Base64 to image.' },
         status: 'published',
     },
+    {
+        _id: '123a',
+        name: 'Image Format Converter',
+        slug: 'image-format-converter',
+        description: 'Convert images between JPG, PNG, WebP, GIF, and BMP formats online for free.',
+        category: 'image',
+        group: 'image-convert',
+        seo: { title: 'Image Format Converter - Convert JPG, PNG, WebP Free', description: 'Convert images between all popular formats online. Free, fast, and secure image format converter.' },
+        status: 'published',
+    },
 
     // === PDF TOOLS ===
     {

@@ -25,7 +25,7 @@ const DevTools = dynamic(() => import('@/components/tools/dev/Index'));
 const SecurityTools = dynamic(() => import('@/components/tools/security/Index'));
 const FAQSection = dynamic(() => import('@/components/common/components/FAQSection'));
 const UtilityTools = dynamic(() => import('@/components/tools/utility/Index'));
-const CryptoTools = dynamic(() => import('@/components/tools/crypto/Index'));
+const CryptoTools = dynamic(() => import('@/components/tools/crypto/Index'), { ssr: false });
 const RegexDiffTools = dynamic(() => import('@/components/tools/regex/Index'));
 const YouTubeTools = dynamic(() => import('@/components/tools/youtube/Index'));
 const SeoTools = dynamic(() => import('@/components/tools/seo/Index'));
@@ -95,6 +95,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       alternates: {
         canonical: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`,
         languages: {
+          'x-default': `https://tools.aynzo.com/en/tools/${params.slug}`,
           'en': `https://tools.aynzo.com/en/tools/${params.slug}`,
           'hi': `https://tools.aynzo.com/hi/tools/${params.slug}`,
           'pt': `https://tools.aynzo.com/pt/tools/${params.slug}`,

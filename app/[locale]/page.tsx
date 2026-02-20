@@ -26,6 +26,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     alternates: {
       canonical: `https://tools.aynzo.com/${locale}`,
       languages: {
+        'x-default': 'https://tools.aynzo.com/en',
         'en': 'https://tools.aynzo.com/en',
         'hi': 'https://tools.aynzo.com/hi',
         'pt': 'https://tools.aynzo.com/pt',
