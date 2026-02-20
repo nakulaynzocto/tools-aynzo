@@ -9,7 +9,7 @@ import { useTranslations } from 'next-intl';
 export function ToolInfoSection({ name, description, content }: ToolInfoSectionProps) {
     const t = useTranslations('Common');
     return (
-        <div className="bg-card rounded-xl border-2 border-border p-5 shadow-lg">
+        <div className="bg-card rounded-2xl border-2 border-border p-6 sm:p-8 shadow-xl">
             {content ? (
                 <div
                     className="prose md:prose-lg dark:prose-invert max-w-none text-muted-foreground prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground"

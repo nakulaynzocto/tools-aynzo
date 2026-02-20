@@ -186,7 +186,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-foreground mb-1">Pre-filled Message</label>
-                            <textarea value={whatsapp.message} onChange={e => setWhatsapp({ ...whatsapp, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-24 text-foreground" placeholder="Hello, I'm interested..." />
+                            <textarea value={whatsapp.message} onChange={e => setWhatsapp({ ...whatsapp, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-40 text-foreground" placeholder="Hello, I'm interested..." />
                         </div>
                     </div>
                 );
@@ -199,7 +199,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-foreground mb-1">Pre-filled Message (Optional)</label>
-                            <textarea value={telegram.message} onChange={e => setTelegram({ ...telegram, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-24 text-foreground" placeholder="Hi, I found you on Aynzo..." />
+                            <textarea value={telegram.message} onChange={e => setTelegram({ ...telegram, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-40 text-foreground" placeholder="Hi, I found you on Aynzo..." />
                         </div>
                     </div>
                 );
@@ -243,7 +243,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                         <button
                             onClick={handleProcess}
                             disabled={loading}
-                            className="w-full py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white rounded-xl font-black shadow-lg hover:opacity-90 transition-all flex items-center justify-center gap-2"
+                            className="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-black shadow-lg hover:opacity-90 transition-all flex items-center justify-center gap-2"
                         >
                             {loading ? <RefreshCw className="w-5 h-5 animate-spin" /> : <Hash className="w-5 h-5" />}
                             Generate Hashtags
@@ -296,13 +296,13 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                             )}
                         </div>
 
-                        <div className="space-y-6">
+                        <div className="space-y-6 h-full flex flex-col">
                             <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Generated Result</h3>
                             {result ? (
-                                <div className="space-y-4 animate-in fade-in slide-in-from-right-5 duration-500">
+                                <div className="space-y-4 animate-in fade-in slide-in-from-right-5 duration-500 flex-1">
                                     {type === 'email-validator' || type === 'url-opener' ? (
                                         <div className={cn(
-                                            "p-8 rounded-2xl border-2 font-black text-center text-xl flex flex-col items-center justify-center gap-4 min-h-[200px]",
+                                            "p-8 rounded-2xl border-2 font-black text-center text-xl flex flex-col items-center justify-center gap-4 h-full min-h-[300px]",
                                             result.includes('Invalid') || result.includes('blocker')
                                                 ? "bg-destructive/10 border-destructive/20 text-destructive"
                                                 : "bg-emerald-500/10 border-emerald-500/20 text-emerald-500"
@@ -313,7 +313,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                             {result}
                                         </div>
                                     ) : (
-                                        <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4 relative overflow-hidden group">
+                                        <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4 relative group flex flex-col h-full">
                                             <div className="flex items-center justify-between">
                                                 <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">{type === 'instagram-hashtag-generator' ? 'Generated Hashtags' : 'Direct Link'}</span>
                                                 <button
@@ -323,14 +323,14 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                                     {copied ? <Check size={14} /> : <Copy size={14} />} {copied ? 'COPIED' : 'COPY'}
                                                 </button>
                                             </div>
-                                            <div className="p-4 bg-card rounded-xl border-2 border-border font-mono text-sm break-all text-foreground min-h-[100px] shadow-inner">
+                                            <div className="p-4 bg-card rounded-xl border-2 border-border font-mono text-sm break-all text-foreground min-h-[150px] max-h-[400px] overflow-y-auto shadow-inner custom-scrollbar">
                                                 {result}
                                             </div>
                                             <a
                                                 href={result}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className={`block w-full py-4 bg-secondary hover:bg-secondary/80 text-foreground rounded-xl font-bold text-center transition-all text-sm border border-border ${type === 'instagram-hashtag-generator' ? 'hidden' : ''}`}
+                                                className={`block w-full py-4 bg-secondary hover:bg-secondary/80 text-foreground rounded-xl font-bold text-center transition-all text-sm border border-border mt-auto ${type === 'instagram-hashtag-generator' ? 'hidden' : ''}`}
                                             >
                                                 Open Link <ExternalLink className="inline-block ml-1 w-4 h-4" />
                                             </a>
@@ -338,7 +338,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                     )}
                                 </div>
                             ) : (
-                                <div className="h-[200px] lg:h-full min-h-[250px] bg-muted/10 border-2 border-dashed border-border rounded-2xl flex flex-col items-center justify-center text-muted-foreground gap-3 opacity-50">
+                                <div className="flex-1 min-h-[300px] bg-muted/10 border-2 border-dashed border-border rounded-2xl flex flex-col items-center justify-center text-muted-foreground gap-3 opacity-50">
                                     <Send size={48} />
                                     <p className="text-sm font-black uppercase tracking-widest">Awaiting Input</p>
                                 </div>

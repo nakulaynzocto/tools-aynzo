@@ -25,6 +25,8 @@ export function ScrollableNav({ items, activeToolId }: ScrollableNavProps) {
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
 
+    const totalTools = items.reduce((acc, current) => acc + current.tools.length, 0);
+
     const checkScroll = () => {
         if (scrollRef.current) {
             const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
@@ -45,6 +47,8 @@ export function ScrollableNav({ items, activeToolId }: ScrollableNavProps) {
             scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
         }
     };
+
+    if (totalTools <= 1) return null;
 
     return (
         <div className="relative group mx-auto max-w-full">
@@ -84,13 +88,13 @@ export function ScrollableNav({ items, activeToolId }: ScrollableNavProps) {
             >
                 <div className="flex items-center gap-3 sm:gap-6 min-w-max px-1 sm:px-2">
                     {items.map((group) => (
-                        <div key={group.category} className="flex items-center gap-1.5 sm:gap-2 border-r border-border pr-3 sm:pr-6 last:border-0 last:pr-0">
-                            <span className="text-[10px] sm:text-xs font-black uppercase text-foreground/80 tracking-widest whitespace-nowrap" dir="auto">{group.category}</span>
+                        <div key={group.category} className="flex items-center gap-1.5 sm:gap-2 last:pr-0">
                             <div className="flex items-center gap-1.5 sm:gap-2">
                                 {group.tools.map((tool) => (
                                     <Link
                                         key={tool.id}
                                         href={`/tools/${tool.id}`}
+                                        prefetch={false}
                                         className={cn(
                                             "flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all whitespace-nowrap touch-manipulation",
                                             activeToolId === tool.id

@@ -9,7 +9,6 @@ import { transformText, findReplace } from '@/components/utils/text/textProcessi
 import { TextEditor } from './TextEditor';
 import { TextMetrics } from './TextMetrics';
 import { TextFindReplace } from './TextFindReplace'; // Re-adding this import
-import { TextToolContent } from './TextToolContent';
 
 export default function TextToolsIndex({ type, hideNavigation = false }: TextToolProps) {
     const t = useTranslations('TextTools');
@@ -97,7 +96,7 @@ export default function TextToolsIndex({ type, hideNavigation = false }: TextToo
         <div className="max-w-6xl mx-auto space-y-3 sm:space-y-4 px-2 sm:px-4 animate-in fade-in duration-500">
             {!hideNavigation && <ScrollableNav items={textNavTools} activeToolId={type} />}
             <div className="grid grid-cols-1 lg:grid-cols-[1fr,300px] gap-4 sm:gap-6 items-start lg:min-h-[480px]">
-                <div className="flex flex-col min-h-[300px] lg:h-full order-2 lg:order-1">
+                <div className="flex flex-col min-h-[500px] lg:h-full order-2 lg:order-1">
                     <TextEditor
                         input={type === 'remove-line-breaks' || type === 'reverse-text' ? displayInput : input}
                         setInput={setInput}
@@ -140,8 +139,7 @@ export default function TextToolsIndex({ type, hideNavigation = false }: TextToo
                 </div>
             </div>
 
-            {/* Add SEO Content */}
-            <TextToolContent type={type} />
+            {/* Add SEO Content removed as it caused duplication */}
         </div>
     );
 }

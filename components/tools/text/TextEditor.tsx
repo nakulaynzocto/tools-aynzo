@@ -44,10 +44,6 @@ export function TextEditor({ input, setInput, copied, onCopy, onDownload, onClea
 
             {showTransformButtons && (
                 <div className="px-2 sm:px-4 py-1.5 sm:py-2 border-b border-border bg-muted/10 flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar">
-                    <div className="flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 border-r border-border mr-0.5 sm:mr-1 flex-shrink-0">
-                        <Sparkles size={10} className="sm:w-3 sm:h-3 text-amber-500" />
-                        <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-muted-foreground whitespace-nowrap">{t('quickTransformers')}:</span>
-                    </div>
                     <button onClick={() => onAction('uppercase')} className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-border bg-card hover:border-primary/50 hover:bg-primary/5 text-[10px] sm:text-[11px] font-black transition-all whitespace-nowrap flex items-center gap-1 sm:gap-1.5 touch-manipulation active:scale-95 flex-shrink-0">
                         <Type size={10} className="sm:w-3 sm:h-3" /> <span className="hidden sm:inline">{t('allCaps')}</span><span className="sm:hidden">{t('uppercaseShort')}</span>
                     </button>
@@ -78,7 +74,7 @@ export function TextEditor({ input, setInput, copied, onCopy, onDownload, onClea
             )}
 
             <textarea
-                className="flex-1 w-full p-4 sm:p-6 text-[15px] sm:text-[17.5px] leading-relaxed resize-none focus:outline-none text-foreground bg-input font-medium placeholder:opacity-30 scrollbar-hide"
+                className="flex-1 w-full p-4 sm:p-6 text-[15px] sm:text-[17.5px] leading-relaxed resize-none focus:outline-none text-foreground bg-input font-medium placeholder:opacity-30 scrollbar-hide min-h-[400px]"
                 placeholder={t('placeholder')}
                 value={input}
                 onChange={e => !isReadOnly && setInput(e.target.value)}

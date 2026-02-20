@@ -51,6 +51,7 @@ export function RelatedTools({ currentSlug, category }: RelatedToolsProps) {
                     <Link
                         key={tool.slug}
                         href={`/tools/${tool.slug}`}
+                        prefetch={false}
                         className="group relative flex flex-col p-6 bg-card hover:bg-gradient-to-br hover:from-card hover:to-accent/5 border border-border rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                     >
                         {/* Hover Glow Effect */}

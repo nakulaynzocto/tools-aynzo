@@ -20,7 +20,7 @@ export default function TermsPage() {
         <div className="max-w-4xl mx-auto px-6 py-20 space-y-8">
             <h1 className="text-4xl font-bold mb-8">{t('termsOfService')}</h1>
 
-            <div className="prose prose-invert max-w-none">
+            <div className="prose dark:prose-invert max-w-none">
                 <p className="lead text-xl text-muted-foreground">
                     Please read these terms and conditions carefully before using our service.
                 </p>

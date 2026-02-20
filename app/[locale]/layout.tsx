@@ -7,6 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import Script from 'next/script';
+import Footer from "@/components/common/components/Footer";
+import { locales } from '@/i18n';
+import NextTopLoader from '@/components/common/components/NextTopLoader';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,7 +45,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     twitter: {
       card: "summary_large_image",
       title: "AYNZO TOOLS - Free Professional Tools",
-      description: "Professional online tools for developers and content creators.",
+      description: "Professional online tools for developers and creators.",
       images: ["/og-image.png"]
     },
     verification: {
@@ -79,10 +82,6 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-import Footer from "@/components/common/components/Footer";
-
-import { locales } from '@/i18n';
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -103,6 +102,8 @@ export default async function RootLayout({
         <link rel="icon" href="/logo.png" type="image/png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -173,8 +174,9 @@ export default async function RootLayout({
         )}
       </head>
       <body className={inter.className}>
+        <NextTopLoader />
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
             <div className="flex flex-col min-h-screen">
               <Navbar />
               <main className="flex-1">

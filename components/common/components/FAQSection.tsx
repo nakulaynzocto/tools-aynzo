@@ -21,7 +21,7 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
     if (!faqs || faqs.length === 0) return null;
 
     return (
-        <div className="bg-card rounded-xl border-2 border-border p-6 shadow-sm">
+        <div className="bg-card rounded-2xl border-2 border-border p-6 sm:p-8 shadow-xl">
             <h2 className="text-2xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
             <div className="space-y-3">
                 {faqs.map((faq, index) => (

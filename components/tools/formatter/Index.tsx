@@ -215,7 +215,7 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
                             <textarea
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                className="w-full h-96 p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 focus:border-primary outline-none resize-none"
+                                className="w-full h-[500px] p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 focus:border-primary outline-none resize-none"
                                 placeholder="Paste your content here..."
                             />
                         </div>
@@ -249,7 +249,7 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
                             <textarea
                                 value={output}
                                 readOnly
-                                className="w-full h-96 p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 resize-none"
+                                className="w-full h-[500px] p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 resize-none"
                                 placeholder="Output will appear here..."
                             />
                         </div>

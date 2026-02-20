@@ -87,17 +87,17 @@ export default function Navbar() {
                             const hasCJK = (text: string): boolean => {
                                 return /[\u4E00-\u9FFF\u3400-\u4DBF\u3040-\u309F\u30A0-\u30FF\uAC00-\uD7AF]/.test(text);
                             };
-                            
+
                             // Helper function to detect Arabic/Hebrew (RTL languages)
                             const hasRTL = (text: string): boolean => {
                                 return /[\u0590-\u05FF\u0600-\u06FF\u0700-\u074F\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/.test(text);
                             };
-                            
+
                             // Helper function to detect Cyrillic (Russian, etc.)
                             const hasCyrillic = (text: string): boolean => {
                                 return /[\u0400-\u04FF]/.test(text);
                             };
-                            
+
                             // Helper function to calculate text width
                             const calculateTextWidth = (text: string): number => {
                                 if (hasCJK(text)) {
@@ -118,7 +118,7 @@ export default function Navbar() {
                                     return baseWidth + extraBuffer + 50;
                                 }
                             };
-                            
+
                             // 1. Calculate Costs (Estimated Widths)
                             const categories = Object.keys(toolCategories);
                             const categoryCosts = categories.map(cat => {
@@ -201,7 +201,7 @@ export default function Navbar() {
                                                 {/* Mega Menu Dropdown */}
                                                 {activeCategory === category && (() => {
                                                     const hasGroups = toolCategories[category as keyof typeof toolCategories].some(tool => tool.group);
-                                                    
+
                                                     // Calculate grouped tools once for reuse
                                                     const groupedTools = hasGroups ? toolCategories[category as keyof typeof toolCategories].reduce((acc, tool) => {
                                                         const g = tool.group || 'other';
@@ -209,7 +209,7 @@ export default function Navbar() {
                                                         acc[g].push(tool);
                                                         return acc;
                                                     }, {} as Record<string, typeof toolCategories[string]>) : {};
-                                                    
+
                                                     const groupCount = Object.keys(groupedTools).length;
                                                     // Check category label for different character types
                                                     const categoryLabel = tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category);
@@ -218,10 +218,10 @@ export default function Navbar() {
                                                     const hasCyrillicInCategory = /[\u0400-\u04FF]/.test(categoryLabel);
                                                     // Check for long text (German compound words, etc.)
                                                     const isLongText = categoryLabel.length > 25;
-                                                    
+
                                                     let dropdownWidth = "";
                                                     let dropdownStyle: React.CSSProperties = {};
-                                                    
+
                                                     if (hasGroups) {
                                                         // Dynamic width based on number of columns to prevent text overlap
                                                         // Adjust multiplier based on character type and text length
@@ -235,7 +235,7 @@ export default function Navbar() {
                                                         } else if (isLongText) {
                                                             widthMultiplier = 1.2; // Long text: 20% wider
                                                         }
-                                                        
+
                                                         const baseWidths = {
                                                             2: { min: 500, max: 700 },
                                                             3: { min: 650, max: 900 },
@@ -243,23 +243,23 @@ export default function Navbar() {
                                                             5: { min: 900, max: 1250 },
                                                             default: { min: 1000, max: 1500 }
                                                         };
-                                                        
+
                                                         const widths = groupCount <= 2 ? baseWidths[2] :
-                                                                      groupCount <= 3 ? baseWidths[3] :
-                                                                      groupCount <= 4 ? baseWidths[4] :
-                                                                      groupCount <= 5 ? baseWidths[5] :
-                                                                      baseWidths.default;
-                                                        
+                                                            groupCount <= 3 ? baseWidths[3] :
+                                                                groupCount <= 4 ? baseWidths[4] :
+                                                                    groupCount <= 5 ? baseWidths[5] :
+                                                                        baseWidths.default;
+
                                                         const minW = Math.round(widths.min * widthMultiplier);
                                                         const maxW = Math.round(widths.max * widthMultiplier);
-                                                        
+
                                                         dropdownWidth = "w-auto max-w-[95vw]";
                                                         dropdownStyle = {
                                                             minWidth: `${minW}px`,
                                                             maxWidth: `${maxW}px`,
                                                         };
                                                     }
-                                                    
+
                                                     // Dynamic grid columns based on number of groups
                                                     let gridCols = 'grid-cols-2';
                                                     if (groupCount <= 2) gridCols = 'grid-cols-2';
@@ -267,9 +267,9 @@ export default function Navbar() {
                                                     else if (groupCount <= 4) gridCols = 'grid-cols-4';
                                                     else if (groupCount <= 5) gridCols = 'grid-cols-5';
                                                     else gridCols = 'grid-cols-6';
-                                                    
+
                                                     return (
-                                                        <div 
+                                                        <div
                                                             className={cn(
                                                                 "mt-1 bg-card rounded-xl shadow-2xl border border-border overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-200",
                                                                 hasGroups
@@ -279,46 +279,48 @@ export default function Navbar() {
                                                             style={hasGroups ? dropdownStyle : undefined}
                                                         >
                                                             {!hasGroups ? (
-                                                            <>
-                                                                <div className="p-3 bg-secondary/50 border-b border-border">
-                                                                    <h3 className="text-foreground font-semibold text-sm break-words overflow-hidden">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}</h3>
-                                                                </div>
-                                                                <div className={`grid ${toolCategories[category as keyof typeof toolCategories].length > 20 ? 'grid-cols-3' : 'grid-cols-2'} gap-0 p-2`}>
-                                                                    {toolCategories[category as keyof typeof toolCategories].map((tool) => (
-                                                                        <Link
-                                                                            key={tool.slug}
-                                                                            href={`/tools/${tool.slug}`}
-                                                                            className="block px-3 py-2.5 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-[15.6px] rounded-md m-1 break-words overflow-hidden"
-                                                                            onClick={() => setActiveCategory(null)}
-                                                                        >
-                                                                            <span className="line-clamp-2">{tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}</span>
-                                                                        </Link>
+                                                                <>
+                                                                    <div className="p-3 bg-secondary/50 border-b border-border">
+                                                                        <h3 className="text-foreground font-semibold text-sm break-words overflow-hidden">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}</h3>
+                                                                    </div>
+                                                                    <div className={`grid ${toolCategories[category as keyof typeof toolCategories].length > 20 ? 'grid-cols-3' : 'grid-cols-2'} gap-0 p-2`}>
+                                                                        {toolCategories[category as keyof typeof toolCategories].map((tool) => (
+                                                                            <Link
+                                                                                key={tool.slug}
+                                                                                href={`/tools/${tool.slug}`}
+                                                                                prefetch={false}
+                                                                                className="block px-3 py-2.5 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-[15.6px] rounded-md m-1 break-words overflow-hidden"
+                                                                                onClick={() => setActiveCategory(null)}
+                                                                            >
+                                                                                <span className="line-clamp-2">{tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}</span>
+                                                                            </Link>
+                                                                        ))}
+                                                                    </div>
+                                                                </>
+                                                            ) : (
+                                                                <div className={`grid ${gridCols} gap-6 lg:gap-8`}>
+                                                                    {Object.entries(groupedTools).map(([group, tools]) => (
+                                                                        <div key={group} className="space-y-3 min-w-[160px]">
+                                                                            <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary border-b border-border pb-1.5 mb-2 break-words overflow-hidden">
+                                                                                {tImageGroups.has(group) ? tImageGroups(group) : group}
+                                                                            </h4>
+                                                                            <div className="flex flex-col gap-1.5">
+                                                                                {tools.map((tool) => (
+                                                                                    <Link
+                                                                                        key={tool.slug}
+                                                                                        href={`/tools/${tool.slug}`}
+                                                                                        prefetch={false}
+                                                                                        className="text-[16.25px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200 break-words overflow-hidden line-clamp-2"
+                                                                                        onClick={() => setActiveCategory(null)}
+                                                                                    >
+                                                                                        {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                                    </Link>
+                                                                                ))}
+                                                                            </div>
+                                                                        </div>
                                                                     ))}
                                                                 </div>
-                                                            </>
-                                                        ) : (
-                                                            <div className={`grid ${gridCols} gap-6 lg:gap-8`}>
-                                                                {Object.entries(groupedTools).map(([group, tools]) => (
-                                                                    <div key={group} className="space-y-3 min-w-[160px]">
-                                                                        <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary border-b border-border pb-1.5 mb-2 break-words overflow-hidden">
-                                                                            {tImageGroups.has(group) ? tImageGroups(group) : group}
-                                                                        </h4>
-                                                                        <div className="flex flex-col gap-1.5">
-                                                                            {tools.map((tool) => (
-                                                                                <Link
-                                                                                    key={tool.slug}
-                                                                                    href={`/tools/${tool.slug}`}
-                                                                                    className="text-[16.25px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200 break-words overflow-hidden line-clamp-2"
-                                                                                    onClick={() => setActiveCategory(null)}
-                                                                                >
-                                                                                    {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
-                                                                                </Link>
-                                                                            ))}
-                                                                        </div>
-                                                                    </div>
-                                                                ))}
-                                                            </div>
-                                                        )}
+                                                            )}
                                                         </div>
                                                     );
                                                 })()}
@@ -381,6 +383,7 @@ export default function Navbar() {
                                                                             <Link
                                                                                 key={tool.slug}
                                                                                 href={`/tools/${tool.slug}`}
+                                                                                prefetch={false}
                                                                                 className="text-[16.25px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200 break-words overflow-hidden line-clamp-2"
                                                                                 onClick={() => setActiveCategory(null)}
                                                                             >
@@ -432,6 +435,7 @@ export default function Navbar() {
                                     <Link
                                         key={tool.slug}
                                         href={`/tools/${tool.slug}`}
+                                        prefetch={false}
                                         className="block px-4 py-3 hover:bg-secondary transition-all border-b border-border last:border-0"
                                         onClick={() => {
                                             setShowSearch(false);
@@ -488,6 +492,7 @@ export default function Navbar() {
                                         <Link
                                             key={tool.slug}
                                             href={`/tools/${tool.slug}`}
+                                            prefetch={false}
                                             className="block p-2.5 hover:bg-secondary rounded-md border border-border"
                                             onClick={() => {
                                                 setMobileMenuOpen(false);
@@ -522,6 +527,7 @@ export default function Navbar() {
                                             <Link
                                                 key={tool.slug}
                                                 href={`/tools/${tool.slug}`}
+                                                prefetch={false}
                                                 className="block py-2.5 text-muted-foreground hover:text-foreground text-sm pl-2 break-words overflow-hidden line-clamp-2"
                                                 onClick={() => setMobileMenuOpen(false)}
                                             >

@@ -402,12 +402,7 @@ export default async function ToolPage({ params }: Props) {
           ]}
         />
 
-        <ToolPageHeader
-          name={translatedName}
-          description={translatedDesc}
-          category={translatedCategory}
-          h1={tTools.has(`${params.slug}.seoH1`) ? tTools(`${params.slug}.seoH1`) : (seo?.h1 || translatedName)}
-        />
+
 
 
 
@@ -420,11 +415,6 @@ export default async function ToolPage({ params }: Props) {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
-            <ShareButtons
-              title={translatedName}
-              url={`https://tools.aynzo.com/${params.locale}/tools/${params.slug}`}
-            />
-
             {/* FAQ Section with Schema - Only for English for now to avoid language mismatch */}
             {params.locale === 'en' && seo?.faq && <FAQSection faqs={seo.faq} />}
 
@@ -439,6 +429,11 @@ export default async function ToolPage({ params }: Props) {
               name={translatedName}
               description={translatedDesc}
               content={tTools.has(`${params.slug}.content`) ? tTools.raw(`${params.slug}.content`) : (params.locale === 'en' ? seo?.content : undefined)}
+            />
+
+            <ShareButtons
+              title={translatedName}
+              url={`https://tools.aynzo.com/${params.locale}/tools/${params.slug}`}
             />
           </div>
 

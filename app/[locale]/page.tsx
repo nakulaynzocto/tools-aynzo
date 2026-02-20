@@ -142,7 +142,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
       {t.has('seoContent') && (
         <section className="w-full px-6 max-w-5xl mx-auto py-20 border-t border-border mt-20">
           <div
-            className="prose prose-invert prose-blue max-w-none"
+            className="prose dark:prose-invert prose-blue max-w-none"
             dangerouslySetInnerHTML={{ __html: t('seoContent') }}
           />
         </section>
