@@ -67,11 +67,11 @@ export function SplitPdf() {
             } else {
                 // Split by range
                 const ranges = pageRange.split(',').map(r => r.trim());
-                
+
                 for (let rangeIndex = 0; rangeIndex < ranges.length; rangeIndex++) {
                     const range = ranges[rangeIndex];
                     const match = range.match(/(\d+)(?:-(\d+))?/);
-                    
+
                     if (!match) {
                         setError(`Invalid range format: ${range}`);
                         setProcessing(false);
@@ -91,7 +91,7 @@ export function SplitPdf() {
                     const pageIndices = Array.from({ length: end - start + 1 }, (_, i) => start + i);
                     const copiedPages = await newPdf.copyPages(pdf, pageIndices);
                     copiedPages.forEach((page: any) => newPdf.addPage(page));
-                    
+
                     const pdfBytes = await newPdf.save();
                     zip.file(`split-${rangeIndex + 1}-pages-${start + 1}-${end + 1}.pdf`, pdfBytes);
                 }
@@ -135,7 +135,7 @@ export function SplitPdf() {
                 <div
                     onDrop={handleDrop}
                     onDragOver={handleDragOver}
-                    className="border-2 border-dashed border-border rounded-2xl p-12 text-center hover:border-primary transition-colors cursor-pointer bg-muted/20"
+                    className="border-2 border-dashed border-border rounded-3xl min-h-[325px] flex flex-col items-center justify-center p-12 text-center hover:border-primary transition-colors cursor-pointer bg-muted/20"
                     onClick={() => fileInputRef.current?.click()}
                 >
                     <Upload className="mx-auto mb-4 text-primary" size={48} />

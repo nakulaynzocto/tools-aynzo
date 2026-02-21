@@ -72,7 +72,7 @@ export function ImageConvertTools({ type }: ImageConvertToolsProps) {
                 // Final update after all processing is complete - ensure new array reference
                 const newFiles = updated.map(f => ({ ...f }));
                 setFiles(newFiles);
-                
+
                 // Create preview URL from processed result
                 const processedFile = newFiles.find(f => f.id === selectedFileId) || newFiles[0];
                 if (processedFile?.resultBlob) {
@@ -87,7 +87,7 @@ export function ImageConvertTools({ type }: ImageConvertToolsProps) {
                         setPreviewUrl(processedFile.resultBlob);
                     }
                 }
-                
+
                 // Auto-download only if explicitly requested (button click)
                 if (autoDownload) {
                     await downloadResults(newFiles, type, true);
@@ -168,7 +168,7 @@ export function ImageConvertTools({ type }: ImageConvertToolsProps) {
 
     const selectedFile = files.find(f => f.id === selectedFileId) || files[0];
     const originalSize = selectedFile?.file ? (selectedFile.file.size / 1024).toFixed(1) : '0';
-    
+
     // Calculate processed size - ensure it's always a valid number
     let processedSize = '0';
     if (selectedFile?.resultSize && selectedFile.resultSize > 0) {
@@ -191,65 +191,11 @@ export function ImageConvertTools({ type }: ImageConvertToolsProps) {
                     onDrop={handleDrop}
                     onFileSelect={() => fileInputRef.current?.click()}
                     inputId="image-input"
-                    multiple={true}
+                    multiple={false}
                     onChange={(e) => e.target.files && addFiles(e.target.files)}
                 />
             ) : (
                 <>
-                    {/* Image Thumbnails - Horizontal Scrollable List */}
-                    {files.length > 0 && (
-                        <div className="bg-card rounded-2xl border-2 border-border p-4">
-                            <div className="flex items-center justify-between mb-3">
-                                <h3 className="text-sm font-black uppercase tracking-widest text-foreground">
-                                    Selected Images ({files.length})
-                                </h3>
-                            </div>
-                            <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-                                {files.map((file) => {
-                                    const isSelected = file.id === selectedFileId;
-                                    const isProcessed = file.status === 'done' && file.resultBlob;
-                                    return (
-                                        <div
-                                            key={file.id}
-                                            className={cn(
-                                                "relative flex-shrink-0 w-24 h-24 rounded-lg border-2 overflow-hidden cursor-pointer transition-all group",
-                                                isSelected 
-                                                    ? "border-primary ring-2 ring-primary/20 scale-105" 
-                                                    : "border-border hover:border-primary/50"
-                                            )}
-                                        >
-                                            <img 
-                                                src={file.preview} 
-                                                alt={`Image ${file.id}`}
-                                                onClick={() => setSelectedFileId(file.id)}
-                                                className="w-full h-full object-cover"
-                                            />
-                                            <button
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    removeFile(file.id);
-                                                    if (selectedFileId === file.id) {
-                                                        const remainingFiles = files.filter(f => f.id !== file.id);
-                                                        setSelectedFileId(remainingFiles.length > 0 ? remainingFiles[0].id : null);
-                                                    }
-                                                }}
-                                                className="absolute top-1 right-1 w-6 h-6 bg-destructive/90 hover:bg-destructive text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                                            >
-                                                <X size={14} />
-                                            </button>
-                                            {isProcessed && (
-                                                <div className="absolute top-1 left-1 w-3 h-3 bg-primary rounded-full border-2 border-background" />
-                                            )}
-                                            {isSelected && (
-                                                <div className="absolute inset-0 bg-primary/10 border-2 border-primary pointer-events-none" />
-                                            )}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    )}
-
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <div className="lg:col-span-2 space-y-4">
                             <ImagePreview
@@ -269,20 +215,8 @@ export function ImageConvertTools({ type }: ImageConvertToolsProps) {
                                 showQuality={true}
                             />
 
-                            {/* Add More and Clear Buttons */}
-                            <div className="grid grid-cols-2 gap-3">
-                                <button
-                                    onClick={() => {
-                                        if (fileInputRef.current) {
-                                            fileInputRef.current.value = ''; // Reset input to allow selecting same files again
-                                            fileInputRef.current.click();
-                                        }
-                                    }}
-                                    className="w-full py-3 bg-muted hover:bg-muted/80 text-foreground rounded-xl font-bold text-xs uppercase tracking-wider transition-all border border-border flex items-center justify-center gap-2"
-                                >
-                                    <Upload size={16} />
-                                    {tActions('addMore')}
-                                </button>
+                            {/* Action Buttons */}
+                            <div className="space-y-3">
                                 <button
                                     onClick={() => {
                                         clearAll();
@@ -292,19 +226,19 @@ export function ImageConvertTools({ type }: ImageConvertToolsProps) {
                                 >
                                     {tActions('clearAll')}
                                 </button>
-                            </div>
 
-                            {selectedFile?.resultBlob && selectedFile?.resultSize && selectedFile.resultSize > 0 && !processing && (
-                                <button
-                                    onClick={async () => {
-                                        await downloadResults([selectedFile], type, false);
-                                    }}
-                                    className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-black text-sm uppercase tracking-widest shadow-lg hover:shadow-xl disabled:opacity-50 transition-all flex items-center justify-center gap-2"
-                                >
-                                    <Wand2 size={20} />
-                                    {tActions('download')}
-                                </button>
-                            )}
+                                {selectedFile?.resultBlob && selectedFile?.resultSize && selectedFile.resultSize > 0 && !processing && (
+                                    <button
+                                        onClick={async () => {
+                                            await downloadResults([selectedFile], type, false);
+                                        }}
+                                        className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-black text-sm uppercase tracking-widest shadow-lg hover:shadow-xl disabled:opacity-50 transition-all flex items-center justify-center gap-2"
+                                    >
+                                        <Wand2 size={20} />
+                                        {tActions('download')}
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </>
@@ -314,7 +248,7 @@ export function ImageConvertTools({ type }: ImageConvertToolsProps) {
                 ref={fileInputRef}
                 id="image-input"
                 type="file"
-                multiple
+                multiple={false}
                 className="hidden"
                 accept="image/*"
                 onChange={(e) => {

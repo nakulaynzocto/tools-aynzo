@@ -43,7 +43,7 @@ export function FileUploadArea({
         >
             <div
                 className={cn(
-                    "min-h-[200px] sm:min-h-[250px] flex flex-col items-center justify-center transition-all py-6 sm:py-8 px-4 relative",
+                    "min-h-[260px] sm:min-h-[325px] flex flex-col items-center justify-center transition-all py-10 sm:py-16 px-4 relative",
                     dragActive ? "bg-accent/5" : "bg-transparent"
                 )}
             >
@@ -52,7 +52,7 @@ export function FileUploadArea({
                         onClick={onFileSelect}
                         disabled={isLoading}
                         className={cn(
-                            "px-4 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-3 md:py-4 lg:py-6 bg-primary text-primary-foreground dark:bg-gradient-to-r dark:from-sky-500 dark:to-blue-600 dark:border-none text-base sm:text-lg md:text-xl lg:text-2xl font-black rounded-2xl shadow-[0_20px_40px_-15px_rgba(var(--primary-rgb),0.4)] dark:shadow-[0_0_30px_-5px_rgba(14,165,233,0.4)] hover:scale-[1.05] hover:shadow-[0_25px_50px_-12px_rgba(var(--primary-rgb),0.5)] dark:hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.5)] active:scale-95 transition-all duration-300",
+                            "px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-5 lg:py-8 bg-primary text-primary-foreground dark:bg-gradient-to-r dark:from-sky-500 dark:to-blue-600 dark:border-none text-base sm:text-lg md:text-xl lg:text-3xl font-black rounded-2xl shadow-[0_20px_40px_-15px_rgba(var(--primary-rgb),0.4)] dark:shadow-[0_0_30px_-5px_rgba(14,165,233,0.4)] hover:scale-[1.05] hover:shadow-[0_25px_50px_-12px_rgba(var(--primary-rgb),0.5)] dark:hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.5)] active:scale-95 transition-all duration-300",
                             isLoading ? "opacity-50 cursor-not-allowed hover:scale-100" : ""
                         )}
                     >

@@ -114,7 +114,7 @@ export function SettingsPanel({
                     {originalWidth && originalHeight && (
                         <div>
                             <label className="text-xs font-bold text-foreground block mb-2">Quick Resize</label>
-                            <div className="grid grid-cols-3 gap-2">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                                 {[25, 50, 75, 100, 150, 500].map((percent) => (
                                     <button
                                         key={percent}
@@ -124,7 +124,7 @@ export function SettingsPanel({
                                                 onPercentageResize(percent);
                                             }
                                         }}
-                                        className="px-3 py-1.5 text-xs font-bold bg-muted hover:bg-primary hover:text-white rounded-lg border border-border transition-all"
+                                        className="px-2 py-1.5 text-[10px] sm:text-xs font-bold bg-muted hover:bg-primary hover:text-white rounded-lg border border-border transition-all"
                                     >
                                         {percent}%
                                     </button>
@@ -132,7 +132,7 @@ export function SettingsPanel({
                             </div>
                         </div>
                     )}
-                    
+
                     <div className="grid grid-cols-2 gap-3">
                         <div>
                             <label className="text-xs font-bold text-foreground block mb-1">Width</label>

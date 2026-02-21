@@ -16,7 +16,7 @@ interface Base64ToolsProps {
 export function Base64Tools({ type, quality }: Base64ToolsProps) {
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
-    
+
     const {
         files,
         setFiles,
@@ -140,68 +140,32 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                             {files.length} {t('imagesSelected', { count: files.length })}
                         </div>
                     </div>
-                    
+
                     <div className="flex-1 flex flex-col gap-4 p-4 sm:p-6 overflow-y-auto">
-                        {/* File Thumbnails */}
-                        {files.length > 0 && (
-                            <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-                                {files.map((file) => {
-                                    const isSelected = file.id === selectedFileId;
-                                    const isProcessed = file.status === 'done' && file.resultBlob;
-                                    return (
-                                        <div
-                                            key={file.id}
-                                            className={cn(
-                                                "relative flex-shrink-0 w-24 h-24 rounded-lg border-2 overflow-hidden cursor-pointer transition-all group",
-                                                isSelected 
-                                                    ? "border-primary ring-2 ring-primary/20 scale-105" 
-                                                    : "border-border hover:border-primary/50"
-                                            )}
-                                        >
-                                            <img 
-                                                src={file.preview} 
-                                                onClick={() => setSelectedFileId(file.id)}
-                                                className="w-full h-full object-cover" 
-                                                alt="" 
-                                            />
-                                            <button
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    removeFile(file.id);
-                                                    if (selectedFileId === file.id) {
-                                                        const remainingFiles = files.filter(f => f.id !== file.id);
-                                                        setSelectedFileId(remainingFiles.length > 0 ? remainingFiles[0].id : null);
-                                                    }
-                                                    setBase64Output('');
-                                                    setBase64StringOnly('');
-                                                    setCopied(false);
-                                                }}
-                                                className="absolute top-1 right-1 w-6 h-6 bg-destructive/90 hover:bg-destructive text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                                            >
-                                                <X size={14} />
-                                            </button>
-                                            {isProcessed && (
-                                                <div className="absolute top-1 left-1 w-3 h-3 bg-primary rounded-full border-2 border-background" />
-                                            )}
-                                            {isSelected && (
-                                                <div className="absolute inset-0 bg-primary/10 border-2 border-primary pointer-events-none" />
-                                            )}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        )}
-                        
                         {/* Image Preview */}
                         <div className="flex-1 bg-muted/20 rounded-xl border border-border p-4 flex items-center justify-center min-h-[200px]">
                             {(() => {
                                 const selectedFile = files.find(f => f.id === selectedFileId) || files[0];
                                 return selectedFile?.preview ? (
-                                    <img 
-                                        src={selectedFile.preview} 
-                                        alt="Preview" 
-                                        className="max-w-full max-h-full object-contain rounded-lg"
-                                    />
+                                    <div className="relative group">
+                                        <img
+                                            src={selectedFile.preview}
+                                            alt="Preview"
+                                            className="max-w-full max-h-[300px] object-contain rounded-lg shadow-lg"
+                                        />
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                clearAll();
+                                                setBase64Output('');
+                                                setBase64StringOnly('');
+                                                setCopied(false);
+                                            }}
+                                            className="absolute -top-2 -right-2 w-8 h-8 bg-destructive text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+                                        >
+                                            <X size={16} />
+                                        </button>
+                                    </div>
                                 ) : (
                                     <div
                                         onDragEnter={handleDrag}
@@ -209,7 +173,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                         onDragOver={handleDrag}
                                         onDrop={handleDrop}
                                         className={cn(
-                                            "w-full h-full flex flex-col items-center justify-center gap-4 border-2 border-dashed rounded-xl transition-all",
+                                            "w-full h-full flex flex-col items-center justify-center gap-4 border-2 border-dashed rounded-xl transition-all min-h-[250px]",
                                             dragActive ? "border-primary bg-primary/5" : "border-border"
                                         )}
                                     >
@@ -229,7 +193,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                             id="image-input"
                                             type="file"
                                             accept="image/*"
-                                            multiple
+                                            multiple={false}
                                             className="hidden"
                                             onChange={(e) => {
                                                 if (e.target.files && e.target.files.length > 0) {
@@ -242,16 +206,9 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                 );
                             })()}
                         </div>
-                        
+
                         {/* Actions */}
-                        <div className="grid grid-cols-2 gap-2">
-                            <button
-                                onClick={() => document.getElementById('image-input')?.click()}
-                                className="w-full py-2.5 px-4 bg-muted hover:bg-muted/80 text-foreground rounded-lg text-xs font-bold uppercase tracking-wider transition-all border border-border flex items-center justify-center gap-2"
-                            >
-                                <Upload size={14} />
-                                {tActions('addMore')}
-                            </button>
+                        {files.length > 0 && (
                             <button
                                 onClick={() => {
                                     clearAll();
@@ -259,12 +216,13 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                     setBase64StringOnly('');
                                     setCopied(false);
                                 }}
-                                className="w-full py-2.5 px-4 bg-destructive/10 hover:bg-destructive/20 text-destructive rounded-lg text-xs font-bold uppercase tracking-wider transition-all border border-destructive/20"
+                                className="w-full py-2.5 px-4 bg-destructive/10 hover:bg-destructive/20 text-destructive rounded-lg text-xs font-bold uppercase tracking-wider transition-all border border-destructive/20 flex items-center justify-center gap-2"
                             >
+                                <X size={14} />
                                 {tActions('clearAll')}
                             </button>
-                        </div>
-                        
+                        )}
+
                         {/* Convert Button */}
                         <button
                             onClick={processAll}
@@ -309,7 +267,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                             </button>
                         )}
                     </div>
-                    
+
                     <div className="flex-1 flex flex-col p-4 sm:p-6 overflow-hidden">
                         {base64Output && base64Output.length > 0 ? (
                             <>
@@ -319,8 +277,8 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                         onClick={() => setOutputFormat('datauri')}
                                         className={cn(
                                             "flex-1 py-2 rounded-md text-[10px] font-black uppercase tracking-wider transition-all",
-                                            outputFormat === 'datauri' 
-                                                ? "bg-primary text-primary-foreground shadow-md" 
+                                            outputFormat === 'datauri'
+                                                ? "bg-primary text-primary-foreground shadow-md"
                                                 : "text-muted-foreground hover:text-foreground bg-transparent"
                                         )}
                                     >
@@ -330,15 +288,15 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                         onClick={() => setOutputFormat('base64')}
                                         className={cn(
                                             "flex-1 py-2 rounded-md text-[10px] font-black uppercase tracking-wider transition-all",
-                                            outputFormat === 'base64' 
-                                                ? "bg-primary text-primary-foreground shadow-md" 
+                                            outputFormat === 'base64'
+                                                ? "bg-primary text-primary-foreground shadow-md"
                                                 : "text-muted-foreground hover:text-foreground bg-transparent"
                                         )}
                                     >
                                         Base64 Only
                                     </button>
                                 </div>
-                                
+
                                 {/* Base64 Output */}
                                 <div className="flex-1 relative bg-muted/30 rounded-xl border border-border overflow-hidden min-h-[200px]">
                                     <textarea
@@ -350,7 +308,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                         {(outputFormat === 'datauri' ? base64Output : (base64StringOnly || base64Output)).length.toLocaleString()} chars
                                     </div>
                                 </div>
-                                
+
                                 {/* Download Button */}
                                 <button
                                     onClick={() => {
@@ -433,9 +391,9 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                 <div className="bg-card rounded-2xl border-2 border-border shadow-lg p-6">
                     <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground mb-4">Preview</h3>
                     <div className="bg-muted/20 rounded-xl border border-border p-4 flex items-center justify-center min-h-[300px]">
-                        <img 
-                            src={base64Preview} 
-                            alt="Base64 Preview" 
+                        <img
+                            src={base64Preview}
+                            alt="Base64 Preview"
                             className="max-w-full max-h-[500px] object-contain rounded-lg"
                         />
                     </div>

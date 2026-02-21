@@ -34,21 +34,20 @@ export function ImagePreview({
             className
         )}>
             {showComparison && originalSize && processedSize && (
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="bg-card/80 backdrop-blur-sm rounded-xl p-4 border border-border shadow-sm">
-                        <div className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-2">Original</div>
-                        <div className="text-2xl font-black text-foreground">{originalSize} KB</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                    <div className="bg-card/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-border shadow-sm flex flex-row sm:flex-col justify-between items-center sm:items-start">
+                        <div className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Original</div>
+                        <div className="text-xl sm:text-2xl font-black text-foreground">{originalSize} KB</div>
                     </div>
-                    <div className="bg-primary/10 border-primary/20 backdrop-blur-sm rounded-xl p-4 border border-primary/30 shadow-sm">
-                        <div className="text-[10px] font-black uppercase tracking-widest text-primary mb-2">Processed</div>
-                        <div className="text-2xl font-black text-primary">{processedSize} KB</div>
+                    <div className="bg-primary/10 border-primary/20 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/30 shadow-sm flex flex-row sm:flex-col justify-between items-center sm:items-start">
+                        <div className="text-[10px] font-black uppercase tracking-widest text-primary">Processed</div>
+                        <div className="text-xl sm:text-2xl font-black text-primary">{processedSize} KB</div>
                     </div>
                 </div>
             )}
 
             <div className={cn(
-                "flex-1 relative rounded-2xl overflow-hidden checkered-bg border-2 border-border shadow-lg items-center justify-center",
-                mobilePreview ? "flex" : "hidden lg:flex",
+                "flex-1 relative rounded-2xl overflow-hidden checkered-bg border-2 border-border shadow-lg flex items-center justify-center min-h-[250px]",
                 files.length > 4 ? "max-h-[400px] sm:max-h-[500px] lg:max-h-[600px] overflow-y-auto" : "max-h-none"
             )}>
                 {previewUrl ? (

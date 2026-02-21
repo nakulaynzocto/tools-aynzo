@@ -146,7 +146,7 @@ export function WordToPdf() {
                 <div
                     onDrop={handleDrop}
                     onDragOver={handleDragOver}
-                    className="border-2 border-dashed border-border rounded-2xl p-12 text-center hover:border-primary transition-colors cursor-pointer bg-muted/20"
+                    className="border-2 border-dashed border-border rounded-3xl min-h-[325px] flex flex-col items-center justify-center p-12 text-center hover:border-primary transition-colors cursor-pointer bg-muted/20"
                     onClick={() => fileInputRef.current?.click()}
                 >
                     <Upload className="mx-auto mb-4 text-primary" size={48} />

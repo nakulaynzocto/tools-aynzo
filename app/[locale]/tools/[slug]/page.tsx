@@ -413,44 +413,27 @@ export default async function ToolPage({ params }: Props) {
 
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            {/* FAQ Section with Schema - Only for English for now to avoid language mismatch */}
-            {params.locale === 'en' && seo?.faq && <FAQSection faqs={seo.faq} />}
+        <div className="space-y-12">
+          {/* FAQ Section with Schema - Only for English for now to avoid language mismatch */}
+          {params.locale === 'en' && seo?.faq && <FAQSection faqs={seo.faq} />}
 
-            {/* Info Section */}
-            {/* 
-                CRITICAL: Only show hardcoded 'content' and 'faq' if the locale is 'en'.
-                For other languages, we rely on the dynamic fallback in ToolInfoSection 
-                which uses the translated description and generic text.
-                This ensures the user doesn't see English blocks on a Translated page.
-            */}
-            <ToolInfoSection
-              name={translatedName}
-              description={translatedDesc}
-              content={tTools.has(`${params.slug}.content`) ? tTools.raw(`${params.slug}.content`) : (params.locale === 'en' ? seo?.content : undefined)}
-            />
+          {/* Info Section */}
+          {/* 
+              CRITICAL: Only show hardcoded 'content' and 'faq' if the locale is 'en'.
+              For other languages, we rely on the dynamic fallback in ToolInfoSection 
+              which uses the translated description and generic text.
+              This ensures the user doesn't see English blocks on a Translated page.
+          */}
+          <ToolInfoSection
+            name={translatedName}
+            description={translatedDesc}
+            content={tTools.has(`${params.slug}.content`) ? tTools.raw(`${params.slug}.content`) : (params.locale === 'en' ? seo?.content : undefined)}
+          />
 
-            <ShareButtons
-              title={translatedName}
-              url={`https://tools.aynzo.com/${params.locale}/tools/${params.slug}`}
-            />
-          </div>
-
-          <div className="space-y-8">
-
-
-            {/* Sidebar or extra info could go here */}
-            <div className="bg-muted p-6 rounded-xl border border-border">
-              <h3 className="font-bold text-lg mb-4">{t('whyUse')}</h3>
-              <ul className="space-y-3 text-sm text-muted-foreground transition-all">
-                <li className="flex items-center gap-2">✅ {t('fastSecure')}</li>
-                <li className="flex items-center gap-2">✅ {t('browserProcessing')}</li>
-                <li className="flex items-center gap-2">✅ {t('noStorage')}</li>
-                <li className="flex items-center gap-2">✅ {t('mobileFriendly')}</li>
-              </ul>
-            </div>
-          </div>
+          <ShareButtons
+            title={translatedName}
+            url={`https://tools.aynzo.com/${params.locale}/tools/${params.slug}`}
+          />
         </div>
 
         {/* Related Tools for Internal Linking */}
