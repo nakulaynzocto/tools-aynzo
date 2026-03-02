@@ -104,24 +104,32 @@ export default function Navbar() {
                                 return /[\u0400-\u04FF]/.test(text);
                             };
 
+                            // Helper function to detect Devanagari (Hindi, etc.)
+                            const hasDevanagari = (text: string): boolean => {
+                                return /[\u0900-\u097F]/.test(text);
+                            };
+
                             // Helper function to calculate text width
                             const calculateTextWidth = (text: string): number => {
                                 if (hasCJK(text)) {
                                     // CJK characters are wider: ~16-18px per character
-                                    return (text.length * 16) + 50;
+                                    return (text.length * 16) + 30;
+                                } else if (hasDevanagari(text)) {
+                                    // Hindi: ~12-14px per character
+                                    return (text.length * 12.5) + 30;
                                 } else if (hasRTL(text)) {
                                     // RTL characters (Arabic, Hebrew): ~10-12px per character
-                                    return (text.length * 11) + 50;
+                                    return (text.length * 11) + 30;
                                 } else if (hasCyrillic(text)) {
                                     // Cyrillic characters: ~9-10px per character
-                                    return (text.length * 9.5) + 50;
+                                    return (text.length * 9.5) + 30;
                                 } else {
                                     // English/Latin characters: ~8.5px per character
                                     // For longer German/compound words, add slight buffer
                                     const baseWidth = text.length * 8.5;
                                     // If text is very long (like German compound words), add extra buffer
                                     const extraBuffer = text.length > 25 ? (text.length - 25) * 2 : 0;
-                                    return baseWidth + extraBuffer + 50;
+                                    return baseWidth + extraBuffer + 30;
                                 }
                             };
 
@@ -133,10 +141,10 @@ export default function Navbar() {
                             });
 
                             // 2. Determine Limits for Breakpoints
-                            // Available space estimates: LG=480px, XL=700px, 2XL=950px
-                            const BUDGET_LG = 480;
-                            const BUDGET_XL = 700;
-                            const BUDGET_2XL = 950;
+                            // Available space estimates: LG=600px, XL=850px, 2XL=1100px
+                            const BUDGET_LG = 600;
+                            const BUDGET_XL = 850;
+                            const BUDGET_2XL = 1100;
 
                             let acc = 0;
                             let countLG = 0;
@@ -151,10 +159,10 @@ export default function Navbar() {
                             }
 
                             // Ensure realistic minimums
-                            // During SSR, we use conservative defaults to ensure we don't over-render
-                            countLG = mounted ? Math.max(1, countLG) : 1;
-                            countXL = mounted ? Math.max(countLG, countXL) : 2;
-                            count2XL = mounted ? Math.max(countXL, count2XL) : 3;
+                            // Hydration-safe defaults for server/initial render
+                            const finalLG = mounted ? Math.max(1, countLG) : 1;
+                            const finalXL = mounted ? Math.max(finalLG, countXL) : 2;
+                            const final2XL = mounted ? Math.max(finalXL, count2XL) : 3;
 
                             // Helper to generate classes
                             const getVisibilityClasses = (index: number, isMoreMenu: boolean) => {
@@ -172,16 +180,16 @@ export default function Navbar() {
 
                                 if (!isMoreMenu) {
                                     // Main Menu Item
-                                    const lgClass = index < countLG ? 'lg:block' : 'lg:hidden';
-                                    const xlClass = index < countXL ? 'xl:block' : 'xl:hidden';
-                                    const xxlClass = index < count2XL ? '2xl:block' : '2xl:hidden';
+                                    const lgClass = index < finalLG ? 'lg:block' : 'lg:hidden';
+                                    const xlClass = index < finalXL ? 'xl:block' : 'xl:hidden';
+                                    const xxlClass = index < final2XL ? '2xl:block' : '2xl:hidden';
                                     return `hidden ${lgClass} ${xlClass} ${xxlClass}`;
                                 } else {
                                     // More Menu Item (Inverse)
                                     // If visible in main, hidden here.
-                                    const lgClass = index < countLG ? 'lg:hidden' : 'lg:block';
-                                    const xlClass = index < countXL ? 'xl:hidden' : 'xl:block';
-                                    const xxlClass = index < count2XL ? '2xl:hidden' : '2xl:block';
+                                    const lgClass = index < finalLG ? 'lg:hidden' : 'lg:block';
+                                    const xlClass = index < finalXL ? 'xl:hidden' : 'xl:block';
+                                    const xxlClass = index < final2XL ? '2xl:hidden' : '2xl:block';
                                     return `block ${lgClass} ${xlClass} ${xxlClass}`;
                                 }
                             };
@@ -189,9 +197,8 @@ export default function Navbar() {
                             return (
                                 <>
                                     {categories.map((category, index) => {
-                                        // Max limit for DOM cleanliness (optional, prevent rendering items that never show)
-                                        // If index >= count2XL, it never shows in main menu.
-                                        if (index >= count2XL && index >= 6) return null; // Keep some buffer
+                                        // If index >= final2XL, it never shows in main menu.
+                                        if (index >= final2XL) return null;
 
                                         return (
                                             <div
@@ -200,161 +207,58 @@ export default function Navbar() {
                                                 onMouseEnter={() => handleMouseEnter(category)}
                                                 onMouseLeave={handleMouseLeave}
                                             >
-                                                <button className={cn(
-                                                    "px-4 py-2 text-muted-foreground hover:text-primary transition-all flex items-center gap-1.5 font-semibold text-[14.5px] whitespace-nowrap min-w-0 group-hover:bg-primary/5 rounded-lg",
-                                                    activeCategory === category && "text-primary bg-primary/5"
-                                                )}>
+                                                <button 
+                                                    className={cn(
+                                                        "px-4 py-2 text-muted-foreground hover:text-primary transition-all flex items-center gap-1.5 font-semibold text-[14.5px] whitespace-nowrap min-w-0 group-hover:bg-primary/5 rounded-lg",
+                                                        activeCategory === category && "text-primary bg-primary/5"
+                                                    )}
+                                                    onClick={() => setActiveCategory(activeCategory === category ? null : category)}
+                                                >
                                                     <span className="truncate max-w-[200px] sm:max-w-[250px]">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category.replace(' Tools', ''))}</span>
                                                     <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-200 opacity-60", activeCategory === category && "rotate-180 opacity-100")} />
                                                 </button>
 
                                                 {/* Mega Menu Dropdown */}
                                                 {activeCategory === category && (() => {
-                                                    const hasGroups = toolCategories[category as keyof typeof toolCategories].some(tool => tool.group);
-
-                                                    // Calculate grouped tools once for reuse
-                                                    const groupedTools = hasGroups ? toolCategories[category as keyof typeof toolCategories].reduce((acc, tool) => {
-                                                        const g = tool.group || 'other';
-                                                        if (!acc[g]) acc[g] = [];
-                                                        acc[g].push(tool);
-                                                        return acc;
-                                                    }, {} as Record<string, typeof toolCategories[string]>) : {};
-
-                                                    const groupCount = Object.keys(groupedTools).length;
-                                                    // Check category label for different character types
-                                                    const categoryLabel = tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category);
-                                                    const hasCJKInCategory = /[\u4E00-\u9FFF\u3400-\u4DBF\u3040-\u309F\u30A0-\u30FF\uAC00-\uD7AF]/.test(categoryLabel);
-                                                    const hasRTLInCategory = /[\u0590-\u05FF\u0600-\u06FF\u0700-\u074F\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/.test(categoryLabel);
-                                                    const hasCyrillicInCategory = /[\u0400-\u04FF]/.test(categoryLabel);
-                                                    // Check for long text (German compound words, etc.)
-                                                    const isLongText = categoryLabel.length > 25;
-
-                                                    let dropdownWidth = "";
-                                                    let dropdownStyle: React.CSSProperties = {};
-
-                                                    if (hasGroups) {
-                                                        // Dynamic width based on number of columns to prevent text overlap
-                                                        // Adjust multiplier based on character type and text length
-                                                        let widthMultiplier = 1;
-                                                        if (hasCJKInCategory) {
-                                                            widthMultiplier = 1.4; // CJK: 40% wider
-                                                        } else if (hasRTLInCategory) {
-                                                            widthMultiplier = 1.25; // RTL: 25% wider
-                                                        } else if (hasCyrillicInCategory) {
-                                                            widthMultiplier = 1.15; // Cyrillic: 15% wider
-                                                        } else if (isLongText) {
-                                                            widthMultiplier = 1.2; // Long text: 20% wider
-                                                        }
-
-                                                        const baseWidths = {
-                                                            2: { min: 600, max: 800 },
-                                                            3: { min: 850, max: 1100 },
-                                                            4: { min: 1100, max: 1350 },
-                                                            5: { min: 1300, max: 1550 },
-                                                            default: { min: 1400, max: 1700 }
-                                                        };
-
-                                                        const widths = groupCount <= 2 ? baseWidths[2] :
-                                                            groupCount <= 3 ? baseWidths[3] :
-                                                                groupCount <= 4 ? baseWidths[4] :
-                                                                    groupCount <= 5 ? baseWidths[5] :
-                                                                        baseWidths.default;
-
-                                                        const minW = Math.round(widths.min * widthMultiplier);
-                                                        const maxW = Math.round(widths.max * widthMultiplier);
-
-                                                        dropdownWidth = "w-auto max-w-[95vw]";
-                                                        dropdownStyle = {
-                                                            minWidth: `${minW}px`,
-                                                            maxWidth: `${maxW}px`,
-                                                        };
-                                                    }
-
-                                                    // Dynamic grid columns based on number of groups
-                                                    let gridCols = 'grid-cols-2';
-                                                    if (groupCount <= 2) gridCols = 'grid-cols-2';
-                                                    else if (groupCount <= 3) gridCols = 'grid-cols-3';
-                                                    else if (groupCount <= 4) gridCols = 'grid-cols-4';
-                                                    else if (groupCount <= 5) gridCols = 'grid-cols-5';
-                                                    else gridCols = 'grid-cols-6';
+                                                    // Simplify all dropdowns to move away from sub-grouping
+                                                    const categoryTools = toolCategories[category as keyof typeof toolCategories] || [];
+                                                    
+                                                    // Dropdown appearance logic
+                                                    const dropdownWidth = "w-[95vw] lg:w-[900px]";
+                                                    const dropdownStyle: React.CSSProperties = {
+                                                        maxWidth: '95vw',
+                                                    };
 
                                                     return (
                                                         <div
                                                             className={cn(
-                                                                "mt-1 bg-background rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-border/60 overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-200",
-                                                                hasGroups
-                                                                    ? `fixed left-1/2 -translate-x-1/2 top-16 ${dropdownWidth}`
-                                                                    : cn("absolute", index > 2 ? 'right-0' : 'left-0', "w-auto min-w-[400px] max-w-[600px] lg:max-w-[850px]")
+                                                                "fixed inset-x-0 top-16 mx-auto z-[100] animate-in fade-in slide-in-from-top-2 duration-200 mt-1 bg-background rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-border/60 overflow-hidden",
+                                                                dropdownWidth
                                                             )}
-                                                            style={hasGroups ? dropdownStyle : undefined}
+                                                            style={dropdownStyle}
                                                         >
-                                                            {!hasGroups ? (
-                                                                <div className="p-4 md:p-6 lg:p-8">
-                                                                    <div className={`grid ${toolCategories[category as keyof typeof toolCategories].length > 10 ? 'grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2'} gap-x-6 gap-y-2`}>
-                                                                        {toolCategories[category as keyof typeof toolCategories].map((tool) => (
-                                                                            <Link
-                                                                                key={tool.slug}
-                                                                                href={`/tools/${tool.slug}`}
-                                                                                prefetch={false}
-                                                                                className="flex items-start gap-4 p-3 hover:bg-primary/5 rounded-2xl transition-all group/tool border border-transparent hover:border-primary/10"
-                                                                                onClick={() => setActiveCategory(null)}
-                                                                            >
-                                                                                <div className="h-10 w-10 flex-shrink-0 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover/tool:bg-primary group-hover/tool:text-white transition-all">
-                                                                                    <Zap size={18} />
-                                                                                </div>
-                                                                                <div className="flex flex-col min-w-0">
-                                                                                    <span className="text-[14px] font-bold text-foreground group-hover/tool:text-primary transition-colors leading-tight whitespace-nowrap truncate">
-                                                                                        {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
-                                                                                    </span>
-                                                                                    <span className="text-[11px] text-muted-foreground leading-snug line-clamp-2 mt-1 opacity-60">
-                                                                                        {tTools.has(`${tool.slug}.description`) ? tTools(`${tool.slug}.description`) : ""}
-                                                                                    </span>
-                                                                                </div>
-                                                                            </Link>
-                                                                        ))}
-                                                                    </div>
-                                                                </div>
-                                                            ) : (
-                                                                <div className="p-6 lg:p-10 max-h-[85vh] overflow-y-auto custom-scrollbar">
-                                                                    <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-x-12 gap-y-12 [column-fill:balance] space-y-12">
-                                                                        {Object.entries(groupedTools).map(([group, tools]) => (
-                                                                            <div key={group} className="break-inside-avoid space-y-6">
-                                                                                <div className="flex items-center gap-3 border-b border-border/60 pb-3">
-                                                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_10px_rgba(var(--primary),0.5)]" />
-                                                                                    <h4 className="text-[12px] font-bold uppercase tracking-[0.2em] text-foreground/80">
-                                                                                        {tImageGroups.has(group) ? tImageGroups(group) : group}
-                                                                                    </h4>
-                                                                                </div>
-                                                                                <div className="flex flex-col gap-1.5">
-                                                                                    {tools.map((tool) => (
-                                                                                        <Link
-                                                                                            key={tool.slug}
-                                                                                            href={`/tools/${tool.slug}`}
-                                                                                            prefetch={false}
-                                                                                            className="flex items-start gap-4 p-3 hover:bg-primary/5 rounded-2xl transition-all group/tool border border-transparent hover:border-primary/10"
-                                                                                            onClick={() => setActiveCategory(null)}
-                                                                                        >
-                                                                                            <div className="h-9 w-9 flex-shrink-0 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover/tool:bg-primary group-hover/tool:text-white transition-all">
-                                                                                                <Zap size={16} />
-                                                                                            </div>
-                                                                                            <div className="flex flex-col min-w-0">
-                                                                                                <span className="text-[14px] font-bold text-foreground group-hover/tool:text-primary transition-colors leading-tight whitespace-nowrap truncate">
-                                                                                                    {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
-                                                                                                </span>
-                                                                                                {tTools.has(`${tool.slug}.description`) && (
-                                                                                                    <span className="text-[10px] text-muted-foreground leading-snug line-clamp-1 mt-0.5 opacity-60 truncate">
-                                                                                                        {tTools(`${tool.slug}.description`)}
-                                                                                                    </span>
-                                                                                                )}
-                                                                                            </div>
-                                                                                        </Link>
-                                                                                    ))}
-                                                                                </div>
+                                                            <div className="p-4 lg:p-6 max-h-[85vh] overflow-y-auto custom-scrollbar flex justify-center">
+                                                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0 w-full max-w-full justify-items-center md:justify-items-start">
+                                                                    {categoryTools.map((tool) => (
+                                                                        <Link
+                                                                            key={tool.slug}
+                                                                            href={`/tools/${tool.slug}`}
+                                                                            prefetch={false}
+                                                                            className="flex items-center gap-4 p-1.5 hover:bg-primary/5 rounded-xl transition-all group/tool border border-transparent hover:border-primary/10"
+                                                                            onClick={() => setActiveCategory(null)}
+                                                                        >
+                                                                            <div className="h-9 w-9 flex-shrink-0 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover/tool:bg-primary group-hover/tool:text-white transition-all">
+                                                                                <Zap size={16} />
                                                                             </div>
-                                                                        ))}
-                                                                    </div>
+                                                                            <div className="flex flex-col min-w-0">
+                                                                                <span className="text-[14.5px] font-bold text-foreground group-hover/tool:text-primary transition-colors leading-tight whitespace-nowrap truncate">
+                                                                                    {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                                </span>
+                                                                            </div>
+                                                                        </Link>
+                                                                    ))}
                                                                 </div>
-                                                            )}
+                                                            </div>
                                                         </div>
                                                     );
                                                 })()}
@@ -368,10 +272,13 @@ export default function Navbar() {
                                         onMouseEnter={() => handleMouseEnter('AllTools')}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <button className={cn(
-                                            "px-4 py-2 text-muted-foreground hover:text-primary transition-all flex items-center gap-1.5 font-semibold text-[14.5px] whitespace-nowrap min-w-0 hover:bg-primary/5 rounded-lg",
-                                            activeCategory === 'AllTools' && "text-primary bg-primary/5"
-                                        )}>
+                                        <button 
+                                            className={cn(
+                                                "px-4 py-2 text-muted-foreground hover:text-primary transition-all flex items-center gap-1.5 font-semibold text-[14.5px] whitespace-nowrap min-w-0 hover:bg-primary/5 rounded-lg",
+                                                activeCategory === 'AllTools' && "text-primary bg-primary/5"
+                                            )}
+                                            onClick={() => setActiveCategory(activeCategory === 'AllTools' ? null : 'AllTools')}
+                                        >
                                             <span className="truncate max-w-[150px]">{t('allTools')}</span>
                                             <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-200 opacity-60", activeCategory === 'AllTools' && "rotate-180 opacity-100")} />
                                         </button>
@@ -380,7 +287,7 @@ export default function Navbar() {
                                         {activeCategory === 'AllTools' && (
                                             <div className="fixed top-16 left-0 w-full bg-card border-b border-border shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-[100] animate-in fade-in slide-in-from-top-2 duration-300">
                                                 <div className="max-w-[1400px] mx-auto p-8 max-h-[85vh] overflow-y-auto custom-scrollbar">
-                                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-8 gap-y-10">
+                                                    <div className="flex flex-wrap justify-center gap-x-12 gap-y-10">
                                                         {Object.entries(toolCategories).map(([category, tools], idx) => {
                                                             const displayClass = getVisibilityClasses(idx, true);
                                                             // If displayClass hides it on all larger screens (lg/xl/2xl), we keep it in ALL TOOLS.
@@ -388,20 +295,20 @@ export default function Navbar() {
 
 
                                                             return (
-                                                                <div key={category} className={cn("space-y-4", displayClass)}>
+                                                                <div key={category} className={cn("space-y-4 w-full md:w-[250px] lg:w-[280px]", displayClass)}>
                                                                     <div className="flex items-center gap-3 border-b border-border/60 pb-3 mb-4">
                                                                         <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_10px_rgba(var(--primary),0.5)]" />
                                                                         <h3 className="text-[12px] font-bold uppercase tracking-[0.2em] text-foreground/80 break-words overflow-hidden flex-1">
                                                                             {tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}
                                                                         </h3>
                                                                     </div>
-                                                                    <div className="flex flex-col gap-1.5">
+                                                                    <div className="flex flex-col gap-0">
                                                                         {tools.map((tool) => (
                                                                             <Link
                                                                                 key={tool.slug}
                                                                                 href={`/tools/${tool.slug}`}
                                                                                 prefetch={false}
-                                                                                className="flex items-start gap-4 p-2 hover:bg-primary/5 rounded-xl transition-all group/tool border border-transparent hover:border-primary/10"
+                                                                                className="flex items-start gap-4 p-1.5 hover:bg-primary/5 rounded-xl transition-all group/tool border border-transparent hover:border-primary/10"
                                                                                 onClick={() => setActiveCategory(null)}
                                                                             >
                                                                                 <div className="h-8 w-8 flex-shrink-0 bg-primary/5 rounded-lg flex items-center justify-center text-primary group-hover/tool:bg-primary group-hover/tool:text-white transition-all">
@@ -411,11 +318,7 @@ export default function Navbar() {
                                                                                     <span className="text-[13px] font-bold text-foreground group-hover/tool:text-primary transition-colors leading-tight whitespace-nowrap truncate">
                                                                                         {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
                                                                                     </span>
-                                                                                    {tTools.has(`${tool.slug}.description`) && (
-                                                                                        <span className="text-[10px] text-muted-foreground leading-snug line-clamp-1 mt-0.5 opacity-60 truncate">
-                                                                                            {tTools(`${tool.slug}.description`)}
-                                                                                        </span>
-                                                                                    )}
+
                                                                                 </div>
                                                                             </Link>
                                                                         ))}
