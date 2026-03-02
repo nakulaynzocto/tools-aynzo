@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "../globals.css";
 import { Toaster } from "sonner";
 import Navbar from "@/components/common/components/Navbar";
@@ -10,8 +10,9 @@ import Script from 'next/script';
 import Footer from "@/components/common/components/Footer";
 import { locales } from '@/i18n';
 import NextTopLoader from '@/components/common/components/NextTopLoader';
+import CommandPalette from '@/components/common/components/CommandPalette';
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800", "900"] });
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   return {
@@ -86,6 +87,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
+
+import PromotionalBanner from '@/components/common/components/PromotionalBanner';
 
 export default async function RootLayout({
   children,
@@ -174,11 +177,13 @@ export default async function RootLayout({
           </>
         )}
       </head>
-      <body className={inter.className}>
+      <body className={outfit.className}>
         <NextTopLoader />
         <NextIntlClientProvider messages={messages}>
+          <CommandPalette />
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
             <div className="flex flex-col min-h-screen">
+              <PromotionalBanner />
               <Navbar />
               <main className="flex-1">
                 {children}

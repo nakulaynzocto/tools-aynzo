@@ -23,7 +23,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
 
     return (
         <div className="max-w-4xl mx-auto px-6 py-20">
-            <h1 className="text-4xl font-bold mb-8 text-center">{t('contact')}</h1>
+            <h1 className="mb-8 text-center">{t('contact')}</h1>
 
             <div className="grid md:grid-cols-2 gap-12 mt-12">
                 <div className="space-y-6">

@@ -1,19 +1,9 @@
-import { ToolCard } from '@/components/common/components/ToolCard';
-import { tools } from '@/lib/tools';
-import { notFound } from 'next/navigation';
-import { useTranslations } from 'next-intl';
-import {
-  FileText, Image as ImageIcon, Lock, Code, Search, Youtube, Link as LinkIcon,
-  RefreshCw, Shuffle, CreditCard, Wand2, Shield, Zap, Globe
-} from 'lucide-react';
-
-// IMPORTANT: Add 'export const dynamic = "force-dynamic"' if you want to bypass static generation, 
-// though generally static params are preferred.
-// For now, we rely on generateStaticParams if we want SSG, but let's stick to simple dynamic rendering.
-
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
+import Image from 'next/image';
+import { Shield, Zap, Image as ImageIcon, FileText, Code, ArrowRight } from 'lucide-react';
+import HeroSearch from '@/components/common/components/HeroSearch';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -51,108 +41,119 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function Home({ params: { locale } }: { params: { locale: string } }) {
-  const t = useTranslations('HomePage');
-  // If we wanted to translate categories dynamically in the component:
-  const tCategories = useTranslations('Categories');
-  const tTools = useTranslations('Tools');
+export default async function Home({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'HomePage' });
 
-  // Group tools by category
-  const toolsByCategory: Record<string, typeof tools> = {};
-
-  // We need to map the English category names to localized category names if we want grouping?
-  // Actually, tools.ts uses English keys. We display them localized.
-
-  tools.forEach(tool => {
-    // tool.hidden is ignored to show all tools as requested
-    // if (tool.hidden) return;
-    if (!toolsByCategory[tool.category]) {
-      toolsByCategory[tool.category] = [];
+  const capabilities = [
+    {
+      title: t('capabilities.image.title'),
+      description: t('capabilities.image.description'),
+      icon: ImageIcon,
+      image: "/assets/image_tools.png",
+      color: "from-blue-500/20 to-purple-500/20",
+      accent: "text-blue-500"
+    },
+    {
+      title: t('capabilities.pdf.title'),
+      description: t('capabilities.pdf.description'),
+      icon: FileText,
+      image: "/assets/pdf_tools.png",
+      color: "from-orange-500/20 to-red-500/20",
+      accent: "text-orange-500"
+    },
+    {
+      title: t('capabilities.dev.title'),
+      description: t('capabilities.dev.description'),
+      icon: Code,
+      image: "/assets/dev_tools.png",
+      color: "from-green-500/20 to-emerald-500/20",
+      accent: "text-emerald-500"
+    },
+    {
+      title: t('capabilities.privacy.title'),
+      description: t('capabilities.privacy.description'),
+      icon: Shield,
+      image: "/assets/security_privacy.png",
+      color: "from-indigo-500/20 to-blue-500/20",
+      accent: "text-indigo-500"
     }
-    toolsByCategory[tool.category].push(tool);
-  });
-
-  // Icon mapping based on category name
-  const getCategoryIcon = (category: string) => {
-    if (category.includes('image')) return ImageIcon;
-    if (category.includes('pdf') || category.includes('text')) return FileText;
-    if (category.includes('security') || category.includes('crypto')) return Lock;
-    if (category.includes('developer') || category.includes('code')) return Code;
-    if (category.includes('seo') || category.includes('web')) return Search;
-    if (category.includes('youtube')) return Youtube;
-    if (category.includes('social') || category.includes('link')) return LinkIcon;
-    if (category.includes('converter')) return RefreshCw;
-    if (category.includes('random')) return Shuffle;
-    if (category.includes('utility')) return CreditCard;
-    return Wand2;
-  };
+  ];
 
   return (
-    <div className="space-y-16 pb-20">
-      {/* Hero Section */}
-      <section className="relative py-8 md:py-20 px-4 overflow-hidden">
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary opacity-[0.03]"></div>
-
-        <div className="relative z-10 w-full px-6 text-center">
-          <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-none">
-            <span className="text-foreground">Aynzo</span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent ml-4">
-              Tools
-            </span>
+    <div className="flex flex-col">
+      {/* Hero Section - Clean & Structured */}
+      <section className="relative pt-24 pb-12 flex flex-col items-center justify-center px-6 bg-background">
+        <div className="relative z-10 max-w-4xl w-full text-center">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-8">
+            {t.rich('heroTitle', {
+              v: (chunks) => <span className="text-primary">{chunks}</span>
+            })}
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
-            {t('description')}
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-2 text-primary font-bold tracking-widest uppercase text-xs">
-            <span className="w-8 h-px bg-primary/30"></span>
-            {t('noAds')}
-            <span className="w-8 h-px bg-primary/30"></span>
-          </div>
+          <HeroSearch />
         </div>
       </section>
 
-      {/* Tools Sections by Category */}
-      <div className="w-full px-6 space-y-16">
-        {Object.entries(toolsByCategory).map(([categoryName, categoryTools]) => {
-          return (
-            <div key={categoryName} id={categoryName.replace(/\s+/g, '-').toLowerCase()} className="space-y-6">
-              <div className="flex items-center gap-3 border-b border-border pb-4">
-                <h2 className="text-2xl font-bold text-foreground">
-                  {tCategories.has(categoryName) ? tCategories(categoryName) : categoryName}
-                </h2>
-                <span className="text-sm font-medium text-muted-foreground bg-secondary px-2.5 py-0.5 rounded-full">
-                  {categoryTools.length}
-                </span>
-              </div>
-
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {categoryTools.map((tool) => (
-                  <ToolCard
-                    key={tool.slug}
-                    _id={tool.slug}
-                    slug={tool.slug}
-                    name={tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
-                    description={tTools.has(`${tool.slug}.description`) ? tTools(`${tool.slug}.description`) : tool.description}
-                    category={tCategories.has(categoryName) ? tCategories(categoryName) : categoryName}
-                    icon={getCategoryIcon(tool.category)}
-                  />
-                ))}
+      {/* Capabilities Story Section */}
+      <section className="py-16 space-y-24">
+        {capabilities.map((cap, index) => (
+          <div key={index} className={`max-w-7xl mx-auto px-6 flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-16 md:gap-32`}>
+            {/* Content Container */}
+            <div className="flex-1 space-y-8 text-center md:text-left">
+              <h2 className="leading-tight">
+                {cap.title}
+              </h2>
+              <p className="subtitle">
+                {cap.description}
+              </p>
+              <div className={`hidden md:flex items-center gap-3 font-semibold uppercase tracking-widest text-xs ${cap.accent}`}>
+                <span className="h-px w-10 bg-current opacity-20"></span>
+                {t('labels.secureFast')}
               </div>
             </div>
-          );
-        })}
-      </div>
 
-      {/* SEO Content Section */}
-      {t.has('seoContent') && (
-        <section className="w-full px-6 max-w-5xl mx-auto py-20 border-t border-border mt-20">
-          <div
-            className="prose dark:prose-invert prose-blue max-w-none"
-            dangerouslySetInnerHTML={{ __html: t('seoContent') }}
-          />
-        </section>
-      )}
+            {/* Image Container */}
+            <div className="flex-1 w-full max-w-2xl group">
+              <div className={`relative aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br ${cap.color} ring-1 ring-border/50 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02] group-hover:-rotate-1`}>
+                <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <Image 
+                  src={cap.image} 
+                  alt={cap.title}
+                  fill
+                  priority={index < 2}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  className="object-contain p-12 drop-shadow-2xl transition-all duration-700 group-hover:scale-110"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* Value Proposition Grid */}
+      <section className="py-40 bg-secondary/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-24">
+            <h2 className="mb-6">{t('trust.title')}</h2>
+            <p className="text-xl text-muted-foreground font-medium uppercase tracking-[0.3em]">{t('trust.subtitle')}</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: t('valueGrid.zeroData.title'), desc: t('valueGrid.zeroData.desc') },
+              { title: t('valueGrid.noLatency.title'), desc: t('valueGrid.noLatency.desc') },
+              { title: t('valueGrid.alwaysFree.title'), desc: t('valueGrid.alwaysFree.desc') }
+            ].map((item, i) => (
+              <div key={i} className="bg-card border-2 border-border rounded-[2rem] p-10 shadow-sm hover:shadow-xl transition-all hover:border-primary/30 group">
+                <h3 className="mb-4 flex items-center gap-3">
+                  <span className="w-2 h-8 bg-primary rounded-full group-hover:scale-y-125 transition-transform"></span>
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground font-medium leading-loose text-lg">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

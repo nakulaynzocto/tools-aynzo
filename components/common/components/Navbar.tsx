@@ -1,8 +1,8 @@
 "use client";
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '@/navigation';
-import { Menu, X, ChevronDown, Search, Image as ImageIcon, FileText, Type, Code, ArrowRightLeft, Settings as SettingsIcon, Shield, Hash, Layout, Share2, Youtube, Search as SearchIcon, Globe, Smartphone, Calculator } from 'lucide-react';
+import { Menu, X, ChevronDown, Search, Image as ImageIcon, FileText, Type, Code, ArrowRightLeft, Settings as SettingsIcon, Shield, Hash, Layout, Share2, Youtube, Search as SearchIcon, Globe, Smartphone, Calculator, Zap } from 'lucide-react';
 import { toolCategories, searchTools } from '@/lib/tools';
 import LanguageSwitcher from './LanguageSwitcher';
 import { ModeToggle } from './ModeToggle';
@@ -22,6 +22,11 @@ export default function Navbar() {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<any[]>([]);
     const [showSearch, setShowSearch] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     // Timeout ref for hover intent
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -65,11 +70,12 @@ export default function Navbar() {
                                     src="/logo.png"
                                     alt="Logo"
                                     fill
+                                    priority
                                     className="object-contain"
                                     sizes="40px"
                                 />
                             </div>
-                            <span className="text-foreground font-black text-lg md:text-xl tracking-tighter inline-block">
+                            <span className="text-foreground font-bold text-lg md:text-xl tracking-tight inline-block">
                                 {tApp('name')}<span className="text-primary">{tApp('nameHighlight')}</span>
                             </span>
                         </div>
@@ -144,10 +150,11 @@ export default function Navbar() {
                                 if (acc < BUDGET_2XL) count2XL++;
                             }
 
-                            // Ensure realistic minimums (fallback to safe conservative if calc fails weirdly)
-                            countLG = Math.max(1, countLG);
-                            countXL = Math.max(countLG, countXL);
-                            count2XL = Math.max(countXL, count2XL);
+                            // Ensure realistic minimums
+                            // During SSR, we use conservative defaults to ensure we don't over-render
+                            countLG = mounted ? Math.max(1, countLG) : 1;
+                            countXL = mounted ? Math.max(countLG, countXL) : 2;
+                            count2XL = mounted ? Math.max(countXL, count2XL) : 3;
 
                             // Helper to generate classes
                             const getVisibilityClasses = (index: number, isMoreMenu: boolean) => {
@@ -193,9 +200,12 @@ export default function Navbar() {
                                                 onMouseEnter={() => handleMouseEnter(category)}
                                                 onMouseLeave={handleMouseLeave}
                                             >
-                                                <button className="px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-all flex items-center gap-1 font-medium text-[15.5px] whitespace-nowrap min-w-0">
+                                                <button className={cn(
+                                                    "px-4 py-2 text-muted-foreground hover:text-primary transition-all flex items-center gap-1.5 font-semibold text-[14.5px] whitespace-nowrap min-w-0 group-hover:bg-primary/5 rounded-lg",
+                                                    activeCategory === category && "text-primary bg-primary/5"
+                                                )}>
                                                     <span className="truncate max-w-[200px] sm:max-w-[250px]">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category.replace(' Tools', ''))}</span>
-                                                    <ChevronDown className="h-3.5 w-3.5 flex-shrink-0" />
+                                                    <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-200 opacity-60", activeCategory === category && "rotate-180 opacity-100")} />
                                                 </button>
 
                                                 {/* Mega Menu Dropdown */}
@@ -237,11 +247,11 @@ export default function Navbar() {
                                                         }
 
                                                         const baseWidths = {
-                                                            2: { min: 500, max: 700 },
-                                                            3: { min: 650, max: 900 },
-                                                            4: { min: 750, max: 1050 },
-                                                            5: { min: 900, max: 1250 },
-                                                            default: { min: 1000, max: 1500 }
+                                                            2: { min: 600, max: 800 },
+                                                            3: { min: 850, max: 1100 },
+                                                            4: { min: 1100, max: 1350 },
+                                                            5: { min: 1300, max: 1550 },
+                                                            default: { min: 1400, max: 1700 }
                                                         };
 
                                                         const widths = groupCount <= 2 ? baseWidths[2] :
@@ -271,54 +281,78 @@ export default function Navbar() {
                                                     return (
                                                         <div
                                                             className={cn(
-                                                                "mt-1 bg-card rounded-xl shadow-2xl border border-border overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-200",
+                                                                "mt-1 bg-background rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-border/60 overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-200",
                                                                 hasGroups
-                                                                    ? `fixed left-1/2 -translate-x-1/2 top-16 ${dropdownWidth} p-6 lg:p-8`
-                                                                    : cn("absolute", index > 2 ? 'right-0' : 'left-0', "w-auto min-w-[300px] max-w-[500px] lg:max-w-[750px]", toolCategories[category as keyof typeof toolCategories].length > 20 && "lg:max-w-[750px]")
+                                                                    ? `fixed left-1/2 -translate-x-1/2 top-16 ${dropdownWidth}`
+                                                                    : cn("absolute", index > 2 ? 'right-0' : 'left-0', "w-auto min-w-[400px] max-w-[600px] lg:max-w-[850px]")
                                                             )}
                                                             style={hasGroups ? dropdownStyle : undefined}
                                                         >
                                                             {!hasGroups ? (
-                                                                <>
-                                                                    <div className="p-3 bg-secondary/50 border-b border-border">
-                                                                        <h3 className="text-foreground font-semibold text-sm break-words overflow-hidden">{tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}</h3>
-                                                                    </div>
-                                                                    <div className={`grid ${toolCategories[category as keyof typeof toolCategories].length > 20 ? 'grid-cols-3' : 'grid-cols-2'} gap-0 p-2`}>
+                                                                <div className="p-4 md:p-6 lg:p-8">
+                                                                    <div className={`grid ${toolCategories[category as keyof typeof toolCategories].length > 10 ? 'grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2'} gap-x-6 gap-y-2`}>
                                                                         {toolCategories[category as keyof typeof toolCategories].map((tool) => (
                                                                             <Link
                                                                                 key={tool.slug}
                                                                                 href={`/tools/${tool.slug}`}
                                                                                 prefetch={false}
-                                                                                className="block px-3 py-2.5 text-muted-foreground hover:text-foreground hover:bg-secondary transition-all text-[15.6px] rounded-md m-1 break-words overflow-hidden"
+                                                                                className="flex items-start gap-4 p-3 hover:bg-primary/5 rounded-2xl transition-all group/tool border border-transparent hover:border-primary/10"
                                                                                 onClick={() => setActiveCategory(null)}
                                                                             >
-                                                                                <span className="line-clamp-2">{tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}</span>
+                                                                                <div className="h-10 w-10 flex-shrink-0 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover/tool:bg-primary group-hover/tool:text-white transition-all">
+                                                                                    <Zap size={18} />
+                                                                                </div>
+                                                                                <div className="flex flex-col min-w-0">
+                                                                                    <span className="text-[14px] font-bold text-foreground group-hover/tool:text-primary transition-colors leading-tight whitespace-nowrap truncate">
+                                                                                        {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                                    </span>
+                                                                                    <span className="text-[11px] text-muted-foreground leading-snug line-clamp-2 mt-1 opacity-60">
+                                                                                        {tTools.has(`${tool.slug}.description`) ? tTools(`${tool.slug}.description`) : ""}
+                                                                                    </span>
+                                                                                </div>
                                                                             </Link>
                                                                         ))}
                                                                     </div>
-                                                                </>
+                                                                </div>
                                                             ) : (
-                                                                <div className={`grid ${gridCols} gap-6 lg:gap-8`}>
-                                                                    {Object.entries(groupedTools).map(([group, tools]) => (
-                                                                        <div key={group} className="space-y-3 min-w-[160px]">
-                                                                            <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary border-b border-border pb-1.5 mb-2 break-words overflow-hidden">
-                                                                                {tImageGroups.has(group) ? tImageGroups(group) : group}
-                                                                            </h4>
-                                                                            <div className="flex flex-col gap-1.5">
-                                                                                {tools.map((tool) => (
-                                                                                    <Link
-                                                                                        key={tool.slug}
-                                                                                        href={`/tools/${tool.slug}`}
-                                                                                        prefetch={false}
-                                                                                        className="text-[16.25px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200 break-words overflow-hidden line-clamp-2"
-                                                                                        onClick={() => setActiveCategory(null)}
-                                                                                    >
-                                                                                        {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
-                                                                                    </Link>
-                                                                                ))}
+                                                                <div className="p-6 lg:p-10 max-h-[85vh] overflow-y-auto custom-scrollbar">
+                                                                    <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-x-12 gap-y-12 [column-fill:balance] space-y-12">
+                                                                        {Object.entries(groupedTools).map(([group, tools]) => (
+                                                                            <div key={group} className="break-inside-avoid space-y-6">
+                                                                                <div className="flex items-center gap-3 border-b border-border/60 pb-3">
+                                                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_10px_rgba(var(--primary),0.5)]" />
+                                                                                    <h4 className="text-[12px] font-bold uppercase tracking-[0.2em] text-foreground/80">
+                                                                                        {tImageGroups.has(group) ? tImageGroups(group) : group}
+                                                                                    </h4>
+                                                                                </div>
+                                                                                <div className="flex flex-col gap-1.5">
+                                                                                    {tools.map((tool) => (
+                                                                                        <Link
+                                                                                            key={tool.slug}
+                                                                                            href={`/tools/${tool.slug}`}
+                                                                                            prefetch={false}
+                                                                                            className="flex items-start gap-4 p-3 hover:bg-primary/5 rounded-2xl transition-all group/tool border border-transparent hover:border-primary/10"
+                                                                                            onClick={() => setActiveCategory(null)}
+                                                                                        >
+                                                                                            <div className="h-9 w-9 flex-shrink-0 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover/tool:bg-primary group-hover/tool:text-white transition-all">
+                                                                                                <Zap size={16} />
+                                                                                            </div>
+                                                                                            <div className="flex flex-col min-w-0">
+                                                                                                <span className="text-[14px] font-bold text-foreground group-hover/tool:text-primary transition-colors leading-tight whitespace-nowrap truncate">
+                                                                                                    {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                                                </span>
+                                                                                                {tTools.has(`${tool.slug}.description`) && (
+                                                                                                    <span className="text-[10px] text-muted-foreground leading-snug line-clamp-1 mt-0.5 opacity-60 truncate">
+                                                                                                        {tTools(`${tool.slug}.description`)}
+                                                                                                    </span>
+                                                                                                )}
+                                                                                            </div>
+                                                                                        </Link>
+                                                                                    ))}
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    ))}
+                                                                        ))}
+                                                                    </div>
                                                                 </div>
                                                             )}
                                                         </div>
@@ -334,9 +368,12 @@ export default function Navbar() {
                                         onMouseEnter={() => handleMouseEnter('AllTools')}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <button className="px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-all flex items-center gap-1 font-medium text-[15.5px] whitespace-nowrap min-w-0">
+                                        <button className={cn(
+                                            "px-4 py-2 text-muted-foreground hover:text-primary transition-all flex items-center gap-1.5 font-semibold text-[14.5px] whitespace-nowrap min-w-0 hover:bg-primary/5 rounded-lg",
+                                            activeCategory === 'AllTools' && "text-primary bg-primary/5"
+                                        )}>
                                             <span className="truncate max-w-[150px]">{t('allTools')}</span>
-                                            <ChevronDown className={`h-4 w-4 transition-transform flex-shrink-0 ${activeCategory === 'AllTools' ? 'rotate-180' : ''}`} />
+                                            <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-200 opacity-60", activeCategory === 'AllTools' && "rotate-180 opacity-100")} />
                                         </button>
 
                                         {/* MEGA MENU CONTAINER */}
@@ -349,45 +386,37 @@ export default function Navbar() {
                                                             // If displayClass hides it on all larger screens (lg/xl/2xl), we keep it in ALL TOOLS.
                                                             // If it's visible in the top bar, we hide it here to avoid duplication.
 
-                                                            // Map categories to icons
-                                                            const getCategoryIcon = (cat: string) => {
-                                                                const c = cat.toLowerCase();
-                                                                if (c.includes('image')) return <ImageIcon className="w-5 h-5 text-blue-500" />;
-                                                                if (c.includes('pdf')) return <FileText className="w-5 h-5 text-red-500" />;
-                                                                if (c.includes('text')) return <Type className="w-5 h-5 text-emerald-500" />;
-                                                                if (c.includes('developer') || c.includes('dev')) return <Code className="w-5 h-5 text-purple-500" />;
-                                                                if (c.includes('converter')) return <ArrowRightLeft className="w-5 h-5 text-orange-500" />;
-                                                                if (c.includes('utility')) return <SettingsIcon className="w-5 h-5 text-sky-500" />;
-                                                                if (c.includes('security')) return <Shield className="w-5 h-5 text-red-600" />;
-                                                                if (c.includes('crypto')) return <Hash className="w-5 h-5 text-amber-500" />;
-                                                                if (c.includes('seo')) return <SearchIcon className="w-5 h-5 text-indigo-500" />;
-                                                                if (c.includes('keyword')) return <Layout className="w-5 h-5 text-rose-500" />;
-                                                                if (c.includes('webmaster')) return <Globe className="w-5 h-5 text-blue-600" />;
-                                                                if (c.includes('social')) return <Share2 className="w-5 h-5 text-pink-500" />;
-                                                                if (c.includes('youtube')) return <Youtube className="w-5 h-5 text-red-500" />;
-                                                                if (c.includes('tech')) return <Smartphone className="w-5 h-5 text-zinc-500" />;
-                                                                if (c.includes('calculator')) return <Calculator className="w-5 h-5 text-green-600" />;
-                                                                return <SettingsIcon className="w-5 h-5" />;
-                                                            };
 
                                                             return (
                                                                 <div key={category} className={cn("space-y-4", displayClass)}>
-                                                                    <div className="flex items-center gap-2 border-b border-border/50 pb-2 min-w-0">
-                                                                        {getCategoryIcon(category)}
-                                                                        <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-foreground break-words overflow-hidden flex-1">
+                                                                    <div className="flex items-center gap-3 border-b border-border/60 pb-3 mb-4">
+                                                                        <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_10px_rgba(var(--primary),0.5)]" />
+                                                                        <h3 className="text-[12px] font-bold uppercase tracking-[0.2em] text-foreground/80 break-words overflow-hidden flex-1">
                                                                             {tNavbar.has(category) ? tNavbar(category) : (tCategories.has(category) ? tCategories(category) : category)}
                                                                         </h3>
                                                                     </div>
-                                                                    <div className="flex flex-col gap-2">
+                                                                    <div className="flex flex-col gap-1.5">
                                                                         {tools.map((tool) => (
                                                                             <Link
                                                                                 key={tool.slug}
                                                                                 href={`/tools/${tool.slug}`}
                                                                                 prefetch={false}
-                                                                                className="text-[16.25px] text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 duration-200 break-words overflow-hidden line-clamp-2"
+                                                                                className="flex items-start gap-4 p-2 hover:bg-primary/5 rounded-xl transition-all group/tool border border-transparent hover:border-primary/10"
                                                                                 onClick={() => setActiveCategory(null)}
                                                                             >
-                                                                                {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                                <div className="h-8 w-8 flex-shrink-0 bg-primary/5 rounded-lg flex items-center justify-center text-primary group-hover/tool:bg-primary group-hover/tool:text-white transition-all">
+                                                                                    <Zap size={14} />
+                                                                                </div>
+                                                                                <div className="flex flex-col min-w-0">
+                                                                                    <span className="text-[13px] font-bold text-foreground group-hover/tool:text-primary transition-colors leading-tight whitespace-nowrap truncate">
+                                                                                        {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                                                                    </span>
+                                                                                    {tTools.has(`${tool.slug}.description`) && (
+                                                                                        <span className="text-[10px] text-muted-foreground leading-snug line-clamp-1 mt-0.5 opacity-60 truncate">
+                                                                                            {tTools(`${tool.slug}.description`)}
+                                                                                        </span>
+                                                                                    )}
+                                                                                </div>
                                                                             </Link>
                                                                         ))}
                                                                     </div>
@@ -413,46 +442,13 @@ export default function Navbar() {
                         })()}
                     </div>
 
-                    {/* Search - Desktop */}
-                    <div className="hidden lg:block relative ml-4">
-                        <div className="relative">
-                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                            <input
-                                type="text"
-                                placeholder={t('searchPlaceholder')}
-                                value={searchQuery}
-                                onChange={(e) => handleSearch(e.target.value)}
-                                onFocus={() => searchQuery.length > 0 && setShowSearch(true)}
-                                onBlur={() => setTimeout(() => setShowSearch(false), 200)}
-                                className="pl-9 pr-4 py-2 w-32 xl:w-48 bg-secondary border border-border rounded-md text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-secondary/80 focus:w-56 xl:focus:w-72 transition-all text-[15.5px]"
-                            />
+                    {/* Action Hub - Professional & Clean */}
+                    <div className="hidden lg:flex items-center gap-4 ml-auto">
+                        <div className="flex items-center gap-2 p-1 bg-secondary/50 rounded-full border border-border/40">
+                            <LanguageSwitcher />
+                            <div className="h-4 w-px bg-border/40 mx-1" />
+                            <ModeToggle />
                         </div>
-
-                        {/* Search Results Dropdown */}
-                        {showSearch && searchResults.length > 0 && (
-                            <div className="absolute top-full right-0 mt-2 w-80 xl:w-96 bg-card rounded-lg shadow-2xl border border-border max-h-96 overflow-y-auto z-50">
-                                {searchResults.map((tool) => (
-                                    <Link
-                                        key={tool.slug}
-                                        href={`/tools/${tool.slug}`}
-                                        prefetch={false}
-                                        className="block px-4 py-3 hover:bg-secondary transition-all border-b border-border last:border-0"
-                                        onClick={() => {
-                                            setShowSearch(false);
-                                            setSearchQuery('');
-                                        }}
-                                    >
-                                        <div className="font-medium text-foreground text-sm break-words overflow-hidden line-clamp-2">{tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}</div>
-                                        <div className="text-xs text-muted-foreground mt-0.5 break-words overflow-hidden">{tool.category}</div>
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-
-                    <div className="hidden lg:flex items-center gap-2">
-                        <LanguageSwitcher />
-                        <ModeToggle />
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -541,6 +537,6 @@ export default function Navbar() {
                     </div>
                 )
             }
-        </nav >
+        </nav>
     );
 }

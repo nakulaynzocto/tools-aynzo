@@ -47,8 +47,13 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-dm-sans)", "sans-serif"],
       },
+      letterSpacing: {
+        tightest: '-0.075em',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate"),
+  ],
 };
 export default config;

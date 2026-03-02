@@ -1,9 +1,57 @@
 {
+    "Marketing": {
+        "rate": "15 دولار/ساعة",
+        "bannerText": "Launch your professional business website with high performance, starting at {rate}.",
+        "ctaWhatsApp": "Consult an Expert",
+        "adCardTitle": "Need a Custom Tool or Website?",
+        "adCardDesc": "Get a professional, high-performance website or custom tool for your business. Scalable solutions starting at just {rate}.",
+        "adCardCTA": "Connect on WhatsApp"
+    },
     "HomePage": {
         "title": "أدوات مطورين مجانية",
         "description": "مجموعة أدوات بسيطة وسريعة وآمنة لمهامك اليومية.",
         "noAds": "بدون إعلانات، بدون تتبع، فقط أدوات.",
         "toolsCount": "{count} أداة",
+        "capabilities": {
+            "image": {
+                "title": "معالجة صور مثالية",
+                "description": "يسمح لك محرك الصور عالي الأداء لدينا بضغط الصور وإعادة حجمها وتحويلها دون فقدان بكسل واحد من الجودة. مثالي للمبدعين المحترفين."
+            },
+            "pdf": {
+                "title": "إدارة ملفات PDF احترافية",
+                "description": "قم بإدارة مستنداتك باستخدام أدوات PDF على مستوى المؤسسات. قم بدمج الملفات وتقسيم المستندات المعقدة وتحويلها إلى تنسيقات قابلة للتحرير."
+            },
+            "dev": {
+                "title": "أدوات متقدمة للمطورين",
+                "description": "مجموعة شاملة للمطورين الحديثين. من تنسيق JSON وتجميل الكود إلى توليد الهاش الآمن - تتم جميع المعالجات محلياً في متصفحك."
+            },
+            "privacy": {
+                "title": "بنية تركز على الخصوصية",
+                "description": "نحن نغير الصناعة من خلال معالجة كل شيء من جانب العميل. لا تغادر بياناتك جهازك أبداً، مما يضمن خصوصية بنسبة 100% وزمن وصول صفري."
+            }
+        },
+        "heroTitle": "مجموعة أدوات كاملة لأكثر من <v>100 مهمة احترافية</v>.",
+        "labels": {
+            "secureFast": "آمن وسريع"
+        },
+        "trust": {
+            "title": "مبني على الثقة",
+            "subtitle": "التزامنا تجاهك"
+        },
+        "valueGrid": {
+            "zeroData": {
+                "title": "بيانات صفرية",
+                "desc": "نحن لا نقوم أبداً بتخزين ملفاتك. يتم معالجة كل شيء والتخلص منه فوراً."
+            },
+            "noLatency": {
+                "title": "زمن وصول صفري",
+                "desc": "تعني المعالجة الأصلية للمتصفح أن الأدوات تعمل بسرعة جهازك."
+            },
+            "alwaysFree": {
+                "title": "مجاني دائماً",
+                "desc": "بدون اشتراكات، بدون حواجز دفع، بدون تكاليف مخفية. للأبد."
+            }
+        },
         "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">عزز سير عملك الرقمي مع أدوات Aynzo</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  مرحبًا بك في <strong>أدوات Aynzo</strong>، وجهتك النهائية لـ <strong>أدوات مجانية عبر الإنترنت</strong> عالية الجودة مصممة لتبسيط مهامك الرقمية اليومية. في عالم تعد فيه الإنتاجية أمرًا بالغ الأهمية، نوفر بيئة نظيفة وسريعة وآمنة للتعامل مع كل شيء بدءًا من تحويلات الملفات المعقدة وحتى تنسيق النصوص البسيط. مهمتنا هي تقديم منصة \"أدوات مساعدة كخدمة\" احترافية تلغي الحاجة إلى برامج باهظة الثمن أو البدائل المليئة بالإعلانات.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">مجموعة شاملة من الأدوات المساعدة عبر الإنترنت</h3>\n<p class=\"text-muted-foreground mb-6\">\n  في أدوات Aynzo، نصنف عروضنا لمساعدتك في العثور على ما تحتاجه بالضبط في ثوانٍ:\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">محول الصور ومحرروها عبر الإنترنت:</strong> تم بناء مجموعة الصور الخاصة بنا من أجل السرعة. سواء كنت بحاجة إلى <strong>محول صور عبر الإنترنت</strong> للتبديل بين JPG وPNG وWebP، أو كنت بحاجة إلى ضغط الصور لتحسين الويب، فنحن نوفر لك ما تحتاجه. يمكنك أيضًا قص الصور وتدويرها وإضافة فلاتر بدون فقدان للجودة.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">أدوات PDF الأساسية:</strong> لا ينبغي أن تكون المستندات عائقًا. تسمح لك <strong>أدوات PDF المجانية</strong> الخاصة بنا بتحويل ملفات PDF إلى Word، أو دمج الملفات، أو استخراج الصور دون المساس بسلامة المستند.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">أدوات النصوص والبرمجة:</strong> للمطورين والكتاب، نقدم منسقات نصوص متقدمة، ومحولات حالة الأحرف، ومصغرات الأكواد. تحقق من صحة ملفات JSON، أو جمل كود CSS، أو حول Markdown إلى HTML بنقرة واحدة.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">أدوات السيو والتواصل الاجتماعي:</strong> تصدر نتائج البحث وشارك بشكل أفضل. استخدم مولدات وسمات الميتا، وفاحص كثافة الكلمات المفتاحية، وأدوات تنزيل صور يوتيوب المصغرة للحصول على ميزة تنافسية في نتائج البحث.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">لماذا تختار أدوات Aynzo؟</h3>\n<p class=\"text-muted-foreground mb-6\">\n  الإنترنت مليء بالمواقع \"المجانية\" التي تتبع بياناتك أو تمطرك بالإعلانات المتطفلة. أدوات Aynzo مختلفة. نحن نعطي الأولوية لـ <strong>الخصوصية والأمان</strong>، مع ضمان معالجة ملفاتك محليًا أو حذفها فورًا بعد الاستخدام. منصتنا <strong>خالية تمامًا من الإعلانات</strong>، مما يعني أنه يمكنك التركيز على عملك دون مشتتات. يتم تحسين كل أداة من أجل <strong>أداء فائق السرعة</strong>، باستخدام أحدث تقنيات الويب لتقديم النتائج في أجزاء من الثانية.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">لمن صُممت أدوات Aynzo؟</h3>\n<p class=\"text-muted-foreground mb-6\">\n  لقد صُممت منصتنا بدقة من أجل:\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>المطورين:</strong> تصحيح الأكواد بسرعة، أو تنسيق البيانات، أو إنشاء الهاشات.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>منشئي المحتوى:</strong> تحسين الصور، وتحليل السيو، وأصول التواصل الاجتماعي.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>الطلاب والمهنيين:</strong> تحويل المستندات والحسابات السريعة.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>المستخدمين العاديين:</strong> <strong>أدوات مساعدة بسيطة عبر الإنترنت</strong> تعمل بكفاءة.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"توقف عن القفز بين عشرات التبويبات. أضف أدوات Aynzo إلى مفضلتك اليوم وجرب قوة مجموعة أدوات احترافية مباشرة في متصفحك.\"\n  </p>\n</div>"
     },
     "App": {

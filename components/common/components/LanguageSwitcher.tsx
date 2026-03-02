@@ -18,27 +18,27 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <div className="relative ml-4">
+        <div className="relative">
             <select
                 value={locale}
                 onChange={onSelectChange}
                 disabled={isPending}
-                className="bg-background text-foreground text-sm py-1.5 px-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer"
+                className="bg-transparent text-foreground text-xs py-1 pr-2 pl-3 outline-none cursor-pointer appearance-none hover:text-primary transition-colors focus:ring-0 font-bold tracking-tight"
             >
                 <option value="en">🇺🇸 English</option>
-                <option value="hi">🇮🇳 Hindi</option>
-                <option value="pt">🇵🇹 Portuguese</option>
-                <option value="es">🇪🇸 Spanish</option>
-                <option value="id">🇮🇩 Indonesian</option>
-                <option value="de">🇩🇪 German</option>
-                <option value="fr">🇫🇷 French</option>
-                <option value="ja">🇯🇵 Japanese</option>
-                <option value="ru">🇷🇺 Russian</option>
-                <option value="tr">🇹🇷 Turkish</option>
-                <option value="it">🇮🇹 Italian</option>
-                <option value="ko">🇰🇷 Korean</option>
-                <option value="zh">🇨🇳 Chinese</option>
-                <option value="ar">🇸🇦 Arabic</option>
+                <option value="hi">🇮🇳 हिन्दी</option>
+                <option value="pt">🇵🇹 Português</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="id">🇮🇩 Indonesia</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="tr">🇹🇷 Türkçe</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="zh">🇨🇳 中文</option>
+                <option value="ar">🇸🇦 العربية</option>
             </select>
         </div>
     );

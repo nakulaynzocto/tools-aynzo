@@ -1,9 +1,57 @@
 {
+    "Marketing": {
+        "rate": "$15/घंटा",
+        "bannerText": "अपनी प्रोफेशनल बिजनेस वेबसाइट मात्र {rate} में बनवाएं—हाई परफॉरमेंस की गारंटी।",
+        "ctaWhatsApp": "एक्सपर्ट से बात करें",
+        "adCardTitle": "क्या आपको कस्टम टूल या वेबसाइट चाहिए?",
+        "adCardDesc": "हम व्यवसायों के लिए प्रोफेशनल और हाई-परफॉरमेंस वेबसाइट बनाते हैं। अपनी ऑनलाइन यात्रा मात्र {rate} में शुरू करें।",
+        "adCardCTA": "व्हाट्सएप पर जुड़ें"
+    },
     "HomePage": {
         "title": "मुफ्त डेवलपर टूल्स",
         "description": "आपके रोज़मर्रा के कामों के लिए सरल, तेज़ और सुरक्षित टूल्स का संग्रह।",
         "noAds": "कोई विज्ञापन नहीं, कोई ट्रैकिंग नहीं, सिर्फ टूल्स।",
         "toolsCount": "{count} टूल्स",
+        "capabilities": {
+            "image": {
+                "title": "पिक्सेल-परफेक्ट इमेज प्रोसेसिंग",
+                "description": "हमारा हाई-परफॉरमेंस इमेज इंजन आपको बिना गुणवत्ता खोए फोटो को कंप्रेस, रिसाइज और कनवर्ट करने की अनुमति देता है। उन पेशेवरों के लिए बिल्कुल सही जो पूर्णता चाहते हैं।"
+            },
+            "pdf": {
+                "title": "प्रोफेशनल PDF मैनेजमेंट",
+                "description": "एंटरप्राइज-ग्रेड PDF टूल्स के साथ अपने दस्तावेज़ों का प्रबंधन करें। कई फ़ाइलों को मर्ज करें, जटिल दस्तावेज़ों को विभाजित करें, और बिजली की तेज़ गति के साथ एडिटेबल फॉर्मेट में बदलें।"
+            },
+            "dev": {
+                "title": "एडवांस डेवलपर यूटिलिटीज",
+                "description": "आधुनिक डेवलपर्स के लिए एक व्यापक सुइट. JSON फ़ॉर्मेटिंग और कोड सौंदर्यीकरण से लेकर सुरक्षित हैश जनरेशन तक—सभी प्रोसेसिंग आपके ब्राउज़र में स्थानीय रूप से होती है।"
+            },
+            "privacy": {
+                "title": "प्राइवेसी-फर्स्ट आर्किटेक्चर",
+                "description": "हम सब कुछ क्लाइंट-साइड प्रोसेस करके उद्योग को बदल रहे हैं। आपका डेटा कभी भी आपके डिवाइस को नहीं छोड़ता है, जिससे 100% प्राइवेसी और शून्य लेटेंसी सुनिश्चित होती है। कोई विज्ञापन नहीं, कोई ट्रैकिंग नहीं, सिर्फ टूल्स।"
+            }
+        },
+        "heroTitle": "<v>100+ प्रोफेशनल</v> कार्यों के लिए संपूर्ण टूलकिट।",
+        "labels": {
+            "secureFast": "सुरक्षित और तेज़"
+        },
+        "trust": {
+            "title": "भरोसे पर निर्मित",
+            "subtitle": "आपके प्रति हमारी प्रतिबद्धता"
+        },
+        "valueGrid": {
+            "zeroData": {
+                "title": "ज़ीरो डेटा",
+                "desc": "हम आपकी फ़ाइलों को कभी स्टोर नहीं करते हैं। सब कुछ तुरंत प्रोसेस किया जाता है और हटा दिया जाता है।"
+            },
+            "noLatency": {
+                "title": "नो लेटेंसी",
+                "desc": "नेटिव ब्राउज़र प्रोसेसिंग का मतलब है कि टूल्स आपके हार्डवेयर की गति से चलते हैं।"
+            },
+            "alwaysFree": {
+                "title": "हमेशा मुफ्त",
+                "desc": "कोई सब्सक्रिप्शन नहीं, कोई पेवॉल नहीं, कोई छिपी हुई लागत नहीं। हमेशा के लिए।"
+            }
+        },
         "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Aynzo टूल्स के साथ अपने डिजिटल वर्कफ़्लो को सशक्त बनाएं</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  <strong>Aynzo टूल्स</strong> पर आपका स्वागत है, जो आपके दैनिक डिजिटल कार्यों को सरल बनाने के लिए डिज़ाइन किए गए उच्च-गुणवत्ता वाले, <strong>मुफ्त ऑनलाइन टूल्स</strong> का अंतिम गंतव्य है। एक ऐसी दुनिया में जहाँ उत्पादकता सर्वोपरि है, हम जटिल फ़ाइल रूपांतरणों से लेकर सरल टेक्स्ट फ़ॉर्मेटिंग तक सब कुछ संभालने के लिए एक स्वच्छ, तेज़ और सुरक्षित वातावरण प्रदान करते हैं। हमारा मिशन एक पेशेवर \"यूटिलिटीज़-ए-सर्विस\" प्लेटफ़ॉर्म प्रदान करना है जो महंगे सॉफ़्टवेयर या विज्ञापन-युक्त विकल्पों की आवश्यकता को समाप्त करता है।\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">ऑनलाइन यूटिलिटीज़ का एक व्यापक सुइट</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Aynzo टूल्स में, हम आपको सेकंडों में अपनी ज़रूरत की चीज़ खोजने में मदद करने के लिए अपनी श्रेणियों को वर्गीकृत करते हैं:\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">इमेज कनवर्टर ऑनलाइन और एडिटर्स:</strong> हमारा इमेज सुइट गति के लिए बनाया गया है। चाहे आपको JPG, PNG और WebP के बीच स्विच करने के लिए <strong>इमेज कनवर्टर ऑनलाइन</strong> की आवश्यकता हो, या आपको वेब अनुकूलन के लिए फ़ोटो को कंप्रेस करने की आवश्यकता हो, हमने आपको कवर किया है। आप बिना किसी गुणवत्ता हानि के क्रॉप, रोटेट और फ़िल्टर भी जोड़ सकते हैं।\n  </li>\n  <li>\n    <strong class=\"text-foreground\">आवश्यक PDF टूल्स:</strong> दस्तावेज़ों का प्रबंधन अब कोई परेशानी नहीं होनी चाहिए। हमारे <strong>मुफ्त PDF टूल्स</strong> आपको PDF को Word में बदलने, फ़ाइलों को मर्ज करने या दस्तावेज़ की अखंडता से समझौता किए बिना इमेज निकालने की अनुमति देते हैं।\n  </li>\n  <li>\n    <strong class=\"text-foreground\">टेक्स्ट और कोडिंग यूटिलिटीज़:</strong> डेवलपर्स और लेखकों के लिए, हम उन्नत टेक्स्ट फ़ॉर्मेटर्स, केस कनवर्टर और कोड मिनीफायर प्रदान करते हैं। अपने JSON को वैलिडेट करें, अपने CSS को सुशोभित करें, या एक क्लिक के साथ Markdown को HTML में बदलें।\n  </li>\n  <li>\n    <strong class=\"text-foreground\">SEO और सोशल मीडिया टूल्स:</strong> उच्च रैंक प्राप्त करें और बेहतर साझा करें। खोज परिणामों में प्रतिस्पर्धात्मक बढ़त हासिल करने के लिए हमारे मेटा-टैग जेनरेटर, कीवर्ड डेंसिटी चेकर और YouTube थंबनेल डाउनलोडर का उपयोग करें।\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Aynzo टूल्स क्यों चुनें?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  इंटरनेट ऐसी \"मुफ्त\" साइटों से भरा है जो आपके डेटा को ट्रैक करती हैं या आपको विज्ञापनों से परेशान करती हैं। Aynzo टूल्स अलग है। हम <strong>गोपनीयता और सुरक्षा</strong> को प्राथमिकता देते हैं, यह सुनिश्चित करते हुए कि आपकी फ़ाइलें स्थानीय रूप से संसाधित होती हैं या उपयोग के तुरंत बाद हटा दी जाती हैं। हमारा प्लेटफ़ॉर्म <strong>100% विज्ञापन-मुक्त</strong> है, जिसका अर्थ है कि आप बिना किसी ध्यान भटकाए अपने काम पर ध्यान केंद्रित कर सकते हैं। हर टूल को <strong>सुपर फ़ास्ट परफॉरमेंस</strong> के लिए अनुकूलित किया गया है, जो मिलीसेकंड में परिणाम देने के लिए नवीनतम वेब तकनीकों का उपयोग करता है।\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Aynzo टूल्स किसके लिए है?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  हमारा प्लेटफ़ॉर्म इनके लिए सावधानीपूर्वक तैयार किया गया है:\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>डेवलपर्स:</strong> कोड को जल्दी से डिबग करना, डेटा फ़ॉर्मेट करना या हैश जेनरेट करना।</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>कंटेंट क्रिएटर्स:</strong> इमेज ऑप्टिमाइज़ेशन, SEO विश्लेषण और सोशल एसेट्स।</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>छात्र और पेशेवर:</strong> दस्तावेज़ों को बदलना और त्वरित गणना।</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>आम उपयोगकर्ता:</strong> सरल <strong>ऑनलाइन यूटिलिटी टूल्स</strong> जो बस काम करते हैं।</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"दर्जनों टैब के बीच कूदना बंद करें। आज ही Aynzo टूल्स को बुकमार्क करें और अपने ब्राउज़र में एक पेशेवर टूल सुइट की शक्ति का अनुभव करें।\"\n  </p>\n</div>"
     },
     "App": {
@@ -587,12 +635,12 @@
         },
         "code-minifier": {
             "name": "कोड मिनिफायर",
-            "description": "HTML, CSS, JS कोड मिनिफाई करें।",
+            "description": "HTML, CSS, JS  मिनिफाई करें।",
             "seoTitle": "Code Minifier मुफ्त - Use Code Minifier Code",
             "seoDescription": "Use Code Minifier code ऑनलाइन मुफ्त. तेज and सुरक्षित processing. लॉगिन नहीं, तेज, सुरक्षित. के लिए परफेक्ट developers.",
             "seoKeywords": "code-minifier, free code minifier, code minifier tool",
             "seoH1": "Code Minifier मुफ्त: Use Code Minifier",
-            "content": "<p> In web development, every byte counts. <strong> Minification </strong> is the process of removing whitespace, comments, and unnecessary characters from your code without changing its functionality. Our <strong> Code Minifier </strong> helps you shrink HTML, CSS, and JavaScript files to make your website load faster.</p>\n<h3> Why Minify Code? </h3>\n<ul>\n<li><strong>Faster Load Times: </strong> Smaller files download faster, improving the user experience.</li>\n<li><strong>Better SEO: </strong> Google uses page speed as a ranking factor. Optimized code helps you rank higher.</li>\n<li><strong>Bandwidth Savings: </strong> Reduce server costs by serving smaller files to your visitors.</li>\n</ul>\n<h3> Supported Languages </h3>\n<ul>\n<li><strong>HTML: </strong> Removes extra spaces, comments, and line breaks.</li>\n<li><strong>CSS: </strong> Compresses style rules and removes comments.</li>\n<li><strong>JavaScript: </strong> Removes whitespace and strips comments (logic preservation ensured).</li>\n</ul>"
+            "content": "<p> In web develकोडopment, every byte counts. <strong> Minification </strong> is the process of removing whitespace, comments, and unnecessary characters from your code without changing its functionality. Our <strong> Code Minifier </strong> helps you shrink HTML, CSS, and JavaScript files to make your website load faster.</p>\n<h3> Why Minify Code? </h3>\n<ul>\n<li><strong>Faster Load Times: </strong> Smaller files download faster, improving the user experience.</li>\n<li><strong>Better SEO: </strong> Google uses page speed as a ranking factor. Optimized code helps you rank higher.</li>\n<li><strong>Bandwidth Savings: </strong> Reduce server costs by serving smaller files to your visitors.</li>\n</ul>\n<h3> Supported Languages </h3>\n<ul>\n<li><strong>HTML: </strong> Removes extra spaces, comments, and line breaks.</li>\n<li><strong>CSS: </strong> Compresses style rules and removes comments.</li>\n<li><strong>JavaScript: </strong> Removes whitespace and strips comments (logic preservation ensured).</li>\n</ul>"
         },
         "diff-checker": {
             "name": "टेक्स्ट अंतर चेकर",

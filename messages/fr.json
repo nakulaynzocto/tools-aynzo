@@ -1,9 +1,57 @@
 {
+    "Marketing": {
+        "rate": "15 $/heure",
+        "bannerText": "Lancez votre site Web professionnel performant à partir de {rate}.",
+        "ctaWhatsApp": "Consultez un expert",
+        "adCardTitle": "Need a Custom Tool or Website?",
+        "adCardDesc": "Obtenez un site Web ou un outil personnalisé professionnel pour votre entreprise. Solutions évolutives à partir de {rate}.",
+        "adCardCTA": "Contactez-nous sur WhatsApp"
+    },
     "HomePage": {
         "title": "Outils Gratuits pour Développeurs",
         "description": "Une collection d'outils simples, rapides et sécurisés pour vos tâches quotidiennes.",
         "noAds": "Pas de pub, pas de suivi, juste des outils.",
         "toolsCount": "{count} Outils",
+        "capabilities": {
+            "image": {
+                "title": "Traitement d'image au pixel près",
+                "description": "Notre moteur d'image haute performance vous permet de compresser, redimensionner et convertir des photos sans perdre un seul pixel de qualité. Parfait pour les créateurs professionnels exigeants."
+            },
+            "pdf": {
+                "title": "Gestion professionnelle des PDF",
+                "description": "Gérez vos documents avec des outils PDF de qualité professionnelle. Fusionnez des fichiers, divisez des documents complexes et convertissez-les en formats éditables avec une vitesse et une précision impressionnantes."
+            },
+            "dev": {
+                "title": "Utilitaires avancés pour développeurs",
+                "description": "Une suite complète pour les développeurs modernes. Du formatage JSON et de l'embellissement du code à la génération de hachages sécurisés, tout le traitement se fait localement dans votre navigateur."
+            },
+            "privacy": {
+                "title": "Architecture axée sur la confidentialité",
+                "description": "Nous transformons l'industrie en traitant tout côté client. Vos données ne quittent jamais votre appareil, garantissant 100 % de confidentialité et une latence nulle. Pas de publicité, pas de suivi, juste des outils."
+            }
+        },
+        "heroTitle": "Boîte à outils complète pour <v>plus de 100 tâches professionnelles</v>.",
+        "labels": {
+            "secureFast": "Sûr et Rapide"
+        },
+        "trust": {
+            "title": "Bâti sur la confiance",
+            "subtitle": "Notre engagement envers vous"
+        },
+        "valueGrid": {
+            "zeroData": {
+                "title": "Zéro Donnée",
+                "desc": "Nous ne stockons jamais vos fichiers. Tout est traité et supprimé instantanément."
+            },
+            "noLatency": {
+                "title": "Aucune Latence",
+                "desc": "Le traitement natif par le navigateur signifie que les outils fonctionnent à la vitesse de votre matériel."
+            },
+            "alwaysFree": {
+                "title": "Toujours Gratuit",
+                "desc": "Pas d'abonnement, pas de mur payant, pas de frais cachés. Pour toujours."
+            }
+        },
         "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Boostez votre flux de travail numérique avec les outils Aynzo</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  Bienvenue sur <strong>Aynzo Tools</strong>, votre destination ultime pour des <strong>outils en ligne gratuits</strong> de haute qualité, conçus pour simplifier vos tâches numériques quotidiennes. Dans un monde où la productivité est primordiale, nous offrons un environnement propre, rapide et sécurisé pour tout gérer, des conversions de fichiers complexes au simple formatage de texte. Notre mission est de proposer une plateforme professionnelle d'\"utilitaires en tant que service\" qui élimine le besoin de logiciels coûteux ou d'alternatives encombrantes et truffées de publicités.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Une suite complète d'utilitaires en ligne</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Chez Aynzo Tools, nous catégorisons nos offres pour vous aider à trouver exactement ce dont vous avez besoin en quelques secondes :\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">Convertisseur d'images en ligne et éditeurs :</strong> Notre suite d'images est conçue pour la vitesse. Que vous ayez besoin d'un <strong>convertisseur d'images en ligne</strong> pour passer du JPG, PNG au WebP, ou que vous ayez besoin de compresser des photos pour l'optimisation web, nous avons ce qu'il vous faut. Vous pouvez également recadrer, faire pivoter et ajouter des filtres sans aucune perte de qualité.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Outils PDF essentiels :</strong> Les documents ne devraient pas être une corvée. Nos <strong>outils PDF gratuits</strong> vous permettent de convertir des PDF en Word, de fusionner des fichiers ou d'extraire des images sans compromettre l'intégrité du document.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Utilitaires de texte et de codage :</strong> Pour les développeurs et les rédacteurs, nous proposons des formateurs de texte avancés, des convertisseurs de casse et des minificateurs de code. Validez votre JSON, embellissez votre CSS ou convertissez du Markdown en HTML en un seul clic.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Outils SEO et réseaux sociaux :</strong> Classez-vous mieux et partagez plus. Utilisez nos générateurs de balises méta, nos vérificateurs de densité de mots-clés et nos téléchargeurs de miniatures YouTube pour prendre l'avantage dans les résultats de recherche.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Pourquoi choisir Aynzo Tools ?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Internet regorge de sites \"gratuits\" qui tracent vos données ou vous bombardent de publicités intrusives. Aynzo Tools est différent. Nous accordons la priorité à la <strong>confidentialité et à la sécurité</strong>, en veillant à ce que vos fichiers soient traités localement ou supprimés immédiatement après usage. Notre plateforme est <strong>100 % sans publicité</strong>, ce qui signifie que vous pouvez vous concentrer sur votre travail sans distractions. Chaque outil est optimisé pour des <strong>performances ultra-rapides</strong>, utilisant les dernières technologies web pour fournir des résultats en millisecondes.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">À qui s'adresse Aynzo Tools ?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Notre plateforme est méticuleusement conçue pour :\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Développeurs :</strong> débogage rapide de code, formatage de données ou génération de hachages.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Créateurs de contenu :</strong> optimisation d'images, analyse SEO et actifs sociaux.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Étudiants et professionnels :</strong> conversion de documents et calculs rapides.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Utilisateurs quotidiens :</strong> des outils utilitaires en ligne simples qui fonctionnent, tout simplement.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"Arrêtez de jongler entre des dizaines d'onglets. Ajoutez Aynzo Tools à vos favoris dès aujourd'hui et découvrez la puissance d'une suite d'outils professionnels directement dans votre navigateur.\"\n  </p>\n</div>"
     },
     "App": {

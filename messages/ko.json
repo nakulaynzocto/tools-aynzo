@@ -1,9 +1,57 @@
 {
+    "Marketing": {
+        "rate": "$15/시간",
+        "bannerText": "Launch your professional business website with high performance, starting at {rate}.",
+        "ctaWhatsApp": "Consult an Expert",
+        "adCardTitle": "Need a Custom Tool or Website?",
+        "adCardDesc": "Get a professional, high-performance website or custom tool for your business. Scalable solutions starting at just {rate}.",
+        "adCardCTA": "Connect on WhatsApp"
+    },
     "HomePage": {
         "title": "무료 개발자 도구",
         "description": "일상적인 작업을 위한 간단하고 빠르며 안전한 도구 모음입니다.",
         "noAds": "광고 없음, 추적 없음, 오직 유틸리티뿐입니다.",
         "toolsCount": "{count} Tools",
+        "capabilities": {
+            "image": {
+                "title": "픽셀 단위의 완벽한 이미지 처리",
+                "description": "당사의 고성능 이미지 엔진을 사용하면 품질을 단 1픽셀도 손상시키지 않고 사진을 압축, 크기 조정 및 변환할 수 있습니다. 전문 크리에이터에게 적합합니다."
+            },
+            "pdf": {
+                "title": "전문적인 PDF 관리",
+                "description": "엔터프라이즈급 PDF 도구로 문서를 관리하세요. 파일을 병합하고, 복잡한 문서를 분할하고, 편집 가능한 형식으로 변환할 수 있습니다."
+            },
+            "dev": {
+                "title": "고급 개발자 유틸리티",
+                "description": "현대 개발자를 위한 포괄적인 제품군입니다. JSON 형식 지정부터 코드 미화 및 안전한 해시 생성에 이르기까지 모든 것이 브라우저에서 로컬로 처리됩니다."
+            },
+            "privacy": {
+                "title": "개인 정보 보호 우선 아키텍처",
+                "description": "우리는 모든 것을 클라이언트 측에서 처리함으로써 업계를 변화지고 있습니다. 귀하의 데이터는 절대로 귀하의 장치를 떠나지 않으며, 100% 개인 정보 보호와 대기 시간 제로를 보장합니다."
+            }
+        },
+        "heroTitle": "<v>100개 이상의 전문 작업</v>을 위한 완벽한 툴킷.",
+        "labels": {
+            "secureFast": "안전 및 신속"
+        },
+        "trust": {
+            "title": "신뢰를 바탕으로",
+            "subtitle": "귀하에 대한 우리의 약속"
+        },
+        "valueGrid": {
+            "zeroData": {
+                "title": "데이터 저장 제로",
+                "desc": "당사는 귀하의 파일을 절대 저장하지 않습니다. 모든 것이 즉시 처리되고 삭제됩니다."
+            },
+            "noLatency": {
+                "title": "대기 시간 제로",
+                "desc": "브라우저 네이티브 처리는 도구가 하드웨어 속도로 실행됨을 의미합니다."
+            },
+            "alwaysFree": {
+                "title": "평생 무료",
+                "desc": "구독, 유료화 벽, 숨겨진 비용이 없습니다. 영원히."
+            }
+        },
         "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Aynzo 도구로 디지털 워크플로우를 강화하세요</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  일상적인 디지털 작업을 단순화하기 위해 설계된 고품질의 <strong>무료 온라인 도구</strong>의 최종 목적지인 <strong>Aynzo Tools</strong>에 오신 것을 환영합니다. 생산성이 가장 중요한 세상에서, 복잡한 파일 변환부터 간단한 텍스트 형식 지정에 이르기까지 모든 것을 처리할 수 있는 깨끗하고 빠르며 안전한 환경을 제공합니다. 우리의 미션은 고가의 소프트웨어나 광고가 가득한 번거로운 대안이 필요 없는 전문가 수준의 \"서비스형 유틸리티(utilities-as-a-service)\" 플랫폼을 제공하는 것입니다.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">포괄적인 온라인 유틸리티 제품군</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Aynzo Tools에서는 필요한 것을 몇 초 만에 찾을 수 있도록 제공되는 도구를 카테고리별로 분류했습니다:\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">온라인 이미지 변환기 및 편집기:</strong> 우리의 이미지 제품군은 속도를 위해 구축되었습니다. JPG, PNG, WebP 간의 전환을 위한 <strong>온라인 이미지 변환기</strong>가 필요하든, 웹 최적화를 위해 사진을 압축해야 하든 상관없습니다. 품질 저하 없이 자르기, 회전 및 필터 추가도 가능합니다.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">필수 PDF 도구:</strong> 문서 작업이 번거로워서는 안 됩니다. 우리의 <strong>무료 PDF 도구</strong>를 사용하면 문서 무결성을 손상시키지 않으면서 PDF를 Word로 변환하거나, 파일을 병합하거나, 이미지를 추출할 수 있습니다.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">텍스트 및 코딩 유틸리티:</strong> 개발자와 작가를 위해 고급 텍스트 포맷터, 대소문자 변환기 및 코드 미니파이어를 제공합니다. 클릭 한 번으로 JSON 유효성을 검사하고, CSS를 보기 좋게 다듬고, Markdown을 HTML로 변환할 수 있습니다.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">SEO 및 소셜 미디어 도구:</strong> 더 높은 순위를 차지하고 더 효과적으로 공유하세요. 메타 태그 생성기, 키워드 밀도 검사기 및 YouTube 썸네일 다운로더를 사용하여 검색 결과에서 경쟁 우위를 확보하세요.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">왜 Aynzo 도구를 선택해야 할까요?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  인터넷은 데이터를 추적하거나 거슬리는 광고를 퍼붓는 \"무료\" 사이트로 가득 차 있습니다. Aynzo Tools는 다릅니다. 우리는 <strong>개인 정보 보호 및 보안</strong>을 최우선으로 생각하며, 파일이 로컬에서 처리되거나 사용 후 즉시 삭제되도록 보장합니다. 우리의 플랫폼은 <strong>100% 광고가 없습니다</strong>. 즉, 방해 요소 없이 업무에만 집중할 수 있습니다. 모든 도구는 최신 웹 기술을 사용하여 밀리초 단위로 결과를 제공하는 <strong>초고속 성능</strong>에 최적화되어 있습니다.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Aynzo 도구는 누구를 위한 것인가요?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  우리의 플랫폼은 다음을 위해 세심하게 제작되었습니다:\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>개발자:</strong> 코드 신속 디버깅, 데이터 형식 지정 또는 해시 생성.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>콘텐츠 제작자:</strong> 이미지 최적화, SEO 분석 및 소셜 자산 관리.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>학생 및 전문가:</strong> 문서 변환 및 빠른 계산.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>일반 사용자:</strong> 확실하게 작동하는 간단한 <strong>온라인 유틸리티 도구</strong>.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"수십 개의 탭 사이를 돌아다니지 마세요. 지금 바로 Aynzo Tools를 북마크하고 브라우저에서 직접 전문 도구 모음의 강력한 기능을 경험해 보세요.\"\n  </p>\n</div>"
     },
     "App": {

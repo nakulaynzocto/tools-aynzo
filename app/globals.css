@@ -64,15 +64,35 @@
 
   body {
     @apply bg-background text-foreground;
-    font-size: 15.5px;
+    font-size: 16px;
     min-height: 100vh;
     transition: background-color 0.3s ease-in-out;
     overflow-x: hidden;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-primary;
+    line-height: 1.1;
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-5xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+
+  .subtitle {
+    @apply text-muted-foreground font-medium text-lg md:text-xl leading-relaxed;
+  }
 }
 
 @layer components {
-
   /* Hostinger-style Card - Adjusted for Black Mood */
   .card-hostinger {
     @apply bg-card border border-border rounded-lg shadow-sm transition-all duration-200;

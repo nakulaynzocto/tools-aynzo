@@ -1,9 +1,57 @@
 {
+    "Marketing": {
+        "rate": "15 $/saat",
+        "bannerText": "Launch your professional business website with high performance, starting at {rate}.",
+        "ctaWhatsApp": "Consult an Expert",
+        "adCardTitle": "Need a Custom Tool or Website?",
+        "adCardDesc": "Get a professional, high-performance website or custom tool for your business. Scalable solutions starting at just {rate}.",
+        "adCardCTA": "Connect on WhatsApp"
+    },
     "HomePage": {
         "title": "Ücretsiz Geliştirici Araçları",
         "description": "Günlük işleriniz için basit, hızlı ve güvenli araç koleksiyonu.",
         "noAds": "Reklam yok, takip yok, sadece araçlar.",
         "toolsCount": "{count} Araç",
+        "capabilities": {
+            "image": {
+                "title": "Piksel Kusursuz Görüntü İşleme",
+                "description": "Yüksek performanslı grafik motorumuz, kaliteden tek bir piksel bile ödün vermeden fotoğrafları sıkıştırmanıza, yeniden boyutlandırmanıza ve dönüştürmenize olanak tanır. Profesyonel içerik üreticileri için idealdir."
+            },
+            "pdf": {
+                "title": "Profesyonel PDF Yönetimi",
+                "description": "Kurumsal düzeydeki PDF araçlarıyla belgelerinizin kontrolünü elinize alın. Dosyaları birleştirin, karmaşık belgeleri bölün veya üzerine yazı yazılabilir formatlara dönüştürün."
+            },
+            "dev": {
+                "title": "Gelişmiş Geliştirici Yardımcı Programları",
+                "description": "Modern geliştiriciler için kapsamlı bir paket. JSON biçimlendirmeden kod güzelleştirmeye ve güvenli hash oluşturmaya kadar tüm işlemler yerel olarak tarayıcınızda gerçekleşir."
+            },
+            "privacy": {
+                "title": "Gizlilik Öncelikli Mimari",
+                "description": "Her şeyi istemci tarafında işleyerek sektörü değiştiriyoruz. Verileriniz cihazınızdan asla ayrılmaz, %100 gizlilik ve sıfır gecikme sağlar."
+            }
+        },
+        "heroTitle": "<v>100'den fazla Profesyonel Görev</v> için Tam Araç Seti.",
+        "labels": {
+            "secureFast": "Güvenli ve Hızlı"
+        },
+        "trust": {
+            "title": "Güvene Dayalı",
+            "subtitle": "Size Sözümüz"
+        },
+        "valueGrid": {
+            "zeroData": {
+                "title": "Sıfır Veri Depolama",
+                "desc": "Dosyalarınızı asla saklamıyoruz. Her şey işlenir ve anında silinir."
+            },
+            "noLatency": {
+                "title": "Sıfır Gecikme",
+                "desc": "Tarayıcıda yerel işleme, araçların donanımınızın hızında çalıştığı anlamına gelir."
+            },
+            "alwaysFree": {
+                "title": "Daima Ücretsiz",
+                "desc": "Abonelik yok, ödeme duvarı yok, gizli ücretler yok. Sonsuza kadar."
+            }
+        },
         "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Aynzo Araçları ile Dijital İş Akışınızı Güçlendirin</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  Günlük dijital görevlerinizi basitleştirmek için tasarlanmış yüksek kaliteli, <strong>ücretsiz çevrimiçi araçlar</strong> için nihai adresiniz olan <strong>Aynzo Tools</strong>'a hoş geldiniz. Üretkenliğin her şeyden önemli olduğu bir dünyada, karmaşık dosya dönüştürmelerinden basit metin biçimlendirmeye kadar her şeyi halletmek için temiz, hızlı ve güvenli bir ortam sunuyoruz. Misyonumuz, pahalı yazılımlara veya hantal, reklamlarla dolu alternatiflere olan ihtiyacı ortadan kaldıran profesyonel bir \"hizmet olarak yardımcı programlar\" platformu sunmaktır.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Kapsamlı Çevrimiçi Yardımcı Program Paketi</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Aynzo Tools'ta, ihtiyacınız olanı saniyeler içinde bulmanıza yardımcı olmak için sunduklarımızı kategorize ediyoruz:\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">Çevrimiçi Resim Dönüştürücü ve Düzenleyiciler:</strong> Resim paketimiz hız için üretilmiştir. JPG, PNG ve WebP arasında geçiş yapmak için bir <strong>çevrimiçi resim dönüştürücüye</strong> ihtiyacınız olsun veya web optimizasyonu için fotoğrafları sıkıştırmanız gereksin, her şeyi düşündük. Ayrıca sıfır kalite kaybıyla kırpabilir, döndürebilir ve filtreler ekleyebilirsiniz.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Temel PDF Araçları:</strong> Belgeler bir zahmet olmamalıdır. <strong>Ücretsiz PDF araçlarımız</strong>, PDF'leri Word'e dönüştürmenize, dosyaları birleştirmenize veya belge bütünlüğünden ödün vermeden resimleri çıkarmanıza olanak tanır.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Metin ve Kodlama Yardımcı Programları:</strong> Geliştiriciler ve yazarlar için gelişmiş metin biçimlendiriciler, harf durumu dönüştürücüler ve kod küçültücüler sunuyoruz. JSON'unuzu doğrulayın, CSS'nizi güzelleştirin veya tek bir tıklamayla Markdown'ı HTML'ye dönüştürün.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">SEO ve Sosyal Medya Araçları:</strong> Daha üst sıralarda yer alın ve daha iyi paylaşın. Arama sonuçlarında rekabet avantajı elde etmek için meta-etiket oluşturucularımızı, anahtar kelime yoğunluğu denetleyicilerimizi ve YouTube küçük resim indiricilerimizi kullanın.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Neden Aynzo Araçlarını Seçmelisiniz?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  İnternet, verilerinizi izleyen veya sizi rahatsız edici reklamlarla bombalayan \"ücretsiz\" sitelerle doludur. Aynzo Tools farklıdır. <strong>Gizlilik ve Güvenliğe</strong> öncelik veriyoruz ve dosyalarınızın yerel olarak işlenmesini veya kullanımdan hemen sonra silinmesini sağlıyoruz. Platformumuz <strong>%100 Reklamsızdır</strong>, yani dikkatiniz dağılmadan işinize odaklanabilirsiniz. Her araç, milisaniyeler içinde sonuç sunmak için en son web teknolojilerini kullanarak <strong>Yıldırım Hızında Performans</strong> için optimize edilmiştir.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Aynzo Araçları Kimin İçindir?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Platformumuz şunlar için titizlikle hazırlanmıştır:\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Geliştiriciler:</strong> Kodda hızlı bir şekilde hata ayıklama, verileri biçimlendirme veya hash'ler oluşturma.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>İçerik Oluşturucular:</strong> Resim optimizasyonu, SEO analizi ve sosyal varlıklar.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Öğrenciler ve Profesyoneller:</strong> Belgeleri dönüştürme ve hızlı hesaplamalar.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Günlük Kullanıcılar:</strong> Sadece işe yarayan basit <strong>çevrimiçi yardımcı programlar</strong>.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"Düzinelerce sekme arasında atlamayı bırakın. Aynzo Tools'u bugün yer imlerinize ekleyin ve profesyonel bir araç paketinin gücünü doğrudan tarayıcınızda deneyimleyin.\"\n  </p>\n</div>"
     },
     "App": {
