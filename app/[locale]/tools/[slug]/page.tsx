@@ -258,6 +258,7 @@ export default async function ToolPage({ params }: Props) {
       case 'youtube-title-generator':
       case 'youtube-embed-code-generator':
       case 'youtube-timestamp-link-generator':
+      case 'youtube-money-calculator':
         return <YouTubeTools type={params.slug as any} />;
 
       // SEO Generators
@@ -293,6 +294,8 @@ export default async function ToolPage({ params }: Props) {
       case 'url-opener':
       case 'privacy-policy-generator':
       case 'terms-conditions-generator':
+      case 'tiktok-hashtag-generator':
+      case 'bio-link-generator':
         return <SocialLinkTools type={params.slug as any} />;
 
       // Tech Utilities
@@ -302,6 +305,16 @@ export default async function ToolPage({ params }: Props) {
         return <TechTools type={params.slug as any} />;
 
       // Calculators
+      case '401k-retirement-calculator':
+      case 'dti-calculator':
+      case 'car-loan-calculator':
+      case 'credit-card-payoff-calculator':
+      case 'savings-goal-calculator':
+      case 'freelance-tax-calculator':
+      case 'tdee-calculator':
+      case 'pregnancy-due-date-calculator':
+      case 'macro-calculator':
+      case 'ideal-weight-calculator':
       case 'age-calculator':
       case 'bmi-calculator':
       case 'percentage-calculator':
@@ -332,6 +345,18 @@ export default async function ToolPage({ params }: Props) {
       case 'regex-tester':
       case 'diff-checker':
         return <RegexDiffTools type={params.slug as any} />;
+
+      // Utility Tools
+      case 'chatgpt-prompt-generator':
+      case 'ai-content-detector':
+      case 'text-to-handwriting':
+      case 'grammar-checker':
+        return <UtilityTools type={params.slug as any} />;
+
+      // Dev Tools
+      case 'crontab-generator':
+      case 'json-to-typescript':
+        return <DevTools type={params.slug as any} />;
 
       default:
         return <div className="p-12 text-center text-gray-500">Tool implementation coming soon.</div>;

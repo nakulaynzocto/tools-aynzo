@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { Image, Tags, Type, Code, Clock, Video } from 'lucide-react';
+import { Image, Tags, Type, Code, Clock, DollarSign, Youtube } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { YouTubeToolProps, YouTubeSettings, YouTubeThumbnails } from '@/components/types/youtube/types';
 import { useYouTubeProcessing } from '@/components/hooks/youtube/useYouTubeProcessing';
@@ -11,6 +11,7 @@ import { EmbedCodeGenerator } from './EmbedCodeGenerator';
 import { TimestampLinkGenerator } from './TimestampLinkGenerator';
 import { YouTubeInputForm } from './YouTubeInputForm';
 import { YouTubeSettingsPanel } from './YouTubeSettingsPanel';
+import { YouTubeMoneyCalculator } from './YouTubeMoneyCalculator';
 
 export default function YouTubeToolsIndex({ type }: YouTubeToolProps) {
     const youtubeNavTools = [
@@ -22,9 +23,22 @@ export default function YouTubeToolsIndex({ type }: YouTubeToolProps) {
                 { id: 'youtube-title-generator', label: 'Titles', icon: Type },
                 { id: 'youtube-embed-code-generator', label: 'Embed', icon: Code },
                 { id: 'youtube-timestamp-link-generator', label: 'Timestamp', icon: Clock },
+                { id: 'youtube-money-calculator', label: 'Money Calc', icon: DollarSign },
             ]
         }
     ];
+
+    // Money Calculator — early return before state-heavy logic
+    if (type === 'youtube-money-calculator') {
+        return (
+            <div className="max-w-6xl mx-auto space-y-6">
+                <ScrollableNav items={youtubeNavTools} activeToolId={type} />
+                <div className="bg-card rounded-3xl border-2 border-border shadow-2xl p-8">
+                    <YouTubeMoneyCalculator />
+                </div>
+            </div>
+        );
+    }
 
     const activeCategory = youtubeNavTools.find(cat => cat.tools.some(t => t.id === type));
     
@@ -86,7 +100,7 @@ export default function YouTubeToolsIndex({ type }: YouTubeToolProps) {
                                 <div className="flex items-center justify-between px-6 py-4 bg-muted/50 rounded-2xl border border-border">
                                     <div className="flex items-center gap-4">
                                         <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
-                                            <Video className="w-5 h-5" />
+                                            <Youtube className="w-5 h-5" />
                                         </div>
                                         <div className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">
                                             {type.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}

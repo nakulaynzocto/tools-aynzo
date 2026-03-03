@@ -1268,6 +1268,305 @@
                 }
             ],
             "content": "<h2>Protect Your Digital Assets with Professional Terms</h2><p>Define the rules of your platform. A solid <strong>Terms of Service</strong> agreement prevents misuse, clarifies payment terms, and establishes the governing law for any disputes. Use our generator to create a custom agreement in seconds.</p>"
+        },
+        "401k-retirement-calculator": {
+            "name": "401k Retirement Calculator",
+            "description": "Plan your retirement by estimating your 401k growth with employer matching.",
+            "seoTitle": "401k Retirement Calculator - #1 Free US Wealth Planner",
+            "seoDescription": "Calculate your 401k balance at retirement. Includes employer matching, salary increases, and compound growth. Plan your US retirement savings today.",
+            "seoKeywords": "401k calculator, retirement planner, 401k match calculator, retirement savings estimator, us retirement tool",
+            "seoH1": "401k Retirement Calculator: Plan Your Future Wealth",
+            "content": "<h2>401k Retirement Calculator: Secure Your Financial Future</h2><p>Your <strong>401k plan</strong> is one of the most powerful tools for building wealth in the United States. Thanks to tax-advantaged growth and <strong>employer matching</strong>, it can turn modest savings into a multi-million dollar nest egg.</p><h3>The Power of Employer Matching</h3><p>Many employers offer a match (e.g., 50% for every dollar you contribute up to 6%). This is literally <strong>free money</strong>. Our calculator helps you visualize how that match compounds over 20-40 years.</p>",
+            "faq": [
+                {
+                    "question": "Should I contribute more than my employer match?",
+                    "answer": "Yes, if you can afford it. Most experts recommend saving 15% of your income for retirement. The 401k match is just the starting point."
+                },
+                {
+                    "question": "What is a realistic 401k return rate?",
+                    "answer": "Historically, the S&P 500 has averaged 7-10% annually. For conservative planning, 6-8% is a safe estimate for long-term projections."
+                },
+                {
+                    "question": "Can I withdraw my 401k early?",
+                    "answer": "Withdrawing before age 59½ usually results in a 10% penalty plus income taxes. It's best to leave it for retirement unless it's a financial emergency."
+                },
+                {
+                    "question": "What is the 2024 401k contribution limit?",
+                    "answer": "For 2024, the 401k contribution limit is $23,000. If you are 50 or older, you can contribute an additional $7,500 as a catch-up contribution."
+                }
+            ]
+        },
+        "dti-calculator": {
+            "name": "Debt-to-Income Ratio Calculator",
+            "description": "Calculate your debt-to-income (DTI) ratio to understand your borrowing power and loan eligibility.",
+            "seoTitle": "DTI Calculator (Free) — Debt-to-Income Ratio for Mortgage & Loans",
+            "seoDescription": "Calculate your debt-to-income (DTI) ratio instantly. Check if you qualify for a mortgage, car loan, or personal loan. Compare front-end vs back-end DTI ratios and see your status.",
+            "seoKeywords": "DTI calculator, debt to income ratio, DTI ratio mortgage, front end DTI, back end DTI, loan eligibility calculator, debt ratio calculator, income ratio calculator, mortgage approval DTI",
+            "seoH1": "Free DTI Calculator: Know Your Debt-to-Income Ratio",
+            "content": "<h2>What is Debt-to-Income Ratio (DTI)?</h2><p>Your <strong>Debt-to-Income (DTI) ratio</strong> is the percentage of your gross monthly income that goes toward paying debts. Lenders use it as a key metric to evaluate your ability to manage monthly payments and repay borrowed money.</p><h3>DTI Thresholds Lenders Look For</h3><ul><li><strong>Below 36%:</strong> Excellent — most lenders will approve you easily.</li><li><strong>36%–43%:</strong> Acceptable — some lenders may add conditions.</li><li><strong>43%–50%:</strong> Risky — approval depends on other factors.</li><li><strong>Above 50%:</strong> High risk — most lenders will decline your application.</li></ul><h3>How to Improve Your DTI</h3><p>The two levers are increasing income or reducing debt. Pay off small debts first (the debt snowball method), avoid new credit before applying for a mortgage, and consider refinancing high-interest debt to lower monthly payments.</p>",
+            "faq": [
+                { "question": "What is a good DTI for a mortgage?", "answer": "Most conventional mortgage lenders require a DTI of 43% or lower. The best rates typically go to borrowers with a DTI of 36% or less. FHA loans can allow up to 57%." },
+                { "question": "What debts are included in DTI?", "answer": "DTI includes rent/mortgage, car loans, student loans, minimum credit card payments, personal loans, and child support. It does NOT include utilities, groceries, insurance, or subscriptions." },
+                { "question": "Does DTI include my full credit card balance?", "answer": "No. Only your minimum monthly payment is counted, not your full balance. Paying off credit cards completely removes them from your DTI calculation." },
+                { "question": "What is the difference between front-end and back-end DTI?", "answer": "Front-end DTI (housing ratio) only includes housing costs (mortgage, taxes, insurance). Back-end DTI includes all monthly debt payments. Lenders typically evaluate both." },
+                { "question": "Can I get a loan with a 50% DTI?", "answer": "It's difficult but possible. FHA loans allow up to 57% with compensating factors like excellent credit or large down payment. Most conventional loans cap at 43-45%." }
+            ]
+        },
+        "car-loan-calculator": {
+            "name": "Car Loan Calculator",
+            "description": "Calculate your monthly car loan payments, total interest, and true cost of owning a vehicle.",
+            "seoTitle": "Car Loan Calculator (Free) — Monthly Payment & Interest Cost Estimator",
+            "seoDescription": "Calculate your exact monthly car loan payment, total interest cost, and amortization schedule. Find the best loan term for your budget before visiting a dealership.",
+            "seoKeywords": "car loan calculator, auto loan calculator, monthly car payment calculator, vehicle loan calculator, car finance calculator, auto payment estimator, car loan interest calculator, used car loan calculator",
+            "seoH1": "Free Car Loan Calculator: Monthly Payment & Total Cost",
+            "content": "<h2>How Car Loan Calculations Work</h2><p>A <strong>car loan calculator</strong> helps you understand the true cost of financing a vehicle before you sign anything at the dealership. The monthly payment is calculated using the standard amortization formula based on loan amount, interest rate, and term.</p><h3>Key Factors That Affect Your Payment</h3><ul><li><strong>Loan Amount:</strong> Car price minus your down payment and trade-in value.</li><li><strong>APR (Annual Percentage Rate):</strong> Your credit score is the biggest determinant. A 760+ score can get rates below 5%, while sub-600 scores may face 15%+ rates.</li><li><strong>Loan Term:</strong> Longer terms (72-84 months) lower monthly payments but dramatically increase total interest paid.</li></ul><h3>Dealer vs. Bank Financing</h3><p>Always get pre-approved from your bank or credit union before visiting a dealer. Dealers often mark up the interest rate and earn a commission. Having a competing offer gives you negotiation power on both the car price and the financing rate.</p>",
+            "faq": [
+                { "question": "What credit score do I need for the best car loan rate?", "answer": "A credit score of 720 or higher (\"Excellent\") typically qualifies for the best rates (2-5% APR). Scores below 600 are considered subprime and may face rates of 10-15%+ APR." },
+                { "question": "Should I choose a 60-month or 72-month loan?", "answer": "A 60-month loan costs less in total interest and builds equity faster. A 72-month loan has lower monthly payments but you'll pay significantly more interest and risk being 'underwater' on the loan." },
+                { "question": "Is 0% APR financing actually free?", "answer": "Not always. Dealers offering 0% APR often price the car higher or eliminate rebates. Always compare the 0% offer against taking the cash rebate and getting a low-rate loan elsewhere." },
+                { "question": "How much should I put as a down payment on a car?", "answer": "Financial experts recommend 20% for new cars and 10% for used cars. This reduces your monthly payment, prevents being upside-down on the loan, and often gets you a better interest rate." },
+                { "question": "What is GAP insurance and do I need it?", "answer": "GAP insurance covers the difference between what you owe and what the car is worth if it's totaled. It's worth it if you put less than 20% down or have a loan term longer than 60 months." }
+            ]
+        },
+        "credit-card-payoff-calculator": {
+            "name": "Credit Card Payoff Calculator",
+            "description": "Calculate how long it will take to pay off credit card debt and how much interest you will pay.",
+            "seoTitle": "Credit Card Payoff Calculator (Free) — Debt-Free Date & Interest Estimator",
+            "seoDescription": "Find your credit card debt-free date. Compare fixed monthly payments vs paying a set amount. See exactly how much interest you'll save by paying more each month.",
+            "seoKeywords": "credit card payoff calculator, credit card debt calculator, pay off credit card, credit card interest calculator, debt free calculator, minimum payment credit card, snowball debt calculator",
+            "seoH1": "Credit Card Payoff Calculator: See Your Debt-Free Date",
+            "content": "<h2>The Real Cost of Minimum Payments</h2><p>Making only the <strong>minimum payment</strong> on a credit card is one of the most expensive financial decisions you can make. On a $5,000 balance at 20% APR with a $100 minimum payment, it takes over 10 years to pay off and costs over $7,000 in interest — more than the original debt.</p><h3>The Debt Avalanche Method</h3><p>Pay the minimum on all cards, then put every extra dollar toward the card with the highest interest rate. This mathematically minimizes total interest paid.</p><h3>The Debt Snowball Method</h3><p>Ignore interest rates. Pay off the smallest balance first for psychological wins and momentum. Research shows this method leads to higher debt-free success rates despite being mathematically sub-optimal.</p><h3>The Power of Adding Just $50 Extra</h3><p>Adding just $50 extra to your monthly payment can often cut years off your payoff timeline and save hundreds or thousands in interest. Use this calculator to see your personalized impact.</p>",
+            "faq": [
+                { "question": "What happens if I only pay the minimum balance?", "answer": "You'll pay the maximum possible interest. Credit card issuers set minimum payments low (often 1-2% of balance) to maximize interest income. Always pay more than the minimum if possible." },
+                { "question": "How is credit card interest calculated daily?", "answer": "Your APR is divided by 365 to get a daily rate. This rate is multiplied by your average daily balance. This is why carrying even a small balance from month to month compounds quickly." },
+                { "question": "Does paying off credit cards improve my credit score?", "answer": "Yes, significantly. Your credit utilization ratio (balance vs. limit) accounts for 30% of your FICO score. Paying down balances below 30% utilization can boost your score by 50-100 points." },
+                { "question": "Should I consolidate credit card debt?", "answer": "If you qualify for a personal loan at a lower rate than your credit card's APR, consolidation can save thousands. Balance transfer cards with 0% intro APR offers are another excellent option." },
+                { "question": "What is the fastest way to pay off $10,000 in credit card debt?", "answer": "Combine strategies: stop adding new charges, find extra income to put toward debt, use the avalanche method for highest-rate cards, and consider a balance transfer to a 0% APR card if eligible." }
+            ]
+        },
+        "savings-goal-calculator": {
+            "name": "Savings Goal Calculator",
+            "description": "Calculate how much to save monthly to reach your financial goals by a target date.",
+            "seoTitle": "Savings Goal Calculator (Free) — Monthly Savings Planner & Target Date Estimator",
+            "seoDescription": "Set a savings goal and find out exactly how much to save monthly to reach it. Includes compound interest growth and emergency fund planning. Free savings calculator.",
+            "seoKeywords": "savings goal calculator, how much to save calculator, monthly savings calculator, savings target date calculator, compound interest savings, emergency fund calculator, financial goal planner",
+            "seoH1": "Savings Goal Calculator: Plan Your Financial Future",
+            "content": "<h2>The Foundation of Financial Planning: Goal-Based Saving</h2><p>Every major financial goal — from a vacation to a house down payment — starts with a clear savings target and a realistic monthly contribution plan. Our <strong>Savings Goal Calculator</strong> shows you the exact monthly amount needed and how compound interest accelerates your progress.</p><h3>The Emergency Fund: Priority #1</h3><p>Before saving for any other goal, financial experts universally recommend building an <strong>emergency fund of 3-6 months of living expenses</strong>. This prevents you from going into debt when unexpected costs arise. Use this calculator to plan your emergency fund timeline.</p><h3>High-Yield Savings Accounts</h3><p>Traditional savings accounts earn 0.01% APY. High-yield savings accounts (HYSAs) from online banks often pay 4-5% APY. On a $20,000 goal, this difference can mean hundreds of dollars of free compound interest each year.</p><h3>Automate Your Savings</h3><p>Set up automatic transfers on payday. Research shows that people who automate savings consistently reach their goals faster than those who save whatever's 'left over' each month.</p>",
+            "faq": [
+                { "question": "How much should I save each month?", "answer": "The classic rule is to save at least 20% of your income (the 50/30/20 rule). However, prioritize having an emergency fund first, then retirement, then other goals." },
+                { "question": "What is compound interest and how does it help savings?", "answer": "Compound interest means you earn interest on both your principal and your accumulated interest. Over time, this snowballs significantly. A $10,000 investment at 5% APY becomes $16,289 in 10 years without adding a single dollar." },
+                { "question": "Is a high-yield savings account (HYSA) worth it?", "answer": "Absolutely. HYSAs at online banks like Marcus, Ally, or SoFi often offer 20-500x the interest rate of traditional banks with the same FDIC insurance protection." },
+                { "question": "How do I save for multiple goals at once?", "answer": "Open separate savings accounts for each goal (e.g., 'Vacation Fund', 'Emergency Fund', 'Down Payment'). This mental accounting prevents you from raiding one fund for another." },
+                { "question": "How long does it take to save $10,000?", "answer": "At $500/month with a 4% APY HYSA, it takes about 19 months. At $1,000/month, it takes about 9.5 months. Use this calculator to find your personalized timeline." }
+            ]
+        },
+        "freelance-tax-calculator": {
+            "name": "Freelance Tax Calculator",
+            "description": "Estimate your US freelance taxes including self-employment tax and quarterly payments.",
+            "seoTitle": "Freelance Tax Calculator (Free) — Self-Employment & Quarterly Tax Estimator 2024",
+            "seoDescription": "Calculate your freelance taxes for 2024. Instantly see your self-employment tax, federal income tax, effective rate, and quarterly estimated payments. Built for US freelancers.",
+            "seoKeywords": "freelance tax calculator, self-employment tax calculator, 1099 tax calculator, quarterly tax calculator, estimated tax payments 2024, independent contractor tax, gig worker tax calculator, freelancer taxes USA",
+            "seoH1": "Freelance Tax Calculator 2024: Self-Employment & Quarterly Taxes",
+            "content": "<h2>Understanding Freelance Taxes in the USA</h2><p><strong>Freelancers and independent contractors</strong> are responsible for paying both the employee and employer portions of Social Security and Medicare taxes — collectively called the <strong>Self-Employment (SE) Tax</strong>. This currently totals 15.3% (12.4% Social Security + 2.9% Medicare) on net self-employment income.</p><h3>The Self-Employment Tax Deduction</h3><p>You can deduct <strong>50% of your self-employment tax</strong> from your gross income before calculating income tax. This partially offsets the burden compared to traditional employees.</p><h3>Quarterly Estimated Tax Payments</h3><p>Freelancers must pay taxes quarterly (April 15, June 15, September 15, January 15) or face IRS underpayment penalties. Each quarterly payment should be approximately 25% of your estimated annual tax liability.</p><h3>Key Business Deductions to Track</h3><ul><li>Home office (dedicated workspace)</li><li>Equipment and software</li><li>Health insurance premiums</li><li>Business travel and mileage</li><li>Professional development and subscriptions</li><li>Retirement contributions (SEP-IRA, Solo 401k)</li></ul>",
+            "faq": [
+                { "question": "What percentage of my freelance income should I set aside for taxes?", "answer": "A safe rule of thumb is to set aside 25-30% of every payment you receive. This covers both self-employment tax (15.3%) and federal income tax. State taxes vary." },
+                { "question": "Do I need to pay quarterly taxes as a freelancer?", "answer": "Yes, if you expect to owe $1,000 or more in taxes for the year, the IRS requires quarterly estimated tax payments. Failure to pay can result in an underpayment penalty." },
+                { "question": "What is Form 1099-NEC?", "answer": "Clients who paid you $600 or more during the year must send you a Form 1099-NEC (formerly 1099-MISC). You report this income on Schedule C of your tax return." },
+                { "question": "Can I deduct my home office as a freelancer?", "answer": "Yes, but the space must be used regularly and exclusively for business. You can deduct a percentage of rent/mortgage and utilities proportional to the office's square footage." },
+                { "question": "What is the self-employment tax rate?", "answer": "The self-employment tax rate is 15.3% — 12.4% for Social Security and 2.9% for Medicare. The Social Security portion only applies to the first $168,600 of net self-employment income (2024 limit)." }
+            ]
+        },
+        "tdee-calculator": {
+            "name": "TDEE Calculator",
+            "description": "Calculate your Total Daily Energy Expenditure to know exactly how many calories to eat for your goals.",
+            "seoTitle": "TDEE Calculator (Free) — Total Daily Energy Expenditure & Calorie Calculator",
+            "seoDescription": "Calculate your TDEE (Total Daily Energy Expenditure) based on age, weight, height, and activity level. Find your maintenance calories, caloric deficit for weight loss, and surplus for muscle gain.",
+            "seoKeywords": "TDEE calculator, total daily energy expenditure, maintenance calories, calorie calculator, BMR calculator, weight loss calories, calorie deficit calculator, how many calories should I eat, TDEE weight loss",
+            "seoH1": "TDEE Calculator: Find Your Total Daily Calorie Needs",
+            "content": "<h2>What is TDEE?</h2><p><strong>Total Daily Energy Expenditure (TDEE)</strong> is the total number of calories your body burns in a 24-hour period, accounting for everything from basic biological functions to exercise and daily activities. It is the most important number in any body composition plan.</p><h3>TDEE vs BMR</h3><p>Your <strong>Basal Metabolic Rate (BMR)</strong> is the calories your body burns at complete rest. Your TDEE multiplies your BMR by an activity factor. Our calculator uses the Mifflin-St Jeor equation, considered the most accurate formula for most people.</p><h3>Using TDEE for Your Goals</h3><ul><li><strong>Weight Loss:</strong> Create a 500-calorie daily deficit (eat TDEE minus 500). This creates approximately 1 pound of fat loss per week.</li><li><strong>Muscle Gain:</strong> Eat in a 200-300 calorie surplus above TDEE to minimize fat gain while building muscle.</li><li><strong>Maintenance:</strong> Eat at your TDEE. Your weight should stay stable over time.</li></ul>",
+            "faq": [
+                { "question": "How accurate is a TDEE calculator?", "answer": "TDEE calculators give a solid estimate, typically accurate within 10-15%. Track your calories and weight for 2-3 weeks and adjust based on real-world results." },
+                { "question": "What activity level should I choose?", "answer": "Most people overestimate their activity level. Unless you have a physical job or exercise intensively 5+ days a week, choose 'sedentary' or 'lightly active' to avoid overestimating your calorie needs." },
+                { "question": "How many calories should I eat to lose 1 pound per week?", "answer": "Eat 500 calories below your TDEE each day. Since 3,500 calories equals approximately 1 pound of fat, a 500-calorie daily deficit equals about 1 pound lost per week." },
+                { "question": "Why is my weight not changing even though I'm eating at my TDEE?", "answer": "Your calculated TDEE may be higher than your actual TDEE. Try reducing your intake by 10% and track for another 2-3 weeks. Real-world tracking is more reliable than calculator estimates." },
+                { "question": "Should I eat less on rest days?", "answer": "For most people, the difference is minimal. Unless you're an advanced athlete, eating a consistent amount daily is psychologically easier and metabolically equivalent to cycling calories." }
+            ]
+        },
+        "pregnancy-due-date-calculator": {
+            "name": "Pregnancy Due Date Calculator",
+            "description": "Calculate your pregnancy due date, trimester dates, and key milestones from your LMP.",
+            "seoTitle": "Pregnancy Due Date Calculator (Free) — Calculate Your Baby's Arrival Date",
+            "seoDescription": "Calculate your pregnancy due date instantly based on your last menstrual period (LMP) or conception date. See all trimester dates, gestational age, and key milestones.",
+            "seoKeywords": "pregnancy due date calculator, due date calculator, LMP calculator, when is my baby due, pregnancy calendar, gestational age calculator, trimester calculator, conception date calculator, baby due date",
+            "seoH1": "Pregnancy Due Date Calculator: Know When Your Baby Arrives",
+            "content": "<h2>How is a Pregnancy Due Date Calculated?</h2><p>The standard method for calculating a <strong>pregnancy due date</strong> is Naegele's Rule: add 280 days (40 weeks) to the first day of your Last Menstrual Period (LMP). This is used by most healthcare providers worldwide.</p><h3>The Three Trimesters</h3><ul><li><strong>First Trimester (Weeks 1-12):</strong> Critical organ development. Morning sickness is common. The embryo becomes a fetus.</li><li><strong>Second Trimester (Weeks 13-27):</strong> Often called the 'golden trimester.' Energy returns, baby movements begin (quickening), and sex can usually be determined.</li><li><strong>Third Trimester (Weeks 28-40):</strong> Rapid fetal growth and preparation for delivery. Prenatal visits become more frequent.</li></ul><h3>Important Note</h3><p>Only about 5% of babies are born on their exact due date. Most arrive within 2 weeks before or after. Your OB or midwife may adjust your due date after an early ultrasound for more accuracy.</p>",
+            "faq": [
+                { "question": "How accurate is a due date calculated from LMP?", "answer": "Within 2-4 days for most women with regular cycles. An early ultrasound (before 14 weeks) provides the most accurate dating. Your healthcare provider may adjust the due date based on ultrasound measurements." },
+                { "question": "What if my periods are irregular?", "answer": "LMP-based calculations are less accurate with irregular cycles. An early ultrasound measuring the fetal crown-rump length (CRL) is the most accurate way to establish your due date." },
+                { "question": "What is gestational age vs fetal age?", "answer": "Gestational age is counted from the LMP and is what doctors use. Fetal age (conception age) is approximately 2 weeks less. Our calculator displays gestational age, as used medically." },
+                { "question": "What week is a baby considered full-term?", "answer": "Full-term is 39-40 weeks. 'Early term' is 37-38 weeks, 'late term' is 41 weeks, and 'post-term' is 42+ weeks. The goal is to reach 39 weeks before delivery for the best outcomes." },
+                { "question": "Can I get an accurate due date from a home pregnancy test?", "answer": "No, home tests only confirm pregnancy. Due date calculation requires knowing your LMP or using an ultrasound. The test does not indicate how far along you are." }
+            ]
+        },
+        "macro-calculator": {
+            "name": "Macro Calculator",
+            "description": "Calculate your ideal macronutrient ratio of protein, carbs, and fats for your fitness goal.",
+            "seoTitle": "Macro Calculator (Free) — Protein, Carb & Fat Ratio for Weight Loss & Muscle Gain",
+            "seoDescription": "Calculate your perfect daily macros for weight loss, muscle gain, or maintenance. Get exact grams of protein, carbs, and fat based on your TDEE and fitness goals. Free macro tracker.",
+            "seoKeywords": "macro calculator, macronutrient calculator, protein calculator, how many grams of protein per day, IIFYM calculator, carb calculator, fat loss macros, muscle building macros, flexible dieting calculator",
+            "seoH1": "Macro Calculator: Find Your Perfect Protein, Carb & Fat Split",
+            "content": "<h2>Understanding Macronutrients</h2><p><strong>Macronutrients</strong> are the three main categories of nutrients that provide energy: protein, carbohydrates, and fats. Each plays a distinct role in body composition, performance, and health. Getting your macro split right is the foundation of evidence-based nutrition.</p><h3>Why Macros Matter More Than Calories Alone</h3><ul><li><strong>Protein (4 kcal/g):</strong> Preserves and builds muscle tissue. Crucial during fat loss to prevent 'skinny fat' results. Target: 0.8-1.2g per pound of body weight.</li><li><strong>Carbohydrates (4 kcal/g):</strong> Primary energy source. Fuel performance in the gym and daily activities. Not the enemy — timing and quantity matter.</li><li><strong>Fat (9 kcal/g):</strong> Essential for hormone production, brain function, and fat-soluble vitamin absorption. Never go below 0.3g per pound of body weight.</li></ul><h3>IIFYM — If It Fits Your Macros</h3><p>The flexible dieting approach (IIFYM) allows eating any food as long as it fits within your daily macro targets. This improves long-term adherence compared to rigid restrictive diets.</p>",
+            "faq": [
+                { "question": "How many grams of protein do I need per day?", "answer": "For muscle preservation and growth, research supports 0.7-1g of protein per pound of body weight (1.6-2.2g per kg). Higher isn't necessarily better — excess protein is used for energy, not extra muscle." },
+                { "question": "Are carbs bad for weight loss?", "answer": "No. Weight loss is driven by a calorie deficit, not by avoiding carbs. Low-carb diets work because they help some people eat fewer calories, not because carbs are inherently fattening." },
+                { "question": "What macro split should I use for muscle gain?", "answer": "A classic muscle-building split is 30% protein / 50% carbs / 20% fat. The most important factor is being in a slight calorie surplus (200-300 calories above TDEE) and hitting your protein target." },
+                { "question": "What are the best protein sources for hitting my macro targets?", "answer": "Chicken breast, fish (tuna, salmon), egg whites, Greek yogurt, cottage cheese, and protein powder are lean, high-protein options. Red meat and whole eggs also provide protein but have more fat." },
+                { "question": "How do I track my macros?", "answer": "Apps like MyFitnessPal, Cronometer, or MacroFactor allow you to log food by scanning barcodes or searching a database. Weigh your food with a kitchen scale for accuracy, especially when starting." }
+            ]
+        },
+        "ideal-weight-calculator": {
+            "name": "Ideal Weight Calculator",
+            "description": "Calculate your ideal body weight using 4 clinical formulas including Hamwi, Devine, Robinson, and Miller.",
+            "seoTitle": "Ideal Weight Calculator (Free) — 4-Formula Clinical Body Weight Estimator",
+            "seoDescription": "Find your ideal weight using 4 clinical formulas (Hamwi, Devine, Robinson, Miller). Calculate BMI healthy weight range and see results in kg and lbs. Free online weight calculator.",
+            "seoKeywords": "ideal weight calculator, ideal body weight, how much should I weigh, healthy weight calculator, ideal weight for height, Hamwi formula, Devine formula, BMI weight range, body weight calculator",
+            "seoH1": "Ideal Weight Calculator: Find Your Healthy Weight Range",
+            "content": "<h2>What is Ideal Body Weight?</h2><p><strong>Ideal body weight (IBW)</strong> is a clinical estimate of the most healthy weight for a given height and gender. It is used by healthcare professionals for drug dosing, anesthesia, ventilator settings, and general health benchmarking. However, it is not a one-size-fits-all answer.</p><h3>The 4 Clinical Formulas Compared</h3><ul><li><strong>Hamwi (1964):</strong> The oldest and most commonly referenced. Used in clinical settings worldwide.</li><li><strong>Devine (1974):</strong> Originally developed for medication dosing. Widely used in pharmacology.</li><li><strong>Robinson (1983):</strong> A modified Devine formula, producing slightly different results for each gender.</li><li><strong>Miller (1983):</strong> Generally produces the lowest (lightest) estimate of the four formulas.</li></ul><h3>IBW vs. BMI vs. Body Fat %</h3><p>IBW formulas don't account for muscle mass or body composition. A muscular athlete may weigh more than their IBW while having an excellent health profile. Body fat percentage is a more accurate health indicator than weight alone.</p>",
+            "faq": [
+                { "question": "How much should I weigh for my height?", "answer": "Healthy weight ranges vary by formula. The BMI healthy range (18.5–24.9) is widely used: for a 5'7\" (170cm) person, this is approximately 54–80 kg. Our calculator provides 4 formula estimates and the BMI range." },
+                { "question": "Why do the different formulas give different results?", "answer": "Each formula was developed in different decades and for different medical purposes. They use slightly different base weights and increments per inch above 5 feet. The average of all four is the most balanced estimate." },
+                { "question": "Is ideal weight the same for men and women of the same height?", "answer": "No. Men generally have more muscle mass and bone density than women. All four formulas account for this biological difference with separate starting weights and multipliers." },
+                { "question": "What if I'm naturally heavier than my ideal weight?", "answer": "Ideal weight formulas are guidelines, not verdicts. Focus on health markers: blood pressure, cholesterol, blood sugar, and fitness level. Weight alone does not determine health." },
+                { "question": "Can I be overweight by BMI but healthy?", "answer": "Yes. Athletes with high muscle mass often have a BMI in the 'overweight' range despite having low body fat. This is a known limitation of BMI. Body fat percentage and waist circumference are better indicators." }
+            ]
+        },
+        "chatgpt-prompt-generator": {
+            "name": "ChatGPT Prompt Generator",
+            "description": "Generate powerful, optimized prompts for ChatGPT, Claude, Gemini, and other AI models.",
+            "seoTitle": "ChatGPT Prompt Generator (Free) — AI Prompt Templates for Writing, Coding & Marketing",
+            "seoDescription": "Generate perfect ChatGPT prompts instantly. Choose from 10+ expert templates for writing, coding, marketing, and learning. Customize and copy into any AI model in seconds.",
+            "seoKeywords": "ChatGPT prompt generator, AI prompt generator, ChatGPT prompts, best ChatGPT prompts, prompt engineering tool, Claude prompts, Gemini prompts, AI writing prompts, free prompt generator",
+            "seoH1": "ChatGPT Prompt Generator: Create Perfect AI Prompts Instantly",
+            "content": "<h2>What Makes a Great AI Prompt?</h2><p>A well-engineered prompt is the difference between a generic, mediocre AI response and a highly specific, actionable output that saves you hours of work. <strong>Prompt engineering</strong> is the skill of crafting instructions that guide AI models to produce exactly what you need.</p><h3>The 5 Elements of a High-Quality Prompt</h3><ol><li><strong>Role:</strong> Tell the AI who to be (\"Act as a senior marketing strategist\").</li><li><strong>Task:</strong> Clearly define what you want (\"Write a product description\").</li><li><strong>Context:</strong> Provide relevant background (\"Target audience: busy parents, age 30-45\").</li><li><strong>Format:</strong> Specify the output structure (\"200 words, bullet points, professional tone\").</li><li><strong>Constraints:</strong> Set boundaries (\"Do NOT use jargon. Include a clear CTA\").</li></ol><h3>Works with All Major AI Models</h3><p>Our prompts are designed to work with <strong>ChatGPT (GPT-4, GPT-4o), Claude (Anthropic), Gemini (Google), and Llama</strong>. Simply select a template, customize the placeholders, and paste into your preferred AI.</p>",
+            "faq": [
+                { "question": "What is prompt engineering?", "answer": "Prompt engineering is the practice of crafting precise, detailed instructions for AI language models to produce the best possible outputs. Good prompts include context, specific instructions, a defined role, and output format requirements." },
+                { "question": "How do I make ChatGPT give better responses?", "answer": "Be specific about role, task, context, format, and length. Use 'Act as a [expert role]', specify the audience, give examples of the format you want, and ask it to explain its reasoning." },
+                { "question": "Can I use these prompts for free?", "answer": "Yes, completely free to use and customize. These are template prompts you copy and paste into any AI — no subscription required for this generator." },
+                { "question": "Do these prompts work with Claude and Gemini?", "answer": "Yes. While prompts may need minor tweaks, the structural principles of good prompting are universal across all major AI models including ChatGPT, Claude (Anthropic), Gemini (Google), and Mistral." },
+                { "question": "What is the difference between zero-shot and few-shot prompting?", "answer": "Zero-shot prompting gives the AI only the instruction. Few-shot prompting includes 1-3 examples of the desired output style before the actual request. Few-shot prompting dramatically improves consistency and quality." }
+            ]
+        },
+        "ai-content-detector": {
+            "name": "AI Content Detector",
+            "description": "Detect if text was written by AI or a human using heuristic pattern analysis.",
+            "seoTitle": "AI Content Detector (Free) — Check If Text Was Written by ChatGPT or AI",
+            "seoDescription": "Detect AI-generated content instantly. Paste any text to analyze for ChatGPT, Claude, or other AI writing signals. Get a percentage score and see which detection signals were found.",
+            "seoKeywords": "AI content detector, ChatGPT detector, AI text detector, detect AI writing, is this AI written, AI generated content checker, AI plagiarism detector, GPT detector free, AI humanizer detector",
+            "seoH1": "Free AI Content Detector: Is This Text Written by AI?",
+            "content": "<h2>How Does AI Content Detection Work?</h2><p>AI language models have characteristic writing patterns that differ from human writing. Our <strong>AI Content Detector</strong> uses heuristic analysis — matching text against known patterns, phrases, and linguistic features associated with AI-generated content.</p><h3>Key Detection Signals</h3><ul><li><strong>AI Phrases:</strong> LLMs frequently use transitions like 'it is worth noting', 'furthermore', 'in conclusion', and 'delve into'.</li><li><strong>Passive Voice:</strong> AI models often default to passive constructions at higher rates than human writers.</li><li><strong>Sentence Uniformity:</strong> AI tends to produce consistently structured sentences of similar lengths.</li><li><strong>Lack of Personal Pronouns:</strong> Human writing contains 'I', 'me', 'my' and personal anecdotes more frequently.</li><li><strong>Contractions:</strong> Humans naturally use contractions (can't, won't, I'm) more than AI models.</li></ul><h3>Limitations of AI Detection</h3><p>No AI detector is 100% accurate. Edited AI content, text written in a formal academic style, or non-native English may trigger false positives. Use as a guideline, not a definitive verdict.</p>",
+            "faq": [
+                { "question": "How accurate is AI content detection?", "answer": "Heuristic-based detectors are approximately 60-80% accurate on unedited AI text. The accuracy drops significantly on human-edited AI content or very short samples. No tool is foolproof." },
+                { "question": "Can AI-generated text be edited to pass detection?", "answer": "Yes. Humanizing AI text by adding personal pronouns, contractions, anecdotes, irregular sentence structures, and informal language significantly reduces AI detection scores." },
+                { "question": "Is this tool free to use?", "answer": "Yes, completely free. All processing happens in your browser — your text is never sent to a server or stored anywhere." },
+                { "question": "What AI models does this detect?", "answer": "The patterns detected are common across all major LLMs including ChatGPT (GPT-4, GPT-4o), Claude, Gemini, Llama, Mistral, and others. The patterns are LLM-agnostic." },
+                { "question": "Why did my clearly human-written text get a high AI score?", "answer": "Formal, academic, or business writing often mimics AI patterns. If you write in a very structured, impersonal style, detection scores may be high despite the text being human-written. This is a known false positive." }
+            ]
+        },
+        "text-to-handwriting": {
+            "name": "Text to Handwriting Converter",
+            "description": "Convert typed text into realistic handwriting images and download as PNG.",
+            "seoTitle": "Text to Handwriting Converter (Free) — Generate Realistic Handwriting Online",
+            "seoDescription": "Convert any text to realistic handwriting instantly. Choose from 5 handwriting styles, customize ink color and font size, and download as a PNG image. 100% free and browser-based.",
+            "seoKeywords": "text to handwriting, handwriting generator, text to handwriting converter, fake handwriting generator, handwriting font converter, handwriting image maker, convert text to cursive, fake handwriting online",
+            "seoH1": "Text to Handwriting Converter: Generate Realistic Handwriting Online",
+            "content": "<h2>Create Realistic Handwriting from Any Text</h2><p>Our <strong>Text to Handwriting Converter</strong> uses authentic Google handwriting fonts rendered on an HTML5 Canvas to produce realistic, downloadable handwriting images. It's perfect for creating personal-looking notes, artistic content, or school assignment aesthetics.</p><h3>5 Authentic Handwriting Styles</h3><ul><li><strong>Caveat:</strong> Casual, everyday handwriting — natural and approachable.</li><li><strong>Dancing Script:</strong> Elegant, flowing cursive — ideal for invitations and certificates.</li><li><strong>Patrick Hand:</strong> Clean print style — the most legible for notes.</li><li><strong>Shadows Into Light:</strong> Light, airy script — perfect for artistic content.</li><li><strong>Indie Flower:</strong> Fun, quirky style — very popular for social media content.</li></ul><h3>Privacy & Performance</h3><p>All rendering is done entirely in your browser using the HTML5 Canvas API. No text is ever sent to a server. You can even use it offline once the fonts are cached.</p>",
+            "faq": [
+                { "question": "Is the handwriting image copyright-free?", "answer": "Yes. The fonts used (Caveat, Dancing Script, etc.) are licensed under the Open Font License (OFL) which permits free commercial and personal use. The generated image is yours." },
+                { "question": "Can I use this for school assignments?", "answer": "This tool is intended for creative and educational purposes. Using it to deceive teachers about handwritten work would be considered academic dishonesty. Use responsibly." },
+                { "question": "What image format does it download in?", "answer": "The output is a high-resolution PNG file, which is ideal for printing, embedding in documents, and sharing on social media." },
+                { "question": "Can I customize the handwriting?", "answer": "Yes. You can choose from 5 font styles, adjust font size (16-48pt), select or customize the ink color, and choose between lined, grid, or plain paper backgrounds." },
+                { "question": "Does it work on mobile?", "answer": "Yes, it's fully responsive. The canvas may render at a reduced width on small screens, but the full-resolution image is always available for download." }
+            ]
+        },
+        "grammar-checker": {
+            "name": "Grammar Checker",
+            "description": "Check and fix grammar, spelling, and punctuation errors in your text instantly.",
+            "seoTitle": "Free Grammar Checker Online — Check & Fix Grammar, Spelling & Punctuation",
+            "seoDescription": "Fix grammar mistakes instantly with our free online grammar checker. Detect common errors including wrong contractions, misspellings, incorrect articles, and verb tense mistakes. No signup required.",
+            "seoKeywords": "grammar checker, free grammar checker online, grammar check, grammar fixer, spell checker, punctuation checker, English grammar checker, writing grammar tool, check my grammar, grammar correction",
+            "seoH1": "Free Online Grammar Checker: Fix Errors Instantly",
+            "content": "<h2>Why Correct Grammar Matters</h2><p>Grammar errors undermine credibility, confuse readers, and can cost you professionally. Whether you're writing a cover letter, an email to a client, or a blog post, <strong>correct grammar builds trust and authority</strong>. Our free grammar checker helps you catch the most common mistakes before they reach your audience.</p><h3>Common Grammar Mistakes We Catch</h3><ul><li><strong>Contraction Errors:</strong> 'dont' → 'don't', 'wont' → 'won't'</li><li><strong>Verb Agreement:</strong> 'should of' → 'should have'</li><li><strong>Homophone Confusion:</strong> 'their is' → 'there is', 'your welcome' → 'you're welcome'</li><li><strong>Common Misspellings:</strong> 'definately' → 'definitely', 'recieve' → 'receive'</li><li><strong>Punctuation:</strong> Missing commas after conjunctive adverbs</li></ul><h3>When to Use a Grammar Checker</h3><p>Before sending any important email, submitting writing, or publishing online content. Even professional writers use grammar tools as a final check — it's not a sign of weakness but of diligence.</p>",
+            "faq": [
+                { "question": "Is this grammar checker free?", "answer": "Yes, 100% free with no word limits, no signup required, and no watermarks. Processing happens entirely in your browser." },
+                { "question": "What's the difference between a grammar checker and spellchecker?", "answer": "A spellchecker catches misspelled words. A grammar checker understands context — it catches grammatically incorrect constructions, wrong word choices (their vs. there), and punctuation errors that spellcheckers miss." },
+                { "question": "Can a grammar checker replace a human editor?", "answer": "No. Automated grammar checkers catch common patterns but miss nuanced issues like tone, logical flow, and context-specific errors. Use it as a first pass, then have a human review important writing." },
+                { "question": "How is this different from Grammarly?", "answer": "Grammarly is a comprehensive paid service with an AI engine. Our tool is a free, open, browser-based rule checker. It's great for quick checks and catching common mistakes without needing an account." },
+                { "question": "Does the grammar checker work for British English?", "answer": "The rules are primarily based on American English conventions. British spellings (colour, favour) won't be flagged as errors, but some idiomatic differences may be detected." }
+            ]
+        },
+        "tiktok-hashtag-generator": {
+            "name": "TikTok Hashtag Generator",
+            "description": "Generate trending TikTok hashtags by category to maximize video reach and views.",
+            "seoTitle": "TikTok Hashtag Generator (Free) — Trending Tags to Boost Your Video Views",
+            "seoDescription": "Get the best TikTok hashtags for your niche instantly. Choose from 8 categories including Entertainment, Music, Gaming, Fitness, and Fashion. Copy all tags with one click. Boost your FYP reach.",
+            "seoKeywords": "TikTok hashtag generator, TikTok hashtags, best TikTok hashtags, trending TikTok tags, hashtags for TikTok views, TikTok FYP hashtags, viral TikTok hashtags, TikTok hashtag tool 2024",
+            "seoH1": "TikTok Hashtag Generator: Get Viral Hashtags for Your Videos",
+            "content": "<h2>How TikTok Hashtags Work in 2024</h2><p>TikTok's algorithm uses hashtags to understand your content and distribute it to interested users. Unlike Instagram and Twitter, TikTok's primary discovery mechanism is the <strong>For You Page (FYP)</strong>, which is driven by engagement signals — but hashtags help bootstrap distribution to the right audience.</p><h3>The Best TikTok Hashtag Strategy</h3><ul><li><strong>Use 3-5 hashtags, not 30:</strong> More isn't better. Overstuffed captions look spammy and dilute your signal.</li><li><strong>Mix tiers:</strong> 1-2 mega-tags (#fyp, millions of posts), 2-3 niche tags (thousands of posts), 1 trending tag.</li><li><strong>#fyp and #foryou work, but aren't magic:</strong> They're signals, not guarantees. Quality content is the primary driver.</li><li><strong>Niche hashtags win:</strong> A smaller, targeted hashtag (#veganfitness vs #fitness) puts you in front of more relevant viewers.</li></ul><h3>Category-Specific Strategy</h3><p>Each content niche has different high-performing tags. Entertainment content dominates with broad FYP tags, while niche communities like gaming and fitness respond better to specific community hashtags.</p>",
+            "faq": [
+                { "question": "Do hashtags help TikTok videos go viral?", "answer": "Hashtags help the algorithm categorize your content and show it to people interested in those topics. They support virality but don't guarantee it — content quality and watch time are the primary drivers." },
+                { "question": "Should I use #fyp on every TikTok?", "answer": "You can, but it's not a magic button. The #fyp tag has billions of posts. Pair it with 2-3 niche-specific hashtags to ensure your content reaches the right sub-community." },
+                { "question": "How many hashtags should I use on TikTok?", "answer": "TikTok officially recommends 3-5 relevant hashtags. Creators who use 3-7 targeted hashtags generally see the best results. Avoid using 20+ hashtags as this can look like spam." },
+                { "question": "Are trending hashtags better than niche hashtags?", "answer": "For discoverability, niche hashtags are often better. A trending hashtag has millions of competing videos, making it hard to stand out. A niche hashtag with 100K posts has far less competition." },
+                { "question": "When should I update my hashtags?", "answer": "Refresh your hashtag strategy every 2-4 weeks. Monitor TikTok's Discover page and trend reports for emerging hashtags in your niche. What's trending changes weekly." }
+            ]
+        },
+        "bio-link-generator": {
+            "name": "Bio Link Generator",
+            "description": "Create a free Linktree-style bio link page with your name, bio, and custom links.",
+            "seoTitle": "Free Bio Link Generator — Create Your Linktree-Style Page Instantly",
+            "seoDescription": "Build a free bio link page like Linktree in seconds. Add your name, bio, and unlimited links. Get clean HTML code to host anywhere. No account needed — completely free bio link creator.",
+            "seoKeywords": "bio link generator, free linktree alternative, bio link page, link in bio, create linktree, social media bio link, instagram bio link, free link page creator, one link bio",
+            "seoH1": "Free Bio Link Generator: Create Your Linktree Alternative Page",
+            "content": "<h2>What is a Bio Link Page?</h2><p>A <strong>bio link page</strong> (popularized by Linktree) is a single URL you put in your Instagram, TikTok, or Twitter bio that contains multiple links to your website, shop, social profiles, and other destinations. Instead of being limited to one link in your bio, you have unlimited links on one elegant page.</p><h3>Why You Need a Bio Link Page</h3><ul><li><strong>Instagram and TikTok limit you to 1 bio link.</strong> A bio link page turns that single link into unlimited destinations.</li><li><strong>Perfect for creators and businesses</strong> with multiple revenue streams, products, or platforms.</li><li><strong>Increases traffic and conversions</strong> by making it easy for followers to find everything in one place.</li></ul><h3>Host It Anywhere for Free</h3><p>Our generator creates clean, standalone HTML code you can host for free on GitHub Pages, Netlify, Vercel, or add to your existing website. No monthly subscription unlike Linktree Pro.</p>",
+            "faq": [
+                { "question": "Is this a free Linktree alternative?", "answer": "Yes. Our generator creates a fully customizable bio link page as a single HTML file. Host it for free on GitHub Pages or Netlify — with no monthly fee, watermarks, or analytics limitations." },
+                { "question": "How do I host my bio link page?", "answer": "Download or copy the HTML. Then upload to GitHub Pages (free), Netlify (drag & drop, free), Vercel (free tier), or paste into your website's hosting. Your link is live within minutes." },
+                { "question": "Can I customize the design?", "answer": "The generated HTML is fully editable. You can change the gradient, button colors, fonts, and layout by editing the CSS in the <style> block. Advanced users can add animations and custom images." },
+                { "question": "Does it work with Instagram's one link?", "answer": "Yes. That's exactly the use case. Put your bio link page URL in your Instagram bio, and all your followers can access all your links from a single tap." },
+                { "question": "Is there an analytics feature?", "answer": "The basic generator doesn't include analytics. However, you can track clicks by adding Plausible, Simple Analytics, or Google Analytics to the generated HTML code." }
+            ]
+        },
+        "youtube-money-calculator": {
+            "name": "YouTube Money Calculator",
+            "description": "Estimate your YouTube channel ad revenue based on views and RPM.",
+            "seoTitle": "YouTube Money Calculator (Free) — Estimate Channel Revenue from Views",
+            "seoDescription": "Calculate YouTube ad revenue instantly. Enter your daily views and RPM to see estimated daily, monthly, and yearly earnings. Includes monetized view percentage. Free YouTube earnings estimator.",
+            "seoKeywords": "YouTube money calculator, YouTube earnings calculator, how much does YouTube pay, YouTube revenue calculator, YouTube RPM calculator, YouTube CPM calculator, YouTube income estimator, how to make money on YouTube",
+            "seoH1": "YouTube Money Calculator: Estimate Your Channel Ad Revenue",
+            "content": "<h2>How YouTube Pays Creators</h2><p>YouTube pays creators through <strong>AdSense</strong> based on the number of monetized views and the <strong>RPM (Revenue Per Mille)</strong> — the actual revenue earned per 1,000 views after YouTube's 45% cut. RPM is the real-world metric, while CPM is what advertisers pay before the revenue split.</p><h3>Why RPM Varies So Much</h3><ul><li><strong>Niche:</strong> Finance, legal, and B2B videos command $10-30+ RPM. Entertainment and gaming typically see $2-5 RPM.</li><li><strong>Geography:</strong> US, UK, Canada, and Australia viewers are worth 5-10x more than viewers in developing countries.</li><li><strong>Seasonality:</strong> Q4 (October-December) has the highest ad spending — RPM can be 2-3x higher than Q1.</li><li><strong>Video length:</strong> Videos over 8 minutes can include mid-roll ads, significantly increasing revenue per view.</li></ul><h3>Revenue Beyond AdSense</h3><p>Smart creators diversify their income: YouTube memberships, Super Chats, merchandise, sponsorships, and affiliate marketing often make up the majority of a successful channel's income.</p>",
+            "faq": [
+                { "question": "How much does YouTube pay per 1,000 views?", "answer": "YouTube pays $0.01 to $0.03 per view on average, or $1 to $30 per 1,000 views (RPM). The actual amount depends heavily on your niche, audience location, ad types, and video length." },
+                { "question": "How many views do you need to make $1,000 on YouTube?", "answer": "With an average RPM of $3, you'd need approximately 333,000 views to earn $1,000. With a high-RPM niche like finance ($15 RPM), you'd only need about 67,000 views." },
+                { "question": "What is the difference between CPM and RPM on YouTube?", "answer": "CPM (Cost Per Mille) is what advertisers pay per 1,000 impressions. RPM is what creators actually receive per 1,000 views after YouTube takes its 45% cut. Always use RPM to estimate your actual earnings." },
+                { "question": "How many subscribers do you need to monetize YouTube?", "answer": "To join the YouTube Partner Program (YPP), you need 1,000 subscribers AND 4,000 watch hours in the past 12 months (or 1,000 subscribers and 10 million Shorts views)." },
+                { "question": "What YouTube niche pays the most?", "answer": "Finance and investing ($10-30 RPM), legal/attorney ($15-25 RPM), software/SaaS ($9-18 RPM), and real estate ($8-15 RPM) have the highest RPMs. Entertainment, gaming, and vlogs are typically $2-5 RPM." }
+            ]
+        },
+        "crontab-generator": {
+            "name": "Crontab Generator",
+            "description": "Generate and validate Linux cron expressions with human-readable descriptions.",
+            "seoTitle": "Crontab Generator (Free) — Build & Validate Cron Expressions Online",
+            "seoDescription": "Generate and validate Linux crontab expressions instantly. Choose from common presets or build a custom cron schedule. Instantly see a human-readable description of your cron job timing.",
+            "seoKeywords": "crontab generator, cron expression generator, cron job generator, cron schedule builder, linux cron syntax, crontab examples, cron expression validator, cron to english, cron expression explainer",
+            "seoH1": "Crontab Generator: Build Cron Expressions & Understand Their Timing",
+            "content": "<h2>What is a Cron Job?</h2><p>A <strong>cron job</strong> is a scheduled task in Unix/Linux systems that runs automatically at specified intervals. Defined in the <em>crontab</em> (cron table) file, they're used for automated backups, report generation, database maintenance, API calls, and server monitoring.</p><h3>The Cron Expression Format</h3><p>A cron expression has 5 fields: <code>MINUTE HOUR DAY MONTH WEEKDAY</code>. Each field accepts specific values and wildcards:</p><ul><li><code>*</code> — any value (every minute, every hour, etc.)</li><li><code>*/n</code> — every n units (*/5 = every 5 minutes)</li><li><code>a,b</code> — multiple values (1,15 = 1st and 15th)</li><li><code>a-b</code> — range (1-5 = Monday through Friday)</li></ul><h3>Common Cron Job Use Cases</h3><ul><li><strong>0 0 * * *</strong> — Daily backup at midnight</li><li><strong>*/5 * * * *</strong> — API health check every 5 minutes</li><li><strong>0 9 * * 1-5</strong> — Daily report email every weekday at 9am</li><li><strong>0 0 1 * *</strong> — Monthly invoice generation</li></ul>",
+            "faq": [
+                { "question": "How do I edit my crontab on Linux?", "answer": "Run 'crontab -e' in your terminal to open the crontab editor. Add your cron expressions (one per line), save, and the cron daemon will automatically pick up the new schedule." },
+                { "question": "How do I test a cron expression without waiting?", "answer": "Use the 'at' command for one-time scheduled testing, or temporarily set the cron to run every minute (* * * * *) to verify it works, then update to the desired schedule." },
+                { "question": "Why is my cron job not running?", "answer": "Common causes: incorrect syntax, environment variables not set (cron runs with a minimal PATH), script not executable (chmod +x), output not redirected (errors are silent), or cron daemon not running (systemctl status cron)." },
+                { "question": "What timezone does cron use?", "answer": "By default, cron uses the system timezone. On many servers this is UTC. Always verify with 'timedatectl' or 'date' to avoid unexpected scheduling discrepancies." },
+                { "question": "Can I run a cron job every 30 seconds?", "answer": "The minimum cron interval is 1 minute. For sub-minute execution, use a loop inside the cron script: * * * * * /path/to/script.sh; sleep 30; /path/to/script.sh" }
+            ]
         }
     },
     "Common": {
@@ -1448,6 +1747,7 @@
         "finance_sip": "SIP Plan",
         "finance_interest": "Compound Int.",
         "finance_mortgage": "Mortgage",
+        "finance_401k": "401k Planner",
         "business": "Business & B2B Analysis"
     },
     "Footer": {

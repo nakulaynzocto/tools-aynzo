@@ -5782,6 +5782,422 @@ export const toolSEO: { [key: string]: ToolSEO } = {
             { question: 'Can I download the terms in Markdown?', answer: 'Yes, our tool allows you to copy or download your terms as a Markdown file (.md) for easy integration into modern sites.' }
         ]
     },
+
+    // ===== NEW TOOLS — CALCULATOR CATEGORY =====
+
+    'dti-calculator': {
+        title: 'DTI Calculator (Free) — Debt-to-Income Ratio for Mortgage & Loans',
+        description: 'Calculate your debt-to-income (DTI) ratio instantly. Check if you qualify for a mortgage, car loan, or personal loan. Compare front-end vs back-end DTI ratios and see your approval status.',
+        keywords: 'DTI calculator, debt to income ratio, DTI ratio mortgage, front end DTI, back end DTI, loan eligibility calculator, debt ratio calculator, income ratio calculator, mortgage approval DTI, free DTI calculator',
+        h1: 'Free DTI Calculator: Know Your Debt-to-Income Ratio Instantly',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'DTI Calculator',
+            url: 'https://tools.aynzo.com/tools/dti-calculator',
+            description: 'Free debt-to-income ratio calculator. Instantly see your DTI%, front-end ratio, back-end ratio, and loan eligibility status.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+            featureList: 'Front-end DTI, Back-end DTI, Loan approval status, Monthly debt breakdown'
+        },
+        faq: [
+            { question: 'What is a good DTI for a mortgage?', answer: 'Most conventional lenders require a DTI of 43% or lower. Best rates go to borrowers with DTI of 36% or less. FHA loans can allow up to 57%.' },
+            { question: 'What debts are included in DTI?', answer: 'DTI includes rent/mortgage, car loans, student loans, minimum credit card payments, personal loans, and child support. Utilities, groceries, and insurance are NOT included.' },
+            { question: 'What is the difference between front-end and back-end DTI?', answer: 'Front-end DTI only includes housing costs. Back-end DTI includes all monthly debt payments. Lenders typically evaluate both.' },
+            { question: 'Can I get a loan with 50% DTI?', answer: 'FHA loans allow up to 57% with compensating factors like high credit score or large down payment. Most conventional loans cap at 43-45%.' },
+            { question: 'How can I lower my DTI quickly?', answer: 'Pay off small debts first (debt snowball), avoid new credit before applying for a mortgage, and consider refinancing high-interest debt to lower monthly payments.' }
+        ]
+    },
+
+    'car-loan-calculator': {
+        title: 'Car Loan Calculator (Free) — Monthly Payment & Total Interest Estimator',
+        description: 'Calculate your exact monthly car loan payment and total interest cost. Find the best loan term before visiting a dealership. Includes amortization breakdown.',
+        keywords: 'car loan calculator, auto loan calculator, monthly car payment calculator, vehicle loan calculator, car finance calculator, auto payment estimator, car loan interest calculator, used car loan calculator, free auto loan calculator',
+        h1: 'Free Car Loan Calculator: Monthly Payment, Interest & Amortization',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Car Loan Calculator',
+            url: 'https://tools.aynzo.com/tools/car-loan-calculator',
+            description: 'Calculate monthly car loan payments, total interest cost, and amortization schedule instantly.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+            featureList: 'Monthly payment, Total interest, Amortization schedule, Loan comparison'
+        },
+        faq: [
+            { question: 'What credit score do I need for the best car loan rate?', answer: 'A credit score of 720+ typically qualifies for the best rates (2-5% APR). Scores below 600 are subprime and may face 10-15%+ APR.' },
+            { question: 'Should I choose a 60-month or 72-month loan?', answer: 'A 60-month loan costs less in total interest. A 72-month loan has lower monthly payments but significantly more interest paid over the life of the loan.' },
+            { question: 'How much down payment should I put on a car?', answer: 'Experts recommend 20% for new cars and 10% for used. This reduces your payment, prevents being underwater on the loan, and often gets a better rate.' },
+            { question: 'Is 0% APR financing actually free?', answer: 'Not always. Dealers offering 0% APR often price the car higher or remove rebates. Always compare the 0% offer vs taking a cash rebate and financing elsewhere.' },
+            { question: 'What is GAP insurance?', answer: 'GAP insurance covers the difference between what you owe and the car\'s value if it\'s totaled. Worth it if you put less than 20% down or chose a loan longer than 60 months.' }
+        ]
+    },
+
+    'credit-card-payoff-calculator': {
+        title: 'Credit Card Payoff Calculator (Free) — Debt-Free Date & Interest Saved',
+        description: 'Find your credit card debt-free date instantly. See exactly how much interest you save by paying more each month. Compare debt avalanche vs snowball strategies.',
+        keywords: 'credit card payoff calculator, credit card debt calculator, pay off credit card, credit card interest calculator, debt free calculator, minimum payment calculator, snowball debt calculator, debt avalanche calculator',
+        h1: 'Credit Card Payoff Calculator: See Your Debt-Free Date & Interest Saved',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Credit Card Payoff Calculator',
+            url: 'https://tools.aynzo.com/tools/credit-card-payoff-calculator',
+            description: 'Calculate credit card payoff timeline and total interest cost. Compare payment strategies to become debt-free faster.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What happens if I only pay the minimum?', answer: 'You pay the maximum possible interest. Minimum payments are set low (1-2% of balance) to maximize interest income for banks. Always pay more than the minimum.' },
+            { question: 'Does paying off credit cards improve credit score?', answer: 'Yes. Credit utilization accounts for 30% of your FICO score. Paying down balances below 30% utilization can boost your score by 50-100 points.' },
+            { question: 'What is the debt avalanche method?', answer: 'Pay minimums on all cards, then put every extra dollar toward the highest interest rate card. This minimizes total interest paid mathematically.' },
+            { question: 'Should I consolidate credit card debt?', answer: 'If you qualify for a personal loan at a lower rate than your APR, consolidation saves thousands. Balance transfer cards with 0% intro APR are also excellent options.' },
+            { question: 'How is credit card interest calculated?', answer: 'Your APR is divided by 365 to get a daily rate, then multiplied by your average daily balance. This is why even a small balance compounds quickly month-to-month.' }
+        ]
+    },
+
+    'savings-goal-calculator': {
+        title: 'Savings Goal Calculator (Free) — Monthly Savings Planner & Target Date',
+        description: 'Set a savings goal and find out exactly how much to save monthly to reach it. Includes compound interest growth. Perfect for emergency funds, vacations, and down payments.',
+        keywords: 'savings goal calculator, how much to save calculator, monthly savings calculator, savings target date calculator, compound interest savings, emergency fund calculator, financial goal planner, savings planner',
+        h1: 'Savings Goal Calculator: How Much to Save Monthly to Reach Your Goal',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Savings Goal Calculator',
+            url: 'https://tools.aynzo.com/tools/savings-goal-calculator',
+            description: 'Calculate monthly savings needed to reach any financial goal. Includes compound interest and target date estimation.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How much should I save each month?', answer: 'The 50/30/20 rule recommends saving at least 20% of income. Prioritize emergency fund first, then retirement, then specific goals.' },
+            { question: 'What is compound interest?', answer: 'You earn interest on both your principal and previously earned interest. A $10,000 investment at 5% APY becomes $16,289 in 10 years — without adding a single dollar.' },
+            { question: 'Is a high-yield savings account worth it?', answer: 'Absolutely. HYSAs at online banks (Marcus, Ally, SoFi) offer 4-5% APY vs 0.01% at traditional banks — with the same FDIC insurance.' },
+            { question: 'How long does it take to save $10,000?', answer: 'At $500/month with 4% APY HYSA, about 19 months. At $1,000/month, about 9.5 months. Use this calculator for your personalized timeline.' },
+            { question: 'How do I save for multiple goals at once?', answer: 'Open separate savings accounts for each goal (e.g., Vacation Fund, Emergency Fund, Down Payment). This mental accounting prevents raiding one fund for another.' }
+        ]
+    },
+
+    'freelance-tax-calculator': {
+        title: 'Freelance Tax Calculator 2024 (Free) — Self-Employment & Quarterly Tax Estimator',
+        description: 'Calculate your freelance taxes for 2024. See self-employment tax (15.3%), federal income tax, effective rate, and quarterly estimated payments. Built for US freelancers and 1099 workers.',
+        keywords: 'freelance tax calculator, self-employment tax calculator, 1099 tax calculator, quarterly tax calculator, estimated tax payments 2024, independent contractor tax, gig worker tax calculator, freelancer taxes USA, self employed tax',
+        h1: 'Freelance Tax Calculator 2024: Self-Employment & Quarterly Estimated Taxes',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Freelance Tax Calculator',
+            url: 'https://tools.aynzo.com/tools/freelance-tax-calculator',
+            description: 'Calculate US freelance taxes including self-employment tax, federal income tax, and quarterly estimated payments for 2024.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What percentage should I set aside for taxes?', answer: 'Set aside 25-30% of every payment. This covers self-employment tax (15.3%) and federal income tax. State taxes vary additionally.' },
+            { question: 'Do freelancers need to pay quarterly taxes?', answer: 'Yes, if you expect to owe $1,000+ in taxes, the IRS requires quarterly estimated payments. Failure can result in underpayment penalties.' },
+            { question: 'What is self-employment tax?', answer: 'SE tax is 15.3% — 12.4% Social Security + 2.9% Medicare. Unlike employees, freelancers pay both the employer and employee portions.' },
+            { question: 'What is Form 1099-NEC?', answer: 'Clients who paid you $600+ during the year must send a 1099-NEC. Report this income on Schedule C of your tax return.' },
+            { question: 'Can I deduct my home office?', answer: 'Yes, if the space is used regularly and exclusively for business. Deduct a percentage of rent/mortgage proportional to office square footage.' }
+        ]
+    },
+
+    'tdee-calculator': {
+        title: 'TDEE Calculator (Free) — Total Daily Energy Expenditure & Calorie Needs',
+        description: 'Calculate your TDEE based on age, weight, height, and activity level. Find maintenance calories, caloric deficit for weight loss, and surplus for muscle gain using Mifflin-St Jeor formula.',
+        keywords: 'TDEE calculator, total daily energy expenditure, maintenance calories, TDEE calculator weight loss, BMR calculator, calorie calculator, how many calories should I eat, calorie deficit calculator, TDEE online free',
+        h1: 'TDEE Calculator: Find Your Total Daily Calorie & Energy Expenditure',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'TDEE Calculator',
+            url: 'https://tools.aynzo.com/tools/tdee-calculator',
+            description: 'Calculate Total Daily Energy Expenditure (TDEE) using the Mifflin-St Jeor formula. Get maintenance calories and weight loss/gain targets.',
+            applicationCategory: 'HealthApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How accurate is a TDEE calculator?', answer: 'TDEE calculators are accurate within 10-15% for most people. Track calories and weight for 2-3 weeks and adjust based on real-world results.' },
+            { question: 'How many calories to lose 1 pound per week?', answer: 'Eat 500 calories below your TDEE per day. Since 3,500 calories ≈ 1 pound of fat, a 500-calorie daily deficit = ~1 pound lost per week.' },
+            { question: 'What activity level should I choose?', answer: 'Most people overestimate activity. Unless you have a physical job or train intensively 5+ days/week, choose sedentary or lightly active.' },
+            { question: 'What is BMR vs TDEE?', answer: 'BMR (Basal Metabolic Rate) is calories burned at complete rest. TDEE multiplies your BMR by an activity factor to get total daily burn.' },
+            { question: 'Should I eat less on rest days?', answer: 'For most people the difference is minimal. Eating consistent calories daily is psychologically easier and metabolically equivalent to cycling calories.' }
+        ]
+    },
+
+    'pregnancy-due-date-calculator': {
+        title: 'Pregnancy Due Date Calculator (Free) — Calculate Your Baby\'s Arrival Date',
+        description: 'Calculate your pregnancy due date instantly from your last menstrual period (LMP). See trimester dates, gestational age in weeks, and key pregnancy milestones.',
+        keywords: 'pregnancy due date calculator, due date calculator, LMP calculator, when is my baby due, pregnancy calendar, gestational age calculator, trimester dates calculator, conception date calculator, baby due date',
+        h1: 'Pregnancy Due Date Calculator: Know Exactly When Your Baby Arrives',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Pregnancy Due Date Calculator',
+            url: 'https://tools.aynzo.com/tools/pregnancy-due-date-calculator',
+            description: 'Calculate pregnancy due date from LMP using Naegele\'s Rule. See all trimester dates and gestational age in weeks.',
+            applicationCategory: 'HealthApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How accurate is a due date from LMP?', answer: 'Within 2-4 days for women with regular cycles. An early ultrasound before 14 weeks provides the most accurate dating.' },
+            { question: 'What if my periods are irregular?', answer: 'LMP-based calculations are less accurate with irregular cycles. An early ultrasound measuring fetal crown-rump length (CRL) is most accurate.' },
+            { question: 'What week is considered full-term?', answer: 'Full-term is 39-40 weeks. Early term is 37-38 weeks. The goal is to reach 39 weeks before delivery for the best outcomes.' },
+            { question: 'What is gestational age vs fetal age?', answer: 'Gestational age is counted from LMP and is what doctors use. Fetal age is approximately 2 weeks less. Our calculator shows gestational age.' },
+            { question: 'Only 5% of babies are born on their due date?', answer: 'Yes. Most babies arrive within 2 weeks before or after the due date. The due date is a target, not a guarantee.' }
+        ]
+    },
+
+    'macro-calculator': {
+        title: 'Macro Calculator (Free) — Protein, Carbs & Fat for Weight Loss or Muscle Gain',
+        description: 'Calculate your perfect daily macros for weight loss, muscle gain, or maintenance. Get exact grams of protein, carbs, and fat based on your TDEE and fitness goal. IIFYM flexible dieting.',
+        keywords: 'macro calculator, macronutrient calculator, protein calculator, how many grams of protein per day, IIFYM calculator, carb calculator, fat loss macros, muscle building macros, flexible dieting calculator, daily macro calculator',
+        h1: 'Macro Calculator: Find Your Perfect Protein, Carb & Fat Split',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Macro Calculator',
+            url: 'https://tools.aynzo.com/tools/macro-calculator',
+            description: 'Calculate daily macronutrient needs (protein, carbs, fat) for your specific fitness goal. Uses TDEE and IIFYM principles.',
+            applicationCategory: 'HealthApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How many grams of protein do I need per day?', answer: 'For muscle preservation and growth: 0.7-1g per pound of body weight (1.6-2.2g/kg). Higher amounts don\'t provide extra muscle benefits.' },
+            { question: 'Are carbs bad for weight loss?', answer: 'No. Weight loss is driven by a calorie deficit. Low-carb diets work because they help some people eat fewer calories — not because carbs are inherently fattening.' },
+            { question: 'What macro split for muscle gain?', answer: 'A classic split is 30% protein / 50% carbs / 20% fat. Most important: be in a slight calorie surplus (200-300 above TDEE) and hit your protein target.' },
+            { question: 'How do I track my macros?', answer: 'Apps like MyFitnessPal, Cronometer, or MacroFactor let you log food by scanning barcodes. Use a kitchen scale for accuracy when starting.' },
+            { question: 'What is IIFYM?', answer: 'If It Fits Your Macros — a flexible dieting approach where you can eat any food as long as it fits your daily macro targets. Improves long-term adherence vs. rigid diets.' }
+        ]
+    },
+
+    'ideal-weight-calculator': {
+        title: 'Ideal Weight Calculator (Free) — 4 Clinical Formulas for Healthy Body Weight',
+        description: 'Find your ideal weight using 4 clinical formulas (Hamwi, Devine, Robinson, Miller). See BMI healthy weight range and results in both kg and lbs. Free ideal body weight calculator.',
+        keywords: 'ideal weight calculator, ideal body weight, how much should I weigh, healthy weight calculator, ideal weight for height, Hamwi formula, Devine formula, BMI weight range, body weight calculator, healthy weight BMI',
+        h1: 'Ideal Weight Calculator: Find Your Healthy Weight Using 4 Clinical Formulas',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Ideal Weight Calculator',
+            url: 'https://tools.aynzo.com/tools/ideal-weight-calculator',
+            description: 'Calculate ideal body weight using Hamwi, Devine, Robinson, and Miller formulas. Includes BMI healthy weight range in kg and lbs.',
+            applicationCategory: 'HealthApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How much should I weigh for my height?', answer: 'Healthy ranges vary. The BMI range (18.5-24.9) for a 5\'7" person is ~54-80kg. Our calculator shows 4 formula estimates plus the BMI-based range.' },
+            { question: 'Why do different formulas give different results?', answer: 'Each formula was developed in different decades for different medical purposes using slightly different base weights and multipliers.' },
+            { question: 'Is ideal weight the same for men and women?', answer: 'No. Men generally have more muscle mass and bone density. All four formulas account for this with separate starting weights.' },
+            { question: 'Can I be overweight by BMI but healthy?', answer: 'Yes. Athletes with high muscle mass often show as "overweight" on BMI despite low body fat. Body fat percentage and waist circumference are better health indicators.' },
+            { question: 'What if I\'m heavier than my ideal weight?', answer: 'Ideal weight formulas are guidelines, not verdicts. Focus on health markers: blood pressure, cholesterol, blood sugar, and fitness level.' }
+        ]
+    },
+
+    // ===== NEW TOOLS — UTILITY CATEGORY =====
+
+    'chatgpt-prompt-generator': {
+        title: 'ChatGPT Prompt Generator (Free) — AI Prompt Templates for Writing, Coding & More',
+        description: 'Generate perfect ChatGPT, Claude, and Gemini prompts instantly. Choose from 10+ expert templates for writing, coding, marketing, and learning. Copy into any AI model in seconds.',
+        keywords: 'ChatGPT prompt generator, AI prompt generator, ChatGPT prompts, best ChatGPT prompts, prompt engineering tool, Claude prompts, Gemini prompts, AI writing prompts, free prompt generator, prompt templates',
+        h1: 'ChatGPT Prompt Generator: Create Perfect AI Prompts for Any Task',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'ChatGPT Prompt Generator',
+            url: 'https://tools.aynzo.com/tools/chatgpt-prompt-generator',
+            description: 'Free ChatGPT prompt generator with 10+ expert templates for writing, coding, marketing, education, and more.',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What is prompt engineering?', answer: 'The practice of crafting precise, detailed instructions for AI models to produce the best outputs. Good prompts include role, task, context, format, and constraints.' },
+            { question: 'Do these prompts work with Claude and Gemini?', answer: 'Yes. The structural principles are universal across all major AI models including ChatGPT (GPT-4o), Claude (Anthropic), Gemini (Google), and Mistral.' },
+            { question: 'How do I get better ChatGPT responses?', answer: 'Specify a role ("Act as a [expert]"), target audience, desired format, length, and constraints. The more specific, the better the output.' },
+            { question: 'What is zero-shot vs few-shot prompting?', answer: 'Zero-shot gives only the instruction. Few-shot includes 1-3 examples of the desired output style. Few-shot dramatically improves consistency and quality.' },
+            { question: 'Are these prompts free to use?', answer: 'Yes, 100% free to use and customize. These are templates you copy and paste into any AI — no subscription required for this generator.' }
+        ]
+    },
+
+    'ai-content-detector': {
+        title: 'AI Content Detector (Free) — Check If Text Was Written by ChatGPT or AI',
+        description: 'Detect AI-generated content instantly. Paste any text to check for ChatGPT, Claude, or AI writing signals. Get a percentage score and see exact detection signals found. 100% free.',
+        keywords: 'AI content detector, ChatGPT detector, AI text detector, detect AI writing, is this AI written, AI generated content checker, GPT detector free, AI detector online, ChatGPT text detector',
+        h1: 'Free AI Content Detector: Check If Text Is Written by AI or Human',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'AI Content Detector',
+            url: 'https://tools.aynzo.com/tools/ai-content-detector',
+            description: 'Free AI content detector. Analyze text for ChatGPT, Claude, or other AI writing signals. Get a percentage score and detection breakdown.',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How accurate is AI content detection?', answer: 'Heuristic detectors are ~60-80% accurate on unedited AI text. Accuracy drops significantly on human-edited AI content or very short samples.' },
+            { question: 'Can AI text be edited to pass detection?', answer: 'Yes. Adding personal pronouns, contractions, anecdotes, and irregular sentence structures significantly reduces AI detection scores.' },
+            { question: 'What AI models does this detect?', answer: 'Patterns are common across all major LLMs: ChatGPT (GPT-4o), Claude, Gemini, Llama, Mistral. The detection is LLM-agnostic.' },
+            { question: 'Why did human text get a high AI score?', answer: 'Formal, academic, or structured business writing mimics AI patterns. This is a known false positive. Use as a guideline, not a definitive verdict.' },
+            { question: 'Is my text stored or sent to servers?', answer: 'No. All processing happens 100% in your browser. Your text is never sent to any server or stored anywhere.' }
+        ]
+    },
+
+    'text-to-handwriting': {
+        title: 'Text to Handwriting Converter (Free) — Generate Realistic Handwriting Online',
+        description: 'Convert typed text to realistic handwriting images instantly. Choose from 5 handwriting font styles, customize ink color, and download as high-resolution PNG. 100% browser-based.',
+        keywords: 'text to handwriting, handwriting generator, text to handwriting converter, fake handwriting generator, handwriting font converter, handwriting image maker, convert text to cursive, text to handwriting PNG download',
+        h1: 'Text to Handwriting Converter: Generate Realistic Handwriting & Download PNG',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Text to Handwriting Converter',
+            url: 'https://tools.aynzo.com/tools/text-to-handwriting',
+            description: 'Convert text to realistic handwriting. Choose from 5 styles (Caveat, Dancing Script, etc.), customize colors, download as PNG.',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is the handwriting image copyright-free?', answer: 'Yes. The fonts (Caveat, Dancing Script, etc.) are under the Open Font License (OFL) which permits free commercial and personal use.' },
+            { question: 'What format does it download in?', answer: 'High-resolution PNG file — ideal for printing, embedding in documents, and sharing on social media.' },
+            { question: 'Can I customize the handwriting?', answer: 'Yes. Choose from 5 font styles, adjust font size (16-48pt), customize ink color, and choose lined, grid, or plain paper background.' },
+            { question: 'Does it work on mobile?', answer: 'Yes, fully responsive. The canvas renders at screen width on mobile but the full-resolution PNG is always available for download.' },
+            { question: 'Is text sent to any server?', answer: 'No. All rendering uses the HTML5 Canvas API in your browser. No text is ever sent to a server or stored.' }
+        ]
+    },
+
+    'grammar-checker': {
+        title: 'Free Grammar Checker Online — Fix Grammar, Spelling & Punctuation Instantly',
+        description: 'Check and fix grammar mistakes instantly with our free online grammar checker. Detect contractions errors, misspellings, wrong articles, and verb tense mistakes. No signup. No word limit.',
+        keywords: 'grammar checker, free grammar checker online, grammar check, grammar fixer, spell checker, punctuation checker, English grammar checker, check my grammar, grammar correction free, grammar tool online',
+        h1: 'Free Online Grammar Checker: Fix Grammar & Spelling Mistakes Instantly',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Grammar Checker',
+            url: 'https://tools.aynzo.com/tools/grammar-checker',
+            description: 'Free online grammar checker. Detect and fix common grammar errors, spelling mistakes, and punctuation issues with detailed explanations.',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is this grammar checker free?', answer: 'Yes, 100% free with no word limits, no signup required, and no watermarks. All processing is in your browser.' },
+            { question: 'What is the difference between a grammar checker and spellchecker?', answer: 'A spellchecker catches misspelled words. A grammar checker understands context — catching wrong word choices (their vs. there), missing punctuation, and verb agreement errors.' },
+            { question: 'Can it replace a human editor?', answer: 'No. Automated checkers catch common patterns but miss nuanced tone and logic issues. Use it as a first pass, then have humans review important writing.' },
+            { question: 'How is this different from Grammarly?', answer: 'Grammarly is a paid AI-powered service. Our tool is free, browser-based, and great for quick checks without needing an account or subscription.' },
+            { question: 'Does it work for British English?', answer: 'Rules are primarily based on American English. British spellings (colour, favour) won\'t be flagged as errors.' }
+        ]
+    },
+
+    // ===== NEW TOOLS — SOCIAL / YOUTUBE / DEV =====
+
+    'tiktok-hashtag-generator': {
+        title: 'TikTok Hashtag Generator (Free) — Trending Tags to Boost Views & FYP Reach',
+        description: 'Get the best trending TikTok hashtags for your niche instantly. Choose from 8 categories including Entertainment, Music, Gaming, and Fitness. Copy all tags with one click. Boost your FYP.',
+        keywords: 'TikTok hashtag generator, TikTok hashtags, best TikTok hashtags, trending TikTok tags, hashtags for TikTok views, TikTok FYP hashtags, viral TikTok hashtags, TikTok hashtag tool 2024, free TikTok hashtags',
+        h1: 'TikTok Hashtag Generator: Get Trending Viral Hashtags for Your Videos',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'TikTok Hashtag Generator',
+            url: 'https://tools.aynzo.com/tools/tiktok-hashtag-generator',
+            description: 'Free TikTok hashtag generator. Get trending hashtags by category to maximize video reach and FYP visibility.',
+            applicationCategory: 'SocialNetworkingApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Do hashtags help TikTok videos go viral?', answer: 'Hashtags help the algorithm categorize your content. They support virality but don\'t guarantee it — content quality and watch time are the primary drivers.' },
+            { question: 'How many hashtags on TikTok?', answer: 'TikTok recommends 3-5 relevant hashtags. Creators using 3-7 targeted hashtags see the best results. Avoid 20+ hashtags as it looks spammy.' },
+            { question: 'Should I use #fyp on every TikTok?', answer: 'You can, but it\'s not magic. #fyp has billions of posts. Pair it with 2-3 niche-specific hashtags to reach the right sub-community.' },
+            { question: 'Are niche hashtags better than trending ones?', answer: 'Often yes. A trending hashtag has millions of competing videos. A niche hashtag with 100K posts has far less competition for the same interested audience.' },
+            { question: 'When should I update my hashtags?', answer: 'Refresh your strategy every 2-4 weeks. Monitor TikTok\'s Discover page and trend reports for emerging hashtags in your niche.' }
+        ]
+    },
+
+    'bio-link-generator': {
+        title: 'Free Bio Link Generator — Create Your Linktree-Style Page Instantly',
+        description: 'Build a free bio link page like Linktree in seconds. Add your name, bio, and unlimited links. Get clean HTML code to host anywhere on GitHub Pages or Netlify. No account needed.',
+        keywords: 'bio link generator, free linktree alternative, bio link page, link in bio, create linktree, social media bio link, instagram bio link, free link page creator, one link bio, linktree free',
+        h1: 'Free Bio Link Generator: Create Your Linktree Alternative in Seconds',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Bio Link Generator',
+            url: 'https://tools.aynzo.com/tools/bio-link-generator',
+            description: 'Create a free Linktree-style bio link page. Add unlimited links and get clean HTML to host anywhere — no account or subscription needed.',
+            applicationCategory: 'SocialNetworkingApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Is this a free Linktree alternative?', answer: 'Yes. Creates a fully customizable bio link page as a single HTML file. Host for free on GitHub Pages or Netlify — no monthly fee or watermarks.' },
+            { question: 'How do I host my bio link page?', answer: 'Upload to GitHub Pages (free), Netlify (drag & drop, free), Vercel (free tier), or paste into your existing website. Live within minutes.' },
+            { question: 'Can I customize the design?', answer: 'The generated HTML is fully editable. Change gradient, button colors, and fonts by editing the CSS <style> block.' },
+            { question: 'Does it work with Instagram?', answer: 'Yes — that\'s exactly the use case. Put your bio link page URL in your Instagram bio for followers to access all your links with one tap.' },
+            { question: 'Can I add analytics?', answer: 'Yes. Add Plausible, Simple Analytics, or Google Analytics to the generated HTML code to track clicks on each link.' }
+        ]
+    },
+
+    'youtube-money-calculator': {
+        title: 'YouTube Money Calculator (Free) — Estimate Channel Revenue from Views & RPM',
+        description: 'Calculate YouTube ad revenue instantly. Enter daily views and RPM to see daily, monthly, and yearly earnings. Understand niche RPM differences. Free YouTube earnings estimator.',
+        keywords: 'YouTube money calculator, YouTube earnings calculator, how much does YouTube pay, YouTube revenue calculator, YouTube RPM calculator, YouTube CPM calculator, YouTube income estimator, how to make money on YouTube',
+        h1: 'YouTube Money Calculator: Estimate Ad Revenue from Daily Views',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'YouTube Money Calculator',
+            url: 'https://tools.aynzo.com/tools/youtube-money-calculator',
+            description: 'Free YouTube earnings calculator. Estimate daily, monthly, and yearly ad revenue based on views and RPM.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How much does YouTube pay per 1,000 views?', answer: 'YouTube pays $1-$30 per 1,000 views (RPM) depending on niche, audience location, ad types, and video length. Average is around $3-5 RPM.' },
+            { question: 'What is the difference between CPM and RPM?', answer: 'CPM is what advertisers pay per 1,000 impressions. RPM is what creators receive per 1,000 views after YouTube\'s 45% cut. Always use RPM to estimate your earnings.' },
+            { question: 'How many views to make $1,000 on YouTube?', answer: 'At $3 RPM average, you need ~333,000 views. At $15 RPM (finance niche), only ~67,000 views. Use our calculator to see your niche estimate.' },
+            { question: 'Which YouTube niche pays the most?', answer: 'Finance/investing ($10-30 RPM), legal ($15-25 RPM), software/SaaS ($9-18 RPM), real estate ($8-15 RPM). Entertainment and gaming are typically $2-5 RPM.' },
+            { question: 'How many subscribers to monetize YouTube?', answer: '1,000 subscribers + 4,000 watch hours in the past 12 months (or 10M Shorts views) to join the YouTube Partner Program (YPP).' }
+        ]
+    },
+
+    'crontab-generator': {
+        title: 'Crontab Generator (Free) — Build & Validate Linux Cron Expressions Online',
+        description: 'Generate and validate Linux cron expressions instantly. Choose from common presets or build custom cron schedules. Instantly see human-readable descriptions of your cron job timing.',
+        keywords: 'crontab generator, cron expression generator, cron job generator, cron schedule builder, linux cron syntax, crontab examples, cron expression validator, cron to english, online cron generator',
+        h1: 'Crontab Generator: Build, Validate & Understand Cron Expressions Online',
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Crontab Generator',
+            url: 'https://tools.aynzo.com/tools/crontab-generator',
+            description: 'Free online crontab expression generator. Build cron schedules, validate syntax, and get instant human-readable descriptions.',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'How do I edit crontab on Linux?', answer: 'Run "crontab -e" in terminal to open the crontab editor. Add expressions (one per line), save, and the cron daemon picks up new schedules automatically.' },
+            { question: 'Why is my cron job not running?', answer: 'Common causes: incorrect syntax, environment PATH not set, script not executable (chmod +x), output not redirected (errors are silent), or cron daemon not running.' },
+            { question: 'What timezone does cron use?', answer: 'Default is the system timezone, often UTC on servers. Always verify with "timedatectl" or "date" to avoid scheduling discrepancies.' },
+            { question: 'What is the minimum cron interval?', answer: 'One minute. For sub-minute execution, use a loop inside the cron: "* * * * * /script.sh; sleep 30; /script.sh"' },
+            { question: 'How do I test a cron expression?', answer: 'Temporarily set cron to run every minute (* * * * *) and redirect output to a log file. Verify it works, then set your actual schedule.' }
+        ]
+    },
 };
 
 // Helper function to get tool SEO data

@@ -7,7 +7,9 @@ export interface SocialLinkToolProps {
     | 'email-validator'
     | 'url-opener'
     | 'privacy-policy-generator'
-    | 'terms-conditions-generator';
+    | 'terms-conditions-generator'
+    | 'tiktok-hashtag-generator'
+    | 'bio-link-generator';
 }
 
 

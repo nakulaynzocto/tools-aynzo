@@ -1,11 +1,15 @@
 "use client";
 import { useState } from 'react';
-import { Copy, CheckCircle2, Download, Type } from 'lucide-react';
+import { Copy, CheckCircle2, Download, Type, Bot, ScanSearch, Pen, SpellCheck } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { UtilityToolProps } from '@/components/types/utility/types';
 import { generateLoremIpsum } from '@/components/utils/utility/utilityProcessing';
 import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
+import { ChatGPTPromptGenerator } from './ChatGPTPromptGenerator';
+import { AIContentDetector } from './AIContentDetector';
+import { TextToHandwriting } from './TextToHandwriting';
+import { GrammarChecker } from './GrammarChecker';
 
 export default function UtilityToolsIndex({ type }: UtilityToolProps) {
     const t = useTranslations('Common');
@@ -21,9 +25,63 @@ export default function UtilityToolsIndex({ type }: UtilityToolProps) {
             category: 'GENERATORS',
             tools: [
                 { id: 'lorem-ipsum', label: 'Lorem Ipsum Generator', icon: Type },
+                { id: 'chatgpt-prompt-generator', label: 'ChatGPT Prompts', icon: Bot },
+                { id: 'text-to-handwriting', label: 'Text to Handwriting', icon: Pen },
             ]
-        }
+        },
+        {
+            category: 'AI TOOLS',
+            tools: [
+                { id: 'ai-content-detector', label: 'AI Detector', icon: ScanSearch },
+                { id: 'grammar-checker', label: 'Grammar Checker', icon: SpellCheck },
+            ]
+        },
     ];
+
+    // Early returns for new utility tools
+    if (type === 'chatgpt-prompt-generator') {
+        return (
+            <div className="max-w-6xl mx-auto space-y-6">
+                <ScrollableNav items={utilityNavTools} activeToolId={type} />
+                <div className="bg-card rounded-3xl border-2 border-border shadow-2xl p-8">
+                    <ChatGPTPromptGenerator />
+                </div>
+            </div>
+        );
+    }
+
+    if (type === 'ai-content-detector') {
+        return (
+            <div className="max-w-6xl mx-auto space-y-6">
+                <ScrollableNav items={utilityNavTools} activeToolId={type} />
+                <div className="bg-card rounded-3xl border-2 border-border shadow-2xl p-8">
+                    <AIContentDetector />
+                </div>
+            </div>
+        );
+    }
+
+    if (type === 'text-to-handwriting') {
+        return (
+            <div className="max-w-6xl mx-auto space-y-6">
+                <ScrollableNav items={utilityNavTools} activeToolId={type} />
+                <div className="bg-card rounded-3xl border-2 border-border shadow-2xl p-8">
+                    <TextToHandwriting />
+                </div>
+            </div>
+        );
+    }
+
+    if (type === 'grammar-checker') {
+        return (
+            <div className="max-w-6xl mx-auto space-y-6">
+                <ScrollableNav items={utilityNavTools} activeToolId={type} />
+                <div className="bg-card rounded-3xl border-2 border-border shadow-2xl p-8">
+                    <GrammarChecker />
+                </div>
+            </div>
+        );
+    }
 
     const handleGenerate = () => {
         if (type === 'lorem-ipsum') {

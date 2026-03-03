@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Code, Link2, FileJson, FileText, FileCode, Minimize2, Maximize2, Split, Braces, Terminal, Search } from 'lucide-react';
+import { Code, Link2, FileJson, FileText, FileCode, Minimize2, Split, Braces, Terminal, Search, Clock, Code2 } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { DevToolProps } from '@/components/types/dev/types';
 import { JSONFormatter } from './JSONFormatter';
 import { URLEncoderDecoder } from './URLEncoderDecoder';
+import { CrontabGenerator } from './CrontabGenerator';
+import { JsonToTypeScriptConverter } from './JsonToTypeScriptConverter';
 
 export default function DevToolsIndex({ type }: DevToolProps) {
     const devNavTools = [
@@ -47,6 +49,8 @@ export default function DevToolsIndex({ type }: DevToolProps) {
             category: 'OTHER',
             tools: [
                 { id: 'user-agent-parser', label: 'User Agent Parser', icon: Terminal },
+                { id: 'crontab-generator', label: 'Crontab Builder', icon: Clock },
+                { id: 'json-to-typescript', label: 'JSON to TypeScript', icon: Code2 },
             ]
         }
     ];
@@ -280,6 +284,10 @@ export default function DevToolsIndex({ type }: DevToolProps) {
                         onDownload={handleDownload}
                     />
                 );
+            case 'crontab-generator':
+                return <CrontabGenerator />;
+            case 'json-to-typescript':
+                return <JsonToTypeScriptConverter />;
             default:
                 return (
                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">

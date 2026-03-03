@@ -4,7 +4,8 @@ export interface YouTubeToolProps {
     | 'youtube-tag-generator'
     | 'youtube-title-generator'
     | 'youtube-embed-code-generator'
-    | 'youtube-timestamp-link-generator';
+    | 'youtube-timestamp-link-generator'
+    | 'youtube-money-calculator';
 }
 
 export interface YouTubeSettings {

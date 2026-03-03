@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Send, ExternalLink, RefreshCw, Copy, Check, Settings, X, MessageSquare, BadgeDollarSign, Hash, CheckCircle, ShieldCheck, Gavel } from 'lucide-react';
+import { Send, ExternalLink, RefreshCw, Copy, Check, Settings, X, MessageSquare, BadgeDollarSign, Hash, CheckCircle, ShieldCheck, Gavel, Music2, Link2 } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
@@ -8,6 +8,8 @@ import { SocialLinkToolProps } from '@/components/types/social/types';
 import { generateWhatsAppLink, generateTelegramLink, generatePayPalLink, generateInstagramHashtags, validateEmail } from '@/components/utils/social/socialProcessing';
 import { PrivacyPolicyGenerator } from './PrivacyPolicyGenerator';
 import { TermsConditionsGenerator } from './TermsConditionsGenerator';
+import { TikTokHashtagGenerator } from './TikTokHashtagGenerator';
+import { BioLinkGenerator } from './BioLinkGenerator';
 
 export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
     const socialNavTools = [
@@ -30,6 +32,8 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
             category: 'Social',
             tools: [
                 { id: 'instagram-hashtag-generator', label: 'Hashtags', icon: Hash },
+                { id: 'tiktok-hashtag-generator', label: 'TikTok Tags', icon: Music2 },
+                { id: 'bio-link-generator', label: 'Bio Link', icon: Link2 },
             ]
         },
         {
@@ -40,6 +44,31 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
             ]
         }
     ];
+
+    // Early returns for standalone tools
+    if (type === 'tiktok-hashtag-generator') {
+        const allCats = [...socialNavTools];
+        return (
+            <div className="max-w-6xl mx-auto space-y-6">
+                <ScrollableNav items={allCats} activeToolId={type} />
+                <div className="bg-card rounded-3xl border-2 border-border shadow-2xl p-8">
+                    <TikTokHashtagGenerator />
+                </div>
+            </div>
+        );
+    }
+
+    if (type === 'bio-link-generator') {
+        const allCats = [...socialNavTools];
+        return (
+            <div className="max-w-6xl mx-auto space-y-6">
+                <ScrollableNav items={allCats} activeToolId={type} />
+                <div className="bg-card rounded-3xl border-2 border-border shadow-2xl p-8">
+                    <BioLinkGenerator />
+                </div>
+            </div>
+        );
+    }
 
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState<any>(null);

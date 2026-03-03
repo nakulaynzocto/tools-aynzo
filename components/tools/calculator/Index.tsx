@@ -1,5 +1,5 @@
 "use client";
-import { Calculator, Calendar, Activity, Percent, DollarSign, PieChart, TrendingUp, Home, Landmark, Coins, Target, Megaphone, ArrowDownNarrowWide } from 'lucide-react';
+import { Calculator, Calendar, Activity, Percent, DollarSign, PieChart, TrendingUp, Home, Landmark, Coins, Target, Megaphone, ArrowDownNarrowWide, CreditCard, Car, TrendingDown, Flame, Baby, Dumbbell, Scale, Briefcase } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { useTranslations } from 'next-intl';
 import { CalculatorToolProps } from '@/components/types/calculator/types';
@@ -17,6 +17,16 @@ import { InflationCalculator } from './InflationCalculator';
 import { ROICalculator } from './ROICalculator';
 import { CPMCalculator } from './CPMCalculator';
 import { SalesTaxCalculator } from './SalesTaxCalculator';
+import { Retirement401kCalculator } from './Retirement401kCalculator';
+import { DTICalculator } from './DTICalculator';
+import { CarLoanCalculator } from './CarLoanCalculator';
+import { CreditCardPayoffCalculator } from './CreditCardPayoffCalculator';
+import { SavingsGoalCalculator } from './SavingsGoalCalculator';
+import { FreelanceTaxCalculator } from './FreelanceTaxCalculator';
+import { TDEECalculator } from './TDEECalculator';
+import { PregnancyDueDateCalculator } from './PregnancyDueDateCalculator';
+import { MacroCalculator } from './MacroCalculator';
+import { IdealWeightCalculator } from './IdealWeightCalculator';
 
 export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
     const t = useTranslations('CalculatorNav');
@@ -27,11 +37,17 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
             tools: [
                 { id: 'compound-interest-calculator', label: 'Compound Interest', icon: TrendingUp },
                 { id: 'mortgage-calculator', label: 'Mortgage', icon: Home },
+                { id: '401k-retirement-calculator', label: '401k Planner', icon: TrendingUp },
                 { id: 'sip-calculator', label: 'SIP', icon: PieChart },
                 { id: 'emi-calculator', label: t('emi'), icon: DollarSign },
                 { id: 'gst-calculator', label: t('gst'), icon: Landmark },
                 { id: 'sales-tax-calculator', label: 'Sales Tax', icon: Calculator },
                 { id: 'discount-calculator', label: t('discount'), icon: Percent },
+                { id: 'dti-calculator', label: 'DTI Ratio', icon: TrendingDown },
+                { id: 'car-loan-calculator', label: 'Car Loan', icon: Car },
+                { id: 'credit-card-payoff-calculator', label: 'Credit Card', icon: CreditCard },
+                { id: 'savings-goal-calculator', label: 'Savings Goal', icon: Target },
+                { id: 'freelance-tax-calculator', label: 'Freelance Tax', icon: Briefcase },
             ]
         },
         {
@@ -48,6 +64,10 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
             tools: [
                 { id: 'age-calculator', label: t('age'), icon: Calendar },
                 { id: 'bmi-calculator', label: t('bmi'), icon: Activity },
+                { id: 'tdee-calculator', label: 'TDEE', icon: Flame },
+                { id: 'pregnancy-due-date-calculator', label: 'Pregnancy', icon: Baby },
+                { id: 'macro-calculator', label: 'Macros', icon: Dumbbell },
+                { id: 'ideal-weight-calculator', label: 'Ideal Weight', icon: Scale },
             ]
         },
         {
@@ -90,6 +110,26 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
                 return <CPMCalculator />;
             case 'sales-tax-calculator':
                 return <SalesTaxCalculator />;
+            case '401k-retirement-calculator':
+                return <Retirement401kCalculator />;
+            case 'dti-calculator':
+                return <DTICalculator />;
+            case 'car-loan-calculator':
+                return <CarLoanCalculator />;
+            case 'credit-card-payoff-calculator':
+                return <CreditCardPayoffCalculator />;
+            case 'savings-goal-calculator':
+                return <SavingsGoalCalculator />;
+            case 'freelance-tax-calculator':
+                return <FreelanceTaxCalculator />;
+            case 'tdee-calculator':
+                return <TDEECalculator />;
+            case 'pregnancy-due-date-calculator':
+                return <PregnancyDueDateCalculator />;
+            case 'macro-calculator':
+                return <MacroCalculator />;
+            case 'ideal-weight-calculator':
+                return <IdealWeightCalculator />;
             default:
                 return null;
         }

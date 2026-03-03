@@ -1366,6 +1366,200 @@ export const tools = [
         group: 'social-gen',
         seo: { title: 'Terms and Conditions Generator', description: 'Create terms of service for your platform.' },
         status: 'published'
+    },
+    {
+        _id: '2011',
+        name: '401k Retirement Calculator',
+        slug: '401k-retirement-calculator',
+        description: 'Plan your retirement by estimating your 401k growth with employer matching.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: '401k Retirement Calculator - #1 Free Wealth Planner', description: 'Estimate your 401k savings at retirement with employer matching and inflation adjustments.' },
+        status: 'published'
+    },
+    // === FINANCE CALCULATORS ===
+    {
+        _id: '2012',
+        name: 'Debt-to-Income Calculator',
+        slug: 'dti-calculator',
+        description: 'Calculate your Debt-to-Income ratio to qualify for mortgages and loans.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Debt-to-Income (DTI) Ratio Calculator - Free Loan Qualifier', description: 'Calculate your DTI ratio instantly to see if you qualify for a mortgage or loan.' },
+        status: 'published'
+    },
+    {
+        _id: '2013',
+        name: 'Car Loan Calculator',
+        slug: 'car-loan-calculator',
+        description: 'Calculate monthly car loan payments, total interest, and amortization.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Car Loan Calculator - Monthly Payment Estimator', description: 'Calculate monthly car payments, total interest paid, and auto loan amortization schedule.' },
+        status: 'published'
+    },
+    {
+        _id: '2014',
+        name: 'Credit Card Payoff Calculator',
+        slug: 'credit-card-payoff-calculator',
+        description: 'Calculate how long it will take to pay off your credit card debt.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Credit Card Payoff Calculator - Debt Freedom Planner', description: 'Find out how long to pay off credit card debt and how much interest you will owe.' },
+        status: 'published'
+    },
+    {
+        _id: '2015',
+        name: 'Savings Goal Calculator',
+        slug: 'savings-goal-calculator',
+        description: 'Calculate how much to save monthly to reach your financial goal.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Savings Goal Calculator - Monthly Savings Planner', description: 'Calculate the monthly savings needed to reach any financial goal.' },
+        status: 'published'
+    },
+    {
+        _id: '2016',
+        name: 'Freelance Tax Calculator',
+        slug: 'freelance-tax-calculator',
+        description: 'Estimate self-employment taxes for US freelancers and independent contractors.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Freelance Tax Calculator - Self-Employment Tax Estimator US', description: 'Calculate self-employment tax, quarterly payments, and income tax for US freelancers.' },
+        status: 'published'
+    },
+    // === HEALTH CALCULATORS ===
+    {
+        _id: '2017',
+        name: 'TDEE Calculator',
+        slug: 'tdee-calculator',
+        description: 'Calculate Total Daily Energy Expenditure to plan your diet and fitness goals.',
+        category: 'calculator',
+        group: 'calc-util',
+        seo: { title: 'TDEE Calculator - Total Daily Energy Expenditure', description: 'Calculate your TDEE to plan your calorie intake for weight loss, gain, or maintenance.' },
+        status: 'published'
+    },
+    {
+        _id: '2018',
+        name: 'Pregnancy Due Date Calculator',
+        slug: 'pregnancy-due-date-calculator',
+        description: 'Calculate your pregnancy due date and key milestones.',
+        category: 'calculator',
+        group: 'calc-util',
+        seo: { title: 'Pregnancy Due Date Calculator - Free Baby EDD Estimator', description: 'Calculate your estimated due date (EDD) and pregnancy milestones by last period or conception date.' },
+        status: 'published'
+    },
+    {
+        _id: '2019',
+        name: 'Macro Calculator',
+        slug: 'macro-calculator',
+        description: 'Calculate your daily protein, carbs, and fat targets.',
+        category: 'calculator',
+        group: 'calc-util',
+        seo: { title: 'Macro Calculator - Protein, Carbs & Fat Calculator', description: 'Calculate your daily macronutrient targets for weight loss, muscle gain, or maintenance.' },
+        status: 'published'
+    },
+    {
+        _id: '2020',
+        name: 'Ideal Body Weight Calculator',
+        slug: 'ideal-weight-calculator',
+        description: 'Calculate your ideal body weight using popular formulas.',
+        category: 'calculator',
+        group: 'calc-util',
+        seo: { title: 'Ideal Body Weight Calculator - IBW Estimator', description: 'Calculate your ideal weight using Hamwi, Devine, and Robinson formulas instantly.' },
+        status: 'published'
+    },
+    // === CREATOR & SOCIAL TOOLS ===
+    {
+        _id: '2021',
+        name: 'YouTube Money Calculator',
+        slug: 'youtube-money-calculator',
+        description: 'Estimate YouTube Ad revenue from views and engagement.',
+        category: 'youtube',
+        group: 'yt-tool',
+        seo: { title: 'YouTube Money Calculator - Estimate Channel Earnings', description: 'Estimate YouTube earnings from views, RPM, and engagement rates.' },
+        status: 'published'
+    },
+    {
+        _id: '2022',
+        name: 'TikTok Hashtag Generator',
+        slug: 'tiktok-hashtag-generator',
+        description: 'Find trending TikTok hashtags to boost your video reach.',
+        category: 'social',
+        group: 'social-gen',
+        seo: { title: 'TikTok Hashtag Generator - Find Viral Hashtags Free', description: 'Generate trending TikTok hashtags by category to boost your video views and reach.' },
+        status: 'published'
+    },
+    {
+        _id: '2023',
+        name: 'ChatGPT Prompt Generator',
+        slug: 'chatgpt-prompt-generator',
+        description: 'Generate powerful ChatGPT and AI prompts for any use case.',
+        category: 'utility',
+        group: 'util-gen',
+        seo: { title: 'ChatGPT Prompt Generator - Free AI Prompt Builder', description: 'Create powerful, detailed ChatGPT prompts for writing, coding, marketing, and more.' },
+        status: 'published'
+    },
+    {
+        _id: '2024',
+        name: 'Bio Link Generator',
+        slug: 'bio-link-generator',
+        description: 'Create a simple, shareable bio link page for Instagram and TikTok.',
+        category: 'social',
+        group: 'social-gen',
+        seo: { title: 'Bio Link Generator - Free Linktree Alternative', description: 'Create a free bio link page for Instagram, TikTok and YouTube in seconds.' },
+        status: 'published'
+    },
+    // === DEVELOPER TOOLS ===
+    {
+        _id: '2025',
+        name: 'Crontab Generator',
+        slug: 'crontab-generator',
+        description: 'Generate cron job schedules with a visual editor.',
+        category: 'developer',
+        group: 'dev-tool',
+        seo: { title: 'Crontab Generator - Visual Cron Job Builder', description: 'Build and validate cron expressions visually. Free online crontab editor with human-readable descriptions.' },
+        status: 'published'
+    },
+    {
+        _id: '2026',
+        name: 'JSON to TypeScript',
+        slug: 'json-to-typescript',
+        description: 'Convert JSON objects to TypeScript interfaces automatically.',
+        category: 'developer',
+        group: 'dev-convert',
+        seo: { title: 'JSON to TypeScript Interface Generator', description: 'Convert any JSON to TypeScript interfaces instantly. Free online JSON to TS converter.' },
+        status: 'published'
+    },
+    {
+        _id: '2027',
+        name: 'AI Content Detector',
+        slug: 'ai-content-detector',
+        description: 'Detect if content was written by AI or a human.',
+        category: 'utility',
+        group: 'util-gen',
+        seo: { title: 'AI Content Detector - Free AI Text Checker', description: 'Check if text was written by AI (ChatGPT, Gemini) or a human. Free AI content detector tool.' },
+        status: 'published'
+    },
+    {
+        _id: '2028',
+        name: 'Grammar Checker',
+        slug: 'grammar-checker',
+        description: 'Check and fix grammar, spelling, and punctuation errors in your text.',
+        category: 'text',
+        group: 'text-analyze',
+        seo: { title: 'Free Grammar Checker - Fix Grammar & Spelling Online', description: 'Check grammar, fix spelling errors, and improve punctuation for free in your browser.' },
+        status: 'published'
+    },
+    {
+        _id: '2029',
+        name: 'Text to Handwriting',
+        slug: 'text-to-handwriting',
+        description: 'Convert typed text into realistic handwriting style images.',
+        category: 'text',
+        group: 'text-style',
+        seo: { title: 'Text to Handwriting Converter - Free Online Tool', description: 'Convert your typed text into realistic handwriting images. Download as PNG for free.' },
+        status: 'published'
     }
 ];
 
