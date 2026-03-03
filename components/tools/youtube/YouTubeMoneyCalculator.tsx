@@ -34,13 +34,7 @@ export function YouTubeMoneyCalculator() {
     return (
         <div className="space-y-8 animate-in fade-in zoom-in duration-500">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-red-500/10 rounded-2xl"><Youtube className="w-7 h-7 text-red-500" /></div>
-                        YOUTUBE MONEY CALCULATOR
-                    </h2>
-                    <p className="text-muted-foreground font-medium mt-1">Estimate your channel Ad revenue from views and RPM.</p>
-                </div>
+                <div />
                 <button onClick={handleCopy} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base">
                     {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
                     {copied ? 'COPIED!' : 'COPY ESTIMATE'}

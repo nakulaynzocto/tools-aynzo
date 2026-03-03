@@ -52,97 +52,100 @@ export function FreelanceTaxCalculator() {
     };
 
     return (
-        <div className="space-y-10 animate-in fade-in zoom-in duration-500">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-primary/10 rounded-2xl"><Briefcase className="w-8 h-8 text-primary" /></div>
-                        FREELANCE TAX ESTIMATOR
-                    </h2>
-                    <p className="text-muted-foreground font-medium text-lg">Estimate quarterly taxes as a self-employed individual.</p>
-                </div>
-                <button onClick={handleCopy} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base">
-                    {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
-                    {copied ? 'COPIED!' : 'COPY ESTIMATE'}
-                </button>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                {/* Inputs */}
-                <div className="space-y-6 bg-muted/10 p-8 rounded-[2rem] border-2 border-border/50">
-                    <h3 className="text-sm font-black text-primary uppercase tracking-widest flex items-center gap-2">
-                        <Briefcase className="w-4 h-4" /> Income & Expenses
-                    </h3>
-
-                    {[
-                        { label: 'Annual Gross Income', value: annualIncome, setter: setAnnualIncome },
-                        { label: 'Business Expenses', value: expenses, setter: setExpenses },
-                    ].map(({ label, value, setter }) => (
-                        <div key={label} className="space-y-3">
-                            <label className="text-sm font-bold text-muted-foreground uppercase">{label}</label>
-                            <div className="relative group">
-                                <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
-                                <input type="number" value={value} onChange={e => setter(Number(e.target.value))} className="w-full pl-12 pr-4 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-bold text-lg" />
-                            </div>
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
+            {/* Inputs Section */}
+            <div className="space-y-6">
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Income & Expenses</h3>
+                
+                <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
+                    <div className="space-y-3">
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Annual Gross Income</label>
+                        <div className="relative group">
+                            <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                            <input type="number" value={annualIncome} onChange={e => setAnnualIncome(Number(e.target.value))} className="w-full pl-10 pr-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
                         </div>
-                    ))}
+                    </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase flex justify-between">State Income Tax Rate <span>{state}%</span></label>
-                        <input type="range" min="0" max="13" step="0.1" value={state} onChange={e => setState(Number(e.target.value))} className="w-full accent-primary" />
-                        <p className="text-xs text-muted-foreground">Common rates: CA 9.3%, NY 6.8%, TX 0%, FL 0%</p>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Business Expenses</label>
+                        <div className="relative group">
+                            <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                            <input type="number" value={expenses} onChange={e => setExpenses(Number(e.target.value))} className="w-full pl-10 pr-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
+                        </div>
                     </div>
 
-                    <div className="bg-amber-500/10 border-2 border-amber-500/20 rounded-2xl p-4">
-                        <p className="text-xs font-bold text-amber-600 dark:text-amber-400">⚠️ Estimates only. Based on 2024 US tax brackets. Consult a tax professional.</p>
+                    <div className="space-y-3">
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">State Tax Rate ({state}%)</label>
+                        <input type="range" min="0" max="13" step="0.1" value={state} onChange={e => setState(Number(e.target.value))} className="w-full accent-primary" />
+                        <div className="flex justify-between text-[10px] font-bold text-muted-foreground uppercase tracking-tighter">
+                            <span>NY: 6.8%</span>
+                            <span>CA: 9.3%</span>
+                            <span>TX/FL: 0%</span>
+                        </div>
+                    </div>
+
+                    <div className="bg-amber-500/5 border border-amber-500/20 rounded-xl p-4">
+                        <p className="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest text-center">Based on 2024 US tax brackets</p>
                     </div>
                 </div>
+            </div>
 
-                {/* Results */}
-                <div className="flex flex-col gap-6">
-                    <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/80 p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group border-4 border-white/10">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl group-hover:bg-white/20 transition-all duration-700" />
-                        <div className="relative z-10 space-y-4">
-                            <p className="text-primary-foreground/80 font-black uppercase tracking-[0.2em] text-sm flex items-center gap-2">
-                                <PieChart className="w-5 h-5" /> Quarterly Tax Payment
-                            </p>
-                            <h2 className="text-6xl md:text-7xl font-black tracking-tighter drop-shadow-lg">
-                                {fmt(result.quarterlyEst)}
-                            </h2>
-                            <div className="flex items-center gap-2 text-primary-foreground font-bold">
-                                <ArrowUpRight className="w-5 h-5" />
-                                <span>Effective rate: {result.effectiveRate.toFixed(1)}% of net profit</span>
-                            </div>
+            {/* Results Section */}
+            <div className="flex flex-col gap-6">
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Tax Estimate Result</h3>
+                
+                <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
+                    <div className="text-center space-y-4 w-full">
+                        <div className="text-7xl font-black text-primary animate-in fade-in zoom-in duration-500">
+                            {fmt(result.quarterlyEst)}
                         </div>
-                    </div>
+                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
+                            Estimated Quarterly Payment
+                        </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {[
-                            { label: 'Net Profit', value: fmt(result.netProfit), icon: DollarSign, colBg: 'bg-green-500/10', colText: 'text-green-500', desc: 'Income minus expenses' },
-                            { label: 'SE Tax (15.3%)', value: fmt(result.seTax), icon: Percent, colBg: 'bg-red-500/10', colText: 'text-red-500', desc: 'Social Security + Medicare' },
-                            { label: 'Federal Tax', value: fmt(result.fedTax), icon: Briefcase, colBg: 'bg-blue-500/10', colText: 'text-blue-500', desc: 'US income tax' },
-                            { label: 'State Tax', value: fmt(result.stateTax), icon: PieChart, colBg: 'bg-purple-500/10', colText: 'text-purple-500', desc: `At ${state}% rate` },
-                        ].map(({ label, value, icon: Icon, colBg, colText, desc }) => (
-                            <div key={label} className="bg-card border-2 border-border p-5 rounded-3xl hover:border-primary/50 transition-all shadow-lg group">
-                                <div className="flex items-center justify-between mb-3">
-                                    <div className={cn('p-2.5 rounded-2xl group-hover:scale-110 transition-transform', colBg)}>
-                                        <Icon className={cn('w-5 h-5', colText)} />
-                                    </div>
-                                    <span className="text-xs font-black text-muted-foreground uppercase tracking-widest">{label}</span>
+                        <div className="grid grid-cols-2 gap-3 w-full mt-6">
+                            {[
+                                { label: 'Net Profit', value: fmt(result.netProfit) },
+                                { label: 'Effective Rate', value: `${result.effectiveRate.toFixed(1)}%` },
+                            ].map(item => (
+                                <div key={item.label} className="bg-card p-4 rounded-2xl border border-border/50 text-center">
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{item.label}</span>
+                                    <span className="block text-lg font-black text-foreground">{item.value}</span>
                                 </div>
-                                <p className="text-xl font-black text-foreground">{value}</p>
-                                <p className="text-xs text-muted-foreground font-medium mt-1">{desc}</p>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
 
-                    <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
-                        <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                        <div className="space-y-1">
-                            <h4 className="font-bold text-foreground">Freelancer Tax Tip</h4>
-                            <p className="text-sm text-muted-foreground font-medium leading-relaxed">Set aside <strong>25–30%</strong> of every payment received. Track all business expenses — software, equipment, home office — to legally reduce your taxable income.</p>
+                        <div className="w-full space-y-3 bg-card/50 p-6 rounded-2xl border border-border/50 text-left mt-4 text-xs font-bold transition-all">
+                            <div className="flex justify-between items-center py-1.5 border-b border-border/30">
+                                <span className="text-muted-foreground uppercase tracking-wider">Self-Employment (15.3%)</span>
+                                <span className="text-foreground">{fmt(result.seTax)}</span>
+                            </div>
+                            <div className="flex justify-between items-center py-1.5 border-b border-border/30">
+                                <span className="text-muted-foreground uppercase tracking-wider">Federal Income Tax</span>
+                                <span className="text-foreground">{fmt(result.fedTax)}</span>
+                            </div>
+                            <div className="flex justify-between items-center py-1.5 border-b border-border/30">
+                                <span className="text-muted-foreground uppercase tracking-wider">State Income Tax</span>
+                                <span className="text-foreground">{fmt(result.stateTax)}</span>
+                            </div>
+                            <div className="flex justify-between items-center pt-2 text-primary font-black">
+                                <span className="uppercase tracking-widest">Total Annual Owed</span>
+                                <span>{fmt(result.totalTax)}</span>
+                            </div>
                         </div>
                     </div>
+
+                    <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
+                        {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
+                        {copied ? 'Copied to Clipboard' : 'Copy Full Estimate'}
+                    </button>
+                </div>
+
+                <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
+                    <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        Setting aside <strong>30%</strong> of your gross income for taxes is a safe rule of thumb for most US-based freelancers.
+                    </p>
                 </div>
             </div>
         </div>

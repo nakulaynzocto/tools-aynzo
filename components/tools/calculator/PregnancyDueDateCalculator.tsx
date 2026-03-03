@@ -67,65 +67,54 @@ export function PregnancyDueDateCalculator() {
     const activeInput = method === 'lmp' ? lmpDate : method === 'conception' ? conceptionDate : ivfDate;
 
     return (
-        <div className="space-y-10 animate-in fade-in zoom-in duration-500">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-pink-500/10 rounded-2xl"><Baby className="w-8 h-8 text-pink-500" /></div>
-                        PREGNANCY DUE DATE
-                    </h2>
-                    <p className="text-muted-foreground font-medium text-lg">Calculate your estimated due date and track milestones.</p>
-                </div>
-                <button onClick={handleCopy} disabled={!result} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base disabled:opacity-50">
-                    {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
-                    {copied ? 'COPIED!' : 'COPY RESULTS'}
-                </button>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                {/* Inputs */}
-                <div className="space-y-6 bg-muted/10 p-8 rounded-[2rem] border-2 border-border/50">
-                    <h3 className="text-sm font-black text-pink-500 uppercase tracking-widest flex items-center gap-2"><Heart className="w-4 h-4" /> Calculation Method</h3>
-
-                    <div className="flex flex-wrap gap-2">
-                        {([
-                            { id: 'lmp', label: 'Last Period' },
-                            { id: 'conception', label: 'Conception Date' },
-                            { id: 'ivf', label: 'IVF Transfer' },
-                        ] as const).map(m => (
-                            <button key={m.id} onClick={() => setMethod(m.id)} className={cn('px-4 py-2.5 rounded-xl font-bold text-sm border-2 transition-all', method === m.id ? 'bg-pink-500 text-white border-pink-500' : 'border-border hover:border-pink-400/60')}>
-                                {m.label}
-                            </button>
-                        ))}
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
+            {/* Inputs Section */}
+            <div className="space-y-6">
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Calculation Details</h3>
+                
+                <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
+                    <div className="space-y-3">
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Method</label>
+                        <div className="flex flex-wrap gap-2">
+                            {([
+                                { id: 'lmp', label: 'Last Period' },
+                                { id: 'conception', label: 'Conception' },
+                                { id: 'ivf', label: 'IVF Transfer' },
+                            ] as const).map(m => (
+                                <button key={m.id} onClick={() => setMethod(m.id)} className={cn('px-4 py-2 rounded-xl font-bold text-xs border-2 transition-all', method === m.id ? 'bg-pink-500 text-white border-pink-500' : 'border-border hover:border-pink-500/40')}>
+                                    {m.label}
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase">
-                            {method === 'lmp' ? 'First Day of Last Period' : method === 'conception' ? 'Conception / Ovulation Date' : 'IVF Transfer Date'}
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">
+                            {method === 'lmp' ? 'First Day of Last Period' : method === 'conception' ? 'Conception Date' : 'Transfer Date'}
                         </label>
-                        <input
-                            type="date"
-                            value={method === 'lmp' ? lmpDate : method === 'conception' ? conceptionDate : ivfDate}
-                            onChange={e => method === 'lmp' ? setLmpDate(e.target.value) : method === 'conception' ? setConceptionDate(e.target.value) : setIvfDate(e.target.value)}
-                            max={new Date().toISOString().split('T')[0]}
-                            className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-pink-400"
-                        />
+                        <div className="relative group">
+                            <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground group-focus-within:text-pink-500 transition-colors" />
+                            <input
+                                type="date"
+                                value={method === 'lmp' ? lmpDate : method === 'conception' ? conceptionDate : ivfDate}
+                                onChange={e => method === 'lmp' ? setLmpDate(e.target.value) : method === 'conception' ? setConceptionDate(e.target.value) : setIvfDate(e.target.value)}
+                                max={new Date().toISOString().split('T')[0]}
+                                className="w-full pl-11 pr-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-pink-500 transition-all font-bold text-base"
+                            />
+                        </div>
                     </div>
 
-                    {/* Trimester Timeline */}
                     {result && (
-                        <div className="space-y-3 pt-2">
-                            <p className="text-xs font-black text-muted-foreground uppercase tracking-widest">Trimester Progress</p>
-                            <div className="space-y-2">
+                        <div className="space-y-3 pt-4 border-t border-border/50">
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Trimester Progress</label>
+                            <div className="grid grid-cols-1 gap-2">
                                 {TRIMESTERS.map(t => {
                                     const current = result.weeksPregnant >= t.weeks[0] && result.weeksPregnant <= t.weeks[1];
                                     const past = result.weeksPregnant > t.weeks[1];
                                     return (
-                                        <div key={t.label} className={cn('p-3 rounded-xl border-2 transition-all', current ? 'border-pink-500 bg-pink-500/10' : past ? 'border-green-500/30 bg-green-500/5' : 'border-border bg-muted/10')}>
-                                            <div className="flex justify-between items-center">
-                                                <span className="font-bold text-sm">{t.label}</span>
-                                                <span className="text-xs text-muted-foreground">{t.desc}</span>
-                                            </div>
+                                        <div key={t.label} className={cn('px-4 py-2.5 rounded-xl border-2 transition-all flex justify-between items-center', current ? 'border-pink-500 bg-pink-500/10' : past ? 'border-emerald-500/20 bg-emerald-500/5' : 'border-border bg-muted/5 opacity-50')}>
+                                            <span className="font-bold text-xs">{t.label}</span>
+                                            <span className="text-[10px] font-black text-muted-foreground uppercase">{t.desc}</span>
                                         </div>
                                     );
                                 })}
@@ -133,71 +122,65 @@ export function PregnancyDueDateCalculator() {
                         </div>
                     )}
                 </div>
+            </div>
 
-                {/* Results */}
-                <div className="flex flex-col gap-6">
-                    {result ? (
-                        <>
-                            <div className="bg-gradient-to-br from-pink-500 via-rose-500 to-pink-600 p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group border-4 border-white/10">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl group-hover:bg-white/20 transition-all duration-700" />
-                                <div className="relative z-10 space-y-3">
-                                    <p className="text-white/80 font-black uppercase tracking-[0.2em] text-sm flex items-center gap-2">
-                                        <Baby className="w-5 h-5" /> Estimated Due Date
-                                    </p>
-                                    <h2 className="text-3xl md:text-4xl font-black drop-shadow-lg leading-tight">
-                                        {fmt(result.dueDate)}
-                                    </h2>
-                                    <div className="flex items-center gap-2 text-white font-bold">
-                                        <ArrowUpRight className="w-5 h-5" />
-                                        <span>{result.daysLeft} days remaining · {result.trimester} trimester</span>
-                                    </div>
-                                </div>
+            {/* Results Section */}
+            <div className="flex flex-col gap-6">
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Due Date Result</h3>
+                
+                {result ? (
+                    <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
+                        <div className="text-center space-y-4 w-full">
+                            <div className="text-4xl md:text-5xl font-black text-pink-500 drop-shadow-sm leading-tight animate-in fade-in zoom-in duration-500">
+                                {fmt(result.dueDate)}
+                            </div>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
+                                Estimated Due Date
                             </div>
 
-                            <div className="grid grid-cols-2 gap-4">
-                                {[
-                                    { label: 'Weeks Pregnant', value: `${result.weeksPregnant}w ${result.daysRemainder}d`, icon: Calendar, colBg: 'bg-pink-500/10', colText: 'text-pink-500', desc: 'Current gestational age' },
-                                    { label: 'Days Left', value: result.daysLeft.toString(), icon: Heart, colBg: 'bg-rose-500/10', colText: 'text-rose-500', desc: 'Until estimated due date' },
-                                ].map(({ label, value, icon: Icon, colBg, colText, desc }) => (
-                                    <div key={label} className="bg-card border-2 border-border p-6 rounded-3xl hover:border-pink-500/50 transition-all shadow-lg group">
-                                        <div className="flex items-center justify-between mb-4">
-                                            <div className={cn('p-3 rounded-2xl group-hover:scale-110 transition-transform', colBg)}>
-                                                <Icon className={cn('w-6 h-6', colText)} />
-                                            </div>
-                                            <span className="text-xs font-black text-muted-foreground uppercase tracking-widest">{label}</span>
-                                        </div>
-                                        <p className="text-2xl font-black text-foreground">{value}</p>
-                                        <p className="text-sm text-muted-foreground font-medium mt-1">{desc}</p>
-                                    </div>
-                                ))}
+                            <div className="grid grid-cols-2 gap-3 w-full mt-6">
+                                <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Current Progress</span>
+                                    <span className="block text-lg font-black text-pink-500">{result.weeksPregnant}w {result.daysRemainder}d</span>
+                                </div>
+                                <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Days Remaining</span>
+                                    <span className="block text-lg font-black text-pink-500">{result.daysLeft}</span>
+                                </div>
                             </div>
 
                             {result.upcoming.length > 0 && (
-                                <div className="bg-card border-2 border-border rounded-3xl p-6 space-y-3">
-                                    <p className="text-xs font-black text-muted-foreground uppercase tracking-widest">Upcoming Milestones</p>
-                                    {result.upcoming.map(m => (
-                                        <div key={m.week} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
-                                            <span className="text-sm font-bold">{m.event}</span>
-                                            <span className="text-xs font-black text-primary">Week {m.week}</span>
-                                        </div>
-                                    ))}
+                                <div className="bg-card/50 p-6 rounded-2xl border border-border/50 text-left mt-4">
+                                    <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest block mb-3">Upcoming Milestones</span>
+                                    <div className="space-y-2">
+                                        {result.upcoming.map(m => (
+                                            <div key={m.week} className="flex justify-between items-center text-xs font-bold py-1.5 border-b border-border/30 last:border-0 last:pb-0">
+                                                <span className="text-foreground">{m.event}</span>
+                                                <span className="text-pink-500 px-2 py-0.5 bg-pink-500/10 rounded-md">Week {m.week}</span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             )}
-                        </>
-                    ) : (
-                        <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 min-h-[400px] flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
-                            <Baby size={64} />
-                            <span className="text-sm font-black uppercase tracking-widest text-center">Enter a date to see your results</span>
                         </div>
-                    )}
 
-                    <div className="bg-pink-500/5 border-2 border-pink-500/20 p-6 rounded-3xl flex items-start gap-4">
-                        <Info className="w-6 h-6 text-pink-500 shrink-0 mt-1" />
-                        <div className="space-y-1">
-                            <h4 className="font-bold text-foreground">Important Note</h4>
-                            <p className="text-sm text-muted-foreground font-medium leading-relaxed">Due dates are estimates — only <strong>~5%</strong> of babies are born on their exact due date. Always confirm with your OB/GYN via ultrasound dating.</p>
-                        </div>
+                        <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-pink-500 transition-all mt-4">
+                            {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
+                            {copied ? 'Copied' : 'Copy Pregnancy Plan'}
+                        </button>
                     </div>
+                ) : (
+                    <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4 min-h-[400px]">
+                        <Baby size={48} className="opacity-20" />
+                        <span className="text-xs font-black uppercase tracking-widest text-center">Select a date to calculate</span>
+                    </div>
+                )}
+
+                <div className="bg-pink-500/5 border-2 border-pink-500/20 p-6 rounded-3xl flex items-start gap-4">
+                    <Info className="w-6 h-6 text-pink-500 shrink-0 mt-1" />
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        Only 5% of babies are born on their exact due date. This tool provides an estimate for preparation. Always consult your midwife or doctor.
+                    </p>
                 </div>
             </div>
         </div>

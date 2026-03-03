@@ -1620,7 +1620,8 @@
         "reset": "Reset",
         "shareThisTool": "Share this tool",
         "copyLink": "Copy Link",
-        "pleaseWait": "Please wait..."
+        "pleaseWait": "Please wait...",
+        "faqTitle": "Common Questions (FAQ)"
     },
     "NavbarCategories": {
         "Image Tools": "Image Tools",

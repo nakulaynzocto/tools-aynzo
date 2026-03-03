@@ -84,7 +84,7 @@ export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setRe
                     style={{ height: (resolution.h * scale) + 40 }}
                 >
                     <div style={{ transform: `scale(${scale})`, transformOrigin: 'top center' }} className="absolute">
-                        <div className="transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.4)] border-[12px] border-border rounded-[3.5rem] bg-card p-2">
+                        <div className="transition-all duration-700 ease-in-out shadow-[0_60px_120px_-20px_rgba(0,0,0,0.4)] border-[12px] border-border rounded-[3.5rem] bg-card p-2">
                             <div className="bg-background rounded-[2.5rem] overflow-hidden shadow-inner">
                                 {iframeUrl ? (
                                     <div style={{ width: resolution.w, height: resolution.h }} className="bg-background overflow-hidden">

@@ -38,13 +38,7 @@ ${links.filter(l => l.url).map(l => `<a class="link" href="${l.url}" target="_bl
     return (
         <div className="space-y-8 animate-in fade-in zoom-in duration-500">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-violet-500/10 rounded-2xl"><Link2 className="w-7 h-7 text-violet-500" /></div>
-                        BIO LINK GENERATOR
-                    </h2>
-                    <p className="text-muted-foreground font-medium mt-1">Create a free Linktree-style bio page in seconds.</p>
-                </div>
+                <div />
                 <div className="flex gap-2">
                     <button onClick={() => setPreview(!preview)} className="flex items-center gap-2 px-5 py-3 bg-violet-500/10 hover:bg-violet-500/20 text-violet-600 rounded-2xl transition-all border-2 border-violet-500/20 font-bold text-sm">
                         <ExternalLink className="w-4 h-4" /> {preview ? 'Editor' : 'Preview'}

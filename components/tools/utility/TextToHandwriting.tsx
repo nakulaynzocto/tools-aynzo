@@ -109,13 +109,7 @@ export function TextToHandwriting() {
         <div className="space-y-10 animate-in fade-in zoom-in duration-500">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-primary/10 rounded-2xl"><Pen className="w-8 h-8 text-primary" /></div>
-                        TEXT TO HANDWRITING
-                    </h2>
-                    <p className="text-muted-foreground font-medium text-lg">Convert typed text into realistic handwriting images. Download as PNG.</p>
-                </div>
+                <div />
                 <div className="flex gap-3">
                     <button onClick={handleCopy} className="flex items-center gap-2.5 px-5 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl border-2 border-border font-bold text-sm transition-all">
                         {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4 text-primary" />}

@@ -77,13 +77,7 @@ export function GrammarChecker() {
         <div className="space-y-10 animate-in fade-in zoom-in duration-500">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-primary/10 rounded-2xl"><SpellCheck className="w-8 h-8 text-primary" /></div>
-                        GRAMMAR CHECKER
-                    </h2>
-                    <p className="text-muted-foreground font-medium text-lg">Check and fix grammar, spelling, and punctuation errors in your text.</p>
-                </div>
+                <div />
                 <div className="flex items-center gap-3">
                     {checked && issues.length > 0 && (
                         <button onClick={fixAll} className="flex items-center gap-2.5 px-5 py-3.5 bg-green-500 hover:bg-green-600 text-white rounded-2xl font-bold text-sm transition-all shadow-lg">

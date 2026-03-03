@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import { TrendingUp, DollarSign, PieChart, Briefcase, Info, ArrowUpRight, Copy, Check } from 'lucide-react';
-import { cn } from '@/utils/cn';
+import { Copy, CheckCircle2, Info } from 'lucide-react';
+
 
 interface RetirementResult {
     totalSavings: number;
@@ -76,233 +76,200 @@ export function Retirement401kCalculator() {
         setTimeout(() => setCopied(false), 2000);
     };
 
+    const getSliderStyle = (value: number, min: number, max: number) => {
+        const percentage = ((value - min) / (max - min)) * 100;
+        return {
+            background: `linear-gradient(to right, #074463 ${percentage}%, #e5e7eb ${percentage}%)`
+        };
+    };
+
     return (
-        <div className="space-y-10 animate-in fade-in zoom-in duration-500">
-            {/* Header */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-primary/10 rounded-2xl">
-                            <TrendingUp className="w-8 h-8 text-primary" />
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
+            {/* Inputs Section */}
+            <div className="space-y-6">
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Retirement Plan</h3>
+                
+                <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center text-sm font-bold text-foreground">
+                            <span className="uppercase tracking-wider">Current Age</span>
+                            <span className="text-primary text-base">{currentAge} Years</span>
                         </div>
-                        401k RETIREMENT PLANNER
-                    </h2>
-                    <p className="text-muted-foreground font-medium text-lg">
-                        Visualize your future wealth with employer matching.
+                        <input 
+                            type="range" min="18" max="75" value={currentAge} 
+                            onChange={e => setCurrentAge(Number(e.target.value))} 
+                            style={getSliderStyle(currentAge, 18, 75)}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                        />
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center text-sm font-bold text-foreground">
+                            <span className="uppercase tracking-wider">Retirement Age</span>
+                            <span className="text-primary text-base">{retirementAge} Years</span>
+                        </div>
+                        <input 
+                            type="range" min={currentAge + 1} max="90" value={retirementAge} 
+                            onChange={e => setRetirementAge(Number(e.target.value))} 
+                            style={getSliderStyle(retirementAge, currentAge + 1, 90)}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                        />
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center text-sm font-bold text-foreground">
+                            <span className="uppercase tracking-wider">Annual Salary</span>
+                            <span className="text-primary text-base">${annualSalary.toLocaleString()}</span>
+                        </div>
+                        <input 
+                            type="range" min="10000" max="500000" step="1000" value={annualSalary} 
+                            onChange={e => setAnnualSalary(Number(e.target.value))} 
+                            style={getSliderStyle(annualSalary, 10000, 500000)}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                        />
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center text-sm font-bold text-foreground">
+                            <span className="uppercase tracking-wider">Current 401k Balance</span>
+                            <span className="text-primary text-base">${currentBalance.toLocaleString()}</span>
+                        </div>
+                        <input 
+                            type="range" min="0" max="1000000" step="5000" value={currentBalance} 
+                            onChange={e => setCurrentBalance(Number(e.target.value))} 
+                            style={getSliderStyle(currentBalance, 0, 1000000)}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                        />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border/30">
+                        <div className="space-y-4">
+                            <div className="flex justify-between items-center text-[10px] font-black uppercase text-muted-foreground tracking-widest">
+                                <span>Contribution</span>
+                                <span className="text-primary text-xs">{contributionRate}%</span>
+                            </div>
+                            <input 
+                                type="range" min="0" max="30" value={contributionRate} 
+                                onChange={e => setContributionRate(Number(e.target.value))} 
+                                style={getSliderStyle(contributionRate, 0, 30)}
+                                className="w-full h-1.5 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_3px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                            />
+                        </div>
+                        <div className="space-y-4">
+                            <div className="flex justify-between items-center text-[10px] font-black uppercase text-muted-foreground tracking-widest">
+                                <span>Expected Return</span>
+                                <span className="text-primary text-xs">{expectedReturn}%</span>
+                            </div>
+                            <input 
+                                type="range" min="1" max="15" step="0.5" value={expectedReturn} 
+                                onChange={e => setExpectedReturn(Number(e.target.value))} 
+                                style={getSliderStyle(expectedReturn, 1, 15)}
+                                className="w-full h-1.5 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_3px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                            />
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-6">
+                        <div className="space-y-4">
+                            <div className="flex justify-between items-center text-[10px] font-black uppercase text-muted-foreground tracking-widest">
+                                <span>Employer Match</span>
+                                <span className="text-primary text-xs">{employerMatch}%</span>
+                            </div>
+                            <input 
+                                type="range" min="0" max="15" value={employerMatch} 
+                                onChange={e => setEmployerMatch(Number(e.target.value))} 
+                                style={getSliderStyle(employerMatch, 0, 15)}
+                                className="w-full h-1.5 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_3px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                            />
+                        </div>
+                        <div className="space-y-4">
+                            <div className="flex justify-between items-center text-[10px] font-black uppercase text-muted-foreground tracking-widest">
+                                <span>Salary Increase</span>
+                                <span className="text-primary text-xs">{salaryIncrease}%</span>
+                            </div>
+                            <input 
+                                type="range" min="0" max="10" step="0.1" value={salaryIncrease} 
+                                onChange={e => setSalaryIncrease(Number(e.target.value))} 
+                                style={getSliderStyle(salaryIncrease, 0, 10)}
+                                className="w-full h-1.5 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_3px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                            />
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/30">
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Growth Ratio</label>
+                            <div className="text-sm font-bold text-foreground">
+                                {(result.totalSavings / (result.employeeContributions + result.employerMatch + (currentBalance || 1)) || 1).toFixed(2)}x Return
+                            </div>
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Time Horizon</label>
+                            <div className="text-sm font-bold text-foreground">
+                                {retirementAge - currentAge} Years
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4 transition-all hover:bg-primary/10">
+                    <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        Maxing out your 401k contribution and catching the full <strong>Employer Match</strong> is one of the most effective ways to build retirement wealth.
                     </p>
                 </div>
-                <button
-                    onClick={handleCopy}
-                    className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base"
-                >
-                    {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
-                    {copied ? 'COPIED!' : 'COPY PROJECTION'}
-                </button>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                {/* Inputs Section */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-muted/10 p-8 rounded-[2rem] border-2 border-border/50">
-                    <div className="space-y-4 col-span-full">
-                        <h3 className="text-sm font-black text-primary uppercase tracking-widest flex items-center gap-2">
-                            <Briefcase className="w-4 h-4" />
-                            Personal & Salary Details
-                        </h3>
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase flex justify-between">
-                            Current Age <span>{currentAge} yrs</span>
-                        </label>
-                        <input
-                            type="range"
-                            min="18"
-                            max="75"
-                            value={currentAge}
-                            onChange={(e) => setCurrentAge(Number(e.target.value))}
-                            className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
-                        />
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase flex justify-between">
-                            Retirement Age <span>{retirementAge} yrs</span>
-                        </label>
-                        <input
-                            type="range"
-                            min={currentAge + 1}
-                            max="90"
-                            value={retirementAge}
-                            onChange={(e) => setRetirementAge(Number(e.target.value))}
-                            className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
-                        />
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase">Current Annual Salary</label>
-                        <div className="relative group">
-                            <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
-                            <input
-                                type="number"
-                                value={annualSalary}
-                                onChange={(e) => setAnnualSalary(Number(e.target.value))}
-                                className="w-full pl-12 pr-4 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-bold text-lg"
-                            />
+            {/* Results Section */}
+            <div className="flex flex-col gap-6">
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Retirement Projection</h3>
+                
+                <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
+                    <div className="text-center space-y-4 w-full">
+                        <div className="text-6xl md:text-7xl font-black text-primary animate-in fade-in zoom-in duration-500">
+                            {formatCurrency(result.totalSavings)}
                         </div>
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase">Initial 401k Balance</label>
-                        <div className="relative group">
-                            <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
-                            <input
-                                type="number"
-                                value={currentBalance}
-                                onChange={(e) => setCurrentBalance(Number(e.target.value))}
-                                className="w-full pl-12 pr-4 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-bold text-lg"
-                            />
+                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
+                            Est. Balance at Age {retirementAge}
                         </div>
-                    </div>
 
-                    <div className="space-y-4 col-span-full pt-4 border-t border-border/50">
-                        <h3 className="text-sm font-black text-primary uppercase tracking-widest flex items-center gap-2">
-                            <TrendingUp className="w-4 h-4" />
-                            Contributions & Returns
-                        </h3>
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase flex justify-between">
-                            Contribution Rate <span>{contributionRate}%</span>
-                        </label>
-                        <input
-                            type="range"
-                            min="0"
-                            max="30"
-                            value={contributionRate}
-                            onChange={(e) => setContributionRate(Number(e.target.value))}
-                            className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
-                        />
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase flex justify-between">
-                            Expected Rate of Return <span>{expectedReturn}%</span>
-                        </label>
-                        <input
-                            type="range"
-                            min="1"
-                            max="12"
-                            step="0.1"
-                            value={expectedReturn}
-                            onChange={(e) => setExpectedReturn(Number(e.target.value))}
-                            className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
-                        />
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase flex justify-between">
-                            Employer Match up to <span>{employerMatch}%</span>
-                        </label>
-                        <input
-                            type="range"
-                            min="0"
-                            max="10"
-                            value={employerMatch}
-                            onChange={(e) => setEmployerMatch(Number(e.target.value))}
-                            className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
-                        />
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase flex justify-between">
-                            Annual Salary Increase <span>{salaryIncrease}%</span>
-                        </label>
-                        <input
-                            type="range"
-                            min="0"
-                            max="5"
-                            step="0.1"
-                            value={salaryIncrease}
-                            onChange={(e) => setSalaryIncrease(Number(e.target.value))}
-                            className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
-                        />
-                    </div>
-                </div>
-
-                {/* Results Section */}
-                <div className="flex flex-col gap-6">
-                    <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/80 p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group border-4 border-white/10">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl group-hover:bg-white/20 transition-all duration-700" />
-                        <div className="relative z-10 space-y-4">
-                            <p className="text-primary-foreground/80 font-black uppercase tracking-[0.2em] text-sm flex items-center gap-2">
-                                <TrendingUp className="w-5 h-5" />
-                                Est. Balance at Age {retirementAge}
-                            </p>
-                            <h2 className="text-6xl md:text-7xl font-black tracking-tighter drop-shadow-lg">
-                                {formatCurrency(result.totalSavings)}
-                            </h2>
-                            <div className="flex items-center gap-2 text-primary-foreground font-bold">
-                                <ArrowUpRight className="w-5 h-5" />
-                                <span>Based on {retirementAge - currentAge} years of growth</span>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full mt-6">
+                            <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">My Savings</span>
+                                <span className="block text-base font-black text-foreground">{formatCurrency(result.employeeContributions)}</span>
+                            </div>
+                            <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Employer Match</span>
+                                <span className="block text-base font-black text-foreground">{formatCurrency(result.employerMatch)}</span>
+                            </div>
+                            <div className="bg-card p-4 rounded-2xl border border-border/50 text-center text-emerald-500 col-span-2 md:col-span-1">
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Total Interest</span>
+                                <span className="block text-base font-black">+{formatCurrency(result.totalInterest)}</span>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div className="bg-card border-2 border-border p-6 rounded-3xl hover:border-primary/50 transition-all shadow-lg group">
-                            <div className="flex items-center justify-between mb-4">
-                                <div className="p-3 bg-blue-500/10 rounded-2xl group-hover:scale-110 transition-transform">
-                                    <DollarSign className="w-6 h-6 text-blue-500" />
-                                </div>
-                                <span className="text-xs font-black text-muted-foreground uppercase tracking-widest">My Savings</span>
+                        <div className="w-full space-y-2 mt-4 text-left">
+                            <div className="flex justify-between text-[10px] font-black uppercase text-muted-foreground mb-1">
+                                <span>Interest vs Contributions</span>
+                                <span>{((result.totalInterest / result.totalSavings) * 100).toFixed(0)}% Compound Growth</span>
                             </div>
-                            <p className="text-2xl font-black text-foreground">{formatCurrency(result.employeeContributions)}</p>
-                            <p className="text-sm text-muted-foreground font-medium mt-1">Total personal contributions</p>
-                        </div>
-
-                        <div className="bg-card border-2 border-border p-6 rounded-3xl hover:border-primary/50 transition-all shadow-lg group">
-                            <div className="flex items-center justify-between mb-4">
-                                <div className="p-3 bg-purple-500/10 rounded-2xl group-hover:scale-110 transition-transform">
-                                    <PieChart className="w-6 h-6 text-purple-500" />
-                                </div>
-                                <span className="text-xs font-black text-muted-foreground uppercase tracking-widest">Employer Match</span>
-                            </div>
-                            <p className="text-2xl font-black text-foreground">{formatCurrency(result.employerMatch)}</p>
-                            <p className="text-sm text-muted-foreground font-medium mt-1">Free money from matching</p>
-                        </div>
-
-                        <div className="bg-card border-2 border-border p-6 rounded-3xl col-span-full hover:border-primary/50 transition-all shadow-lg group">
-                            <div className="flex items-center justify-between mb-2">
-                                <div className="p-3 bg-green-500/10 rounded-2xl group-hover:scale-110 transition-transform">
-                                    <TrendingUp className="w-6 h-6 text-green-500" />
-                                </div>
-                                <div className="text-right">
-                                    <span className="text-xs font-black text-muted-foreground uppercase tracking-widest block">Total Interest Earned</span>
-                                    <p className="text-3xl font-black text-foreground">{formatCurrency(result.totalInterest)}</p>
-                                </div>
-                            </div>
-                            <div className="w-full bg-muted/30 h-3 rounded-full overflow-hidden mt-4 border border-border">
+                            <div className="w-full bg-card h-3 rounded-full overflow-hidden flex border border-border/50">
                                 <div 
-                                    className="h-full bg-gradient-to-r from-green-500 to-emerald-400 transition-all duration-1000"
-                                    style={{ width: `${(result.totalInterest / result.totalSavings) * 100}%` }}
+                                    className="h-full bg-muted-foreground/30 transition-all duration-1000" 
+                                    style={{ width: `${((result.employeeContributions + result.employerMatch + currentBalance) / result.totalSavings) * 100}%` }} 
+                                />
+                                <div 
+                                    className="h-full bg-emerald-500 transition-all duration-1000" 
+                                    style={{ width: `${(result.totalInterest / result.totalSavings) * 100}%` }} 
                                 />
                             </div>
-                            <p className="text-xs text-muted-foreground font-bold mt-3 text-center uppercase tracking-widest">
-                                Interest makes up {((result.totalInterest / result.totalSavings) * 100).toFixed(1)}% of your total wealth
-                            </p>
                         </div>
                     </div>
 
-                    <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
-                        <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                        <div className="space-y-1">
-                            <h4 className="font-bold text-foreground">Retirement Tip</h4>
-                            <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                                Always contribute at least enough to get the full **Employer Match**. It's effectively a 100% immediate return on your investment.
-                            </p>
-                        </div>
-                    </div>
+                    <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
+                        {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
+                        {copied ? 'Projection Copied' : 'Copy All Results'}
+                    </button>
                 </div>
             </div>
         </div>

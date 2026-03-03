@@ -48,13 +48,7 @@ export function ChatGPTPromptGenerator() {
         <div className="space-y-10 animate-in fade-in zoom-in duration-500">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-primary/10 rounded-2xl"><Bot className="w-8 h-8 text-primary" /></div>
-                        CHATGPT PROMPT GENERATOR
-                    </h2>
-                    <p className="text-muted-foreground font-medium text-lg">Create powerful AI prompts for writing, coding, marketing and more.</p>
-                </div>
+                <div />
                 <button onClick={handleCopy} disabled={!customized} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base disabled:opacity-50">
                     {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
                     {copied ? 'COPIED!' : 'COPY PROMPT'}

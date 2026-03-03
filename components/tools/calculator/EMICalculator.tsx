@@ -45,57 +45,79 @@ export function EMICalculator() {
     };
 
     return (
-        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
+            {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Calculator Inputs</h3>
-                <div className="space-y-4">
-                    <div className="space-y-1">
-                        <label className="text-xs font-bold uppercase opacity-50">Principal Amount</label>
-                        <input type="number" value={inputs.principal} onChange={e => setInputs({ ...inputs, principal: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium focus:border-primary outline-none" placeholder="100000" />
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="space-y-1">
-                            <label className="text-xs font-bold uppercase opacity-50">Interest Rate (%)</label>
-                            <input type="number" value={inputs.rate} onChange={e => setInputs({ ...inputs, rate: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium focus:border-primary outline-none" placeholder="8.5" />
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Loan Details</h3>
+                
+                <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
+                    <div className="space-y-3">
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Principal Amount</label>
+                        <div className="relative group">
+                            <span className="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-muted-foreground">$</span>
+                            <input type="number" value={inputs.principal} onChange={e => setInputs({ ...inputs, principal: e.target.value })} className="w-full pl-8 pr-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" placeholder="100000" />
                         </div>
-                        <div className="space-y-1">
-                            <label className="text-xs font-bold uppercase opacity-50">Tenure</label>
-                            <input type="number" value={inputs.tenure} onChange={e => setInputs({ ...inputs, tenure: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium rounded-b-none border-b-0 focus:border-primary outline-none" placeholder="12" />
-                            <div className="bg-muted p-1 rounded-b-xl flex gap-1">
-                                {['months', 'years'].map(t => (
-                                    <button key={t} onClick={() => setInputs({ ...inputs, type: t as any })} className={cn("flex-1 py-1 text-[9px] font-black uppercase rounded-lg transition-all", inputs.type === t ? "bg-card shadow-sm text-primary" : "text-muted-foreground")}>{t}</button>
-                                ))}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-3">
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Interest Rate</label>
+                            <div className="relative group">
+                                <span className="absolute right-4 top-1/2 -translate-y-1/2 font-bold text-muted-foreground">%</span>
+                                <input type="number" value={inputs.rate} onChange={e => setInputs({ ...inputs, rate: e.target.value })} className="w-full pl-4 pr-10 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" placeholder="8.5" />
                             </div>
+                        </div>
+                        <div className="space-y-3">
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Loan Tenure</label>
+                            <input type="number" value={inputs.tenure} onChange={e => setInputs({ ...inputs, tenure: e.target.value })} className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" placeholder="12" />
+                        </div>
+                    </div>
+
+                    <div className="space-y-3">
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Tenure Type</label>
+                        <div className="flex p-1 bg-muted/20 rounded-xl gap-1">
+                            {['months', 'years'].map(t => (
+                                <button key={t} onClick={() => setInputs({ ...inputs, type: t as any })} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg transition-all", inputs.type === t ? "bg-background shadow-sm text-primary" : "text-muted-foreground hover:text-foreground")}>{t}</button>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
+
+            {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Data</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">EMI Result</h3>
+                
                 {result ? (
-                    <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[300px] flex flex-col items-center justify-center gap-6">
-                        <div className="w-full space-y-4">
-                            <div className="flex justify-between items-center p-4 bg-card rounded-2xl border-2 border-border animate-in fade-in slide-in-from-bottom-2 duration-300">
-                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Monthly EMI</span>
-                                <span className="text-xl font-black text-primary">${result.monthly}</span>
+                    <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
+                        <div className="text-center space-y-4 w-full">
+                            <div className="text-7xl font-black text-primary animate-in fade-in zoom-in duration-500">
+                                ${result.monthly}
                             </div>
-                            <div className="flex justify-between items-center p-4 bg-card rounded-2xl border-2 border-border animate-in fade-in slide-in-from-bottom-2 duration-500">
-                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Total Interest</span>
-                                <span className="text-xl font-black text-emerald-500">${result.interest}</span>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
+                                Monthly EMI Amount
                             </div>
-                            <div className="flex justify-between items-center p-4 bg-card rounded-2xl border-2 border-border animate-in fade-in slide-in-from-bottom-2 duration-700">
-                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Total Amount</span>
-                                <span className="text-xl font-black text-foreground">${result.total}</span>
+
+                            <div className="grid grid-cols-2 gap-3 w-full mt-6">
+                                <div className="bg-card p-4 rounded-2xl border border-border/50 text-center text-emerald-500">
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Total Interest</span>
+                                    <span className="block text-lg font-black">${result.interest}</span>
+                                </div>
+                                <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Total Payment</span>
+                                    <span className="block text-lg font-black text-foreground">${result.total}</span>
+                                </div>
                             </div>
                         </div>
+
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied to Clipboard' : 'Copy All Results'}
+                            {copied ? 'Copied to Clipboard' : 'Copy Loan Details'}
                         </button>
                     </div>
                 ) : (
-                    <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 min-h-[300px] flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Enter principal, rate and tenure to calculate EMI</span>
+                    <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4 min-h-[400px]">
+                        <span className="text-xs font-black uppercase tracking-widest text-center">Enter loan details to see EMI</span>
                     </div>
                 )}
             </div>

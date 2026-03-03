@@ -33,109 +33,138 @@ export function SavingsGoalCalculator() {
         setCopied(true); setTimeout(() => setCopied(false), 2000);
     };
 
+    const getSliderStyle = (value: number, min: number, max: number) => {
+        const percentage = ((value - min) / (max - min)) * 100;
+        return {
+            background: `linear-gradient(to right, #074463 ${percentage}%, #e5e7eb ${percentage}%)`
+        };
+    };
+
     return (
-        <div className="space-y-10 animate-in fade-in zoom-in duration-500">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-black tracking-tight text-foreground flex items-center gap-3">
-                        <div className="p-2.5 bg-primary/10 rounded-2xl"><Target className="w-8 h-8 text-primary" /></div>
-                        SAVINGS GOAL TRACKER
-                    </h2>
-                    <p className="text-muted-foreground font-medium text-lg">Find out when you'll reach your financial goal.</p>
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
+            {/* Inputs Section */}
+            <div className="space-y-6">
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Savings Strategy</h3>
+                
+                <div className="space-y-8 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center text-sm font-bold text-foreground">
+                            <span className="uppercase tracking-wider">Savings Goal</span>
+                            <span className="text-primary text-base">{fmt(goal)}</span>
+                        </div>
+                        <input 
+                            type="range" min="1000" max="1000000" step="1000" value={goal} 
+                            onChange={e => setGoal(Number(e.target.value))} 
+                            style={getSliderStyle(goal, 1000, 1000000)}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                        />
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center text-sm font-bold text-foreground">
+                            <span className="uppercase tracking-wider">Current Savings</span>
+                            <span className="text-primary text-base">{fmt(currentSavings)}</span>
+                        </div>
+                        <input 
+                            type="range" min="0" max={goal} step="500" value={currentSavings} 
+                            onChange={e => setCurrentSavings(Number(e.target.value))} 
+                            style={getSliderStyle(currentSavings, 0, goal)}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                        />
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center text-sm font-bold text-foreground">
+                            <span className="uppercase tracking-wider">Monthly Contribution</span>
+                            <span className="text-primary text-base">{fmt(monthlyContrib)}/mo</span>
+                        </div>
+                        <input 
+                            type="range" min="10" max="20000" step="50" value={monthlyContrib} 
+                            onChange={e => setMonthlyContrib(Number(e.target.value))} 
+                            style={getSliderStyle(monthlyContrib, 10, 20000)}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                        />
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center text-sm font-bold text-foreground">
+                            <span className="uppercase tracking-wider">Annual Interest Rate</span>
+                            <span className="text-primary text-base">{annualRate}%</span>
+                        </div>
+                        <input 
+                            type="range" min="0" max="20" step="0.1" value={annualRate} 
+                            onChange={e => setAnnualRate(Number(e.target.value))} 
+                            style={getSliderStyle(annualRate, 0, 20)}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#074463] [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(255,255,255,1)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#074463] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#074463] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#074463] transition-all" 
+                        />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/30">
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Growth Ratio</label>
+                            <div className="text-sm font-bold text-foreground">
+                                {((result.totalContrib + result.totalInterest + currentSavings) / (result.totalContrib + currentSavings) || 1).toFixed(2)}x Wealth
+                            </div>
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Progress</label>
+                            <div className="text-sm font-bold text-foreground">
+                                {pct.toFixed(0)}% Achieved
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button onClick={handleCopy} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base">
-                    {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
-                    {copied ? 'COPIED!' : 'COPY RESULTS'}
-                </button>
+
+                <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4 transition-all hover:bg-primary/10">
+                    <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        Consistency is the key to reaching your <strong>Financial Goals</strong>. Automating your savings is the most proven way to stay on track.
+                    </p>
+                </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                {/* Inputs */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-muted/10 p-8 rounded-[2rem] border-2 border-border/50">
-                    <div className="space-y-4 col-span-full">
-                        <h3 className="text-sm font-black text-primary uppercase tracking-widest flex items-center gap-2">
-                            <Target className="w-4 h-4" /> Goal Details
-                        </h3>
-                    </div>
+            {/* Results Section */}
+            <div className="flex flex-col gap-6">
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Time Horizon Projection</h3>
+                
+                <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
+                    <div className="text-center space-y-4 w-full">
+                        <div className="text-7xl font-black text-primary animate-in fade-in zoom-in duration-500">
+                            {result.achieved ? '0' : result.months} <span className="text-4xl text-muted-foreground">mo</span>
+                        </div>
+                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
+                            Months to Reach Your Goal
+                        </div>
 
-                    {[
-                        { label: 'Savings Goal ($)', value: goal, setter: setGoal },
-                        { label: 'Current Savings ($)', value: currentSavings, setter: setCurrentSavings },
-                        { label: 'Monthly Contribution ($)', value: monthlyContrib, setter: setMonthlyContrib },
-                    ].map(({ label, value, setter }) => (
-                        <div key={label} className="space-y-3">
-                            <label className="text-sm font-bold text-muted-foreground uppercase">{label}</label>
-                            <div className="relative group">
-                                <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
-                                <input type="number" value={value} onChange={e => setter(Number(e.target.value))} className="w-full pl-12 pr-4 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-bold text-lg" />
+                        <div className="grid grid-cols-2 gap-3 w-full mt-6">
+                            <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Total Saved</span>
+                                <span className="block text-lg font-black text-foreground">{fmt(result.totalContrib + currentSavings)}</span>
+                            </div>
+                            <div className="bg-card p-4 rounded-2xl border border-border/50 text-center text-emerald-500">
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Interest Earned</span>
+                                <span className="block text-lg font-black">+{fmt(result.totalInterest)}</span>
                             </div>
                         </div>
-                    ))}
 
-                    <div className="space-y-3">
-                        <label className="text-sm font-bold text-muted-foreground uppercase flex justify-between">Annual Interest Rate <span>{annualRate}%</span></label>
-                        <input type="range" min="0" max="15" step="0.1" value={annualRate} onChange={e => setAnnualRate(Number(e.target.value))} className="w-full accent-primary" />
-                    </div>
-
-                    {/* Progress Bar */}
-                    <div className="space-y-3 col-span-full pt-4 border-t border-border/50">
-                        <div className="flex justify-between text-sm font-bold text-muted-foreground">
-                            <span>Progress to Goal</span>
-                            <span>{pct.toFixed(1)}%</span>
-                        </div>
-                        <div className="w-full bg-muted/30 h-4 rounded-full overflow-hidden border border-border">
-                            <div className="h-full bg-gradient-to-r from-primary to-primary/60 transition-all duration-1000 rounded-full" style={{ width: `${pct}%` }} />
-                        </div>
-                        <div className="flex justify-between text-xs text-muted-foreground font-medium">
-                            <span>{fmt(currentSavings)} saved</span>
-                            <span>{fmt(goal)} goal</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Results */}
-                <div className="flex flex-col gap-6">
-                    <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/80 p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group border-4 border-white/10">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl group-hover:bg-white/20 transition-all duration-700" />
-                        <div className="relative z-10 space-y-4">
-                            <p className="text-primary-foreground/80 font-black uppercase tracking-[0.2em] text-sm flex items-center gap-2">
-                                <Calendar className="w-5 h-5" /> Time to Reach Goal
-                            </p>
-                            <h2 className="text-6xl md:text-7xl font-black tracking-tighter drop-shadow-lg">
-                                {result.achieved ? '0' : result.months} <span className="text-4xl">mo</span>
-                            </h2>
-                            <div className="flex items-center gap-2 text-primary-foreground font-bold">
-                                <ArrowUpRight className="w-5 h-5" />
-                                <span>{result.achieved ? 'Goal already achieved! 🎉' : `~${result.years} years at ${fmt(monthlyContrib)}/mo`}</span>
+                        <div className="w-full space-y-2 mt-4 text-left">
+                            <div className="flex justify-between text-[10px] font-black uppercase text-muted-foreground mb-1">
+                                <span>Progress to Goal</span>
+                                <span>{pct.toFixed(0)}% Milestones</span>
+                            </div>
+                            <div className="w-full bg-card h-3 rounded-full overflow-hidden flex border border-border/50">
+                                <div 
+                                    className="h-full bg-primary transition-all duration-1000" 
+                                    style={{ width: `${pct}%` }} 
+                                />
                             </div>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {[
-                            { label: 'Total Contributions', value: fmt(result.totalContrib), icon: DollarSign, colBg: 'bg-blue-500/10', colText: 'text-blue-500', desc: 'Your own deposits' },
-                            { label: 'Interest Earned', value: fmt(result.totalInterest), icon: TrendingUp, colBg: 'bg-green-500/10', colText: 'text-green-500', desc: 'From compounding' },
-                        ].map(({ label, value, icon: Icon, colBg, colText, desc }) => (
-                            <div key={label} className="bg-card border-2 border-border p-6 rounded-3xl hover:border-primary/50 transition-all shadow-lg group">
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className={cn('p-3 rounded-2xl group-hover:scale-110 transition-transform', colBg)}>
-                                        <Icon className={cn('w-6 h-6', colText)} />
-                                    </div>
-                                    <span className="text-xs font-black text-muted-foreground uppercase tracking-widest">{label}</span>
-                                </div>
-                                <p className="text-2xl font-black text-foreground">{value}</p>
-                                <p className="text-sm text-muted-foreground font-medium mt-1">{desc}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
-                        <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                        <div className="space-y-1">
-                            <h4 className="font-bold text-foreground">Smart Saving Tip</h4>
-                            <p className="text-sm text-muted-foreground font-medium leading-relaxed">Automate your monthly contributions so you pay yourself first. Even small increases — like an extra <strong>$50/month</strong> — can shave months off your timeline significantly.</p>
-                        </div>
-                    </div>
+                    <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
+                        {copied ? <Check className="text-emerald-500" size={12} /> : <Copy size={12} />}
+                        {copied ? 'Projection Copied' : 'Copy All Results'}
+                    </button>
                 </div>
             </div>
         </div>
