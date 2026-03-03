@@ -1,5 +1,5 @@
 export interface CalculatorToolProps {
-    type: 'age-calculator' | 'bmi-calculator' | 'percentage-calculator' | 'gst-calculator' | 'emi-calculator' | 'discount-calculator';
+    type: 'age-calculator' | 'bmi-calculator' | 'percentage-calculator' | 'gst-calculator' | 'emi-calculator' | 'discount-calculator' | 'compound-interest-calculator' | 'mortgage-calculator' | 'sip-calculator' | 'crypto-profit-calculator' | 'inflation-calculator' | 'roi-calculator' | 'cpm-calculator' | 'sales-tax-calculator';
 }
 
 export interface AgeData {

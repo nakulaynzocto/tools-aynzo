@@ -1054,6 +1054,220 @@
             "seoDescription": "Use HTML to JSX code online free. Fast and secure processing. No login, fast, secure. Perfect for developers.",
             "seoKeywords": "html-to-jsx, free html to jsx, html to jsx tool",
             "seoH1": "HTML to JSX Free: Use HTML to JSX"
+        },
+        "compound-interest-calculator": {
+            "name": "Compound Interest Calculator",
+            "description": "Calculate future growth of investments with compound interest.",
+            "seoTitle": "Compound Interest Calculator - Free Wealth Projection Tool",
+            "seoDescription": "Calculate how your savings grow over time with daily/monthly compounding. Project future wealth with this high-precision calculator.",
+            "seoKeywords": "compound interest calculator, savings goal calculator, wealth projector, investment growth calculator",
+            "seoH1": "Free Compound Interest Calculator: Project Your Future Wealth",
+            "faq": [
+                {
+                    "question": "What is the formula for compound interest?",
+                    "answer": "The formula is A = P(1 + r/n)^(nt), where A is the final amount, P is the principal, r is the interest rate, n is compounding frequency, and t is time in years."
+                },
+                {
+                    "question": "Is monthly compounding better than yearly?",
+                    "answer": "Yes. The more frequently interest compounds, the higher the effective yield. Monthly compounding earns slightly more than yearly on the same principal."
+                },
+                {
+                    "question": "Does this tool support monthly contributions?",
+                    "answer": "Absolutely. You can add a recurring monthly investment amount to see how it accelerates your wealth building."
+                },
+                {
+                    "question": "What is a realistic interest rate for projections?",
+                    "answer": "Historically, the stock market has averaged 7-10% annually, but for conservative savings, 3-5% is common."
+                }
+            ],
+            "content": "<h2>The Magic of Compounding: Make Your Money Work for You</h2><p>Compound interest is the eighth wonder of the world. It calculates interest on your initial principal AND on the accumulated interest from previous periods. The <strong>Aynzo Compound Interest Calculator</strong> helps you visualize this snowball effect.</p><h3>Why Monthly Contributions Matter</h3><p>Adding even a small amount every month can drastically change your final result thanks to the power of reinvesting earnings. Start early and stay consistent!</p>"
+        },
+        "mortgage-calculator": {
+            "name": "Mortgage Calculator",
+            "description": "Estimate monthly payments for home loans with PMI and taxes.",
+            "seoTitle": "Mortgage Calculator - US Home Loan Payment Estimator",
+            "seoDescription": "Calculate monthly home loan payments including property tax, insurance, and PMI. Professional real estate tool for home buyers.",
+            "seoKeywords": "mortgage calculator, home loan payment, pmi calculator, house payment estimator",
+            "seoH1": "Mortgage Calculator: Estimate Monthly Home Loan Payments",
+            "faq": [
+                {
+                    "question": "How much mortgage can I afford?",
+                    "answer": "Generally, your monthly housing costs should not exceed 28% of your gross monthly income. Use this tool to test different loan amounts."
+                },
+                {
+                    "question": "What is PMI (Private Mortgage Insurance)?",
+                    "answer": "PMI is usually required if your down payment is less than 20% of the home value. It protects the lender, not you."
+                },
+                {
+                    "question": "Should I choose a 15-year or 30-year term?",
+                    "answer": "15-year loans have lower interest rates and less total interest but higher monthly payments. 30-year loans offer more monthly flexibility."
+                }
+            ],
+            "content": "<h2>Mortgage Calculator: Estimate Your Path to Homeownership</h2><p>Buying a home is the biggest investment most people make. Understanding your <strong>monthly mortgage payment</strong> is crucial for budgeting. Our tool breaks down principal, interest, taxes, and insurance (PITI).</p><h3>Factor in the Hidden Costs</h3><p>Beyond the loan itself, remember to include property taxes and homeowners insurance for a realistic estimate of your monthly cash flow.</p>"
+        },
+        "sip-calculator": {
+            "name": "SIP Calculator",
+            "description": "Calculate returns on your Systematic Investment Plan (SIP).",
+            "seoTitle": "SIP Calculator - Mutual Fund Returns Estimator Online",
+            "seoDescription": "Estimate the future value of your monthly SIP investments in mutual funds. Fast, accurate, and free.",
+            "seoKeywords": "sip calculator, mutual fund calculator, monthly investment calculator, investment returns",
+            "seoH1": "SIP Calculator: Estimate Your Mutual Fund Returns",
+            "faq": [
+                {
+                    "question": "What is a Systematic Investment Plan (SIP)?",
+                    "answer": "An SIP is a method of investing a fixed sum regularly in mutual funds, allowing you to build wealth over time without worrying about market timing."
+                },
+                {
+                    "question": "What returns can I expect from an SIP?",
+                    "answer": "Historically, equity SIPs have given 12-15% over 10+ years, though returns are not guaranteed and depend on market performance."
+                },
+                {
+                    "question": "Is SIP better than Lumpsum?",
+                    "answer": "For most retail investors, SIP is better as it reduces risk through 'Rupee Cost Averaging' and instills financial discipline."
+                }
+            ],
+            "content": "<h2>SIP Calculator: Project Your Mutual Fund Wealth</h2><p>An <strong>SIP (Systematic Investment Plan)</strong> is more than just an investment; it's a habit. By investing a fixed amount regularly, you buy more units when prices are low and fewer when they are high. This tool helps you estimate the future value of those investments.</p>"
+        },
+        "crypto-profit-calculator": {
+            "name": "Crypto Profit Calculator",
+            "description": "Calculate profit or loss on your cryptocurrency trades.",
+            "seoTitle": "Crypto Profit/Loss Calculator - Instant Trading Analysis",
+            "seoDescription": "Instantly calculate profits and losses for Bitcoin and Altcoins. Support for exchange fees and ROI analysis.",
+            "seoKeywords": "crypto profit calculator, bitcoin profit loss, trading calculator, crypto roi finder",
+            "seoH1": "Crypto Profit Calculator: Analyze Your Trading Gains",
+            "faq": [
+                {
+                    "question": "How is crypto profit calculated?",
+                    "answer": "Subtract your initial investment plus all exchange fees from the total value of your coins at the exit price."
+                },
+                {
+                    "question": "Why include exchange fees?",
+                    "answer": "Trading fees (buying and selling) can eat into your profits significantly. Always include them for an accurate Net ROI."
+                },
+                {
+                    "question": "Can I use this for any coin?",
+                    "answer": "Yes. Whether it's Bitcoin, Ethereum, or any altcoin, just input your buy and sell prices and quantities."
+                }
+            ],
+            "content": "<h2>Professional Crypto Trading Analytics</h2><p>The crypto market is highly volatile. Tracking your <strong>Realized Profit/Loss</strong> after fees is essential for professional portfolio management. Use the <strong>Aynzo Crypto Calculator</strong> to instantly see your net gains.</p>"
+        },
+        "inflation-calculator": {
+            "name": "Inflation Calculator",
+            "description": "Calculate how inflation affects the purchasing power of your money.",
+            "seoTitle": "Inflation Calculator - Purchasing Power Loss Estimator",
+            "seoDescription": "See how much your money will be worth in the future due to inflation. Analyze historical and project future purchasing power.",
+            "seoKeywords": "inflation calculator, purchasing power loss, value of money over time, cpi calculator",
+            "seoH1": "Inflation Calculator: Track Your Purchasing Power Loss",
+            "faq": [
+                {
+                    "question": "How does inflation affect my savings?",
+                    "answer": "Inflation reduces the purchasing power of your money. If inflation is 3%, $100 today will only buy $97 worth of goods next year."
+                },
+                {
+                    "question": "What is the CPI (Consumer Price Index)?",
+                    "answer": "The CPI measures the average change over time in the prices paid by consumers for a market basket of goods and services."
+                }
+            ],
+            "content": "<h2>Protect Your Future Purchasing Power</h2><p>Inflation is the 'silent thief' of wealth. Understanding the <strong>real value of money</strong> over time helps you plan better retirement and savings goals. See how much your money will be worth in 10, 20, or 30 years.</p>"
+        },
+        "roi-calculator": {
+            "name": "ROI Calculator",
+            "description": "Calculate Return on Investment (ROI) for business and projects.",
+            "seoTitle": "ROI Calculator - Efficiency & Profitability Analyzer",
+            "seoDescription": "Measure the efficiency of an investment with our professional ROI calculator. Get net profit and percentage gains instantly.",
+            "seoKeywords": "roi calculator, return on investment, business profitability, investment efficiency",
+            "seoH1": "ROI Calculator: Measure Your Investment Performance",
+            "faq": [
+                {
+                    "question": "What is a 'Good' ROI?",
+                    "answer": "A good ROI depends on the risk. For stocks, 7-10% is solid. For business projects, you might aim for 15-20% to justify the effort."
+                },
+                {
+                    "question": "What does a negative ROI mean?",
+                    "answer": "A negative ROI means you lost money on the investment. The final value was lower than the initial cost."
+                }
+            ],
+            "content": "<h2>Measure Investment Efficiency Instantly</h2><p>The <strong>Return on Investment (ROI)</strong> is a simple yet powerful ratio used to evaluate the efficiency of an investment. It helps you compare different opportunities by showing the percentage gain relative to the cost.</p>"
+        },
+        "cpm-calculator": {
+            "name": "CPM Calculator",
+            "description": "Calculate Cost Per Mille (CPM) for ad campaigns.",
+            "seoTitle": "CPM Calculator - Digital Marketing Cost Optimizer",
+            "seoDescription": "Solve for CPM, Campaign Cost, or Total Impressions instantly. Essential tool for digital advertisers and media buyers.",
+            "seoKeywords": "cpm calculator, cost per mille, ad campaign cost, marketing impressions calculator",
+            "seoH1": "CPM Calculator: Optimize Ad Campaign Costs",
+            "faq": [
+                {
+                    "question": "What does CPM stand for?",
+                    "answer": "CPM stands for 'Cost Per Mille' (where Mille is Latin for thousand). It is the cost an advertiser pays for 1,000 views or impressions of an ad."
+                },
+                {
+                    "question": "How do I calculate CPM?",
+                    "answer": "The formula is (Total Cost / Total Impressions) * 1,000."
+                }
+            ],
+            "content": "<h2>Optimize Your Ad Budget with CPM Analysis</h2><p>Digital marketing is all about efficiency. Use the <strong>CPM Calculator</strong> to compare the costs of different advertising platforms and ensure you are getting the best value for your reach.</p>"
+        },
+        "sales-tax-calculator": {
+            "name": "Sales Tax Calculator",
+            "description": "Calculate sales tax for US states and global regions.",
+            "seoTitle": "Sales Tax Calculator - Add or Remove Tax Instantly",
+            "seoDescription": "Calculate net price, tax amount, and total bill with US state presets. Supports tax-inclusive and exclusive calculations.",
+            "seoKeywords": "sales tax calculator, tax inclusive calculator, vat calculator, us sales tax finder",
+            "seoH1": "Sales Tax Calculator: Professional Invoice Estimator",
+            "faq": [
+                {
+                    "question": "How do I calculate Sales Tax?",
+                    "answer": "Multiply the net price by the tax rate (decimal). Add that amount to the net price for the total."
+                },
+                {
+                    "question": "What is Tax Inclusive vs Exclusive?",
+                    "answer": "Tax Exclusive starts with a net price and adds tax. Tax Inclusive starts with a total price and extracts the tax amount."
+                }
+            ],
+            "content": "<h2>Sales Tax Calculator: Clear Invoicing Made Easy</h2><p>Whether you are a business owner or a shopper, calculating <strong>Sales Tax or VAT</strong> accurately is essential. Our tool supports both adding tax to a price and 'back-calculating' to find the original price from a total.</p>"
+        },
+        "privacy-policy-generator": {
+            "name": "Privacy Policy Generator",
+            "description": "Generate professional privacy policies for websites.",
+            "seoTitle": "Privacy Policy Generator - Free Professional Legal Templates",
+            "seoDescription": "Create a customized, professional privacy policy for your website or app in seconds. Compliant with GDPR and modern standards.",
+            "seoKeywords": "privacy policy generator, legal doc generator, website privacy policy free, gdpr compliance tool",
+            "seoH1": "Privacy Policy Generator: Build Trust with Professional Legal Docs",
+            "faq": [
+                {
+                    "question": "Is this Privacy Policy GDPR compliant?",
+                    "answer": "The generator provides a high-quality template covering the core data collection and processing clauses required by GDPR and CCPA."
+                },
+                {
+                    "question": "Can I use this for my mobile app?",
+                    "answer": "Yes, it is suitable for websites, iOS apps, Android apps, and SaaS platforms."
+                },
+                {
+                    "question": "Do I need a lawyer for this?",
+                    "answer": "While our generator is based on professional standards, for complex legal situations, we always recommend a professional legal review."
+                }
+            ],
+            "content": "<h2>Privacy Policy Generator: Build User Trust</h2><p>Every professional website needs a <strong>Privacy Policy</strong> to comply with laws and search engine requirements. Protect your business and your users with a clear, transparent document explaining your data practices.</p>"
+        },
+        "terms-conditions-generator": {
+            "name": "Terms & Conditions Generator",
+            "description": "Generate customized terms and conditions for businesses.",
+            "seoTitle": "Terms and Conditions Generator - Free & Professional",
+            "seoDescription": "Protect your platform with custom terms of service. Generate professional legal agreements for any country or state.",
+            "seoKeywords": "terms and conditions generator, terms of service maker, legal agreement generator, website terms generator",
+            "seoH1": "Terms and Conditions Generator: Protect Your Business Assets",
+            "faq": [
+                {
+                    "question": "Why do I need Terms and Conditions?",
+                    "answer": "Terms and Conditions (T&C) act as a legal contract between you and your users, protecting your intellectual property and limiting your liability."
+                },
+                {
+                    "question": "Are these legal agreements enforceable?",
+                    "answer": "Yes, if they are clearly presented to users (e.g., via a click-through), they are generally enforceable in court."
+                }
+            ],
+            "content": "<h2>Protect Your Digital Assets with Professional Terms</h2><p>Define the rules of your platform. A solid <strong>Terms of Service</strong> agreement prevents misuse, clarifies payment terms, and establishes the governing law for any disputes. Use our generator to create a custom agreement in seconds.</p>"
         }
     },
     "Common": {
@@ -1223,14 +1437,18 @@
     },
     "CalculatorNav": {
         "healthLife": "Health & Life",
-        "finance": "Finance",
-        "math": "Math",
+        "finance": "Finance & Investment",
+        "math": "Math & Stats",
         "age": "Age",
         "bmi": "BMI",
         "gst": "GST",
         "emi": "EMI",
         "discount": "Discount",
-        "percentage": "Percentage"
+        "percentage": "Percentage",
+        "finance_sip": "SIP Plan",
+        "finance_interest": "Compound Int.",
+        "finance_mortgage": "Mortgage",
+        "business": "Business & B2B Analysis"
     },
     "Footer": {
         "topCategories": "Top Categories",
@@ -1335,5 +1553,27 @@
         "social-gen": "Social & Links",
         "calc-util": "Health & Info",
         "calc-math": "Finance & Math"
+    },
+    "Calculators": {
+        "CompoundInterest": {
+            "inputsTitle": "Investment Inputs",
+            "initialPrincipal": "Initial Principal ($)",
+            "annualRate": "Annual Rate (%)",
+            "timeInYears": "Time (Years)",
+            "compoundingFrequency": "Compounding Frequency",
+            "freqAnnually": "Annually (1/yr)",
+            "freqSemiAnnually": "Semi-Annually (2/yr)",
+            "freqQuarterly": "Quarterly (4/yr)",
+            "freqMonthly": "Monthly (12/yr)",
+            "freqDaily": "Daily (365/yr)",
+            "monthlyContribution": "Monthly Contribution ($)",
+            "resultTitle": "Wealth Growth Result",
+            "totalFutureValue": "Total Future Value",
+            "totalInvested": "Total Invested",
+            "interestAccrued": "Interest Accrued",
+            "wealthInfo": "Compound interest allows you to earn interest on interest, leading to exponential growth over time. Monthly contributions significantly accelerate your wealth building.",
+            "copyFullBreakdown": "Copy Full Breakdown",
+            "emptyPrompt": "Enter data to project wealth"
+        }
     }
 }

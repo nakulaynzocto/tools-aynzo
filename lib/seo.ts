@@ -5353,6 +5353,435 @@ export const toolSEO: { [key: string]: ToolSEO } = {
             { question: 'What about aria-attributes?', answer: 'React supports standard aria-attributes (e.g., aria-label) as-is, so they are preserved correctly by the converter.' }
         ]
     },
+
+    // === NEW HIGH-RPM FINANCIAL TOOLS ===
+    'compound-interest-calculator': {
+        title: 'Compound Interest Calculator - Free Wealth Growth Projection Tool',
+        description: 'Calculate future wealth with our compound interest calculator. Supports monthly contributions, daily/monthly compounding, and visual growth projections. Pro-grade investment tool.',
+        keywords: 'compound interest calculator, wealth growth calculator, interest on interest, investment projector, compounding savings, long term investment tool, financial planning online',
+        h1: 'Compound Interest Calculator: Project Your Future Wealth',
+        content: `
+<h2>The Magic of Compounding: Why Your Savings Need Exponential Growth</h2>
+<p>Often referred to as the "eighth wonder of the world" by Albert Einstein, <strong>compound interest</strong> is the process where the interest you earn on your savings earns interest itself. Over long periods, this creates an exponential growth curve that can transform modest monthly contributions into significant wealth. The <strong>Aynzo Compound Interest Calculator</strong> is designed to help you visualize this growth with high-precision financial logic.</p>
+
+<h3>How Compounding Works: The Mathematical Engine</h3>
+<p>Unlike simple interest, which is calculated only on the principal amount, compound interest is calculated on the principal plus any accumulated interest. This means your wealth grows faster as time goes on. Our <strong>wealth projector</strong> uses the standard compounding formula:</p>
+<p class="font-mono bg-muted p-4 rounded-lg my-4">A = P(1 + r/n)^(nt)</p>
+<p>Where:
+<ul>
+    <li><strong>A</strong> is the final amount.</li>
+    <li><strong>P</strong> is the initial principal.</li>
+    <li><strong>r</strong> is the annual interest rate (decimal).</li>
+    <li><strong>n</strong> is the number of times interest compounds per year.</li>
+    <li><strong>t</strong> is the time in years.</li>
+</ul></p>
+
+<h3>The Power of Regular Contributions</h3>
+<p>While a single initial deposit is powerful, adding a <strong>monthly contribution</strong> significantly accelerates the snowball effect. Even $100 a month can make a massive difference over 20-30 years. Our tool allows you to input recurring investments to see exactly how your consistency pays off in the long run.</p>
+
+<h2>Compounding Frequencies: Daily vs Monthly vs Yearly</h2>
+<p>The more frequently your interest is calculated and added to the balance, the more you earn. Our <strong>investment calculator</strong> provides options for:</p>
+<ul>
+    <li><strong>Daily Compounding:</strong> Often used for savings accounts and high-yield instruments.</li>
+    <li><strong>Monthly Compounding:</strong> Common for mortgages, credit cards, and many mutual funds.</li>
+    <li><strong>Annually Compounding:</strong> The standard for long-term bond projections.</li>
+</ul>
+
+<div class="bg-primary/5 p-6 rounded-2xl border border-primary/20 mt-8">
+  <p class="text-lg font-bold">Investment Tip:</p>
+  <p>To maximize compounding, start early. Time is the most critical factor in wealth building. A 20-year-old who starts with small amounts will often outperform a 40-year-old who starts with much larger amounts, simply due to the duration of compounding.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'FinancialCalculator',
+            name: 'Compound Interest Calculator',
+            url: 'https://tools.aynzo.com/tools/compound-interest-calculator',
+            description: 'Calculate future investment growth with compound interest and monthly contributions.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What is the formula for compound interest?', answer: 'The formula is A = P(1 + r/n)^(nt), where A is the final amount, P is the principal, r is the interest rate, n is compounding frequency, and t is the time in years.' },
+            { question: 'Is monthly compounding better than yearly?', answer: 'Yes. The more frequently interest compounds, the higher the effective yield. Monthly compounding earns slightly more than yearly compounding on the same principal and rate.' },
+            { question: 'Does this tool support monthly contributions?', answer: 'Absolutely. You can add a recurring monthly investment amount to see how it accelerates your wealth building over time.' },
+            { question: 'What is a realistic interest rate for projections?', answer: 'Historically, the stock market (S&P 500) has averaged about 7-10% annually after inflation, but for conservative savings, 3-5% is more common.' },
+            { question: 'Do you store my financial data?', answer: 'No. Like all Aynzo tools, processing happens entirely in your browser. Your financial projections stay 100% private.' }
+        ]
+    },
+    'mortgage-calculator': {
+        title: 'Mortgage Calculator - US Home Loan & PMI Estimator',
+        description: 'Calculate monthly mortgage payments including PMI, property taxes, and insurance. Professional real estate tool for home buyers in the US.',
+        keywords: 'mortgage calculator, home loan estimator, pmi calculator, monthly house payment, us mortgage finder, real estate calculator, property tax estimator',
+        h1: 'Mortgage Calculator: Estimate Your Home Loan Payments',
+        content: `
+<h2>Navigating Home Buying: Understanding Your Monthly Costs</h2>
+<p>Buying a home is the largest financial commitment most people make. While the home price is the headline number, your <strong>monthly mortgage payment</strong> is what truly impacts your lifestyle. The <strong>Aynzo Mortgage Calculator</strong> provides a comprehensive breakdown of Principal, Interest, Taxes, and Insurance (PITI), giving you a clear picture of your future housing costs.</p>
+
+<h3>The PITI Breakdown: What's in your payment?</h3>
+<p>A "simple" mortgage payment usually contains four distinct parts:</p>
+<ul>
+    <li><strong>Principal:</strong> The portion of your payment that goes toward paying down your loan balance.</li>
+    <li><strong>Interest:</strong> The cost of borrowing the money, determined by your APR.</li>
+    <li><strong>Taxes:</strong> Local property taxes, usually estimated based on your home's value.</li>
+    <li><strong>Insurance:</strong> Homeowners insurance to protect your investment.</li>
+</ul>
+
+<h3>PMI: The "Hidden" Cost for Small Down Payments</h3>
+<p>If you put down less than 20% on a conventional loan, lenders usually require <strong>Private Mortgage Insurance (PMI)</strong>. This protects the lender, not you, but it adds to your monthly cost. Our <strong>home loan estimator</strong> automatically calculates PMI if your down payment is below the 20% threshold, ensuring your budget is realistic.</p>
+
+<h2>Choosing Your Loan Term: 15 vs 30 Years</h2>
+<p>The duration of your loan drastically changes your financial strategy:</p>
+<ul>
+    <li><strong>30-Year Fixed:</strong> The most popular choice. Lower monthly payments but much higher total interest paid over the life of the loan.</li>
+    <li><strong>15-Year Fixed:</strong> Higher monthly payments, but you build equity faster and save tens of thousands in interest costs.</li>
+</ul>
+
+<div class="bg-muted p-6 rounded-xl border border-border mt-8">
+  <p class="text-lg font-bold">First-Time Buyer Tip:</p>
+  <p>Don't forget "closing costs," which typically range from 2% to 5% of the home's price. Use our <a href="/en/tools/roi-calculator">ROI Calculator</a> to see if renting vs buying makes more sense based on your expected appreciation.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'FinancialCalculator',
+            name: 'Mortgage Calculator',
+            url: 'https://tools.aynzo.com/tools/mortgage-calculator',
+            description: 'Professional US mortgage calculator with PMI, taxes, and insurance integration.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'What is a good down payment for a home?', answer: 'While 20% is the traditional gold standard to avoid PMI, many FHA and conventional loans allow as little as 3% to 3.5% down.' },
+            { question: 'How much mortgage can I afford?', answer: 'A common rule of thumb is the 28/36 rule: your total housing payment should not exceed 28% of your gross monthly income.' },
+            { question: 'What is PMI and do I need it?', answer: 'PMI (Private Mortgage Insurance) is required if you put down less than 20% on a conventional loan. It typically costs between 0.5% and 1.5% of the loan amount annually.' },
+            { question: 'Are property taxes included in this calculator?', answer: 'Yes. You can input your estimated annual property taxes, and the tool will calculate the monthly escrow amount for you.' },
+            { question: 'Does the interest rate stay the same?', answer: 'This calculator assumes a fixed-rate mortgage. If you have an Adjustable Rate Mortgage (ARM), your payments may change after the initial period.' }
+        ]
+    },
+    'sip-calculator': {
+        title: 'SIP Calculator - Mutual Fund Returns Estimator',
+        description: 'Calculate the future value of your Systematic Investment Plan (SIP) in mutual funds. Accurate projections for wealth building.',
+        keywords: 'sip calculator, mutual fund returns, systematic investment plan, sip wealth builder, monthly investment tracker, amfi calculator, india investment calculator',
+        h1: 'SIP Calculator: Estimate Your Mutual Fund Future Value',
+        content: `
+<h2>Wealth Creation via SIP: The Disciplined Path to Prosperity</h2>
+<p>A <strong>Systematic Investment Plan (SIP)</strong> is a method where you invest a fixed amount regularly (usually monthly) in a mutual fund scheme. Instead of trying to time the market, SIP focuses on "time in the market," allowing you to benefit from <strong>Rupee Cost Averaging</strong> and the <strong>Power of Compounding</strong>. The <strong>Aynzo SIP Calculator</strong> helps you plan your financial goals by projecting potential returns over your chosen tenure.</p>
+
+<h3>Rupee Cost Averaging: Navigating Market Volatility</h3>
+<p>One of the biggest advantages of an SIP is that you buy more units when prices are low and fewer units when prices are high. Over time, this lowers your average cost per unit, making market dips work in your favor. Our <strong>SIP planner</strong> reflects the long-term growth potential of this strategy.</p>
+
+<h3>Goal-Based Investing: What are you saving for?</h3>
+<p>Whether it's retirement, a child's education, or a dream wedding, knowing how much to invest monthly is crucial. By adjusting the <strong>expected return rate</strong> and <strong>tenure</strong> in our tool, you can see exactly how much your small monthly contributions can grow into a substantial corpus.</p>
+
+<div class="bg-emerald-500/5 p-6 rounded-2xl border border-emerald-500/20 mt-8">
+  <p class="text-lg font-bold text-emerald-600">Pro SIP Tip:</p>
+  <p>Step-up your SIP! Increasing your monthly investment by just 5-10% every year can lead to exponentially higher wealth compared to a fixed SIP. Use this calculator to see the difference a small increase makes.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'FinancialCalculator',
+            name: 'SIP Calculator',
+            url: 'https://tools.aynzo.com/tools/sip-calculator',
+            description: 'Mutual fund SIP calculator for wealth projection and financial planning.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'What is a Systematic Investment Plan (SIP)?', answer: 'An SIP is a disciplined way of investing small amounts of money regularly in mutual funds, helping you build wealth over the long term without timing the market.' },
+            { question: 'What returns should I expect from an SIP?', answer: 'Historically, equity SIPs in diversified funds have provided returns in the range of 12-15% over 10+ years, though this is not guaranteed.' },
+            { question: 'Can I stop my SIP at any time?', answer: 'Yes. Most SIPs are flexible. You can pause, stop, or increase your investment amount without penalties in most mutual fund schemes.' },
+            { question: 'Is SIP better than a Lumpsum investment?', answer: 'SIPs are generally better for volatile markets as they mitigate risk through cost averaging. Lumpsum is better when the market is at a clear bottom.' },
+            { question: 'Do I need a large amount to start an SIP?', answer: 'No. Many funds allow starting an SIP with as little as $10 or ₹500 per month.' }
+        ]
+    },
+    'crypto-profit-calculator': {
+        title: 'Crypto Profit/Loss Calculator - BTC & Altcoin ROI Tracker',
+        description: 'Instantly calculate profit or loss for cryptocurrency trades. Supports Bitcoin, Ethereum, and all Altcoins with fee analysis.',
+        keywords: 'crypto profit calculator, crypto loss calculator, btc roi tracker, crypto trading tool, ethereum profit finder, crypto fees calculator, altcoin trading analysis',
+        h1: 'Crypto Profit Calculator: Track Your Trading Gains',
+        content: `
+<h2>Cryptocurrency Trading: Managing Gains and Mitigating Losses</h2>
+<p>The crypto market is famous for its volatility. While it offers immense opportunities for profit, tracking your <strong>Net ROI</strong> (Return on Investment) can be difficult when accounting for exchange fees and varying entry/exit points. The <strong>Aynzo Crypto Profit Calculator</strong> is a professional tool built to give you the "hard numbers" behind your trades instantly.</p>
+
+<h3>Accounting for the Fees: The 0.1% Difficulty</h3>
+<p>Most traders forget the impact of <strong>maker and taker fees</strong>. If an exchange charges 0.1% on buy and 0.1% on sell, a "break-even" trade is actually a loss. Our <strong>crypto trading analyzer</strong> includes a customizable fee field to subtract these costs from your gross profit, giving you the real, spendable profit amount.</p>
+
+<h3>Calculating Coin Units: Know Your Accumulation</h3>
+<p>Input your total investment and the buy price to see exactly how many units of Bitcoin, ETH, or SOL you hold. This is essential for tracking your "bag size" and planning future exit strategies at specific price targets.</p>
+
+<div class="bg-yellow-500/5 p-6 rounded-2xl border border-yellow-500/20 mt-8">
+  <p class="text-lg font-bold text-yellow-600">Trader's Note:</p>
+  <p>Never FOMO. Use this calculator to set clear "Take Profit" and "Stop Loss" targets before you enter a trade. Seeing the potential loss in dollars often helps manage emotions better than looking at percentages alone.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'FinancialCalculator',
+            name: 'Crypto Profit Calculator',
+            url: 'https://tools.aynzo.com/tools/crypto-profit-calculator',
+            description: 'Instant profit and loss analysis for cryptocurrency trading.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'How do I calculate crypto profit?', answer: 'Subtract your initial investment and all trading fees from the total value of your coins at the current or exit price.' },
+            { question: 'Does this tool support all cryptocurrencies?', answer: 'Yes. Since you input the prices and amounts manually, it works for Bitcoin, Ethereum, Meme coins, or even NFTs.' },
+            { question: 'Should I include buy and sell fees?', answer: 'Absolutely. Most exchanges charge a fee on both ends. To get an accurate result, you should input the combined fee percentage.' },
+            { question: 'What is ROI in crypto?', answer: 'ROI stands for Return on Investment. It is the percentage of profit relative to your initial capital.' },
+            { question: 'Is my trade data private?', answer: 'Yes. Calculations are performed locally in your browser. We never see your trade amounts or prices.' }
+        ]
+    },
+    'inflation-calculator': {
+        title: 'Inflation Calculator - Purchasing Power & Value Loss Finder',
+        description: 'See how inflation reduces the value of your money over time. Analyze historical impact and project future purchasing power.',
+        keywords: 'inflation calculator, purchasing power calculator, cpi tracker, future value of money, inflation impact tool, dollar value loss, cost of living calculator',
+        h1: 'Inflation Calculator: Track Your Money\'s Shrinking Value',
+        content: `
+<h2>The Silent Wealth Killer: Understanding Inflation</h2>
+<p>Inflation is the rate at which the general level of prices for goods and services is rising. As inflation rises, every dollar you own buys a smaller percentage of a good or service. The <strong>Aynzo Inflation Calculator</strong> is a powerful educational tool that helps you visualize the <strong>shrinking purchasing power</strong> of your savings over any time horizon.</p>
+
+<h3>Purchasing Power: The Real Value of Your Savings</h3>
+<p>If you have $10,000 in a 0% interest savings account and inflation is 5%, you still have $10,000, but it only buys $9,523 worth of goods a year later. Our <strong>CPI analysis tool</strong> helps you calculate this "hidden tax" so you can plan investments that outpace the cost of living.</p>
+
+<h3>Projecting Future Costs: Plan for Bread and Rent</h3>
+<p>Use our <strong>dollar value projector</strong> to see what today's $100 will cost in 10, 20, or 30 years. This is essential for retirement planning—your "nest egg" goal needs to be adjusted for the fact that a million dollars today will not buy the same lifestyle in 2050.</p>
+
+<div class="bg-rose-500/5 p-6 rounded-2xl border border-rose-500/20 mt-8">
+  <p class="text-lg font-bold text-rose-600">Economic Insight:</p>
+  <p>To preserve wealth, your investments must earn a "Real Rate of Return" (Interest Rate minus Inflation Rate). If you earn 4% in a CD but inflation is 6%, you are actually losing 2% of your wealth every year.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'FinancialCalculator',
+            name: 'Inflation Calculator',
+            url: 'https://tools.aynzo.com/tools/inflation-calculator',
+            description: 'Calculate the impact of inflation on money value and purchasing power.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'How is inflation calculated?', answer: 'Inflation is typically measured by the Consumer Price Index (CPI), which tracks the average change over time in the prices paid by consumers for a basket of goods.' },
+            { question: 'What is purchasing power?', answer: 'Purchasing power is the value of a currency expressed in terms of the amount of goods or services that one unit of money can buy.' },
+            { question: 'Does $1,000,000 today buy the same in 20 years?', answer: 'No. At a steady 3% inflation rate, $1 million today would have the purchasing power of only about $553,000 in 20 years.' },
+            { question: "Why does inflation happen?", answer: "The main causes are demand-pull (when demand outpaces supply) and cost-push (when the cost of production increases, leading to higher prices)." },
+            { question: "How can I beat inflation?", answer: "Investing in assets that historically outpace inflation, such as stocks, real estate, or inflation-indexed bonds (TIPs), is the primary strategy." }
+        ]
+    },
+    "roi-calculator": {
+        title: "ROI Calculator - Return on Investment & Profitability Analyzer",
+        description: "Calculate the Return on Investment (ROI) for any business project or financial asset. Get net profit and efficiency percentages instantly.",
+        keywords: "roi calculator, return on investment finder, business profit analyzer, investment efficiency tool, calculate roi online, project profitability, marketing roi calculator",
+        h1: "ROI Calculator: Measure Your Investment Performance",
+        content: `
+<p>In the world of business and finance, <strong>Return on Investment (ROI)</strong> is the most critical metric. It measures the gain or loss generated on an investment relative to the amount of money invested. The <strong>Aynzo ROI Calculator</strong> simplifies this complex calculation, helping you determine if a project is worth the capital risk.</p>
+
+<h3>The ROI Formula: What the percentages mean</h3>
+<p>ROI is usually expressed as a percentage. It is calculated by subtracting the initial cost of the investment from its final value, then dividing that number by the initial cost. Our <strong>profitability analyzer</strong> uses the standard formula:</p>
+<p class="font-mono bg-muted p-4 rounded-lg my-4 text-center">ROI = [(Final Value - Initial Cost) / Initial Cost] x 100</p>
+
+<h3>When to use an ROI Calculator?</h3>
+<ul>
+    <li><strong>Marketing Campaigns:</strong> See if your ad spend generated enough revenue to justify the budget.</li>
+    <li><strong>Stock Market:</strong> Calculate the growth of your portfolio over specific periods.</li>
+    <li><strong>Real Estate:</strong> Measure the efficiency of rental income vs property maintenance.</li>
+    <li><strong>Equipment Purchase:</strong> Determine if a new machine will pay for itself through increased efficiency.</li>
+</ul>
+
+<div class="bg-indigo-500/5 p-6 rounded-2xl border border-indigo-500/20 mt-8">
+  <p class="text-lg font-bold text-indigo-600">Business Insight:</p>
+  <p>A positive ROI is good, but a "High ROI" depends on the industry. Tech companies might aim for 20%+, while utility companies might consider 5% a success. Always compare your ROI against the "Opportunity Cost"—the return you could have earned by investing elsewhere.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'ROI Calculator',
+            url: 'https://tools.aynzo.com/tools/roi-calculator',
+            description: 'Professional tool for calculating Return on Investment and project profitability.',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'What is a good ROI?', answer: 'A "good" ROI depends on the risk and the industry. Typically, an annual ROI of 7% to 10% is considered good for stock investments.' },
+            { question: 'How do I calculate ROI?', answer: 'Subtract the cost of investment from the current value, divide by the cost of investment, and multiply by 100.' },
+            { question: 'What does a negative ROI mean?', answer: 'A negative ROI indicates that the investment has lost money. The final value is less than the initial cost.' },
+            { question: 'Does ROI include time?', answer: 'Simple ROI does not account for time. To include time, you should use "Annualized ROI," which adjusts for the duration of the investment.' },
+            { question: 'Is my data saved?', answer: 'No. Calculations are performed locally in your browser for 100% privacy.' }
+        ]
+    },
+    'cpm-calculator': {
+        title: 'CPM Calculator - Ad Campaign Cost & Impression Optimizer',
+        description: 'Calculate Cost Per Mille (CPM), total campaign cost, or required impressions. Essential tool for digital marketers and ad agencies.',
+        keywords: 'cpm calculator, cost per mille, ad cost estimator, marketing impressions tool, digital advertising efficiency, media buying calculator, banner ad cost',
+        h1: 'CPM Calculator: Optimize Your Ad Campaign Spend',
+        content: `
+<h2>Mastering Digital Advertising: Why CPM is the Foundation</h2>
+<p>In digital marketing, <strong>CPM (Cost Per Mille)</strong> represents the cost an advertiser pays for every 1,000 views or impressions of an advertisement. The "M" in CPM stands for "mille," the Latin word for thousand. The <strong>Aynzo CPM Calculator</strong> is an essential tool for media buyers and brand managers to plan budgets and measure campaign efficiency.</p>
+
+<h3>The CPM Triangle: Cost, Impressions, and Rate</h3>
+<p>Our tool allows you to solve for any of the three critical variables in an ad campaign:</p>
+<ul>
+    <li><strong>Calculate CPM:</strong> Find out how much you are paying per 1,000 views based on your total spend.</li>
+    <li><strong>Calculate Campaign Cost:</strong> Determine the budget needed to hit a specific impression target.</li>
+    <li><strong>Calculate Impressions:</strong> Find out how many views you will get with a fixed budget and CPM rate.</li>
+</ul>
+
+<h3>Formula for Ad Success</h3>
+<p class="font-mono bg-muted p-4 rounded-lg my-4 text-center text-sm">CPM = (Total Cost / Total Impressions) x 1,000</p>
+
+<h2>CPM Benchmarks and Strategy</h2>
+<p>CPM varies wildly based on niche, platform, and targeting. For example, LinkedIn CPMs are often much higher than Facebook CPMs because the audience is more professional. Use our <strong>marketing cost optimizer</strong> to compare platforms and choose the one that offers the best reach for your budget.</p>
+
+<div class="bg-blue-500/5 p-6 rounded-2xl border border-blue-500/20 mt-8">
+  <p class="text-lg font-bold text-blue-600">Ad Ops Tip:</p>
+  <p>A low CPM isn't always better. If you pay $1 CPM for low-quality traffic, it might be less effective than a $20 CPM for highly targeted, high-intent traffic. Always look at "eCPM" (effective CPM) which accounts for conversions.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'CPM Calculator',
+            url: 'https://tools.aynzo.com/tools/cpm-calculator',
+            description: 'Determine ad campaign costs and impressions with this professional CPM tool.',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'What does CPM stand for?', answer: 'CPM stands for "Cost Per Mille," where Mille is Latin for one thousand. It measures the cost of 1,000 ad impressions.' },
+            { question: 'How is CPM different from CPC?', answer: 'CPM focuses on awareness (views), while CPC (Cost Per Click) focuses on action (clicks).' },
+            { question: 'What is a typical CPM rate?', answer: 'CPMs can range from $1 on social media to $50+ for premium professional networks like LinkedIn or specialized B2B sites.' },
+            { question: 'How many impressions are in a million CPM?', answer: 'If you have 1,000,000 impressions at a $10 CPM, the total cost would be $10,000.' },
+            { question: 'Does this tool work for print ads?', answer: 'Yes. Any advertising that uses "per thousand reach" as a metric can be calculated using this tool.' }
+        ]
+    },
+    'sales-tax-calculator': {
+        title: 'Sales Tax Calculator - US State & Global Tax Estimator',
+        description: 'Calculate sales tax for US states and international regions instantly. Add or remove tax with professional precision. US State presets included.',
+        keywords: 'sales tax calculator, us tax estimator, add tax to price, remove tax from total, sales tax finder, business invoice tool, state tax calculator',
+        h1: 'Sales Tax Calculator: Professional Invoice & Bill Estimator',
+        content: `
+<h2>Small Business Billing: Getting the Tax Right Every Time</h2>
+<p>Calculating <strong>sales tax</strong> is a daily task for business owners and freelancers. Whether you are adding tax to a quote or working backward from a total receipt to find the net price, accuracy is paramount for proper accounting. The <strong>Aynzo Sales Tax Calculator</strong> provides a seamless interface for both "inclusive" and "exclusive" tax logic.</p>
+
+<h3>Inclusive vs Exclusive: The Mathematics of Tax</h3>
+<ul>
+    <li><strong>Tax Exclusive (Add Tax):</strong> You take the price of a good and add the tax percentage on top. Total = Price * (1 + Tax Rate).</li>
+    <li><strong>Tax Inclusive (Remove Tax):</strong> You have a total bill and need to find the original price. Price = Total / (1 + Tax Rate).</li>
+</ul>
+
+<h3>US Sales Tax: A Complex Landscape</h3>
+<p>Unlike many countries with a flat VAT, the United States has varying sales tax rates for every state (and often every county). Our tool includes <strong>US State Presets</strong> to help you quickly find the base rates for major regions like California, Texas, and New York.</p>
+
+<div class="bg-card p-6 rounded-2xl border-2 border-border mt-8">
+  <p class="text-sm"><strong>Disclaimer:</strong> Sales tax rates can change frequently and often include local surcharges. This tool should be used for estimation purposes. Always verify with official local tax authority websites for final billing.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Sales Tax Calculator',
+            url: 'https://tools.aynzo.com/tools/sales-tax-calculator',
+            description: 'Accurately calculate sales tax for business invoices and consumer receipts.',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'How do I add 10% tax to a price?', answer: 'Multiply the original price by 1.10. For example, $100 + 10% tax = $110.' },
+            { question: 'How do I remove tax from a total?', answer: 'Divide the total amount by (1 + Tax Rate). For a $110 total with 10% tax, the net price is $110 / 1.10 = $100.' },
+            { question: 'Which US states have no sales tax?', answer: 'Alaska, Delaware, Montana, New Hampshire, and Oregon currently have no statewide sales tax.' },
+            { question: 'Is VAT the same as sales tax?', answer: 'Conceptually yes, but VAT is collected at every stage of production, while sales tax is only collected at the final point of sale.' },
+            { question: 'Can I use this for international taxes?', answer: 'Yes. Simply input the custom tax rate for your country (e.g., 20% for UK VAT).' }
+        ]
+    },
+    'privacy-policy-generator': {
+        title: 'Privacy Policy Generator - Free Legal Templates for Websites',
+        description: 'Generate a professional, GDPR-compliant privacy policy for your website or app. Protect your users and build trust with a clear legal document.',
+        keywords: 'privacy policy generator, website legal docs, gdpr policy maker, free legal templates, app privacy policy, privacy notice creator, professional legal generator',
+        h1: 'Privacy Policy Generator: Professional Legal Protection',
+        content: `
+<h2>Building Trust: Why Your Website Needs a Privacy Policy</h2>
+<p>Transparency is the currency of the modern web. A <strong>Privacy Policy</strong> is a legal document that explains how your website collects, uses, and protects visitor data. In many regions, having one is not just a best practice—it's a legal requirement under regulations like <strong>GDPR (Europe)</strong>, <strong>CCPA (California)</strong>, and <strong>PIPEDA (Canada)</strong>. The <strong>Aynzo Privacy Policy Generator</strong> helps you create a professional foundation for your platform's legal standing.</p>
+
+<h3>Core Components of a Modern Privacy Policy</h3>
+<p>A comprehensive policy should cover:</p>
+<ul>
+    <li><strong>Data Collection:</strong> What information you collect (names, emails, cookies).</li>
+    <li><strong>Usage Purpose:</strong> Why you need that data (analytics, communication, marketing).</li>
+    <li><strong>Third-Party Sharing:</strong> If you use tools like Google Analytics or Stripe.</li>
+    <li><strong>User Rights:</strong> How users can request data deletion or access.</li>
+</ul>
+
+<h3>GDPR Compliance: Protecting Global Visitors</h3>
+<p>Even if you are based outside of Europe, if you have European visitors, you must comply with GDPR. Our <strong>legal doc creator</strong> includes standard clauses that address data protection rights, ensuring your platform is ready for a global audience.</p>
+
+<div class="bg-card p-6 rounded-2xl border-2 border-border mt-8">
+  <p class="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Legal Disclaimer</p>
+  <p class="text-xs">The generated documents are templates and do not constitute legal advice. While they provide a strong professional starting point, you should have them reviewed by a qualified attorney to ensure 100% compliance with your specific jurisdiction and business model.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Privacy Policy Generator',
+            url: 'https://tools.aynzo.com/tools/privacy-policy-generator',
+            description: 'Create professional privacy policies for websites and mobile applications.',
+            applicationCategory: 'DesignApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'Is this privacy policy legally binding?', answer: 'Yes, once you host it on your site and users agree to it, it becomes a binding agreement between you and your visitors.' },
+            { question: 'Do I need a privacy policy if I don\'t sell anything?', answer: 'Yes. Most websites use cookies or analytics tools which collect IP addresses—this is considered "personal data" under modern laws.' },
+            { question: 'Is the generator free?', answer: 'Absolutely. We provide professional legal templates 100% free of charge.' },
+            { question: 'Can I edit the generated policy?', answer: 'Yes. You can copy the generated text into any word processor or markdown editor to add business-specific details.' },
+            { question: 'What is GDPR?', answer: 'GDPR is a comprehensive data protection law in the EU that gives users control over their personal data.' }
+        ]
+    },
+    'terms-conditions-generator': {
+        title: 'Terms and Conditions Generator - Custom Business Legal Agreements',
+        description: 'Generate professional Terms of Service (ToS) for your website. Protect your intellectual property and set rules for user conduct.',
+        keywords: 'terms and conditions generator, terms of service maker, website rules generator, tos generator, legal agreement maker, professional business docs, terms of use generator',
+        h1: 'Terms and Conditions Generator: Protect Your Online Assets',
+        content: `
+<h2>The Rulebook of Your Website: Understanding Terms of Service</h2>
+<p><strong>Terms and Conditions</strong> (also known as Terms of Service or Terms of Use) act as a contract between you and your users. They set the "rules of engagement" for using your platform, protecting your intellectual property, and limiting your liability. The <strong>Aynzo Terms & Conditions Generator</strong> provides a robust framework to safeguard your business operations.</p>
+
+<h3>Why Terms & Conditions are Essential</h3>
+<ul>
+    <li><strong>IP Protection:</strong> Clarifies that you own the logo, code, and content of the site.</li>
+    <li><strong>User Conduct:</strong> Prevents users from abusing your service or harassing others.</li>
+    <li><strong>Liability Limits:</strong> Protects you from legal claims if the service goes down or contains errors.</li>
+    <li><strong>Termination:</strong> Gives you the right to ban users who violate your rules.</li>
+</ul>
+
+<h3>Choosing the Governing Law</h3>
+<p>One of the most important parts of a <strong>legal agreement generator</strong> is specifying the "Governing Law." This dictates which country or state's laws will apply if a legal dispute arises. Usually, you choose the location where your business is registered.</p>
+
+<div class="bg-card p-6 rounded-2xl border-2 border-border mt-8">
+  <p class="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Pro Tip for Platforms</p>
+  <p class="text-xs">Once generated, make sure your Terms & Conditions are easily accessible from every page of your site (typically in the footer) and presented to users during registration or checkout.</p>
+</div>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Terms & Conditions Generator',
+            url: 'https://tools.aynzo.com/tools/terms-conditions-generator',
+            description: 'Generate professional terms of service and user agreements for online platforms.',
+            applicationCategory: 'DesignApplication',
+            operatingSystem: 'Any'
+        },
+        faq: [
+            { question: 'What is the difference between Terms and a Privacy Policy?', answer: 'Terms and Conditions govern user behavior and your liability, while a Privacy Policy specifically governs how you handle user data.' },
+            { question: 'Do all websites need terms?', answer: 'While not always legally required like a privacy policy, they are highly recommended for any site with users, content, or intellectual property.' },
+            { question: 'Can I use this for an e-commerce store?', answer: 'Yes. Our templates cover standard clauses for usage and intellectual property used by most online businesses.' },
+            { question: 'Is the generator compliant with US law?', answer: 'Our templates are built on standard US and International legal principles, providing a professional foundation for most jurisdictions.' },
+            { question: 'Can I download the terms in Markdown?', answer: 'Yes, our tool allows you to copy or download your terms as a Markdown file (.md) for easy integration into modern sites.' }
+        ]
+    },
 };
 
 // Helper function to get tool SEO data

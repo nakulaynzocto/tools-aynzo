@@ -5,7 +5,9 @@ export interface SocialLinkToolProps {
     | 'paypal-link-generator'
     | 'instagram-hashtag-generator'
     | 'email-validator'
-    | 'url-opener';
+    | 'url-opener'
+    | 'privacy-policy-generator'
+    | 'terms-conditions-generator';
 }
 
 

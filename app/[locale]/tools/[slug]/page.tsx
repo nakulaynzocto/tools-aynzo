@@ -291,6 +291,8 @@ export default async function ToolPage({ params }: Props) {
       case 'instagram-hashtag-generator':
       case 'email-validator':
       case 'url-opener':
+      case 'privacy-policy-generator':
+      case 'terms-conditions-generator':
         return <SocialLinkTools type={params.slug as any} />;
 
       // Tech Utilities
@@ -306,6 +308,14 @@ export default async function ToolPage({ params }: Props) {
       case 'gst-calculator':
       case 'emi-calculator':
       case 'discount-calculator':
+      case 'compound-interest-calculator':
+      case 'mortgage-calculator':
+      case 'sip-calculator':
+      case 'crypto-profit-calculator':
+      case 'inflation-calculator':
+      case 'roi-calculator':
+      case 'cpm-calculator':
+      case 'sales-tax-calculator':
         return <CalculatorTools type={params.slug as any} />;
 
       // Crypto Tools
@@ -414,8 +424,12 @@ export default async function ToolPage({ params }: Props) {
 
 
         <div className="space-y-12">
-          {/* FAQ Section with Schema - Only for English for now to avoid language mismatch */}
-          {params.locale === 'en' && seo?.faq && <FAQSection faqs={seo.faq} />}
+          {/* FAQ Section with Schema - Localized for all languages */}
+          {(() => {
+            const localizedFaqs = tTools.has(`${params.slug}.faq`) ? tTools.raw(`${params.slug}.faq`) : (params.locale === 'en' ? seo?.faq : undefined);
+            if (!localizedFaqs) return null;
+            return <FAQSection title={t('faqTitle')} faqs={localizedFaqs as any} />;
+          })()}
 
           {/* Info Section */}
           {/* 

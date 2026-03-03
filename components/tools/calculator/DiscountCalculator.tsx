@@ -1,28 +1,40 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { Copy, CheckCircle2 } from 'lucide-react';
-import { calculateDiscount } from '@/components/utils/calculator/calculatorProcessing';
+
+interface DiscountResult {
+    final: string;
+    savings: string;
+    tax: string;
+}
 
 export function DiscountCalculator() {
-    const [discount, setDiscount] = useState({ price: '', discount: '', tax: '0' });
-    const [result, setResult] = useState<any>(null);
+    const [inputs, setInputs] = useState({ price: '', discount: '', tax: '0' });
     const [copied, setCopied] = useState(false);
 
-    useEffect(() => {
-        const op = parseFloat(discount.price);
-        const ds = parseFloat(discount.discount);
-        const tx = parseFloat(discount.tax);
-        if (!op) {
-            setResult(null);
-            return;
+    const result = useMemo<DiscountResult | null>(() => {
+        const op = parseFloat(inputs.price);
+        const ds = parseFloat(inputs.discount);
+        const tx = parseFloat(inputs.tax);
+
+        if (!op || isNaN(op)) {
+            return null;
         }
-        const res = calculateDiscount({ originalPrice: op, discountPercent: ds || 0 });
-        const taxAmt = (res.finalPrice * tx) / 100;
-        setResult({ final: (res.finalPrice + taxAmt).toFixed(2), savings: res.discountAmount.toFixed(2), tax: taxAmt.toFixed(2) });
-    }, [discount]);
+
+        const discountAmount = (op * (ds || 0)) / 100;
+        const discountedPrice = op - discountAmount;
+        const taxAmt = (discountedPrice * (tx || 0)) / 100;
+
+        return {
+            final: (discountedPrice + taxAmt).toFixed(2),
+            savings: discountAmount.toFixed(2),
+            tax: taxAmt.toFixed(2)
+        };
+    }, [inputs]);
 
     const copy = () => {
-        const text = typeof result === 'object' ? JSON.stringify(result, null, 2) : result.toString();
+        if (!result) return;
+        const text = `Final Price: ${result.final}\nSavings: ${result.savings}\nTax: ${result.tax}`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -35,16 +47,16 @@ export function DiscountCalculator() {
                 <div className="space-y-4">
                     <div className="space-y-1">
                         <label className="text-xs font-bold uppercase opacity-50">Original Price</label>
-                        <input type="number" value={discount.price} onChange={e => setDiscount({ ...discount, price: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium" placeholder="499" />
+                        <input type="number" value={inputs.price} onChange={e => setInputs({ ...inputs, price: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium focus:border-primary outline-none" placeholder="499" />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-1">
                             <label className="text-xs font-bold uppercase opacity-50">Discount (%)</label>
-                            <input type="number" value={discount.discount} onChange={e => setDiscount({ ...discount, discount: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium" placeholder="20" />
+                            <input type="number" value={inputs.discount} onChange={e => setInputs({ ...inputs, discount: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium focus:border-primary outline-none" placeholder="20" />
                         </div>
                         <div className="space-y-1">
                             <label className="text-xs font-bold uppercase opacity-50">Tax (%)</label>
-                            <input type="number" value={discount.tax} onChange={e => setDiscount({ ...discount, tax: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium" placeholder="5" />
+                            <input type="number" value={inputs.tax} onChange={e => setInputs({ ...inputs, tax: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium focus:border-primary outline-none" placeholder="5" />
                         </div>
                     </div>
                 </div>
@@ -54,12 +66,18 @@ export function DiscountCalculator() {
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[300px] flex flex-col items-center justify-center gap-6">
                         <div className="w-full space-y-4">
-                            {Object.entries(result).map(([k, v]: [string, any]) => (
-                                <div key={k} className="flex justify-between items-center p-4 bg-card rounded-2xl border-2 border-border">
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{k.replace(/([A-Z])/g, ' $1')}</span>
-                                    <span className="text-xl font-black text-foreground">{v}</span>
-                                </div>
-                            ))}
+                            <div className="flex justify-between items-center p-4 bg-card rounded-2xl border-2 border-border animate-in fade-in slide-in-from-bottom-2 duration-300">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Final Price</span>
+                                <span className="text-xl font-black text-primary">${result.final}</span>
+                            </div>
+                            <div className="flex justify-between items-center p-4 bg-card rounded-2xl border-2 border-border animate-in fade-in slide-in-from-bottom-2 duration-500">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Total Savings</span>
+                                <span className="text-xl font-black text-emerald-500">${result.savings}</span>
+                            </div>
+                            <div className="flex justify-between items-center p-4 bg-card rounded-2xl border-2 border-border animate-in fade-in slide-in-from-bottom-2 duration-700">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Tax Amount</span>
+                                <span className="text-xl font-black text-foreground">${result.tax}</span>
+                            </div>
                         </div>
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
@@ -75,5 +93,6 @@ export function DiscountCalculator() {
         </div>
     );
 }
+
 
 

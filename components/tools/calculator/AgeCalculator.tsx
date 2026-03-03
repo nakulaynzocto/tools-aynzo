@@ -1,23 +1,30 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { Copy, CheckCircle2 } from 'lucide-react';
-import { calculateAge } from '@/components/utils/calculator/calculatorProcessing';
+
+interface AgeResult {
+    years: number;
+    months: number;
+    days: number;
+}
 
 export function AgeCalculator() {
     const [ageDate, setAgeDate] = useState('');
-    const [result, setResult] = useState<any>(null);
     const [copied, setCopied] = useState(false);
 
-    useEffect(() => {
+    const result = useMemo<AgeResult | null>(() => {
         if (!ageDate) {
-            setResult(null);
-            return;
+            return null;
         }
         const birthDate = new Date(ageDate);
         const today = new Date();
+        
+        if (birthDate > today) return null;
+
         let years = today.getFullYear() - birthDate.getFullYear();
         let months = today.getMonth() - birthDate.getMonth();
         let days = today.getDate() - birthDate.getDate();
+
         if (days < 0) {
             months--;
             const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
@@ -27,11 +34,12 @@ export function AgeCalculator() {
             years--;
             months += 12;
         }
-        setResult({ years, months, days });
+        return { years, months, days };
     }, [ageDate]);
 
     const copy = () => {
-        const text = typeof result === 'object' ? JSON.stringify(result, null, 2) : result.toString();
+        if (!result) return;
+        const text = `Age: ${result.years} years, ${result.months} months, ${result.days} days`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -51,7 +59,7 @@ export function AgeCalculator() {
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[300px] flex flex-col items-center justify-center gap-6">
                         <div className="text-center space-y-4">
-                            <div className="text-6xl font-black text-primary">{result.years}</div>
+                            <div className="text-6xl font-black text-primary animate-in fade-in zoom-in duration-500">{result.years}</div>
                             <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">Years Young</div>
                             <div className="flex gap-4 opacity-70">
                                 <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold">{result.months} Months</div>
@@ -72,5 +80,6 @@ export function AgeCalculator() {
         </div>
     );
 }
+
 
 

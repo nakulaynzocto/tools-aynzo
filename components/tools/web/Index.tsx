@@ -61,12 +61,12 @@ export default function WebToolsIndex({ type }: WebToolProps) {
     const [copied, setCopied] = useState(false);
 
     const [serp, setSerp] = useState<SERPData>({
-        title: 'AYNZO TOOLS - Professional Online Tools & SEO Utilities',
-        desc: 'Access over 100+ free online tools for developers, designers and SEO professionals. Fast, secure, and easy to use with local browser processing.',
-        url: 'https://tools.aynzo.com'
+        title: '',
+        desc: '',
+        url: ''
     });
 
-    const [redirect, setRedirect] = useState<RedirectData>({ from: '/old-slug', to: 'https://site.com/new-slug', type: '301' });
+    const [redirect, setRedirect] = useState<RedirectData>({ from: '', to: '', type: '301' });
 
     const [iframeUrl, setIframeUrl] = useState('');
     const [resolution, setResolution] = useState<ResolutionData>({ w: 1920, h: 1080, label: 'Desktop' });

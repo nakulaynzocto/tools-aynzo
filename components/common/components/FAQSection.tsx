@@ -9,9 +9,10 @@ interface FAQItem {
 
 interface FAQSectionProps {
     faqs: FAQItem[];
+    title?: string;
 }
 
-export default function FAQSection({ faqs }: FAQSectionProps) {
+export default function FAQSection({ faqs, title }: FAQSectionProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleFAQ = (index: number) => {
@@ -22,7 +23,7 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
 
     return (
         <div className="bg-card rounded-2xl border-2 border-border p-6 sm:p-8 shadow-xl">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6">{title || "Frequently Asked Questions"}</h2>
             <div className="space-y-3">
                 {faqs.map((faq, index) => (
                     <div

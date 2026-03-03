@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { Copy, CheckCircle2 } from 'lucide-react';
 import { generateMD5, generateSHA256, generateSHA512 } from '@/components/utils/crypto/cryptoProcessing';
 
@@ -9,28 +9,22 @@ interface HashToolsProps {
 
 export function HashTools({ type }: HashToolsProps) {
     const [input, setInput] = useState('');
-    const [output, setOutput] = useState('');
     const [copied, setCopied] = useState(false);
 
-    useEffect(() => {
-        if (!input) {
-            setOutput('');
-            return;
-        }
+    const output = useMemo(() => {
+        if (!input) return '';
         try {
-            if (type === 'md5-hash') {
-                setOutput(generateMD5(input));
-            } else if (type === 'sha256-hash') {
-                setOutput(generateSHA256(input));
-            } else if (type === 'sha512-hash') {
-                setOutput(generateSHA512(input));
-            }
+            if (type === 'md5-hash') return generateMD5(input);
+            if (type === 'sha256-hash') return generateSHA256(input);
+            if (type === 'sha512-hash') return generateSHA512(input);
+            return '';
         } catch (error: any) {
-            setOutput('Error: ' + error.message);
+            return 'Error: ' + error.message;
         }
     }, [input, type]);
 
     const copyToClipboard = async () => {
+        if (!output) return;
         try {
             await navigator.clipboard.writeText(output);
             setCopied(true);
@@ -67,7 +61,11 @@ export function HashTools({ type }: HashToolsProps) {
                     </button>
                 </div>
                 <div className="w-full p-6 bg-muted/30 border-2 border-border rounded-3xl font-mono text-sm break-all text-primary shadow-inner min-h-[300px] whitespace-pre-wrap flex flex-col items-center justify-center">
-                    {output ? output : (
+                    {output ? (
+                        <div className="animate-in fade-in duration-300">
+                            {output}
+                        </div>
+                    ) : (
                         <div className="text-muted-foreground/30 flex flex-col items-center gap-2">
                             <span className="text-[10px] font-black uppercase tracking-widest">Waiting for input...</span>
                         </div>
@@ -77,5 +75,6 @@ export function HashTools({ type }: HashToolsProps) {
         </div>
     );
 }
+
 
 

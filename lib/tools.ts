@@ -1264,6 +1264,108 @@ export const tools = [
         group: 'dev-convert',
         seo: { title: 'HTML to JSX Converter', description: 'Convert HTML to React JSX online.' },
         status: 'published'
+    },
+
+    // === NEW HIGH-RPM TOOLS (FINANCE, B2B, TAX) ===
+    {
+        _id: '2001',
+        name: 'Compound Interest Calculator',
+        slug: 'compound-interest-calculator',
+        description: 'Calculate future wealth with compound interest (daily, monthly, yearly).',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Compound Interest Calculator - Wealth Planner', description: 'Calculate how your savings grow over time.' },
+        status: 'published'
+    },
+    {
+        _id: '2002',
+        name: 'Mortgage Calculator',
+        slug: 'mortgage-calculator',
+        description: 'Estimate monthly mortgage payments including PMI, taxes, and insurance.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Mortgage Calculator - US Home Loan Estimator', description: 'Calculate monthly home loan payments with PMI.' },
+        status: 'published'
+    },
+    {
+        _id: '2003',
+        name: 'SIP Calculator',
+        slug: 'sip-calculator',
+        description: 'Calculate returns on your Systematic Investment Plan (SIP) investments.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'SIP Calculator - Mutual Fund Returns Estimator', description: 'Calculate future value of your SIP investments.' },
+        status: 'published'
+    },
+    {
+        _id: '2004',
+        name: 'Crypto Profit Calculator',
+        slug: 'crypto-profit-calculator',
+        description: 'Calculate buy/sell profit or loss for Bitcoin and Altcoins.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Crypto Profit/Loss Calculator', description: 'Instantly calculate your cryptocurrency investment profits.' },
+        status: 'published'
+    },
+    {
+        _id: '2005',
+        name: 'Inflation Calculator',
+        slug: 'inflation-calculator',
+        description: 'Calculate the purchasing power of money over time due to inflation.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Inflation Calculator - Purchasing Power Finder', description: 'Calculate how inflation affects your money value.' },
+        status: 'published'
+    },
+    {
+        _id: '2006',
+        name: 'ROI Calculator',
+        slug: 'roi-calculator',
+        description: 'Calculate Return on Investment (ROI) for marketing and business projects.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'ROI Calculator - Return on Investment Tracker', description: 'Calculate the profitability of your investments.' },
+        status: 'published'
+    },
+    {
+        _id: '2007',
+        name: 'CPM Calculator',
+        slug: 'cpm-calculator',
+        description: 'Calculate Cost Per Mille (CPM) for advertising campaigns.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'CPM Calculator - Ad Campaign Optimizer', description: 'Calculate advertising cost per 1000 impressions.' },
+        status: 'published'
+    },
+    {
+        _id: '2008',
+        name: 'Sales Tax Calculator',
+        slug: 'sales-tax-calculator',
+        description: 'Calculate sales tax for US states and international regions.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Sales Tax Calculator - State & Global Tax Finder', description: 'Calculate sales tax inclusive and exclusive amounts.' },
+        status: 'published'
+    },
+    {
+        _id: '2009',
+        name: 'Privacy Policy Generator',
+        slug: 'privacy-policy-generator',
+        description: 'Generate professional privacy policies for websites and apps.',
+        category: 'social',
+        group: 'social-gen',
+        seo: { title: 'Privacy Policy Generator - Free & Professional', description: 'Create a compliant privacy policy for your website.' },
+        status: 'published'
+    },
+    {
+        _id: '2010',
+        name: 'Terms & Conditions Generator',
+        slug: 'terms-conditions-generator',
+        description: 'Generate customized terms and conditions for your business.',
+        category: 'social',
+        group: 'social-gen',
+        seo: { title: 'Terms and Conditions Generator', description: 'Create terms of service for your platform.' },
+        status: 'published'
     }
 ];
 

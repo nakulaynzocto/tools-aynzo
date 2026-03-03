@@ -1,11 +1,13 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Send, ExternalLink, RefreshCw, Copy, Check, Settings, X, MessageSquare, BadgeDollarSign, Hash, CheckCircle } from 'lucide-react';
+import { Send, ExternalLink, RefreshCw, Copy, Check, Settings, X, MessageSquare, BadgeDollarSign, Hash, CheckCircle, ShieldCheck, Gavel } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
 import { SocialLinkToolProps } from '@/components/types/social/types';
 import { generateWhatsAppLink, generateTelegramLink, generatePayPalLink, generateInstagramHashtags, validateEmail } from '@/components/utils/social/socialProcessing';
+import { PrivacyPolicyGenerator } from './PrivacyPolicyGenerator';
+import { TermsConditionsGenerator } from './TermsConditionsGenerator';
 
 export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
     const socialNavTools = [
@@ -17,8 +19,10 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
             ]
         },
         {
-            category: 'Payment',
+            category: 'Business & Legal',
             tools: [
+                { id: 'privacy-policy-generator', label: 'Privacy Policy', icon: ShieldCheck },
+                { id: 'terms-conditions-generator', label: 'Terms & Conditions', icon: Gavel },
                 { id: 'paypal-link-generator', label: 'PayPal', icon: BadgeDollarSign },
             ]
         },
@@ -54,7 +58,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
     const [email, setEmail] = useState('');
 
     useEffect(() => {
-        if (type === 'url-opener' || type === 'instagram-hashtag-generator') return; // defined manually or via button
+        if (type === 'url-opener' || type === 'instagram-hashtag-generator' || type === 'privacy-policy-generator' || type === 'terms-conditions-generator') return; // defined manually or via button
 
         const process = () => {
             let output = '';
@@ -274,27 +278,32 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
             )}
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-8">
-                    <div className="grid lg:grid-cols-2 gap-8">
-                        <div className="space-y-6">
-                            <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4">
-                                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
-                                    <Settings size={14} /> Input Configuration
-                                </h3>
-                                {renderForm()}
+                    {type === 'privacy-policy-generator' ? (
+                        <PrivacyPolicyGenerator />
+                    ) : type === 'terms-conditions-generator' ? (
+                        <TermsConditionsGenerator />
+                    ) : (
+                        <div className="grid lg:grid-cols-2 gap-8">
+                            <div className="space-y-6">
+                                <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4">
+                                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                                        <Settings size={14} /> Input Configuration
+                                    </h3>
+                                    {renderForm()}
+                                </div>
+                                {type === 'url-opener' && (
+                                    <button
+                                        onClick={handleProcess}
+                                        disabled={loading}
+                                        className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
+                                    >
+                                        {loading ? <RefreshCw className="w-6 h-6 animate-spin" /> : <Check className="w-6 h-6" />}
+                                        <span className="text-lg">
+                                            Open All Links
+                                        </span>
+                                    </button>
+                                )}
                             </div>
-                            {type === 'url-opener' && (
-                                <button
-                                    onClick={handleProcess}
-                                    disabled={loading}
-                                    className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
-                                >
-                                    {loading ? <RefreshCw className="w-6 h-6 animate-spin" /> : <Check className="w-6 h-6" />}
-                                    <span className="text-lg">
-                                        Open All Links
-                                    </span>
-                                </button>
-                            )}
-                        </div>
 
                         <div className="space-y-6 h-full flex flex-col">
                             <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Generated Result</h3>
@@ -345,6 +354,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                             )}
                         </div>
                     </div>
+                )}
                 </div>
             </div>
         </div>

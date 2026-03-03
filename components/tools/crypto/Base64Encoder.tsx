@@ -1,32 +1,29 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { Copy, CheckCircle2 } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { encodeBase64, decodeBase64 } from '@/components/utils/crypto/cryptoProcessing';
 
 export function Base64Encoder() {
     const [input, setInput] = useState('');
-    const [output, setOutput] = useState('');
     const [mode, setMode] = useState<'encode' | 'decode'>('encode');
     const [copied, setCopied] = useState(false);
 
-    useEffect(() => {
-        if (!input) {
-            setOutput('');
-            return;
-        }
+    const output = useMemo(() => {
+        if (!input) return '';
         try {
             if (mode === 'encode') {
-                setOutput(encodeBase64(input));
+                return encodeBase64(input);
             } else {
-                setOutput(decodeBase64(input));
+                return decodeBase64(input);
             }
         } catch (error: any) {
-            setOutput('Error: ' + error.message);
+            return 'Error: Invalid Base64 input';
         }
     }, [input, mode]);
 
     const copyToClipboard = async () => {
+        if (!output) return;
         try {
             await navigator.clipboard.writeText(output);
             setCopied(true);
@@ -88,7 +85,11 @@ export function Base64Encoder() {
                         </button>
                     </div>
                     <div className="w-full p-6 bg-muted/30 border-2 border-border rounded-3xl font-mono text-sm break-all text-primary shadow-inner min-h-[300px] whitespace-pre-wrap flex flex-col items-center justify-center">
-                        {output ? output : (
+                        {output ? (
+                            <div className="text-foreground animate-in fade-in duration-300">
+                                {output}
+                            </div>
+                        ) : (
                             <div className="text-muted-foreground/30 flex flex-col items-center gap-2">
                                 <span className="text-[10px] font-black uppercase tracking-widest">Waiting for input...</span>
                             </div>
@@ -99,5 +100,6 @@ export function Base64Encoder() {
         </div>
     );
 }
+
 
 
