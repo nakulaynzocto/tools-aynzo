@@ -1,6 +1,7 @@
 "use client";
 import { KeyRound, Shield, Binary, Hash, Fingerprint, QrCode } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
+import { useTranslations } from 'next-intl';
 import { CryptoToolProps } from '@/components/types/crypto/types';
 import { Base64Encoder } from './Base64Encoder';
 import { HashTools } from './HashTools';
@@ -9,28 +10,29 @@ import { UUIDGenerator } from './UUIDGenerator';
 import { QRCodeGenerator } from './QRCodeGenerator';
 
 export default function CryptoToolsIndex({ type }: CryptoToolProps) {
+    const t = useTranslations('SecurityNav');
     const securityNavTools = [
         {
-            category: 'Security',
+            category: t('security'),
             tools: [
-                { id: 'password-generator', label: 'Password', icon: KeyRound },
-                { id: 'bcrypt-generator', label: 'Bcrypt', icon: Shield },
+                { id: 'password-generator', label: t('password'), icon: KeyRound },
+                { id: 'bcrypt-generator', label: t('bcrypt'), icon: Shield },
             ]
         },
         {
-            category: 'Hashing',
+            category: t('hashing'),
             tools: [
-                { id: 'base64-encoder', label: 'Base64', icon: Binary },
-                { id: 'md5-hash', label: 'MD5', icon: Hash },
-                { id: 'sha256-hash', label: 'SHA256', icon: Hash },
-                { id: 'sha512-hash', label: 'SHA512', icon: Hash },
+                { id: 'base64-encoder', label: t('base64'), icon: Binary },
+                { id: 'md5-hash', label: t('md5'), icon: Hash },
+                { id: 'sha256-hash', label: t('sha256'), icon: Hash },
+                { id: 'sha512-hash', label: t('sha512'), icon: Hash },
             ]
         },
         {
-            category: 'Generators',
+            category: t('generators'),
             tools: [
-                { id: 'uuid-generator', label: 'UUID', icon: Fingerprint },
-                { id: 'qr-code-generator', label: 'QR Code', icon: QrCode },
+                { id: 'uuid-generator', label: t('uuid'), icon: Fingerprint },
+                { id: 'qr-code-generator', label: t('qrCode'), icon: QrCode },
             ]
         }
     ];

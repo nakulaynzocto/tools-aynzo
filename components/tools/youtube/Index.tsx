@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Image, Tags, Type, Code, Clock, DollarSign, Youtube } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
+import { useTranslations } from 'next-intl';
 import { YouTubeToolProps, YouTubeSettings, YouTubeThumbnails } from '@/components/types/youtube/types';
 import { useYouTubeProcessing } from '@/components/hooks/youtube/useYouTubeProcessing';
 import { ThumbnailDownloader } from './ThumbnailDownloader';
@@ -14,16 +15,17 @@ import { YouTubeSettingsPanel } from './YouTubeSettingsPanel';
 import { YouTubeMoneyCalculator } from './YouTubeMoneyCalculator';
 
 export default function YouTubeToolsIndex({ type }: YouTubeToolProps) {
+    const t = useTranslations('YouTubeNav');
     const youtubeNavTools = [
         {
-            category: 'YouTube Tools',
+            category: t('youtubeTools'),
             tools: [
-                { id: 'youtube-thumbnail-downloader', label: 'Thumbnail', icon: Image },
-                { id: 'youtube-tag-generator', label: 'Tags', icon: Tags },
-                { id: 'youtube-title-generator', label: 'Titles', icon: Type },
-                { id: 'youtube-embed-code-generator', label: 'Embed', icon: Code },
-                { id: 'youtube-timestamp-link-generator', label: 'Timestamp', icon: Clock },
-                { id: 'youtube-money-calculator', label: 'Money Calc', icon: DollarSign },
+                { id: 'youtube-thumbnail-downloader', label: t('thumbnail'), icon: Image },
+                { id: 'youtube-tag-generator', label: t('tags'), icon: Tags },
+                { id: 'youtube-title-generator', label: t('titles'), icon: Type },
+                { id: 'youtube-embed-code-generator', label: t('embed'), icon: Code },
+                { id: 'youtube-timestamp-link-generator', label: t('timestamp'), icon: Clock },
+                { id: 'youtube-money-calculator', label: t('moneyCalc'), icon: DollarSign },
             ]
         }
     ];

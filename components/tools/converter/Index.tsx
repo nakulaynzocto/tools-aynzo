@@ -1,5 +1,6 @@
 "use client";
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
+import { useTranslations } from 'next-intl';
 import { ConverterToolProps } from '@/components/types/converter/types';
 import { UnitConverter } from './UnitConverter';
 import { CurrencyConverter } from './CurrencyConverter';
@@ -10,31 +11,32 @@ import { RomanNumeralConverter } from './RomanNumeralConverter';
 import { Calculator, DollarSign, Palette, Binary, Hash, BookOpen } from 'lucide-react';
 
 export default function ConverterToolsIndex({ type }: ConverterToolProps) {
+    const t = useTranslations('ConverterNav');
     const converterNavTools = [
         {
-            category: 'UNITS',
+            category: t('units'),
             tools: [
-                { id: 'unit-converter', label: 'Unit Converter', icon: Calculator },
+                { id: 'unit-converter', label: t('unitConverter'), icon: Calculator },
             ]
         },
         {
-            category: 'CURRENCY',
+            category: t('currency'),
             tools: [
-                { id: 'currency-converter', label: 'Currency Converter', icon: DollarSign },
+                { id: 'currency-converter', label: t('currencyConverter'), icon: DollarSign },
             ]
         },
         {
-            category: 'COLORS',
+            category: t('colors'),
             tools: [
-                { id: 'color-converter', label: 'Color Converter', icon: Palette },
+                { id: 'color-converter', label: t('colorConverter'), icon: Palette },
             ]
         },
         {
-            category: 'DATA',
+            category: t('data'),
             tools: [
-                { id: 'binary-to-text', label: 'Binary to Text', icon: Binary },
-                { id: 'hex-to-decimal', label: 'Hex to Decimal', icon: Hash },
-                { id: 'roman-numeral', label: 'Roman Numeral', icon: BookOpen },
+                { id: 'binary-to-text', label: t('binaryToText'), icon: Binary },
+                { id: 'hex-to-decimal', label: t('hexToDecimal'), icon: Hash },
+                { id: 'roman-numeral', label: t('romanNumeral'), icon: BookOpen },
             ]
         }
     ];

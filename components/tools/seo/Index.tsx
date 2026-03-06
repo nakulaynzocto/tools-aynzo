@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Code, Share2, Settings, List, Hash, RefreshCw, Search, LinkIcon as LinkIcon, Globe } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
+import { useTranslations } from 'next-intl';
 import { SeoToolProps, MetaData, OpenGraphData, TwitterCardData, RobotsData, SitemapData } from '@/components/types/seo/types';
 import { useSEOProcessing } from '@/components/hooks/seo/useSEOProcessing';
 import { MetaTagGenerator } from './MetaTagGenerator';
@@ -11,31 +12,32 @@ import { RobotsTxtGenerator } from './RobotsTxtGenerator';
 import { SitemapGenerator } from './SitemapGenerator';
 
 export default function SeoToolsIndex({ type }: SeoToolProps) {
+    const t = useTranslations('WebNav');
     const seoNavTools = [
         {
-            category: 'Meta & Optimisation',
+            category: t('metaOptimisation'),
             tools: [
-                { id: 'meta-tag-generator', label: 'Meta Tags', icon: Code },
-                { id: 'open-graph-generator', label: 'Open Graph', icon: Share2 },
-                { id: 'twitter-card-generator', label: 'Twitter Card', icon: Share2 },
-                { id: 'robots-txt-generator', label: 'Robots.txt', icon: Settings },
-                { id: 'xml-sitemap-generator', label: 'Sitemap', icon: List },
+                { id: 'meta-tag-generator', label: t('metaTags'), icon: Code },
+                { id: 'open-graph-generator', label: t('openGraph'), icon: Share2 },
+                { id: 'twitter-card-generator', label: t('twitterCard'), icon: Share2 },
+                { id: 'robots-txt-generator', label: t('robotsTxt'), icon: Settings },
+                { id: 'xml-sitemap-generator', label: t('sitemap'), icon: List },
             ]
         },
         {
-            category: 'Keywords',
+            category: t('keywordTools'),
             tools: [
-                { id: 'keyword-density-checker', label: 'Density', icon: Hash },
-                { id: 'keyword-cleaner', label: 'Cleaner', icon: RefreshCw },
-                { id: 'long-tail-keyword-generator', label: 'Long Tail', icon: Search },
-                { id: 'slug-generator', label: 'Slug', icon: LinkIcon },
+                { id: 'keyword-density-checker', label: t('density'), icon: Hash },
+                { id: 'keyword-cleaner', label: t('cleaner'), icon: RefreshCw },
+                { id: 'long-tail-keyword-generator', label: t('longTail'), icon: Search },
+                { id: 'slug-generator', label: t('slug'), icon: LinkIcon },
             ]
         },
         {
-            category: 'Webmaster',
+            category: t('webmaster'),
             tools: [
-                { id: 'google-serp-simulator', label: 'SERP Sim', icon: Globe },
-                { id: 'htaccess-redirect-generator', label: '.htaccess', icon: Settings },
+                { id: 'google-serp-simulator', label: t('serpSim'), icon: Globe },
+                { id: 'htaccess-redirect-generator', label: t('htaccess'), icon: Settings },
             ]
         }
     ];

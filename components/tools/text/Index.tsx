@@ -12,20 +12,21 @@ import { TextFindReplace } from './TextFindReplace'; // Re-adding this import
 
 export default function TextToolsIndex({ type, hideNavigation = false }: TextToolProps) {
     const t = useTranslations('TextTools');
+    const tNav = useTranslations('TextNav');
     const textNavTools = [
         {
-            category: 'Analysis',
+            category: tNav('analysis'),
             tools: [
-                { id: 'word-counter', label: 'Word Count', icon: FileText },
-                { id: 'character-counter', label: 'Char Count', icon: Hash },
+                { id: 'word-counter', label: tNav('wordCount'), icon: FileText },
+                { id: 'character-counter', label: tNav('charCount'), icon: Hash },
             ]
         },
         {
-            category: 'Manipulation',
+            category: tNav('manipulation'),
             tools: [
-                { id: 'text-case-converter', label: 'Case Converter', icon: Type },
-                { id: 'remove-line-breaks', label: 'Line Breaks', icon: MoveVertical },
-                { id: 'reverse-text', label: 'Reverse Text', icon: RefreshCw },
+                { id: 'text-case-converter', label: tNav('caseConverter'), icon: Type },
+                { id: 'remove-line-breaks', label: tNav('lineBreaks'), icon: MoveVertical },
+                { id: 'reverse-text', label: tNav('reverseText'), icon: RefreshCw },
             ]
         }
     ];

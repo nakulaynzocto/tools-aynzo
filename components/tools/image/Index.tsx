@@ -13,36 +13,28 @@ import { useTranslations } from 'next-intl';
 const TextTools = dynamic(() => import('@/components/tools/text/Index'));
 
 export default function ImageToolsIndex({ type }: ImageToolProps) {
+    const t = useTranslations('ImageNav');
     const tTools = useTranslations('Tools');
     const tTextTools = useTranslations('TextTools');
+    
+    // Helper function to get translated category name
+    const getCategoryLabel = (categoryId: string): string => {
+        try {
+            const translated = t(categoryId);
+            return (translated && translated !== categoryId) ? translated : categoryId;
+        } catch {
+            return categoryId;
+        }
+    };
     
     // Helper function to get translated tool name
     const getToolLabel = (toolId: string, fallback: string): string => {
         try {
             const translated = tTools(`${toolId}.name`);
-            // If translation exists and is not the key itself, use it
-            if (translated && translated !== `${toolId}.name`) {
-                return translated;
-            }
-            return fallback;
+            return (translated && translated !== `${toolId}.name`) ? translated : fallback;
         } catch {
             return fallback;
         }
-    };
-    
-    // Helper function to get translated category name
-    const getCategoryLabel = (categoryKey: string): string => {
-        // Map category keys to translation keys or use fallback
-        const categoryTranslations: Record<string, string> = {
-            'ANALYSIS': 'ANALYSIS',
-            'MANIPULATION': 'MANIPULATION',
-            'OPTIMIZE': 'OPTIMIZE',
-            'CONVERT': 'CONVERT',
-            'BASE64': 'BASE64',
-            'EDIT': 'EDIT',
-            'FILTERS': 'FILTERS'
-        };
-        return categoryTranslations[categoryKey] || categoryKey;
     };
     
     // Navigation tools configuration with translations

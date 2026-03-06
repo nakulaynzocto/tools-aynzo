@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Globe, Settings, Globe2, Info, Monitor, Smartphone, Shield, Code, Share2, List, Hash, RefreshCw, Search, LinkIcon, Type, AtSign } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
+import { useTranslations } from 'next-intl';
 import { WebToolProps, SERPData, RedirectData, ResolutionData } from '@/components/types/web/types';
 import { useWebProcessing } from '@/components/hooks/web/useWebProcessing';
 import { SERPSimulator } from './SERPSimulator';
@@ -11,43 +12,45 @@ import { BrowserInfo } from './BrowserInfo';
 import { ResolutionSimulator } from './ResolutionSimulator';
 
 export default function WebToolsIndex({ type }: WebToolProps) {
+    const t = useTranslations('WebNav');
+
     const seoNavTools = [
         {
-            category: 'Meta & Optimisation',
+            category: t('metaOptimisation'),
             tools: [
-                { id: 'meta-tag-generator', label: 'Meta Tags', icon: Code },
-                { id: 'open-graph-generator', label: 'Open Graph', icon: Share2 },
-                { id: 'twitter-card-generator', label: 'Twitter Card', icon: Share2 },
-                { id: 'robots-txt-generator', label: 'Robots.txt', icon: Settings },
-                { id: 'xml-sitemap-generator', label: 'Sitemap', icon: List },
+                { id: 'meta-tag-generator', label: t('metaTags'), icon: Code },
+                { id: 'open-graph-generator', label: t('openGraph'), icon: Share2 },
+                { id: 'twitter-card-generator', label: t('twitterCard'), icon: Share2 },
+                { id: 'robots-txt-generator', label: t('robotsTxt'), icon: Settings },
+                { id: 'xml-sitemap-generator', label: t('sitemap'), icon: List },
             ]
         },
         {
-            category: 'Keywords',
+            category: t('keywordTools'),
             tools: [
-                { id: 'keyword-density-checker', label: 'Density', icon: Hash },
-                { id: 'keyword-cleaner', label: 'Cleaner', icon: RefreshCw },
-                { id: 'long-tail-keyword-generator', label: 'Long Tail', icon: Search },
-                { id: 'slug-generator', label: 'Slug', icon: LinkIcon },
+                { id: 'keyword-density-checker', label: t('density'), icon: Hash },
+                { id: 'keyword-cleaner', label: t('cleaner'), icon: RefreshCw },
+                { id: 'long-tail-keyword-generator', label: t('longTail'), icon: Search },
+                { id: 'slug-generator', label: t('slug'), icon: LinkIcon },
             ]
         },
         {
-            category: 'Webmaster',
+            category: t('webmaster'),
             tools: [
-                { id: 'google-serp-simulator', label: 'SERP Sim', icon: Globe },
-                { id: 'htaccess-redirect-generator', label: '.htaccess', icon: Settings },
+                { id: 'google-serp-simulator', label: t('serpSim'), icon: Globe },
+                { id: 'htaccess-redirect-generator', label: t('htaccess'), icon: Settings },
             ]
         }
     ];
 
     const utilityNavTools = [
         {
-            category: 'NETWORK & WEB',
+            category: t('connectionBrowser'),
             tools: [
-                { id: 'my-ip-address', label: 'My IP Address', icon: Globe2 },
-                { id: 'browser-info', label: 'Browser Information', icon: Info },
-                { id: 'screen-resolution-simulator', label: 'Screen Resolution Tester', icon: Monitor },
-                { id: 'responsive-checker', label: 'Responsive Design Checker', icon: Smartphone },
+                { id: 'my-ip-address', label: t('myIp'), icon: Globe2 },
+                { id: 'browser-info', label: t('browserInfo'), icon: Info },
+                { id: 'screen-resolution-simulator', label: t('screenRes'), icon: Monitor },
+                { id: 'responsive-checker', label: t('responsive'), icon: Smartphone },
             ]
         }
     ];

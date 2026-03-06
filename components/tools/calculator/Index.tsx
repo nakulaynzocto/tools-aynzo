@@ -35,28 +35,28 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
         {
             category: t('finance'),
             tools: [
-                { id: 'compound-interest-calculator', label: 'Compound Interest', icon: TrendingUp },
-                { id: 'mortgage-calculator', label: 'Mortgage', icon: Home },
-                { id: '401k-retirement-calculator', label: '401k Planner', icon: TrendingUp },
-                { id: 'sip-calculator', label: 'SIP', icon: PieChart },
+                { id: 'compound-interest-calculator', label: t('compoundInterest'), icon: TrendingUp },
+                { id: 'mortgage-calculator', label: t('mortgage'), icon: Home },
+                { id: '401k-retirement-calculator', label: t('retirement401k'), icon: TrendingUp },
+                { id: 'sip-calculator', label: t('sip'), icon: PieChart },
                 { id: 'emi-calculator', label: t('emi'), icon: DollarSign },
                 { id: 'gst-calculator', label: t('gst'), icon: Landmark },
-                { id: 'sales-tax-calculator', label: 'Sales Tax', icon: Calculator },
+                { id: 'sales-tax-calculator', label: t('salesTax'), icon: Calculator },
                 { id: 'discount-calculator', label: t('discount'), icon: Percent },
-                { id: 'dti-calculator', label: 'DTI Ratio', icon: TrendingDown },
-                { id: 'car-loan-calculator', label: 'Car Loan', icon: Car },
-                { id: 'credit-card-payoff-calculator', label: 'Credit Card', icon: CreditCard },
-                { id: 'savings-goal-calculator', label: 'Savings Goal', icon: Target },
-                { id: 'freelance-tax-calculator', label: 'Freelance Tax', icon: Briefcase },
+                { id: 'dti-calculator', label: t('dti'), icon: TrendingDown },
+                { id: 'car-loan-calculator', label: t('carLoan'), icon: Car },
+                { id: 'credit-card-payoff-calculator', label: t('creditCard'), icon: CreditCard },
+                { id: 'savings-goal-calculator', label: t('savingsGoal'), icon: Target },
+                { id: 'freelance-tax-calculator', label: t('freelanceTax'), icon: Briefcase },
             ]
         },
         {
             category: t('business'),
             tools: [
-                { id: 'crypto-profit-calculator', label: 'Crypto Profit', icon: Coins },
-                { id: 'roi-calculator', label: 'ROI', icon: Target },
-                { id: 'cpm-calculator', label: 'CPM', icon: Megaphone },
-                { id: 'inflation-calculator', label: 'Inflation', icon: ArrowDownNarrowWide },
+                { id: 'crypto-profit-calculator', label: t('cryptoProfit'), icon: Coins },
+                { id: 'roi-calculator', label: t('roi'), icon: Target },
+                { id: 'cpm-calculator', label: t('cpm'), icon: Megaphone },
+                { id: 'inflation-calculator', label: t('inflation'), icon: ArrowDownNarrowWide },
             ]
         },
         {
@@ -64,10 +64,10 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
             tools: [
                 { id: 'age-calculator', label: t('age'), icon: Calendar },
                 { id: 'bmi-calculator', label: t('bmi'), icon: Activity },
-                { id: 'tdee-calculator', label: 'TDEE', icon: Flame },
-                { id: 'pregnancy-due-date-calculator', label: 'Pregnancy', icon: Baby },
-                { id: 'macro-calculator', label: 'Macros', icon: Dumbbell },
-                { id: 'ideal-weight-calculator', label: 'Ideal Weight', icon: Scale },
+                { id: 'tdee-calculator', label: t('tdee'), icon: Flame },
+                { id: 'pregnancy-due-date-calculator', label: t('pregnancy'), icon: Baby },
+                { id: 'macro-calculator', label: t('macros'), icon: Dumbbell },
+                { id: 'ideal-weight-calculator', label: t('idealWeight'), icon: Scale },
             ]
         },
         {
