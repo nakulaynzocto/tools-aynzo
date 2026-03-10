@@ -1,10 +1,10 @@
 {
     "Marketing": {
-        "rate": "$15/hora",
-        "bannerText": "Lance su sitio web profesional de alto rendimiento desde {rate}.",
+        "rate": "precios competitivos",
+        "bannerText": "Lance su sitio web profesional. Solicite hoy mismo una demostración gratuita orientada a su negocio.",
         "ctaWhatsApp": "Consulte a un experto",
         "adCardTitle": "¿Necesita una herramienta o sitio web personalizado?",
-        "adCardDesc": "Obtenga un sitio web profesional o una herramienta personalizada para su negocio. Soluciones escalables desde solo {rate}.",
+        "adCardDesc": "Diseñamos sitios web profesionales y herramientas personalizadas adaptadas a su negocio. Obtenga una demostración gratuita de un sitio creado para sus necesidades.",
         "adCardCTA": "Conectar por WhatsApp"
     },
     "HomePage": {
@@ -3334,5 +3334,47 @@
         "FILTERS": "Filters",
         "ANALYSIS": "Analysis",
         "MANIPULATION": "Manipulation"
+    },
+    "Calculators": {
+        "CompoundInterest": {
+            "inputsTitle": "Datos de Inversión",
+            "initialPrincipal": "Capital Inicial ($)",
+            "annualRate": "Tasa Anual (%)",
+            "timeInYears": "Tiempo (Años)",
+            "compoundingFrequency": "Frecuencia de Capitalización",
+            "freqAnnually": "Anual (1/año)",
+            "freqSemiAnnually": "Semestral (2/año)",
+            "freqQuarterly": "Trimestral (4/año)",
+            "freqMonthly": "Mensual (12/año)",
+            "freqDaily": "Diaria (365/año)",
+            "monthlyContribution": "Contribución Mensual ($)",
+            "resultTitle": "Resultado del Crecimiento del Patrimonio",
+            "totalFutureValue": "Valor Futuro Total",
+            "totalInvested": "Total Invertido",
+            "interestAccrued": "Interés Acumulado",
+            "wealthInfo": "El interés compuesto le permite ganar intereses sobre los intereses, lo que lleva a un crecimiento exponencial con el tiempo. Las contribuciones mensuales aceleran significativamente la creación de su patrimonio.",
+            "copyFullBreakdown": "Copiar Desglose Completo",
+            "emptyPrompt": "Ingrese datos para proyectar el patrimonio"
+        },
+        "Mortgage": {
+            "inputsTitle": "Detalles de la Propiedad",
+            "homePrice": "Precio de la Vivienda",
+            "downPayment": "Pago Inicial",
+            "interestRate": "Tasa de Interés (%)",
+            "loanTerm": "Plazo del Préstamo",
+            "termYears": "{years} Años Fijo",
+            "propertyTaxes": "Impuestos sobre la Propiedad (Anual)",
+            "insurance": "Seguro (Anual)",
+            "resultTitle": "Desglose del Pago Mensual",
+            "monthlyPayment": "Pago Mensual Estimado",
+            "principalAndInterest": "Capital e Interés",
+            "taxesAndInsurance": "Impuestos y Seguros",
+            "pmiIncluded": "PMI Incluido",
+            "totalInterestPaid": "Interés Total Pagado",
+            "copyFullBreakdown": "Copiar Desglose Completo",
+            "detailsCopied": "Detalles Copiados",
+            "emptyPrompt": "Ingrese los detalles para ver el desglose",
+            "mortgageInfo": "Un pago inicial del 20% suele eliminar la necesidad de un Seguro Hipotecario Privado (PMI), ahorrándole cientos cada mes."
+        }
     }
 }

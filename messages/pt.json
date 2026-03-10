@@ -1,10 +1,10 @@
 {
     "Marketing": {
-        "rate": "$15/hora",
-        "bannerText": "Lance seu site profissional de alto desempenho a partir de {rate}.",
+        "rate": "preços competitivos",
+        "bannerText": "Lance o seu website profissional. Peça hoje mesmo uma demonstração gratuita personalizada para o seu negócio.",
         "ctaWhatsApp": "Consulte um especialista",
         "adCardTitle": "Precisa de uma ferramenta ou site personalizado?",
-        "adCardDesc": "Obtenha um site profissional ou ferramenta personalizada para o seu negócio. Soluções dimensionáveis a partir de apenas {rate}.",
+        "adCardDesc": "Projetamos websites profissionais e ferramentas personalizadas adaptadas ao seu negócio. Peça uma demonstração gratuita de un site criado para as suas necessidades.",
         "adCardCTA": "Conectar pelo WhatsApp"
     },
     "HomePage": {
@@ -3334,5 +3334,47 @@
         "FILTERS": "Filters",
         "ANALYSIS": "Analysis",
         "MANIPULATION": "Manipulation"
+    },
+    "Calculators": {
+        "CompoundInterest": {
+            "inputsTitle": "Entradas de Investimento",
+            "initialPrincipal": "Capital Inicial ($)",
+            "annualRate": "Taxa Anual (%)",
+            "timeInYears": "Tempo (Anos)",
+            "compoundingFrequency": "Frequência de Capitalização",
+            "freqAnnually": "Anualmente (1/ano)",
+            "freqSemiAnnually": "Semestralmente (2/ano)",
+            "freqQuarterly": "Trimestralmente (4/ano)",
+            "freqMonthly": "Mensalmente (12/ano)",
+            "freqDaily": "Diariamente (365/ano)",
+            "monthlyContribution": "Contribuição Mensual ($)",
+            "resultTitle": "Resultado do Crescimento de Patrimônio",
+            "totalFutureValue": "Valor Futuro Total",
+            "totalInvested": "Total Investido",
+            "interestAccrued": "Juros Acumulados",
+            "wealthInfo": "Os juros compostos permitem que você ganhe juros sobre juros, levando a um crescimento exponencial ao longo do tempo. As contribuições mensais aceleram significativamente a construção de sua riqueza.",
+            "copyFullBreakdown": "Copiar Detalhamento Completo",
+            "emptyPrompt": "Insira dados para projetar patrimônio"
+        },
+        "Mortgage": {
+            "inputsTitle": "Detalhes da Propriedade",
+            "homePrice": "Preço da Casa",
+            "downPayment": "Entrada",
+            "interestRate": "Taxa de Juros (%)",
+            "loanTerm": "Prazo do Empréstimo",
+            "termYears": "{years} Anos Fixo",
+            "propertyTaxes": "Impostos sobre Propriedade (Anual)",
+            "insurance": "Seguro (Anual)",
+            "resultTitle": "Detalhamento do Pagamento Mensual",
+            "monthlyPayment": "Pagamento Mensal Estimado",
+            "principalAndInterest": "Principal e Juros",
+            "taxesAndInsurance": "Impostos e Seguro",
+            "pmiIncluded": "PMI Incluído",
+            "totalInterestPaid": "Total de Juros Pagos",
+            "copyFullBreakdown": "Copiar Detalhamento Completo",
+            "detailsCopied": "Detalhes Copiados",
+            "emptyPrompt": "Insira detalhes para ver o detalhamento",
+            "mortgageInfo": "Uma entrada de 20% geralmente elimina a necessidade de Seguro Hipotecário Privado (PMI), economizando centenas todos os meses."
+        }
     }
 }

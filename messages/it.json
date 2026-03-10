@@ -1,10 +1,10 @@
 {
     "Marketing": {
-        "rate": "15 €/ora",
-        "bannerText": "Lancia il tuo sito web professionale ad alte prestazioni a partire da {rate}.",
+        "rate": "prezzi competitivi",
+        "bannerText": "Lancia il tuo sito web professionale. Richiedi oggi una demo gratuita personalizzata per il tuo business.",
         "ctaWhatsApp": "Consulta un esperto",
         "adCardTitle": "Serve un tool o un sito personalizzato?",
-        "adCardDesc": "Ottieni un sito web professionale o un tool personalizzato per il tuo business. Da soli {rate}.",
+        "adCardDesc": "Progettiamo siti web professionali e strumenti personalizzati su misura per la tua attività. Ottieni una demo gratuita di un sito creato per le tue esigenze.",
         "adCardCTA": "Contatta su WhatsApp"
     },
     "HomePage": {
@@ -3378,5 +3378,47 @@
         "FILTERS": "Filters",
         "ANALYSIS": "Analysis",
         "MANIPULATION": "Manipulation"
+    },
+    "Calculators": {
+        "CompoundInterest": {
+            "inputsTitle": "Input di Investimento",
+            "initialPrincipal": "Capitale Iniziale ($)",
+            "annualRate": "Tasso Annuo (%)",
+            "timeInYears": "Tempo (Anni)",
+            "compoundingFrequency": "Frequenza di Capitalizzazione",
+            "freqAnnually": "Annuale (1/anno)",
+            "freqSemiAnnually": "Semestrale (2/anno)",
+            "freqQuarterly": "Trimestrale (4/anno)",
+            "freqMonthly": "Mensile (12/anno)",
+            "freqDaily": "Giornaliera (365/anno)",
+            "monthlyContribution": "Contributo Mensile ($)",
+            "resultTitle": "Risultato della Crescita Patrimoniale",
+            "totalFutureValue": "Valore Futuro Totale",
+            "totalInvested": "Totale Investito",
+            "interestAccrued": "Interessi Maturati",
+            "wealthInfo": "L'interesse composto ti consente di guadagnare interessi sugli interessi, portando a una crescita esponenziale nel tempo. I contributi mensili accelerano significativamente la costruzione della tua ricchezza.",
+            "copyFullBreakdown": "Copia Ripartizione Completa",
+            "emptyPrompt": "Inserisci i dati per proiettare il patrimonio"
+        },
+        "Mortgage": {
+            "inputsTitle": "Dettagli della Proprietà",
+            "homePrice": "Prezzo della Casa",
+            "downPayment": "Acconto",
+            "interestRate": "Tasso di Interesse (%)",
+            "loanTerm": "Durata del Prestito",
+            "termYears": "{years} Anni Fisso",
+            "propertyTaxes": "Tasse sulla Proprietà (Annuali)",
+            "insurance": "Assicurazione (Annuale)",
+            "resultTitle": "Ripartizione del Pagamento Mensile",
+            "monthlyPayment": "Pagamento Mensile Stimato",
+            "principalAndInterest": "Capitale e Interessi",
+            "taxesAndInsurance": "Tasse e Assicurazione",
+            "pmiIncluded": "PMI Incluso",
+            "totalInterestPaid": "Interessi Totali Pagati",
+            "copyFullBreakdown": "Copia Ripartizione Completa",
+            "detailsCopied": "Dettagli Copiati",
+            "emptyPrompt": "Inserisci i dettagli per vedere la ripartizione",
+            "mortgageInfo": "Un acconto del 20% di solito elimina la necessità di un'Assicurazione Mutuo Privata (PMI), risparmiando centinaia ogni mese."
+        }
     }
 }

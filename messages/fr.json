@@ -1,10 +1,10 @@
 {
     "Marketing": {
-        "rate": "15 $/heure",
-        "bannerText": "Lancez votre site Web professionnel performant à partir de {rate}.",
+        "rate": "prix compétitifs",
+        "bannerText": "Lancez votre site Web professionnel. Demandez dès aujourd'hui une démo gratuite adaptée à votre entreprise.",
         "ctaWhatsApp": "Consultez un expert",
         "adCardTitle": "Need a Custom Tool or Website?",
-        "adCardDesc": "Obtenez un site Web ou un outil personnalisé professionnel pour votre entreprise. Solutions évolutives à partir de {rate}.",
+        "adCardDesc": "Nous concevons des sites Web professionnels et des outils personnalisés adaptés à votre entreprise. Obtenez une démo gratuite d'un site conçu pour vos besoins.",
         "adCardCTA": "Contactez-nous sur WhatsApp"
     },
     "HomePage": {
@@ -3342,5 +3342,47 @@
         "FILTERS": "Filters",
         "ANALYSIS": "Analysis",
         "MANIPULATION": "Manipulation"
+    },
+    "Calculators": {
+        "CompoundInterest": {
+            "inputsTitle": "Entrées d'investissement",
+            "initialPrincipal": "Capital initial ($)",
+            "annualRate": "Taux annuel (%)",
+            "timeInYears": "Durée (Années)",
+            "compoundingFrequency": "Fréquence de capitalisation",
+            "freqAnnually": "Annuellement (1/an)",
+            "freqSemiAnnually": "Semestriellement (2/an)",
+            "freqQuarterly": "Trimestriellement (4/an)",
+            "freqMonthly": "Mensuellement (12/an)",
+            "freqDaily": "Quotidiennement (365/an)",
+            "monthlyContribution": "Contribution mensuelle ($)",
+            "resultTitle": "Résultat de la croissance du patrimoine",
+            "totalFutureValue": "Valeur future totale",
+            "totalInvested": "Total investi",
+            "interestAccrued": "Intérêts courus",
+            "wealthInfo": "L'intérêt composé vous permet de gagner des intérêts sur les intérêts, ce qui entraîne une croissance exponentielle au fil du temps. Les contributions mensuelles accélèrent considérablement la constitution de votre patrimoine.",
+            "copyFullBreakdown": "Copier la ventilation complète",
+            "emptyPrompt": "Saisir les données pour projeter le patrimoine"
+        },
+        "Mortgage": {
+            "inputsTitle": "Détails de la propriété",
+            "homePrice": "Prix de la maison",
+            "downPayment": "Apport personnel",
+            "interestRate": "Taux d'intérêt (%)",
+            "loanTerm": "Durée du prêt",
+            "termYears": "{years} ans fixe",
+            "propertyTaxes": "Taxes foncières (annuelles)",
+            "insurance": "Assurance (annuelle)",
+            "resultTitle": "Ventilation du paiement mensuel",
+            "monthlyPayment": "Paiement mensuel estimé",
+            "principalAndInterest": "Capital et intérêts",
+            "taxesAndInsurance": "Taxes et assurance",
+            "pmiIncluded": "PMI inclus",
+            "totalInterestPaid": "Intérêt total payé",
+            "copyFullBreakdown": "Copier la ventilation complète",
+            "detailsCopied": "Détails copiés",
+            "emptyPrompt": "Saisir les détails pour voir la ventilation",
+            "mortgageInfo": "Un apport de 20 % élimine généralement le besoin d'une assurance hypothécaire privée (PMI), ce qui vous permet d'économiser des centaines de dollars chaque mois."
+        }
     }
 }

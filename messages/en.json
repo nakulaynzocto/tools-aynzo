@@ -1,10 +1,10 @@
 {
     "Marketing": {
-        "rate": "$15/hour",
-        "bannerText": "Launch your professional business website with high performance, starting at {rate}.",
+        "rate": "competitive rates",
+        "bannerText": "Launch your professional website. Get a free demo tailored to your business today.",
         "ctaWhatsApp": "Consult an Expert",
         "adCardTitle": "Need a Custom Tool or Website?",
-        "adCardDesc": "Get a professional, high-performance website or custom tool for your business. Scalable solutions starting at just {rate}.",
+        "adCardDesc": "We design professional websites and custom tools tailored to your business. Get a free demo of a site built for your specific needs.",
         "adCardCTA": "Connect on WhatsApp"
     },
     "HomePage": {
@@ -2219,6 +2219,26 @@
             "wealthInfo": "Compound interest allows you to earn interest on interest, leading to exponential growth over time. Monthly contributions significantly accelerate your wealth building.",
             "copyFullBreakdown": "Copy Full Breakdown",
             "emptyPrompt": "Enter data to project wealth"
+        },
+        "Mortgage": {
+            "inputsTitle": "Property Details",
+            "homePrice": "Home Price",
+            "downPayment": "Down Payment",
+            "interestRate": "Interest Rate (%)",
+            "loanTerm": "Loan Term",
+            "termYears": "{years} Years Fixed",
+            "propertyTaxes": "Property Taxes (Yearly)",
+            "insurance": "Insurance (Yearly)",
+            "resultTitle": "Monthly Payment Breakdown",
+            "monthlyPayment": "Estimated Monthly Payment",
+            "principalAndInterest": "Principal & Interest",
+            "taxesAndInsurance": "Taxes & Insurance",
+            "pmiIncluded": "PMI Included",
+            "totalInterestPaid": "Total Interest Paid",
+            "copyFullBreakdown": "Copy Full Breakdown",
+            "detailsCopied": "Details Copied",
+            "emptyPrompt": "Enter details to see breakdown",
+            "mortgageInfo": "A 20% down payment usually eliminates the need for Private Mortgage Insurance (PMI), saving you hundreds every month."
         }
     }
 }

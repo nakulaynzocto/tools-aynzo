@@ -1,10 +1,10 @@
 {
     "Marketing": {
-        "rate": "15 €/Stunde",
-        "bannerText": "Starten Sie Ihre professionelle Website mit hoher Performance ab {rate}.",
+        "rate": "wettbewerbsfähige Preise",
+        "bannerText": "Starten Sie Ihre professionelle Webseite. Fordern Sie noch heute eine kostenlose, auf Ihr Unternehmen zugeschnittene Demo an.",
         "ctaWhatsApp": "Experten beraten lassen",
         "adCardTitle": "Benötigen Sie ein Tool oder eine Website?",
-        "adCardDesc": "Holen Sie sich eine professionelle Website oder ein maßgeschneidertes Tool für Ihr Unternehmen. Ab nur {rate}.",
+        "adCardDesc": "Wir entwerfen professionelle Webseiten und maßgeschneiderte Tools für Ihr Unternehmen. Holen Sie sich eine kostenlose Demo einer für Ihr Geschäft erstellten Seite.",
         "adCardCTA": "Per WhatsApp kontaktieren"
     },
     "HomePage": {
@@ -3342,5 +3342,47 @@
         "FILTERS": "Filters",
         "ANALYSIS": "Analysis",
         "MANIPULATION": "Manipulation"
+    },
+    "Calculators": {
+        "CompoundInterest": {
+            "inputsTitle": "Investment-Eingaben",
+            "initialPrincipal": "Anfangskapital ($)",
+            "annualRate": "Jahreszinssatz (%)",
+            "timeInYears": "Zeit (Jahre)",
+            "compoundingFrequency": "Zinseszins-Intervall",
+            "freqAnnually": "Jährlich (1/Jahr)",
+            "freqSemiAnnually": "Halbjährlich (2/Jahr)",
+            "freqQuarterly": "Vierteljährlich (4/Jahr)",
+            "freqMonthly": "Monatlich (12/Jahr)",
+            "freqDaily": "Täglich (365/Jahr)",
+            "monthlyContribution": "Monatlicher Beitrag ($)",
+            "resultTitle": "Ergebnis des Vermögenswachstums",
+            "totalFutureValue": "Bestandsentwicklung",
+            "totalInvested": "Gesamte Investition",
+            "interestAccrued": "Aufgelaufene Zinsen",
+            "wealthInfo": "Zinseszinsen ermöglichen es Ihnen, Zinsen auf Zinsen zu verdienen, was im Laufe der Zeit zu einem exponentiellen Wachstum führt. Monatliche Beiträge beschleunigen Ihren Vermögensaufbau erheblich.",
+            "copyFullBreakdown": "Vollständige Aufschlüsselung kopieren",
+            "emptyPrompt": "Daten eingeben, um das Vermögen zu projizieren"
+        },
+        "Mortgage": {
+            "inputsTitle": "Immobiliendetails",
+            "homePrice": "Hauspreis",
+            "downPayment": "Anzahlung",
+            "interestRate": "Zinssatz (%)",
+            "loanTerm": "Kreditlaufzeit",
+            "termYears": "{years} Jahre fest",
+            "propertyTaxes": "Grundsteuer (jährlich)",
+            "insurance": "Versicherung (jährlich)",
+            "resultTitle": "Monatliche Zahlungsaufschlüsselung",
+            "monthlyPayment": "Geschätzte monatliche Rate",
+            "principalAndInterest": "Tilgung & Zinsen",
+            "taxesAndInsurance": "Steuern & Versicherungen",
+            "pmiIncluded": "Inklusive PMI",
+            "totalInterestPaid": "Gezahlte Gesamtzinsen",
+            "copyFullBreakdown": "Vollständige Aufschlüsselung kopieren",
+            "detailsCopied": "Details kopiert",
+            "emptyPrompt": "Details eingeben, um Aufschlüsselung zu sehen",
+            "mortgageInfo": "Eine Anzahlung von 20 % erübrigt in der Regel eine private Hypothekenversicherung (PMI), wodurch Sie jeden Monat Hunderte sparen."
+        }
     }
 }
