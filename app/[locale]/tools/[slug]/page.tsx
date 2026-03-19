@@ -61,15 +61,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const localizedTitle = tTools.has(`${params.slug}.seoTitle`)
       ? tTools(`${params.slug}.seoTitle`)
-      : (params.locale === 'en' ? (seo?.title || fallbackSeo?.title) : (fallbackSeo?.title || seo?.title));
+      : (seo?.title || fallbackSeo?.title);
 
     const localizedDesc = tTools.has(`${params.slug}.seoDescription`)
       ? tTools(`${params.slug}.seoDescription`)
-      : (params.locale === 'en' ? (seo?.description || fallbackSeo?.description) : (fallbackSeo?.description || seo?.description));
+      : (seo?.description || fallbackSeo?.description);
 
     const localizedKeywords = tTools.has(`${params.slug}.seoKeywords`)
       ? tTools(`${params.slug}.seoKeywords`)
-      : (params.locale === 'en' ? (seo?.keywords || fallbackSeo?.keywords) : (fallbackSeo?.keywords || seo?.keywords));
+      : (seo?.keywords || fallbackSeo?.keywords);
 
     // Final fallback if nothing exists (should be covered by fallbackSeo now)
     const finalTitle = localizedTitle || `Free Online ${name} | AYNZO TOOLS`;
@@ -454,7 +454,7 @@ export default async function ToolPage({ params }: Props) {
         <div className="space-y-12">
           {/* FAQ Section with Schema - Localized for all languages */}
           {(() => {
-            const localizedFaqs = tTools.has(`${params.slug}.faq`) ? tTools.raw(`${params.slug}.faq`) : (params.locale === 'en' ? seo?.faq : undefined);
+            const localizedFaqs = tTools.has(`${params.slug}.faq`) ? tTools.raw(`${params.slug}.faq`) : (seo?.faq);
             if (!localizedFaqs) return null;
             return <FAQSection title={t('faqTitle')} faqs={localizedFaqs as any} />;
           })()}
@@ -469,7 +469,7 @@ export default async function ToolPage({ params }: Props) {
           <ToolInfoSection
             name={translatedName}
             description={translatedDesc}
-            content={tTools.has(`${params.slug}.content`) ? tTools.raw(`${params.slug}.content`) : (params.locale === 'en' ? seo?.content : undefined)}
+            content={tTools.has(`${params.slug}.content`) ? tTools.raw(`${params.slug}.content`) : (seo?.content)}
           />
 
           <ShareButtons
