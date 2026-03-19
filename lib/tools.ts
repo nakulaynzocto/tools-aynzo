@@ -7,7 +7,7 @@ export const tools = [
         description: 'Compress JPG, PNG, and WebP images without losing quality.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Free Image Compressor', description: 'Best online image compressor.' },
+        seo: { title: 'Image Compressor - Reduce JPG, PNG & WebP Size Without Quality Loss', description: 'Best free online image compressor. Reduce image file size by up to 90% without losing quality. Fast, secure, and 100% browser-based.' },
         status: 'published'
     },
     {
@@ -17,7 +17,7 @@ export const tools = [
         description: 'Resize your images to exact pixel dimensions or percentage.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Free Image Resizer', description: 'Resize images online for free.' },
+        seo: { title: 'Free Image Resizer - Resize JPG/PNG Online by Pixels or Percentage', description: 'Quickly resize your images to exact dimensions or percentage for social media and web. Maintaining aspect ratio is easy.' },
         status: 'published',
     },
     {
@@ -371,7 +371,7 @@ export const tools = [
         description: 'Count words, characters, sentences, and paragraphs.',
         category: 'text',
         group: 'text-analyze',
-        seo: { title: 'Word Counter Tool', description: 'Free online word counter.' },
+        seo: { title: 'Free Word Counter - Count Words, Characters & Reading Time Instantly', description: 'Best free online word count tool. Tracks words, characters (with and without spaces), sentences, and reading time in real-time.' },
         status: 'published'
     },
     {
@@ -381,7 +381,7 @@ export const tools = [
         description: 'Count characters with or without spaces.',
         category: 'text',
         group: 'text-analyze',
-        seo: { title: 'Character Counter', description: 'Online character counter.' },
+        seo: { title: 'Character Counter - Free Exact Character Count (with/without spaces)', description: 'Professional character count tool for social media limits and SEO meta descriptions. Real-time character and word analysis.' },
         status: 'published',
     },
     {
@@ -560,7 +560,7 @@ export const tools = [
         description: 'Beautify and validate your JSON data.',
         category: 'developer',
         group: 'dev-format',
-        seo: { title: 'JSON Formatter & Validator', description: 'Format JSON online.' },
+        seo: { title: 'JSON Formatter & Validator - Prettify & Debug JSON Online', description: 'Professional developer tool to format, beautify, and validate JSON data. 100% private and secure terminal-style editor.' },
         status: 'published'
     },
     {

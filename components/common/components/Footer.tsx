@@ -11,6 +11,7 @@ export default function Footer() {
     const tCat = useTranslations('NavbarCategories');
     const tCategories = useTranslations('Categories');
     const tFooter = useTranslations('Footer');
+    const tTools = useTranslations('Tools'); // Added this line
     const currentYear = new Date().getFullYear();
 
     return (
@@ -43,72 +44,62 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Quick Categories */}
-                    <div>
-                        <h4 className="text-foreground font-black text-sm uppercase tracking-widest mb-6 border-l-4 border-primary pl-3">
-                            {tFooter('topCategories')}
-                        </h4>
-                        <ul className="space-y-3">
-                            {Object.keys(toolCategories).slice(0, 5).map(category => (
-                                <li key={category}>
-                                    <Link
-                                        href={`/tools`}
-                                        className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
-                                    >
-                                        {tCat.has(category) ? tCat(category) : (tCategories.has(category) ? tCategories(category) : category)}
+                    {/* Tool Categories - SEO Links */}
+                    <div className="lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8">
+                        {Object.entries(toolCategories).slice(0, 3).map(([category, tools]) => (
+                            <div key={category}>
+                                <h4 className="text-foreground font-black text-[11px] uppercase tracking-widest mb-4 opacity-70">
+                                    {tCat.has(category) ? tCat(category) : category}
+                                </h4>
+                                <ul className="space-y-2">
+                                    {tools.slice(0, 6).map(tool => (
+                                        <li key={tool.slug}>
+                                            <Link
+                                                href={`/tools/${tool.slug}`}
+                                                className="text-muted-foreground/60 hover:text-primary transition-colors text-[13px] font-medium"
+                                            >
+                                                {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Resources & Support */}
+                    <div className="space-y-8">
+                        <div>
+                            <h4 className="text-foreground font-black text-[11px] uppercase tracking-widest mb-4 opacity-70">
+                                {tFooter('resources')}
+                            </h4>
+                            <ul className="space-y-2">
+                                <li>
+                                    <Link href="/about" className="text-muted-foreground/60 hover:text-primary transition-colors text-[13px] font-medium flex items-center gap-2">
+                                        <Info size={12} /> {tFooter('aboutUs')}
                                     </Link>
                                 </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Legal & Help */}
-                    <div>
-                        <h4 className="text-foreground font-black text-sm uppercase tracking-widest mb-6 border-l-4 border-accent pl-3">
-                            {tFooter('resources')}
-                        </h4>
-                        <ul className="space-y-3">
-                            <li>
-                                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium flex items-center gap-2">
-                                    <Info size={14} /> {tFooter('aboutUs')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium flex items-center gap-2">
-                                    <Mail size={14} /> {tFooter('contact')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium flex items-center gap-2">
-                                    <Shield size={14} /> {tFooter('privacyPolicy')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium flex items-center gap-2">
-                                    <FileText size={14} /> {tFooter('termsOfService')}
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Mission Section */}
-                    <div className="bg-secondary/30 p-6 rounded-3xl border border-border relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
-                            <Heart size={80} className="fill-current text-primary" />
+                                <li>
+                                    <Link href="/contact" className="text-muted-foreground/60 hover:text-primary transition-colors text-[13px] font-medium flex items-center gap-2">
+                                        <Mail size={12} /> {tFooter('contact')}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/privacy" className="text-muted-foreground/60 hover:text-primary transition-colors text-[13px] font-medium flex items-center gap-2">
+                                        <Shield size={12} /> Privacy
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
-                        <h4 className="text-foreground font-black text-sm uppercase tracking-widest mb-4">{tFooter('ourMission')}</h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed relative z-10">
-                            {tFooter('missionStatement')}
-                        </p>
-                        <div className="mt-6 pt-6 border-t border-border/50 flex flex-col gap-3">
-                            <div className="text-[10px] font-black uppercase text-muted-foreground/40">{tFooter('securePrivate')}</div>
+                        <div className="bg-primary/5 p-4 rounded-2xl border border-primary/10">
+                            <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider mb-3">Support Project</p>
                             <a
                                 href="https://www.buymeacoffee.com/aynzo"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 bg-[#FFDD00] text-black px-4 py-2 rounded-lg font-bold text-xs hover:bg-[#FFDD00]/90 transition-colors"
+                                className="inline-flex items-center gap-2 bg-[#FFDD00] text-black px-3 py-1.5 rounded-lg font-bold text-[10px] hover:bg-[#FFDD00]/90 transition-colors w-full justify-center"
                             >
-                                <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" className="w-4 h-4" />
+                                <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" className="w-3.5 h-3.5" />
                                 <span>Buy me a coffee</span>
                             </a>
                         </div>

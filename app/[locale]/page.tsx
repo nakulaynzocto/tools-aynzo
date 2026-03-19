@@ -4,6 +4,9 @@ import { locales } from '@/i18n';
 import Image from 'next/image';
 import { Shield, Zap, Image as ImageIcon, FileText, Code, ArrowRight } from 'lucide-react';
 import HeroSearch from '@/components/common/components/HeroSearch';
+import { Link } from '@/navigation';
+
+import ToolDirectory from '@/components/common/components/ToolDirectory';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -15,9 +18,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
   return {
     title: {
-      absolute: `${t('title')} | ${tApp('name')}`
+      absolute: `${t('title')} | ${tApp('name')} - 100% Free & Secure Online Tools`
     },
-    description: t('description'),
+    description: "Professional suite of free online tools for developers, designers, and creators. Image compression, PDF conversion, text formatting, and developer utilities. All processed 100% locally in your browser for total privacy.",
+    keywords: "aynzo tools, free online tools, image compressor, word counter, pdf to word, json formatter, privacy first tools, developer utilities, online calculator",
     alternates: {
       canonical: `https://tools.aynzo.com/${locale}`,
       languages: {
@@ -51,7 +55,8 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       icon: ImageIcon,
       image: "/assets/image_tools.png",
       color: "from-blue-500/20 to-purple-500/20",
-      accent: "text-blue-500"
+      accent: "text-blue-500",
+      href: "/tools"
     },
     {
       title: t('capabilities.pdf.title'),
@@ -59,7 +64,8 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       icon: FileText,
       image: "/assets/pdf_tools.png",
       color: "from-orange-500/20 to-red-500/20",
-      accent: "text-orange-500"
+      accent: "text-orange-500",
+      href: "/tools"
     },
     {
       title: t('capabilities.dev.title'),
@@ -67,7 +73,8 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       icon: Code,
       image: "/assets/dev_tools.png",
       color: "from-green-500/20 to-emerald-500/20",
-      accent: "text-emerald-500"
+      accent: "text-emerald-500",
+      href: "/tools"
     },
     {
       title: t('capabilities.privacy.title'),
@@ -75,7 +82,8 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       icon: Shield,
       image: "/assets/security_privacy.png",
       color: "from-indigo-500/20 to-blue-500/20",
-      accent: "text-indigo-500"
+      accent: "text-indigo-500",
+      href: "/tools"
     }
   ];
 
@@ -113,7 +121,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
 
             {/* Image Container */}
             <div className="flex-1 w-full max-w-2xl group">
-              <div className={`relative aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br ${cap.color} ring-1 ring-border/50 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02] group-hover:-rotate-1`}>
+              <Link href={cap.href} className={`relative block aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br ${cap.color} ring-1 ring-border/50 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02] group-hover:-rotate-1`}>
                 <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <Image 
                   src={cap.image} 
@@ -123,7 +131,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   className="object-contain p-12 drop-shadow-2xl transition-all duration-700 group-hover:scale-110"
                 />
-              </div>
+              </Link>
             </div>
           </div>
         ))}
@@ -154,6 +162,10 @@ export default async function Home({ params: { locale } }: { params: { locale: s
           </div>
         </div>
       </section>
+
+      {/* SEO Link Directory - Strategically placed for crawlers but unobtrusive for users */}
+      <ToolDirectory locale={locale} />
     </div>
   );
 }
+
