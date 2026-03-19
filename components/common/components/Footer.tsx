@@ -24,7 +24,7 @@ export default function Footer() {
                             <div className="relative w-10 h-10 transition-transform group-hover:scale-105">
                                 <Image
                                     src="/logo.png"
-                                    alt="Logo"
+                                    alt="Aynzo Tools - Free Professional Online Tools"
                                     fill
                                     className="object-contain"
                                     sizes="40px"
@@ -52,7 +52,7 @@ export default function Footer() {
                                     {tCat.has(category) ? tCat(category) : category}
                                 </h4>
                                 <ul className="space-y-2">
-                                    {tools.slice(0, 6).map(tool => (
+                                    {tools.slice(0, 15).map(tool => (
                                         <li key={tool.slug}>
                                             <Link
                                                 href={`/tools/${tool.slug}`}

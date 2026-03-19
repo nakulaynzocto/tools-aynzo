@@ -1,5 +1,5 @@
 "use client";
-import { Calculator, Calendar, Activity, Percent, DollarSign, PieChart, TrendingUp, Home, Landmark, Coins, Target, Megaphone, ArrowDownNarrowWide, CreditCard, Car, TrendingDown, Flame, Baby, Dumbbell, Scale, Briefcase } from 'lucide-react';
+import { Calculator, Calendar, Activity, Percent, DollarSign, PieChart, TrendingUp, Home, Landmark, Coins, Target, Megaphone, ArrowDownNarrowWide, CreditCard, Car, TrendingDown, Flame, Baby, Dumbbell, Scale, Briefcase, GraduationCap, Wallet, Utensils } from 'lucide-react';
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { useTranslations } from 'next-intl';
 import { CalculatorToolProps } from '@/components/types/calculator/types';
@@ -27,6 +27,9 @@ import { TDEECalculator } from './TDEECalculator';
 import { PregnancyDueDateCalculator } from './PregnancyDueDateCalculator';
 import { MacroCalculator } from './MacroCalculator';
 import { IdealWeightCalculator } from './IdealWeightCalculator';
+import { GPACalculator } from './GPACalculator';
+import { SalaryCalculator } from './SalaryCalculator';
+import { TipCalculator } from './TipCalculator';
 
 export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
     const t = useTranslations('CalculatorNav');
@@ -48,6 +51,8 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
                 { id: 'credit-card-payoff-calculator', label: t('creditCard'), icon: CreditCard },
                 { id: 'savings-goal-calculator', label: t('savingsGoal'), icon: Target },
                 { id: 'freelance-tax-calculator', label: t('freelanceTax'), icon: Briefcase },
+                { id: 'salary-calculator', label: t('salary'), icon: Wallet },
+                { id: 'tip-calculator', label: t('tip'), icon: Utensils },
             ]
         },
         {
@@ -74,6 +79,7 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
             category: t('math'),
             tools: [
                 { id: 'percentage-calculator', label: t('percentage'), icon: Calculator },
+                { id: 'gpa-calculator', label: t('gpa'), icon: GraduationCap },
             ]
         }
     ];
@@ -130,6 +136,12 @@ export default function CalculatorToolsIndex({ type }: CalculatorToolProps) {
                 return <MacroCalculator />;
             case 'ideal-weight-calculator':
                 return <IdealWeightCalculator />;
+            case 'gpa-calculator':
+                return <GPACalculator />;
+            case 'salary-calculator':
+                return <SalaryCalculator />;
+            case 'tip-calculator':
+                return <TipCalculator />;
             default:
                 return null;
         }

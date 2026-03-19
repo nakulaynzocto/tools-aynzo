@@ -328,6 +328,9 @@ export default async function ToolPage({ params }: Props) {
       case 'inflation-calculator':
       case 'roi-calculator':
       case 'cpm-calculator':
+      case 'gpa-calculator':
+      case 'salary-calculator':
+      case 'tip-calculator':
       case 'sales-tax-calculator':
         return <CalculatorTools type={params.slug as any} />;
 

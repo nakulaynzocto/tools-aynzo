@@ -15,8 +15,8 @@ export function ToolPageHeader({ name, description, category, h1 }: ToolPageHead
     return (
         <div className="mb-6 text-center max-w-3xl mx-auto">
             <div className="space-y-4">
-                <h1 className="leading-tight mb-4">
-                    {(h1 && h1.length > 50) ? name : (h1 || name)}
+                <h1 className="leading-tight mb-4 text-3xl md:text-4xl lg:text-5xl font-black tracking-tight">
+                    {h1 || name}
                 </h1>
 
                 <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">

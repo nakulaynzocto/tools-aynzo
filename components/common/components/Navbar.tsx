@@ -68,7 +68,7 @@ export default function Navbar() {
                             <div className="relative w-10 h-10 transition-transform group-hover:scale-105">
                                 <Image
                                     src="/logo.png"
-                                    alt="Logo"
+                                    alt="Aynzo Tools Home"
                                     fill
                                     priority
                                     className="object-contain"

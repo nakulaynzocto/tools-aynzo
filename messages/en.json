@@ -2027,7 +2027,10 @@
         "pregnancy": "Pregnancy",
         "macros": "Macros",
         "idealWeight": "Ideal Weight",
-        "percentage": "Percentage"
+        "percentage": "Percentage",
+        "salary": "Salary to Hourly",
+        "tip": "Tip Calculator",
+        "gpa": "GPA Calculator"
     },
     "WebNav": {
         "metaOptimisation": "Meta & Optimization",

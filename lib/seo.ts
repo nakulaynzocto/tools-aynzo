@@ -4962,44 +4962,41 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         ]
     },
     'bmi-calculator': {
-        title: 'BMI Calculator Online (Free) - Check Your Body Mass Index',
-        description: 'Calculate your Body Mass Index (BMI) instantly for free. Understand your weight category (Underweight, Healthy, Overweight, Obese) with our accurate screening tool. 100% private.',
-        keywords: 'bmi calculator online, body mass index checker, weight category calculator, bmi for adults, healthy weight screening, obesity index tool, height-to-weight ratio, adult bmi finder',
-        h1: 'Online BMI Calculator: Instant Body Mass Index Screening',
+        title: 'BMI Calculator (Free) — Adult & Child Body Mass Index Checker',
+        description: 'Calculate your BMI instantly using CDC and WHO standards. Understand your weight category (Healthy, Overweight, Obese) and health risks. 100% private and secure.',
+        keywords: 'bmi calculator online, body mass index checker, weight category calculator, bmi for adults, healthy weight screening, obesity index tool, CDC weight chart, adult bmi finder, calculate bmi for men and women',
+        h1: 'Online BMI Calculator: Body Mass Index & Health Screening',
         content: `
-<p>Maintain your long-term wellness with our <strong>Online BMI Calculator</strong>. Body Mass Index (BMI) is a scientifically recognized screening tool used to categorize individuals based on their height and weight. Our tool provides an instant analysis, helping you determine if your current weight falls within the "Healthy" range or if you should consult a health professional regarding underweight, overweight, or obesity categories.</p>
+<section>
+    <h2>Understanding Your Health: The Role of BMI</h2>
+    <p>Body Mass Index (BMI) is a scientifically validated screening tool used to determine if an individual's weight is appropriate for their height. While not a direct measure of body fat, it is the most widely used metric by health professionals and the CDC to assess potential risks for heart disease, diabetes, and other weight-related conditions.</p>
 
-<h2>What is BMI (Body Mass Index)?</h2>
-<p><strong>Body Mass Index (BMI)</strong> is a mathematical relationship between an individual's mass (weight) and their height. Originally developed by Adolphe Quetelet in the 19th century, it has become the standard international screening tool used by the World Health Organization (WHO), physicians, and insurance companies to assess weight-related health risks across large populations.</p>
+    <h3>How BMI Categories Work (WHO/CDC Standards)</h3>
+    <p>According to international health guidelines, BMI results are grouped into four primary categories for adults aged 18 and older:</p>
+    <ul>
+        <li><strong>Underweight (Below 18.5):</strong> May indicate nutritional deficiencies or under-fueling.</li>
+        <li><strong>Healthy Weight (18.5 – 24.9):</strong> This range is associated with the lowest risk of chronic disease and highest longevity.</li>
+        <li><strong>Overweight (25.0 – 29.9):</strong> Indicates more weight than is considered healthy for your height.</li>
+        <li><strong>Obese (30.0+):</strong> High excess weight which significantly increases the risk for hypertension and type 2 diabetes.</li>
+    </ul>
 
-<h2>Understanding the BMI Formula</h2>
-<p>While our tool automates the process, the underlying math is simple. The BMI formula divides weight in kilograms by the square of height in meters. In the imperial system (used in the US), we multiply the result by 703 to ensure accurate scaling:</p>
-<ul>
-    <li><strong>Metric:</strong> BMI = kg / m²</li>
-    <li><strong>Imperial:</strong> BMI = (lbs / inches²) x 703</li>
-</ul>
+    <h3>The Difference Between Metric and US Imperial Calculations</h3>
+    <p>Our calculator seamlessly handles both measurement systems used in the US and globally:</p>
+    <ul>
+        <li><strong>Metric System:</strong> BMI = weight (kg) ÷ height (m)²</li>
+        <li><strong>US Imperial System:</strong> BMI = [weight (lbs) ÷ height (inches)²] × 703</li>
+    </ul>
 
-<h2>Interpreting Your BMI Results</h2>
-<p>According to WHO guidelines, BMI values are grouped into four primary categories:</p>
-<ul>
-    <li><strong>Underweight (Below 18.5):</strong> May indicate nutritional deficiencies or underlying health concerns.</li>
-    <li><strong>Healthy Weight (18.5 – 24.9):</strong> Associated with the lowest risk of chronic cardiovascular and metabolic diseases.</li>
-    <li><strong>Overweight (25.0 – 29.9):</strong> Indicates an increased risk of heart disease, hypertension, and diabetes.</li>
-    <li><strong>Obese (30.0 or Higher):</strong> Linked to significant health risks. Often subdivided into Class I, II, and III (Morbid Obesity).</li>
-</ul>
-
-<h2>Important Considerations & Limitations</h2>
-<p>It is critical to remember that BMI is a <strong>screening tool</strong>, not a diagnostic one. Because it only uses height and weight, it does not distinguish between bone density, muscle mass, and fat distribution. Professional athletes, pregnant women, and the elderly should use BMI with caution as their body composition may lead to an "abnormal" score that doesn't necessarily reflect poor health. Always consult a medical professional for a comprehensive health audit.</p>
-
-<h2>100% Private Health Auditing</h2>
-<p>Your health data is sensitive and personal. <strong>Aynzo Tools is built on privacy</strong>. Our BMI Calculator runs entirely within your browser. We never store your height, weight, or calculated results on our servers. You can check your status with total confidentiality, knowing that your personal metrics never leave your device.</p>
-`,
+    <h3>Is BMI Accurate for Everyone?</h3>
+    <p>While an excellent first-pass screening tool, BMI has limitations. It does not distinguish between muscle mass and fat. For example, athletes with high muscle density may have an "overweight" BMI despite having very low body fat percentage. Similarly, elderly individuals may have a "healthy" BMI while losing critical muscle mass. Use this tool as a guideline and consult with your physician for a full health profile.</p>
+</section>
+        `,
         schema: {
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
             name: 'Professional BMI Calculator',
             url: 'https://tools.aynzo.com/tools/bmi-calculator',
-            description: 'Calculate Body Mass Index (BMI) and determine weight category for adults based on WHO standards.',
+            description: 'Calculate Body Mass Index (BMI) and determine weight category for adults based on WHO and CDC standards.',
             applicationCategory: 'HealthApplication',
             operatingSystem: 'Any',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
@@ -5007,9 +5004,9 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         faq: [
             { question: 'What is a healthy BMI range?', answer: 'For most adults, a BMI between 18.5 and 24.9 is considered the healthy range.' },
             { question: 'Does BMI measure body fat directly?', answer: 'No. BMI is an indirect surrogate measure. It correlates with body fat but does not measure it directly like a DXA scan or calipers.' },
-            { question: 'Can BMI be used for children?', answer: 'While the formula is the same, children\'s results must be plotted on age-and-sex-specific growth charts provided by health authorities like the CDC.' },
-            { question: 'Is a high BMI always bad?', answer: 'Not necessarily. A person with high muscle mass (like a bodybuilder) may have a high BMI but very low body fat. A doctor\'s evaluation is needed for context.' },
-            { question: 'Is my data private?', answer: 'Yes. All calculations happen locally on your computer. We do not store or track your weight or height inputs.' }
+            { question: 'Can BMI be used for children?', answer: 'While the basic formula is similar, children\'s results must be plotted on CDC growth charts which account for age and sex.' },
+            { question: 'Is a high BMI always bad?', answer: 'Not necessarily. Athletes with high muscle mass may show as "overweight" without having excess body fat. Context is key.' },
+            { question: 'Is my data secure?', answer: 'Yes. All calculations happen entirely in your browser. We never store or track your weight or height inputs.' }
         ]
     },
     'emi-calculator': {
@@ -5356,48 +5353,50 @@ export const toolSEO: { [key: string]: ToolSEO } = {
 
     // === NEW HIGH-RPM FINANCIAL TOOLS ===
     'compound-interest-calculator': {
-        title: 'Compound Interest Calculator - Free Wealth Growth Projection Tool',
-        description: 'Calculate future wealth with our compound interest calculator. Supports monthly contributions, daily/monthly compounding, and visual growth projections. Pro-grade investment tool.',
-        keywords: 'compound interest calculator, wealth growth calculator, interest on interest, investment projector, compounding savings, long term investment tool, financial planning online',
-        h1: 'Compound Interest Calculator: Project Your Future Wealth',
+        title: 'Compound Interest Calculator (Free) — Future Wealth & APY Projector',
+        description: 'Calculate your future wealth with the "Eighth Wonder of the World." Support for monthly contributions, daily/monthly compounding, and visual growth charts. Professional investment tool.',
+        keywords: 'compound interest calculator, wealth growth calculator, interest on interest, investment projector, compounding savings, long term investment tool, financial planning online, APY calculator, compound interest formula',
+        h1: 'Compound Interest Calculator: Project Your Future Wealth & Growth',
         content: `
-<h2>The Magic of Compounding: Why Your Savings Need Exponential Growth</h2>
-<p>Often referred to as the "eighth wonder of the world" by Albert Einstein, <strong>compound interest</strong> is the process where the interest you earn on your savings earns interest itself. Over long periods, this creates an exponential growth curve that can transform modest monthly contributions into significant wealth. The <strong>Aynzo Compound Interest Calculator</strong> is designed to help you visualize this growth with high-precision financial logic.</p>
+<section>
+    <h2>The Magic of Compounding: Why Time is Your Greatest Asset</h2>
+    <p>Often referred to as the "eighth wonder of the world" by Albert Einstein, <strong>compound interest</strong> is the process where the interest you earn on your savings earns interest itself. Over long periods, this creates an exponential growth curve that can transform modest monthly contributions into significant wealth. The <strong>Aynzo Compound Interest Calculator</strong> is designed to help you visualize this growth with high-precision financial logic.</p>
 
-<h3>How Compounding Works: The Mathematical Engine</h3>
-<p>Unlike simple interest, which is calculated only on the principal amount, compound interest is calculated on the principal plus any accumulated interest. This means your wealth grows faster as time goes on. Our <strong>wealth projector</strong> uses the standard compounding formula:</p>
-<p class="font-mono bg-muted p-4 rounded-lg my-4">A = P(1 + r/n)^(nt)</p>
-<p>Where:
-<ul>
-    <li><strong>A</strong> is the final amount.</li>
-    <li><strong>P</strong> is the initial principal.</li>
-    <li><strong>r</strong> is the annual interest rate (decimal).</li>
-    <li><strong>n</strong> is the number of times interest compounds per year.</li>
-    <li><strong>t</strong> is the time in years.</li>
-</ul></p>
+    <h3>How Compounding Works: The Mathematical Snowball</h3>
+    <p>Unlike simple interest, which is calculated only on the principal amount, compound interest is calculated on the principal plus any accumulated interest. This means your wealth grows faster as time goes on. Our <strong>wealth projector</strong> uses the standard compounding formula:</p>
+    <p style="text-align: center; font-family: monospace; font-weight: bold; background: #f4f4f4; padding: 10px; border-radius: 8px;">A = P(1 + r/n)^(nt)</p>
+    <p>Where:</p>
+    <ul>
+        <li><strong>A:</strong> The final amount (future value).</li>
+        <li><strong>P:</strong> The initial principal (starting balance).</li>
+        <li><strong>r:</strong> The annual interest rate (APY).</li>
+        <li><strong>n:</strong> The number of times interest compounds per year.</li>
+        <li><strong>t:</strong> The time in years.</li>
+    </ul>
 
-<h3>The Power of Regular Contributions</h3>
-<p>While a single initial deposit is powerful, adding a <strong>monthly contribution</strong> significantly accelerates the snowball effect. Even $100 a month can make a massive difference over 20-30 years. Our tool allows you to input recurring investments to see exactly how your consistency pays off in the long run.</p>
+    <h3>The Power of Monthly Contributions (DCA)</h3>
+    <p>While a single initial deposit is powerful, adding a <strong>monthly contribution</strong> (also known as Dollar Cost Averaging) significantly accelerates the snowball effect. Even $100 a month can make a massive difference over 20-30 years. Our tool allows you to input recurring investments to see exactly how your consistency pays off in the long run.</p>
 
-<h2>Compounding Frequencies: Daily vs Monthly vs Yearly</h2>
-<p>The more frequently your interest is calculated and added to the balance, the more you earn. Our <strong>investment calculator</strong> provides options for:</p>
-<ul>
-    <li><strong>Daily Compounding:</strong> Often used for savings accounts and high-yield instruments.</li>
-    <li><strong>Monthly Compounding:</strong> Common for mortgages, credit cards, and many mutual funds.</li>
-    <li><strong>Annually Compounding:</strong> The standard for long-term bond projections.</li>
-</ul>
+    <h3>Compounding Frequencies: Daily vs. Monthly vs. Yearly</h3>
+    <p>The more frequently your interest is calculated and added to the balance, the more you earn. Our <strong>investment calculator</strong> provides options for:</p>
+    <ul>
+        <li><strong>Daily Compounding:</strong> Standard for most high-yield savings accounts (HYSA).</li>
+        <li><strong>Monthly Compounding:</strong> Common for dividend-paying stocks and mutual funds.</li>
+        <li><strong>Annually Compounding:</strong> Used for long-term US Treasury bonds and CDs.</li>
+    </ul>
 
-<div class="bg-primary/5 p-6 rounded-2xl border border-primary/20 mt-8">
-  <p class="text-lg font-bold">Investment Tip:</p>
-  <p>To maximize compounding, start early. Time is the most critical factor in wealth building. A 20-year-old who starts with small amounts will often outperform a 40-year-old who starts with much larger amounts, simply due to the duration of compounding.</p>
-</div>
+    <div style="background: #eef2ff; padding: 20px; border-left: 5px solid #4f46e5; border-radius: 8px; margin: 25px 0;">
+        <p style="font-weight: bold; font-size: 1.1em;">Investment Tip: Start Early!</p>
+        <p>To maximize compounding, start as soon as possible. Because of the exponential nature of interest, a 20-year-old who saves $200 a month will often end up with more money than a 40-year-old who saves $2,000 a month. Time does the heavy lifting for you.</p>
+    </div>
+</section>
         `,
         schema: {
             '@context': 'https://schema.org',
             '@type': 'FinancialCalculator',
             name: 'Compound Interest Calculator',
             url: 'https://tools.aynzo.com/tools/compound-interest-calculator',
-            description: 'Calculate future investment growth with compound interest and monthly contributions.',
+            description: 'Professional wealth growth projector with support for monthly contributions and various compounding frequencies.',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
@@ -5405,59 +5404,197 @@ export const toolSEO: { [key: string]: ToolSEO } = {
         faq: [
             { question: 'What is the formula for compound interest?', answer: 'The formula is A = P(1 + r/n)^(nt), where A is the final amount, P is the principal, r is the interest rate, n is compounding frequency, and t is the time in years.' },
             { question: 'Is monthly compounding better than yearly?', answer: 'Yes. The more frequently interest compounds, the higher the effective yield. Monthly compounding earns slightly more than yearly compounding on the same principal and rate.' },
-            { question: 'Does this tool support monthly contributions?', answer: 'Absolutely. You can add a recurring monthly investment amount to see how it accelerates your wealth building over time.' },
-            { question: 'What is a realistic interest rate for projections?', answer: 'Historically, the stock market (S&P 500) has averaged about 7-10% annually after inflation, but for conservative savings, 3-5% is more common.' },
-            { question: 'Do you store my financial data?', answer: 'No. Like all Aynzo tools, processing happens entirely in your browser. Your financial projections stay 100% private.' }
+            { question: 'Does this tool support monthly contributions?', answer: 'Absolutely. You can add a monthly investment amount to see how regular contributions accelerate your wealth over decades.' },
+            { question: 'What is a realistic interest rate to use?', answer: 'For long-term stock market projections, 7-10% is often used (S&P 500 average). For safe savings accounts, 3-5% is currently realistic in the US.' },
+            { question: 'Is my financial data stored?', answer: 'No. All calculations are performed 100% locally in your browser. We do not store or track your financial data.' }
         ]
     },
     'mortgage-calculator': {
-        title: 'Mortgage Calculator - US Home Loan & PMI Estimator',
-        description: 'Calculate monthly mortgage payments including PMI, property taxes, and insurance. Professional real estate tool for home buyers in the US.',
-        keywords: 'mortgage calculator, home loan estimator, pmi calculator, monthly house payment, us mortgage finder, real estate calculator, property tax estimator',
-        h1: 'Mortgage Calculator: Estimate Your Home Loan Payments',
+        title: 'Mortgage Calculator (2024) — US Home Loan & PMI Estimator',
+        description: 'Calculate monthly mortgage payments including PMI, property taxes, and insurance (PITI). Professional real estate tool for US home buyers. Fast, secure, and accurate.',
+        keywords: 'mortgage calculator, home loan estimator, pmi calculator, monthly house payment, us mortgage finder, real estate calculator, property tax estimator, FHA vs conventional loan, 30 year fixed mortgage',
+        h1: 'US Mortgage Calculator: Estimate Your Home Loan Payments',
         content: `
-<h2>Navigating Home Buying: Understanding Your Monthly Costs</h2>
-<p>Buying a home is the largest financial commitment most people make. While the home price is the headline number, your <strong>monthly mortgage payment</strong> is what truly impacts your lifestyle. The <strong>Aynzo Mortgage Calculator</strong> provides a comprehensive breakdown of Principal, Interest, Taxes, and Insurance (PITI), giving you a clear picture of your future housing costs.</p>
+<section>
+    <h2>Expert Guide to US Home Mortgage Costs</h2>
+    <p>Buying a home in the United States involves more than just the sticker price. To truly understand your monthly budget, you need a comprehensive <strong>PITI (Principal, Interest, Taxes, and Insurance)</strong> breakdown. The <strong>Aynzo Mortgage Calculator</strong> is designed specifically for the US housing market, helping you navigate the complexities of home financing with precision.</p>
 
-<h3>The PITI Breakdown: What's in your payment?</h3>
-<p>A "simple" mortgage payment usually contains four distinct parts:</p>
-<ul>
-    <li><strong>Principal:</strong> The portion of your payment that goes toward paying down your loan balance.</li>
-    <li><strong>Interest:</strong> The cost of borrowing the money, determined by your APR.</li>
-    <li><strong>Taxes:</strong> Local property taxes, usually estimated based on your home's value.</li>
-    <li><strong>Insurance:</strong> Homeowners insurance to protect your investment.</li>
-</ul>
+    <h3>What is PITI? Understanding the Components</h3>
+    <p>Most first-time home buyers only consider principal and interest, but a "hidden" portion of your payment goes to escrow. Here is what makes up your total monthly cost:</p>
+    <ul>
+        <li><strong>Principal:</strong> The actual amount going toward paying down your loan balance.</li>
+        <li><strong>Interest:</strong> The profit paid to the lender for the loan.</li>
+        <li><strong>Taxes (Escrow):</strong> Property taxes vary by state—Texas and New Jersey have high rates, while Hawaii and Alabama are lower.</li>
+        <li><strong>Homeowners Insurance:</strong> Essential protection required by all lenders.</li>
+        <li><strong>PMI (Private Mortgage Insurance):</strong> If your down payment is less than 20% on a conventional loan, you will likely pay PMI.</li>
+    </ul>
 
-<h3>PMI: The "Hidden" Cost for Small Down Payments</h3>
-<p>If you put down less than 20% on a conventional loan, lenders usually require <strong>Private Mortgage Insurance (PMI)</strong>. This protects the lender, not you, but it adds to your monthly cost. Our <strong>home loan estimator</strong> automatically calculates PMI if your down payment is below the 20% threshold, ensuring your budget is realistic.</p>
+    <h3>FHA vs. Conventional: Which Loan is Right for You?</h3>
+    <p>Choosing the right loan type can save you thousands over the life of the mortgage:</p>
+    <ul>
+        <li><strong>Conventional Loans:</strong> Typically require a higher credit score (620+). PMI can be removed once you reach 20% equity.</li>
+        <li><strong>FHA Loans:</strong> Backed by the government, these allow for lower credit scores and down payments as low as 3.5%. However, Mortgage Insurance Premiums (MIP) usually last for the life of the loan.</li>
+        <li><strong>VA Loans:</strong> Exclusive to veterans and active-duty service members, often requiring 0% down payment.</li>
+    </ul>
 
-<h2>Choosing Your Loan Term: 15 vs 30 Years</h2>
-<p>The duration of your loan drastically changes your financial strategy:</p>
-<ul>
-    <li><strong>30-Year Fixed:</strong> The most popular choice. Lower monthly payments but much higher total interest paid over the life of the loan.</li>
-    <li><strong>15-Year Fixed:</strong> Higher monthly payments, but you build equity faster and save tens of thousands in interest costs.</li>
-</ul>
+    <h3>Strategies to Lower Your Monthly Payment</h3>
+    <ol>
+        <li><strong>Boost Your Credit Score:</strong> A FICO score above 740 often unlocks the lowest interest rates.</li>
+        <li><strong>The 20% Rule:</strong> Putting 20% down eliminates PMI instantly, saving you $100–$300 per month.</li>
+        <li><strong>Buy Points:</strong> You can pay "points" upfront to permanently lower your interest rate.</li>
+        <li><strong>Shop for Insurance:</strong> Don't just take the first quote; shopping for homeowners insurance can save hundreds annually.</li>
+    </ol>
+</section>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Aynzo Mortgage Calculator',
+            url: 'https://tools.aynzo.com/tools/mortgage-calculator',
+            description: 'Professional US mortgage calculator with PMI, tax, and insurance estimation.',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What credit score do I need for a mortgage?', answer: 'Most conventional loans require a minimum FICO score of 620. FHA loans allow scores as low as 580 with 3.5% down, or 500 with 10% down. The best rates go to those with 740+ scores.' },
+            { question: 'Is a 15-year or 30-year mortgage better?', answer: 'A 30-year mortgage offers lower monthly payments but higher total interest. A 15-year mortgage pays off the debt twice as fast and saves thousands in interest but requires much higher monthly payments.' },
+            { question: 'How much should I save for a down payment?', answer: 'While 20% is the gold standard to avoid PMI, the average first-time buyer puts down 6-7%. Programs like FHA allow 3.5%, and VA/USDA loans allow 0% down.' },
+            { question: 'What is Private Mortgage Insurance (PMI)?', answer: 'PMI is insurance that protects the lender, not you. It is typically required if your down payment is less than 20%. It usually costs between 0.5% and 1.5% of the loan amount annually.' },
+            { question: 'Does a mortgage calculator include property taxes?', answer: 'Our professional calculator includes an estimate for property taxes and insurance, helping you see the true "out-of-pocket" monthly cost beyond just principal and interest.' }
+        ]
+    },
 
-<div class="bg-muted p-6 rounded-xl border border-border mt-8">
-  <p class="text-lg font-bold">First-Time Buyer Tip:</p>
-  <p>Don't forget "closing costs," which typically range from 2% to 5% of the home's price. Use our <a href="/en/tools/roi-calculator">ROI Calculator</a> to see if renting vs buying makes more sense based on your expected appreciation.</p>
-</div>
+    'gpa-calculator': {
+        title: 'GPA Calculator (Free) — College & High School GPA Estimator (2024)',
+        description: 'Calculate your college or high school GPA instantly. Optimized for US 4.0 and 5.0 weighted scales. Used by students at top US universities. 100% free and easy.',
+        keywords: 'gpa calculator, college gpa calculator, high school gpa calculator, cumulative gpa finder, semester gpa estimator, weighted vs unweighted gpa, calculate gpa online US',
+        h1: 'Free GPA Calculator: Estimate Your Semester & Cumulative GPA',
+        content: `
+<section>
+    <h2>Academic Excellence: Tracking Your GPA with Precision</h2>
+    <p>Your <strong>Grade Point Average (GPA)</strong> is one of the most important metrics in the US education system, influencing college admissions, scholarship eligibility, and career opportunities. The <strong>Aynzo GPA Calculator</strong> is built for students who need to track their academic performance across semesters with accuracy and ease.</p>
+
+    <h3>Weighted vs. Unweighted GPA: What's the Difference?</h3>
+    <p>Most US high schools and universities use one of two main scoring systems:</p>
+    <ul>
+        <li><strong>Unweighted GPA (4.0 Scale):</strong> Every class is measured on a standard 4.0 scale regardless of difficulty. An 'A' is always a 4.0.</li>
+        <li><strong>Weighted GPA (5.0 Scale):</strong> Adds extra points for Honor, AP (Advanced Placement), or IB classes. This rewards students for taking more challenging coursework.</li>
+    </ul>
+
+    <h3>How to Calculate Your Semester GPA</h3>
+    <p>To find your GPA for a single term, follow these steps:</p>
+    <ol>
+        <li>Assign a point value to each grade (A=4, B=3, etc.).</li>
+        <li>Multiply the points by the number of credits/units for that class.</li>
+        <li>Add all these "Grade Points" together.</li>
+        <li>Divide the total Grade Points by the total number of credits attempted.</li>
+    </ol>
+
+    <h3>Why Use Our GPA Estimator?</h3>
+    <p>Instead of manual spreadsheets, our tool provides a 100% private, real-time environment. Whether you are a freshman in high school or a senior in college, staying on top of your cumulative score is the best way to ensure you meet your graduation and career goals.</p>
+</section>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Aynzo GPA Calculator',
+            url: 'https://tools.aynzo.com/tools/gpa-calculator',
+            description: 'Advanced academic tool for calculating weighted and unweighted GPA for US students.',
+            applicationCategory: 'EducationApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'What is a good GPA for college?', answer: 'While it varies, a 3.0 is often the minimum for many scholarships. A 3.5+ is considered very competitive for top-tier US universities.' },
+            { question: 'Does an F lower my GPA more than a D?', answer: 'Yes. An F typically counts as 0 points, whereas a D counts as 1.0. Failing a class has a significant negative impact on your cumulative average.' },
+            { question: 'How do I calculate a weighted GPA?', answer: 'Add 1.0 point to the standard scale for AP/IB classes (e.g., an A becomes a 5.0) and 0.5 points for Honors classes.' },
+            { question: 'Is my academic data stored?', answer: 'No. All calculations are handled locally in your browser. We never see or store your grades or school information.' }
+        ]
+    },
+
+    'salary-calculator': {
+        title: 'Salary to Hourly Calculator (Free) — US Wage & Take-Home Estimator',
+        description: 'Convert your annual salary to hourly, weekly, and bi-weekly rates instantly. See your US take-home pay after federal holidays. Professional wage planning tool.',
+        keywords: 'salary to hourly calculator, wage converter online, annual to monthly salary, how much do I make an hour, take home pay estimator us, salary planning tool 2024',
+        h1: 'Salary to Hourly Calculator: Convert Your Annual Pay Instantly',
+        content: `
+<section>
+    <h2>Career Planning: Understanding Your True Hourly Wage</h2>
+    <p>Whether you are negotiating a new job offer or planning your personal budget, knowing your <strong>hourly rate from an annual salary</strong> is critical. In the US, most full-time positions are calculated based on a 2,080-hour work year (40 hours per week for 52 weeks). The <strong>Aynzo Salary Calculator</strong> provides an instant breakdown of your earnings across every common timeframe.</p>
+
+    <h3>The 2024 US Standard Work Year</h3>
+    <p>Our calculator uses the standard US business metrics to provide accurate results:</p>
+    <ul>
+        <li><strong>Daily:</strong> Based on an 8-hour workday.</li>
+        <li><strong>Weekly:</strong> Based on 40 hours of work.</li>
+        <li><strong>Bi-Weekly:</strong> The most common US payday (every 2 weeks).</li>
+        <li><strong>Monthly:</strong> Based on 1/12th of the annual salary.</li>
+    </ul>
+
+    <h3>Why Convert Salary to Hourly?</h3>
+    <p>Understanding your hourly value helps in several ways:</p>
+    <ol>
+        <li><strong>Overtime Comparison:</strong> If you are moving from hourly to salary, you can see if the new pay actually covers the extra hours expected.</li>
+        <li><strong>Freelance Benchmarking:</strong> If you want to leave a full-time job for freelancing, this tells you the minimum hourly rate you must charge to maintain your lifestyle.</li>
+        <li><strong>Holiday Impact:</strong> See how paid time off and federal holidays affect your effective earnings.</li>
+    </ol>
+</section>
         `,
         schema: {
             '@context': 'https://schema.org',
             '@type': 'FinancialCalculator',
-            name: 'Mortgage Calculator',
-            url: 'https://tools.aynzo.com/tools/mortgage-calculator',
-            description: 'Professional US mortgage calculator with PMI, taxes, and insurance integration.',
+            name: 'Aynzo Salary Calculator',
+            url: 'https://tools.aynzo.com/tools/salary-calculator',
+            description: 'Professional tool for converting annual salary to US hourly, weekly, and monthly rates.',
             applicationCategory: 'FinanceApplication',
-            operatingSystem: 'Any'
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
         },
         faq: [
-            { question: 'What is a good down payment for a home?', answer: 'While 20% is the traditional gold standard to avoid PMI, many FHA and conventional loans allow as little as 3% to 3.5% down.' },
-            { question: 'How much mortgage can I afford?', answer: 'A common rule of thumb is the 28/36 rule: your total housing payment should not exceed 28% of your gross monthly income.' },
-            { question: 'What is PMI and do I need it?', answer: 'PMI (Private Mortgage Insurance) is required if you put down less than 20% on a conventional loan. It typically costs between 0.5% and 1.5% of the loan amount annually.' },
-            { question: 'Are property taxes included in this calculator?', answer: 'Yes. You can input your estimated annual property taxes, and the tool will calculate the monthly escrow amount for you.' },
-            { question: 'Does the interest rate stay the same?', answer: 'This calculator assumes a fixed-rate mortgage. If you have an Adjustable Rate Mortgage (ARM), your payments may change after the initial period.' }
+            { question: 'How many work hours are in a year?', answer: 'The US standard is 2,080 hours (40 hours a week &times; 52 weeks). This is the baseline used by most HR departments.' },
+            { question: 'Is my take-home pay different from this result?', answer: 'Yes. This tool calculates gross pay. Your take-home (net) pay will be lower after federal/state taxes, 401k contributions, and health insurance premiums.' },
+            { question: 'What is a living wage in the US?', answer: 'It varies greatly by state. In 2024, a "living wage" for a single adult often ranges from $15/hr in low-cost areas to over $25/hr in major metros like NYC or SF.' },
+            { question: 'Is my salary information private?', answer: 'Absolutely. All processing is 100% browser-based. Your salary data is never sent to any server or stored anywhere.' }
+        ]
+    },
+
+    'tip-calculator': {
+        title: 'Tip Calculator (Free) — Split the Bill & Calculate Gratuity Instantly',
+        description: 'The fastest online tip calculator for US diners. Calculate 15%, 18%, or 20% gratuity instantly. Split the bill accurately among friends. Clear totals, zero lag.',
+        keywords: 'tip calculator, split the bill online, gratuity calculator us, restaurant tip finder, how much to tip in usa, dinner bill splitter, group bill calculator',
+        h1: 'Online Tip Calculator: Split the Bill & Calculate Gratuity Fast',
+        content: `
+<p>Dining out should be stress-free. But when the check arrives, doing "percentage math" for a large group can be a bottleneck. The <strong>Aynzo Tip Calculator</strong> is designed for speed and accuracy, allowing you to settle the bill in seconds so you can get back to enjoying your evening.</p>
+
+<h2>US Tipping Etiquette: How Much is Enough?</h2>
+<p>While tipping is discretionary, in the United States, there are standard service benchmarks:</p>
+<ul>
+    <li><strong>15%:</strong> Standard for adequate service in most casual settings.</li>
+    <li><strong>18%:</strong> The common "suggested" tip for good service.</li>
+    <li><strong>20%+:</strong> Excellent service or for high-end dining and large groups.</li>
+</ul>
+
+<h2>Split the Bill with Friends</h2>
+<p>One of our most popular features is the <strong>Bill Splitter</strong>. Simply enter the number of people in your party, and our tool will show the exact amount each person owes, including their share of the tip. No more awkward math at the dinner table!</p>
+
+<h2>100% Free & Mobile Friendly</h2>
+<p>Our tool is optimized for mobile browsers, so you can use it right at the restaurant table without downloading an app. It's fast, secure, and doesn't require any registration. Just open the page, enter the amount, and go.</p>
+        `,
+        schema: {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Aynzo Tip Calculator',
+            url: 'https://tools.aynzo.com/tools/tip-calculator',
+            description: 'Fast online tool for calculating restaurant tips and splitting the bill among groups.',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+        },
+        faq: [
+            { question: 'Should I tip on the total including tax?', answer: 'Standard etiquette in the US is to tip on the "subtotal" before sales tax is added, though many people tip on the final total for simplicity.' },
+            { question: 'How much should a party of 6 tip?', answer: 'Many US restaurants automatically add a 18% or 20% "automatic gratuity" for parties of 6 or more. Always check your receipt before adding a manual tip.' },
+            { question: 'Is my data private?', answer: 'Yes. Calculations are performed locally in your browser. No data about your spending or bill is ever stored.' }
         ]
     },
     'sip-calculator': {

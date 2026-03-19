@@ -27,7 +27,7 @@ export const tools = [
         description: 'Convert JPG images to PNG format with transparent background support.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'JPG to PNG Converter', description: 'Convert JPG to PNG online.' },
+        seo: { title: 'Free Online JPG to PNG Converter - Fast & Secure (No Loss)', description: 'Convert your JPG images to high-quality PNG format online for free. Support for transparent backgrounds and instant downloads. Private & secure.' },
         status: 'published',
     },
     {
@@ -37,7 +37,7 @@ export const tools = [
         description: 'Convert PNG images to JPG format instantly.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'PNG to JPG Converter', description: 'Convert PNG to JPG online.' },
+        seo: { title: 'Fast PNG to JPG Converter Online - High Quality & Free', description: 'Convert PNG images to standard JPG format instantly for free. Reduce file size without losing quality. No signup required, fast and secure.' },
         status: 'published',
     },
     {
@@ -47,17 +47,7 @@ export const tools = [
         description: 'Convert images to and from WebP format for web optimization.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'WebP Image Converter', description: 'Convert to WebP format.' },
-        status: 'published',
-    },
-    {
-        _id: '6',
-        name: 'JPG to PNG',
-        slug: 'jpg-to-png',
-        description: 'Convert JPG images to PNG format with transparency support.',
-        category: 'image',
-        group: 'image-convert',
-        seo: { title: 'Universal Image Converter', description: 'Convert image formats online.' },
+        seo: { title: 'All-in-One WebP Image Converter - Convert to/from WebP Free', description: 'Convert any image format to WebP or WebP to JPG/PNG/GIF online. Optimize your website images with modern WebP compression. 100% free.' },
         status: 'published',
     },
     {
@@ -67,7 +57,7 @@ export const tools = [
         description: 'Convert images to Base64 strings for embedding.',
         category: 'image',
         group: 'image-dev',
-        seo: { title: 'Image to Base64', description: 'Convert image to Base64 string.' },
+        seo: { title: 'Free Image to Base64 Converter Online - For Developers', description: 'Instantly convert images to Base64 Data URI strings for HTML, CSS, and JS embedding. Fast browser-side processing, 100% secure.' },
         status: 'published',
     },
     {
@@ -77,7 +67,7 @@ export const tools = [
         description: 'Crop images online with custom aspect ratios.',
         category: 'image',
         group: 'image-edit',
-        seo: { title: 'Image Cropper', description: 'Crop images online.' },
+        seo: { title: 'Online Image Cropper - Crop Photos to Exact Aspect Ratio', description: 'Crop your images online for free. Adjust aspect ratios for Instagram, Facebook, and Twitter. High-precision cropping with instant download.' },
         status: 'published',
     },
     {
@@ -87,7 +77,7 @@ export const tools = [
         description: 'Flip images horizontally or vertically online.',
         category: 'image',
         group: 'image-edit',
-        seo: { title: 'Flip Image Online', description: 'Flip pictures horizontally or vertically.' },
+        seo: { title: 'Flip Image Online - Mirror Photos Horizontally or Vertically', description: 'Quickly flip images horizontally or vertically online for free. Perfect for correcting photos or creating creative mirror effects. No signup needed.' },
         status: 'published',
     },
     {
@@ -97,7 +87,7 @@ export const tools = [
         description: 'Rotate images 90, 180, or 270 degrees online.',
         category: 'image',
         group: 'image-edit',
-        seo: { title: 'Rotate Image Online', description: 'Rotate photos quickly and easily.' },
+        seo: { title: 'Online Image Rotator - Rotate 90, 180, or 270 Degrees Free', description: 'Rotate your photos online to any angle (90°, 180°, 270°). Fix orientation issues in seconds with our fast and secure browser tool.' },
         status: 'published',
     },
     {
@@ -107,7 +97,7 @@ export const tools = [
         description: 'Upscale small images without losing quality.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Image Enlarger', description: 'Enlarge images online.' },
+        seo: { title: 'High-Quality Image Enlarger - Upscale Images Online Free', description: 'Upscale and enlarge your small images without losing significant quality. Ideal for improving resolution for printing or web use. 100% free.' },
         status: 'published',
     },
     {
@@ -117,7 +107,7 @@ export const tools = [
         description: 'Adjust the brightness of your photos online.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Adjust Image Brightness', description: 'Change image brightness online.' },
+        seo: { title: 'Online Image Brightness Adjuster - Lighten or Darken Photos', description: 'Adjust the brightness of your photos online for free. Lighten dark images or darken overexposed ones with a simple slider. Fast and secure.' },
         status: 'published',
     },
     {
@@ -127,7 +117,7 @@ export const tools = [
         description: 'Adjust the contrast of your photos online.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Adjust Image Contrast', description: 'Change image contrast online.' },
+        seo: { title: 'Adjust Image Contrast Online - Enhance Photo Quality Free', description: 'Improve the clarity of your images by adjusting contrast online. Make colors pop and details stand out instantly. No registration required.' },
         status: 'published',
     },
     {
@@ -137,7 +127,7 @@ export const tools = [
         description: 'Convert color photos to black and white.',
         category: 'image',
         group: 'image-effects',
-        seo: { title: 'Grayscale Image Converter', description: 'Make images black and white.' },
+        seo: { title: 'Grayscale Image Converter - Transform Photos to B&W Online', description: 'Turn any color photo into a professional black and white (grayscale) image online for free. Classic aesthetic filter for your digital images.' },
         status: 'published',
     },
     {
@@ -147,7 +137,7 @@ export const tools = [
         description: 'Add blur effect to your images online.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Blur Image Online', description: 'Blur photos easily.' },
+        seo: { title: 'Online Blur Image Tool - Add Professional Blur Effects Free', description: 'Add artistic blur effects to your photos online. Soften backgrounds or hide details with our easy-to-use blur slider. 100% browser-based.' },
         status: 'published',
     },
     {
@@ -157,7 +147,7 @@ export const tools = [
         description: 'Apply a vintage sepia filter to your photos.',
         category: 'image',
         group: 'image-effects',
-        seo: { title: 'Sepia Image Filter', description: 'Add sepia effect to photos.' },
+        seo: { title: 'Sepia Image Filter Online - Give Your Photos a Vintage Look', description: 'Apply a classic vintage sepia filter to your images online for free. Transform any photo into a warm, nostalgic antique-style picture instantly.' },
         status: 'published',
     },
     {
@@ -167,7 +157,7 @@ export const tools = [
         description: 'Invert the colors of your image (negative effect).',
         category: 'image',
         group: 'image-effects',
-        seo: { title: 'Invert Image Colors', description: 'Create negative images online.' },
+        seo: { title: 'Invert Image Colors Online - Create Negative Photo Effects', description: 'Instantly invert the colors of your images to create a negative effect. Free online tool for artistic photo manipulation. 100% secure.' },
         status: 'published',
     },
     {
@@ -177,7 +167,7 @@ export const tools = [
         description: 'Adjust the color saturation of your photos.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Adjust Image Saturation', description: 'Change photo saturation online.' },
+        seo: { title: 'Adjust Image Saturation Online - Enhance or Mute Photo Colors', description: 'Control the color intensity of your photos by adjusting saturation online for free. Make colors more vibrant or create a muted, desaturated look.' },
         status: 'published',
     },
     {
@@ -187,7 +177,7 @@ export const tools = [
         description: 'Shift the hue of your images for creative effects.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Hue Rotate Image', description: 'Change image colors with hue rotation.' },
+        seo: { title: 'Hue Rotate Image Online - Change Photo Colors Creatively', description: 'Creatively shift the colors of your image using hue rotation. Experiment with unique color palettes and artistic effects online for free.' },
         status: 'published',
     },
     {
@@ -197,7 +187,7 @@ export const tools = [
         description: 'Change the transparency/opacity of your images.',
         category: 'image',
         group: 'image-optimize',
-        seo: { title: 'Change Image Opacity', description: 'Adjust image transparency online.' },
+        seo: { title: 'Change Image Opacity Online - Adjust Photo Transparency Free', description: 'Make your images transparent or opaque online. Perfect for creating watermarks, overlays, or subtle design elements. Fast & secure.' },
         status: 'published',
     },
     {
@@ -207,7 +197,7 @@ export const tools = [
         description: 'Add rounded corners to your images.',
         category: 'image',
         group: 'image-effects',
-        seo: { title: 'Round Image Corners', description: 'Make circular or rounded images.' },
+        seo: { title: 'Round Image Corners Online - Create Rounded or Circular Photos', description: 'Add rounded corners to your images or turn them into perfect circles online. Ideal for profile pictures, UI design, and social media icons.' },
         status: 'published',
     },
     {
@@ -217,7 +207,7 @@ export const tools = [
         description: 'Add colorful borders to your images.',
         category: 'image',
         group: 'image-effects',
-        seo: { title: 'Add Image Border', description: 'Add frames to photos online.' },
+        seo: { title: 'Add Image Border Online - Customize Color and Size for Free', description: 'Frame your photos by adding colorful borders online. Customize border thickness and color to make your images stand out for social media.' },
         status: 'published',
     },
     {
@@ -227,7 +217,7 @@ export const tools = [
         description: 'Add drop shadows to your images.',
         category: 'image',
         group: 'image-effects',
-        seo: { title: 'Add Image Shadow', description: 'Create shadow effects for photos.' },
+        seo: { title: 'Online Image Shadow Tool - Add Professional Drop Shadows Free', description: 'Give your images depth with a professional drop shadow effect. Customize shadow blur, color, and position online for free. Great for UI/UX.' },
         status: 'published',
     },
     {
@@ -237,7 +227,7 @@ export const tools = [
         description: 'Pixelate your images to hide details or create art.',
         category: 'image',
         group: 'image-effects',
-        seo: { title: 'Pixelate Image', description: 'Pixelate photos online.' },
+        seo: { title: 'Pixelate Image Online - Hide Sensitive Info or Create Pixel Art', description: 'Instantly pixelate any part of an image or the entire photo online. Useful for hiding sensitive data or creating a retro pixel art aesthetic.' },
         status: 'published',
     },
     {
@@ -247,7 +237,7 @@ export const tools = [
         description: 'Convert SVG vector files to PNG images.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'SVG to PNG Converter', description: 'Convert SVG to PNG high quality.' },
+        seo: { title: 'High-Quality SVG to PNG Converter Online - Fast & Free', description: 'Convert vector SVG files to transparent raster PNG images online. Maintain crisp edges and high resolution. 100% free and secure.' },
         status: 'published',
     },
     {
@@ -257,7 +247,7 @@ export const tools = [
         description: 'Convert PNG raster images to SVG vectors.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'PNG to SVG Converter', description: 'Convert PNG to vector SVG.' },
+        seo: { title: 'PNG to SVG Converter Online - Vectorize Your Images for Free', description: 'Transform raster PNG images into scalable vector SVG files. Perfect for logos and icons that need to be resized without losing quality.' },
         status: 'published',
     },
     {
@@ -267,7 +257,7 @@ export const tools = [
         description: 'Convert WebP images to standard JPG format.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'WebP to JPG Converter', description: 'Convert WebP to JPG online.' },
+        seo: { title: 'Fast WebP to JPG Converter Online - High Quality & Secure', description: 'Convert modern WebP images to standard JPG format for better compatibility across all devices and platforms. 100% free, no signup.' },
         status: 'published',
     },
     {
@@ -277,7 +267,7 @@ export const tools = [
         description: 'Convert WebP images to transparent PNG format.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'WebP to PNG Converter', description: 'Convert WebP to PNG online.' },
+        seo: { title: 'WebP to PNG Converter with Transparency - Free Online Tool', description: 'Convert WebP files to PNG format while preserving transparency. Ideal for web developers and designers. Fast, secure, and easy to use.' },
         status: 'published',
     },
     {
@@ -287,7 +277,7 @@ export const tools = [
         description: 'Convert JPG images to modern WebP format.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'JPG to WebP Converter', description: 'Convert JPG to WebP online.' },
+        seo: { title: 'JPG to WebP Converter Online - Optimize for Web Performance', description: 'Convert your JPG images to the modern WebP format for smaller file sizes and faster website load times. High quality, free, and secure.' },
         status: 'published',
     },
     {
@@ -297,7 +287,7 @@ export const tools = [
         description: 'Convert PNG images to modern WebP format.',
         category: 'image',
         group: 'image-convert',
-        seo: { title: 'PNG to WebP Converter', description: 'Convert PNG to WebP online.' },
+        seo: { title: 'PNG to WebP Converter Online - Reduce Image Size for Free', description: 'Convert PNG files to WebP to drastically reduce file size while maintaining high quality and transparency. Perfect for website optimization.' },
         status: 'published',
     },
     {
@@ -307,7 +297,7 @@ export const tools = [
         description: 'Convert Base64 strings back to image files.',
         category: 'image',
         group: 'image-dev',
-        seo: { title: 'Base64 to Image', description: 'Decode Base64 to image.' },
+        seo: { title: 'Base64 to Image Decoder Online - Restore Photo from String', description: 'Convert Base64 Data URI strings back into viewable image files (JPG, PNG, WebP) instantly. Secure browser-side tool for developers.' },
         status: 'published',
     },
     {
@@ -329,7 +319,7 @@ export const tools = [
         description: 'Convert PDF documents to editable Word (DOCX) files.',
         category: 'pdf',
         group: 'pdf-convert',
-        seo: { title: 'PDF to Word Converter', description: 'Convert PDF to Word online.' },
+        seo: { title: 'Best Free PDF to Word Converter Online - Editable DOCX', description: 'Convert PDF to Word DOCX online for free. High accuracy conversion with preservation of layout and formatting. Fast, secure, and no signup needed.' },
         status: 'published'
     },
     {
@@ -339,7 +329,7 @@ export const tools = [
         description: 'Convert Microsoft Word (DOC/DOCX) documents to PDF format.',
         category: 'pdf',
         group: 'pdf-convert',
-        seo: { title: 'Word to PDF Converter', description: 'Convert Word to PDF online.' },
+        seo: { title: 'Fast Word to PDF Converter Online - DOC/DOCX to PDF Free', description: 'Convert Microsoft Word documents to professional PDF files instantly. Maintain high quality and formatting. 100% free and secure browser tool.' },
         status: 'published'
     },
     {
@@ -349,7 +339,7 @@ export const tools = [
         description: 'Combine multiple PDF files into a single document.',
         category: 'pdf',
         group: 'pdf-edit',
-        seo: { title: 'Merge PDF Online', description: 'Merge multiple PDF files into one.' },
+        seo: { title: 'Merge PDF Online - Combine Multiple PDF Files for Free', description: 'Join two or more PDF documents into a single file online. Reorder pages and merge PDFs instantly with our secure, fast, and 100% free tool.' },
         status: 'published',
     },
     {
@@ -359,7 +349,7 @@ export const tools = [
         description: 'Split a PDF file into multiple separate documents.',
         category: 'pdf',
         group: 'pdf-edit',
-        seo: { title: 'Split PDF Online', description: 'Split PDF files into individual pages.' },
+        seo: { title: 'Split PDF Online - Extract Pages from PDF Files Free', description: 'Separate PDF pages into individual files or extract a specific range of pages online. fast, secure, and easy to use without any registration.' },
         status: 'published',
     },
 
@@ -391,7 +381,7 @@ export const tools = [
         description: 'Convert text to UPPERCASE, lowercase, Title Case, etc.',
         category: 'text',
         group: 'text-edit',
-        seo: { title: 'Case Converter', description: 'Convert text case online.' },
+        seo: { title: 'Online Text Case Converter - UPPERCASE, lowercase, Title Case', description: 'Convert your text case online for free. Support for UPPERCASE, lowercase, Title Case, Sentence case, and more. Instant formatting for writers.' },
         status: 'published',
     },
     {
@@ -401,7 +391,7 @@ export const tools = [
         description: 'Remove all line breaks and newlines from your text.',
         category: 'text',
         group: 'text-edit',
-        seo: { title: 'Remove Line Breaks', description: 'Online line break remover.' },
+        seo: { title: 'Remove Line Breaks Online - Clean Up Text Formatting Free', description: 'Easily remove unnecessary line breaks, newlines, and carriage returns from your text. Perfect for cleaning up copied data and PDF text.' },
         status: 'published',
     },
     {
@@ -411,7 +401,7 @@ export const tools = [
         description: 'Generate italic text using unicode characters.',
         category: 'text',
         group: 'text-style',
-        seo: { title: 'Italic Text Generator', description: 'Generate italic text online.' },
+        seo: { title: 'Fancy Italic Text Generator - Fancy Cursive Fonts for Social Media', description: 'Generate stylish italic and cursive text using unicode characters. Perfect for Instagram bios, Twitter posts, and Facebook status updates. 100% free.' },
         status: 'published',
     },
     {
@@ -421,7 +411,7 @@ export const tools = [
         description: 'Generate strikethrough text for social media.',
         category: 'text',
         group: 'text-style',
-        seo: { title: 'Strikethrough Text', description: 'Cross out text online.' },
+        seo: { title: 'Strikethrough Text Generator - Cross Out Text for Social Media', description: 'Instantly generate strikethrough text online. Cross out words for emphasis or style on Facebook, Instagram, and Twitter using unicode characters.' },
         status: 'published',
     },
     {
@@ -431,7 +421,7 @@ export const tools = [
         description: 'Generate underlined text for social media.',
         category: 'text',
         group: 'text-style',
-        seo: { title: 'Underline Text Generator', description: 'Underline text online.' },
+        seo: { title: 'Underline Text Generator - Create Underlined Text for Social Media', description: 'Generate underlined text online for free. Stand out on social media platforms like Instagram and Twitter with unique underlined font styles instantly.' },
         status: 'published',
     },
     {
@@ -441,7 +431,7 @@ export const tools = [
         description: 'Generate double underlined text for social media.',
         category: 'text',
         group: 'text-style',
-        seo: { title: 'Double Underline Text Generator', description: 'Double underline text online.' },
+        seo: { title: 'Double Underline Text Generator - Fancy Text Styler for Social', description: 'Create unique double-underlined text for your social media profiles and posts. Stand out with professional unicode text effects online for free.' },
         status: 'published',
     },
     {
@@ -451,7 +441,7 @@ export const tools = [
         description: 'Generate bold text using unicode characters.',
         category: 'text',
         group: 'text-style',
-        seo: { title: 'Bold Text Generator', description: 'Generate bold text online.' },
+        seo: { title: 'Bold Text Generator - Fancy Heavy Fonts for Instagram & Bio', description: 'Convert normal text into bold unicode characters instantly. Enhance your social media posts, bios, and comments with eye-catching bold lettering.' },
         status: 'published'
     },
     {
@@ -461,7 +451,7 @@ export const tools = [
         description: 'Generate cursive / script text for social media.',
         category: 'text',
         group: 'text-style',
-        seo: { title: 'Cursive Text Generator', description: 'Generate cursive text online.' },
+        seo: { title: 'Fancy Cursive Text Generator - Script & Handwriting Fonts', description: 'Transform your text into elegant cursive and script styles online for free. Perfect for creating artistic bios and unique social media content.' },
         status: 'published',
     },
     {
@@ -480,7 +470,7 @@ export const tools = [
         slug: 'small-text',
         description: 'Generate tiny text (subscript/superscript).',
         category: 'text',
-        seo: { title: 'Small Text Generator', description: 'Make text smaller online.' },
+        seo: { title: 'Small Text Generator - Tiny Superscript & Subscript Fonts', description: 'Generate tiny text characters (subscript and superscript) online for free. Create unique aesthetic text for social media bios and usernames.' },
         status: 'published',
     },
     {
@@ -489,7 +479,7 @@ export const tools = [
         slug: 'upside-down-text',
         description: 'Flip your text upside down instantly.',
         category: 'text',
-        seo: { title: 'Upside Down Text', description: 'Flip text 180 degrees.' },
+        seo: { title: 'Upside Down Text Generator - Flip & Rotate Text 180 Degrees', description: 'Flip your text upside down instantly. Create fun flipped text for social media, gaming, and messages using our free online rotation tool.' },
         status: 'published',
     },
     {
@@ -498,7 +488,7 @@ export const tools = [
         slug: 'mirror-text',
         description: 'Create mirrored text reflection.',
         category: 'text',
-        seo: { title: 'Mirror Text Generator', description: 'Reverse text reflection.' },
+        seo: { title: 'Mirror Text Generator - Create Reversed and Reflected Text', description: 'Generate mirrored text reflections online for free. Reverse your text horizontally to create cool visual effects for social media and design.' },
         status: 'published',
     },
     {
@@ -508,7 +498,7 @@ export const tools = [
         description: 'Remove duplicate lines from your text or list.',
         category: 'text',
         group: 'text-edit',
-        seo: { title: 'Duplicate Line Remover', description: 'Remove duplicates online.' },
+        seo: { title: 'Remove Duplicate Lines Online - Clean Up Lists and Text Free', description: 'Instantly find and remove duplicate lines from your text or lists. Perfect for cleaning up data, spreadsheets, and developer assets online.' },
         status: 'published'
     },
     {
@@ -518,7 +508,7 @@ export const tools = [
         description: 'Sort lists and text lines alphabetically.',
         category: 'text',
         group: 'text-edit',
-        seo: { title: 'Sort Text Alphabetically', description: 'Sort lists A-Z online.' },
+        seo: { title: 'Sort Text Alphabetically - Online List Sorter (A-Z, Z-A)', description: 'Organize your lists and text lines alphabetically online for free. Support for A-Z and Z-A sorting with instant results. Fast and secure.' },
         status: 'published'
     },
     {
@@ -528,7 +518,7 @@ export const tools = [
         description: 'Trim extra whitespace, tabs, and line breaks.',
         category: 'text',
         group: 'text-edit',
-        seo: { title: 'Whitespace Remover', description: 'Remove extra spaces.' },
+        seo: { title: 'Whitespace Remover Online - Trim Extra Spaces and Tabs Free', description: 'Clean your text by removing extra spaces, tabs, and indentation online. Optimize your data and code formatting with our free, secure tool.' },
         status: 'published'
     },
     {
@@ -538,7 +528,7 @@ export const tools = [
         description: 'Analyze word usage frequency in your text.',
         category: 'text',
         group: 'text-analyze',
-        seo: { title: 'Word Frequency Counter', description: 'Count word occurrences.' },
+        seo: { title: 'Word Frequency Counter - Analyze Text Usage Online Free', description: 'Discover the most frequently used words in your text. Perfect for SEO analysis, writers, and students looking to improve their content quality.' },
         status: 'published'
     },
     {
@@ -548,7 +538,7 @@ export const tools = [
         description: 'Advanced find and replace tool with Regex.',
         category: 'text',
         group: 'text-edit',
-        seo: { title: 'Advanced Find & Replace', description: 'Regex find and replace.' },
+        seo: { title: 'Advanced Find and Replace Online - Text Editor with Regex', description: 'Perform batch find and replace operations on your text online. Includes support for Regular Expressions (Regex) for advanced developer tasks. 100% free.' },
         status: 'published'
     },
 
@@ -570,7 +560,7 @@ export const tools = [
         description: 'Encode or decode URLs safely.',
         category: 'developer',
         group: 'dev-tool',
-        seo: { title: 'URL Encoder Decoder', description: 'Online URL encode decode.' },
+        seo: { title: 'URL Encoder Decoder Online - Safe Percent-Encoding Free', description: 'Safely encode or decode URLs online. Convert special characters into percent-encoded format for reliable web navigation. Fast and secure for developers.' },
         status: 'published',
     },
     {
@@ -580,7 +570,7 @@ export const tools = [
         description: 'Format and beautify HTML code.',
         category: 'developer',
         group: 'dev-format',
-        seo: { title: 'HTML Formatter', description: 'Beautify HTML code.' },
+        seo: { title: 'Online HTML Formatter - Beautify and Prettify HTML Code', description: 'Format and beautify your messy HTML code instantly. Improve readability with proper indentation and clean structure for free. 100% private.' },
         status: 'published',
     },
     {
@@ -590,7 +580,7 @@ export const tools = [
         description: 'Format and beautify CSS code.',
         category: 'developer',
         group: 'dev-format',
-        seo: { title: 'CSS Formatter', description: 'Clean CSS code.' },
+        seo: { title: 'CSS Formatter & Beautifier - Clean and Prettify Stylesheets', description: 'Format and beautify your CSS code online for free. Clean up indentation and improve the structure of your stylesheets instantly. Developer-friendly.' },
         status: 'published',
     },
     {
@@ -600,7 +590,7 @@ export const tools = [
         description: 'Format and beautify JavaScript code.',
         category: 'developer',
         group: 'dev-format',
-        seo: { title: 'JavaScript Formatter', description: 'Beautify JS code.' },
+        seo: { title: 'JavaScript Formatter - Beautify and Prettify JS/TS Code Online', description: 'Beautify and format your JavaScript and TypeScript code for free. Improve code readability with professional indentation and structure tools.' },
         status: 'published',
     },
     {
@@ -610,7 +600,7 @@ export const tools = [
         description: 'Format and beautify XML code.',
         category: 'developer',
         group: 'dev-format',
-        seo: { title: 'XML Formatter', description: 'Beautify XML data.' },
+        seo: { title: 'XML Formatter & Beautifier - Prettify XML Data Online Free', description: 'Format and beautify XML strings online. Clean up complex XML structures with proper indentation for better data visualization. Fast and secure.' },
         status: 'published',
     },
     {
@@ -620,7 +610,7 @@ export const tools = [
         description: 'Format and beautify SQL queries.',
         category: 'developer',
         group: 'dev-format',
-        seo: { title: 'SQL Formatter', description: 'Format SQL queries.' },
+        seo: { title: 'SQL Formatter - Online SQL Query Beautifier & Cleaner', description: 'Format and beautify your SQL queries online for free. Support for multiple SQL dialects with clean indentation and professional structure.' },
         status: 'published',
     },
     {
@@ -630,7 +620,7 @@ export const tools = [
         description: 'Convert Markdown to HTML code.',
         category: 'developer',
         group: 'dev-convert',
-        seo: { title: 'Markdown to HTML', description: 'Convert MD to HTML.' },
+        seo: { title: 'Markdown to HTML Converter Online - Fast & Accurate MD Tool', description: 'Transform your Markdown text into clean, semantic HTML code instantly. Perfect for bloggers, developers, and writers creating web content. 100% free.' },
         status: 'published',
     },
     {
@@ -640,7 +630,7 @@ export const tools = [
         description: 'Convert HTML to Markdown format.',
         category: 'developer',
         group: 'dev-convert',
-        seo: { title: 'HTML to Markdown', description: 'Convert HTML to MD.' },
+        seo: { title: 'HTML to Markdown Converter Online - Clean MD Generator', description: 'Convert HTML code snippets into clean, readable Markdown format for free. Ideal for migrating content between platforms and documentation.' },
         status: 'published',
     },
     {
@@ -650,7 +640,7 @@ export const tools = [
         description: 'Convert CSV data to JSON format.',
         category: 'developer',
         group: 'dev-convert',
-        seo: { title: 'CSV to JSON Converter', description: 'Convert CSV to JSON.' },
+        seo: { title: 'CSV to JSON Converter Online - Transform Data Files for Free', description: 'Convert CSV data or files into structured JSON format instantly. Professional developer tool for data migration and API integration. 100% secure.' },
         status: 'published',
     },
     {
@@ -660,7 +650,7 @@ export const tools = [
         description: 'Convert JSON data to CSV format.',
         category: 'developer',
         group: 'dev-convert',
-        seo: { title: 'JSON to CSV Converter', description: 'Convert JSON to CSV.' },
+        seo: { title: 'JSON to CSV Converter Online - Export Data to Spreadsheet', description: 'Convert JSON objects into flat CSV format online for free. Easily export your data for use in Excel, Google Sheets, and other spreadsheet tools.' },
         status: 'published',
     },
     {
@@ -670,7 +660,7 @@ export const tools = [
         description: 'Minify HTML, CSS, and JS code.',
         category: 'developer',
         group: 'dev-optimize',
-        seo: { title: 'Code Minifier', description: 'Minify code online.' },
+        seo: { title: 'All-in-One Code Minifier - Minify HTML, CSS, and JS Online', description: 'Reduce the file size of your web code by minifying HTML, CSS, and JavaScript. Improve website load times and performance for free. Fast and secure.' },
         status: 'published',
     },
 
@@ -681,7 +671,7 @@ export const tools = [
         description: 'Compare two texts to find differences.',
         category: 'developer',
         group: 'dev-tool',
-        seo: { title: 'Online Diff Checker', description: 'Compare text differences.' },
+        seo: { title: 'Online Text Diff Checker - Compare Two Texts for Differences', description: 'Instantly find and highlight the differences between two blocks of text or code. Professional side-by-side comparison tool for developers and writers.' },
         status: 'published',
     },
     {
@@ -691,7 +681,7 @@ export const tools = [
         description: 'Test regular expressions against text.',
         category: 'developer',
         group: 'dev-tool',
-        seo: { title: 'Regex Tester', description: 'Test regex patterns online.' },
+        seo: { title: 'Online Regex Tester - Test Regular Expressions in Real-Time', description: 'Build and test your regular expressions (Regex) online for free. Real-time matching with detailed explanations. Essential tool for modern developers.' },
         status: 'published',
     },
 
@@ -703,7 +693,7 @@ export const tools = [
         description: 'Convert length, weight, temperature, and more.',
         category: 'converter',
         group: 'conv-unit',
-        seo: { title: 'Unit Converter', description: 'Universal unit converter.' },
+        seo: { title: 'All-in-One Unit Converter Online - Convert Anything Free', description: 'Convert length, weight, volume, area, and temperature instantly. Professional measurement converter with support for metric and imperial units. 100% free.' },
         status: 'published'
     },
     {
@@ -723,7 +713,7 @@ export const tools = [
         description: 'Convert HEX, RGB, HSL colors.',
         category: 'converter',
         group: 'conv-color',
-        seo: { title: 'Color Converter', description: 'Convert color codes.' },
+        seo: { title: 'Online Color Converter - HEX, RGB, HSL, and CMYK Free', description: 'Convert color codes between HEX, RGB, HSL, and more. Essential tool for designers and developers to find the perfect color format instantly. 100% secure.' },
         status: 'published',
     },
     {
@@ -733,7 +723,7 @@ export const tools = [
         description: 'Translate binary code to text.',
         category: 'converter',
         group: 'conv-data',
-        seo: { title: 'Binary to Text', description: 'Convert binary to text.' },
+        seo: { title: 'Binary to Text Converter Online - Fast & Secure Translation', description: 'Translate binary code into readable text instantly. Professional data conversion tool for developers and security enthusiasts. 100% free and browser-based.' },
         status: 'published',
     },
     {
@@ -743,7 +733,7 @@ export const tools = [
         description: 'Convert Hexadecimal to Decimal.',
         category: 'converter',
         group: 'conv-data',
-        seo: { title: 'Hex to Decimal', description: 'Convert hex numbers.' },
+        seo: { title: 'Hex to Decimal Converter Online - Base16 to Base10 Free', description: 'Easily convert hexadecimal (Base16) numbers to decimal (Base10) format. Fast and accurate conversion for programmers and computer science students.' },
         status: 'published',
     },
     {
@@ -753,7 +743,7 @@ export const tools = [
         description: 'Convert numbers to Roman numerals.',
         category: 'converter',
         group: 'conv-data',
-        seo: { title: 'Roman Numeral Converter', description: 'Roman numerals tool.' },
+        seo: { title: 'Roman Numeral Converter - Arabic to Roman Numbers Free', description: 'Convert standard numbers into Roman numerals and vice versa. Perfect for dates, history projects, and classic formatting. Fast, accurate, and free.' },
         status: 'published',
     },
 
@@ -765,7 +755,7 @@ export const tools = [
         description: 'Generate random numbers within a range.',
         category: 'utility',
         group: 'util-rand',
-        seo: { title: 'Random Number Generator', description: 'Generate random numbers.' },
+        seo: { title: 'Random Number Generator - Custom Range Picker Online', description: 'Generate truly random numbers within any custom range. Perfect for lotteries, games, research, and unbiased decision making. 100% free and secure.' },
         status: 'published'
     },
     {
@@ -775,7 +765,7 @@ export const tools = [
         description: 'Generate random strings and passwords.',
         category: 'utility',
         group: 'util-rand',
-        seo: { title: 'Random String Generator', description: 'Generate random strings.' },
+        seo: { title: 'Random String Generator - Unique Text & Password Maker', description: 'Generate secure, random strings of any length with custom character sets. Ideal for passwords, API keys, and unique identifiers. Fast and private.' },
         status: 'published',
     },
     {
@@ -785,7 +775,7 @@ export const tools = [
         description: 'Generate random colors.',
         category: 'utility',
         group: 'util-rand',
-        seo: { title: 'Random Color Generator', description: 'Generate random colors.' },
+        seo: { title: 'Random Color Generator - Get Design Inspiration Instantly', description: 'Discover beautiful random colors and HEX codes for your next design project. Perfect for artists, designers, and developers seeking creative sparks.' },
         status: 'published',
     },
     {
@@ -795,7 +785,7 @@ export const tools = [
         description: 'Generate random dates.',
         category: 'utility',
         group: 'util-rand',
-        seo: { title: 'Random Date Generator', description: 'Generate random dates.' },
+        seo: { title: 'Random Date Generator - Pick a Random Day in Any Range', description: 'Generate a random date within your specified timeframe. useful for testing, research, and creative writing. Fast, free, and easy to use online.' },
         status: 'published',
     },
     {
@@ -805,7 +795,7 @@ export const tools = [
         description: 'Generate random IP addresses.',
         category: 'utility',
         group: 'util-rand',
-        seo: { title: 'Random IP Generator', description: 'Generate random IPs.' },
+        seo: { title: 'Random IP Generator - Generate Random IPv4 Addresses', description: 'Create random IPv4 addresses instantly. Useful for developer testing, network simulations, and data modeling. 100% free and secure browser tool.' },
         status: 'published',
     },
 
@@ -817,7 +807,7 @@ export const tools = [
         description: 'Generate strong, secure passwords.',
         category: 'security',
         group: 'sec-gen',
-        seo: { title: 'Password Generator', description: 'Generate secure passwords.' },
+        seo: { title: 'Secure Password Generator - Create Strong Hack-Proof Passwords', description: 'Generate highly secure, random passwords with custom length and characters. Protect your online accounts with enterprise-grade entropy. 100% private.' },
         status: 'published'
     },
     {
@@ -827,7 +817,7 @@ export const tools = [
         description: 'Generate Bcrypt password hashes.',
         category: 'security',
         group: 'sec-gen',
-        seo: { title: 'Bcrypt Generator', description: 'Generate Bcrypt hash.' },
+        seo: { title: 'Bcrypt Hash Generator - Secure Password Hashing Online', description: 'Generate secure Bcrypt hashes for your passwords and sensitive data. Professional-grade encryption tool for developers and security experts. 100% free.' },
         status: 'published'
     },
     {
@@ -837,7 +827,7 @@ export const tools = [
         description: 'Encode/Decode Base64.',
         category: 'crypto',
         group: 'sec-gen',
-        seo: { title: 'Base64 Encoder', description: 'Base64 encode decode.' },
+        seo: { title: 'Base64 Encoder & Decoder - Secure Data Transformation Free', description: 'Instantly encode or decode text and files using Base64 format. Secure, browser-side processing ensures your data never leaves your device. 100% free.' },
         status: 'published'
     },
     {
@@ -847,7 +837,7 @@ export const tools = [
         description: 'Generate MD5 hash.',
         category: 'crypto',
         group: 'sec-gen',
-        seo: { title: 'MD5 Generator', description: 'Generate MD5 hash.' },
+        seo: { title: 'MD5 Hash Generator - Quick Data Integrity Checker Online', description: 'Generate 128-bit MD5 hashes for any text or string instantly. Fast and reliable tool for verifying data integrity and checksums for developers.' },
         status: 'published'
     },
     {
@@ -857,7 +847,7 @@ export const tools = [
         description: 'Generate SHA-256 hash.',
         category: 'crypto',
         group: 'sec-gen',
-        seo: { title: 'SHA-256 Generator', description: 'Generate SHA-256 hash.' },
+        seo: { title: 'SHA-256 Hash Generator - Strong Cryptographic Security', description: 'Generate highly secure SHA-256 hashes for your data. Industry-standard cryptographic tool for developers and security professionals. Fast and free.' },
         status: 'published'
     },
     {
@@ -867,7 +857,7 @@ export const tools = [
         description: 'Generate SHA-512 hash.',
         category: 'crypto',
         group: 'sec-gen',
-        seo: { title: 'SHA-512 Generator', description: 'Generate SHA-512 hash.' },
+        seo: { title: 'SHA-512 Hash Generator - Maximum Security Data Hashing', description: 'Create powerful 512-bit SHA hashes for maximum data protection. Professional encryption tool for high-security applications and developer tasks.' },
         status: 'published'
     },
     {
@@ -877,7 +867,7 @@ export const tools = [
         description: 'Generate UUID v4.',
         category: 'crypto',
         group: 'sec-gen',
-        seo: { title: 'UUID Generator', description: 'Generate UUIDs.' },
+        seo: { title: 'UUID v4 Generator - Unique Identifier Creator Online', description: 'Generate universally unique identifiers (UUID v4) instantly. Perfect for database keys, session IDs, and software development. 100% free and secure.' },
         status: 'published'
     },
     {
@@ -887,7 +877,7 @@ export const tools = [
         description: 'Generate QR codes.',
         category: 'utility',
         group: 'util-rand',
-        seo: { title: 'QR Code Generator', description: 'Generate QR codes.' },
+        seo: { title: 'QR Code Generator - Create Custom QR Codes for Links & Text', description: 'Instantly generate professional QR codes for URLs, text, and contact info. Download your custom QR code for free and share it anywhere. Fast and secure.' },
         status: 'published'
     },
 
@@ -899,7 +889,7 @@ export const tools = [
         description: 'Generate placeholder text.',
         category: 'utility',
         group: 'util-gen',
-        seo: { title: 'Lorem Ipsum Generator', description: 'Generate dummy text.' },
+        seo: { title: 'Lorem Ipsum Generator - Professional Placeholder Text Maker', description: 'Generate realistic placeholder text (lorem ipsum) for your design and development projects. Customize by paragraphs, words, or lists. 100% free.' },
         status: 'published'
     },
 
@@ -911,7 +901,7 @@ export const tools = [
         description: 'Download high-quality thumbnails from any YouTube video.',
         category: 'youtube',
         group: 'yt-tool',
-        seo: { title: 'YouTube Thumbnail Downloader', description: 'Download YouTube thumbnails in HD, SD, and 4K.' },
+        seo: { title: 'YouTube Thumbnail Downloader - Get HD & 4K Thumbnails Free', description: 'Download high-quality thumbnails from any YouTube video instantly. Save images in HD, SD, or 4K resolution. Fast, free, and no registration required.' },
         status: 'published'
     },
     {
@@ -921,7 +911,7 @@ export const tools = [
         description: 'Generate optimized tags for your YouTube videos to improve ranking.',
         category: 'youtube',
         group: 'yt-tool',
-        seo: { title: 'YouTube Tag Generator', description: 'Free YouTube tag generator for SEO.' },
+        seo: { title: 'YouTube Tag Generator - SEO Optimized Tags for Ranking', description: 'Generate relevant, high-traffic tags for your YouTube videos. Improve your video SEO and search rankings with our professional tag discovery tool.' },
         status: 'published'
     },
     {
@@ -931,7 +921,7 @@ export const tools = [
         description: 'Generate catchy, SEO-friendly titles for your YouTube videos.',
         category: 'youtube',
         group: 'yt-tool',
-        seo: { title: 'YouTube Title Generator', description: 'Create viral YouTube titles.' },
+        seo: { title: 'YouTube Title Generator - Create Catchy & Viral Titles Free', description: 'Generate SEO-friendly and engaging titles for your YouTube videos. Increase your click-through rate (CTR) and video reach with ease. 100% free.' },
         status: 'published'
     },
     {
@@ -941,7 +931,7 @@ export const tools = [
         description: 'Generate advanced embed codes with autoplay, loop, and hide controls.',
         category: 'youtube',
         group: 'yt-tool',
-        seo: { title: 'YouTube Embed Code Generator', description: 'Custom YouTube embed code generator.' },
+        seo: { title: 'YouTube Embed Code Generator - Customizable Video Player', description: 'Create professional embed codes for YouTube videos. Customize autoplay, looping, player controls, and responsiveness for your website. 100% secure.' },
         status: 'published'
     },
     {
@@ -951,7 +941,7 @@ export const tools = [
         description: 'Create YouTube links that start at a specific time.',
         category: 'youtube',
         group: 'yt-tool',
-        seo: { title: 'YouTube Timestamp Link Generator', description: 'Share YouTube video at specific time.' },
+        seo: { title: 'YouTube Timestamp Link Generator - Share Video at Exact Time', description: 'Generate links to any YouTube video that start exactly where you want. perfect for sharing specific moments with friends or colleagues for free.' },
         status: 'published'
     },
 
@@ -963,7 +953,7 @@ export const tools = [
         description: 'Generate SEO-friendly meta tags for your website.',
         category: 'seo',
         group: 'seo-gen',
-        seo: { title: 'Meta Tag Generator', description: 'Free Meta Tag Generator for SEO.' },
+        seo: { title: 'Meta Tag Generator - Expert SEO Meta Tags for Your Website', description: 'Create high-quality, SEO-optimized meta tags for your website. Boost your search engine indexing and click-through rates with professional meta data.' },
         status: 'published'
     },
     {
@@ -973,7 +963,7 @@ export const tools = [
         description: 'Create Open Graph meta tags for Facebook and LinkedIn sharing.',
         category: 'seo',
         group: 'seo-gen',
-        seo: { title: 'Open Graph Generator', description: 'Facebook Open Graph Meta Tags Generator.' },
+        seo: { title: 'Open Graph Meta Tag Generator - Optimize for Social Sharing', description: 'Generate OG tags for Facebook, LinkedIn, and more. Ensure your website looks professional when shared on social media with custom titles and images.' },
         status: 'published'
     },
     {
@@ -983,7 +973,7 @@ export const tools = [
         description: 'Generate Twitter Card meta tags for better social sharing.',
         category: 'seo',
         group: 'seo-gen',
-        seo: { title: 'Twitter Card Generator', description: 'Create Twitter Card meta tags.' },
+        seo: { title: 'Twitter Card Generator - Create Rich Media Tags for Twitter', description: 'Optimize your content for Twitter with custom Twitter Card meta tags. Improve engagement and visibility on every tweet with professional media previews.' },
         status: 'published'
     },
     {
@@ -993,7 +983,7 @@ export const tools = [
         description: 'Create proper robots.txt files to control crawler access.',
         category: 'seo',
         group: 'seo-gen',
-        seo: { title: 'Robots.txt Generator', description: 'Generate robots.txt file online.' },
+        seo: { title: 'Robots.txt Generator - Control Search Engine Crawler Access', description: 'Easily create a professional robots.txt file to guide search engine bots. Manage which parts of your site should be indexed for better SEO control.' },
         status: 'published'
     },
     {
@@ -1003,7 +993,7 @@ export const tools = [
         description: 'Generate XML sitemaps for easier search engine indexing.',
         category: 'seo',
         group: 'seo-gen',
-        seo: { title: 'XML Sitemap Generator', description: 'Free XML Sitemap Generator.' },
+        seo: { title: 'XML Sitemap Generator - Fast Search Engine Indexing Tool', description: 'Generate a comprehensive XML sitemap for your website online. Help Google and Bing index your pages faster and more accurately. 100% free.' },
         status: 'published'
     },
 
@@ -1015,7 +1005,7 @@ export const tools = [
         description: 'Analyze keyword usage and density in your content.',
         category: 'seo',
         group: 'seo-keyword',
-        seo: { title: 'Keyword Density Checker', description: 'Check keyword density online.' },
+        seo: { title: 'Keyword Density Checker - Analyze SEO Content for Free', description: 'Verify your keyword usage and avoid over-optimization with our pro density checker. Ensure your content is perfectly balanced for search engine rankings.' },
         status: 'published'
     },
     {
@@ -1025,7 +1015,7 @@ export const tools = [
         description: 'Clean up keyword lists: remove duplicates, empty lines, and specific characters.',
         category: 'seo',
         group: 'seo-keyword',
-        seo: { title: 'Free Keyword Cleaner', description: 'Clean and format keyword lists.' },
+        seo: { title: 'Keyword Cleaner Online - Format and Optimize Keyword Lists', description: 'Remove duplicates, empty lines, and special characters from your keyword lists. Streamline your SEO workflow with our fast and free keyword tool.' },
         status: 'published'
     },
     {
@@ -1035,7 +1025,7 @@ export const tools = [
         description: 'Generate long-tail keyword variations from seed keywords.',
         category: 'seo',
         group: 'seo-keyword',
-        seo: { title: 'Long Tail Keyword Generator', description: 'Find long tail keywords for SEO.' },
+        seo: { title: 'Long Tail Keyword Generator - Find Niche SEO Keywords', description: 'Discover high-converting long-tail keywords from seed phrases. Boost your SEO strategy by targeting specific user queries and lower-competition terms.' },
         status: 'published'
     },
     {
@@ -1045,7 +1035,7 @@ export const tools = [
         description: 'Convert text into SEO-friendly URL slugs.',
         category: 'seo',
         group: 'seo-gen',
-        seo: { title: 'URL Slug Generator', description: 'Create clean URL slugs.' },
+        seo: { title: 'URL Slug Generator - Create Clean, SEO-Friendly Link Paths', description: 'Transform any text or title into an optimized, human-readable URL slug. Clean up your permalinks to improve user experience and search rankings.' },
         status: 'published'
     },
 
@@ -1057,7 +1047,7 @@ export const tools = [
         description: 'Preview how your website will appear in Google search results.',
         category: 'seo',
         group: 'seo-gen',
-        seo: { title: 'Google SERP Simulator', description: 'SEO Search Result Preview Tool.' },
+        seo: { title: 'Google SERP Simulator - Preview Search Result Appearance', description: 'See exactly how your website will look in Google search results. Test different titles and meta descriptions to maximize your click-through rate (CTR).' },
         status: 'published'
     },
     {
@@ -1067,7 +1057,7 @@ export const tools = [
         description: 'Generate .htaccess redirect code for 301/302 redirects.',
         category: 'seo',
         group: 'seo-gen',
-        seo: { title: 'Htaccess Redirect Generator', description: 'Create .htaccess redirects.' },
+        seo: { title: '.htaccess Redirect Generator - 301 and 302 Redirect Maps', description: 'Generate professional .htaccess redirect code for your website. Handles 301 permanent and 302 temporary redirects with ease. Fast and error-free.' },
         status: 'published'
     },
     {
@@ -1077,7 +1067,7 @@ export const tools = [
         description: 'Check your public IP address and location details.',
         category: 'utility',
         group: 'util-net',
-        seo: { title: 'What Is My IP Address', description: 'Check your IP address online.' },
+        seo: { title: 'What Is My IP Address? - Check Your Public IP and Location', description: 'Instantly find your public IPv4 and IPv6 address. See your estimated location, ISP, and connection details with our secure and private IP checker.' },
         status: 'published'
     },
     {
@@ -1087,7 +1077,7 @@ export const tools = [
         description: 'Get detailed information about your current browser and system.',
         category: 'utility',
         group: 'util-net',
-        seo: { title: 'Browser Information Tool', description: 'Check browser details.' },
+        seo: { title: 'Browser Information Tool - Check User Agent and System Details', description: 'Get a full breakdown of your current browser, version, operating system, and screen resolution. Essential for troubleshooting and web development.' },
         status: 'published'
     },
     {
@@ -1097,7 +1087,7 @@ export const tools = [
         description: 'Test your website on different screen resolutions.',
         category: 'utility',
         group: 'util-net',
-        seo: { title: 'Screen Resolution Simulator', description: 'Test website resolution.' },
+        seo: { title: 'Screen Resolution Simulator - Test Website Views Online', description: 'Simulate how your website appears on various screen resolutions. Perfect for verifying layouts on non-standard displays and older monitors for free.' },
         status: 'published'
     },
     {
@@ -1149,7 +1139,7 @@ export const tools = [
         description: 'Validate email address format using regex.',
         category: 'utility',
         group: 'util-net',
-        seo: { title: 'Email Address Validator', description: 'Check email validity.' },
+        seo: { title: 'Email Address Validator - Verify Email Format & Syntax Free', description: 'Check any email address for proper syntax and format using professional regex validation. Ensure your mailing lists are clean and error-free online.' },
         status: 'published'
     },
     {
@@ -1159,7 +1149,7 @@ export const tools = [
         description: 'Open multiple URLs at once in new tabs.',
         category: 'utility',
         group: 'util-net',
-        seo: { title: 'Bulk URL Opener', description: 'Open multiple links simultaneously.' },
+        seo: { title: 'Bulk URL Opener - Open Multiple Links Simultaneously', description: 'Open a list of multiple URLs in separate browser tabs with just one click. Save time during research and web browsing with our fast link opener.' },
         status: 'published'
     },
 
@@ -1170,7 +1160,7 @@ export const tools = [
         slug: 'user-agent-parser',
         description: 'Parse and analyze User-Agent strings.',
         category: 'developer',
-        seo: { title: 'User Agent Parser', description: 'Decode user agent strings.' },
+        seo: { title: 'User Agent Parser Online - Decode Device & Browser Strings', description: 'Analyze and decode any User-Agent string to identify the browser, version, device, and operating system. Essential tool for web developers and analysts.' },
         status: 'published'
     },
     {
@@ -1190,7 +1180,7 @@ export const tools = [
         description: 'Calculate your exact age in years, months, and days.',
         category: 'calculator',
         group: 'calc-util',
-        seo: { title: 'Online Age Calculator', description: 'Calculate age from date of birth.' },
+        seo: { title: 'Exact Age Calculator - Calculate Your Age in Years, Months, Days', description: 'Find your exact age instantly. This free online tool calculates age from date of birth in years, months, weeks, days, hours, and minutes. 100% accurate.' },
         status: 'published'
     },
     {
@@ -1200,7 +1190,7 @@ export const tools = [
         description: 'Calculate your Body Mass Index (BMI) and health status.',
         category: 'calculator',
         group: 'calc-util',
-        seo: { title: 'BMI Calculator Online', description: 'Check your BMI and health status.' },
+        seo: { title: 'BMI Calculator Online (Free) - Check Your Body Mass Index & Health', description: 'Calculate your Body Mass Index (BMI) instantly for free. Understand your health status with our professional weight category scale. Fast and private.' },
         status: 'published'
     },
     {
@@ -1210,7 +1200,7 @@ export const tools = [
         description: 'Quickly calculate percentages, increases, and decreases.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Online Percentage Calculator', description: 'Calculate percentages easily.' },
+        seo: { title: 'Online Percentage Calculator - Free High-Speed Math Tool', description: 'Quickly calculate percentages, increases, and decreases for any amount. Ideal for students, business, and daily math tasks. Fast, accurate, and free.' },
         status: 'published'
     },
     {
@@ -1220,7 +1210,7 @@ export const tools = [
         description: 'Calculate GST (Goods and Services Tax) for any amount.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Online GST Calculator', description: 'Calculate GST with tax inclusive/exclusive.' },
+        seo: { title: 'Online GST Calculator - Fast Tax Inclusive & Exclusive Finder', description: 'Calculate Goods and Services Tax (GST) for any amount instantly. Professional tax tool with support for inclusive and exclusive tax rates. 100% free.' },
         status: 'published'
     },
     {
@@ -1230,7 +1220,7 @@ export const tools = [
         description: 'Calculate monthly loan EMI and total interest payable.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Loan EMI Calculator', description: 'Calculate mortgage and loan EMIs.' },
+        seo: { title: 'Loan EMI Calculator - Monthly Payment & Interest Estimator', description: 'Calculate your Equated Monthly Installment (EMI) for home, car, or personal loans. See your total interest payable and repayment schedule online for free.' },
         status: 'published'
     },
     {
@@ -1240,7 +1230,7 @@ export const tools = [
         description: 'Calculate final price after discount and savings.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Online Discount Calculator', description: 'Calculate sale prices and discounts.' },
+        seo: { title: 'Online Discount Calculator - Calculate Sale Prices & Savings', description: 'Find the final price of any item after discounts. quickly calculate total savings and percentage-off deals for shopping and business. 100% free.' },
         status: 'published'
     },
 
@@ -1252,7 +1242,7 @@ export const tools = [
         description: 'Generate popular and trending hashtags for Instagram.',
         category: 'social',
         group: 'social-gen',
-        seo: { title: 'Instagram Hashtag Generator', description: 'Find trending tags for Instagram.' },
+        seo: { title: 'Instagram Hashtag Generator - Find Trending & Viral Hashtags', description: 'Discover the best hashtags for your Instagram posts to boost engagement and reach. Generate trending tags by category or keyword instantly for free.' },
         status: 'published'
     },
     {
@@ -1262,7 +1252,7 @@ export const tools = [
         description: 'Convert standard HTML code into React JSX syntax.',
         category: 'developer',
         group: 'dev-convert',
-        seo: { title: 'HTML to JSX Converter', description: 'Convert HTML to React JSX online.' },
+        seo: { title: 'HTML to JSX Converter Online - Best Free React Developer Tool', description: 'Convert standard HTML snippets into React JSX syntax instantly. Handles attribute renaming (class to className) and self-closing tags for free.' },
         status: 'published'
     },
 
@@ -1274,7 +1264,7 @@ export const tools = [
         description: 'Calculate future wealth with compound interest (daily, monthly, yearly).',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Compound Interest Calculator - Wealth Planner', description: 'Calculate how your savings grow over time.' },
+        seo: { title: 'Compound Interest Calculator - Wealth & Investment Planner', description: 'Project your future wealth with our professional compound interest tool. Supports daily, monthly, and yearly compounding frequencies. 100% free online.' },
         status: 'published'
     },
     {
@@ -1294,7 +1284,7 @@ export const tools = [
         description: 'Calculate returns on your Systematic Investment Plan (SIP) investments.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'SIP Calculator - Mutual Fund Returns Estimator', description: 'Calculate future value of your SIP investments.' },
+        seo: { title: 'SIP Calculator Online - Estimate Mutual Fund Returns Free', description: 'Calculate the future value of your Systematic Investment Plan (SIP) instantly. Plan your long-term wealth goals with our professional finance tool. Fast & secure.' },
         status: 'published'
     },
     {
@@ -1304,7 +1294,7 @@ export const tools = [
         description: 'Calculate buy/sell profit or loss for Bitcoin and Altcoins.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Crypto Profit/Loss Calculator', description: 'Instantly calculate your cryptocurrency investment profits.' },
+        seo: { title: 'Crypto Profit/Loss Calculator - Instant Bitcoin Profit Finder', description: 'Calculate your cryptocurrency trading profits or losses instantly. Professional tool for Bitcoin, Ethereum, and Altcoins with buy/sell logic. 100% free.' },
         status: 'published'
     },
     {
@@ -1314,7 +1304,7 @@ export const tools = [
         description: 'Calculate the purchasing power of money over time due to inflation.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Inflation Calculator - Purchasing Power Finder', description: 'Calculate how inflation affects your money value.' },
+        seo: { title: 'Inflation Calculator - Purchasing Power & Money Value Finder', description: 'See how inflation affects the value of your money over time. Track purchasing power changes using historical data with our pro online calculator. 100% free.' },
         status: 'published'
     },
     {
@@ -1324,7 +1314,7 @@ export const tools = [
         description: 'Calculate Return on Investment (ROI) for marketing and business projects.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'ROI Calculator - Return on Investment Tracker', description: 'Calculate the profitability of your investments.' },
+        seo: { title: 'ROI Calculator - Return on Investment & Profitability Tracker', description: 'Calculate the Return on Investment (ROI) for any business or marketing project. Determine profitability with professional percentage-based results online.' },
         status: 'published'
     },
     {
@@ -1334,7 +1324,7 @@ export const tools = [
         description: 'Calculate Cost Per Mille (CPM) for advertising campaigns.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'CPM Calculator - Ad Campaign Optimizer', description: 'Calculate advertising cost per 1000 impressions.' },
+        seo: { title: 'CPM Calculator Online - Advertising Cost & Impressions Tool', description: 'Calculate Cost Per Mille (CPM) for your marketing campaigns. Determine total impressions, budget, or CPM rates instantly with our professional ad tool.' },
         status: 'published'
     },
     {
@@ -1344,7 +1334,7 @@ export const tools = [
         description: 'Calculate sales tax for US states and international regions.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Sales Tax Calculator - State & Global Tax Finder', description: 'Calculate sales tax inclusive and exclusive amounts.' },
+        seo: { title: 'Online Sales Tax Calculator - State & Global Tax Estimator', description: 'Calculate sales tax for US states and international regions instantly. Support for tax-inclusive and exclusive billing. Professional business tool, 100% free.' },
         status: 'published'
     },
     {
@@ -1354,7 +1344,7 @@ export const tools = [
         description: 'Generate professional privacy policies for websites and apps.',
         category: 'social',
         group: 'social-gen',
-        seo: { title: 'Privacy Policy Generator - Free & Professional', description: 'Create a compliant privacy policy for your website.' },
+        seo: { title: 'Free Privacy Policy Generator - Professional Web & App Legal Doc', description: 'Create a customized, professional privacy policy for your website or mobile app online for free. GDPR and CCPA compliant templates. Fast and secure.' },
         status: 'published'
     },
     {
@@ -1364,7 +1354,7 @@ export const tools = [
         description: 'Generate customized terms and conditions for your business.',
         category: 'social',
         group: 'social-gen',
-        seo: { title: 'Terms and Conditions Generator', description: 'Create terms of service for your platform.' },
+        seo: { title: 'Terms and Conditions Generator - Free Professional T&C Maker', description: 'Generate professional Terms of Service and Conditions for your business platform. Protect your website and users with a custom legal document instantly.' },
         status: 'published'
     },
     {
@@ -1395,7 +1385,7 @@ export const tools = [
         description: 'Calculate monthly car loan payments, total interest, and amortization.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Car Loan Calculator - Monthly Payment Estimator', description: 'Calculate monthly car payments, total interest paid, and auto loan amortization schedule.' },
+        seo: { title: 'Car Loan Calculator Online - Monthly Auto Payment Estimator', description: 'Calculate your monthly car loan payments, total interest paid, and full amortization schedule. Professional auto financing tool, 100% free and secure.' },
         status: 'published'
     },
     {
@@ -1405,7 +1395,7 @@ export const tools = [
         description: 'Calculate how long it will take to pay off your credit card debt.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Credit Card Payoff Calculator - Debt Freedom Planner', description: 'Find out how long to pay off credit card debt and how much interest you will owe.' },
+        seo: { title: 'Credit Card Payoff Calculator - Debt Freedom & Interest Planner', description: 'Find out exactly how long it will take to pay off your credit card balance. Calculate monthly payments and interest saved online for free. Secure & private.' },
         status: 'published'
     },
     {
@@ -1415,7 +1405,7 @@ export const tools = [
         description: 'Calculate how much to save monthly to reach your financial goal.',
         category: 'calculator',
         group: 'calc-math',
-        seo: { title: 'Savings Goal Calculator - Monthly Savings Planner', description: 'Calculate the monthly savings needed to reach any financial goal.' },
+        seo: { title: 'Savings Goal Calculator - Monthly Savings Achievement Planner', description: 'Calculate exactly how much you need to save each month to reach your financial goals. Professional wealth planning tool for big purchases and emergencies.' },
         status: 'published'
     },
     {
@@ -1436,7 +1426,7 @@ export const tools = [
         description: 'Calculate Total Daily Energy Expenditure to plan your diet and fitness goals.',
         category: 'calculator',
         group: 'calc-util',
-        seo: { title: 'TDEE Calculator - Total Daily Energy Expenditure', description: 'Calculate your TDEE to plan your calorie intake for weight loss, gain, or maintenance.' },
+        seo: { title: 'TDEE Calculator Online - Total Daily Energy Expenditure Finder', description: 'Calculate your Total Daily Energy Expenditure (TDEE) to manage your diet. Find your maintenance calories for weight loss, gain, or health maintenance free.' },
         status: 'published'
     },
     {
@@ -1469,15 +1459,45 @@ export const tools = [
         seo: { title: 'Ideal Body Weight Calculator - IBW Estimator', description: 'Calculate your ideal weight using Hamwi, Devine, and Robinson formulas instantly.' },
         status: 'published'
     },
-    // === CREATOR & SOCIAL TOOLS ===
     {
         _id: '2021',
+        name: 'GPA Calculator',
+        slug: 'gpa-calculator',
+        description: 'Calculate your college or high school GPA based on grades and credits.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'GPA Calculator (Free) — Estimate College & High School GPA', description: 'Calculate your weighted or unweighted GPA instantly. Optimized for US education systems. 100% free and easy.' },
+        status: 'published'
+    },
+    {
+        _id: '2022',
+        name: 'Salary to Hourly Calculator',
+        slug: 'salary-calculator',
+        description: 'Convert your annual salary to hourly, weekly, and monthly rates.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Salary to Hourly Calculator (Free) — US Wage Estimator (2024)', description: 'Convert annual salary to hourly, weekly, and monthly rates. See your take-home pay after holidays and overtime.' },
+        status: 'published'
+    },
+    {
+        _id: '2023',
+        name: 'Tip Calculator',
+        slug: 'tip-calculator',
+        description: 'Quickly calculate the tip and split the bill among friends.',
+        category: 'calculator',
+        group: 'calc-math',
+        seo: { title: 'Tip Calculator (Free) — Split Bill & Tip Instantly', description: 'The fastest online tip calculator. Calculate gratuity, split the bill between friends, and get clear totals.' },
+        status: 'published'
+    },
+    // === CREATOR & SOCIAL TOOLS ===
+    {
+        _id: '2024',
         name: 'YouTube Money Calculator',
         slug: 'youtube-money-calculator',
         description: 'Estimate YouTube Ad revenue from views and engagement.',
         category: 'youtube',
         group: 'yt-tool',
-        seo: { title: 'YouTube Money Calculator - Estimate Channel Earnings', description: 'Estimate YouTube earnings from views, RPM, and engagement rates.' },
+        seo: { title: 'YouTube Money Calculator - Estimate Channel Revenue Online', description: 'Estimate your potential YouTube earnings based on views, engagement, and RPM. Professional revenue calculator for creators and influencers. 100% free.' },
         status: 'published'
     },
     {
@@ -1507,7 +1527,7 @@ export const tools = [
         description: 'Create a simple, shareable bio link page for Instagram and TikTok.',
         category: 'social',
         group: 'social-gen',
-        seo: { title: 'Bio Link Generator - Free Linktree Alternative', description: 'Create a free bio link page for Instagram, TikTok and YouTube in seconds.' },
+        seo: { title: 'Free Bio Link Generator - Smart Linktree Alternative Builder', description: 'Create a professional bio link page for your Instagram, TikTok, and social media profiles in seconds. Share multiple links with one beautiful URL for free.' },
         status: 'published'
     },
     // === DEVELOPER TOOLS ===
@@ -1518,7 +1538,7 @@ export const tools = [
         description: 'Generate cron job schedules with a visual editor.',
         category: 'developer',
         group: 'dev-tool',
-        seo: { title: 'Crontab Generator - Visual Cron Job Builder', description: 'Build and validate cron expressions visually. Free online crontab editor with human-readable descriptions.' },
+        seo: { title: 'Crontab Generator Online - Best Visual Cron Job Builder Free', description: 'Build, validate, and understand cron job expressions visually. Professional crontab editor with human-readable schedule descriptions. 100% free.' },
         status: 'published'
     },
     {
@@ -1528,7 +1548,7 @@ export const tools = [
         description: 'Convert JSON objects to TypeScript interfaces automatically.',
         category: 'developer',
         group: 'dev-convert',
-        seo: { title: 'JSON to TypeScript Interface Generator', description: 'Convert any JSON to TypeScript interfaces instantly. Free online JSON to TS converter.' },
+        seo: { title: 'JSON to TypeScript Interface Generator - Best Free Developer Tool', description: 'Convert any JSON object into clean, professional TypeScript interfaces automatically. Essential tool for frontend developers. Fast, secure, and free.' },
         status: 'published'
     },
     {
@@ -1538,7 +1558,7 @@ export const tools = [
         description: 'Detect if content was written by AI or a human.',
         category: 'utility',
         group: 'util-gen',
-        seo: { title: 'AI Content Detector - Free AI Text Checker', description: 'Check if text was written by AI (ChatGPT, Gemini) or a human. Free AI content detector tool.' },
+        seo: { title: 'AI Content Detector Online - Best Free Text Checker (2024)', description: 'Detect if a piece of content was written by AI tools like ChatGPT or Gemini. Professional AI vs Human text analysis for writers and students.' },
         status: 'published'
     },
     {
@@ -1548,7 +1568,7 @@ export const tools = [
         description: 'Check and fix grammar, spelling, and punctuation errors in your text.',
         category: 'text',
         group: 'text-analyze',
-        seo: { title: 'Free Grammar Checker - Fix Grammar & Spelling Online', description: 'Check grammar, fix spelling errors, and improve punctuation for free in your browser.' },
+        seo: { title: 'Free Online Grammar Checker - Professional Spelling & Punctuation', description: 'Identify and fix grammar errors, spelling mistakes, and punctuation issues in your text instantly. Improve your writing quality for free in your browser.' },
         status: 'published'
     },
     {
@@ -1558,7 +1578,7 @@ export const tools = [
         description: 'Convert typed text into realistic handwriting style images.',
         category: 'text',
         group: 'text-style',
-        seo: { title: 'Text to Handwriting Converter - Free Online Tool', description: 'Convert your typed text into realistic handwriting images. Download as PNG for free.' },
+        seo: { title: 'Online Text to Handwriting Converter - Realistic Script Images', description: 'Transform your digital text into realistic, organic handwriting styles for free. Download as high-quality PNG images for assignments and notes.' },
         status: 'published'
     }
 ];
