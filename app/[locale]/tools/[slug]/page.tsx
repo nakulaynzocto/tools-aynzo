@@ -1,11 +1,11 @@
-import { api } from '@/lib/tools';
+import { api, tools } from '@/lib/tools';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
 import { ToolPageHeader } from '@/components/common/components/ToolPageHeader';
 import { ToolInfoSection } from '@/components/common/components/ToolInfoSection';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ArrowLeft } from 'lucide-react';
 import { getToolSEO } from '@/lib/seo';
 import { Breadcrumbs } from '@/components/common/components/Breadcrumbs';
@@ -13,6 +13,7 @@ import { RelatedTools } from '@/components/common/components/RelatedTools';
 import { ShareButtons } from '@/components/common/components/ShareButtons';
 import Script from 'next/script';
 import { generateProgrammaticMetadata } from '@/utils/seo-utils';
+import { locales } from '@/i18n';
 
 const ImageTools = dynamic(() => import('@/components/tools/image/Index'));
 const PdfTools = dynamic(() => import('@/components/tools/pdf/Index'));
@@ -38,7 +39,6 @@ const CalculatorTools = dynamic(() => import('@/components/tools/calculator/Inde
 interface Props {
   params: { slug: string; locale: string };
 }
-import { tools } from '@/lib/tools';
 
 export function generateStaticParams() {
   return tools.map((tool) => ({
@@ -48,16 +48,13 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const tTools = await getTranslations('Tools');
+    const tTools = await getTranslations({ locale: params.locale, namespace: 'Tools' });
+    const tApp = await getTranslations({ locale: params.locale, namespace: 'App' });
     const seo = getToolSEO(params.slug);
     const fallbackSeo = generateProgrammaticMetadata(params.slug, params.locale);
 
-    // 1. Priority: Localized strings from en.json (Tools.[slug])
-    // 2. Secondary: Hardcoded data from lib/seo.ts
-    // 3. Tertiary: Programmatic generated metadata (New)
-    // 4. Final: Basic fallback
-
     const name = tTools.has(`${params.slug}.name`) ? tTools(`${params.slug}.name`) : (seo?.h1 || params.slug);
+    const siteName = tApp('name');
 
     const localizedTitle = tTools.has(`${params.slug}.seoTitle`)
       ? tTools(`${params.slug}.seoTitle`)
@@ -71,8 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? tTools(`${params.slug}.seoKeywords`)
       : (seo?.keywords || fallbackSeo?.keywords);
 
-    // Final fallback if nothing exists (should be covered by fallbackSeo now)
-    const finalTitle = localizedTitle || `Free Online ${name} | AYNZO TOOLS`;
+    const finalTitle = localizedTitle || `${name} | ${siteName}`;
     const finalDesc = localizedDesc || `Use our free online ${name} tool. Fast, secure, and easy to use.`;
     const finalKeywords = localizedKeywords || `${name.toLowerCase()}, online tools, free online ${name.toLowerCase()}`;
 
@@ -95,20 +91,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         canonical: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`,
         languages: {
           'x-default': `https://tools.aynzo.com/en/tools/${params.slug}`,
-          'en': `https://tools.aynzo.com/en/tools/${params.slug}`,
-          'hi': `https://tools.aynzo.com/hi/tools/${params.slug}`,
-          'pt': `https://tools.aynzo.com/pt/tools/${params.slug}`,
-          'es': `https://tools.aynzo.com/es/tools/${params.slug}`,
-          'id': `https://tools.aynzo.com/id/tools/${params.slug}`,
-          'de': `https://tools.aynzo.com/de/tools/${params.slug}`,
-          'fr': `https://tools.aynzo.com/fr/tools/${params.slug}`,
-          'ja': `https://tools.aynzo.com/ja/tools/${params.slug}`,
-          'ru': `https://tools.aynzo.com/ru/tools/${params.slug}`,
-          'tr': `https://tools.aynzo.com/tr/tools/${params.slug}`,
-          'it': `https://tools.aynzo.com/it/tools/${params.slug}`,
-          'ko': `https://tools.aynzo.com/ko/tools/${params.slug}`,
-          'zh': `https://tools.aynzo.com/zh/tools/${params.slug}`,
-          'ar': `https://tools.aynzo.com/ar/tools/${params.slug}`,
+          ...Object.fromEntries(
+            locales.map((l) => [l, `https://tools.aynzo.com/${l}/tools/${params.slug}`])
+          )
         }
       },
     };
@@ -385,13 +370,13 @@ export default async function ToolPage({ params }: Props) {
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Home',
+          name: tNav('home'),
           item: `https://tools.aynzo.com/${params.locale}`
         },
         {
           '@type': 'ListItem',
           position: 2,
-          name: 'Tools',
+          name: tNav('tools'),
           item: `https://tools.aynzo.com/${params.locale}/tools`
         },
         {
@@ -451,25 +436,32 @@ export default async function ToolPage({ params }: Props) {
 
 
 
-        <div className="space-y-12">
           {/* FAQ Section with Schema - Localized for all languages */}
           {(() => {
-            const localizedFaqs = tTools.has(`${params.slug}.faq`) ? tTools.raw(`${params.slug}.faq`) : (seo?.faq);
+            const localizedFaqs = tTools.has(`${params.slug}.faq`) ? tTools.raw(`${params.slug}.faq`) : (params.locale === 'en' ? seo?.faq : undefined);
             if (!localizedFaqs) return null;
             return <FAQSection title={t('faqTitle')} faqs={localizedFaqs as any} />;
           })()}
 
           {/* Info Section */}
-          {/* 
-              CRITICAL: Only show hardcoded 'content' and 'faq' if the locale is 'en'.
-              For other languages, we rely on the dynamic fallback in ToolInfoSection 
-              which uses the translated description and generic text.
-              This ensures the user doesn't see English blocks on a Translated page.
-          */}
           <ToolInfoSection
             name={translatedName}
             description={translatedDesc}
-            content={tTools.has(`${params.slug}.content`) ? tTools.raw(`${params.slug}.content`) : (seo?.content)}
+            content={(() => {
+              // Priority: Localized JSON content
+              const localizedContent = tTools.has(`${params.slug}.content`) ? (tTools.raw(`${params.slug}.content`) as string) : undefined;
+              
+              // Only use hardcoded English content if locale is 'en'
+              const hardcodedContent = params.locale === 'en' ? seo?.content : undefined;
+              
+              const finalRawContent = localizedContent || hardcodedContent;
+              
+              if (!finalRawContent) return undefined;
+              
+              // Internal link rewriting for better locale consistency
+              return finalRawContent.replace(/href="\/(?:en|hi|pt|es|id|de|fr|ja|ru|tr|it|ko|zh|ar)\/tools\//g, `href="/${params.locale}/tools/`)
+                                 .replace(/href="\/tools\//g, `href="/${params.locale}/tools/`);
+            })()}
           />
 
           <ShareButtons

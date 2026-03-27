@@ -18,6 +18,13 @@ const languages = {
     'it': 'Italian'
 };
 
+// Internal link pattern to fix
+// Replaces /en/tools/ or /tools/ with /tools/ (clean target)
+const fixInternalLinks = (html) => {
+    return html.replace(/href="\/(?:en|hi|pt|es|id|de|fr|ja|ru|tr|it|ko|zh|ar)\/tools\//g, 'href="/tools/')
+               .replace(/href="\/tools\//g, 'href="/tools/');
+};
+
 // Read seo.ts file and extract tool content
 function extractToolContent() {
     const seoFilePath = path.join(__dirname, '../lib/seo.ts');
@@ -26,7 +33,6 @@ function extractToolContent() {
     const tools = {};
     
     // Match tool entries with content field
-    // Pattern: 'tool-slug': { ... content: `...` ... }
     const toolPattern = /'([a-z0-9-]+)':\s*\{[\s\S]*?content:\s*`([\s\S]*?)`/g;
     let match;
     
@@ -34,11 +40,10 @@ function extractToolContent() {
         const toolSlug = match[1];
         let content = match[2].trim();
         
-        // Clean up content - remove extra whitespace but preserve HTML structure
+        // Clean up content
         content = content.replace(/\n\s+/g, '\n').trim();
         
-        // Only include substantial content (more than 100 chars)
-        if (content.length > 100) {
+        if (content.length > 50) {
             tools[toolSlug] = content;
         }
     }
@@ -46,105 +51,64 @@ function extractToolContent() {
     return tools;
 }
 
-// Translate text using Google Translate API (free tier)
-async function translateText(text, targetLang) {
-    try {
-        // Try to use @vitalets/google-translate-api (free, no API key needed)
-        try {
-            const { translate } = require('@vitalets/google-translate-api');
-            const result = await translate(text, { to: targetLang });
-            return result.text;
-        } catch (requireError) {
-            if (requireError.code !== 'MODULE_NOT_FOUND') {
-                throw requireError;
-            }
-            // Library not installed, try other options
-        }
-        
-        // Try Google Cloud Translation API
-        try {
-            const { Translate } = require('@google-cloud/translate').v2;
-            if (process.env.GOOGLE_TRANSLATE_API_KEY) {
-                const translate = new Translate({ key: process.env.GOOGLE_TRANSLATE_API_KEY });
-                const [translation] = await translate.translate(text, targetLang);
-                return translation;
-            }
-        } catch (requireError) {
-            if (requireError.code !== 'MODULE_NOT_FOUND') {
-                throw requireError;
-            }
-        }
-        
-        // Try DeepL API
-        try {
-            const deepl = require('deepl-node');
-            if (process.env.DEEPL_API_KEY) {
-                const translator = new deepl.Translator(process.env.DEEPL_API_KEY);
-                const result = await translator.translateText(text, 'en', targetLang.toUpperCase());
-                return result.text;
-            }
-        } catch (requireError) {
-            if (requireError.code !== 'MODULE_NOT_FOUND') {
-                throw requireError;
-            }
-        }
-        
-        // Fallback: return placeholder
-        return `[TRANSLATION_NEEDED_${targetLang.toUpperCase()}] ${text}`;
-        
-    } catch (error) {
-        console.error(`   ✗ Translation error:`, error.message);
-        return text; // Return original on error
-    }
-}
-
-// Preserve HTML structure while translating
+// Translate text with quality check
 async function translateHTMLContent(htmlContent, targetLang) {
-    // Google Translate API preserves HTML tags automatically
-    // So we can translate the whole HTML content at once
     try {
         const { translate } = require('@vitalets/google-translate-api');
         const result = await translate(htmlContent, { to: targetLang });
-        return result.text;
+        
+        const translatedText = result.text;
+        
+        // Quality Check: If translated text is too similar to original (mostly English)
+        // we don't return it for non-English target languages
+        const similarity = calculateSimilarity(htmlContent, translatedText);
+        
+        if (similarity > 0.9 && targetLang !== 'en') {
+            console.warn(`   ⚠️  Translation quality low for ${targetLang}, skipping...`);
+            return null;
+        }
+
+        // Fix internal links in translated content to be locale-agnostic
+        return fixInternalLinks(translatedText);
+        
     } catch (error) {
-        // If translation fails, fall back to simple text translation
-        console.error(`   ⚠️  HTML translation error, using fallback:`, error.message);
-        return await translateText(htmlContent, targetLang);
+        console.error(`   ⚠️  Translation error for ${targetLang}:`, error.message);
+        return null; // Return null on error to avoid English contamination
     }
+}
+
+// Simple similarity check
+function calculateSimilarity(str1, str2) {
+    if (str1 === str2) return 1.0;
+    // Just a rough character-based similarity for speed
+    const len = Math.max(str1.length, str2.length);
+    let common = 0;
+    for (let i = 0; i < Math.min(str1.length, str2.length); i++) {
+        if (str1[i] === str2[i]) common++;
+    }
+    return common / len;
 }
 
 // Update messages file with translated content
 function updateMessagesFile(lang, toolSlug, translatedContent) {
+    if (!translatedContent) return false;
+    
     const messagesPath = path.join(__dirname, `../messages/${lang}.json`);
     
     if (!fs.existsSync(messagesPath)) {
-        console.log(`   ⚠️  Messages file not found for ${lang}, skipping...`);
         return false;
     }
     
     try {
         const messages = JSON.parse(fs.readFileSync(messagesPath, 'utf-8'));
         
-        // Ensure Tools object exists
-        if (!messages.Tools) {
-            messages.Tools = {};
-        }
+        if (!messages.Tools) messages.Tools = {};
+        if (!messages.Tools[toolSlug]) messages.Tools[toolSlug] = {};
         
-        // Ensure tool object exists
-        if (!messages.Tools[toolSlug]) {
-            messages.Tools[toolSlug] = {};
-        }
-        
-        // Add content (escape for JSON)
+        // Add content
         messages.Tools[toolSlug].content = translatedContent;
         
-        // Write back to file with proper formatting
-        fs.writeFileSync(
-            messagesPath, 
-            JSON.stringify(messages, null, 4) + '\n', 
-            'utf-8'
-        );
-        
+        fs.writeFileSync(messagesPath, JSON.stringify(messages, null, 4) + '\n', 'utf-8');
         return true;
     } catch (error) {
         console.error(`   ✗ Error updating ${lang}.json:`, error.message);
@@ -152,113 +116,45 @@ function updateMessagesFile(lang, toolSlug, translatedContent) {
     }
 }
 
-// Main function
 async function main() {
-    console.log('🚀 Blog Content Translation Script\n');
-    console.log('=' .repeat(50));
+    console.log('🚀 Smart Blog Translation Script (v2.0)\n');
     
-    // Extract all tool content
-    console.log('\n📖 Step 1: Extracting tool content from lib/seo.ts...');
     const tools = extractToolContent();
-    console.log(`   ✓ Found ${Object.keys(tools).length} tools with content\n`);
+    console.log(`   ✓ Found ${Object.keys(tools).length} tools with master content\n`);
     
-    if (Object.keys(tools).length === 0) {
-        console.log('   ⚠️  No tools with content found. Exiting.');
-        return;
-    }
-    
-    // List tools
-    console.log('   Tools found:');
-    Object.keys(tools).forEach((slug, index) => {
-        const length = tools[slug].length;
-        console.log(`   ${index + 1}. ${slug} (${length} chars)`);
-    });
-    
-    // Check if translation library is available
-    console.log('\n📦 Step 2: Checking translation setup...');
     let hasTranslationLib = false;
-    
     try {
         require.resolve('@vitalets/google-translate-api');
         hasTranslationLib = true;
-        console.log('   ✓ @vitalets/google-translate-api found');
     } catch (e) {
-        console.log('   ⚠️  No translation library found.');
-        console.log('   Install one: npm install @vitalets/google-translate-api');
-        console.log('   Or use: npm install @google-cloud/translate');
-        console.log('   Or use: npm install deepl-node');
+        console.log('   ❌ Error: @vitalets/google-translate-api not found.');
+        console.log('   Run: npm install @vitalets/google-translate-api');
+        return;
     }
-    
-    if (!hasTranslationLib) {
-        console.log('\n⚠️  WARNING: Translation will not work without a library.');
-        console.log('   The script will create placeholder content.');
-        console.log('   Press Ctrl+C to cancel, or Enter to continue with placeholders...');
-        
-        // In a real scenario, you'd wait for user input
-        // For now, we'll continue
-    }
-    
-    // Process each tool
-    console.log('\n🌍 Step 3: Translating content...\n');
-    
-    let totalTranslations = 0;
-    let successfulTranslations = 0;
     
     for (const [toolSlug, content] of Object.entries(tools)) {
         console.log(`\n📝 Processing: ${toolSlug}`);
-        console.log(`   Content length: ${content.length} characters`);
         
-        // Translate to each language
         for (const [langCode, langName] of Object.entries(languages)) {
-            try {
-                process.stdout.write(`   Translating to ${langName} (${langCode})... `);
-                
-                // Always use translateHTMLContent which handles HTML properly
-                const translatedContent = await translateHTMLContent(content, langCode);
-                
+            process.stdout.write(`   Translating to ${langName} (${langCode})... `);
+            
+            const translatedContent = await translateHTMLContent(content, langCode);
+            
+            if (translatedContent) {
                 const success = updateMessagesFile(langCode, toolSlug, translatedContent);
-                
-                if (success) {
-                    successfulTranslations++;
-                    console.log('✓');
-                } else {
-                    console.log('✗');
-                }
-                
-                totalTranslations++;
-                
-                // Add delay to avoid rate limiting (if using API)
-                if (hasTranslationLib) {
-                    await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay between translations
-                }
-                
-            } catch (error) {
-                console.log(`✗ (${error.message})`);
+                console.log(success ? '✓' : '✗ File Error');
+            } else {
+                console.log('⚡ Skipped (Low Quality/Error)');
             }
+            
+            // 2s delay to respect API limits
+            await new Promise(resolve => setTimeout(resolve, 2000));
         }
     }
     
-    // Summary
-    console.log('\n' + '='.repeat(50));
-    console.log('\n✅ Translation process completed!');
-    console.log(`   Total translations: ${totalTranslations}`);
-    console.log(`   Successful: ${successfulTranslations}`);
-    console.log(`   Failed: ${totalTranslations - successfulTranslations}`);
-    
-    if (!hasTranslationLib) {
-        console.log('\n⚠️  IMPORTANT: Placeholder content was added.');
-        console.log('   Please install a translation library and run again,');
-        console.log('   or manually review and update translations in messages/*.json files.');
-    }
-    
-    console.log('\n📝 Next steps:');
-    console.log('   1. Review translations in messages/*.json files');
-    console.log('   2. Fix any HTML structure issues');
-    console.log('   3. Test the tool pages in different languages');
-    console.log('   4. Update links in content (e.g., /en/tools/... to /{locale}/tools/...)');
+    console.log('\n✅ Process completed! Links Fixed & Content Cleaned.');
 }
 
-// Run the script
 if (require.main === module) {
     main().catch(error => {
         console.error('\n❌ Fatal error:', error);
@@ -266,4 +162,3 @@ if (require.main === module) {
     });
 }
 
-module.exports = { extractToolContent, translateText, translateHTMLContent, updateMessagesFile };

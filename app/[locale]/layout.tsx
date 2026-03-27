@@ -56,20 +56,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       canonical: `https://tools.aynzo.com/${locale}`,
       languages: {
         'x-default': 'https://tools.aynzo.com/en',
-        'en': 'https://tools.aynzo.com/en',
-        'hi': 'https://tools.aynzo.com/hi',
-        'pt': 'https://tools.aynzo.com/pt',
-        'es': 'https://tools.aynzo.com/es',
-        'id': 'https://tools.aynzo.com/id',
-        'de': 'https://tools.aynzo.com/de',
-        'fr': 'https://tools.aynzo.com/fr',
-        'ja': 'https://tools.aynzo.com/ja',
-        'ru': 'https://tools.aynzo.com/ru',
-        'tr': 'https://tools.aynzo.com/tr',
-        'it': 'https://tools.aynzo.com/it',
-        'ko': 'https://tools.aynzo.com/ko',
-        'zh': 'https://tools.aynzo.com/zh',
-        'ar': 'https://tools.aynzo.com/ar',
+        ...Object.fromEntries(
+          locales.map((l) => [l, `https://tools.aynzo.com/${l}`])
+        )
       }
     },
     icons: {
@@ -153,7 +142,7 @@ export default async function RootLayout({
               },
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://tools.aynzo.com/en?q={search_term_string}",
+                "target": `https://tools.aynzo.com/${locale}?q={search_term_string}`,
                 "query-input": "required name=search_term_string"
               }
             })
