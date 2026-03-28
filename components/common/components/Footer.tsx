@@ -85,6 +85,11 @@ export default function Footer() {
                                     </Link>
                                 </li>
                                 <li>
+                                    <Link href="/blog" className="text-muted-foreground/60 hover:text-primary transition-colors text-[13px] font-medium flex items-center gap-2">
+                                        <Info size={12} /> {tNav('blog')}
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link href="/privacy" className="text-muted-foreground/60 hover:text-primary transition-colors text-[13px] font-medium flex items-center gap-2">
                                         <Shield size={12} /> Privacy
                                     </Link>

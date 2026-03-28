@@ -8,41 +8,58 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
-    const t = await getTranslations({ locale, namespace: 'Footer' });
+    const t = await getTranslations({ locale, namespace: 'About' });
     return {
-        title: t('aboutUs'),
-        description: "Learn more about AYNZO TOOLS, our mission, and our values.",
+        title: t('title'),
+        description: t('description'),
         alternates: {
-            canonical: `https://tools.aynzo.com/${locale}/about`
+            canonical: `https://tools.aynzo.com/${locale}/about`,
+            languages: {
+                'x-default': 'https://tools.aynzo.com/en/about',
+                ...Object.fromEntries(
+                    locales.map((l) => [l, `https://tools.aynzo.com/${l}/about`])
+                )
+            }
         }
     };
 }
 
-export default function AboutPage() {
+export default async function AboutPage({ params: { locale } }: { params: { locale: string } }) {
+    const t = await getTranslations({ locale, namespace: 'About' });
+    
     return (
-        <InfoPageLayout title="About Us">
-            <p>
-                Welcome to <strong>AYNZO TOOLS</strong>, your one-stop destination for professional-grade digital utilities.
-                Our mission is to provide developers, content creators, and everyday users with high-quality, free, and secure tools
-                that make their digital lives easier.
+        <InfoPageLayout title={t('title')}>
+            <p className="mb-6">
+                <strong>AYNZO TOOLS</strong> {t('missionText')}
             </p>
 
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li><strong>Privacy First:</strong> Most of our tools process data entirely in your browser. Your data never leaves your computer.</li>
-                <li><strong>No Registration:</strong> No accounts, no signups, no paywalls. Just use what you need, when you need it.</li>
-                <li><strong>Blazing Fast:</strong> Built with modern technology for maximum performance and a smooth user experience.</li>
-                <li><strong>100% Free:</strong> Our tools are and will remain free to use forever.</li>
+            <h2>{t('whyTitle')}</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 list-none p-0">
+                <li className="bg-secondary/20 p-6 rounded-2xl">
+                    <strong className="block text-lg mb-2">{t('reason1Title')}</strong>
+                    <p className="text-muted-foreground">{t('reason1Text')}</p>
+                </li>
+                <li className="bg-secondary/20 p-6 rounded-2xl">
+                    <strong className="block text-lg mb-2">{t('reason2Title')}</strong>
+                    <p className="text-muted-foreground">{t('reason2Text')}</p>
+                </li>
+                <li className="bg-secondary/20 p-6 rounded-2xl">
+                    <strong className="block text-lg mb-2">{t('reason3Title')}</strong>
+                    <p className="text-muted-foreground">{t('reason3Text')}</p>
+                </li>
+                <li className="bg-secondary/20 p-6 rounded-2xl">
+                    <strong className="block text-lg mb-2">{t('reason4Title')}</strong>
+                    <p className="text-muted-foreground">{t('reason4Text')}</p>
+                </li>
             </ul>
 
-            <h2>Our Story</h2>
-            <p>
-                AYNZO TOOLS started as a small project to solve common development frustrations—like messy JSON or unformatted HTML.
-                Today, it has grown into a comprehensive suite of tools ranging from advanced image processing to SEO generators and calculators.
+            <h2>{t('storyTitle')}</h2>
+            <p className="mb-10 lg:mb-12">
+                {t('storyText')}
             </p>
 
-            <blockquote>
-                "We believe that powerful tools should be simple to use and accessible to everyone."
+            <blockquote className="bg-primary/5 border-l-4 border-primary p-8 rounded-r-2xl text-xl italic font-medium">
+                "{t('quote')}"
             </blockquote>
         </InfoPageLayout>
     );

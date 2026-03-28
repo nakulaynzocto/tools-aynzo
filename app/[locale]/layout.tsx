@@ -5,7 +5,7 @@ import { Toaster } from "sonner";
 import Navbar from "@/components/common/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import Script from 'next/script';
 import Footer from "@/components/common/components/Footer";
 import { locales } from '@/i18n';
@@ -15,14 +15,20 @@ import CommandPalette from '@/components/common/components/CommandPalette';
 const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800", "900"] });
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'App' });
+  
+  const siteTitle = t('name') || "AYNZO TOOLS";
+  const siteDesc = t('description') || "Professional online tools for developers and content creators.";
+  const siteKeywords = t('keywords') || "online tools, free utilities";
+
   return {
     metadataBase: new URL('https://tools.aynzo.com'),
     title: {
-      template: '%s | Aynzo',
-      default: 'Aynzo | The All-in-One Professional Online Tools Suite',
+      default: siteTitle,
+      template: `%s | ${siteTitle}`
     },
-    description: "Professional online tools for developers and content creators. Free text tools, image compressor, JSON formatter, password generator, and more. Fast, secure, and easy to use.",
-    keywords: "aynzo tools, online tools, text tools, image compressor, JSON formatter, password generator, URL encoder, word counter, character counter, developer tools, free tools",
+    description: siteDesc,
+    keywords: siteKeywords,
     authors: [{ name: "AYNZO TOOLS" }],
     creator: "AYNZO TOOLS",
     publisher: "AYNZO TOOLS",
@@ -31,23 +37,23 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       type: "website",
       locale: locale,
       url: `https://tools.aynzo.com/${locale}`,
-      siteName: "AYNZO TOOLS",
-      title: "AYNZO TOOLS - Free Professional Tools",
-      description: "Professional online tools for developers and content creators. Free text tools, image compressor, JSON formatter, and more.",
+      siteName: siteTitle,
+      title: siteTitle,
+      description: siteDesc,
       images: [
         {
-          url: "/og-image.png",
+          url: "https://tools.aynzo.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "AYNZO TOOLS"
+          alt: siteTitle
         }
       ]
     },
     twitter: {
       card: "summary_large_image",
-      title: "AYNZO TOOLS - Free Professional Tools",
-      description: "Professional online tools for developers and creators.",
-      images: ["/og-image.png"]
+      title: siteTitle,
+      description: siteDesc,
+      images: ["https://tools.aynzo.com/og-image.png"]
     },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,

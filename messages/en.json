@@ -65,7 +65,19 @@
         "searchPlaceholder": "Search tools...",
         "mobileMenu": "Menu",
         "home": "Home",
-        "tools": "Tools"
+        "tools": "Tools",
+        "blog": "Blog"
+    },
+    "Blog": {
+        "title": "Aynzo Learning Hub",
+        "description": "Master your digital workflow with expert guides, tool tutorials, and productivity hacks. 100% Free.",
+        "metaTitle": "Aynzo Blog - Free Online Tool Guides & Productivity 2025",
+        "metaDescription": "Explore expert guides and tutorials for using Aynzo tools. Learn how to compress images, manage PDFs, and optimize your developer workflow.",
+        "readMore": "Read Full Article",
+        "noPosts": "More articles arriving soon!",
+        "backToBlog": "Back to Blog",
+        "aboutAynzo": "About Aynzo Tools",
+        "author": "Aynzo Editorial Team"
     },
     "Categories": {
         "Image Tools": "Image Tools",
@@ -2243,5 +2255,56 @@
             "emptyPrompt": "Enter details to see breakdown",
             "mortgageInfo": "A 20% down payment usually eliminates the need for Private Mortgage Insurance (PMI), saving you hundreds every month."
         }
+    },
+    "About": {
+        "title": "About Us",
+        "description": "Learn more about AYNZO TOOLS, our mission, and our values.",
+        "missionTitle": "Our Mission",
+        "missionText": "Welcome to AYNZO TOOLS, your one-stop destination for professional-grade digital utilities. Our mission is to provide developers, content creators, and everyday users with high-quality, free, and secure tools that make their digital lives easier.",
+        "whyTitle": "Why Choose Us?",
+        "reason1Title": "Privacy First",
+        "reason1Text": "Most of our tools process data entirely in your browser. Your data never leaves your computer.",
+        "reason2Title": "No Registration",
+        "reason2Text": "No accounts, no signups, no paywalls. Just use what you need, when you need it.",
+        "reason3Title": "Blazing Fast",
+        "reason3Text": "Built with modern technology for maximum performance and a smooth user experience.",
+        "reason4Title": "100% Free",
+        "reason4Text": "Our tools are and will remain free to use forever.",
+        "storyTitle": "Our Story",
+        "storyText": "AYNZO TOOLS started as a small project to solve common development frustrations—like messy JSON or unformatted HTML. Today, it has grown into a comprehensive suite of tools ranging from advanced image processing to SEO generators and calculators.",
+        "quote": "We believe that powerful tools should be simple to use and accessible to everyone."
+    },
+    "Contact": {
+        "title": "Contact Us",
+        "description": "Reach out to AYNZO TOOLS support team for any queries or feedback.",
+        "intro": "We'd love to hear from you! Whether you have a question about our tools, features, or anything else, our team is ready to answer all your questions.",
+        "formTitle": "Send us a Message",
+        "formPlaceholder": "This is a placeholder for the contact form.",
+        "button": "Contact Support"
+    },
+    "Privacy": {
+        "title": "Privacy Policy",
+        "intro": "Your privacy is our top priority. This policy outlines how we handle your data.",
+        "section1Title": "1. Local Processing",
+        "section1Text": "The vast majority of our tools (Image Compressor, Text Tools, Code Formatters, etc.) process your data locally in your browser using JavaScript. This means your files, text, and data are never uploaded to our servers.",
+        "section2Title": "2. No Data Collection",
+        "section2Text": "We do not collect or store any personal information. We do not require you to create an account, and we do not track your individual tool usage.",
+        "section3Title": "3. Analytics",
+        "section3Text": "We use basic, privacy-friendly analytics to understand aggregate traffic patterns (e.g., which tools are most popular) to help us improve the platform. This data is anonymous and does not include personally identifiable information.",
+        "section4Title": "4. Third-Party Links",
+        "section4Text": "Our platform may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites.",
+        "section5Title": "5. Policy Updates",
+        "section5Text": "We may update this policy from time to time. Any changes will be posted on this page with an updated modification date.",
+        "lastUpdated": "Last updated: March 2026"
+    },
+    "Terms": {
+        "title": "Terms of Service",
+        "intro": "Please read these terms and conditions carefully before using our service.",
+        "section1Title": "1. Acceptance of Terms",
+        "section1Text": "By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.",
+        "section2Title": "2. Use License",
+        "section2Text": "Permission is granted to use our online tools for personal and commercial purposes. All processing happens in your browser for most tools, ensuring privacy.",
+        "section3Title": "3. Disclaimer",
+        "section3Text": "The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
     }
 }

@@ -1,15 +1,23 @@
 import { MetadataRoute } from 'next';
 import { tools } from '@/lib/tools';
 import { locales } from '@/i18n';
+import fs from 'fs';
+import path from 'path';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://tools.aynzo.com';
-
     let allPages: MetadataRoute.Sitemap = [];
 
-    const alternateLanguages = (path: string) => {
+    const blogsDir = path.join(process.cwd(), 'seo-blogs');
+    const blogFiles = fs.existsSync(blogsDir) 
+        ? fs.readdirSync(blogsDir).filter(f => f.endsWith('.json') && !f.startsWith('_'))
+        : [];
+    const blogSlugs = blogFiles.map(f => f.replace('.json', ''));
+
+    const staticPages = ['', '/blog', '/about', '/contact', '/privacy', '/terms'];
+
+    const getAlternateLanguages = (path: string) => {
         const languages: Record<string, string> = {};
-        // Add x-default pointing to English
         languages['x-default'] = `${baseUrl}/en${path}`;
         locales.forEach((l) => {
             languages[l] = `${baseUrl}/${l}${path}`;
@@ -18,23 +26,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
 
     locales.forEach((locale) => {
-        // Home page for this locale
-        allPages.push({
-            url: `${baseUrl}/${locale}`,
-            lastModified: new Date(),
-            changeFrequency: 'daily',
-            priority: 1,
-            alternates: alternateLanguages(''),
+        // Static Pages
+        staticPages.forEach((pagePath) => {
+            allPages.push({
+                url: `${baseUrl}/${locale}${pagePath}`,
+                lastModified: new Date(),
+                changeFrequency: pagePath === '' ? 'daily' : 'monthly',
+                priority: pagePath === '' ? 1 : 0.7,
+                alternates: getAlternateLanguages(pagePath),
+            });
         });
 
-        // All tools for this locale
+        // Tools
         tools.forEach((tool) => {
             allPages.push({
                 url: `${baseUrl}/${locale}/tools/${tool.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly',
                 priority: 0.8,
-                alternates: alternateLanguages(`/tools/${tool.slug}`),
+                alternates: getAlternateLanguages(`/tools/${tool.slug}`),
+            });
+        });
+
+        // Blogs
+        blogSlugs.forEach((slug) => {
+            allPages.push({
+                url: `${baseUrl}/${locale}/blog/${slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'monthly',
+                priority: 0.6,
+                alternates: getAlternateLanguages(`/blog/${slug}`),
             });
         });
     });

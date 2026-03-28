@@ -19,10 +19,10 @@ export default function InfoPageLayout({ title, children }: InfoPageLayoutProps)
                 </Link>
 
                 <div className="bg-card rounded-[3rem] border-2 border-border shadow-2xl p-10 lg:p-16">
-                    <h1 className="text-4xl lg:text-5xl font-black text-foreground mb-12 tracking-tighter border-b-8 border-primary/20 pb-4 inline-block">
+                    <h1 className="text-3xl lg:text-4xl font-black text-foreground mb-12 tracking-tighter border-b-4 border-primary/20 pb-4 inline-block">
                         {title}
                     </h1>
-                    <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-primary prose-strong:text-foreground prose-a:text-accent opacity-90">
+                    <div className="content-body max-w-none">
                         {children}
                     </div>
                 </div>

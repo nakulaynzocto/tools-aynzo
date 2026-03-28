@@ -1,17 +1,18 @@
-import { useTranslations } from 'next-intl';
+import InfoPageLayout from '@/components/common/components/InfoPageLayout';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
+import { useTranslations } from 'next-intl';
 
 export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
-    const t = await getTranslations({ locale, namespace: 'Footer' });
+    const t = await getTranslations({ locale, namespace: 'Terms' });
     return {
-        title: t('termsOfService'),
-        description: "Read our Terms of Service.",
+        title: t('title'),
+        description: t('intro'),
         alternates: {
             canonical: `https://tools.aynzo.com/${locale}/terms`
         }
@@ -19,32 +20,20 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 export default function TermsPage() {
-    const t = useTranslations('Footer');
+    const t = useTranslations('Terms');
 
     return (
-        <div className="max-w-4xl mx-auto px-6 py-20 space-y-8">
-            <h1 className="mb-8">{t('termsOfService')}</h1>
+        <InfoPageLayout title={t('title')}>
+            <p className="lead !text-lg !text-muted-foreground mb-12">{t('intro')}</p>
 
-            <div className="prose dark:prose-invert max-w-none">
-                <p className="lead text-xl text-muted-foreground">
-                    Please read these terms and conditions carefully before using our service.
-                </p>
+            <h2>{t('section1Title')}</h2>
+            <p>{t('section1Text')}</p>
 
-                <h2 className="mt-8 mb-4">1. Acceptance of Terms</h2>
-                <p className="text-muted-foreground">
-                    By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.
-                </p>
+            <h2>{t('section2Title')}</h2>
+            <p>{t('section2Text')}</p>
 
-                <h2 className="mt-8 mb-4">2. Use License</h2>
-                <p className="text-muted-foreground">
-                    Permission is granted to use our online tools for personal and commercial purposes. All processing happens in your browser for most tools, ensuring privacy.
-                </p>
-
-                <h2 className="mt-8 mb-4">3. Disclaimer</h2>
-                <p className="text-muted-foreground">
-                    The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
-                </p>
-            </div>
-        </div>
+            <h2>{t('section3Title')}</h2>
+            <p>{t('section3Text')}</p>
+        </InfoPageLayout>
     );
 }
