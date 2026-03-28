@@ -58,6 +58,20 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
       publishedTime: blog.publishedAt,
       modifiedTime: blog.updatedAt,
       tags: blog.tags,
+      images: [
+        {
+          url: 'https://tools.aynzo.com/og-blog.png',
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        }
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: blog.metaTitle,
+      description: blog.metaDescription,
+      images: ['https://tools.aynzo.com/og-blog.png'],
     }
   };
 }
