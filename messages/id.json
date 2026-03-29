@@ -3064,7 +3064,15 @@
         },
         "double-underline-text": {},
         "cursive-text": {},
-        "currency-converter": {}
+        "currency-converter": {},
+        "401k-retirement-calculator": {},
+        "image-format-converter": {},
+        "merge-pdf": {},
+        "split-pdf": {},
+        "gpa-calculator": {},
+        "salary-calculator": {},
+        "tip-calculator": {},
+        "json-to-typescript": {}
     },
     "Common": {
         "backToTools": "Kembali ke alat",
