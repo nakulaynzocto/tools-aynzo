@@ -57,7 +57,8 @@
     "App": {
         "name": "AYNZO",
         "nameHighlight": "TOOLS",
-        "description": "전문 온라인 도구 제품군"
+        "description": "전문 온라인 도구 제품군",
+        "metaKeywords": "Aynzo 도구, 무료 온라인 도구, 이미지 압축, 단어 수 세기, PDF 도구, 온라인 계산기"
     },
     "Navigation": {
         "allTools": "모든 도구",
@@ -218,8 +219,8 @@
             ]
         },
         "flip-image": {
-            "name": "Flip Image",
-            "description": "Flip images horizontally or vertically online.",
+            "name": "이미지 뒤집기",
+            "description": "온라인에서 이미지를 수평 또는 수직으로 뒤집을 수 있습니다.",
             "seoTitle": "무료 Flip Image 온라인 - Use Flip Image 가입 불필요",
             "seoDescription": "Use Flip Image 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "flip-image, free flip image, flip image tool",
@@ -233,8 +234,8 @@
             ]
         },
         "rotate-image": {
-            "name": "Rotate Image",
-            "description": "Rotate images 90, 180, or 270 degrees online.",
+            "name": "이미지 회전",
+            "description": "온라인에서 이미지를 90도, 180도 또는 270도 회전할 수 있습니다.",
             "seoTitle": "무료 Rotate Image 온라인 - Use Rotate Image 가입 불필요",
             "seoDescription": "Use Rotate Image 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "rotate-image, free rotate image, rotate image tool",
@@ -248,8 +249,8 @@
             ]
         },
         "image-enlarger": {
-            "name": "Image Enlarger",
-            "description": "Upscale small images without losing quality.",
+            "name": "이미지 확대기",
+            "description": "품질 저하 없이 작은 이미지를 확대할 수 있습니다.",
             "seoTitle": "무료 Image Enlarger 온라인 - Use Image Enlarger 가입 불필요",
             "seoDescription": "Use Image Enlarger 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "image-enlarger, free image enlarger, image enlarger tool",
@@ -263,8 +264,8 @@
             ]
         },
         "image-brightness": {
-            "name": "Image Brightness",
-            "description": "Adjust the brightness of your photos online.",
+            "name": "이미지 밝기",
+            "description": "온라인으로 사진의 밝기를 조정하세요.",
             "seoTitle": "무료 Image Brightness 온라인 - Use Image Brightness 가입 불필요",
             "seoDescription": "Use Image Brightness 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "image-brightness, free image brightness, image brightness tool",
@@ -278,8 +279,8 @@
             ]
         },
         "image-contrast": {
-            "name": "Image Contrast",
-            "description": "Adjust the contrast of your photos online.",
+            "name": "이미지 대비",
+            "description": "온라인으로 사진의 대비를 조정하세요.",
             "seoTitle": "무료 Image Contrast 온라인 - Use Image Contrast 가입 불필요",
             "seoDescription": "Use Image Contrast 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "image-contrast, free image contrast, image contrast tool",
@@ -293,8 +294,8 @@
             ]
         },
         "grayscale-image": {
-            "name": "Grayscale Image",
-            "description": "Convert color photos to black and white.",
+            "name": "회색조 이미지",
+            "description": "컬러 사진을 흑백으로 변환합니다.",
             "seoTitle": "무료 Grayscale Image 온라인 - Use Grayscale Image 가입 불필요",
             "seoDescription": "Use Grayscale Image 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "grayscale-image, free grayscale image, grayscale image tool",
@@ -308,8 +309,8 @@
             ]
         },
         "blur-image": {
-            "name": "Blur Image",
-            "description": "Add blur effect to your images online.",
+            "name": "이미지 흐림",
+            "description": "온라인에서 이미지에 흐림 효과를 추가하세요.",
             "seoTitle": "무료 Blur Image 온라인 - Use Blur Image 가입 불필요",
             "seoDescription": "Use Blur Image 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "blur-image, free blur image, blur image tool",
@@ -323,8 +324,8 @@
             ]
         },
         "sepia-converter": {
-            "name": "Sepia Converter",
-            "description": "Apply a vintage sepia filter to your photos.",
+            "name": "세피아 변환기",
+            "description": "사진에 빈티지 세피아 필터를 적용해 보세요.",
             "seoTitle": "무료 Sepia 변환er 온라인 - Use Sepia 변환er 가입 불필요",
             "seoDescription": "Use Sepia 변환er 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "sepia-converter, free sepia converter, sepia converter tool",
@@ -338,8 +339,8 @@
             ]
         },
         "invert-image": {
-            "name": "Invert Colors",
-            "description": "Invert the colors of your image (negative effect).",
+            "name": "색상 반전",
+            "description": "이미지의 색상을 반전시킵니다(부정적인 효과).",
             "seoTitle": "무료 Invert Colors 온라인 - Use Invert Colors 가입 불필요",
             "seoDescription": "Use Invert Colors 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "invert-image, free invert colors, invert colors tool",
@@ -353,8 +354,8 @@
             ]
         },
         "saturate-image": {
-            "name": "Saturate Image",
-            "description": "Adjust the color saturation of your photos.",
+            "name": "포화 이미지",
+            "description": "사진의 채도를 조정하세요.",
             "seoTitle": "무료 Saturate Image 온라인 - Use Saturate Image 가입 불필요",
             "seoDescription": "Use Saturate Image 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "saturate-image, free saturate image, saturate image tool",
@@ -368,8 +369,8 @@
             ]
         },
         "hue-rotate-image": {
-            "name": "Hue Rotate",
-            "description": "Shift the hue of your images for creative effects.",
+            "name": "색조 회전",
+            "description": "창의적인 효과를 위해 이미지의 색조를 바꾸세요.",
             "seoTitle": "무료 Hue Rotate 온라인 - Use Hue Rotate 가입 불필요",
             "seoDescription": "Use Hue Rotate 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "hue-rotate-image, free hue rotate, hue rotate tool",
@@ -383,8 +384,8 @@
             ]
         },
         "image-opacity": {
-            "name": "Image Opacity",
-            "description": "Change the transparency/opacity of your images.",
+            "name": "이미지 불투명도",
+            "description": "이미지의 투명도/불투명도를 변경합니다.",
             "seoTitle": "무료 Image Opacity 온라인 - Use Image Opacity 가입 불필요",
             "seoDescription": "Use Image Opacity 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "image-opacity, free image opacity, image opacity tool",
@@ -398,8 +399,8 @@
             ]
         },
         "round-corners-image": {
-            "name": "Round Corners",
-            "description": "Add rounded corners to your images.",
+            "name": "둥근 모서리",
+            "description": "이미지에 둥근 모서리를 추가하세요.",
             "seoTitle": "무료 Round Corners 온라인 - Use Round Corners 가입 불필요",
             "seoDescription": "Use Round Corners 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "round-corners-image, free round corners, round corners tool",
@@ -413,8 +414,8 @@
             ]
         },
         "image-border": {
-            "name": "Image Border",
-            "description": "Add colorful borders to your images.",
+            "name": "이미지 테두리",
+            "description": "이미지에 다채로운 테두리를 추가하세요.",
             "seoTitle": "무료 Image Border 온라인 - Use Image Border 가입 불필요",
             "seoDescription": "Use Image Border 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "image-border, free image border, image border tool",
@@ -428,8 +429,8 @@
             ]
         },
         "image-shadow": {
-            "name": "Image Shadow",
-            "description": "Add drop shadows to your images.",
+            "name": "이미지 섀도우",
+            "description": "이미지에 그림자를 추가하세요.",
             "seoTitle": "무료 Image Shadow 온라인 - Use Image Shadow 가입 불필요",
             "seoDescription": "Use Image Shadow 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "image-shadow, free image shadow, image shadow tool",
@@ -443,8 +444,8 @@
             ]
         },
         "pixelate-image": {
-            "name": "Pixelate Image",
-            "description": "Pixelate your images to hide details or create art.",
+            "name": "픽셀화 이미지",
+            "description": "이미지를 픽셀화하여 세부 사항을 숨기거나 예술 작품을 만드세요.",
             "seoTitle": "무료 Pixelate Image 온라인 - Use Pixelate Image 가입 불필요",
             "seoDescription": "Use Pixelate Image 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "pixelate-image, free pixelate image, pixelate image tool",
@@ -593,8 +594,8 @@
             ]
         },
         "character-counter": {
-            "name": "Character Counter",
-            "description": "Count characters with or without spaces.",
+            "name": "캐릭터 카운터",
+            "description": "공백이 있거나 없는 문자 수를 계산합니다.",
             "seoTitle": "Character Counter 무료 온라인 - Count characters with/without spaces",
             "seoDescription": "Count characters with/without spaces 온라인 무료. Real-time counting. 로그인 불필요, 빠른, 안전한. 에 완벽 Twitter, SMS, meta descriptions.",
             "seoKeywords": "character counter free, count characters online, character count with spaces, twitter character counter, sms character counter",
@@ -608,8 +609,8 @@
             ]
         },
         "text-case-converter": {
-            "name": "Text Case Converter",
-            "description": "Convert text to UPPERCASE, lowercase, Title Case, etc.",
+            "name": "텍스트 대소문자 변환기",
+            "description": "텍스트를 대문자, 소문자, 제목 케이스 등으로 변환합니다.",
             "seoTitle": "Text Case 변환er 무료 온라인 - 변환 text case",
             "seoDescription": "변환 text case 온라인 무료. Uppercase, lowercase, title case, sentence case. 로그인 불필요, 빠른, 안전한. 에 완벽 포맷ting text instantly.",
             "seoKeywords": "text case converter free, uppercase to lowercase, title case converter, sentence case converter, text transformer online",
@@ -623,8 +624,8 @@
             ]
         },
         "remove-line-breaks": {
-            "name": "Remove Line Breaks",
-            "description": "Remove all line breaks and newlines from your text.",
+            "name": "줄 바꿈 제거",
+            "description": "텍스트에서 줄바꿈과 개행을 모두 제거하세요.",
             "seoTitle": "Remove Line Breaks 무료 온라인 - Use Remove Line Breaks",
             "seoDescription": "Use Remove Line Breaks 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "remove-line-breaks, free remove line breaks, remove line breaks tool",
@@ -638,8 +639,8 @@
             ]
         },
         "italic-text": {
-            "name": "Italic Text Generator",
-            "description": "Generate italic text using unicode characters.",
+            "name": "기울임꼴 텍스트 생성기",
+            "description": "유니코드 문자를 사용하여 기울임꼴 텍스트를 생성합니다.",
             "seoTitle": "Italic Text Generator 무료 온라인 - Use Italic Text Generator",
             "seoDescription": "Use Italic Text Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "italic-text, free italic text generator, italic text generator tool",
@@ -653,8 +654,8 @@
             ]
         },
         "strikethrough-text": {
-            "name": "Strikethrough Text",
-            "description": "Generate strikethrough text for social media.",
+            "name": "취소선 텍스트",
+            "description": "소셜 미디어용 취소선 텍스트를 생성합니다.",
             "seoTitle": "Strikethrough Text 무료 온라인 - Use Strikethrough Text",
             "seoDescription": "Use Strikethrough Text 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "strikethrough-text, free strikethrough text, strikethrough text tool",
@@ -668,8 +669,8 @@
             ]
         },
         "underline-text": {
-            "name": "Underline Text",
-            "description": "Generate underlined text for social media.",
+            "name": "밑줄 텍스트",
+            "description": "소셜 미디어용 밑줄이 그어진 텍스트를 생성합니다.",
             "seoTitle": "Underline Text 무료 온라인 - Use Underline Text",
             "seoDescription": "Use Underline Text 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "underline-text, free underline text, underline text tool",
@@ -683,8 +684,8 @@
             ]
         },
         "small-text": {
-            "name": "Small Text Generator",
-            "description": "Generate tiny text (subscript/superscript).",
+            "name": "작은 텍스트 생성기",
+            "description": "작은 텍스트(아래 첨자/위 첨자)를 생성합니다.",
             "seoTitle": "Small Text Generator 무료 온라인 - Use Small Text Generator",
             "seoDescription": "Use Small Text Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "small-text, free small text generator, small text generator tool",
@@ -698,8 +699,8 @@
             ]
         },
         "upside-down-text": {
-            "name": "Upside Down Text",
-            "description": "Flip your text upside down instantly.",
+            "name": "거꾸로 된 텍스트",
+            "description": "텍스트를 즉시 거꾸로 뒤집으세요.",
             "seoTitle": "Upside Down Text 무료 온라인 - Use Upside Down Text",
             "seoDescription": "Use Upside Down Text 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "upside-down-text, free upside down text, upside down text tool",
@@ -713,8 +714,8 @@
             ]
         },
         "mirror-text": {
-            "name": "Mirror Text Generator",
-            "description": "Create mirrored text reflection.",
+            "name": "미러 텍스트 생성기",
+            "description": "미러링된 텍스트 반사를 만듭니다.",
             "seoTitle": "Mirror Text Generator 무료 온라인 - Use Mirror Text Generator",
             "seoDescription": "Use Mirror Text Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "mirror-text, free mirror text generator, mirror text generator tool",
@@ -728,8 +729,8 @@
             ]
         },
         "duplicate-line-remover": {
-            "name": "Duplicate Line Remover",
-            "description": "Remove duplicate lines from your text or list.",
+            "name": "중복 라인 제거기",
+            "description": "텍스트나 목록에서 중복된 줄을 제거하세요.",
             "seoTitle": "Duplicate Line Remover 무료 온라인 - Use Duplicate Line Remover",
             "seoDescription": "Use Duplicate Line Remover 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "duplicate-line-remover, free duplicate line remover, duplicate line remover tool",
@@ -743,8 +744,8 @@
             ]
         },
         "sort-alphabetically": {
-            "name": "Sort Alphabetically",
-            "description": "Sort lists and text lines alphabetically.",
+            "name": "알파벳순으로 정렬",
+            "description": "목록과 텍스트 줄을 알파벳순으로 정렬합니다.",
             "seoTitle": "Sort Alphabetically 무료 온라인 - Use Sort Alphabetically",
             "seoDescription": "Use Sort Alphabetically 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "sort-alphabetically, free sort alphabetically, sort alphabetically tool",
@@ -773,8 +774,8 @@
             ]
         },
         "whitespace-remover": {
-            "name": "Whitespace Remover",
-            "description": "Trim extra whitespace, tabs, and line breaks.",
+            "name": "공백 제거기",
+            "description": "추가 공백, 탭 및 줄바꿈을 잘라냅니다.",
             "seoTitle": "Whitespace Remover 무료 온라인 - Use Whitespace Remover",
             "seoDescription": "Use Whitespace Remover 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "whitespace-remover, free whitespace remover, whitespace remover tool",
@@ -788,8 +789,8 @@
             ]
         },
         "word-frequency": {
-            "name": "Word Frequency",
-            "description": "Analyze word usage frequency in your text.",
+            "name": "단어 빈도",
+            "description": "텍스트에서 단어 사용 빈도를 분석합니다.",
             "seoTitle": "Word Frequency 무료 온라인 - Use Word Frequency",
             "seoDescription": "Use Word Frequency 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "word-frequency, free word frequency, word frequency tool",
@@ -803,8 +804,8 @@
             ]
         },
         "find-replace": {
-            "name": "Find & Replace",
-            "description": "Advanced find and replace tool with Regex.",
+            "name": "찾기 및 바꾸기",
+            "description": "Regex를 사용한 고급 찾기 및 바꾸기 도구입니다.",
             "seoTitle": "Find & Replace 무료 온라인 - Use Find & Replace",
             "seoDescription": "Use Find & Replace 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "find-replace, free find & replace, find & replace tool",
@@ -833,8 +834,8 @@
             ]
         },
         "url-encoder-decoder": {
-            "name": "URL Encoder / Decoder",
-            "description": "Encode or decode URLs safely.",
+            "name": "URL 인코더/디코더",
+            "description": "URL을 안전하게 인코딩하거나 디코딩합니다.",
             "seoTitle": "URL Encoder / Decoder 무료 - Use URL Encoder / Decoder Code",
             "seoDescription": "Use URL Encoder / Decoder code 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "url-encoder-decoder, free url encoder / decoder, url encoder / decoder tool",
@@ -848,8 +849,8 @@
             ]
         },
         "html-formatter": {
-            "name": "HTML Formatter",
-            "description": "Format and beautify HTML code.",
+            "name": "HTML 포맷터",
+            "description": "HTML 코드의 형식을 지정하고 아름답게 만듭니다.",
             "seoTitle": "HTML 포맷ter 무료 - 포맷 and beautify HTML code Code",
             "seoDescription": "포맷 and beautify HTML code code 온라인 무료. Fix indentation instantly. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.",
             "seoKeywords": "html formatter free, beautify html online, format html code, clean html code, html beautifier tool",
@@ -863,8 +864,8 @@
             ]
         },
         "css-formatter": {
-            "name": "CSS Formatter",
-            "description": "Format and beautify CSS code.",
+            "name": "CSS 포맷터",
+            "description": "CSS 코드의 형식을 지정하고 아름답게 만듭니다.",
             "seoTitle": "CSS 포맷ter 무료 - 포맷 and beautify CSS code Code",
             "seoDescription": "포맷 and beautify CSS code code 온라인 무료. Minify or expand CSS. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "css formatter free, beautify css online, format css code, clean css code, css beautifier tool",
@@ -878,8 +879,8 @@
             ]
         },
         "javascript-formatter": {
-            "name": "JS Formatter",
-            "description": "Format and beautify JavaScript code.",
+            "name": "JS 포맷터",
+            "description": "JavaScript 코드의 형식을 지정하고 아름답게 만듭니다.",
             "seoTitle": "JS 포맷ter 무료 - 포맷 and beautify JavaScript code Code",
             "seoDescription": "포맷 and beautify JavaScript code code 온라인 무료. Fix indentation instantly. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.",
             "seoKeywords": "javascript formatter free, beautify js online, format javascript code, clean js code, js beautifier tool",
@@ -893,8 +894,8 @@
             ]
         },
         "xml-formatter": {
-            "name": "XML Formatter",
-            "description": "Format and beautify XML code.",
+            "name": "XML 포맷터",
+            "description": "XML 코드의 형식을 지정하고 아름답게 만듭니다.",
             "seoTitle": "XML 포맷ter 무료 - Use XML 포맷ter Code",
             "seoDescription": "Use XML 포맷ter code 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "xml-formatter, free xml formatter, xml formatter tool",
@@ -908,8 +909,8 @@
             ]
         },
         "sql-formatter": {
-            "name": "SQL Formatter",
-            "description": "Format and beautify SQL queries.",
+            "name": "SQL 포맷터",
+            "description": "SQL 쿼리의 형식을 지정하고 아름답게 만듭니다.",
             "seoTitle": "SQL 포맷ter 무료 - Use SQL 포맷ter Code",
             "seoDescription": "Use SQL 포맷ter code 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "sql-formatter, free sql formatter, sql formatter tool",
@@ -983,8 +984,8 @@
             ]
         },
         "code-minifier": {
-            "name": "Code Minifier",
-            "description": "Minify HTML, CSS, and JS code.",
+            "name": "코드 축소기",
+            "description": "HTML, CSS 및 JS 코드를 축소합니다.",
             "seoTitle": "Code Minifier 무료 - Use Code Minifier Code",
             "seoDescription": "Use Code Minifier code 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "code-minifier, free code minifier, code minifier tool",
@@ -998,8 +999,8 @@
             ]
         },
         "diff-checker": {
-            "name": "Diff Checker",
-            "description": "Compare two texts to find differences.",
+            "name": "차이점 검사기",
+            "description": "두 텍스트를 비교하여 차이점을 찾아보세요.",
             "seoTitle": "Diff Checker 무료 - Use Diff Checker Code",
             "seoDescription": "Use Diff Checker code 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "diff-checker, free diff checker, diff checker tool",
@@ -1013,8 +1014,8 @@
             ]
         },
         "unit-converter": {
-            "name": "Unit Converter",
-            "description": "Convert length, weight, temperature, and more.",
+            "name": "단위 변환기",
+            "description": "길이, 무게, 온도 등을 변환하세요.",
             "seoTitle": "Unit 변환er 무료 - 변환 온라인 가입 불필요",
             "seoDescription": "변환 length, weight, temperature, volume 온라인 무료. All units supported. 로그인 불필요, 빠른, 안전한. 에 완벽 daily conversions.",
             "seoKeywords": "unit converter free, length converter, weight converter, temperature converter, measurement converter online, metric to imperial",
@@ -1028,8 +1029,8 @@
             ]
         },
         "color-converter": {
-            "name": "Color Converter",
-            "description": "Convert HEX, RGB, HSL colors.",
+            "name": "색상 변환기",
+            "description": "HEX, RGB, HSL 색상을 변환합니다.",
             "seoTitle": "Color 변환er 무료 - 변환 온라인 가입 불필요",
             "seoDescription": "변환 colors between HEX, RGB, HSL 온라인 무료. Color picker included. 로그인 불필요, 빠른, 안전한. 에 완벽 designers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "color converter free, hex to rgb converter, rgb to hex converter, hex to hsl converter, color picker online, color code converter",
@@ -1073,8 +1074,8 @@
             ]
         },
         "roman-numeral": {
-            "name": "Roman Numeral",
-            "description": "Convert numbers to Roman numerals.",
+            "name": "로마 숫자",
+            "description": "숫자를 로마 숫자로 변환합니다.",
             "seoTitle": "Roman Numeral 무료 - 변환 온라인 가입 불필요",
             "seoDescription": "Use Roman Numeral 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "roman-numeral, free roman numeral, roman numeral tool",
@@ -1088,8 +1089,8 @@
             ]
         },
         "random-number": {
-            "name": "Random Number",
-            "description": "Generate random numbers within a range.",
+            "name": "난수",
+            "description": "범위 내에서 난수를 생성합니다.",
             "seoTitle": "Random Number 무료 - 생성 random number",
             "seoDescription": "생성 random number 온라인 무료. Custom range support. 로그인 불필요, 빠른, 안전한. 에 완벽 lotteries and games.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "random number generator free, generate random numbers online, random number picker, dice roller, lottery number generator",
@@ -1103,8 +1104,8 @@
             ]
         },
         "random-string": {
-            "name": "Random String",
-            "description": "Generate random strings and passwords.",
+            "name": "무작위 문자열",
+            "description": "임의의 문자열과 비밀번호를 생성합니다.",
             "seoTitle": "Random String 무료 - 생성 random string",
             "seoDescription": "생성 random string 온라인 무료. Customizable length and characters. 로그인 불필요, 빠른, 안전한. 에 완벽 passwords.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "random string generator free, generate random strings online, secure password generator, random text generator, alphanumeric generator",
@@ -1118,8 +1119,8 @@
             ]
         },
         "random-color": {
-            "name": "Random Color",
-            "description": "Generate random colors.",
+            "name": "무작위 색상",
+            "description": "임의의 색상을 생성합니다.",
             "seoTitle": "Random Color 무료 - 생성 random color",
             "seoDescription": "생성 random color 온라인 무료. Get HEX, RGB, HSL codes. 로그인 불필요, 빠른, 안전한. 에 완벽 design inspiration.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "random color generator free, generate random colors online, color palette generator, random hex color, design inspiration, color picker",
@@ -1133,8 +1134,8 @@
             ]
         },
         "random-date": {
-            "name": "Random Date",
-            "description": "Generate random dates.",
+            "name": "임의의 날짜",
+            "description": "임의의 날짜를 생성합니다.",
             "seoTitle": "Random Date 무료 - 생성 random date",
             "seoDescription": "생성 random date 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "random-date, free random date, random date tool",
@@ -1148,8 +1149,8 @@
             ]
         },
         "random-ip": {
-            "name": "Random IP",
-            "description": "Generate random IP addresses.",
+            "name": "무작위 IP",
+            "description": "임의의 IP 주소를 생성합니다.",
             "seoTitle": "Random IP 무료 - 생성 random ip",
             "seoDescription": "생성 random ip 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "random-ip, free random ip, random ip tool",
@@ -1178,8 +1179,8 @@
             ]
         },
         "bcrypt-generator": {
-            "name": "Bcrypt Generator",
-            "description": "Generate Bcrypt password hashes.",
+            "name": "암호화폐 생성기",
+            "description": "Bcrypt 비밀번호 해시를 생성합니다.",
             "seoTitle": "Bcrypt Generator 무료 - Use Bcrypt Generator",
             "seoDescription": "Use Bcrypt Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 100% private. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "bcrypt-generator, free bcrypt generator, bcrypt generator tool",
@@ -1193,8 +1194,8 @@
             ]
         },
         "base64-encoder": {
-            "name": "Base64 Encoder",
-            "description": "Encode/Decode Base64.",
+            "name": "Base64 인코더",
+            "description": "Base64를 인코딩/디코딩합니다.",
             "seoTitle": "Base64 Encoder 무료 - 생성 base64 encoder",
             "seoDescription": "생성 base64 encoder 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "base64-encoder, free base64 encoder, base64 encoder tool",
@@ -1208,8 +1209,8 @@
             ]
         },
         "md5-hash": {
-            "name": "MD5 Generator",
-            "description": "Generate MD5 hash.",
+            "name": "MD5 생성기",
+            "description": "MD5 해시를 생성합니다.",
             "seoTitle": "MD5 Generator 무료 - 생성 md5 generator",
             "seoDescription": "생성 md5 generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "md5-hash, free md5 generator, md5 generator tool",
@@ -1224,7 +1225,7 @@
         },
         "sha256-hash": {
             "name": "SHA-256",
-            "description": "Generate SHA-256 hash.",
+            "description": "SHA-256 해시를 생성합니다.",
             "seoTitle": "SHA-256 무료 - 생성 sha-256",
             "seoDescription": "생성 sha-256 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "sha256-hash, free sha-256, sha-256 tool",
@@ -1239,7 +1240,7 @@
         },
         "sha512-hash": {
             "name": "SHA-512",
-            "description": "Generate SHA-512 hash.",
+            "description": "SHA-512 해시를 생성합니다.",
             "seoTitle": "SHA-512 무료 - 생성 sha-512",
             "seoDescription": "생성 sha-512 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "sha512-hash, free sha-512, sha-512 tool",
@@ -1253,8 +1254,8 @@
             ]
         },
         "uuid-generator": {
-            "name": "UUID Generator",
-            "description": "Generate UUID v4.",
+            "name": "UUID 생성기",
+            "description": "UUID v4를 생성합니다.",
             "seoTitle": "UUID Generator 무료 - 생성 uuid generator",
             "seoDescription": "생성 uuid generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "uuid-generator, free uuid generator, uuid generator tool",
@@ -1283,8 +1284,8 @@
             ]
         },
         "lorem-ipsum": {
-            "name": "Lorem Ipsum",
-            "description": "Generate placeholder text.",
+            "name": "로렘 입숨",
+            "description": "자리표시자 텍스트를 생성합니다.",
             "seoTitle": "Lorem Ipsum 무료 - 생성 lorem ipsum",
             "seoDescription": "생성 lorem ipsum 온라인 무료. Custom paragraphs. 로그인 불필요, 빠른, 안전한. 에 완벽 designers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "lorem ipsum generator free, placeholder text generator, dummy text generator, lorem ipsum text, filler text generator",
@@ -1313,8 +1314,8 @@
             ]
         },
         "youtube-tag-generator": {
-            "name": "YouTube Tag Generator",
-            "description": "Generate optimized tags for your YouTube videos to improve ranking.",
+            "name": "YouTube 태그 생성기",
+            "description": "YouTube 동영상에 최적화된 태그를 생성하여 순위를 높이세요.",
             "seoTitle": "YouTube Tag Generator 무료 - 생성 YouTube SEO tags",
             "seoDescription": "생성 YouTube SEO tags 온라인 무료. 최적화 video rankings. 로그인 불필요, 빠른, 안전한. 에 완벽 content creators.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "youtube tag generator free, generate youtube tags online, youtube seo tool, viral video tags, generate tags for youtube",
@@ -1328,8 +1329,8 @@
             ]
         },
         "youtube-title-generator": {
-            "name": "YouTube Title Generator",
-            "description": "Generate catchy, SEO-friendly titles for your YouTube videos.",
+            "name": "YouTube 제목 생성기",
+            "description": "YouTube 동영상에 눈길을 끄는 SEO 친화적인 제목을 생성하세요.",
             "seoTitle": "YouTube Title Generator 무료 - 생성 catchy YouTube titles",
             "seoDescription": "생성 catchy YouTube titles 온라인 무료. SEO-friendly titles for better CTR. 로그인 불필요, 빠른, 안전한. 에 완벽 content creators.",
             "seoKeywords": "youtube title generator free, generate youtube titles online, video title ideas, viral yt titles, seo titles for youtube",
@@ -1343,8 +1344,8 @@
             ]
         },
         "youtube-embed-code-generator": {
-            "name": "YouTube Embed Code Generator",
-            "description": "Generate advanced embed codes with autoplay, loop, and hide controls.",
+            "name": "YouTube 삽입 코드 생성기",
+            "description": "자동 재생, 반복 및 숨기기 컨트롤을 사용하여 고급 Embed 코드를 생성합니다.",
             "seoTitle": "YouTube Embed Code Generator 무료 - Use YouTube Embed Code Generator",
             "seoDescription": "Use YouTube Embed Code Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 content creators.",
             "seoKeywords": "youtube-embed-code-generator, free youtube embed code generator, youtube embed code generator tool",
@@ -1358,8 +1359,8 @@
             ]
         },
         "youtube-timestamp-link-generator": {
-            "name": "YouTube Timestamp Link",
-            "description": "Create YouTube links that start at a specific time.",
+            "name": "YouTube 타임스탬프 링크",
+            "description": "특정 시간에 시작하는 YouTube 링크를 만듭니다.",
             "seoTitle": "YouTube Timestamp Link 무료 - Use YouTube Timestamp Link",
             "seoDescription": "Use YouTube Timestamp Link 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 content creators.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "youtube-timestamp-link-generator, free youtube timestamp link, youtube timestamp link tool",
@@ -1373,8 +1374,8 @@
             ]
         },
         "meta-tag-generator": {
-            "name": "Meta Tag Generator",
-            "description": "Generate SEO-friendly meta tags for your website.",
+            "name": "메타 태그 생성기",
+            "description": "귀하의 웹사이트에 SEO 친화적인 메타 태그를 생성하세요.",
             "seoTitle": "Meta Tag Generator 무료 - Use Meta Tag Generator",
             "seoDescription": "Use Meta Tag Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "meta-tag-generator, free meta tag generator, meta tag generator tool",
@@ -1388,8 +1389,8 @@
             ]
         },
         "open-graph-generator": {
-            "name": "Open Graph Generator",
-            "description": "Create Open Graph meta tags for Facebook and LinkedIn sharing.",
+            "name": "오픈 그래프 생성기",
+            "description": "Facebook 및 LinkedIn 공유를 위한 Open Graph 메타 태그를 만듭니다.",
             "seoTitle": "Open Graph Generator 무료 - 생성 Open Graph meta tags",
             "seoDescription": "생성 Open Graph meta tags 온라인 무료. Facebook, LinkedIn, Slack. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.",
             "seoKeywords": "open graph generator free, generate og tags online, facebook meta tags, og title og image, social media tags",
@@ -1403,8 +1404,8 @@
             ]
         },
         "twitter-card-generator": {
-            "name": "Twitter Card Generator",
-            "description": "Generate Twitter Card meta tags for better social sharing.",
+            "name": "트위터 카드 생성기",
+            "description": "더 나은 소셜 공유를 위해 Twitter 카드 메타 태그를 생성하세요.",
             "seoTitle": "Twitter Card Generator 무료 - 생성 Twitter Card meta tags",
             "seoDescription": "생성 Twitter Card meta tags 온라인 무료. 최적화 X/Twitter shares. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.",
             "seoKeywords": "twitter card generator free, generate twitter cards online, twitter meta tags, x card generator, twitter card validator",
@@ -1418,8 +1419,8 @@
             ]
         },
         "robots-txt-generator": {
-            "name": "Robots.txt Generator",
-            "description": "Create proper robots.txt files to control crawler access.",
+            "name": "Robots.txt 생성기",
+            "description": "크롤러 액세스를 제어하려면 적절한 robots.txt 파일을 만드세요.",
             "seoTitle": "Robots.txt Generator 무료 - Use Robots.txt Generator",
             "seoDescription": "Use Robots.txt Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.",
             "seoKeywords": "robots-txt-generator, free robots.txt generator, robots.txt generator tool",
@@ -1433,8 +1434,8 @@
             ]
         },
         "xml-sitemap-generator": {
-            "name": "XML Sitemap Generator",
-            "description": "Generate XML sitemaps for easier search engine indexing.",
+            "name": "XML 사이트맵 생성기",
+            "description": "더 쉬운 검색 엔진 색인을 위해 XML 사이트맵을 생성합니다.",
             "seoTitle": "XML Sitemap Generator 무료 - Use XML Sitemap Generator",
             "seoDescription": "Use XML Sitemap Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.",
             "seoKeywords": "xml-sitemap-generator, free xml sitemap generator, xml sitemap generator tool",
@@ -1448,8 +1449,8 @@
             ]
         },
         "keyword-density-checker": {
-            "name": "Keyword Density Checker",
-            "description": "Analyze keyword usage and density in your content.",
+            "name": "키워드 밀도 검사기",
+            "description": "콘텐츠의 키워드 사용량과 밀도를 분석하세요.",
             "seoTitle": "Keyword Density Checker 무료 - Check keyword density",
             "seoDescription": "Check keyword density 온라인 무료. Avoid SEO penalties. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "keyword density checker free, check keyword stuffing, seo text analyzer, word frequency counter, keyword optimizer tool",
@@ -1463,8 +1464,8 @@
             ]
         },
         "keyword-cleaner": {
-            "name": "Keyword Cleaner",
-            "description": "Clean up keyword lists: remove duplicates, empty lines, and specific characters.",
+            "name": "키워드 클리너",
+            "description": "키워드 목록 정리: 중복, 빈 줄, 특정 문자를 제거합니다.",
             "seoTitle": "Keyword Cleaner 무료 - Use Keyword Cleaner",
             "seoDescription": "Use Keyword Cleaner 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "keyword-cleaner, free keyword cleaner, keyword cleaner tool",
@@ -1478,8 +1479,8 @@
             ]
         },
         "long-tail-keyword-generator": {
-            "name": "Long Tail Keyword Generator",
-            "description": "Generate long-tail keyword variations from seed keywords.",
+            "name": "롱테일 키워드 생성기",
+            "description": "시드 키워드에서 롱테일 키워드 변형을 생성합니다.",
             "seoTitle": "Long Tail Keyword Generator 무료 - Use Long Tail Keyword Generator",
             "seoDescription": "Use Long Tail Keyword Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.",
             "seoKeywords": "long-tail-keyword-generator, free long tail keyword generator, long tail keyword generator tool",
@@ -1493,8 +1494,8 @@
             ]
         },
         "slug-generator": {
-            "name": "Slug Generator",
-            "description": "Convert text into SEO-friendly URL slugs.",
+            "name": "슬러그 생성기",
+            "description": "텍스트를 SEO 친화적인 URL 슬러그로 변환합니다.",
             "seoTitle": "Slug Generator 무료 - Use Slug Generator",
             "seoDescription": "Use Slug Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "slug-generator, free slug generator, slug generator tool",
@@ -1508,8 +1509,8 @@
             ]
         },
         "google-serp-simulator": {
-            "name": "Google SERP Simulator",
-            "description": "Preview how your website will appear in Google search results.",
+            "name": "구글 SERP 시뮬레이터",
+            "description": "귀하의 웹사이트가 Google 검색 결과에 어떻게 나타날지 미리 보세요.",
             "seoTitle": "Google SERP Simulator 무료 - Use Google SERP Simulator",
             "seoDescription": "Use Google SERP Simulator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.",
             "seoKeywords": "google-serp-simulator, free google serp simulator, google serp simulator tool",
@@ -1523,8 +1524,8 @@
             ]
         },
         "htaccess-redirect-generator": {
-            "name": "Htaccess Redirect Generator",
-            "description": "Generate .htaccess redirect code for 301/302 redirects.",
+            "name": "Htaccess 리디렉션 생성기",
+            "description": "301/302 리디렉션을 위한 .htaccess 리디렉션 코드를 생성합니다.",
             "seoTitle": "Htaccess Redirect Generator 무료 - Use Htaccess Redirect Generator",
             "seoDescription": "Use Htaccess Redirect Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 website optimization.",
             "seoKeywords": "htaccess-redirect-generator, free htaccess redirect generator, htaccess redirect generator tool",
@@ -1538,8 +1539,8 @@
             ]
         },
         "my-ip-address": {
-            "name": "My IP Address",
-            "description": "Check your public IP address and location details.",
+            "name": "내 IP 주소",
+            "description": "공용 IP 주소와 위치 세부정보를 확인하세요.",
             "seoTitle": "My IP Address 무료 - 생성 my ip address",
             "seoDescription": "생성 my ip address 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "my-ip-address, free my ip address, my ip address tool",
@@ -1553,8 +1554,8 @@
             ]
         },
         "browser-info": {
-            "name": "Browser Info",
-            "description": "Get detailed information about your current browser and system.",
+            "name": "브라우저 정보",
+            "description": "현재 브라우저 및 시스템에 대한 자세한 정보를 얻으십시오.",
             "seoTitle": "Browser Info 무료 - 생성 browser info",
             "seoDescription": "생성 browser info 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "browser-info, free browser info, browser info tool",
@@ -1568,8 +1569,8 @@
             ]
         },
         "screen-resolution-simulator": {
-            "name": "Screen Resolution Simulator",
-            "description": "Test your website on different screen resolutions.",
+            "name": "화면 해상도 시뮬레이터",
+            "description": "다양한 화면 해상도에서 웹사이트를 테스트해 보세요.",
             "seoTitle": "Screen Resolution Simulator 무료 - 생성 screen resolution simulator",
             "seoDescription": "생성 screen resolution simulator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "screen-resolution-simulator, free screen resolution simulator, screen resolution simulator tool",
@@ -1583,8 +1584,8 @@
             ]
         },
         "responsive-checker": {
-            "name": "Responsive Checker",
-            "description": "Check if your website is responsive across devices.",
+            "name": "반응형 검사기",
+            "description": "웹사이트가 다양한 기기에서 반응하는지 확인하세요.",
             "seoTitle": "Responsive Checker 무료 - 생성 responsive checker",
             "seoDescription": "생성 responsive checker 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "responsive-checker, free responsive checker, responsive checker tool",
@@ -1598,8 +1599,8 @@
             ]
         },
         "whatsapp-link-generator": {
-            "name": "WhatsApp Link Generator",
-            "description": "Create direct click-to-chat WhatsApp links.",
+            "name": "WhatsApp 링크 생성기",
+            "description": "직접 클릭하여 채팅할 수 있는 WhatsApp 링크를 만드세요.",
             "seoTitle": "WhatsApp Link Generator 무료 - 생성 WhatsApp click-to-chat links",
             "seoDescription": "생성 WhatsApp click-to-chat links 온라인 무료. Custom messages. 로그인 불필요, 빠른, 안전한. 에 완벽 social media.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "whatsapp link generator free, generate whatsapp links online, click to chat whatsapp, wa.me link maker, whatsapp chat link",
@@ -1613,8 +1614,8 @@
             ]
         },
         "telegram-link-generator": {
-            "name": "Telegram Link Generator",
-            "description": "Create direct links to Telegram users or channels.",
+            "name": "전보 링크 생성기",
+            "description": "Telegram 사용자 또는 채널에 대한 직접 링크를 만듭니다.",
             "seoTitle": "Telegram Link Generator 무료 - Use Telegram Link Generator",
             "seoDescription": "Use Telegram Link Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 social media.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "telegram-link-generator, free telegram link generator, telegram link generator tool",
@@ -1628,8 +1629,8 @@
             ]
         },
         "paypal-link-generator": {
-            "name": "PayPal Link Generator",
-            "description": "Generate PayPal payment and donation links.",
+            "name": "PayPal 링크 생성기",
+            "description": "PayPal 결제 및 기부 링크를 생성합니다.",
             "seoTitle": "PayPal Link Generator 무료 - Use PayPal Link Generator",
             "seoDescription": "Use PayPal Link Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 social media.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "paypal-link-generator, free paypal link generator, paypal link generator tool",
@@ -1643,8 +1644,8 @@
             ]
         },
         "email-validator": {
-            "name": "Email Validator",
-            "description": "Validate email address format using regex.",
+            "name": "이메일 유효성 검사기",
+            "description": "정규식을 사용하여 이메일 주소 형식을 확인합니다.",
             "seoTitle": "Email Validator 무료 - 생성 email validator",
             "seoDescription": "생성 email validator 온라인 무료. Check syntax and 포맷. 로그인 불필요, 빠른, 안전한. 에 완벽 forms.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "email validator free, validate email online, email syntax checker, email verifier, check email format",
@@ -1658,8 +1659,8 @@
             ]
         },
         "url-opener": {
-            "name": "URL Opener",
-            "description": "Open multiple URLs at once in new tabs.",
+            "name": "URL 오프너",
+            "description": "새 탭에서 한 번에 여러 URL을 엽니다.",
             "seoTitle": "URL Opener 무료 - 생성 url opener",
             "seoDescription": "생성 url opener 온라인 무료. Bulk link opener. 로그인 불필요, 빠른, 안전한. 에 완벽 research.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "bulk url opener free, open multiple links online, url list opener, link opener, multiple url opener",
@@ -1673,8 +1674,8 @@
             ]
         },
         "user-agent-parser": {
-            "name": "User Agent Parser",
-            "description": "Parse and analyze User-Agent strings.",
+            "name": "사용자 에이전트 파서",
+            "description": "사용자 에이전트 문자열을 구문 분석하고 분석합니다.",
             "seoTitle": "User Agent Parser 무료 - Use User Agent Parser Code",
             "seoDescription": "Use User Agent Parser code 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 developers.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "user-agent-parser, free user agent parser, user agent parser tool",
@@ -1688,8 +1689,8 @@
             ]
         },
         "wordpress-password-hash": {
-            "name": "WordPress Password Hash",
-            "description": "Generate WordPress compatible password hashes (phpass).",
+            "name": "WordPress 비밀번호 해시",
+            "description": "WordPress 호환 비밀번호 해시(phpass)를 생성합니다.",
             "seoTitle": "WordPress Password Hash 무료 - Use WordPress Password Hash",
             "seoDescription": "Use WordPress Password Hash 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 100% private. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "wordpress-password-hash, free wordpress password hash, wordpress password hash tool",
@@ -1718,8 +1719,8 @@
             ]
         },
         "bmi-calculator": {
-            "name": "BMI Calculator",
-            "description": "Calculate your Body Mass Index (BMI) and health status.",
+            "name": "BMI 계산기",
+            "description": "체질량지수(BMI)와 건강 상태를 계산하세요.",
             "seoTitle": "BMI Calculator 무료 온라인 - 계산 BMI Calculator",
             "seoDescription": "계산 BMI Calculator 온라인 무료. Check healthy weight range. 로그인 불필요, 빠른, accurate. 에 완벽 health tracking.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "bmi calculator free, body mass index calculator, healthy weight calculator, obesity calculator, height weight chart, bmi calculator online",
@@ -1733,8 +1734,8 @@
             ]
         },
         "percentage-calculator": {
-            "name": "Percentage Calculator",
-            "description": "Quickly calculate percentages, increases, and decreases.",
+            "name": "백분율 계산기",
+            "description": "백분율, 증가 및 감소를 빠르게 계산합니다.",
             "seoTitle": "Percentage Calculator 무료 온라인 - 계산 Percentage Calculator",
             "seoDescription": "계산 Percentage Calculator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, accurate. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "percentage-calculator, free percentage calculator, percentage calculator tool",
@@ -1747,8 +1748,8 @@
             ]
         },
         "gst-calculator": {
-            "name": "GST Calculator",
-            "description": "Calculate GST (Goods and Services Tax) for any amount.",
+            "name": "GST 계산기",
+            "description": "금액에 관계없이 GST(상품 및 서비스세)를 계산하세요.",
             "seoTitle": "GST Calculator 무료 온라인 - 계산 GST Calculator",
             "seoDescription": "계산 GST Calculator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, accurate. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "gst-calculator, free gst calculator, gst calculator tool",
@@ -1776,8 +1777,8 @@
             ]
         },
         "discount-calculator": {
-            "name": "Discount Calculator",
-            "description": "Calculate final price after discount and savings.",
+            "name": "할인 계산기",
+            "description": "할인 및 절감 후 최종 가격을 계산합니다.",
             "seoTitle": "Discount Calculator 무료 온라인 - 계산 Discount Calculator",
             "seoDescription": "계산 Discount Calculator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, accurate. 에 완벽 daily tasks.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "discount-calculator, free discount calculator, discount calculator tool",
@@ -1790,8 +1791,8 @@
             ]
         },
         "instagram-hashtag-generator": {
-            "name": "Instagram Hashtag Generator",
-            "description": "Generate popular and trending hashtags for Instagram.",
+            "name": "인스타그램 해시태그 생성기",
+            "description": "Instagram에 대한 인기 있고 인기 있는 해시태그를 생성하세요.",
             "seoTitle": "Instagram Hashtag Generator 무료 - Use Instagram Hashtag Generator",
             "seoDescription": "Use Instagram Hashtag Generator 온라인 무료. 빠른 and 안전한 processing. 로그인 불필요, 빠른, 안전한. 에 완벽 social media.무료, 빠르고 안전합니다. 가입 불필요.",
             "seoKeywords": "instagram-hashtag-generator, free instagram hashtag generator, instagram hashtag generator tool",
@@ -1827,7 +1828,9 @@
                 }
             ],
             "seoTitle": "Regex Tester - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required.무료, 빠르고 안전합니다. 가입 불필요."
+            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required.무료, 빠르고 안전합니다. 가입 불필요.",
+            "name": "정규식 테스터",
+            "description": "텍스트에 대해 정규식을 테스트합니다."
         },
         "reverse-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">저희 <strong>온라인 역순 텍스트 도구</strong>로 소통 방식을 완전히 뒤집어 보세요. 독특한 소셜 미디어 소개글을 만들거나, 퍼즐을 위한 암호화된 메시지를 작성하거나, 단순히 단어를 다른 관점에서 보고 싶을 때, 저희의 문자 반전 엔진은 즉각적인 결과를 제공합니다. 창의적인 표현과 디지털 놀이를 위해 설계된 재미있고 가벼운 도구입니다.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">단순히 거꾸로 쓰기 그 이상</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">텍스트를 뒤집는다는 것은 문자열을 정확히 반대 순서로 재배열하는 것을 말합니다. 간단해 보이지만, 예술 프로젝트를 위한 거울 이미지 텍스트를 만드는 것부터 방탈출 게임이나 온라인 게임을 위한 간단한 암호를 생성하는 것까지 모든 것에 사용할 수 있습니다.</p> 저희 도구는 기호, 공백, 여러 줄 입력도 완벽하게 처리합니다.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">도구 기능</h2>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>문자 단위 반전:</strong> 모든 문자, 공백, 구두점을 뒤집어 완벽한 반전 효과를 제공합니다.</li>\n<li class=\"text-gray-600\"><strong>문장 단위 옵션:</strong> 단어 자체는 읽을 수 있도록 유지하면서 문장 전체의 순서를 쉽게 뒤집을 수 있습니다.</li>\n<li class=\"text-gray-600\"><strong>즉시 반전 출력:</strong> 입력하는 즉시 텍스트가 변환되는 것을 확인할 수 있으며, 지연 없이 페이지를 새로 고칠 필요가 없습니다.</li>\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">100% 로컬 개인 정보 보호</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">메시지는 오직 사용자만 볼 수 있습니다. Aynzo Tools는 JavaScript를 사용하여 모든 텍스트 반전을 <strong>사용자 컴퓨터에서 직접</strong> 처리합니다.</p> 저희는 고객님의 텍스트를 서버에 업로드하지 않으므로, 비밀 메시지, 재미있는 농담, 창의적인 글귀는 언제나 100% 비공개로 안전하게 보관됩니다.",
@@ -1838,7 +1841,9 @@
                 }
             ],
             "seoTitle": "Reverse Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required.무료, 빠르고 안전합니다. 가입 불필요."
+            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required.무료, 빠르고 안전합니다. 가입 불필요.",
+            "name": "역방향 텍스트 생성기",
+            "description": "텍스트를 뒤집거나 뒤집거나 단어를 뒤집으세요."
         },
         "bold-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\"> 저희 <strong>굵은 글씨 생성기</strong>로 메시지를 돋보이게 만드세요! 이 무료 온라인 도구는 일반 텍스트를 다양한 소셜 미디어 플랫폼, 메시징 앱 및 웹사이트에서 사용할 수 있는 굵은 유니코드 문자로 변환합니다. 요점을 강조하거나, 눈길을 사로잡는 제목을 만들거나, 프로필에 개성을 더하는 데 적합합니다.</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">사용 방법은 무엇인가요?</h3> </h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">기존 HTML 굵게 태그(<code>&lt;b&gt;</code> 또는 <code>&lt;strong&gt;</code>)와 달리, 저희 생성기는 시각적으로 굵게 표시되는 특수 유니코드 문자를 사용합니다. 이러한 문자는 실제 텍스트 문자이므로 HTML 서식이 지원되지 않는 소셜 미디어 프로필, 댓글, 채팅 메시지 등 거의 모든 텍스트 필드에 붙여넣을 수 있습니다.</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">주요 기능</h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>범용 호환성:</strong> Instagram, Facebook, Twitter, WhatsApp 등에서 작동합니다.</li>\n<li class=\"text-gray-600\"><strong>즉시 변환:</strong> 텍스트를 입력하거나 붙여넣으면 즉시 변환된 것을 확인할 수 있습니다.</li>\n<li class=\"text-gray-600\"><strong>다양한 굵게 스타일:</strong> 다양한 굵게 글꼴과 스타일(예: 굵은 세리프체, 굵은 산세리프체)을 살펴보세요.</li>\n<li class=\"text-gray-600\"><strong>복사 및 붙여넣기:</strong> 간편하게 복사할 수 있습니다. 한 번의 클릭으로 굵은 텍스트를 생성할 수 있습니다.</li >\n</ul>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">굵은 텍스트의 창의적인 활용법</h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>소셜 미디어 소개:</strong> Instagram 또는 TikTok 소개에서 핵심 정보를 강조하세요.</li >\n<li class=\"text-gray-600\"><strong>게시물 강조:</strong> 캡션이나 트윗의 중요한 부분을 눈에 띄게 만드세요.</li >\n<li class=\"text-gray-600\"><strong>제목 및 제목:</strong> 온라인 콘텐츠에 임팩트 있는 제목을 만드세요.</li >\n<li class=\"text-gray-600\"><strong>메시지:</strong> 채팅 애플리케이션에서 메시지를 강조하세요.</li >\n</ul>",
@@ -1849,7 +1854,10 @@
                 }
             ],
             "seoTitle": "Bold Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required.무료, 빠르고 안전합니다. 가입 불필요."
+            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required.무료, 빠르고 안전합니다. 가입 불필요.",
+            "name": "굵은 텍스트 생성기",
+            "description": "유니코드 문자를 사용하여 굵은 텍스트를 생성합니다.",
+            "seoH1": "굵은 텍스트 생성기: 두꺼운 글꼴로 눈에 띄기"
         },
         "word-to-pdf": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">전문적인 환경에서 초안에서 최종 문서로 넘어가는 과정에는 종종 PDF 변환이 포함됩니다. Microsoft Word는 콘텐츠 제작의 세계적인 표준이지만, PDF(Portable Document Format)는 콘텐츠 배포의 표준입니다. <strong>Aynzo <strong>Word to PDF</strong> Converter</strong>는 픽셀 단위까지 완벽한 정밀도로 이러한 격차를 해소하도록 설계되어, 모든 기기에서 여러분의 노력이 담긴 결과물이 의도한 대로 정확하게 보이도록 보장합니다.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">전문가의 이점: Word를 PDF로 변환해야 하는 이유</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Word 파일로 공유된 문서는 서식 변경, 글꼴 누락, 의도치 않은 편집 등의 문제가 발생하기 쉽습니다. <strong>온라인으로 Word를 PDF로 변환</strong>하면 디자인을 완벽하게 보존할 수 있습니다. 학생이 논문을 제출하든, 프리랜서가 송장을 보내든, 기업 임원이 보고서를 배포하든, PDF는 편집 가능한 일반 형식으로는 따라올 수 없는 수준의 전문성을 제공합니다.</p >\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">탁월한 서식 보존</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">무료 변환기에 대한 가장 일반적인 불만은 문서가 \"깨진다\"는 것입니다. 표가 이동하고, 이미지가 겹치고, 사용자 지정 글꼴이 사라집니다. 저희 도구는 Microsoft Office 자체에서 레이아웃을 처리하는 방식을 그대로 반영하는 고급 렌더링 로직을 사용합니다. 다음을 지원합니다.</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>복잡한 레이아웃:</strong> 다단 보고서, 머리글 및 바닥글이 100% 정확하게 보존됩니다.</li >\n<li class=\"text-gray-600\"><strong>동적 요소:</strong> 하이퍼링크, 목차(TOC) 및 메타데이터가 내보낸 PDF에서 정상적으로 작동합니다.</li >\n<li class=\"text-gray-600\"><strong>포함된 미디어:</strong> 고해상도 이미지와 차트가 원본의 선명도를 잃지 않고 변환됩니다.</li >\n<li class=\"text-gray-600\"><strong>글꼴 무결성:</strong> 표준 및 일반 시스템 글꼴을 처리하여 타이포그래피의 일관성을 유지합니다.</li >\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">보안 및 개인정보 보호: 문서 보안</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">문서 보안은 저희의 최우선 과제입니다. 교육이나 광고 목적으로 민감한 데이터를 저장하는 많은 \"무료\" 온라인 도구와 달리, <strong>Aynzo Tools</strong>는 사용자의 개인정보 보호를 최우선으로 생각합니다. 모든 처리는 임시 암호화 환경에서 이루어집니다. 변환이 완료되면 파일은 즉시 자동으로 삭제됩니다. 문서 내용을 추적하거나 이메일 가입을 요구하지 않으므로 사용자의 신원은 익명으로 유지됩니다.</p >\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">최적화된 속도: Word 파일을 PDF로 몇 초 만에 변환</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">시간은 소중한 자원입니다. 저희는 서버 측 엔진을 최적화하여 이미지가 많은 대용량 문서(최대 50MB)도 단 몇 초 만에 처리할 수 있도록 했습니다.</p> 이러한 특징 덕분에 기존 데스크톱 소프트웨어처럼 용량이 크지 않으면서도 빠른 Word-PDF 변환기가 필요한 대량 사용자에게 이상적인 도구입니다.\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">폭넓은 호환성: .DOC 및 .DOCX 지원</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">레거시 Word 97-2003 문서(.doc)든 최신 XML 기반 파일(.docx)이든, 저희 변환기는 두 가지 형식 모두 손쉽게 처리합니다.</p> 이러한 하위 호환성을 통해 가장 오래된 아카이브도 호환성 문제 없이 최신 PDF 표준으로 변환할 수 있습니다.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> Aynzo Word PDF 변환 도구 사용 방법 </h2>\n<ol>\n<li class=\"text-gray-600\"><strong>파일 선택: </strong> 업로드 상자를 클릭하거나 Word 파일을 도구 영역으로 드래그 앤 드롭하세요.</li >\n<li class=\"text-gray-600\"><strong>변환 대기: </strong> 엔진이 고속 렌더링 프로세스를 즉시 시작합니다.</li >\n<li class=\"text-gray-600\"><strong>결과 다운로드: </strong> '다운로드' 버튼을 클릭하여 전문적인 PDF 파일을 컴퓨터 또는 모바일 장치에 저장하세요.</li >\n</ol>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> 데스크톱 소프트웨어 대신 Aynzo를 선택해야 하는 이유 </h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\"> Adobe Acrobat과 같은 소프트웨어는 강력하지만 비싸고 리소스를 많이 소모합니다. 일상적인 문서 작업의 99%는 가벼운 <strong>온라인 Word PDF 생성기</strong>가 훨씬 효율적입니다. 소프트웨어를 설치할 필요도 없고, 업데이트를 관리할 필요도 없으며, 월 구독료도 없습니다. Windows, macOS, Linux는 물론 Android 및 iOS 모바일 브라우저에서도 작동합니다.</p>",
@@ -1860,7 +1868,10 @@
                 }
             ],
             "seoTitle": "Word To Pdf - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Word To Pdf tool. Fast, secure, and easy to use. No login required.무료, 빠르고 안전합니다. 가입 불필요."
+            "seoDescription": "Use our free online Word To Pdf tool. Fast, secure, and easy to use. No login required.무료, 빠르고 안전합니다. 가입 불필요.",
+            "name": "단어를 PDF로",
+            "description": "Microsoft Word(DOC/DOCX) 문서를 PDF 형식으로 변환합니다.",
+            "seoH1": "Word를 PDF로 무료: Word DOC/DOCX를 PDF로 변환"
         },
         "seo-score-checker": {
             "content": "< p > Stop guessing why your website isn't ranking. Our **Live <strong>SEO Score Checker</strong>**doesn't just pretend to analyze your site—it actually fetches your live code in real - time.Unlike generic tools that give random numbers, we parse your HTML structure to find the ** exact technical flaws ** holding you back.</p>\n< h3 > How Our Real - Time Scanner Works </h3>\n< p > When you enter a URL, our advanced crawler connects to your website instantly.It reads the public HTML just like Googlebot does, checking for: </p>\n< ul >\n<li class=\"text-gray-600\">** Title & Meta Tags:** We verify if they exist and if they are the perfect length for search snippets.</li>\n<li class=\"text-gray-600\"> ** Header Hiearchy:** We scan your H1, H2, and H3 tags to ensure your content structure is semantic and readable.</li>\n<li class=\"text-gray-600\"> ** Image Accessibility:** We count every image and flag the ones missing 'alt' text, which hurts your accessibility and image search ranking.</li>\n<li class=\"text-gray-600\"> ** Internal & External Links:** We count valid links to judge the crawlability of your page.</li>\n</ul>\n< h3 > Why a 'Real' Score Matters </h3>\n< p > Many free tools simulate results.We don't. If you fix an issue and run the scan again,**you will see your score increase immediately**. This direct feedback loop allows developers and marketers to:</p>\n< ul >\n<li class=\"text-gray-600\">Validate fixes instantly after deploying code.</li>\n< li > Audit competitor pages to see their real metadata strengths.</li>\n< li > Generate accurate reports for clients based on actual page data.</li>\n</ul>\n< h3 > Actionable \"Fix-It\" List </h3>\n< p > We don't just give you a number. We provide a checklist of **Failed**vs**Passed** tests. If your Meta Description is too short, we tell you. If your H1 is missing, we alert you. This tool is your personal SEO assistant, working 24/7 for free.</p>",
@@ -2095,12 +2106,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is Debt-to-Income Ratio (DTI)?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Your Debt-to-Income (DTI) ratio is the percentage of your gross monthly income that goes toward paying debts. Lenders use it as a key metric to evaluate your ability to manage monthly payments and repay borrowed money.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">DTI Thresholds Lenders Look For</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Below 36%: Excellent — most lenders will approve you easily.</li><li class=\"text-gray-600\">36%–43%: Acceptable — some lenders may add conditions.</li><li class=\"text-gray-600\">43%–50%: Risky — approval depends on other factors.</li><li class=\"text-gray-600\">Above 50%: High risk — most lenders will decline your application.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">How to Improve Your DTI</h3><p class=\"mb-4 leading-relaxed text-gray-700\">The two levers are increasing income or reducing debt. Pay off small debts first (the debt snowball method), avoid new credit before applying for a mortgage, and consider refinancing high-interest debt to lower monthly payments.</p>"
         },
         "car-loan-calculator": {
-            "name": "Car Loan Calculator",
+            "name": "자동차 대출 계산기",
             "description": "Calculate your monthly car loan payments, total interest, and true cost of owning a vehicle.",
             "seoTitle": "[무료] Car Loan Calculator (Free) — Monthly Payment & Interest Cost Estimator",
-            "seoDescription": "Calculate your exact monthly car loan payment, total interest cost, and amortization schedule. Find the best loan term for your budget before visiting a dealership.",
+            "seoDescription": "정확한 월별 자동차 대출 지불금, 총 이자 비용 및 할부 상환 일정을 계산하십시오. 대리점을 방문하기 전에 예산에 가장 적합한 대출 기간을 찾아보세요.",
             "seoKeywords": "car loan calculator, auto loan calculator, monthly car payment calculator, vehicle loan calculator, car finance calculator, auto payment estimator, car loan interest calculator, used car loan calculator",
-            "seoH1": "Free Car Loan Calculator: Monthly Payment & Total Cost",
+            "seoH1": "무료 자동차 대출 계산기: 월별 지불액 및 총 비용",
             "faq": [
                 {
                     "question": "What credit score do I need for the best car loan rate?",
@@ -2126,12 +2137,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How Car Loan Calculations Work</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A <strong>car loan calculator</strong> helps you understand the true cost of financing a vehicle before you sign anything at the dealership. The monthly payment is calculated using the standard amortization formula based on loan amount, interest rate, and term.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Key Factors That Affect Your Payment</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Loan Amount: Car price minus your down payment and trade-in value.</li><li class=\"text-gray-600\">APR (Annual Percentage Rate): Your credit score is the biggest determinant. A 760+ score can get rates below 5%, while sub-600 scores may face 15%+ rates.</li><li class=\"text-gray-600\">Loan Term: Longer terms (72-84 months) lower monthly payments but dramatically increase total interest paid.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Dealer vs. Bank Financing</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Always get pre-approved from your bank or credit union before visiting a dealer. Dealers often mark up the interest rate and earn a commission. Having a competing offer gives you negotiation power on both the car price and the financing rate.</p>"
         },
         "credit-card-payoff-calculator": {
-            "name": "Credit Card Payoff Calculator",
+            "name": "신용 카드 상환 계산기",
             "description": "Calculate how long it will take to pay off credit card debt and how much interest you will pay.",
             "seoTitle": "[무료] Credit Card Payoff Calculator (Free) — Debt-Free Date & Interest Estimator",
-            "seoDescription": "Find your credit card debt-free date. Compare fixed monthly payments vs paying a set amount. See exactly how much interest you'll save by paying more each month.",
+            "seoDescription": "신용카드 빚이 없는 날짜를 찾아보세요. 고정 월별 지불과 정해진 금액 지불을 비교하십시오. 매달 더 많은 금액을 지불하면 이자를 얼마나 절약할 수 있는지 정확히 확인하세요.",
             "seoKeywords": "credit card payoff calculator, credit card debt calculator, pay off credit card, credit card interest calculator, debt free calculator, minimum payment credit card, snowball debt calculator",
-            "seoH1": "Credit Card Payoff Calculator: See Your Debt-Free Date",
+            "seoH1": "신용카드 상환 계산기: 부채가 없는 날짜를 확인하세요",
             "faq": [
                 {
                     "question": "What happens if I only pay the minimum balance?",
@@ -2157,12 +2168,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">The Real Cost of Minimum Payments</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Making only the minimum payment on a credit card is one of the most expensive financial decisions you can make. On a $5,000 balance at 20% APR with a $100 minimum payment, it takes over 10 years to pay off and costs over $7,000 in interest — more than the original debt.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Debt Avalanche Method</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Pay the minimum on all cards, then put every extra dollar toward the card with the highest interest rate. This mathematically minimizes total interest paid.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Debt Snowball Method</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Ignore interest rates. Pay off the smallest balance first for psychological wins and momentum. Research shows this method leads to higher debt-free success rates despite being mathematically sub-optimal.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Power of Adding Just $50 Extra</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Adding just $50 extra to your monthly payment can often cut years off your payoff timeline and save hundreds or thousands in interest. Use this calculator to see your personalized impact.</p>"
         },
         "savings-goal-calculator": {
-            "name": "Savings Goal Calculator",
+            "name": "저축 목표 계산기",
             "description": "Calculate how much to save monthly to reach your financial goals by a target date.",
             "seoTitle": "[무료] Savings Goal Calculator (Free) — Monthly Savings Planner & Target Date Estimator",
-            "seoDescription": "Set a savings goal and find out exactly how much to save monthly to reach it. Includes compound interest growth and emergency fund planning. Free savings calculator.",
+            "seoDescription": "저축 목표를 설정하고 이를 달성하기 위해 매달 얼마나 저축해야 하는지 정확히 알아보세요. 복리 이율 증가 및 비상 자금 계획이 포함됩니다. 무료 저축 계산기.",
             "seoKeywords": "savings goal calculator, how much to save calculator, monthly savings calculator, savings target date calculator, compound interest savings, emergency fund calculator, financial goal planner",
-            "seoH1": "Savings Goal Calculator: Plan Your Financial Future",
+            "seoH1": "저축 목표 계산기: 재정적 미래를 계획하세요",
             "faq": [
                 {
                     "question": "How much should I save each month?",
@@ -2188,12 +2199,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">The Foundation of Financial Planning: Goal-Based Saving</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Every major financial goal — from a vacation to a house down payment — starts with a clear savings target and a realistic monthly contribution plan. Our <strong>Savings Goal Calculator</strong> shows you the exact monthly amount needed and how compound interest accelerates your progress.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Emergency Fund: Priority #1</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Before saving for any other goal, financial experts universally recommend building an emergency fund of 3-6 months of living expenses. This prevents you from going into debt when unexpected costs arise. Use this calculator to plan your emergency fund timeline.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">High-Yield Savings Accounts</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Traditional savings accounts earn 0.01% APY. High-yield savings accounts (HYSAs) from online banks often pay 4-5% APY. On a $20,000 goal, this difference can mean hundreds of dollars of free compound interest each year.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Automate Your Savings</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Set up automatic transfers on payday. Research shows that people who automate savings consistently reach their goals faster than those who save whatever's 'left over' each month.</p>"
         },
         "freelance-tax-calculator": {
-            "name": "Freelance Tax Calculator",
+            "name": "프리랜서 세금 계산기",
             "description": "Estimate your US freelance taxes including self-employment tax and quarterly payments.",
             "seoTitle": "[무료] Freelance Tax Calculator (Free) — Self-Employment & Quarterly Tax Estimator 2024",
-            "seoDescription": "Calculate your freelance taxes for 2024. Instantly see your self-employment tax, federal income tax, effective rate, and quarterly estimated payments. Built for US freelancers.",
+            "seoDescription": "2024년 프리랜스 세금을 계산하세요. 자영업세, 연방 소득세, 유효 세율 및 분기별 예상 납부금을 즉시 확인하세요. 미국 프리랜서를 위해 제작되었습니다.",
             "seoKeywords": "freelance tax calculator, self-employment tax calculator, 1099 tax calculator, quarterly tax calculator, estimated tax payments 2024, independent contractor tax, gig worker tax calculator, freelancer taxes USA",
-            "seoH1": "Freelance Tax Calculator 2024: Self-Employment & Quarterly Taxes",
+            "seoH1": "2024년 프리랜서 세금 계산기: 자영업 및 분기별 세금",
             "faq": [
                 {
                     "question": "What percentage of my freelance income should I set aside for taxes?",
@@ -2219,12 +2230,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Understanding Freelance Taxes in the USA</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Freelancers and independent contractors are responsible for paying both the employee and employer portions of Social Security and Medicare taxes — collectively called the Self-Employment (SE) Tax. This currently totals 15.3% (12.4% Social Security + 2.9% Medicare) on net self-employment income.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Self-Employment Tax Deduction</h3><p class=\"mb-4 leading-relaxed text-gray-700\">You can deduct 50% of your self-employment tax from your gross income before calculating income tax. This partially offsets the burden compared to traditional employees.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Quarterly Estimated Tax Payments</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Freelancers must pay taxes quarterly (April 15, June 15, September 15, January 15) or face IRS underpayment penalties. Each quarterly payment should be approximately 25% of your estimated annual tax liability.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Key Business Deductions to Track</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Home office (dedicated workspace)</li><li class=\"text-gray-600\">Equipment and software</li><li class=\"text-gray-600\">Health insurance premiums</li><li class=\"text-gray-600\">Business travel and mileage</li><li class=\"text-gray-600\">Professional development and subscriptions</li><li class=\"text-gray-600\">Retirement contributions (SEP-IRA, Solo 401k)</li></ul>"
         },
         "tdee-calculator": {
-            "name": "TDEE Calculator",
+            "name": "TDEE 계산기",
             "description": "Calculate your Total Daily Energy Expenditure to know exactly how many calories to eat for your goals.",
             "seoTitle": "[무료] TDEE Calculator (Free) — Total Daily Energy Expenditure & Calorie Calculator",
-            "seoDescription": "Calculate your TDEE (Total Daily Energy Expenditure) based on age, weight, height, and activity level. Find your maintenance calories, caloric deficit for weight loss, and surplus for muscle gain.",
+            "seoDescription": "나이, 체중, 키, 활동 수준을 기준으로 TDEE(총 일일 에너지 소비)를 계산합니다. 유지 칼로리, 체중 감량을 위한 칼로리 부족, 근육 증가를 위한 과잉 칼로리를 찾아보세요.",
             "seoKeywords": "TDEE calculator, total daily energy expenditure, maintenance calories, calorie calculator, BMR calculator, weight loss calories, calorie deficit calculator, how many calories should I eat, TDEE weight loss",
-            "seoH1": "TDEE Calculator: Find Your Total Daily Calorie Needs",
+            "seoH1": "TDEE 계산기: 일일 총 칼로리 요구량 찾기",
             "faq": [
                 {
                     "question": "How accurate is a TDEE calculator?",
@@ -2250,12 +2261,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is TDEE?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns in a 24-hour period, accounting for everything from basic biological functions to exercise and daily activities. It is the most important number in any body composition plan.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">TDEE vs BMR</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Your Basal Metabolic Rate (BMR) is the calories your body burns at complete rest. Your TDEE multiplies your BMR by an activity factor. Our calculator uses the Mifflin-St Jeor equation, considered the most accurate formula for most people.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Using TDEE for Your Goals</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Weight Loss: Create a 500-calorie daily deficit (eat TDEE minus 500). This creates approximately 1 pound of fat loss per week.</li><li class=\"text-gray-600\">Muscle Gain: Eat in a 200-300 calorie surplus above TDEE to minimize fat gain while building muscle.</li><li class=\"text-gray-600\">Maintenance: Eat at your TDEE. Your weight should stay stable over time.</li></ul>"
         },
         "pregnancy-due-date-calculator": {
-            "name": "Pregnancy Due Date Calculator",
+            "name": "임신 예정일 계산기",
             "description": "Calculate your pregnancy due date, trimester dates, and key milestones from your LMP.",
             "seoTitle": "[무료] Pregnancy Due Date Calculator (Free) — Calculate Your Baby's Arrival Date",
-            "seoDescription": "Calculate your pregnancy due date instantly based on your last menstrual period (LMP) or conception date. See all trimester dates, gestational age, and key milestones.",
+            "seoDescription": "마지막 월경 기간(LMP) 또는 임신 날짜를 기준으로 임신 예정일을 즉시 계산하세요. 모든 임신 날짜, 재태 연령 및 주요 이정표를 확인하세요.",
             "seoKeywords": "pregnancy due date calculator, due date calculator, LMP calculator, when is my baby due, pregnancy calendar, gestational age calculator, trimester calculator, conception date calculator, baby due date",
-            "seoH1": "Pregnancy Due Date Calculator: Know When Your Baby Arrives",
+            "seoH1": "임신 예정일 계산기: 아기가 언제 태어날지 알 수 있습니다",
             "faq": [
                 {
                     "question": "How accurate is a due date calculated from LMP?",
@@ -2281,12 +2292,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How is a Pregnancy Due Date Calculated?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">The standard method for calculating a pregnancy due date is Naegele's Rule: add 280 days (40 weeks) to the first day of your Last Menstrual Period (LMP). This is used by most healthcare providers worldwide.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Three Trimesters</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">First Trimester (Weeks 1-12): Critical organ development. Morning sickness is common. The embryo becomes a fetus.</li><li class=\"text-gray-600\">Second Trimester (Weeks 13-27): Often called the 'golden trimester.' Energy returns, baby movements begin (quickening), and sex can usually be determined.</li><li class=\"text-gray-600\">Third Trimester (Weeks 28-40): Rapid fetal growth and preparation for delivery. Prenatal visits become more frequent.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Important Note</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Only about 5% of babies are born on their exact due date. Most arrive within 2 weeks before or after. Your OB or midwife may adjust your due date after an early ultrasound for more accuracy.</p>"
         },
         "macro-calculator": {
-            "name": "Macro Calculator",
+            "name": "매크로 계산기",
             "description": "Calculate your ideal macronutrient ratio of protein, carbs, and fats for your fitness goal.",
             "seoTitle": "[무료] Macro Calculator (Free) — Protein, Carb & Fat Ratio for Weight Loss & Muscle Gain",
-            "seoDescription": "Calculate your perfect daily macros for weight loss, muscle gain, or maintenance. Get exact grams of protein, carbs, and fat based on your TDEE and fitness goals. Free macro tracker.",
+            "seoDescription": "체중 감량, 근육 증가 또는 유지 관리를 위한 완벽한 일일 매크로를 계산하세요. TDEE 및 피트니스 목표에 따라 정확한 그램의 단백질, 탄수화물, 지방을 얻으세요. 무료 매크로 추적기.",
             "seoKeywords": "macro calculator, macronutrient calculator, protein calculator, how many grams of protein per day, IIFYM calculator, carb calculator, fat loss macros, muscle building macros, flexible dieting calculator",
-            "seoH1": "Macro Calculator: Find Your Perfect Protein, Carb & Fat Split",
+            "seoH1": "매크로 계산기: 완벽한 단백질, 탄수화물, 지방 분할 찾기",
             "faq": [
                 {
                     "question": "How many grams of protein do I need per day?",
@@ -2343,12 +2354,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is Ideal Body Weight?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Ideal body weight (IBW) is a clinical estimate of the most healthy weight for a given height and gender. It is used by healthcare professionals for drug dosing, anesthesia, ventilator settings, and general health benchmarking. However, it is not a one-size-fits-all answer.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The 4 Clinical Formulas Compared</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Hamwi (1964): The oldest and most commonly referenced. Used in clinical settings worldwide.</li><li class=\"text-gray-600\">Devine (1974): Originally developed for medication dosing. Widely used in pharmacology.</li><li class=\"text-gray-600\">Robinson (1983): A modified Devine formula, producing slightly different results for each gender.</li><li class=\"text-gray-600\">Miller (1983): Generally produces the lowest (lightest) estimate of the four formulas.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">IBW vs. BMI vs. Body Fat %</h3><p class=\"mb-4 leading-relaxed text-gray-700\">IBW formulas don't account for muscle mass or body composition. A muscular athlete may weigh more than their IBW while having an excellent health profile. Body fat percentage is a more accurate health indicator than weight alone.</p>"
         },
         "chatgpt-prompt-generator": {
-            "name": "ChatGPT Prompt Generator",
+            "name": "ChatGPT 프롬프트 생성기",
             "description": "Generate powerful, optimized prompts for ChatGPT, Claude, Gemini, and other AI models.",
             "seoTitle": "[무료] ChatGPT Prompt Generator (Free) — AI Prompt Templates for Writing, Coding & Marketing",
-            "seoDescription": "Generate perfect ChatGPT prompts instantly. Choose from 10+ expert templates for writing, coding, marketing, and learning. Customize and copy into any AI model in seconds.",
+            "seoDescription": "완벽한 ChatGPT 프롬프트를 즉시 생성하세요. 글쓰기, 코딩, 마케팅, 학습을 위한 10개 이상의 전문가 템플릿 중에서 선택하세요. 단 몇 초 만에 AI 모델을 맞춤화하고 복사할 수 있습니다.",
             "seoKeywords": "ChatGPT prompt generator, AI prompt generator, ChatGPT prompts, best ChatGPT prompts, prompt engineering tool, Claude prompts, Gemini prompts, AI writing prompts, free prompt generator",
-            "seoH1": "ChatGPT Prompt Generator: Create Perfect AI Prompts Instantly",
+            "seoH1": "ChatGPT 프롬프트 생성기: 완벽한 AI 프롬프트를 즉시 생성",
             "faq": [
                 {
                     "question": "What is prompt engineering?",
@@ -2374,12 +2385,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What Makes a Great AI Prompt?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A well-engineered prompt is the difference between a generic, mediocre AI response and a highly specific, actionable output that saves you hours of work. Prompt engineering is the skill of crafting instructions that guide AI models to produce exactly what you need.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The 5 Elements of a High-Quality Prompt</h3><ol><li class=\"text-gray-600\">Role: Tell the AI who to be (\"Act as a senior marketing strategist\").</li><li class=\"text-gray-600\">Task: Clearly define what you want (\"Write a product description\").</li><li class=\"text-gray-600\">Context: Provide relevant background (\"Target audience: busy parents, age 30-45\").</li><li class=\"text-gray-600\">Format: Specify the output structure (\"200 words, bullet points, professional tone\").</li><li class=\"text-gray-600\">Constraints: Set boundaries (\"Do NOT use jargon. Include a clear CTA\").</li></ol><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Works with All Major AI Models</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Our prompts are designed to work with ChatGPT (GPT-4, GPT-4o), Claude (Anthropic), Gemini (Google), and Llama. Simply select a template, customize the placeholders, and paste into your preferred AI.</p>"
         },
         "ai-content-detector": {
-            "name": "AI Content Detector",
+            "name": "AI 콘텐츠 탐지기",
             "description": "Detect if text was written by AI or a human using heuristic pattern analysis.",
             "seoTitle": "[무료] AI Content Detector (Free) — Check If Text Was Written by ChatGPT or AI",
-            "seoDescription": "Detect AI-generated content instantly. Paste any text to analyze for ChatGPT, Claude, or other AI writing signals. Get a percentage score and see which detection signals were found.",
+            "seoDescription": "AI가 생성한 콘텐츠를 즉시 감지합니다. ChatGPT, Claude 또는 기타 AI 쓰기 신호를 분석하려면 텍스트를 붙여넣으세요. 백분율 점수를 얻고 어떤 감지 신호가 발견되었는지 확인하세요.",
             "seoKeywords": "AI content detector, ChatGPT detector, AI text detector, detect AI writing, is this AI written, AI generated content checker, AI plagiarism detector, GPT detector free, AI humanizer detector",
-            "seoH1": "Free AI Content Detector: Is This Text Written by AI?",
+            "seoH1": "무료 AI 콘텐츠 탐지기: 이 텍스트는 AI가 쓴 것인가?",
             "faq": [
                 {
                     "question": "How accurate is AI content detection?",
@@ -2436,12 +2447,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Create Realistic Handwriting from Any Text</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Our <strong>Text to Handwriting</strong> Converter uses authentic Google handwriting fonts rendered on an HTML5 Canvas to produce realistic, downloadable handwriting images. It's perfect for creating personal-looking notes, artistic content, or school assignment aesthetics.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">5 Authentic Handwriting Styles</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Caveat: Casual, everyday handwriting — natural and approachable.</li><li class=\"text-gray-600\">Dancing Script: Elegant, flowing cursive — ideal for invitations and certificates.</li><li class=\"text-gray-600\">Patrick Hand: Clean print style — the most legible for notes.</li><li class=\"text-gray-600\">Shadows Into Light: Light, airy script — perfect for artistic content.</li><li class=\"text-gray-600\">Indie Flower: Fun, quirky style — very popular for social media content.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Privacy & Performance</h3><p class=\"mb-4 leading-relaxed text-gray-700\">All rendering is done entirely in your browser using the HTML5 Canvas API. No text is ever sent to a server. You can even use it offline once the fonts are cached.</p>"
         },
         "grammar-checker": {
-            "name": "Grammar Checker",
+            "name": "문법 검사기",
             "description": "Check and fix grammar, spelling, and punctuation errors in your text instantly.",
             "seoTitle": "[무료] Free Grammar Checker Online — Check & Fix Grammar, Spelling & Punctuation",
-            "seoDescription": "Fix grammar mistakes instantly with our free online grammar checker. Detect common errors including wrong contractions, misspellings, incorrect articles, and verb tense mistakes. No signup required.",
+            "seoDescription": "무료 온라인 문법 검사기로 문법 실수를 즉시 수정하세요. 잘못된 축약형, 철자 오류, 잘못된 관사, 동사 시제 오류 등 일반적인 오류를 감지합니다. 가입이 필요하지 않습니다.",
             "seoKeywords": "grammar checker, free grammar checker online, grammar check, grammar fixer, spell checker, punctuation checker, English grammar checker, writing grammar tool, check my grammar, grammar correction",
-            "seoH1": "Free Online Grammar Checker: Fix Errors Instantly",
+            "seoH1": "무료 온라인 문법 검사기: 즉시 오류 수정",
             "faq": [
                 {
                     "question": "Is this grammar checker free?",
@@ -2467,12 +2478,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Why Correct Grammar Matters</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Grammar errors undermine credibility, confuse readers, and can cost you professionally. Whether you're writing a cover letter, an email to a client, or a blog post, correct grammar builds trust and authority. Our free <strong>grammar checker</strong> helps you catch the most common mistakes before they reach your audience.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Grammar Mistakes We Catch</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Contraction Errors: 'dont' → 'don't', 'wont' → 'won't'</li><li class=\"text-gray-600\">Verb Agreement: 'should of' → 'should have'</li><li class=\"text-gray-600\">Homophone Confusion: 'their is' → 'there is', 'your welcome' → 'you're welcome'</li><li class=\"text-gray-600\">Common Misspellings: 'definately' → 'definitely', 'recieve' → 'receive'</li><li class=\"text-gray-600\">Punctuation: Missing commas after conjunctive adverbs</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">When to Use a <strong>Grammar Checker</strong></h3><p class=\"mb-4 leading-relaxed text-gray-700\">Before sending any important email, submitting writing, or publishing online content. Even professional writers use grammar tools as a final check — it's not a sign of weakness but of diligence.</p>"
         },
         "tiktok-hashtag-generator": {
-            "name": "TikTok Hashtag Generator",
+            "name": "TikTok 해시태그 생성기",
             "description": "Generate trending TikTok hashtags by category to maximize video reach and views.",
             "seoTitle": "[무료] TikTok Hashtag Generator (Free) — Trending Tags to Boost Your Video Views",
-            "seoDescription": "Get the best TikTok hashtags for your niche instantly. Choose from 8 categories including Entertainment, Music, Gaming, Fitness, and Fashion. Copy all tags with one click. Boost your FYP reach.",
+            "seoDescription": "귀하의 틈새시장에 가장 적합한 TikTok 해시태그를 즉시 얻으세요. 엔터테인먼트, 음악, 게임, 피트니스, 패션 등 8개 카테고리 중에서 선택하세요. 한 번의 클릭으로 모든 태그를 복사하세요. FYP 도달 범위를 확대하세요.",
             "seoKeywords": "TikTok hashtag generator, TikTok hashtags, best TikTok hashtags, trending TikTok tags, hashtags for TikTok views, TikTok FYP hashtags, viral TikTok hashtags, TikTok hashtag tool 2024",
-            "seoH1": "TikTok Hashtag Generator: Get Viral Hashtags for Your Videos",
+            "seoH1": "TikTok 해시태그 생성기: 동영상에 대한 바이러스성 해시태그를 받으세요",
             "faq": [
                 {
                     "question": "Do hashtags help TikTok videos go viral?",
@@ -2498,12 +2509,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How TikTok Hashtags Work in 2024</h2><p class=\"mb-4 leading-relaxed text-gray-700\">TikTok's algorithm uses hashtags to understand your content and distribute it to interested users. Unlike Instagram and Twitter, TikTok's primary discovery mechanism is the For You Page (FYP), which is driven by engagement signals — but hashtags help bootstrap distribution to the right audience.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Best TikTok Hashtag Strategy</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Use 3-5 hashtags, not 30: More isn't better. Overstuffed captions look spammy and dilute your signal.</li><li class=\"text-gray-600\">Mix tiers: 1-2 mega-tags (#fyp, millions of posts), 2-3 niche tags (thousands of posts), 1 trending tag.</li><li class=\"text-gray-600\">#fyp and #foryou work, but aren't magic: They're signals, not guarantees. Quality content is the primary driver.</li><li class=\"text-gray-600\">Niche hashtags win: A smaller, targeted hashtag (#veganfitness vs #fitness) puts you in front of more relevant viewers.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Category-Specific Strategy</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Each content niche has different high-performing tags. Entertainment content dominates with broad FYP tags, while niche communities like gaming and fitness respond better to specific community hashtags.</p>"
         },
         "bio-link-generator": {
-            "name": "Bio Link Generator",
+            "name": "바이오 링크 생성기",
             "description": "Create a free Linktree-style bio link page with your name, bio, and custom links.",
             "seoTitle": "[무료] Free Bio Link Generator — Create Your Linktree-Style Page Instantly",
-            "seoDescription": "Build a free bio link page like Linktree in seconds. Add your name, bio, and unlimited links. Get clean HTML code to host anywhere. No account needed — completely free bio link creator.",
+            "seoDescription": "몇 초 안에 Linktree와 같은 무료 바이오 링크 페이지를 구축하세요. 이름, 약력, 무제한 링크를 추가하세요. 어디에서나 호스팅할 수 있는 깨끗한 HTML 코드를 얻으세요. 계정이 필요하지 않습니다. 완전 무료 바이오 링크 생성기입니다.",
             "seoKeywords": "bio link generator, free linktree alternative, bio link page, link in bio, create linktree, social media bio link, instagram bio link, free link page creator, one link bio",
-            "seoH1": "Free Bio Link Generator: Create Your Linktree Alternative Page",
+            "seoH1": "무료 바이오 링크 생성기: Linktree 대체 페이지 만들기",
             "faq": [
                 {
                     "question": "Is this a free Linktree alternative?",
@@ -2529,12 +2540,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Bio Link Page?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A bio link page (popularized by Linktree) is a single URL you put in your Instagram, TikTok, or Twitter bio that contains multiple links to your website, shop, social profiles, and other destinations. Instead of being limited to one link in your bio, you have unlimited links on one elegant page.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Why You Need a Bio Link Page</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Instagram and TikTok limit you to 1 bio link. A bio link page turns that single link into unlimited destinations.</li><li class=\"text-gray-600\">Perfect for creators and businesses with multiple revenue streams, products, or platforms.</li><li class=\"text-gray-600\">Increases traffic and conversions by making it easy for followers to find everything in one place.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Host It Anywhere for Free</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Our generator creates clean, standalone HTML code you can host for free on GitHub Pages, Netlify, Vercel, or add to your existing website. No monthly subscription unlike Linktree Pro.</p>"
         },
         "youtube-money-calculator": {
-            "name": "YouTube Money Calculator",
+            "name": "YouTube 돈 계산기",
             "description": "Estimate your YouTube channel ad revenue based on views and RPM.",
             "seoTitle": "[무료] YouTube Money Calculator (Free) — Estimate Channel Revenue from Views",
-            "seoDescription": "Calculate YouTube ad revenue instantly. Enter your daily views and RPM to see estimated daily, monthly, and yearly earnings. Includes monetized view percentage. Free YouTube earnings estimator.",
+            "seoDescription": "YouTube 광고 수익을 즉시 계산해 보세요. 일일 조회수와 RPM을 입력하면 일일, 월간, 연간 예상 수익을 확인할 수 있습니다. 수익 창출 조회율이 포함됩니다. 무료 YouTube 수입 추정기.",
             "seoKeywords": "YouTube money calculator, YouTube earnings calculator, how much does YouTube pay, YouTube revenue calculator, YouTube RPM calculator, YouTube CPM calculator, YouTube income estimator, how to make money on YouTube",
-            "seoH1": "YouTube Money Calculator: Estimate Your Channel Ad Revenue",
+            "seoH1": "YouTube 수익 계산기: 채널 광고 수익 추정",
             "faq": [
                 {
                     "question": "How much does YouTube pay per 1,000 views?",
@@ -2560,12 +2571,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How YouTube Pays Creators</h2><p class=\"mb-4 leading-relaxed text-gray-700\">YouTube pays creators through AdSense based on the number of monetized views and the RPM (Revenue Per Mille) — the actual revenue earned per 1,000 views after YouTube's 45% cut. RPM is the real-world metric, while CPM is what advertisers pay before the revenue split.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Why RPM Varies So Much</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Niche: Finance, legal, and B2B videos command $10-30+ RPM. Entertainment and gaming typically see $2-5 RPM.</li><li class=\"text-gray-600\">Geography: US, UK, Canada, and Australia viewers are worth 5-10x more than viewers in developing countries.</li><li class=\"text-gray-600\">Seasonality: Q4 (October-December) has the highest ad spending — RPM can be 2-3x higher than Q1.</li><li class=\"text-gray-600\">Video length: Videos over 8 minutes can include mid-roll ads, significantly increasing revenue per view.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Revenue Beyond AdSense</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Smart creators diversify their income: YouTube memberships, Super Chats, merchandise, sponsorships, and affiliate marketing often make up the majority of a successful channel's income.</p>"
         },
         "crontab-generator": {
-            "name": "Crontab Generator",
+            "name": "크론탭 생성기",
             "description": "Generate and validate Linux cron expressions with human-readable descriptions.",
             "seoTitle": "[무료] Crontab Generator (Free) — Build & Validate Cron Expressions Online",
-            "seoDescription": "Generate and validate Linux crontab expressions instantly. Choose from common presets or build a custom cron schedule. Instantly see a human-readable description of your cron job timing.",
+            "seoDescription": "Linux crontab 표현식을 즉시 생성하고 검증하세요. 일반적인 사전 설정 중에서 선택하거나 사용자 정의 크론 일정을 구축하세요. 크론 작업 타이밍에 대한 사람이 읽을 수 있는 설명을 즉시 확인하세요.",
             "seoKeywords": "crontab generator, cron expression generator, cron job generator, cron schedule builder, linux cron syntax, crontab examples, cron expression validator, cron to english, cron expression explainer",
-            "seoH1": "Crontab Generator: Build Cron Expressions & Understand Their Timing",
+            "seoH1": "Crontab 생성기: Cron 표현식 작성 및 타이밍 이해",
             "faq": [
                 {
                     "question": "How do I edit my crontab on Linux?",
@@ -2589,6 +2600,62 @@
                 }
             ],
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Cron Job?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A cron job is a scheduled task in Unix/Linux systems that runs automatically at specified intervals. Defined in the <em>crontab</em> (cron table) file, they're used for automated backups, report generation, database maintenance, API calls, and server monitoring.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Cron Expression Format</h3><p class=\"mb-4 leading-relaxed text-gray-700\">A cron expression has 5 fields: <code>MINUTE HOUR DAY MONTH WEEKDAY</code>. Each field accepts specific values and wildcards:</p><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\"><code>*</code> — any value (every minute, every hour, etc.)</li><li class=\"text-gray-600\"><code>*/n</code> — every n units (*/5 = every 5 minutes)</li><li class=\"text-gray-600\"><code>a,b</code> — multiple values (1,15 = 1st and 15th)</li><li class=\"text-gray-600\"><code>a-b</code> — range (1-5 = Monday through Friday)</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Cron Job Use Cases</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">0 0 * * * — Daily backup at midnight</li><li class=\"text-gray-600\">*/5 * * * * — API health check every 5 minutes</li><li class=\"text-gray-600\">0 9 * * 1-5 — Daily report email every weekday at 9am</li><li class=\"text-gray-600\">0 0 1 * * — Monthly invoice generation</li></ul>"
+        },
+        "double-underline-text": {
+            "name": "이중 밑줄 텍스트",
+            "description": "소셜 미디어용 이중 밑줄 텍스트를 생성합니다.",
+            "seoTitle": "이중 밑줄 텍스트 무료 온라인 - 이중 밑줄 텍스트 사용",
+            "seoDescription": "온라인에서 이중 밑줄 텍스트를 무료로 사용하세요. 빠르고 안전한 처리. 로그인이 필요 없으며 빠르고 안전합니다. 일상적인 작업에 적합합니다.",
+            "seoH1": "이중 밑줄 텍스트 없음: 이중 밑줄 텍스트 사용"
+        },
+        "cursive-text": {
+            "name": "필기체 텍스트 생성기",
+            "description": "소셜 미디어용 필기체/스크립트 텍스트를 생성합니다.",
+            "seoTitle": "필기체 텍스트 생성기 무료 온라인 - 필기체 텍스트 생성기 사용",
+            "seoDescription": "필기체 텍스트 생성기를 온라인에서 무료로 사용하세요. 빠르고 안전한 처리. 로그인이 필요 없으며 빠르고 안전합니다. 일상적인 작업에 적합합니다.",
+            "seoH1": "필기체 텍스트 생성기 무료: 필기체 텍스트 생성기 사용"
+        },
+        "currency-converter": {
+            "name": "환율 계산기",
+            "description": "실시간 환율로 다양한 통화를 변환하세요.",
+            "seoTitle": "환율 계산기 무료 온라인 - 실시간 환율",
+            "seoDescription": "온라인에서 무료로 통화를 변환하세요. 150개 이상의 통화에 대한 실시간 환율. 로그인이 필요 없고 빠르고 정확합니다. 여행과 비즈니스에 적합합니다.",
+            "seoH1": "무료 환율 계산기: 실시간 환율"
+        },
+        "401k-retirement-calculator": {
+            "name": "401k 퇴직 계산기",
+            "description": "고용주 매칭을 통해 귀하의 401k 성장을 추정하여 은퇴 계획을 세우십시오.",
+            "seoTitle": "401k 퇴직 계산기 - #1 무료 미국 웰스 플래너",
+            "seoDescription": "은퇴 시 401k 잔액을 계산해 보세요. 고용주 매칭, 급여 인상, 복합 성장이 포함됩니다. 오늘 미국 은퇴 저축을 계획해보세요.",
+            "seoH1": "401k 퇴직 계산기: 미래의 부를 계획하세요"
+        },
+        "image-format-converter": {
+            "name": "이미지 형식 변환기",
+            "description": "온라인에서 JPG, PNG, WebP, GIF, BMP 형식 간에 이미지를 무료로 변환하세요."
+        },
+        "merge-pdf": {
+            "name": "PDF 병합",
+            "description": "여러 PDF 파일을 하나의 문서로 결합합니다."
+        },
+        "split-pdf": {
+            "name": "PDF 분할",
+            "description": "PDF 파일을 여러 개의 개별 문서로 분할합니다."
+        },
+        "gpa-calculator": {
+            "name": "평점 계산기",
+            "description": "성적과 학점을 기준으로 대학 또는 고등학교 GPA를 계산합니다."
+        },
+        "salary-calculator": {
+            "name": "시간당 계산기에 대한 급여",
+            "description": "연봉을 시급, 주급, 월급으로 변환하세요."
+        },
+        "tip-calculator": {
+            "name": "팁 계산기",
+            "description": "빠르게 팁을 계산하고 친구들에게 청구서를 나눠보세요."
+        },
+        "json-to-typescript": {
+            "name": "JSON을 TypeScript로",
+            "description": "JSON 객체를 TypeScript 인터페이스로 자동 변환합니다."
         }
     },
     "Common": {

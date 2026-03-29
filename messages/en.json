@@ -9,7 +9,9 @@
     },
     "HomePage": {
         "title": "Aynzo | The All-in-One Professional Online Tools Suite",
-        "description": "Empower your workflow with 100+ professional, ad-free online tools. Text editors, image optimizers, PDF converters, and developer utilities—all in one place.",
+        "description": "Professional suite of free online tools for developers, designers, and creators. Image compression, PDF conversion, text formatting, and developer utilities. All processed 100% locally in your browser for total privacy.",
+        "metaDescription": "Professional suite of free online tools for developers, designers, and creators. Image compression, PDF conversion, text formatting, and developer utilities. All processed 100% locally in your browser for total privacy.",
+        "metaKeywords": "aynzo tools, free online tools, image compressor, word counter, pdf to word, json formatter, privacy first tools, developer utilities, online calculator",
         "noAds": "Fast, Secure, and 100% Ad-Free.",
         "toolsCount": "{count} Tools",
         "capabilities": {
@@ -66,7 +68,13 @@
         "mobileMenu": "Menu",
         "home": "Home",
         "tools": "Tools",
-        "blog": "Blog"
+        "blog": "Blog",
+        "heroSearchPlaceholder": "Search over 100+ tools ie. 'Image', 'PDF' or 'JSON'",
+        "foundResults": "Found {count} results",
+        "browseAll": "Browse All Tools",
+        "noToolsFound": "No tools found for \"{query}\"",
+        "tryKeywords": "Try searching for keywords like 'PDF', 'Image', or 'JSON'",
+        "clearSearch": "Clear Search"
     },
     "Blog": {
         "title": "Aynzo Learning Hub",
@@ -77,6 +85,8 @@
         "noPosts": "More articles arriving soon!",
         "backToBlog": "Back to Blog",
         "aboutAynzo": "About Aynzo Tools",
+        "aboutDescription": "Aynzo provides 100+ high-quality online tools to help everyone from developers to writers streamline their digital workflow with privacy first.",
+        "exploreTools": "Explore Tools",
         "author": "Aynzo Editorial Team"
     },
     "Categories": {
@@ -133,7 +143,7 @@
         },
         "image-resizer": {
             "name": "Image Resizer",
-            "description": "Resize images to exact pixel dimensions or percentage.",
+            "description": "Resize your images to exact pixel dimensions or percentage.",
             "seoTitle": "Free Image Resizer Online - Resize JPG, PNG, WebP images No Signup",
             "seoDescription": "Resize JPG, PNG, WebP images online free. Change dimensions to exact pixels or percentage. No login, fast, secure. Perfect for social media and web.",
             "seoKeywords": "resize image online free, change image dimensions online, resize photo for passport, image resizer 20kb, resize image to 100kb",
@@ -141,7 +151,7 @@
         },
         "jpg-to-png": {
             "name": "JPG to PNG",
-            "description": "Convert JPG images to PNG format instantly for free. High quality.",
+            "description": "Convert JPG images to PNG format with transparent background support.",
             "seoTitle": "Free JPG to PNG Online - Convert JPG to PNG No Signup",
             "seoDescription": "Convert JPG to PNG online free. High quality conversion with transparency support. No login, fast, secure. Perfect for web graphics and logos.",
             "seoKeywords": "jpg to png converter free, convert jpg to png online, jpg to png high quality, free image format converter, jpg to png transparent background",
@@ -149,7 +159,7 @@
         },
         "png-to-jpg": {
             "name": "PNG to JPG",
-            "description": "Convert PNG images to JPG format online and reduce file size.",
+            "description": "Convert PNG images to JPG format instantly.",
             "seoTitle": "Free PNG to JPG Online - Convert PNG to JPG No Signup",
             "seoDescription": "Convert PNG to JPG online free. Reduce file size with high quality. No login, fast, secure. Perfect for photos and web optimization.",
             "seoKeywords": "png to jpg converter free, convert png to jpg online, png to jpg high quality, free image format converter, png to jpg reduce size",
@@ -165,7 +175,7 @@
         },
         "image-to-base64": {
             "name": "Image to Base64",
-            "description": "Convert images to Base64 strings for embedding in code.",
+            "description": "Convert images to Base64 strings for embedding.",
             "seoTitle": "Free Image to Base64 Online - Use Image to Base64 No Signup",
             "seoDescription": "Use Image to Base64 online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "image-to-base64, free image to base64, image to base64 tool",
@@ -205,7 +215,7 @@
         },
         "image-brightness": {
             "name": "Image Brightness",
-            "description": "Adjust brightness of your images online.",
+            "description": "Adjust the brightness of your photos online.",
             "seoTitle": "Free Image Brightness Online - Use Image Brightness No Signup",
             "seoDescription": "Use Image Brightness online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "image-brightness, free image brightness, image brightness tool",
@@ -213,7 +223,7 @@
         },
         "image-contrast": {
             "name": "Image Contrast",
-            "description": "Adjust contrast of your images online.",
+            "description": "Adjust the contrast of your photos online.",
             "seoTitle": "Free Image Contrast Online - Use Image Contrast No Signup",
             "seoDescription": "Use Image Contrast online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "image-contrast, free image contrast, image contrast tool",
@@ -221,7 +231,7 @@
         },
         "grayscale-image": {
             "name": "Grayscale Image",
-            "description": "Convert color images to black and white.",
+            "description": "Convert color photos to black and white.",
             "seoTitle": "Free Grayscale Image Online - Use Grayscale Image No Signup",
             "seoDescription": "Use Grayscale Image online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "grayscale-image, free grayscale image, grayscale image tool",
@@ -236,8 +246,8 @@
             "seoH1": "Blur Image Free Online: Use Blur Image"
         },
         "sepia-converter": {
-            "name": "Sepia Filter",
-            "description": "Apply vintage sepia effect to your photos.",
+            "name": "Sepia Converter",
+            "description": "Apply a vintage sepia filter to your photos.",
             "seoTitle": "Free Sepia Converter Online - Use Sepia Converter No Signup",
             "seoDescription": "Use Sepia Converter online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "sepia-converter, free sepia converter, sepia converter tool",
@@ -245,7 +255,7 @@
         },
         "invert-image": {
             "name": "Invert Colors",
-            "description": "Invert colors of your image (negative effect).",
+            "description": "Invert the colors of your image (negative effect).",
             "seoTitle": "Free Invert Colors Online - Use Invert Colors No Signup",
             "seoDescription": "Use Invert Colors online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "invert-image, free invert colors, invert colors tool",
@@ -253,7 +263,7 @@
         },
         "saturate-image": {
             "name": "Saturate Image",
-            "description": "Adjust color saturation of your images.",
+            "description": "Adjust the color saturation of your photos.",
             "seoTitle": "Free Saturate Image Online - Use Saturate Image No Signup",
             "seoDescription": "Use Saturate Image online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "saturate-image, free saturate image, saturate image tool",
@@ -261,7 +271,7 @@
         },
         "hue-rotate-image": {
             "name": "Hue Rotate",
-            "description": "Change hue of images for creative effects.",
+            "description": "Shift the hue of your images for creative effects.",
             "seoTitle": "Free Hue Rotate Online - Use Hue Rotate No Signup",
             "seoDescription": "Use Hue Rotate online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "hue-rotate-image, free hue rotate, hue rotate tool",
@@ -269,7 +279,7 @@
         },
         "image-opacity": {
             "name": "Image Opacity",
-            "description": "Adjust transparency/opacity of images.",
+            "description": "Change the transparency/opacity of your images.",
             "seoTitle": "Free Image Opacity Online - Use Image Opacity No Signup",
             "seoDescription": "Use Image Opacity online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "image-opacity, free image opacity, image opacity tool",
@@ -285,7 +295,7 @@
         },
         "image-border": {
             "name": "Image Border",
-            "description": "Add colored borders to your images.",
+            "description": "Add colorful borders to your images.",
             "seoTitle": "Free Image Border Online - Use Image Border No Signup",
             "seoDescription": "Use Image Border online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "image-border, free image border, image border tool",
@@ -301,7 +311,7 @@
         },
         "pixelate-image": {
             "name": "Pixelate Image",
-            "description": "Pixelate images to hide details or create art.",
+            "description": "Pixelate your images to hide details or create art.",
             "seoTitle": "Free Pixelate Image Online - Use Pixelate Image No Signup",
             "seoDescription": "Use Pixelate Image online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "pixelate-image, free pixelate image, pixelate image tool",
@@ -309,7 +319,7 @@
         },
         "svg-to-png": {
             "name": "SVG to PNG",
-            "description": "Convert SVG vectors to PNG images.",
+            "description": "Convert SVG vector files to PNG images.",
             "seoTitle": "Free SVG to PNG Online - Use SVG to PNG No Signup",
             "seoDescription": "Use SVG to PNG online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "svg-to-png, free svg to png, svg to png tool",
@@ -317,7 +327,7 @@
         },
         "png-to-svg": {
             "name": "PNG to SVG",
-            "description": "Convert PNG images to SVG vectors.",
+            "description": "Convert PNG raster images to SVG vectors.",
             "seoTitle": "Free PNG to SVG Online - Use PNG to SVG No Signup",
             "seoDescription": "Use PNG to SVG online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "png-to-svg, free png to svg, png to svg tool",
@@ -325,7 +335,7 @@
         },
         "webp-to-jpg": {
             "name": "WebP to JPG",
-            "description": "Convert WebP to JPG format.",
+            "description": "Convert WebP images to standard JPG format.",
             "seoTitle": "Free WebP to JPG Online - Use WebP to JPG No Signup",
             "seoDescription": "Use WebP to JPG online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "webp-to-jpg, free webp to jpg, webp to jpg tool",
@@ -333,7 +343,7 @@
         },
         "webp-to-png": {
             "name": "WebP to PNG",
-            "description": "Convert WebP to PNG with transparency preservation.",
+            "description": "Convert WebP images to transparent PNG format.",
             "seoTitle": "Free WebP to PNG Online - Use WebP to PNG No Signup",
             "seoDescription": "Use WebP to PNG online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "webp-to-png, free webp to png, webp to png tool",
@@ -341,7 +351,7 @@
         },
         "jpg-to-webp": {
             "name": "JPG to WebP",
-            "description": "Convert JPG to modern WebP format.",
+            "description": "Convert JPG images to modern WebP format.",
             "seoTitle": "Free JPG to WebP Online - Use JPG to WebP No Signup",
             "seoDescription": "Use JPG to WebP online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "jpg-to-webp, free jpg to webp, jpg to webp tool",
@@ -349,7 +359,7 @@
         },
         "png-to-webp": {
             "name": "PNG to WebP",
-            "description": "Convert PNG to WebP format.",
+            "description": "Convert PNG images to modern WebP format.",
             "seoTitle": "Free PNG to WebP Online - Use PNG to WebP No Signup",
             "seoDescription": "Use PNG to WebP online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "png-to-webp, free png to webp, png to webp tool",
@@ -357,7 +367,7 @@
         },
         "base64-to-image": {
             "name": "Base64 to Image",
-            "description": "Convert Base64 strings to image files.",
+            "description": "Convert Base64 strings back to image files.",
             "seoTitle": "Free Base64 to Image Online - Use Base64 to Image No Signup",
             "seoDescription": "Use Base64 to Image online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "base64-to-image, free base64 to image, base64 to image tool",
@@ -365,7 +375,7 @@
         },
         "pdf-to-word": {
             "name": "PDF to Word",
-            "description": "Convert PDF documents to editable Word files with OCR support.",
+            "description": "Convert PDF documents to editable Word (DOCX) files.",
             "seoTitle": "PDF to Word Free - Convert Online No Signup",
             "seoDescription": "Convert PDF to Word DOCX online free. 100% editable documents, high accuracy. No login, fast, secure. Perfect for editing PDFs instantly.",
             "seoKeywords": "pdf to word converter free, convert pdf to word online, pdf to word editable free, online pdf to word converter, pdf to docx free",
@@ -381,7 +391,7 @@
         },
         "word-counter": {
             "name": "Word Counter",
-            "description": "Calculate words, characters, and reading time in real-time.",
+            "description": "Count words, characters, sentences, and paragraphs.",
             "seoTitle": "Word Counter Online (100% Free) - Count Words & Characters",
             "seoDescription": "Best free word counter online. Instantly check word count, characters (with & without spaces), sentences, and reading time. Perfect for essays and SEO. No login, fast & secure.",
             "seoKeywords": "word counter, word count, character counter, word count online, word counter free, word count checker, essay word counter, character count checker, online word count tool",
@@ -397,7 +407,7 @@
         },
         "text-case-converter": {
             "name": "Text Case Converter",
-            "description": "Convert text to uppercase, lowercase, title case, etc.",
+            "description": "Convert text to UPPERCASE, lowercase, Title Case, etc.",
             "seoTitle": "Text Case Converter Free Online - Convert text case",
             "seoDescription": "Convert text case online free. Uppercase, lowercase, title case, sentence case. No login, fast, secure. Perfect for formatting text instantly.",
             "seoKeywords": "text case converter free, uppercase to lowercase, title case converter, sentence case converter, text transformer online",
@@ -405,7 +415,7 @@
         },
         "remove-line-breaks": {
             "name": "Remove Line Breaks",
-            "description": "Remove all line breaks from text.",
+            "description": "Remove all line breaks and newlines from your text.",
             "seoTitle": "Remove Line Breaks Free Online - Use Remove Line Breaks",
             "seoDescription": "Use Remove Line Breaks online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "remove-line-breaks, free remove line breaks, remove line breaks tool",
@@ -413,7 +423,7 @@
         },
         "italic-text": {
             "name": "Italic Text Generator",
-            "description": "Generate fancy italic text for Instagram bio and social media.",
+            "description": "Generate italic text using unicode characters.",
             "seoTitle": "Italic Text Generator | Convert Text to Fancy Cursive Italic",
             "seoDescription": "Convert normal text to fancy italic and cursive fonts for Instagram, Facebook, and Twitter. Generate elegant slanted text instantly.",
             "seoKeywords": "italic text generator, fancy italic font, cursive text generator, slanted text online, italicize text, 𝘪𝘵𝘢𝘭𝘪𝘤 𝘵𝘦𝘹𝘵",
@@ -421,7 +431,7 @@
         },
         "strikethrough-text": {
             "name": "Strikethrough Text",
-            "description": "Generate strikethrough text for social media. Cross out words instantly.",
+            "description": "Generate strikethrough text for social media.",
             "seoTitle": "Strikethrough Text Free Online - Use Strikethrough Text",
             "seoDescription": "Use Strikethrough Text online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "strikethrough-text, free strikethrough text, strikethrough text tool",
@@ -429,7 +439,7 @@
         },
         "underline-text": {
             "name": "Underline Text",
-            "description": "Generate underlined text for Instagram and Facebook bios.",
+            "description": "Generate underlined text for social media.",
             "seoTitle": "Underline Text Free Online - Use Underline Text",
             "seoDescription": "Use Underline Text online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "underline-text, free underline text, underline text tool",
@@ -461,7 +471,7 @@
         },
         "small-text": {
             "name": "Small Text Generator",
-            "description": "Generate tiny subscript/superscript text.",
+            "description": "Generate tiny text (subscript/superscript).",
             "seoTitle": "Small Text Generator | Create Tiny Superscript & Subscript Font",
             "seoDescription": "Generate tiny text (subscript and superscript) for social media bios and usernames. Create aesthetic tiny fonts instantly.",
             "seoKeywords": "small text generator, tiny text, subscript generator, superscript generator, tiny font, ˢᵐᵃˡˡ ᵗᵉˣᵗ, ₛₘₐₗₗ ₜₑₓₜ",
@@ -469,55 +479,55 @@
         },
         "upside-down-text": {
             "name": "Upside Down Text",
-            "description": "Flip your text upside down.",
+            "description": "Flip your text upside down instantly.",
             "seoTitle": "Upside Down Text Generator | Flip & Rotate Text 180° Online",
             "seoDescription": "Flip your text upside down instantly. Create 180-degree rotated text for social media. Fast, secure, and 100% private.",
             "seoKeywords": "upside down text generator, flip text online, rotate text 180, reverse text, upside down font, dᴉlɟ ʇxǝʇ",
             "seoH1": "Upside Down Text Generator: Flip Your Text 180°"
         },
         "mirror-text": {
-            "name": "Mirror Text",
-            "description": "Create mirrored text.",
+            "name": "Mirror Text Generator",
+            "description": "Create mirrored text reflection.",
             "seoTitle": "Mirror Text Generator | Create Reverse Reflected Text Online",
             "seoDescription": "Generate mirrored text reflection instantly. Flip text horizontally for Instagram, TikTok, and creative designs. Free and secure.",
             "seoKeywords": "mirror text generator, mirror writing, reverse text reflection, backwards text generator, ɿoɿɿiM ƚxɘT",
             "seoH1": "Mirror Text Generator: Reflect Your Text Horizontally"
         },
         "duplicate-line-remover": {
-            "name": "Remove Duplicate Lines",
-            "description": "Remove duplicate lines from text.",
+            "name": "Duplicate Line Remover",
+            "description": "Remove duplicate lines from your text or list.",
             "seoTitle": "Duplicate Line Remover Free Online - Use Duplicate Line Remover",
             "seoDescription": "Use Duplicate Line Remover online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "duplicate-line-remover, free duplicate line remover, duplicate line remover tool",
             "seoH1": "Duplicate Line Remover Free: Use Duplicate Line Remover"
         },
         "sort-alphabetically": {
-            "name": "Sort Lines Alphabetically",
-            "description": "Sort text lines alphabetically.",
+            "name": "Sort Alphabetically",
+            "description": "Sort lists and text lines alphabetically.",
             "seoTitle": "Sort Alphabetically Free Online - Use Sort Alphabetically",
             "seoDescription": "Use Sort Alphabetically online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "sort-alphabetically, free sort alphabetically, sort alphabetically tool",
             "seoH1": "Sort Alphabetically Free: Use Sort Alphabetically"
         },
         "whitespace-remover": {
-            "name": "Remove Extra Spaces",
-            "description": "Remove extra whitespace and tabs.",
+            "name": "Whitespace Remover",
+            "description": "Trim extra whitespace, tabs, and line breaks.",
             "seoTitle": "Whitespace Remover Free Online - Use Whitespace Remover",
             "seoDescription": "Use Whitespace Remover online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "whitespace-remover, free whitespace remover, whitespace remover tool",
             "seoH1": "Whitespace Remover Free: Use Whitespace Remover"
         },
         "word-frequency": {
-            "name": "Word Frequency Counter",
-            "description": "Analyze most frequent words in text.",
+            "name": "Word Frequency",
+            "description": "Analyze word usage frequency in your text.",
             "seoTitle": "Word Frequency Free Online - Use Word Frequency",
             "seoDescription": "Use Word Frequency online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "word-frequency, free word frequency, word frequency tool",
             "seoH1": "Word Frequency Free: Use Word Frequency"
         },
         "find-replace": {
-            "name": "Advanced Find & Replace",
-            "description": "Find and replace with regex support.",
+            "name": "Find & Replace",
+            "description": "Advanced find and replace tool with Regex.",
             "seoTitle": "Find & Replace Free Online - Use Find & Replace",
             "seoDescription": "Use Find & Replace online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "find-replace, free find & replace, find & replace tool",
@@ -525,15 +535,15 @@
         },
         "json-formatter": {
             "name": "JSON Formatter",
-            "description": "Format, beautify, and validate JSON with client-side privacy.",
+            "description": "Beautify and validate your JSON data.",
             "seoTitle": "JSON Formatter Free - Format, beautify, validate JSON Code",
             "seoDescription": "Format, beautify, validate JSON code online free. Minify JSON instantly. No login, fast, secure. Perfect for developers.",
             "seoKeywords": "json formatter free, beautify json online, format json code, validate json, json beautifier tool",
             "seoH1": "JSON Formatter Free: Format, beautify, validate JSON"
         },
         "url-encoder-decoder": {
-            "name": "URL Encoder/Decoder",
-            "description": "Encode or decode URLs.",
+            "name": "URL Encoder / Decoder",
+            "description": "Encode or decode URLs safely.",
             "seoTitle": "URL Encoder / Decoder Free - Use URL Encoder / Decoder Code",
             "seoDescription": "Use URL Encoder / Decoder code online free. Fast and secure processing. No login, fast, secure. Perfect for developers.",
             "seoKeywords": "url-encoder-decoder, free url encoder / decoder, url encoder / decoder tool",
@@ -556,7 +566,7 @@
             "seoH1": "CSS Formatter Free: Format and beautify CSS code"
         },
         "javascript-formatter": {
-            "name": "JavaScript Formatter",
+            "name": "JS Formatter",
             "description": "Format and beautify JavaScript code.",
             "seoTitle": "JS Formatter Free - Format and beautify JavaScript code Code",
             "seoDescription": "Format and beautify JavaScript code code online free. Fix indentation instantly. No login, fast, secure. Perfect for developers.",
@@ -613,15 +623,15 @@
         },
         "code-minifier": {
             "name": "Code Minifier",
-            "description": "Minify HTML, CSS, and JavaScript code.",
+            "description": "Minify HTML, CSS, and JS code.",
             "seoTitle": "Code Minifier Free - Use Code Minifier Code",
             "seoDescription": "Use Code Minifier code online free. Fast and secure processing. No login, fast, secure. Perfect for developers.",
             "seoKeywords": "code-minifier, free code minifier, code minifier tool",
             "seoH1": "Code Minifier Free: Use Code Minifier"
         },
         "diff-checker": {
-            "name": "Text Diff Checker",
-            "description": "Compare two texts and highlight differences.",
+            "name": "Diff Checker",
+            "description": "Compare two texts to find differences.",
             "seoTitle": "Diff Checker Free - Use Diff Checker Code",
             "seoDescription": "Use Diff Checker code online free. Fast and secure processing. No login, fast, secure. Perfect for developers.",
             "seoKeywords": "diff-checker, free diff checker, diff checker tool",
@@ -629,7 +639,7 @@
         },
         "unit-converter": {
             "name": "Unit Converter",
-            "description": "Convert between different units of measurement.",
+            "description": "Convert length, weight, temperature, and more.",
             "seoTitle": "Unit Converter Free - Convert Online No Signup",
             "seoDescription": "Convert length, weight, temperature, volume online free. All units supported. No login, fast, secure. Perfect for daily conversions.",
             "seoKeywords": "unit converter free, length converter, weight converter, temperature converter, measurement converter online, metric to imperial",
@@ -637,7 +647,7 @@
         },
         "color-converter": {
             "name": "Color Converter",
-            "description": "Convert between HEX, RGB, HSL colors.",
+            "description": "Convert HEX, RGB, HSL colors.",
             "seoTitle": "Color Converter Free - Convert Online No Signup",
             "seoDescription": "Convert colors between HEX, RGB, HSL online free. Color picker included. No login, fast, secure. Perfect for designers.",
             "seoKeywords": "color converter free, hex to rgb converter, rgb to hex converter, hex to hsl converter, color picker online, color code converter",
@@ -645,7 +655,7 @@
         },
         "binary-to-text": {
             "name": "Binary to Text",
-            "description": "Convert binary code to text.",
+            "description": "Translate binary code to text.",
             "seoTitle": "Binary to Text Free - Convert Online No Signup",
             "seoDescription": "Use Binary to Text online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "binary-to-text, free binary to text, binary to text tool",
@@ -653,22 +663,22 @@
         },
         "hex-to-decimal": {
             "name": "Hex to Decimal",
-            "description": "Convert hexadecimal to decimal.",
+            "description": "Convert Hexadecimal to Decimal.",
             "seoTitle": "Hex to Decimal Free - Convert Online No Signup",
             "seoDescription": "Use Hex to Decimal online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "hex-to-decimal, free hex to decimal, hex to decimal tool",
             "seoH1": "Hex to Decimal Free: Use Hex to Decimal"
         },
         "roman-numeral": {
-            "name": "Roman Numeral Converter",
-            "description": "Convert between Arabic and Roman numerals.",
+            "name": "Roman Numeral",
+            "description": "Convert numbers to Roman numerals.",
             "seoTitle": "Roman Numeral Free - Convert Online No Signup",
             "seoDescription": "Use Roman Numeral online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "roman-numeral, free roman numeral, roman numeral tool",
             "seoH1": "Roman Numeral Free: Use Roman Numeral"
         },
         "random-number": {
-            "name": "Random Number Generator",
+            "name": "Random Number",
             "description": "Generate random numbers within a range.",
             "seoTitle": "Random Number Free - Generate random number",
             "seoDescription": "Generate random number online free. Custom range support. No login, fast, secure. Perfect for lotteries and games.",
@@ -676,7 +686,7 @@
             "seoH1": "Random Number Free: Generate random numbers"
         },
         "random-string": {
-            "name": "Random String Generator",
+            "name": "Random String",
             "description": "Generate random strings and passwords.",
             "seoTitle": "Random String Free - Generate random string",
             "seoDescription": "Generate random string online free. Customizable length and characters. No login, fast, secure. Perfect for passwords.",
@@ -684,15 +694,15 @@
             "seoH1": "Random String Free: Generate random strings"
         },
         "random-color": {
-            "name": "Random Color Generator",
-            "description": "Generate random colors with HEX codes.",
+            "name": "Random Color",
+            "description": "Generate random colors.",
             "seoTitle": "Random Color Free - Generate random color",
             "seoDescription": "Generate random color online free. Get HEX, RGB, HSL codes. No login, fast, secure. Perfect for design inspiration.",
             "seoKeywords": "random color generator free, generate random colors online, color palette generator, random hex color, design inspiration, color picker",
             "seoH1": "Random Color Free: Generate random colors"
         },
         "random-date": {
-            "name": "Random Date Generator",
+            "name": "Random Date",
             "description": "Generate random dates.",
             "seoTitle": "Random Date Free - Generate random date",
             "seoDescription": "Generate random date online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
@@ -700,7 +710,7 @@
             "seoH1": "Random Date Free: Use Random Date"
         },
         "random-ip": {
-            "name": "Random IP Generator",
+            "name": "Random IP",
             "description": "Generate random IP addresses.",
             "seoTitle": "Random IP Free - Generate random ip",
             "seoDescription": "Generate random ip online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
@@ -709,7 +719,7 @@
         },
         "password-generator": {
             "name": "Password Generator",
-            "description": "Generate high-entropy, hack-proof passwords directly in your browser.",
+            "description": "Generate strong, secure passwords.",
             "seoTitle": "Password Generator Free - Generate strong secure passwords",
             "seoDescription": "Generate strong secure passwords online free. Customizable length and characters. No login, 100% private. Perfect for secure accounts.",
             "seoKeywords": "password generator free, strong password generator, random password maker, secure password tool, hack proof passwords, offline password generator",
@@ -724,32 +734,32 @@
             "seoH1": "Bcrypt Generator Free: Use Bcrypt Generator"
         },
         "base64-encoder": {
-            "name": "Base64 Encoder / Decoder",
-            "description": "Convert text, images, and files to Base64 (Data URI) securely.",
+            "name": "Base64 Encoder",
+            "description": "Encode/Decode Base64.",
             "seoTitle": "Base64 Encoder Free - Generate base64 encoder",
             "seoDescription": "Generate base64 encoder online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "base64-encoder, free base64 encoder, base64 encoder tool",
             "seoH1": "Base64 Encoder Free: Use Base64 Encoder"
         },
         "md5-hash": {
-            "name": "MD5 Hash Generator",
-            "description": "Generate MD5 hashes.",
+            "name": "MD5 Generator",
+            "description": "Generate MD5 hash.",
             "seoTitle": "MD5 Generator Free - Generate md5 generator",
             "seoDescription": "Generate md5 generator online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "md5-hash, free md5 generator, md5 generator tool",
             "seoH1": "MD5 Generator Free: Use MD5 Generator"
         },
         "sha256-hash": {
-            "name": "SHA-256 Hash Generator",
-            "description": "Generate SHA-256 hashes.",
+            "name": "SHA-256",
+            "description": "Generate SHA-256 hash.",
             "seoTitle": "SHA-256 Free - Generate sha-256",
             "seoDescription": "Generate sha-256 online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "sha256-hash, free sha-256, sha-256 tool",
             "seoH1": "SHA-256 Free: Use SHA-256"
         },
         "sha512-hash": {
-            "name": "SHA-512 Hash Generator",
-            "description": "Generate SHA-512 hashes.",
+            "name": "SHA-512",
+            "description": "Generate SHA-512 hash.",
             "seoTitle": "SHA-512 Free - Generate sha-512",
             "seoDescription": "Generate sha-512 online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "sha512-hash, free sha-512, sha-512 tool",
@@ -757,22 +767,22 @@
         },
         "uuid-generator": {
             "name": "UUID Generator",
-            "description": "Generate UUID v4 identifiers.",
+            "description": "Generate UUID v4.",
             "seoTitle": "UUID Generator Free - Generate uuid generator",
             "seoDescription": "Generate uuid generator online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "uuid-generator, free uuid generator, uuid generator tool",
             "seoH1": "UUID Generator Free: Use UUID Generator"
         },
         "qr-code-generator": {
-            "name": "QR Code Generator",
-            "description": "Generate QR codes for links, text, etc.",
+            "name": "QR Code",
+            "description": "Generate QR codes.",
             "seoTitle": "QR Code Free - Generate qr code",
             "seoDescription": "Generate qr code online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "qr-code-generator, free qr code, qr code tool",
             "seoH1": "QR Code Free: Use QR Code"
         },
         "lorem-ipsum": {
-            "name": "Lorem Ipsum Generator",
+            "name": "Lorem Ipsum",
             "description": "Generate placeholder text.",
             "seoTitle": "Lorem Ipsum Free - Generate lorem ipsum",
             "seoDescription": "Generate lorem ipsum online free. Custom paragraphs. No login, fast, secure. Perfect for designers.",
@@ -781,7 +791,7 @@
         },
         "youtube-thumbnail-downloader": {
             "name": "YouTube Thumbnail Downloader",
-            "description": "Download HD & 4K YouTube thumbnails instantly for free.",
+            "description": "Download high-quality thumbnails from any YouTube video.",
             "seoTitle": "YouTube Thumbnail Downloader Free - Use YouTube Thumbnail Downloader",
             "seoDescription": "Use YouTube Thumbnail Downloader online free. Fast and secure processing. No login, fast, secure. Perfect for content creators.",
             "seoKeywords": "youtube-thumbnail-downloader, free youtube thumbnail downloader, youtube thumbnail downloader tool",
@@ -789,7 +799,7 @@
         },
         "youtube-tag-generator": {
             "name": "YouTube Tag Generator",
-            "description": "Generate optimized YouTube tags to boost video ranking.",
+            "description": "Generate optimized tags for your YouTube videos to improve ranking.",
             "seoTitle": "YouTube Tag Generator Free - Generate YouTube SEO tags",
             "seoDescription": "Generate YouTube SEO tags online free. Optimize video rankings. No login, fast, secure. Perfect for content creators.",
             "seoKeywords": "youtube tag generator free, generate youtube tags online, youtube seo tool, viral video tags, generate tags for youtube",
@@ -797,7 +807,7 @@
         },
         "youtube-title-generator": {
             "name": "YouTube Title Generator",
-            "description": "Generate catchy YouTube titles.",
+            "description": "Generate catchy, SEO-friendly titles for your YouTube videos.",
             "seoTitle": "YouTube Title Generator Free - Generate catchy YouTube titles",
             "seoDescription": "Generate catchy YouTube titles online free. SEO-friendly titles for better CTR. No login, fast, secure. Perfect for content creators.",
             "seoKeywords": "youtube title generator free, generate youtube titles online, video title ideas, viral yt titles, seo titles for youtube",
@@ -805,7 +815,7 @@
         },
         "youtube-embed-code-generator": {
             "name": "YouTube Embed Code Generator",
-            "description": "Generate custom YouTube embed codes.",
+            "description": "Generate advanced embed codes with autoplay, loop, and hide controls.",
             "seoTitle": "YouTube Embed Code Generator Free - Use YouTube Embed Code Generator",
             "seoDescription": "Use YouTube Embed Code Generator online free. Fast and secure processing. No login, fast, secure. Perfect for content creators.",
             "seoKeywords": "youtube-embed-code-generator, free youtube embed code generator, youtube embed code generator tool",
@@ -813,7 +823,7 @@
         },
         "youtube-timestamp-link-generator": {
             "name": "YouTube Timestamp Link",
-            "description": "Create timestamp links for YouTube videos.",
+            "description": "Create YouTube links that start at a specific time.",
             "seoTitle": "YouTube Timestamp Link Free - Use YouTube Timestamp Link",
             "seoDescription": "Use YouTube Timestamp Link online free. Fast and secure processing. No login, fast, secure. Perfect for content creators.",
             "seoKeywords": "youtube-timestamp-link-generator, free youtube timestamp link, youtube timestamp link tool",
@@ -821,7 +831,7 @@
         },
         "meta-tag-generator": {
             "name": "Meta Tag Generator",
-            "description": "Generate SEO meta tags.",
+            "description": "Generate SEO-friendly meta tags for your website.",
             "seoTitle": "Meta Tag Generator Free - Use Meta Tag Generator",
             "seoDescription": "Use Meta Tag Generator online free. Fast and secure processing. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "meta-tag-generator, free meta tag generator, meta tag generator tool",
@@ -829,7 +839,7 @@
         },
         "open-graph-generator": {
             "name": "Open Graph Generator",
-            "description": "Generate Open Graph tags for social sharing.",
+            "description": "Create Open Graph meta tags for Facebook and LinkedIn sharing.",
             "seoTitle": "Open Graph Generator Free - Generate Open Graph meta tags",
             "seoDescription": "Generate Open Graph meta tags online free. Facebook, LinkedIn, Slack. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "open graph generator free, generate og tags online, facebook meta tags, og title og image, social media tags",
@@ -837,7 +847,7 @@
         },
         "twitter-card-generator": {
             "name": "Twitter Card Generator",
-            "description": "Generate Twitter Card meta tags.",
+            "description": "Generate Twitter Card meta tags for better social sharing.",
             "seoTitle": "Twitter Card Generator Free - Generate Twitter Card meta tags",
             "seoDescription": "Generate Twitter Card meta tags online free. Optimize X/Twitter shares. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "twitter card generator free, generate twitter cards online, twitter meta tags, x card generator, twitter card validator",
@@ -845,7 +855,7 @@
         },
         "robots-txt-generator": {
             "name": "Robots.txt Generator",
-            "description": "Create robots.txt files.",
+            "description": "Create proper robots.txt files to control crawler access.",
             "seoTitle": "Robots.txt Generator Free - Use Robots.txt Generator",
             "seoDescription": "Use Robots.txt Generator online free. Fast and secure processing. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "robots-txt-generator, free robots.txt generator, robots.txt generator tool",
@@ -853,7 +863,7 @@
         },
         "xml-sitemap-generator": {
             "name": "XML Sitemap Generator",
-            "description": "Generate XML sitemaps.",
+            "description": "Generate XML sitemaps for easier search engine indexing.",
             "seoTitle": "XML Sitemap Generator Free - Use XML Sitemap Generator",
             "seoDescription": "Use XML Sitemap Generator online free. Fast and secure processing. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "xml-sitemap-generator, free xml sitemap generator, xml sitemap generator tool",
@@ -861,7 +871,7 @@
         },
         "keyword-density-checker": {
             "name": "Keyword Density Checker",
-            "description": "Analyze text for keyword stuffing and optimize SEO density.",
+            "description": "Analyze keyword usage and density in your content.",
             "seoTitle": "Keyword Density Checker Free - Check keyword density",
             "seoDescription": "Check keyword density online free. Avoid SEO penalties. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "keyword density checker free, check keyword stuffing, seo text analyzer, word frequency counter, keyword optimizer tool",
@@ -869,7 +879,7 @@
         },
         "keyword-cleaner": {
             "name": "Keyword Cleaner",
-            "description": "Clean keyword lists.",
+            "description": "Clean up keyword lists: remove duplicates, empty lines, and specific characters.",
             "seoTitle": "Keyword Cleaner Free - Use Keyword Cleaner",
             "seoDescription": "Use Keyword Cleaner online free. Fast and secure processing. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "keyword-cleaner, free keyword cleaner, keyword cleaner tool",
@@ -877,31 +887,31 @@
         },
         "long-tail-keyword-generator": {
             "name": "Long Tail Keyword Generator",
-            "description": "Generate long-tail keyword variations.",
+            "description": "Generate long-tail keyword variations from seed keywords.",
             "seoTitle": "Long Tail Keyword Generator Free - Use Long Tail Keyword Generator",
             "seoDescription": "Use Long Tail Keyword Generator online free. Fast and secure processing. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "long-tail-keyword-generator, free long tail keyword generator, long tail keyword generator tool",
             "seoH1": "Long Tail Keyword Generator Free: Use Long Tail Keyword Generator"
         },
         "slug-generator": {
-            "name": "URL Slug Generator",
-            "description": "Convert text to SEO-friendly slugs.",
+            "name": "Slug Generator",
+            "description": "Convert text into SEO-friendly URL slugs.",
             "seoTitle": "Slug Generator Free - Use Slug Generator",
             "seoDescription": "Use Slug Generator online free. Fast and secure processing. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "slug-generator, free slug generator, slug generator tool",
             "seoH1": "Slug Generator Free: Use Slug Generator"
         },
         "google-serp-simulator": {
-            "name": "Google SERP Preview",
-            "description": "Preview how your page appears in Google search.",
+            "name": "Google SERP Simulator",
+            "description": "Preview how your website will appear in Google search results.",
             "seoTitle": "Google SERP Simulator Free - Use Google SERP Simulator",
             "seoDescription": "Use Google SERP Simulator online free. Fast and secure processing. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "google-serp-simulator, free google serp simulator, google serp simulator tool",
             "seoH1": "Google SERP Simulator Free: Use Google SERP Simulator"
         },
         "htaccess-redirect-generator": {
-            "name": ".htaccess Redirect Generator",
-            "description": "Generate 301/302 redirect code.",
+            "name": "Htaccess Redirect Generator",
+            "description": "Generate .htaccess redirect code for 301/302 redirects.",
             "seoTitle": "Htaccess Redirect Generator Free - Use Htaccess Redirect Generator",
             "seoDescription": "Use Htaccess Redirect Generator online free. Fast and secure processing. No login, fast, secure. Perfect for website optimization.",
             "seoKeywords": "htaccess-redirect-generator, free htaccess redirect generator, htaccess redirect generator tool",
@@ -909,31 +919,31 @@
         },
         "my-ip-address": {
             "name": "My IP Address",
-            "description": "Check your public IP and location.",
+            "description": "Check your public IP address and location details.",
             "seoTitle": "My IP Address Free - Generate my ip address",
             "seoDescription": "Generate my ip address online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "my-ip-address, free my ip address, my ip address tool",
             "seoH1": "My IP Address Free: Use My IP Address"
         },
         "browser-info": {
-            "name": "Browser Information",
-            "description": "Get browser and device details.",
+            "name": "Browser Info",
+            "description": "Get detailed information about your current browser and system.",
             "seoTitle": "Browser Info Free - Generate browser info",
             "seoDescription": "Generate browser info online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "browser-info, free browser info, browser info tool",
             "seoH1": "Browser Info Free: Use Browser Info"
         },
         "screen-resolution-simulator": {
-            "name": "Screen Resolution Tester",
-            "description": "Test website on different resolutions.",
+            "name": "Screen Resolution Simulator",
+            "description": "Test your website on different screen resolutions.",
             "seoTitle": "Screen Resolution Simulator Free - Generate screen resolution simulator",
             "seoDescription": "Generate screen resolution simulator online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "screen-resolution-simulator, free screen resolution simulator, screen resolution simulator tool",
             "seoH1": "Screen Resolution Simulator Free: Use Screen Resolution Simulator"
         },
         "responsive-checker": {
-            "name": "Responsive Design Checker",
-            "description": "Check if website is mobile-friendly.",
+            "name": "Responsive Checker",
+            "description": "Check if your website is responsive across devices.",
             "seoTitle": "Responsive Checker Free - Generate responsive checker",
             "seoDescription": "Generate responsive checker online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
             "seoKeywords": "responsive-checker, free responsive checker, responsive checker tool",
@@ -941,7 +951,7 @@
         },
         "whatsapp-link-generator": {
             "name": "WhatsApp Link Generator",
-            "description": "Create direct click-to-chat WhatsApp links with custom messages.",
+            "description": "Create direct click-to-chat WhatsApp links.",
             "seoTitle": "WhatsApp Link Generator | Create Direct Click-to-Chat Links with Message",
             "seoDescription": "Generate free WhatsApp click-to-chat links with custom messages instantly. Perfect for Instagram bios, Facebook ads, and business websites. 100% free, secure, and fast.",
             "seoKeywords": "whatsapp link generator, create whatsapp link, whatsapp click to chat, whatsapp link with message, wa.me link generator, free whatsapp link maker, whatsapp business link generator, whatsapp link for instagram bio, whatsapp direct link, how to create whatsapp link",
@@ -949,7 +959,7 @@
         },
         "telegram-link-generator": {
             "name": "Telegram Link Generator",
-            "description": "Create a Telegram link instantly for your profile, channel, or group. Generate t.me direct chat links with custom messages for free.",
+            "description": "Create direct links to Telegram users or channels.",
             "seoTitle": "Telegram Link Generator | Create Direct t.me Links with Messages",
             "seoDescription": "How to create a Telegram link? Use our free t.me link generator to create direct chat links for profiles, groups, and channels with custom messages. 100% free and secure.",
             "seoKeywords": "telegram link generator, create telegram link, telegram link with message, t.me link generator, telegram click to chat, telegram direct link, how to create telegram link, telegram link for bio, telegram link for group, telegram link for channel",
@@ -957,7 +967,7 @@
         },
         "paypal-link-generator": {
             "name": "PayPal Link Generator",
-            "description": "Generate custom PayPal.me payment and donation links easily.",
+            "description": "Generate PayPal payment and donation links.",
             "seoTitle": "PayPal Link Generator | Create Custom PayPal.me Payment & Donation Links",
             "seoDescription": "Generate professional PayPal.me payment and donation links with custom amounts instantly. Secure, fast, and 100% free PayPal link creator for businesses and freelancers.",
             "seoKeywords": "paypal link generator, create paypal link, paypal.me link generator, paypal payment link generator, paypal donation link, paypal link with amount, free paypal link maker, how to create paypal link for business, paypal money link, secure payment link creator",
@@ -965,15 +975,15 @@
         },
         "email-validator": {
             "name": "Email Validator",
-            "description": "Validate email address format.",
+            "description": "Validate email address format using regex.",
             "seoTitle": "Email Validator Free - Generate email validator",
             "seoDescription": "Generate email validator online free. Check syntax and format. No login, fast, secure. Perfect for forms.",
             "seoKeywords": "email validator free, validate email online, email syntax checker, email verifier, check email format",
             "seoH1": "Email Validator Free: Validate email addresses"
         },
         "url-opener": {
-            "name": "Bulk URL Opener",
-            "description": "Open multiple URLs at once.",
+            "name": "URL Opener",
+            "description": "Open multiple URLs at once in new tabs.",
             "seoTitle": "URL Opener Free - Generate url opener",
             "seoDescription": "Generate url opener online free. Bulk link opener. No login, fast, secure. Perfect for research.",
             "seoKeywords": "bulk url opener free, open multiple links online, url list opener, link opener, multiple url opener",
@@ -981,7 +991,7 @@
         },
         "user-agent-parser": {
             "name": "User Agent Parser",
-            "description": "Parse User-Agent strings.",
+            "description": "Parse and analyze User-Agent strings.",
             "seoTitle": "User Agent Parser Free - Use User Agent Parser Code",
             "seoDescription": "Use User Agent Parser code online free. Fast and secure processing. No login, fast, secure. Perfect for developers.",
             "seoKeywords": "user-agent-parser, free user agent parser, user agent parser tool",
@@ -989,7 +999,7 @@
         },
         "wordpress-password-hash": {
             "name": "WordPress Password Hash",
-            "description": "Generate WordPress-compatible password hashes.",
+            "description": "Generate WordPress compatible password hashes (phpass).",
             "seoTitle": "WordPress Password Hash Free - Use WordPress Password Hash",
             "seoDescription": "Use WordPress Password Hash online free. Fast and secure processing. No login, 100% private. Perfect for daily tasks.",
             "seoKeywords": "wordpress-password-hash, free wordpress password hash, wordpress password hash tool",
@@ -997,7 +1007,7 @@
         },
         "age-calculator": {
             "name": "Age Calculator",
-            "description": "Calculate exact age in years, months, days.",
+            "description": "Calculate your exact age in years, months, and days.",
             "seoTitle": "Age Calculator Free Online - Calculate Age Calculator",
             "seoDescription": "Calculate Age Calculator online free. Fast and secure processing. No login, fast, accurate. Perfect for daily tasks.",
             "seoKeywords": "age-calculator, free age calculator, age calculator tool",
@@ -1005,7 +1015,7 @@
         },
         "bmi-calculator": {
             "name": "BMI Calculator",
-            "description": "Calculate Body Mass Index and health status.",
+            "description": "Calculate your Body Mass Index (BMI) and health status.",
             "seoTitle": "BMI Calculator Free Online - Calculate BMI Calculator",
             "seoDescription": "Calculate BMI Calculator online free. Check healthy weight range. No login, fast, accurate. Perfect for health tracking.",
             "seoKeywords": "bmi calculator free, body mass index calculator, healthy weight calculator, obesity calculator, height weight chart, bmi calculator online",
@@ -1013,7 +1023,7 @@
         },
         "percentage-calculator": {
             "name": "Percentage Calculator",
-            "description": "Calculate percentages, increases, decreases.",
+            "description": "Quickly calculate percentages, increases, and decreases.",
             "seoTitle": "Percentage Calculator Free Online - Calculate Percentage Calculator",
             "seoDescription": "Calculate Percentage Calculator online free. Fast and secure processing. No login, fast, accurate. Perfect for daily tasks.",
             "seoKeywords": "percentage-calculator, free percentage calculator, percentage calculator tool",
@@ -1021,7 +1031,7 @@
         },
         "currency-converter": {
             "name": "Currency Converter",
-            "description": "Convert between 150+ world currencies with real-time exchange rates.",
+            "description": "Convert between different currencies with live rates.",
             "seoTitle": "Currency Converter Free Online - Real-time Exchange Rates",
             "seoDescription": "Convert currencies online free. Real-time exchange rates for 150+ currencies. No login, fast, accurate. Perfect for travel and business.",
             "seoKeywords": "currency converter free, exchange rate calculator, foreign exchange rates, convert money online, currency exchange tool",
@@ -1029,7 +1039,7 @@
         },
         "gst-calculator": {
             "name": "GST Calculator",
-            "description": "Calculate GST amount and total price.",
+            "description": "Calculate GST (Goods and Services Tax) for any amount.",
             "seoTitle": "GST Calculator Free Online - Calculate GST Calculator",
             "seoDescription": "Calculate GST Calculator online free. Fast and secure processing. No login, fast, accurate. Perfect for daily tasks.",
             "seoKeywords": "gst-calculator, free gst calculator, gst calculator tool",
@@ -1037,7 +1047,7 @@
         },
         "emi-calculator": {
             "name": "Loan EMI Calculator",
-            "description": "Calculate monthly EMI and interest.",
+            "description": "Calculate monthly loan EMI and total interest payable.",
             "seoTitle": "Loan EMI Calculator Free Online - Calculate Loan EMI Calculator",
             "seoDescription": "Calculate Loan EMI Calculator online free. Home, car, personal loans. Amortization schedule. No login, fast, accurate. Perfect for loan planning.",
             "seoKeywords": "emi calculator free, loan calculator online, mortgage calculator, monthly installment calculator, interest rate calculator, home loan calculator",
@@ -1045,7 +1055,7 @@
         },
         "discount-calculator": {
             "name": "Discount Calculator",
-            "description": "Calculate discount and final price.",
+            "description": "Calculate final price after discount and savings.",
             "seoTitle": "Discount Calculator Free Online - Calculate Discount Calculator",
             "seoDescription": "Calculate Discount Calculator online free. Fast and secure processing. No login, fast, accurate. Perfect for daily tasks.",
             "seoKeywords": "discount-calculator, free discount calculator, discount calculator tool",
@@ -1053,7 +1063,7 @@
         },
         "instagram-hashtag-generator": {
             "name": "Instagram Hashtag Generator",
-            "description": "Generate viral, trending hashtags for Instagram to boost your reach.",
+            "description": "Generate popular and trending hashtags for Instagram.",
             "seoTitle": "Instagram Hashtag Generator - Best Free Hashtag Finder Tool",
             "seoDescription": "Best free Instagram hashtag generator. Find trending hashtags, keywords, and tags for Instagram. Boost your post reach with our instant hashtag finder tool.",
             "seoKeywords": "instagram hashtag generator, hashtag generator for instagram, free instagram hashtag generator, instagram tags generator, best hashtag generator, instagram keyword generator, hashtag finder",
@@ -1061,7 +1071,7 @@
         },
         "html-to-jsx": {
             "name": "HTML to JSX",
-            "description": "Convert HTML to React JSX syntax.",
+            "description": "Convert standard HTML code into React JSX syntax.",
             "seoTitle": "HTML to JSX Free - Use HTML to JSX Code",
             "seoDescription": "Use HTML to JSX code online free. Fast and secure processing. No login, fast, secure. Perfect for developers.",
             "seoKeywords": "html-to-jsx, free html to jsx, html to jsx tool",
@@ -1069,7 +1079,7 @@
         },
         "compound-interest-calculator": {
             "name": "Compound Interest Calculator",
-            "description": "Calculate future growth of investments with compound interest.",
+            "description": "Calculate future wealth with compound interest (daily, monthly, yearly).",
             "seoTitle": "Compound Interest Calculator - Free Wealth Projection Tool",
             "seoDescription": "Calculate how your savings grow over time with daily/monthly compounding. Project future wealth with this high-precision calculator.",
             "seoKeywords": "compound interest calculator, savings goal calculator, wealth projector, investment growth calculator",
@@ -1096,7 +1106,7 @@
         },
         "mortgage-calculator": {
             "name": "Mortgage Calculator",
-            "description": "Estimate monthly payments for home loans with PMI and taxes.",
+            "description": "Estimate monthly mortgage payments including PMI, taxes, and insurance.",
             "seoTitle": "Mortgage Calculator - US Home Loan Payment Estimator",
             "seoDescription": "Calculate monthly home loan payments including property tax, insurance, and PMI. Professional real estate tool for home buyers.",
             "seoKeywords": "mortgage calculator, home loan payment, pmi calculator, house payment estimator",
@@ -1119,7 +1129,7 @@
         },
         "sip-calculator": {
             "name": "SIP Calculator",
-            "description": "Calculate returns on your Systematic Investment Plan (SIP).",
+            "description": "Calculate returns on your Systematic Investment Plan (SIP) investments.",
             "seoTitle": "SIP Calculator - Mutual Fund Returns Estimator Online",
             "seoDescription": "Estimate the future value of your monthly SIP investments in mutual funds. Fast, accurate, and free.",
             "seoKeywords": "sip calculator, mutual fund calculator, monthly investment calculator, investment returns",
@@ -1142,7 +1152,7 @@
         },
         "crypto-profit-calculator": {
             "name": "Crypto Profit Calculator",
-            "description": "Calculate profit or loss on your cryptocurrency trades.",
+            "description": "Calculate buy/sell profit or loss for Bitcoin and Altcoins.",
             "seoTitle": "Crypto Profit/Loss Calculator - Instant Trading Analysis",
             "seoDescription": "Instantly calculate profits and losses for Bitcoin and Altcoins. Support for exchange fees and ROI analysis.",
             "seoKeywords": "crypto profit calculator, bitcoin profit loss, trading calculator, crypto roi finder",
@@ -1165,7 +1175,7 @@
         },
         "inflation-calculator": {
             "name": "Inflation Calculator",
-            "description": "Calculate how inflation affects the purchasing power of your money.",
+            "description": "Calculate the purchasing power of money over time due to inflation.",
             "seoTitle": "Inflation Calculator - Purchasing Power Loss Estimator",
             "seoDescription": "See how much your money will be worth in the future due to inflation. Analyze historical and project future purchasing power.",
             "seoKeywords": "inflation calculator, purchasing power loss, value of money over time, cpi calculator",
@@ -1184,7 +1194,7 @@
         },
         "roi-calculator": {
             "name": "ROI Calculator",
-            "description": "Calculate Return on Investment (ROI) for business and projects.",
+            "description": "Calculate Return on Investment (ROI) for marketing and business projects.",
             "seoTitle": "ROI Calculator - Efficiency & Profitability Analyzer",
             "seoDescription": "Measure the efficiency of an investment with our professional ROI calculator. Get net profit and percentage gains instantly.",
             "seoKeywords": "roi calculator, return on investment, business profitability, investment efficiency",
@@ -1203,7 +1213,7 @@
         },
         "cpm-calculator": {
             "name": "CPM Calculator",
-            "description": "Calculate Cost Per Mille (CPM) for ad campaigns.",
+            "description": "Calculate Cost Per Mille (CPM) for advertising campaigns.",
             "seoTitle": "CPM Calculator - Digital Marketing Cost Optimizer",
             "seoDescription": "Solve for CPM, Campaign Cost, or Total Impressions instantly. Essential tool for digital advertisers and media buyers.",
             "seoKeywords": "cpm calculator, cost per mille, ad campaign cost, marketing impressions calculator",
@@ -1222,7 +1232,7 @@
         },
         "sales-tax-calculator": {
             "name": "Sales Tax Calculator",
-            "description": "Calculate sales tax for US states and global regions.",
+            "description": "Calculate sales tax for US states and international regions.",
             "seoTitle": "Sales Tax Calculator - Add or Remove Tax Instantly",
             "seoDescription": "Calculate net price, tax amount, and total bill with US state presets. Supports tax-inclusive and exclusive calculations.",
             "seoKeywords": "sales tax calculator, tax inclusive calculator, vat calculator, us sales tax finder",
@@ -1241,7 +1251,7 @@
         },
         "privacy-policy-generator": {
             "name": "Privacy Policy Generator",
-            "description": "Generate professional privacy policies for websites.",
+            "description": "Generate professional privacy policies for websites and apps.",
             "seoTitle": "Privacy Policy Generator - Free Professional Legal Templates",
             "seoDescription": "Create a customized, professional privacy policy for your website or app in seconds. Compliant with GDPR and modern standards.",
             "seoKeywords": "privacy policy generator, legal doc generator, website privacy policy free, gdpr compliance tool",
@@ -1264,7 +1274,7 @@
         },
         "terms-conditions-generator": {
             "name": "Terms & Conditions Generator",
-            "description": "Generate customized terms and conditions for businesses.",
+            "description": "Generate customized terms and conditions for your business.",
             "seoTitle": "Terms and Conditions Generator - Free & Professional",
             "seoDescription": "Protect your platform with custom terms of service. Generate professional legal agreements for any country or state.",
             "seoKeywords": "terms and conditions generator, terms of service maker, legal agreement generator, website terms generator",
@@ -1309,8 +1319,8 @@
             ]
         },
         "dti-calculator": {
-            "name": "Debt-to-Income Ratio Calculator",
-            "description": "Calculate your debt-to-income (DTI) ratio to understand your borrowing power and loan eligibility.",
+            "name": "Debt-to-Income Calculator",
+            "description": "Calculate your Debt-to-Income ratio to qualify for mortgages and loans.",
             "seoTitle": "DTI Calculator (Free) — Debt-to-Income Ratio for Mortgage & Loans",
             "seoDescription": "Calculate your debt-to-income (DTI) ratio instantly. Check if you qualify for a mortgage, car loan, or personal loan. Compare front-end vs back-end DTI ratios and see your status.",
             "seoKeywords": "DTI calculator, debt to income ratio, DTI ratio mortgage, front end DTI, back end DTI, loan eligibility calculator, debt ratio calculator, income ratio calculator, mortgage approval DTI",
@@ -1341,7 +1351,7 @@
         },
         "car-loan-calculator": {
             "name": "Car Loan Calculator",
-            "description": "Calculate your monthly car loan payments, total interest, and true cost of owning a vehicle.",
+            "description": "Calculate monthly car loan payments, total interest, and amortization.",
             "seoTitle": "Car Loan Calculator (Free) — Monthly Payment & Interest Cost Estimator",
             "seoDescription": "Calculate your exact monthly car loan payment, total interest cost, and amortization schedule. Find the best loan term for your budget before visiting a dealership.",
             "seoKeywords": "car loan calculator, auto loan calculator, monthly car payment calculator, vehicle loan calculator, car finance calculator, auto payment estimator, car loan interest calculator, used car loan calculator",
@@ -1372,7 +1382,7 @@
         },
         "credit-card-payoff-calculator": {
             "name": "Credit Card Payoff Calculator",
-            "description": "Calculate how long it will take to pay off credit card debt and how much interest you will pay.",
+            "description": "Calculate how long it will take to pay off your credit card debt.",
             "seoTitle": "Credit Card Payoff Calculator (Free) — Debt-Free Date & Interest Estimator",
             "seoDescription": "Find your credit card debt-free date. Compare fixed monthly payments vs paying a set amount. See exactly how much interest you'll save by paying more each month.",
             "seoKeywords": "credit card payoff calculator, credit card debt calculator, pay off credit card, credit card interest calculator, debt free calculator, minimum payment credit card, snowball debt calculator",
@@ -1403,7 +1413,7 @@
         },
         "savings-goal-calculator": {
             "name": "Savings Goal Calculator",
-            "description": "Calculate how much to save monthly to reach your financial goals by a target date.",
+            "description": "Calculate how much to save monthly to reach your financial goal.",
             "seoTitle": "Savings Goal Calculator (Free) — Monthly Savings Planner & Target Date Estimator",
             "seoDescription": "Set a savings goal and find out exactly how much to save monthly to reach it. Includes compound interest growth and emergency fund planning. Free savings calculator.",
             "seoKeywords": "savings goal calculator, how much to save calculator, monthly savings calculator, savings target date calculator, compound interest savings, emergency fund calculator, financial goal planner",
@@ -1434,7 +1444,7 @@
         },
         "freelance-tax-calculator": {
             "name": "Freelance Tax Calculator",
-            "description": "Estimate your US freelance taxes including self-employment tax and quarterly payments.",
+            "description": "Estimate self-employment taxes for US freelancers and independent contractors.",
             "seoTitle": "Freelance Tax Calculator (Free) — Self-Employment & Quarterly Tax Estimator 2024",
             "seoDescription": "Calculate your freelance taxes for 2024. Instantly see your self-employment tax, federal income tax, effective rate, and quarterly estimated payments. Built for US freelancers.",
             "seoKeywords": "freelance tax calculator, self-employment tax calculator, 1099 tax calculator, quarterly tax calculator, estimated tax payments 2024, independent contractor tax, gig worker tax calculator, freelancer taxes USA",
@@ -1465,7 +1475,7 @@
         },
         "tdee-calculator": {
             "name": "TDEE Calculator",
-            "description": "Calculate your Total Daily Energy Expenditure to know exactly how many calories to eat for your goals.",
+            "description": "Calculate Total Daily Energy Expenditure to plan your diet and fitness goals.",
             "seoTitle": "TDEE Calculator (Free) — Total Daily Energy Expenditure & Calorie Calculator",
             "seoDescription": "Calculate your TDEE (Total Daily Energy Expenditure) based on age, weight, height, and activity level. Find your maintenance calories, caloric deficit for weight loss, and surplus for muscle gain.",
             "seoKeywords": "TDEE calculator, total daily energy expenditure, maintenance calories, calorie calculator, BMR calculator, weight loss calories, calorie deficit calculator, how many calories should I eat, TDEE weight loss",
@@ -1496,7 +1506,7 @@
         },
         "pregnancy-due-date-calculator": {
             "name": "Pregnancy Due Date Calculator",
-            "description": "Calculate your pregnancy due date, trimester dates, and key milestones from your LMP.",
+            "description": "Calculate your pregnancy due date and key milestones.",
             "seoTitle": "Pregnancy Due Date Calculator (Free) — Calculate Your Baby's Arrival Date",
             "seoDescription": "Calculate your pregnancy due date instantly based on your last menstrual period (LMP) or conception date. See all trimester dates, gestational age, and key milestones.",
             "seoKeywords": "pregnancy due date calculator, due date calculator, LMP calculator, when is my baby due, pregnancy calendar, gestational age calculator, trimester calculator, conception date calculator, baby due date",
@@ -1527,7 +1537,7 @@
         },
         "macro-calculator": {
             "name": "Macro Calculator",
-            "description": "Calculate your ideal macronutrient ratio of protein, carbs, and fats for your fitness goal.",
+            "description": "Calculate your daily protein, carbs, and fat targets.",
             "seoTitle": "Macro Calculator (Free) — Protein, Carb & Fat Ratio for Weight Loss & Muscle Gain",
             "seoDescription": "Calculate your perfect daily macros for weight loss, muscle gain, or maintenance. Get exact grams of protein, carbs, and fat based on your TDEE and fitness goals. Free macro tracker.",
             "seoKeywords": "macro calculator, macronutrient calculator, protein calculator, how many grams of protein per day, IIFYM calculator, carb calculator, fat loss macros, muscle building macros, flexible dieting calculator",
@@ -1557,8 +1567,8 @@
             ]
         },
         "ideal-weight-calculator": {
-            "name": "Ideal Weight Calculator",
-            "description": "Calculate your ideal body weight using 4 clinical formulas including Hamwi, Devine, Robinson, and Miller.",
+            "name": "Ideal Body Weight Calculator",
+            "description": "Calculate your ideal body weight using popular formulas.",
             "seoTitle": "Ideal Weight Calculator (Free) — 4-Formula Clinical Body Weight Estimator",
             "seoDescription": "Find your ideal weight using 4 clinical formulas (Hamwi, Devine, Robinson, Miller). Calculate BMI healthy weight range and see results in kg and lbs. Free online weight calculator.",
             "seoKeywords": "ideal weight calculator, ideal body weight, how much should I weigh, healthy weight calculator, ideal weight for height, Hamwi formula, Devine formula, BMI weight range, body weight calculator",
@@ -1589,7 +1599,7 @@
         },
         "chatgpt-prompt-generator": {
             "name": "ChatGPT Prompt Generator",
-            "description": "Generate powerful, optimized prompts for ChatGPT, Claude, Gemini, and other AI models.",
+            "description": "Generate powerful ChatGPT and AI prompts for any use case.",
             "seoTitle": "ChatGPT Prompt Generator (Free) — AI Prompt Templates for Writing, Coding & Marketing",
             "seoDescription": "Generate perfect ChatGPT prompts instantly. Choose from 10+ expert templates for writing, coding, marketing, and learning. Customize and copy into any AI model in seconds.",
             "seoKeywords": "ChatGPT prompt generator, AI prompt generator, ChatGPT prompts, best ChatGPT prompts, prompt engineering tool, Claude prompts, Gemini prompts, AI writing prompts, free prompt generator",
@@ -1620,7 +1630,7 @@
         },
         "ai-content-detector": {
             "name": "AI Content Detector",
-            "description": "Detect if text was written by AI or a human using heuristic pattern analysis.",
+            "description": "Detect if content was written by AI or a human.",
             "seoTitle": "AI Content Detector (Free) — Check If Text Was Written by ChatGPT or AI",
             "seoDescription": "Detect AI-generated content instantly. Paste any text to analyze for ChatGPT, Claude, or other AI writing signals. Get a percentage score and see which detection signals were found.",
             "seoKeywords": "AI content detector, ChatGPT detector, AI text detector, detect AI writing, is this AI written, AI generated content checker, AI plagiarism detector, GPT detector free, AI humanizer detector",
@@ -1650,8 +1660,8 @@
             ]
         },
         "text-to-handwriting": {
-            "name": "Text to Handwriting Converter",
-            "description": "Convert typed text into realistic handwriting images and download as PNG.",
+            "name": "Text to Handwriting",
+            "description": "Convert typed text into realistic handwriting style images.",
             "seoTitle": "Text to Handwriting Converter (Free) — Generate Realistic Handwriting Online",
             "seoDescription": "Convert any text to realistic handwriting instantly. Choose from 5 handwriting styles, customize ink color and font size, and download as a PNG image. 100% free and browser-based.",
             "seoKeywords": "text to handwriting, handwriting generator, text to handwriting converter, fake handwriting generator, handwriting font converter, handwriting image maker, convert text to cursive, fake handwriting online",
@@ -1682,7 +1692,7 @@
         },
         "grammar-checker": {
             "name": "Grammar Checker",
-            "description": "Check and fix grammar, spelling, and punctuation errors in your text instantly.",
+            "description": "Check and fix grammar, spelling, and punctuation errors in your text.",
             "seoTitle": "Free Grammar Checker Online — Check & Fix Grammar, Spelling & Punctuation",
             "seoDescription": "Fix grammar mistakes instantly with our free online grammar checker. Detect common errors including wrong contractions, misspellings, incorrect articles, and verb tense mistakes. No signup required.",
             "seoKeywords": "grammar checker, free grammar checker online, grammar check, grammar fixer, spell checker, punctuation checker, English grammar checker, writing grammar tool, check my grammar, grammar correction",
@@ -1713,7 +1723,7 @@
         },
         "tiktok-hashtag-generator": {
             "name": "TikTok Hashtag Generator",
-            "description": "Generate trending TikTok hashtags by category to maximize video reach and views.",
+            "description": "Find trending TikTok hashtags to boost your video reach.",
             "seoTitle": "TikTok Hashtag Generator (Free) — Trending Tags to Boost Your Video Views",
             "seoDescription": "Get the best TikTok hashtags for your niche instantly. Choose from 8 categories including Entertainment, Music, Gaming, Fitness, and Fashion. Copy all tags with one click. Boost your FYP reach.",
             "seoKeywords": "TikTok hashtag generator, TikTok hashtags, best TikTok hashtags, trending TikTok tags, hashtags for TikTok views, TikTok FYP hashtags, viral TikTok hashtags, TikTok hashtag tool 2024",
@@ -1744,7 +1754,7 @@
         },
         "bio-link-generator": {
             "name": "Bio Link Generator",
-            "description": "Create a free Linktree-style bio link page with your name, bio, and custom links.",
+            "description": "Create a simple, shareable bio link page for Instagram and TikTok.",
             "seoTitle": "Free Bio Link Generator — Create Your Linktree-Style Page Instantly",
             "seoDescription": "Build a free bio link page like Linktree in seconds. Add your name, bio, and unlimited links. Get clean HTML code to host anywhere. No account needed — completely free bio link creator.",
             "seoKeywords": "bio link generator, free linktree alternative, bio link page, link in bio, create linktree, social media bio link, instagram bio link, free link page creator, one link bio",
@@ -1775,7 +1785,7 @@
         },
         "youtube-money-calculator": {
             "name": "YouTube Money Calculator",
-            "description": "Estimate your YouTube channel ad revenue based on views and RPM.",
+            "description": "Estimate YouTube Ad revenue from views and engagement.",
             "seoTitle": "YouTube Money Calculator (Free) — Estimate Channel Revenue from Views",
             "seoDescription": "Calculate YouTube ad revenue instantly. Enter your daily views and RPM to see estimated daily, monthly, and yearly earnings. Includes monetized view percentage. Free YouTube earnings estimator.",
             "seoKeywords": "YouTube money calculator, YouTube earnings calculator, how much does YouTube pay, YouTube revenue calculator, YouTube RPM calculator, YouTube CPM calculator, YouTube income estimator, how to make money on YouTube",
@@ -1806,7 +1816,7 @@
         },
         "crontab-generator": {
             "name": "Crontab Generator",
-            "description": "Generate and validate Linux cron expressions with human-readable descriptions.",
+            "description": "Generate cron job schedules with a visual editor.",
             "seoTitle": "Crontab Generator (Free) — Build & Validate Cron Expressions Online",
             "seoDescription": "Generate and validate Linux crontab expressions instantly. Choose from common presets or build a custom cron schedule. Instantly see a human-readable description of your cron job timing.",
             "seoKeywords": "crontab generator, cron expression generator, cron job generator, cron schedule builder, linux cron syntax, crontab examples, cron expression validator, cron to english, cron expression explainer",
@@ -1834,6 +1844,42 @@
                     "answer": "The minimum cron interval is 1 minute. For sub-minute execution, use a loop inside the cron script: * * * * * /path/to/script.sh; sleep 30; /path/to/script.sh"
                 }
             ]
+        },
+        "image-format-converter": {
+            "name": "Image Format Converter",
+            "description": "Convert images between JPG, PNG, WebP, GIF, and BMP formats online for free."
+        },
+        "merge-pdf": {
+            "name": "Merge PDF",
+            "description": "Combine multiple PDF files into a single document."
+        },
+        "split-pdf": {
+            "name": "Split PDF",
+            "description": "Split a PDF file into multiple separate documents."
+        },
+        "reverse-text": {
+            "name": "Reverse Text Generator",
+            "description": "Reverse your text, flip it, or reverse words."
+        },
+        "regex-tester": {
+            "name": "Regex Tester",
+            "description": "Test regular expressions against text."
+        },
+        "gpa-calculator": {
+            "name": "GPA Calculator",
+            "description": "Calculate your college or high school GPA based on grades and credits."
+        },
+        "salary-calculator": {
+            "name": "Salary to Hourly Calculator",
+            "description": "Convert your annual salary to hourly, weekly, and monthly rates."
+        },
+        "tip-calculator": {
+            "name": "Tip Calculator",
+            "description": "Quickly calculate the tip and split the bill among friends."
+        },
+        "json-to-typescript": {
+            "name": "JSON to TypeScript",
+            "description": "Convert JSON objects to TypeScript interfaces automatically."
         }
     },
     "Common": {
@@ -2120,7 +2166,11 @@
         "ourMission": "Our Mission",
         "missionStatement": "Free, fast, private tools for everyone — no ads or tracking.",
         "securePrivate": "Secure & Private",
-        "allRightsReserved": "All rights reserved."
+        "allRightsReserved": "All rights reserved.",
+        "multiLanguage": "Multi-language Support",
+        "privacy": "Privacy",
+        "supportProject": "Support Project",
+        "buyMeACoffee": "Buy me a coffee"
     },
     "Share": {
         "shareThisTool": "Share this tool",

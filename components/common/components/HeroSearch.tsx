@@ -65,7 +65,7 @@ export default function HeroSearch() {
                         value={query}
                         onChange={handleSearch}
                         onFocus={() => query.length > 1 && setIsOpen(true)}
-                        placeholder={"Search over 100+ tools ie. 'Image', 'PDF' or 'JSON'"}
+                        placeholder={t('heroSearchPlaceholder')}
                         className="w-full py-5 px-5 bg-transparent text-foreground placeholder-muted-foreground/40 outline-none text-lg font-medium tracking-tight"
                     />
                     <div className="hidden md:flex items-center gap-2 pr-4 pointer-events-none">
@@ -93,7 +93,7 @@ export default function HeroSearch() {
                         <>
                             <div className="p-2">
                                 <div className="px-4 py-2 text-[10px] font-bold text-muted-foreground/60 uppercase tracking-widest mb-1">
-                                    Found {results.length} results
+                                    {t('foundResults', { count: results.length })}
                                 </div>
                                 {results.map((tool) => (
                                     <Link
@@ -124,7 +124,7 @@ export default function HeroSearch() {
                             </div>
                             <div className="bg-muted/10 p-4 border-t border-border/40 text-center">
                                 <Link href="/tools" className="text-[11px] font-bold text-primary hover:opacity-70 transition-opacity flex items-center justify-center gap-2 uppercase tracking-widest">
-                                    Browse All Tools <ArrowRight size={14} />
+                                    {t('browseAll')} <ArrowRight size={14} />
                                 </Link>
                             </div>
                         </>
@@ -134,15 +134,15 @@ export default function HeroSearch() {
                                 <Search size={24} />
                             </div>
                             <div className="space-y-1">
-                                <p className="text-sm font-bold text-foreground">No tools found for "{query}"</p>
-                                <p className="text-xs text-muted-foreground">Try searching for keywords like 'PDF', 'Image', or 'JSON'</p>
+                                <p className="text-sm font-bold text-foreground">{t('noToolsFound', { query })}</p>
+                                <p className="text-xs text-muted-foreground">{t('tryKeywords')}</p>
                             </div>
                             <div className="pt-2">
                                 <button 
                                     onClick={() => setQuery('')}
                                     className="text-[10px] font-black uppercase tracking-widest text-primary hover:opacity-70 transition-opacity"
                                 >
-                                    Clear Search
+                                    {t('clearSearch')}
                                 </button>
                             </div>
                         </div>

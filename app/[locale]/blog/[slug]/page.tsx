@@ -28,11 +28,14 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { locale, slug } }: { params: { locale: string, slug: string } }): Promise<Metadata> {
-  const blogsDir = locale === 'en' 
+  let blogsDir = locale === 'en' 
     ? path.join(process.cwd(), 'seo-blogs')
     : path.join(process.cwd(), 'seo-blogs', locale);
     
-  if (!fs.existsSync(blogsDir)) return {};
+  // FALLBACK: If translation folder doesn't exist, use English
+  if (!fs.existsSync(blogsDir) || !fs.readdirSync(blogsDir).some(f => f.includes(slug))) {
+    blogsDir = path.join(process.cwd(), 'seo-blogs');
+  }
 
   const fileFound = fs.readdirSync(blogsDir).find(f => f.includes(slug));
   if (!fileFound) return {};
@@ -77,11 +80,14 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
 }
 
 export default async function BlogDetailPage({ params: { locale, slug } }: { params: { locale: string, slug: string } }) {
-  const blogsDir = locale === 'en' 
+  let blogsDir = locale === 'en' 
     ? path.join(process.cwd(), 'seo-blogs')
     : path.join(process.cwd(), 'seo-blogs', locale);
     
-  if (!fs.existsSync(blogsDir)) notFound();
+  // FALLBACK: If translation doesn't exist yet, use English original
+  if (!fs.existsSync(blogsDir) || !fs.readdirSync(blogsDir).some(f => f.includes(slug))) {
+    blogsDir = path.join(process.cwd(), 'seo-blogs');
+  }
 
   const fileFound = fs.readdirSync(blogsDir).find(f => f.includes(slug));
   if (!fileFound) notFound();
@@ -139,10 +145,10 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
         <footer className="mt-40 p-12 bg-secondary/30 rounded-[3rem] border-2 border-border/40 text-center">
             <h3 className="text-2xl font-bold mb-4">{t('aboutAynzo')}</h3>
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-              Aynzo provides 100+ high-quality online tools to help everyone from developers to writers streamline their digital workflow with privacy first.
+              {t('aboutDescription')}
             </p>
             <Link href="/" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-black text-sm uppercase tracking-widest rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">
-               Explore Tools <ArrowLeft className="rotate-180" size={16}/>
+               {t('exploreTools')} <ArrowLeft className="rotate-180" size={16}/>
             </Link>
         </footer>
       </div>

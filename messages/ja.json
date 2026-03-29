@@ -57,7 +57,8 @@
     "App": {
         "name": "AYNZO",
         "nameHighlight": "TOOLS",
-        "description": "プロフェッショナルオンラインツールスイート"
+        "description": "プロフェッショナルオンラインツールスイート",
+        "metaKeywords": "Aynzoツール, 無料オンラインツール, 画像圧縮, 文字数カウント, PDFツール, オンライン計算機"
     },
     "Navigation": {
         "allTools": "すべてのツール",
@@ -1827,7 +1828,9 @@
                 }
             ],
             "seoTitle": "Regex Tester - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required.無料・高速・安全。登録不要。"
+            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required.無料・高速・安全。登録不要。",
+            "name": "正規表現テスター",
+            "description": "正規表現をテキストに対してテストします。"
         },
         "reverse-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">当社の<strong>オンライン逆テキストツール</strong>で、コミュニケーションを一変させましょう。ユニークなソーシャルメディアのプロフィールを作成したり、パズル用の暗号メッセージを書いたり、あるいは単に言葉を違った視点から見てみたい場合でも、当社の文字反転エンジンは瞬時に結果を提供します。創造的な表現とデジタル遊びのために設計された、楽しく軽量なユーティリティです。</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">単なる逆文字以上の機能</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">テキストの反転とは、文字列を正確な逆順に並べ替えることです。一見シンプルに見えますが、芸術作品のための鏡像テキストの作成から、脱出ゲームやオンラインゲームのための簡単な暗号の生成まで、あらゆる用途に活用できます。</p>当ツールは、記号、空白、複数行の入力を完璧に処理します。</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">ツールの機能</h2>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>文字レベルの反転</strong> すべての文字、スペース、句読点が反転され、真の逆順効果が得られます。</li>\n<li class=\"text-gray-600\"><strong>文レベルのオプション</strong> 単語自体は読みやすく保ちながら、文全体の順序を簡単に反転できます。</li>\n<li class=\"text-gray-600\"><strong>瞬時のミラー出力</strong> 入力と同時にテキストが変化する様子を、遅延なく、ページを更新することなく確認できます。</li>\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">100%ローカルプライバシー</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">メッセージはあなただけのものです。Aynzo Toolsは、すべてのテキスト反転処理をJavaScriptを使用して<strong>あなたのコンピュータ上で直接</strong>行います。</p>お客様のテキストはサーバーにアップロードされることは一切ありません。そのため、秘密のメッセージ、面白いジョーク、クリエイティブな短い文章は常に100％プライベートかつ安全に保たれます。",
@@ -1838,7 +1841,9 @@
                 }
             ],
             "seoTitle": "Reverse Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required.無料・高速・安全。登録不要。"
+            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required.無料・高速・安全。登録不要。",
+            "name": "逆引きテキストジェネレーター",
+            "description": "テキストを反転したり、反転したり、単語を反転したりできます。"
         },
         "bold-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\"> 弊社の<strong>太字テキストジェネレーター</strong>でメッセージを際立たせましょう！この無料オンラインツールは、通常のテキストを太字のUnicode文字に変換し、様々なソーシャルメディアプラットフォーム、メッセージングアプリ、ウェブサイトで使用できます。ポイントを強調したり、目を引く見出しを作成したり、プロフィールに個性を加えたりするのに最適です。</p> <h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">使い方は？</h3> </h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">従来のHTMLの太字タグ（<code>&lt;b&gt;</code>や<code>&lt;strong&gt;</code>）とは異なり、当社のジェネレーターは視覚的に太字として表示される特殊なUnicode文字を使用します。これらは実際のテキスト文字であるため、HTMLフォーマットがサポートされていないソーシャルメディアのプロフィール、コメント、チャットメッセージなど、ほぼすべてのテキストフィールドに貼り付けることができます。</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">主な機能</h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>幅広い互換性：</strong> Instagram、Facebook、Twitter、WhatsAppなどに対応しています。</li>\n<li class=\"text-gray-600\"><strong>瞬時変換：</strong> テキストを入力または貼り付けると、瞬時に変換されます。</li>\n<li class=\"text-gray-600\"><strong>複数の太字スタイル：</strong> さまざまな太字フォントとスタイル（例：太字セリフ、太字サンセリフ）をお試しください。</li>\n<li class=\"text-gray-600\"><strong>コピー＆ペースト：</strong> 簡単にコピー＆ペーストできます。ワンクリックで太字テキストを生成できます。</li>\n</ul>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">太字テキストのクリエイティブな活用法</h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>ソーシャルメディアのプロフィール：</strong> InstagramやTikTokのプロフィールで重要な情報を強調表示できます。</li>\n<li class=\"text-gray-600\"><strong>投稿の強調：</strong> キャプションやツイートの重要な部分を際立たせることができます。</li>\n<li class=\"text-gray-600\"><strong>見出しとタイトル：</strong> オンラインコンテンツにインパクトのある見出しを作成できます。</li>\n<li class=\"text-gray-600\"><strong>メッセージ：</strong> チャットアプリのメッセージを強調表示できます。</li>\n</ul>",
@@ -1849,7 +1854,10 @@
                 }
             ],
             "seoTitle": "Bold Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required.無料・高速・安全。登録不要。"
+            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required.無料・高速・安全。登録不要。",
+            "name": "太字テキストジェネレーター",
+            "description": "Unicode 文字を使用して太字のテキストを生成します。",
+            "seoH1": "ボールド テキスト ジェネレーター: 太いフォントで目立つようにする"
         },
         "word-to-pdf": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">ビジネスの世界では、下書きから最終文書への移行には、多くの場合、PDFへの変換が伴います。Microsoft Wordはコンテンツ作成の世界標準ですが、PDF（Portable Document Format）はコンテンツの配布における標準規格です。<strong>Aynzo <strong>Word to PDF</strong> Converter</strong>は、ピクセル単位の精度でこのギャップを埋めるように設計されており、苦労して作成した文書が、あらゆるデバイスで意図どおりに表示されることを保証します。</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">プロフェッショナルのメリット：WordをPDFに変換する理由</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Wordファイルとして共有された文書は、書式のずれ、フォントの欠落、意図しない編集などが起こりやすい傾向があります。<strong>WordをオンラインでPDFに変換する</strong>ことで、デザインを確実に保持できます。</p>学生が論文を提出する場合、フリーランサーが請求書を送付する場合、企業の役員がレポートを配布する場合など、PDFは編集可能な生のフォーマットでは実現できないレベルのプロフェッショナリズムを提供します。</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">比類のないフォーマット保持</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">無料の変換ツールに関する最も一般的な不満は、ドキュメントが「壊れてしまう」ことです。表がずれたり、画像が重なったり、カスタムフォントが消えたりします。当社のツールは、Microsoft Office自体がレイアウトを処理する方法を模倣した高度なレンダリングロジックを使用しています。以下の形式をサポートしています。</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>複雑なレイアウト：</strong>複数列のレポート、ヘッダー、フッターは100%正確に保持されます。</li>\n<li class=\"text-gray-600\"><strong>動的要素：</strong>ハイパーリンク、目次（TOC）、メタデータは、エクスポートされたPDFでも機能します。</li>\n<li class=\"text-gray-600\"><strong>埋め込みメディア：</strong>高解像度の画像とグラフは、元の鮮明さを損なうことなく変換されます。</li> <li class=\"text-gray-600\"><strong>フォントの整合性：</strong> 標準フォントや一般的なシステムフォントを適切に処理し、タイポグラフィの一貫性を確保します。</li>\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">セキュリティとプライバシー：ドキュメントは安全に保護されます</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">ドキュメントのセキュリティは当社の最優先事項です。トレーニングや広告目的で機密データを保存する多くの「無料」オンラインツールとは異なり、<strong>Aynzo Tools</strong>はプライバシーを最優先に考えています。すべての処理は一時的な暗号化環境で行われます。変換が完了すると、ファイルは自動的に削除されます。ドキュメントの内容を追跡したり、メールアドレスの登録を求めたりすることはありませんので、お客様の身元は匿名で保護されます。</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">高速化：WordからPDFへ数秒で変換</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">時間は貴重なリソースです。当社はサーバーサイドエンジンを最適化し、最大50MBの画像を含む大容量ドキュメントでもわずか数秒で処理できるようにしました。</p>これは、従来のデスクトップソフトウェアのような肥大化を伴わずに、高速なWordからPDFへの変換ツールを必要とする大量ユーザーにとって理想的なツールです。\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">包括的な互換性：.DOCおよび.DOCXに対応</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">従来のWord 97-2003文書（.doc）でも、最新のXMLベースのファイル（.docx）でも、当社のジェネレーターはどちらも簡単に処理できます。この下位互換性により、最も古いアーカイブファイルでも互換性の問題なく最新のPDF規格に変換できます。</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Aynzo <strong>Word to PDF</strong>ツールの使い方</h2>\n<ol>\n<li class=\"text-gray-600\"><strong>ファイルの選択</strong>アップロードボックスをクリックするか、Wordファイルをツールエリアにドラッグ＆ドロップしてください。</li>\n<li class=\"text-gray-600\"><strong>変換待ち</strong>高速レンダリング処理がすぐに開始されます。</li>\n<li class=\"text-gray-600\"><strong>結果のダウンロード</strong>「ダウンロード」ボタンをクリックするだけで、プロフェッショナルなPDFをコンピューターまたはモバイルデバイスに保存できます。</li>\n</ol>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">デスクトップソフトウェアではなくAynzoを選ぶ理由</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Adobe Acrobatのようなソフトウェアは強力ですが、高価でリソースを大量に消費します。日常的な文書作業の99%においては、軽量な<strong>オンライン<strong>Word to PDF</strong>ジェネレーター</strong>の方が効率的です。ソフトウェアのインストール、アップデートの管理、月額料金は一切不要です。</p> Windows、macOS、Linux、さらにはAndroidやiOSのモバイルブラウザでも動作します。",
@@ -1860,7 +1868,10 @@
                 }
             ],
             "seoTitle": "Word To Pdf - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Word To Pdf tool. Fast, secure, and easy to use. No login required.無料・高速・安全。登録不要。"
+            "seoDescription": "Use our free online Word To Pdf tool. Fast, secure, and easy to use. No login required.無料・高速・安全。登録不要。",
+            "name": "WordからPDFへ",
+            "description": "Microsoft Word (DOC/DOCX) ドキュメントを PDF 形式に変換します。",
+            "seoH1": "Word to PDF 無料: Word DOC/DOCX を PDF に変換"
         },
         "seo-score-checker": {
             "content": "< p > Stop guessing why your website isn't ranking. Our **Live <strong>SEO Score Checker</strong>**doesn't just pretend to analyze your site—it actually fetches your live code in real - time.Unlike generic tools that give random numbers, we parse your HTML structure to find the ** exact technical flaws ** holding you back.</p>\n< h3 > How Our Real - Time Scanner Works </h3>\n< p > When you enter a URL, our advanced crawler connects to your website instantly.It reads the public HTML just like Googlebot does, checking for: </p>\n< ul >\n<li class=\"text-gray-600\">** Title & Meta Tags:** We verify if they exist and if they are the perfect length for search snippets.</li>\n<li class=\"text-gray-600\"> ** Header Hiearchy:** We scan your H1, H2, and H3 tags to ensure your content structure is semantic and readable.</li>\n<li class=\"text-gray-600\"> ** Image Accessibility:** We count every image and flag the ones missing 'alt' text, which hurts your accessibility and image search ranking.</li>\n<li class=\"text-gray-600\"> ** Internal & External Links:** We count valid links to judge the crawlability of your page.</li>\n</ul>\n< h3 > Why a 'Real' Score Matters </h3>\n< p > Many free tools simulate results.We don't. If you fix an issue and run the scan again,**you will see your score increase immediately**. This direct feedback loop allows developers and marketers to:</p>\n< ul >\n<li class=\"text-gray-600\">Validate fixes instantly after deploying code.</li>\n< li > Audit competitor pages to see their real metadata strengths.</li>\n< li > Generate accurate reports for clients based on actual page data.</li>\n</ul>\n< h3 > Actionable \"Fix-It\" List </h3>\n< p > We don't just give you a number. We provide a checklist of **Failed**vs**Passed** tests. If your Meta Description is too short, we tell you. If your H1 is missing, we alert you. This tool is your personal SEO assistant, working 24/7 for free.</p>",
@@ -2095,12 +2106,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is Debt-to-Income Ratio (DTI)?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Your Debt-to-Income (DTI) ratio is the percentage of your gross monthly income that goes toward paying debts. Lenders use it as a key metric to evaluate your ability to manage monthly payments and repay borrowed money.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">DTI Thresholds Lenders Look For</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Below 36%: Excellent — most lenders will approve you easily.</li><li class=\"text-gray-600\">36%–43%: Acceptable — some lenders may add conditions.</li><li class=\"text-gray-600\">43%–50%: Risky — approval depends on other factors.</li><li class=\"text-gray-600\">Above 50%: High risk — most lenders will decline your application.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">How to Improve Your DTI</h3><p class=\"mb-4 leading-relaxed text-gray-700\">The two levers are increasing income or reducing debt. Pay off small debts first (the debt snowball method), avoid new credit before applying for a mortgage, and consider refinancing high-interest debt to lower monthly payments.</p>"
         },
         "car-loan-calculator": {
-            "name": "Car Loan Calculator",
+            "name": "車のローンの計算機",
             "description": "Calculate your monthly car loan payments, total interest, and true cost of owning a vehicle.",
             "seoTitle": "[無料] Car Loan Calculator (Free) — Monthly Payment & Interest Cost Estimator",
-            "seoDescription": "Calculate your exact monthly car loan payment, total interest cost, and amortization schedule. Find the best loan term for your budget before visiting a dealership.",
+            "seoDescription": "正確な毎月の自動車ローンの支払い、総利息コスト、償却スケジュールを計算します。ディーラーに行く前に、予算に最適なローン期間を見つけてください。",
             "seoKeywords": "car loan calculator, auto loan calculator, monthly car payment calculator, vehicle loan calculator, car finance calculator, auto payment estimator, car loan interest calculator, used car loan calculator",
-            "seoH1": "Free Car Loan Calculator: Monthly Payment & Total Cost",
+            "seoH1": "無料の自動車ローン計算ツール: 月々の支払い額と総額",
             "faq": [
                 {
                     "question": "What credit score do I need for the best car loan rate?",
@@ -2126,12 +2137,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How Car Loan Calculations Work</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A <strong>car loan calculator</strong> helps you understand the true cost of financing a vehicle before you sign anything at the dealership. The monthly payment is calculated using the standard amortization formula based on loan amount, interest rate, and term.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Key Factors That Affect Your Payment</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Loan Amount: Car price minus your down payment and trade-in value.</li><li class=\"text-gray-600\">APR (Annual Percentage Rate): Your credit score is the biggest determinant. A 760+ score can get rates below 5%, while sub-600 scores may face 15%+ rates.</li><li class=\"text-gray-600\">Loan Term: Longer terms (72-84 months) lower monthly payments but dramatically increase total interest paid.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Dealer vs. Bank Financing</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Always get pre-approved from your bank or credit union before visiting a dealer. Dealers often mark up the interest rate and earn a commission. Having a competing offer gives you negotiation power on both the car price and the financing rate.</p>"
         },
         "credit-card-payoff-calculator": {
-            "name": "Credit Card Payoff Calculator",
+            "name": "クレジットカードの支払い計算ツール",
             "description": "Calculate how long it will take to pay off credit card debt and how much interest you will pay.",
             "seoTitle": "[無料] Credit Card Payoff Calculator (Free) — Debt-Free Date & Interest Estimator",
-            "seoDescription": "Find your credit card debt-free date. Compare fixed monthly payments vs paying a set amount. See exactly how much interest you'll save by paying more each month.",
+            "seoDescription": "クレジットカードの借金がなくなる日を見つけてください。毎月の定額支払いと定額支払いを比較します。毎月の支払いを増やすことでどれだけ利息を節約できるかを正確に確認できます。",
             "seoKeywords": "credit card payoff calculator, credit card debt calculator, pay off credit card, credit card interest calculator, debt free calculator, minimum payment credit card, snowball debt calculator",
-            "seoH1": "Credit Card Payoff Calculator: See Your Debt-Free Date",
+            "seoH1": "クレジット カードの返済計算ツール: 無借金の日を確認する",
             "faq": [
                 {
                     "question": "What happens if I only pay the minimum balance?",
@@ -2157,12 +2168,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">The Real Cost of Minimum Payments</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Making only the minimum payment on a credit card is one of the most expensive financial decisions you can make. On a $5,000 balance at 20% APR with a $100 minimum payment, it takes over 10 years to pay off and costs over $7,000 in interest — more than the original debt.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Debt Avalanche Method</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Pay the minimum on all cards, then put every extra dollar toward the card with the highest interest rate. This mathematically minimizes total interest paid.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Debt Snowball Method</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Ignore interest rates. Pay off the smallest balance first for psychological wins and momentum. Research shows this method leads to higher debt-free success rates despite being mathematically sub-optimal.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Power of Adding Just $50 Extra</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Adding just $50 extra to your monthly payment can often cut years off your payoff timeline and save hundreds or thousands in interest. Use this calculator to see your personalized impact.</p>"
         },
         "savings-goal-calculator": {
-            "name": "Savings Goal Calculator",
+            "name": "貯蓄目標計算ツール",
             "description": "Calculate how much to save monthly to reach your financial goals by a target date.",
             "seoTitle": "[無料] Savings Goal Calculator (Free) — Monthly Savings Planner & Target Date Estimator",
-            "seoDescription": "Set a savings goal and find out exactly how much to save monthly to reach it. Includes compound interest growth and emergency fund planning. Free savings calculator.",
+            "seoDescription": "貯蓄目標を設定し、それを達成するために毎月いくら貯蓄すればよいかを正確に把握します。複利成長と緊急資金計画が含まれます。無料の貯蓄計算機。",
             "seoKeywords": "savings goal calculator, how much to save calculator, monthly savings calculator, savings target date calculator, compound interest savings, emergency fund calculator, financial goal planner",
-            "seoH1": "Savings Goal Calculator: Plan Your Financial Future",
+            "seoH1": "貯蓄目標計算ツール: 将来の経済的計画を立てる",
             "faq": [
                 {
                     "question": "How much should I save each month?",
@@ -2188,12 +2199,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">The Foundation of Financial Planning: Goal-Based Saving</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Every major financial goal — from a vacation to a house down payment — starts with a clear savings target and a realistic monthly contribution plan. Our <strong>Savings Goal Calculator</strong> shows you the exact monthly amount needed and how compound interest accelerates your progress.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Emergency Fund: Priority #1</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Before saving for any other goal, financial experts universally recommend building an emergency fund of 3-6 months of living expenses. This prevents you from going into debt when unexpected costs arise. Use this calculator to plan your emergency fund timeline.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">High-Yield Savings Accounts</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Traditional savings accounts earn 0.01% APY. High-yield savings accounts (HYSAs) from online banks often pay 4-5% APY. On a $20,000 goal, this difference can mean hundreds of dollars of free compound interest each year.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Automate Your Savings</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Set up automatic transfers on payday. Research shows that people who automate savings consistently reach their goals faster than those who save whatever's 'left over' each month.</p>"
         },
         "freelance-tax-calculator": {
-            "name": "Freelance Tax Calculator",
+            "name": "フリーランスの税金計算ツール",
             "description": "Estimate your US freelance taxes including self-employment tax and quarterly payments.",
             "seoTitle": "[無料] Freelance Tax Calculator (Free) — Self-Employment & Quarterly Tax Estimator 2024",
-            "seoDescription": "Calculate your freelance taxes for 2024. Instantly see your self-employment tax, federal income tax, effective rate, and quarterly estimated payments. Built for US freelancers.",
+            "seoDescription": "2024 年のフリーランスの税金を計算します。自営業税、連邦所得税、実効税率、および四半期ごとの推定支払額をすぐに確認できます。米国のフリーランサー向けに構築されました。",
             "seoKeywords": "freelance tax calculator, self-employment tax calculator, 1099 tax calculator, quarterly tax calculator, estimated tax payments 2024, independent contractor tax, gig worker tax calculator, freelancer taxes USA",
-            "seoH1": "Freelance Tax Calculator 2024: Self-Employment & Quarterly Taxes",
+            "seoH1": "フリーランスの税金計算ツール 2024: 自営業税と四半期税",
             "faq": [
                 {
                     "question": "What percentage of my freelance income should I set aside for taxes?",
@@ -2219,12 +2230,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Understanding Freelance Taxes in the USA</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Freelancers and independent contractors are responsible for paying both the employee and employer portions of Social Security and Medicare taxes — collectively called the Self-Employment (SE) Tax. This currently totals 15.3% (12.4% Social Security + 2.9% Medicare) on net self-employment income.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Self-Employment Tax Deduction</h3><p class=\"mb-4 leading-relaxed text-gray-700\">You can deduct 50% of your self-employment tax from your gross income before calculating income tax. This partially offsets the burden compared to traditional employees.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Quarterly Estimated Tax Payments</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Freelancers must pay taxes quarterly (April 15, June 15, September 15, January 15) or face IRS underpayment penalties. Each quarterly payment should be approximately 25% of your estimated annual tax liability.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Key Business Deductions to Track</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Home office (dedicated workspace)</li><li class=\"text-gray-600\">Equipment and software</li><li class=\"text-gray-600\">Health insurance premiums</li><li class=\"text-gray-600\">Business travel and mileage</li><li class=\"text-gray-600\">Professional development and subscriptions</li><li class=\"text-gray-600\">Retirement contributions (SEP-IRA, Solo 401k)</li></ul>"
         },
         "tdee-calculator": {
-            "name": "TDEE Calculator",
+            "name": "TDEE 計算機",
             "description": "Calculate your Total Daily Energy Expenditure to know exactly how many calories to eat for your goals.",
             "seoTitle": "[無料] TDEE Calculator (Free) — Total Daily Energy Expenditure & Calorie Calculator",
-            "seoDescription": "Calculate your TDEE (Total Daily Energy Expenditure) based on age, weight, height, and activity level. Find your maintenance calories, caloric deficit for weight loss, and surplus for muscle gain.",
+            "seoDescription": "",
             "seoKeywords": "TDEE calculator, total daily energy expenditure, maintenance calories, calorie calculator, BMR calculator, weight loss calories, calorie deficit calculator, how many calories should I eat, TDEE weight loss",
-            "seoH1": "TDEE Calculator: Find Your Total Daily Calorie Needs",
+            "seoH1": "TDEE 計算ツール: 1 日に必要な総カロリーを計算します",
             "faq": [
                 {
                     "question": "How accurate is a TDEE calculator?",
@@ -2250,12 +2261,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is TDEE?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns in a 24-hour period, accounting for everything from basic biological functions to exercise and daily activities. It is the most important number in any body composition plan.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">TDEE vs BMR</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Your Basal Metabolic Rate (BMR) is the calories your body burns at complete rest. Your TDEE multiplies your BMR by an activity factor. Our calculator uses the Mifflin-St Jeor equation, considered the most accurate formula for most people.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Using TDEE for Your Goals</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Weight Loss: Create a 500-calorie daily deficit (eat TDEE minus 500). This creates approximately 1 pound of fat loss per week.</li><li class=\"text-gray-600\">Muscle Gain: Eat in a 200-300 calorie surplus above TDEE to minimize fat gain while building muscle.</li><li class=\"text-gray-600\">Maintenance: Eat at your TDEE. Your weight should stay stable over time.</li></ul>"
         },
         "pregnancy-due-date-calculator": {
-            "name": "Pregnancy Due Date Calculator",
+            "name": "妊娠予定日計算ツール",
             "description": "Calculate your pregnancy due date, trimester dates, and key milestones from your LMP.",
             "seoTitle": "[無料] Pregnancy Due Date Calculator (Free) — Calculate Your Baby's Arrival Date",
-            "seoDescription": "Calculate your pregnancy due date instantly based on your last menstrual period (LMP) or conception date. See all trimester dates, gestational age, and key milestones.",
+            "seoDescription": "最終月経期間 (LMP) または妊娠日に基づいて、妊娠予定日を即座に計算します。すべての妊娠期の日付、在胎週数、主要なマイルストーンを表示します。",
             "seoKeywords": "pregnancy due date calculator, due date calculator, LMP calculator, when is my baby due, pregnancy calendar, gestational age calculator, trimester calculator, conception date calculator, baby due date",
-            "seoH1": "Pregnancy Due Date Calculator: Know When Your Baby Arrives",
+            "seoH1": "妊娠予定日計算ツール: 赤ちゃんがいつ生まれるかを知る",
             "faq": [
                 {
                     "question": "How accurate is a due date calculated from LMP?",
@@ -2281,12 +2292,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How is a Pregnancy Due Date Calculated?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">The standard method for calculating a pregnancy due date is Naegele's Rule: add 280 days (40 weeks) to the first day of your Last Menstrual Period (LMP). This is used by most healthcare providers worldwide.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Three Trimesters</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">First Trimester (Weeks 1-12): Critical organ development. Morning sickness is common. The embryo becomes a fetus.</li><li class=\"text-gray-600\">Second Trimester (Weeks 13-27): Often called the 'golden trimester.' Energy returns, baby movements begin (quickening), and sex can usually be determined.</li><li class=\"text-gray-600\">Third Trimester (Weeks 28-40): Rapid fetal growth and preparation for delivery. Prenatal visits become more frequent.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Important Note</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Only about 5% of babies are born on their exact due date. Most arrive within 2 weeks before or after. Your OB or midwife may adjust your due date after an early ultrasound for more accuracy.</p>"
         },
         "macro-calculator": {
-            "name": "Macro Calculator",
+            "name": "マクロ計算機",
             "description": "Calculate your ideal macronutrient ratio of protein, carbs, and fats for your fitness goal.",
             "seoTitle": "[無料] Macro Calculator (Free) — Protein, Carb & Fat Ratio for Weight Loss & Muscle Gain",
-            "seoDescription": "Calculate your perfect daily macros for weight loss, muscle gain, or maintenance. Get exact grams of protein, carbs, and fat based on your TDEE and fitness goals. Free macro tracker.",
+            "seoDescription": "減量、筋肉増加、維持のための完璧な毎日のマクロを計算します。 TDEE とフィットネスの目標に基づいて、タンパク質、炭水化物、脂肪の正確なグラムを取得します。無料のマクロトラッカー。",
             "seoKeywords": "macro calculator, macronutrient calculator, protein calculator, how many grams of protein per day, IIFYM calculator, carb calculator, fat loss macros, muscle building macros, flexible dieting calculator",
-            "seoH1": "Macro Calculator: Find Your Perfect Protein, Carb & Fat Split",
+            "seoH1": "マクロ計算機: 完璧なタンパク質、炭水化物、脂肪の分割を見つけます",
             "faq": [
                 {
                     "question": "How many grams of protein do I need per day?",
@@ -2343,12 +2354,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is Ideal Body Weight?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Ideal body weight (IBW) is a clinical estimate of the most healthy weight for a given height and gender. It is used by healthcare professionals for drug dosing, anesthesia, ventilator settings, and general health benchmarking. However, it is not a one-size-fits-all answer.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The 4 Clinical Formulas Compared</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Hamwi (1964): The oldest and most commonly referenced. Used in clinical settings worldwide.</li><li class=\"text-gray-600\">Devine (1974): Originally developed for medication dosing. Widely used in pharmacology.</li><li class=\"text-gray-600\">Robinson (1983): A modified Devine formula, producing slightly different results for each gender.</li><li class=\"text-gray-600\">Miller (1983): Generally produces the lowest (lightest) estimate of the four formulas.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">IBW vs. BMI vs. Body Fat %</h3><p class=\"mb-4 leading-relaxed text-gray-700\">IBW formulas don't account for muscle mass or body composition. A muscular athlete may weigh more than their IBW while having an excellent health profile. Body fat percentage is a more accurate health indicator than weight alone.</p>"
         },
         "chatgpt-prompt-generator": {
-            "name": "ChatGPT Prompt Generator",
+            "name": "ChatGPT プロンプト ジェネレーター",
             "description": "Generate powerful, optimized prompts for ChatGPT, Claude, Gemini, and other AI models.",
             "seoTitle": "[無料] ChatGPT Prompt Generator (Free) — AI Prompt Templates for Writing, Coding & Marketing",
-            "seoDescription": "Generate perfect ChatGPT prompts instantly. Choose from 10+ expert templates for writing, coding, marketing, and learning. Customize and copy into any AI model in seconds.",
+            "seoDescription": "完璧な ChatGPT プロンプトを即座に生成します。執筆、コーディング、マーケティング、学習用の 10 種類以上のエキスパート テンプレートからお選びください。カスタマイズして任意の AI モデルに数秒でコピーします。",
             "seoKeywords": "ChatGPT prompt generator, AI prompt generator, ChatGPT prompts, best ChatGPT prompts, prompt engineering tool, Claude prompts, Gemini prompts, AI writing prompts, free prompt generator",
-            "seoH1": "ChatGPT Prompt Generator: Create Perfect AI Prompts Instantly",
+            "seoH1": "ChatGPT プロンプト ジェネレーター: 完璧な AI プロンプトを即座に作成",
             "faq": [
                 {
                     "question": "What is prompt engineering?",
@@ -2374,12 +2385,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What Makes a Great AI Prompt?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A well-engineered prompt is the difference between a generic, mediocre AI response and a highly specific, actionable output that saves you hours of work. Prompt engineering is the skill of crafting instructions that guide AI models to produce exactly what you need.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The 5 Elements of a High-Quality Prompt</h3><ol><li class=\"text-gray-600\">Role: Tell the AI who to be (\"Act as a senior marketing strategist\").</li><li class=\"text-gray-600\">Task: Clearly define what you want (\"Write a product description\").</li><li class=\"text-gray-600\">Context: Provide relevant background (\"Target audience: busy parents, age 30-45\").</li><li class=\"text-gray-600\">Format: Specify the output structure (\"200 words, bullet points, professional tone\").</li><li class=\"text-gray-600\">Constraints: Set boundaries (\"Do NOT use jargon. Include a clear CTA\").</li></ol><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Works with All Major AI Models</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Our prompts are designed to work with ChatGPT (GPT-4, GPT-4o), Claude (Anthropic), Gemini (Google), and Llama. Simply select a template, customize the placeholders, and paste into your preferred AI.</p>"
         },
         "ai-content-detector": {
-            "name": "AI Content Detector",
+            "name": "AI コンテンツ検出器",
             "description": "Detect if text was written by AI or a human using heuristic pattern analysis.",
             "seoTitle": "[無料] AI Content Detector (Free) — Check If Text Was Written by ChatGPT or AI",
-            "seoDescription": "Detect AI-generated content instantly. Paste any text to analyze for ChatGPT, Claude, or other AI writing signals. Get a percentage score and see which detection signals were found.",
+            "seoDescription": "AI が生成したコンテンツを即座に検出します。 ChatGPT、Claude、またはその他の AI 書き込み信号を分析するテキストを貼り付けます。パーセントスコアを取得し、どの検出信号が見つかったかを確認します。",
             "seoKeywords": "AI content detector, ChatGPT detector, AI text detector, detect AI writing, is this AI written, AI generated content checker, AI plagiarism detector, GPT detector free, AI humanizer detector",
-            "seoH1": "Free AI Content Detector: Is This Text Written by AI?",
+            "seoH1": "無料の AI コンテンツ検出器: このテキストは AI によって書かれたものですか?",
             "faq": [
                 {
                     "question": "How accurate is AI content detection?",
@@ -2436,12 +2447,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Create Realistic Handwriting from Any Text</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Our <strong>Text to Handwriting</strong> Converter uses authentic Google handwriting fonts rendered on an HTML5 Canvas to produce realistic, downloadable handwriting images. It's perfect for creating personal-looking notes, artistic content, or school assignment aesthetics.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">5 Authentic Handwriting Styles</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Caveat: Casual, everyday handwriting — natural and approachable.</li><li class=\"text-gray-600\">Dancing Script: Elegant, flowing cursive — ideal for invitations and certificates.</li><li class=\"text-gray-600\">Patrick Hand: Clean print style — the most legible for notes.</li><li class=\"text-gray-600\">Shadows Into Light: Light, airy script — perfect for artistic content.</li><li class=\"text-gray-600\">Indie Flower: Fun, quirky style — very popular for social media content.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Privacy & Performance</h3><p class=\"mb-4 leading-relaxed text-gray-700\">All rendering is done entirely in your browser using the HTML5 Canvas API. No text is ever sent to a server. You can even use it offline once the fonts are cached.</p>"
         },
         "grammar-checker": {
-            "name": "Grammar Checker",
+            "name": "文法チェッカー",
             "description": "Check and fix grammar, spelling, and punctuation errors in your text instantly.",
             "seoTitle": "[無料] Free Grammar Checker Online — Check & Fix Grammar, Spelling & Punctuation",
-            "seoDescription": "Fix grammar mistakes instantly with our free online grammar checker. Detect common errors including wrong contractions, misspellings, incorrect articles, and verb tense mistakes. No signup required.",
+            "seoDescription": "無料のオンライン文法チェッカーを使用して、文法の間違いを即座に修正します。間違った短縮形、スペルミス、冠詞の誤り、動詞の時制の間違いなどの一般的なエラーを検出します。サインアップは必要ありません。",
             "seoKeywords": "grammar checker, free grammar checker online, grammar check, grammar fixer, spell checker, punctuation checker, English grammar checker, writing grammar tool, check my grammar, grammar correction",
-            "seoH1": "Free Online Grammar Checker: Fix Errors Instantly",
+            "seoH1": "無料のオンライン文法チェッカー: エラーを即座に修正",
             "faq": [
                 {
                     "question": "Is this grammar checker free?",
@@ -2467,12 +2478,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Why Correct Grammar Matters</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Grammar errors undermine credibility, confuse readers, and can cost you professionally. Whether you're writing a cover letter, an email to a client, or a blog post, correct grammar builds trust and authority. Our free <strong>grammar checker</strong> helps you catch the most common mistakes before they reach your audience.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Grammar Mistakes We Catch</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Contraction Errors: 'dont' → 'don't', 'wont' → 'won't'</li><li class=\"text-gray-600\">Verb Agreement: 'should of' → 'should have'</li><li class=\"text-gray-600\">Homophone Confusion: 'their is' → 'there is', 'your welcome' → 'you're welcome'</li><li class=\"text-gray-600\">Common Misspellings: 'definately' → 'definitely', 'recieve' → 'receive'</li><li class=\"text-gray-600\">Punctuation: Missing commas after conjunctive adverbs</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">When to Use a <strong>Grammar Checker</strong></h3><p class=\"mb-4 leading-relaxed text-gray-700\">Before sending any important email, submitting writing, or publishing online content. Even professional writers use grammar tools as a final check — it's not a sign of weakness but of diligence.</p>"
         },
         "tiktok-hashtag-generator": {
-            "name": "TikTok Hashtag Generator",
+            "name": "TikTokハッシュタグジェネレーター",
             "description": "Generate trending TikTok hashtags by category to maximize video reach and views.",
             "seoTitle": "[無料] TikTok Hashtag Generator (Free) — Trending Tags to Boost Your Video Views",
-            "seoDescription": "Get the best TikTok hashtags for your niche instantly. Choose from 8 categories including Entertainment, Music, Gaming, Fitness, and Fashion. Copy all tags with one click. Boost your FYP reach.",
+            "seoDescription": "あなたのニッチに最適な TikTok ハッシュタグをすぐに入手できます。エンターテインメント、音楽、ゲーム、フィットネス、ファッションを含む 8 つのカテゴリから選択します。ワンクリックですべてのタグをコピーします。 FYP リーチを拡大します。",
             "seoKeywords": "TikTok hashtag generator, TikTok hashtags, best TikTok hashtags, trending TikTok tags, hashtags for TikTok views, TikTok FYP hashtags, viral TikTok hashtags, TikTok hashtag tool 2024",
-            "seoH1": "TikTok Hashtag Generator: Get Viral Hashtags for Your Videos",
+            "seoH1": "TikTok ハッシュタグ ジェネレーター: あなたの動画に人気のハッシュタグを取得",
             "faq": [
                 {
                     "question": "Do hashtags help TikTok videos go viral?",
@@ -2498,12 +2509,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How TikTok Hashtags Work in 2024</h2><p class=\"mb-4 leading-relaxed text-gray-700\">TikTok's algorithm uses hashtags to understand your content and distribute it to interested users. Unlike Instagram and Twitter, TikTok's primary discovery mechanism is the For You Page (FYP), which is driven by engagement signals — but hashtags help bootstrap distribution to the right audience.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Best TikTok Hashtag Strategy</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Use 3-5 hashtags, not 30: More isn't better. Overstuffed captions look spammy and dilute your signal.</li><li class=\"text-gray-600\">Mix tiers: 1-2 mega-tags (#fyp, millions of posts), 2-3 niche tags (thousands of posts), 1 trending tag.</li><li class=\"text-gray-600\">#fyp and #foryou work, but aren't magic: They're signals, not guarantees. Quality content is the primary driver.</li><li class=\"text-gray-600\">Niche hashtags win: A smaller, targeted hashtag (#veganfitness vs #fitness) puts you in front of more relevant viewers.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Category-Specific Strategy</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Each content niche has different high-performing tags. Entertainment content dominates with broad FYP tags, while niche communities like gaming and fitness respond better to specific community hashtags.</p>"
         },
         "bio-link-generator": {
-            "name": "Bio Link Generator",
+            "name": "バイオリンクジェネレーター",
             "description": "Create a free Linktree-style bio link page with your name, bio, and custom links.",
             "seoTitle": "[無料] Free Bio Link Generator — Create Your Linktree-Style Page Instantly",
-            "seoDescription": "Build a free bio link page like Linktree in seconds. Add your name, bio, and unlimited links. Get clean HTML code to host anywhere. No account needed — completely free bio link creator.",
+            "seoDescription": "Linktree のような無料の自己紹介リンク ページを数秒で作成できます。あなたの名前、経歴、無制限のリンクを追加します。クリーンな HTML コードを取得して、どこでもホストできます。アカウントは必要ありません - 完全に無料のバイオリンク作成者。",
             "seoKeywords": "bio link generator, free linktree alternative, bio link page, link in bio, create linktree, social media bio link, instagram bio link, free link page creator, one link bio",
-            "seoH1": "Free Bio Link Generator: Create Your Linktree Alternative Page",
+            "seoH1": "無料の Bio Link Generator: Linktree の代替ページを作成する",
             "faq": [
                 {
                     "question": "Is this a free Linktree alternative?",
@@ -2529,12 +2540,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Bio Link Page?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A bio link page (popularized by Linktree) is a single URL you put in your Instagram, TikTok, or Twitter bio that contains multiple links to your website, shop, social profiles, and other destinations. Instead of being limited to one link in your bio, you have unlimited links on one elegant page.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Why You Need a Bio Link Page</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Instagram and TikTok limit you to 1 bio link. A bio link page turns that single link into unlimited destinations.</li><li class=\"text-gray-600\">Perfect for creators and businesses with multiple revenue streams, products, or platforms.</li><li class=\"text-gray-600\">Increases traffic and conversions by making it easy for followers to find everything in one place.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Host It Anywhere for Free</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Our generator creates clean, standalone HTML code you can host for free on GitHub Pages, Netlify, Vercel, or add to your existing website. No monthly subscription unlike Linktree Pro.</p>"
         },
         "youtube-money-calculator": {
-            "name": "YouTube Money Calculator",
+            "name": "YouTube お金の計算ツール",
             "description": "Estimate your YouTube channel ad revenue based on views and RPM.",
             "seoTitle": "[無料] YouTube Money Calculator (Free) — Estimate Channel Revenue from Views",
-            "seoDescription": "Calculate YouTube ad revenue instantly. Enter your daily views and RPM to see estimated daily, monthly, and yearly earnings. Includes monetized view percentage. Free YouTube earnings estimator.",
+            "seoDescription": "YouTube の広告収益を瞬時に計算します。日次ビューと RPM を入力すると、日次、月次、年間の推定収益が表示されます。収益化された視聴率が含まれます。無料の YouTube 収益見積もりツール。",
             "seoKeywords": "YouTube money calculator, YouTube earnings calculator, how much does YouTube pay, YouTube revenue calculator, YouTube RPM calculator, YouTube CPM calculator, YouTube income estimator, how to make money on YouTube",
-            "seoH1": "YouTube Money Calculator: Estimate Your Channel Ad Revenue",
+            "seoH1": "YouTube Money Calculator: チャンネルの広告収入を見積もる",
             "faq": [
                 {
                     "question": "How much does YouTube pay per 1,000 views?",
@@ -2560,12 +2571,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How YouTube Pays Creators</h2><p class=\"mb-4 leading-relaxed text-gray-700\">YouTube pays creators through AdSense based on the number of monetized views and the RPM (Revenue Per Mille) — the actual revenue earned per 1,000 views after YouTube's 45% cut. RPM is the real-world metric, while CPM is what advertisers pay before the revenue split.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Why RPM Varies So Much</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Niche: Finance, legal, and B2B videos command $10-30+ RPM. Entertainment and gaming typically see $2-5 RPM.</li><li class=\"text-gray-600\">Geography: US, UK, Canada, and Australia viewers are worth 5-10x more than viewers in developing countries.</li><li class=\"text-gray-600\">Seasonality: Q4 (October-December) has the highest ad spending — RPM can be 2-3x higher than Q1.</li><li class=\"text-gray-600\">Video length: Videos over 8 minutes can include mid-roll ads, significantly increasing revenue per view.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Revenue Beyond AdSense</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Smart creators diversify their income: YouTube memberships, Super Chats, merchandise, sponsorships, and affiliate marketing often make up the majority of a successful channel's income.</p>"
         },
         "crontab-generator": {
-            "name": "Crontab Generator",
+            "name": "Crontab ジェネレーター",
             "description": "Generate and validate Linux cron expressions with human-readable descriptions.",
             "seoTitle": "[無料] Crontab Generator (Free) — Build & Validate Cron Expressions Online",
-            "seoDescription": "Generate and validate Linux crontab expressions instantly. Choose from common presets or build a custom cron schedule. Instantly see a human-readable description of your cron job timing.",
+            "seoDescription": "Linux crontab 式を即座に生成して検証します。一般的なプリセットから選択するか、カスタム cron スケジュールを構築します。 cron ジョブのタイミングに関する人間が読める形式の説明がすぐに表示されます。",
             "seoKeywords": "crontab generator, cron expression generator, cron job generator, cron schedule builder, linux cron syntax, crontab examples, cron expression validator, cron to english, cron expression explainer",
-            "seoH1": "Crontab Generator: Build Cron Expressions & Understand Their Timing",
+            "seoH1": "Crontab ジェネレーター: Cron 式を構築し、そのタイミングを理解する",
             "faq": [
                 {
                     "question": "How do I edit my crontab on Linux?",
@@ -2589,6 +2600,62 @@
                 }
             ],
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Cron Job?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A cron job is a scheduled task in Unix/Linux systems that runs automatically at specified intervals. Defined in the <em>crontab</em> (cron table) file, they're used for automated backups, report generation, database maintenance, API calls, and server monitoring.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Cron Expression Format</h3><p class=\"mb-4 leading-relaxed text-gray-700\">A cron expression has 5 fields: <code>MINUTE HOUR DAY MONTH WEEKDAY</code>. Each field accepts specific values and wildcards:</p><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\"><code>*</code> — any value (every minute, every hour, etc.)</li><li class=\"text-gray-600\"><code>*/n</code> — every n units (*/5 = every 5 minutes)</li><li class=\"text-gray-600\"><code>a,b</code> — multiple values (1,15 = 1st and 15th)</li><li class=\"text-gray-600\"><code>a-b</code> — range (1-5 = Monday through Friday)</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Cron Job Use Cases</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">0 0 * * * — Daily backup at midnight</li><li class=\"text-gray-600\">*/5 * * * * — API health check every 5 minutes</li><li class=\"text-gray-600\">0 9 * * 1-5 — Daily report email every weekday at 9am</li><li class=\"text-gray-600\">0 0 1 * * — Monthly invoice generation</li></ul>"
+        },
+        "double-underline-text": {
+            "name": "二重下線テキスト",
+            "description": "ソーシャル メディア用の二重下線付きテキストを生成します。",
+            "seoTitle": "二重下線テキストをオンラインで無料 - 二重下線テキストを使用する",
+            "seoDescription": "Use Double Underline Text online free. Fast and secure processing.ログイン不要、高速、安全。日常の作業に最適です。",
+            "seoH1": "二重下線テキスト無料: 二重下線テキストを使用します。"
+        },
+        "cursive-text": {
+            "name": "筆記体テキストジェネレーター",
+            "description": "ソーシャルメディア用の筆記体/スクリプトテキストを生成します。",
+            "seoTitle": "無料オンライン筆記体テキスト ジェネレーター - 筆記体テキスト ジェネレーターを使用する",
+            "seoDescription": "筆記体テキストジェネレーターをオンラインで無料で使用してください。高速かつ安全な処理。ログイン不要、高速、安全。日常の作業に最適です。",
+            "seoH1": "筆記体テキスト ジェネレーター 無料: 筆記体テキスト ジェネレーターを使用する"
+        },
+        "currency-converter": {
+            "name": "通貨換算ツール",
+            "description": "ライブレートで異なる通貨間で換算します。",
+            "seoTitle": "無料オンライン通貨換算ツール - リアルタイム為替レート",
+            "seoDescription": "オンラインで通貨を無料で変換します。 150 以上の通貨のリアルタイム為替レート。ログイン不要、高速、正確。旅行やビジネスに最適です。",
+            "seoH1": "無料の通貨コンバータ: リアルタイムの為替レート"
+        },
+        "401k-retirement-calculator": {
+            "name": "401k 退職金計算ツール",
+            "description": "雇用主とのマッチングを利用して 401k の成長を予測し、退職の計画を立てましょう。",
+            "seoTitle": "401k 退職金計算ツール - 米国ナンバー 1 の無料ウェルス プランナー",
+            "seoDescription": "退職時の 401k 残高を計算します。雇用主のマッチング、昇給、複合的な成長が含まれます。今すぐ米国の退職後の貯蓄を計画しましょう。",
+            "seoH1": "401k 退職金計算ツール: 将来の資産を計画する"
+        },
+        "image-format-converter": {
+            "name": "画像フォーマットコンバータ",
+            "description": "オンラインで JPG、PNG、WebP、GIF、BMP 形式の間で画像を無料で変換します。"
+        },
+        "merge-pdf": {
+            "name": "PDFを結合",
+            "description": "複数の PDF ファイルを 1 つのドキュメントに結合します。"
+        },
+        "split-pdf": {
+            "name": "PDFの分割",
+            "description": "PDF ファイルを複数の個別のドキュメントに分割します。"
+        },
+        "gpa-calculator": {
+            "name": "GPA計算機",
+            "description": "成績と単位に基づいて大学または高校の GPA を計算します。"
+        },
+        "salary-calculator": {
+            "name": "給与から時給の計算ツール",
+            "description": "年間給与を時給、週給、月給に換算します。"
+        },
+        "tip-calculator": {
+            "name": "チップ計算機",
+            "description": "チップをすばやく計算し、友人間で割り勘できます。"
+        },
+        "json-to-typescript": {
+            "name": "JSON から TypeScript へ",
+            "description": "JSON オブジェクトを TypeScript インターフェイスに自動的に変換します。"
         }
     },
     "Common": {

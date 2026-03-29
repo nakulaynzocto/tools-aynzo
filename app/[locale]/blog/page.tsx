@@ -25,10 +25,15 @@ export default async function BlogListPage({ params: { locale } }: { params: { l
   const t = await getTranslations({ locale, namespace: 'Blog' });
   
   // Read blogs from seo-blogs directory
-  // For 'en', use root seo-blogs. For others, use subdirectory.
-  const blogsDir = locale === 'en' 
+  // For 'en', use root seo-blogs. For others, use subdirectory with fallback to 'en'.
+  let blogsDir = locale === 'en' 
     ? path.join(process.cwd(), 'seo-blogs')
     : path.join(process.cwd(), 'seo-blogs', locale);
+    
+  // If locale directory doesn't exist yet, fallback to English
+  if (!fs.existsSync(blogsDir)) {
+    blogsDir = path.join(process.cwd(), 'seo-blogs');
+  }
     
   let blogs: any[] = [];
   

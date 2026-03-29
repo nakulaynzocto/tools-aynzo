@@ -57,7 +57,8 @@
     "App": {
         "name": "AYNZO",
         "nameHighlight": "TOOLS",
-        "description": "Suite di Strumenti Online Professionale"
+        "description": "Suite di Strumenti Online Professionale",
+        "metaKeywords": "Strumenti Aynzo, strumenti online gratuiti, compressore immagini, contatore parole, strumenti PDF, calcolatore online"
     },
     "Navigation": {
         "allTools": "Tutti gli Strumenti",
@@ -2306,7 +2307,9 @@
                 }
             ],
             "seoTitle": "Regex Tester - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required. Gratuito, veloce e sicuro. Nessuna registrazione."
+            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required. Gratuito, veloce e sicuro. Nessuna registrazione.",
+            "name": "Tester di regex",
+            "description": "Testare le espressioni regolari rispetto al testo."
         },
         "reverse-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">Rivoluziona la tua comunicazione con il nostro <strong>Strumento online per invertire il testo</strong>. Che tu voglia creare una biografia unica per i social media, scrivere messaggi in codice per un enigma o semplicemente vedere le tue parole da una prospettiva diversa, il nostro motore di inversione dei caratteri offre risultati immediati. È un'utilità divertente e leggera, pensata per l'espressione creativa e il gioco digitale.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Non solo scrivere al contrario</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Invertire il testo significa prendere una sequenza di caratteri e riorganizzarli nell'ordine esattamente inverso. Sebbene sembri semplice, può essere utilizzato per qualsiasi cosa, dalla creazione di testo speculare per progetti artistici alla generazione di semplici cifrari per escape room o giochi online. Il nostro strumento gestisce simboli, spazi bianchi e input multilinea con perfetta fedeltà.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Funzionalità dello strumento</h2>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Inversione a livello di carattere:</strong> Ogni singola lettera, spazio e segno di punteggiatura viene invertito per un vero effetto al contrario.</li>\n<li class=\"text-gray-600\"><strong>Opzioni a livello di frase:</strong> Inverti facilmente l'ordine di intere frasi mantenendo le parole leggibili.</li>\n<li class=\"text-gray-600\"><strong>Output speculare istantaneo:</strong> Guarda il tuo testo trasformarsi mentre digiti, senza ritardi e senza bisogno di aggiornare la pagina.</li>\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Privacy locale al 100%</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">I tuoi messaggi sono solo tuoi. Aynzo Tools elabora tutte le inversioni di testo <strong>direttamente sul tuo computer</strong> utilizzando JavaScript. Non carichiamo mai i tuoi testi sui nostri server, garantendo che i tuoi messaggi segreti, le tue battute divertenti e i tuoi spunti creativi rimangano sempre privati ​​e sicuri al 100%.",
@@ -2321,7 +2324,9 @@
                 }
             ],
             "seoTitle": "Reverse Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required. Gratuito, veloce e sicuro. Nessuna registrazione."
+            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required. Gratuito, veloce e sicuro. Nessuna registrazione.",
+            "name": "Generatore di testo inverso",
+            "description": "Invertire il testo, capovolgerlo o invertire le parole."
         },
         "bold-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">Fai risaltare i tuoi messaggi con il nostro <strong>Generatore di testo in grassetto</strong>! Questo strumento online gratuito converte il tuo testo normale in caratteri Unicode in grassetto, utilizzabili su diverse piattaforme di social media, app di messaggistica e siti web. Perfetto per enfatizzare i punti chiave, creare titoli accattivanti o dare un tocco di stile ai tuoi profili.</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">Come funziona?</h3> A differenza dei tradizionali tag HTML per il grassetto (<code>&lt; b & gt; </code> o <code><strong&gt;</code>), il nostro generatore utilizza speciali caratteri Unicode che appaiono visivamente in grassetto. Poiché si tratta di veri e propri caratteri di testo, possono essere incollati in quasi tutti i campi di testo, incluse le biografie dei social media, i commenti e i messaggi di chat, dove la formattazione HTML non è supportata.\nCaratteristiche principali\n\nCompatibilità universale: Funziona su Instagram, Facebook, Twitter, WhatsApp e molti altri.\nConversione istantanea: Digita o incolla il testo e visualizzalo immediatamente trasformato.\nDiversi stili di grassetto: Esplora diversi font e stili di grassetto (ad esempio, grassetto serif, grassetto sans-serif).\nCopia e incolla: Copia facilmente il testo in grassetto generato. con un solo clic.</li>\n</ul>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\"> Usi creativi del testo in grassetto </h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Biografie sui social media: </strong> Evidenzia le informazioni chiave nella tua biografia di Instagram o TikTok.</li>\n<li class=\"text-gray-600\"><strong>Enfasi sui post: </strong> Fai risaltare le parti importanti delle tue didascalie o dei tuoi tweet.</li>\n<li class=\"text-gray-600\"><strong>Titoli: </strong> Crea titoli di grande impatto per i tuoi contenuti online.</li>\n<li class=\"text-gray-600\"><strong>Messaggi: </strong> Dai risalto ai messaggi nelle applicazioni di chat.</li>\n</ul>",
@@ -2336,7 +2341,10 @@
                 }
             ],
             "seoTitle": "Bold Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required. Gratuito, veloce e sicuro. Nessuna registrazione."
+            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required. Gratuito, veloce e sicuro. Nessuna registrazione.",
+            "name": "Generatore di testo in grassetto",
+            "description": "Genera testo in grassetto utilizzando caratteri Unicode.",
+            "seoH1": "Generatore di testo in grassetto: distinguiti con caratteri pesanti"
         },
         "seo-score-checker": {
             "content": "< p > Stop guessing why your website isn't ranking. Our **Live <strong>SEO Score Checker</strong>**doesn't just pretend to analyze your site—it actually fetches your live code in real - time.Unlike generic tools that give random numbers, we parse your HTML structure to find the ** exact technical flaws ** holding you back.</p>\n< h3 > How Our Real - Time Scanner Works </h3>\n< p > When you enter a URL, our advanced crawler connects to your website instantly.It reads the public HTML just like Googlebot does, checking for: </p>\n< ul >\n<li class=\"text-gray-600\">** Title & Meta Tags:** We verify if they exist and if they are the perfect length for search snippets.</li>\n<li class=\"text-gray-600\"> ** Header Hiearchy:** We scan your H1, H2, and H3 tags to ensure your content structure is semantic and readable.</li>\n<li class=\"text-gray-600\"> ** Image Accessibility:** We count every image and flag the ones missing 'alt' text, which hurts your accessibility and image search ranking.</li>\n<li class=\"text-gray-600\"> ** Internal & External Links:** We count valid links to judge the crawlability of your page.</li>\n</ul>\n< h3 > Why a 'Real' Score Matters </h3>\n< p > Many free tools simulate results.We don't. If you fix an issue and run the scan again,**you will see your score increase immediately**. This direct feedback loop allows developers and marketers to:</p>\n< ul >\n<li class=\"text-gray-600\">Validate fixes instantly after deploying code.</li>\n< li > Audit competitor pages to see their real metadata strengths.</li>\n< li > Generate accurate reports for clients based on actual page data.</li>\n</ul>\n< h3 > Actionable \"Fix-It\" List </h3>\n< p > We don't just give you a number. We provide a checklist of **Failed**vs**Passed** tests. If your Meta Description is too short, we tell you. If your H1 is missing, we alert you. This tool is your personal SEO assistant, working 24/7 for free.</p>",
@@ -2575,12 +2583,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is Debt-to-Income Ratio (DTI)?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Your Debt-to-Income (DTI) ratio is the percentage of your gross monthly income that goes toward paying debts. Lenders use it as a key metric to evaluate your ability to manage monthly payments and repay borrowed money.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">DTI Thresholds Lenders Look For</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Below 36%: Excellent — most lenders will approve you easily.</li><li class=\"text-gray-600\">36%–43%: Acceptable — some lenders may add conditions.</li><li class=\"text-gray-600\">43%–50%: Risky — approval depends on other factors.</li><li class=\"text-gray-600\">Above 50%: High risk — most lenders will decline your application.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">How to Improve Your DTI</h3><p class=\"mb-4 leading-relaxed text-gray-700\">The two levers are increasing income or reducing debt. Pay off small debts first (the debt snowball method), avoid new credit before applying for a mortgage, and consider refinancing high-interest debt to lower monthly payments.</p>"
         },
         "car-loan-calculator": {
-            "name": "Car Loan Calculator",
+            "name": "Calcolatore del prestito",
             "description": "Calculate your monthly car loan payments, total interest, and true cost of owning a vehicle.",
             "seoTitle": "[Gratis] Car Loan Calculator (Free) — Monthly Payment & Interest Cost Estimator",
-            "seoDescription": "Calculate your exact monthly car loan payment, total interest cost, and amortization schedule. Find the best loan term for your budget before visiting a dealership.",
+            "seoDescription": "Calcola il tuo esatto pagamento mensile del prestito auto, il costo totale degli interessi e il piano di ammortamento. Trova il termine di prestito migliore per il tuo budget prima di visitare una concessionaria.",
             "seoKeywords": "car loan calculator, auto loan calculator, monthly car payment calculator, vehicle loan calculator, car finance calculator, auto payment estimator, car loan interest calculator, used car loan calculator",
-            "seoH1": "Free Car Loan Calculator: Monthly Payment & Total Cost",
+            "seoH1": "Calcolatore di prestito auto gratuito: pagamento mensile e costo totale",
             "faq": [
                 {
                     "question": "What credit score do I need for the best car loan rate?",
@@ -2606,12 +2614,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How Car Loan Calculations Work</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A <strong>car loan calculator</strong> helps you understand the true cost of financing a vehicle before you sign anything at the dealership. The monthly payment is calculated using the standard amortization formula based on loan amount, interest rate, and term.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Key Factors That Affect Your Payment</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Loan Amount: Car price minus your down payment and trade-in value.</li><li class=\"text-gray-600\">APR (Annual Percentage Rate): Your credit score is the biggest determinant. A 760+ score can get rates below 5%, while sub-600 scores may face 15%+ rates.</li><li class=\"text-gray-600\">Loan Term: Longer terms (72-84 months) lower monthly payments but dramatically increase total interest paid.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Dealer vs. Bank Financing</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Always get pre-approved from your bank or credit union before visiting a dealer. Dealers often mark up the interest rate and earn a commission. Having a competing offer gives you negotiation power on both the car price and the financing rate.</p>"
         },
         "credit-card-payoff-calculator": {
-            "name": "Credit Card Payoff Calculator",
+            "name": "Calcolatore del payoff della carta di credito",
             "description": "Calculate how long it will take to pay off credit card debt and how much interest you will pay.",
             "seoTitle": "[Gratis] Credit Card Payoff Calculator (Free) — Debt-Free Date & Interest Estimator",
-            "seoDescription": "Find your credit card debt-free date. Compare fixed monthly payments vs paying a set amount. See exactly how much interest you'll save by paying more each month.",
+            "seoDescription": "Trova la data senza debiti della tua carta di credito. Confronta i pagamenti mensili fissi con il pagamento di un importo fisso. Scopri esattamente quanti interessi risparmierai pagando di più ogni mese.",
             "seoKeywords": "credit card payoff calculator, credit card debt calculator, pay off credit card, credit card interest calculator, debt free calculator, minimum payment credit card, snowball debt calculator",
-            "seoH1": "Credit Card Payoff Calculator: See Your Debt-Free Date",
+            "seoH1": "Calcolatore del payoff della carta di credito: visualizza la tua data senza debiti",
             "faq": [
                 {
                     "question": "What happens if I only pay the minimum balance?",
@@ -2637,12 +2645,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">The Real Cost of Minimum Payments</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Making only the minimum payment on a credit card is one of the most expensive financial decisions you can make. On a $5,000 balance at 20% APR with a $100 minimum payment, it takes over 10 years to pay off and costs over $7,000 in interest — more than the original debt.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Debt Avalanche Method</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Pay the minimum on all cards, then put every extra dollar toward the card with the highest interest rate. This mathematically minimizes total interest paid.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Debt Snowball Method</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Ignore interest rates. Pay off the smallest balance first for psychological wins and momentum. Research shows this method leads to higher debt-free success rates despite being mathematically sub-optimal.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Power of Adding Just $50 Extra</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Adding just $50 extra to your monthly payment can often cut years off your payoff timeline and save hundreds or thousands in interest. Use this calculator to see your personalized impact.</p>"
         },
         "savings-goal-calculator": {
-            "name": "Savings Goal Calculator",
+            "name": "Calcolatore degli obiettivi di risparmio",
             "description": "Calculate how much to save monthly to reach your financial goals by a target date.",
             "seoTitle": "[Gratis] Savings Goal Calculator (Free) — Monthly Savings Planner & Target Date Estimator",
-            "seoDescription": "Set a savings goal and find out exactly how much to save monthly to reach it. Includes compound interest growth and emergency fund planning. Free savings calculator.",
+            "seoDescription": "Imposta un obiettivo di risparmio e scopri esattamente quanto risparmiare mensilmente per raggiungerlo. Include la crescita degli interessi composti e la pianificazione dei fondi di emergenza. Calcolatore di risparmio gratuito.",
             "seoKeywords": "savings goal calculator, how much to save calculator, monthly savings calculator, savings target date calculator, compound interest savings, emergency fund calculator, financial goal planner",
-            "seoH1": "Savings Goal Calculator: Plan Your Financial Future",
+            "seoH1": "Calcolatore degli obiettivi di risparmio: pianifica il tuo futuro finanziario",
             "faq": [
                 {
                     "question": "How much should I save each month?",
@@ -2668,12 +2676,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">The Foundation of Financial Planning: Goal-Based Saving</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Every major financial goal — from a vacation to a house down payment — starts with a clear savings target and a realistic monthly contribution plan. Our <strong>Savings Goal Calculator</strong> shows you the exact monthly amount needed and how compound interest accelerates your progress.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Emergency Fund: Priority #1</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Before saving for any other goal, financial experts universally recommend building an emergency fund of 3-6 months of living expenses. This prevents you from going into debt when unexpected costs arise. Use this calculator to plan your emergency fund timeline.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">High-Yield Savings Accounts</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Traditional savings accounts earn 0.01% APY. High-yield savings accounts (HYSAs) from online banks often pay 4-5% APY. On a $20,000 goal, this difference can mean hundreds of dollars of free compound interest each year.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Automate Your Savings</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Set up automatic transfers on payday. Research shows that people who automate savings consistently reach their goals faster than those who save whatever's 'left over' each month.</p>"
         },
         "freelance-tax-calculator": {
-            "name": "Freelance Tax Calculator",
+            "name": "Calcolatore di imposte freelance",
             "description": "Estimate your US freelance taxes including self-employment tax and quarterly payments.",
             "seoTitle": "[Gratis] Freelance Tax Calculator (Free) — Self-Employment & Quarterly Tax Estimator 2024",
-            "seoDescription": "Calculate your freelance taxes for 2024. Instantly see your self-employment tax, federal income tax, effective rate, and quarterly estimated payments. Built for US freelancers.",
+            "seoDescription": "Calcola le tue tasse da freelance per il 2024. Visualizza immediatamente l'imposta sul lavoro autonomo, l'imposta federale sul reddito, l'aliquota effettiva e i pagamenti stimati trimestrali. Creato per i liberi professionisti statunitensi.",
             "seoKeywords": "freelance tax calculator, self-employment tax calculator, 1099 tax calculator, quarterly tax calculator, estimated tax payments 2024, independent contractor tax, gig worker tax calculator, freelancer taxes USA",
-            "seoH1": "Freelance Tax Calculator 2024: Self-Employment & Quarterly Taxes",
+            "seoH1": "Calcolatore fiscale freelance 2024: lavoro autonomo e imposte trimestrali",
             "faq": [
                 {
                     "question": "What percentage of my freelance income should I set aside for taxes?",
@@ -2699,12 +2707,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Understanding Freelance Taxes in the USA</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Freelancers and independent contractors are responsible for paying both the employee and employer portions of Social Security and Medicare taxes — collectively called the Self-Employment (SE) Tax. This currently totals 15.3% (12.4% Social Security + 2.9% Medicare) on net self-employment income.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Self-Employment Tax Deduction</h3><p class=\"mb-4 leading-relaxed text-gray-700\">You can deduct 50% of your self-employment tax from your gross income before calculating income tax. This partially offsets the burden compared to traditional employees.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Quarterly Estimated Tax Payments</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Freelancers must pay taxes quarterly (April 15, June 15, September 15, January 15) or face IRS underpayment penalties. Each quarterly payment should be approximately 25% of your estimated annual tax liability.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Key Business Deductions to Track</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Home office (dedicated workspace)</li><li class=\"text-gray-600\">Equipment and software</li><li class=\"text-gray-600\">Health insurance premiums</li><li class=\"text-gray-600\">Business travel and mileage</li><li class=\"text-gray-600\">Professional development and subscriptions</li><li class=\"text-gray-600\">Retirement contributions (SEP-IRA, Solo 401k)</li></ul>"
         },
         "tdee-calculator": {
-            "name": "TDEE Calculator",
+            "name": "Calcolatore TDEE",
             "description": "Calculate your Total Daily Energy Expenditure to know exactly how many calories to eat for your goals.",
             "seoTitle": "[Gratis] TDEE Calculator (Free) — Total Daily Energy Expenditure & Calorie Calculator",
-            "seoDescription": "Calculate your TDEE (Total Daily Energy Expenditure) based on age, weight, height, and activity level. Find your maintenance calories, caloric deficit for weight loss, and surplus for muscle gain.",
+            "seoDescription": "Calcola il tuo TDEE (Total Daily Energy Expenditure) in base a età, peso, altezza e livello di attività. Trova le calorie di mantenimento, il deficit calorico per la perdita di peso e il surplus per l'aumento muscolare.",
             "seoKeywords": "TDEE calculator, total daily energy expenditure, maintenance calories, calorie calculator, BMR calculator, weight loss calories, calorie deficit calculator, how many calories should I eat, TDEE weight loss",
-            "seoH1": "TDEE Calculator: Find Your Total Daily Calorie Needs",
+            "seoH1": "Calcolatore TDEE: Trova il tuo fabbisogno calorico giornaliero totale",
             "faq": [
                 {
                     "question": "How accurate is a TDEE calculator?",
@@ -2730,12 +2738,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is TDEE?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns in a 24-hour period, accounting for everything from basic biological functions to exercise and daily activities. It is the most important number in any body composition plan.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">TDEE vs BMR</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Your Basal Metabolic Rate (BMR) is the calories your body burns at complete rest. Your TDEE multiplies your BMR by an activity factor. Our calculator uses the Mifflin-St Jeor equation, considered the most accurate formula for most people.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Using TDEE for Your Goals</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Weight Loss: Create a 500-calorie daily deficit (eat TDEE minus 500). This creates approximately 1 pound of fat loss per week.</li><li class=\"text-gray-600\">Muscle Gain: Eat in a 200-300 calorie surplus above TDEE to minimize fat gain while building muscle.</li><li class=\"text-gray-600\">Maintenance: Eat at your TDEE. Your weight should stay stable over time.</li></ul>"
         },
         "pregnancy-due-date-calculator": {
-            "name": "Pregnancy Due Date Calculator",
+            "name": "Calcolatore della data di scadenza della gravidanza",
             "description": "Calculate your pregnancy due date, trimester dates, and key milestones from your LMP.",
             "seoTitle": "[Gratis] Pregnancy Due Date Calculator (Free) — Calculate Your Baby's Arrival Date",
-            "seoDescription": "Calculate your pregnancy due date instantly based on your last menstrual period (LMP) or conception date. See all trimester dates, gestational age, and key milestones.",
+            "seoDescription": "",
             "seoKeywords": "pregnancy due date calculator, due date calculator, LMP calculator, when is my baby due, pregnancy calendar, gestational age calculator, trimester calculator, conception date calculator, baby due date",
-            "seoH1": "Pregnancy Due Date Calculator: Know When Your Baby Arrives",
+            "seoH1": "",
             "faq": [
                 {
                     "question": "How accurate is a due date calculated from LMP?",
@@ -2761,12 +2769,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How is a Pregnancy Due Date Calculated?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">The standard method for calculating a pregnancy due date is Naegele's Rule: add 280 days (40 weeks) to the first day of your Last Menstrual Period (LMP). This is used by most healthcare providers worldwide.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Three Trimesters</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">First Trimester (Weeks 1-12): Critical organ development. Morning sickness is common. The embryo becomes a fetus.</li><li class=\"text-gray-600\">Second Trimester (Weeks 13-27): Often called the 'golden trimester.' Energy returns, baby movements begin (quickening), and sex can usually be determined.</li><li class=\"text-gray-600\">Third Trimester (Weeks 28-40): Rapid fetal growth and preparation for delivery. Prenatal visits become more frequent.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Important Note</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Only about 5% of babies are born on their exact due date. Most arrive within 2 weeks before or after. Your OB or midwife may adjust your due date after an early ultrasound for more accuracy.</p>"
         },
         "macro-calculator": {
-            "name": "Macro Calculator",
+            "name": "Macro Calcolatrice",
             "description": "Calculate your ideal macronutrient ratio of protein, carbs, and fats for your fitness goal.",
             "seoTitle": "[Gratis] Macro Calculator (Free) — Protein, Carb & Fat Ratio for Weight Loss & Muscle Gain",
-            "seoDescription": "Calculate your perfect daily macros for weight loss, muscle gain, or maintenance. Get exact grams of protein, carbs, and fat based on your TDEE and fitness goals. Free macro tracker.",
+            "seoDescription": "Calcola le tue macro giornaliere perfette per la perdita di peso, l'aumento muscolare o il mantenimento. Ottieni grammi esatti di proteine, carboidrati e grassi in base al tuo TDEE e agli obiettivi di fitness. Macro tracker gratuito.",
             "seoKeywords": "macro calculator, macronutrient calculator, protein calculator, how many grams of protein per day, IIFYM calculator, carb calculator, fat loss macros, muscle building macros, flexible dieting calculator",
-            "seoH1": "Macro Calculator: Find Your Perfect Protein, Carb & Fat Split",
+            "seoH1": "",
             "faq": [
                 {
                     "question": "How many grams of protein do I need per day?",
@@ -2823,12 +2831,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is Ideal Body Weight?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Ideal body weight (IBW) is a clinical estimate of the most healthy weight for a given height and gender. It is used by healthcare professionals for drug dosing, anesthesia, ventilator settings, and general health benchmarking. However, it is not a one-size-fits-all answer.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The 4 Clinical Formulas Compared</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Hamwi (1964): The oldest and most commonly referenced. Used in clinical settings worldwide.</li><li class=\"text-gray-600\">Devine (1974): Originally developed for medication dosing. Widely used in pharmacology.</li><li class=\"text-gray-600\">Robinson (1983): A modified Devine formula, producing slightly different results for each gender.</li><li class=\"text-gray-600\">Miller (1983): Generally produces the lowest (lightest) estimate of the four formulas.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">IBW vs. BMI vs. Body Fat %</h3><p class=\"mb-4 leading-relaxed text-gray-700\">IBW formulas don't account for muscle mass or body composition. A muscular athlete may weigh more than their IBW while having an excellent health profile. Body fat percentage is a more accurate health indicator than weight alone.</p>"
         },
         "chatgpt-prompt-generator": {
-            "name": "ChatGPT Prompt Generator",
+            "name": "Generatore di prompt ChatGPT",
             "description": "Generate powerful, optimized prompts for ChatGPT, Claude, Gemini, and other AI models.",
             "seoTitle": "[Gratis] ChatGPT Prompt Generator (Free) — AI Prompt Templates for Writing, Coding & Marketing",
-            "seoDescription": "Generate perfect ChatGPT prompts instantly. Choose from 10+ expert templates for writing, coding, marketing, and learning. Customize and copy into any AI model in seconds.",
+            "seoDescription": "Genera istantaneamente prompt ChatGPT perfetti. Scegli tra oltre 10 modelli di esperti per la scrittura, la codifica, il marketing e l'apprendimento. Personalizza e copia in qualsiasi modello di intelligenza artificiale in pochi secondi.",
             "seoKeywords": "ChatGPT prompt generator, AI prompt generator, ChatGPT prompts, best ChatGPT prompts, prompt engineering tool, Claude prompts, Gemini prompts, AI writing prompts, free prompt generator",
-            "seoH1": "ChatGPT Prompt Generator: Create Perfect AI Prompts Instantly",
+            "seoH1": "",
             "faq": [
                 {
                     "question": "What is prompt engineering?",
@@ -2854,12 +2862,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What Makes a Great AI Prompt?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A well-engineered prompt is the difference between a generic, mediocre AI response and a highly specific, actionable output that saves you hours of work. Prompt engineering is the skill of crafting instructions that guide AI models to produce exactly what you need.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The 5 Elements of a High-Quality Prompt</h3><ol><li class=\"text-gray-600\">Role: Tell the AI who to be (\"Act as a senior marketing strategist\").</li><li class=\"text-gray-600\">Task: Clearly define what you want (\"Write a product description\").</li><li class=\"text-gray-600\">Context: Provide relevant background (\"Target audience: busy parents, age 30-45\").</li><li class=\"text-gray-600\">Format: Specify the output structure (\"200 words, bullet points, professional tone\").</li><li class=\"text-gray-600\">Constraints: Set boundaries (\"Do NOT use jargon. Include a clear CTA\").</li></ol><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Works with All Major AI Models</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Our prompts are designed to work with ChatGPT (GPT-4, GPT-4o), Claude (Anthropic), Gemini (Google), and Llama. Simply select a template, customize the placeholders, and paste into your preferred AI.</p>"
         },
         "ai-content-detector": {
-            "name": "AI Content Detector",
+            "name": "Rilevatore di contenuti AI",
             "description": "Detect if text was written by AI or a human using heuristic pattern analysis.",
             "seoTitle": "[Gratis] AI Content Detector (Free) — Check If Text Was Written by ChatGPT or AI",
-            "seoDescription": "Detect AI-generated content instantly. Paste any text to analyze for ChatGPT, Claude, or other AI writing signals. Get a percentage score and see which detection signals were found.",
+            "seoDescription": "Rileva istantaneamente i contenuti generati dall'IA. Incolla qualsiasi testo da analizzare per ChatGPT, Claude o altri segnali di scrittura AI. Ottieni un punteggio percentuale e vedi quali segnali di rilevamento sono stati trovati.",
             "seoKeywords": "AI content detector, ChatGPT detector, AI text detector, detect AI writing, is this AI written, AI generated content checker, AI plagiarism detector, GPT detector free, AI humanizer detector",
-            "seoH1": "Free AI Content Detector: Is This Text Written by AI?",
+            "seoH1": "",
             "faq": [
                 {
                     "question": "How accurate is AI content detection?",
@@ -2916,12 +2924,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Create Realistic Handwriting from Any Text</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Our <strong>Text to Handwriting</strong> Converter uses authentic Google handwriting fonts rendered on an HTML5 Canvas to produce realistic, downloadable handwriting images. It's perfect for creating personal-looking notes, artistic content, or school assignment aesthetics.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">5 Authentic Handwriting Styles</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Caveat: Casual, everyday handwriting — natural and approachable.</li><li class=\"text-gray-600\">Dancing Script: Elegant, flowing cursive — ideal for invitations and certificates.</li><li class=\"text-gray-600\">Patrick Hand: Clean print style — the most legible for notes.</li><li class=\"text-gray-600\">Shadows Into Light: Light, airy script — perfect for artistic content.</li><li class=\"text-gray-600\">Indie Flower: Fun, quirky style — very popular for social media content.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Privacy & Performance</h3><p class=\"mb-4 leading-relaxed text-gray-700\">All rendering is done entirely in your browser using the HTML5 Canvas API. No text is ever sent to a server. You can even use it offline once the fonts are cached.</p>"
         },
         "grammar-checker": {
-            "name": "Grammar Checker",
+            "name": "Controllo grammaticale",
             "description": "Check and fix grammar, spelling, and punctuation errors in your text instantly.",
             "seoTitle": "[Gratis] Free Grammar Checker Online — Check & Fix Grammar, Spelling & Punctuation",
-            "seoDescription": "Fix grammar mistakes instantly with our free online grammar checker. Detect common errors including wrong contractions, misspellings, incorrect articles, and verb tense mistakes. No signup required.",
+            "seoDescription": "",
             "seoKeywords": "grammar checker, free grammar checker online, grammar check, grammar fixer, spell checker, punctuation checker, English grammar checker, writing grammar tool, check my grammar, grammar correction",
-            "seoH1": "Free Online Grammar Checker: Fix Errors Instantly",
+            "seoH1": "",
             "faq": [
                 {
                     "question": "Is this grammar checker free?",
@@ -2947,12 +2955,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">Why Correct Grammar Matters</h2><p class=\"mb-4 leading-relaxed text-gray-700\">Grammar errors undermine credibility, confuse readers, and can cost you professionally. Whether you're writing a cover letter, an email to a client, or a blog post, correct grammar builds trust and authority. Our free <strong>grammar checker</strong> helps you catch the most common mistakes before they reach your audience.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Grammar Mistakes We Catch</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Contraction Errors: 'dont' → 'don't', 'wont' → 'won't'</li><li class=\"text-gray-600\">Verb Agreement: 'should of' → 'should have'</li><li class=\"text-gray-600\">Homophone Confusion: 'their is' → 'there is', 'your welcome' → 'you're welcome'</li><li class=\"text-gray-600\">Common Misspellings: 'definately' → 'definitely', 'recieve' → 'receive'</li><li class=\"text-gray-600\">Punctuation: Missing commas after conjunctive adverbs</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">When to Use a <strong>Grammar Checker</strong></h3><p class=\"mb-4 leading-relaxed text-gray-700\">Before sending any important email, submitting writing, or publishing online content. Even professional writers use grammar tools as a final check — it's not a sign of weakness but of diligence.</p>"
         },
         "tiktok-hashtag-generator": {
-            "name": "TikTok Hashtag Generator",
+            "name": "Generatore di hashtag TikTok",
             "description": "Generate trending TikTok hashtags by category to maximize video reach and views.",
             "seoTitle": "[Gratis] TikTok Hashtag Generator (Free) — Trending Tags to Boost Your Video Views",
-            "seoDescription": "Get the best TikTok hashtags for your niche instantly. Choose from 8 categories including Entertainment, Music, Gaming, Fitness, and Fashion. Copy all tags with one click. Boost your FYP reach.",
+            "seoDescription": "Ottieni immediatamente i migliori hashtag TikTok per la tua nicchia. Scegli tra 8 categorie tra cui Intrattenimento, Musica, Giochi, Fitness e Moda. Copia tutti i tag con un clic. Aumenta la tua portata FYP.",
             "seoKeywords": "TikTok hashtag generator, TikTok hashtags, best TikTok hashtags, trending TikTok tags, hashtags for TikTok views, TikTok FYP hashtags, viral TikTok hashtags, TikTok hashtag tool 2024",
-            "seoH1": "TikTok Hashtag Generator: Get Viral Hashtags for Your Videos",
+            "seoH1": "Generatore di hashtag TikTok: ottieni hashtag virali per i tuoi video",
             "faq": [
                 {
                     "question": "Do hashtags help TikTok videos go viral?",
@@ -2978,12 +2986,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How TikTok Hashtags Work in 2024</h2><p class=\"mb-4 leading-relaxed text-gray-700\">TikTok's algorithm uses hashtags to understand your content and distribute it to interested users. Unlike Instagram and Twitter, TikTok's primary discovery mechanism is the For You Page (FYP), which is driven by engagement signals — but hashtags help bootstrap distribution to the right audience.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Best TikTok Hashtag Strategy</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Use 3-5 hashtags, not 30: More isn't better. Overstuffed captions look spammy and dilute your signal.</li><li class=\"text-gray-600\">Mix tiers: 1-2 mega-tags (#fyp, millions of posts), 2-3 niche tags (thousands of posts), 1 trending tag.</li><li class=\"text-gray-600\">#fyp and #foryou work, but aren't magic: They're signals, not guarantees. Quality content is the primary driver.</li><li class=\"text-gray-600\">Niche hashtags win: A smaller, targeted hashtag (#veganfitness vs #fitness) puts you in front of more relevant viewers.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Category-Specific Strategy</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Each content niche has different high-performing tags. Entertainment content dominates with broad FYP tags, while niche communities like gaming and fitness respond better to specific community hashtags.</p>"
         },
         "bio-link-generator": {
-            "name": "Bio Link Generator",
+            "name": "Generatore di collegamenti biologici",
             "description": "Create a free Linktree-style bio link page with your name, bio, and custom links.",
             "seoTitle": "[Gratis] Free Bio Link Generator — Create Your Linktree-Style Page Instantly",
-            "seoDescription": "Build a free bio link page like Linktree in seconds. Add your name, bio, and unlimited links. Get clean HTML code to host anywhere. No account needed — completely free bio link creator.",
+            "seoDescription": "Crea una pagina di collegamento bio gratuita come Linktree in pochi secondi. Aggiungi il tuo nome, biografia e link illimitati. Ottieni codice HTML pulito per ospitare ovunque. Nessun account necessario: creatore di link bio completamente gratuito.",
             "seoKeywords": "bio link generator, free linktree alternative, bio link page, link in bio, create linktree, social media bio link, instagram bio link, free link page creator, one link bio",
-            "seoH1": "Free Bio Link Generator: Create Your Linktree Alternative Page",
+            "seoH1": "Generatore di bio link gratuito: crea la tua pagina alternativa a Linktree",
             "faq": [
                 {
                     "question": "Is this a free Linktree alternative?",
@@ -3009,12 +3017,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Bio Link Page?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A bio link page (popularized by Linktree) is a single URL you put in your Instagram, TikTok, or Twitter bio that contains multiple links to your website, shop, social profiles, and other destinations. Instead of being limited to one link in your bio, you have unlimited links on one elegant page.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Why You Need a Bio Link Page</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Instagram and TikTok limit you to 1 bio link. A bio link page turns that single link into unlimited destinations.</li><li class=\"text-gray-600\">Perfect for creators and businesses with multiple revenue streams, products, or platforms.</li><li class=\"text-gray-600\">Increases traffic and conversions by making it easy for followers to find everything in one place.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Host It Anywhere for Free</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Our generator creates clean, standalone HTML code you can host for free on GitHub Pages, Netlify, Vercel, or add to your existing website. No monthly subscription unlike Linktree Pro.</p>"
         },
         "youtube-money-calculator": {
-            "name": "YouTube Money Calculator",
+            "name": "Calcolatore di denaro su YouTube",
             "description": "Estimate your YouTube channel ad revenue based on views and RPM.",
             "seoTitle": "[Gratis] YouTube Money Calculator (Free) — Estimate Channel Revenue from Views",
-            "seoDescription": "Calculate YouTube ad revenue instantly. Enter your daily views and RPM to see estimated daily, monthly, and yearly earnings. Includes monetized view percentage. Free YouTube earnings estimator.",
+            "seoDescription": "Calcola istantaneamente le entrate pubblicitarie di YouTube. Inserisci le tue visualizzazioni giornaliere e il tuo RPM per visualizzare le entrate stimate giornaliere, mensili e annuali. Include la percentuale di visualizzazione monetizzata. Strumento gratuito per la stima dei guadagni di YouTube.",
             "seoKeywords": "YouTube money calculator, YouTube earnings calculator, how much does YouTube pay, YouTube revenue calculator, YouTube RPM calculator, YouTube CPM calculator, YouTube income estimator, how to make money on YouTube",
-            "seoH1": "YouTube Money Calculator: Estimate Your Channel Ad Revenue",
+            "seoH1": "Calcolatore di denaro di YouTube: stima le entrate pubblicitarie del tuo canale",
             "faq": [
                 {
                     "question": "How much does YouTube pay per 1,000 views?",
@@ -3040,12 +3048,12 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">How YouTube Pays Creators</h2><p class=\"mb-4 leading-relaxed text-gray-700\">YouTube pays creators through AdSense based on the number of monetized views and the RPM (Revenue Per Mille) — the actual revenue earned per 1,000 views after YouTube's 45% cut. RPM is the real-world metric, while CPM is what advertisers pay before the revenue split.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Why RPM Varies So Much</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">Niche: Finance, legal, and B2B videos command $10-30+ RPM. Entertainment and gaming typically see $2-5 RPM.</li><li class=\"text-gray-600\">Geography: US, UK, Canada, and Australia viewers are worth 5-10x more than viewers in developing countries.</li><li class=\"text-gray-600\">Seasonality: Q4 (October-December) has the highest ad spending — RPM can be 2-3x higher than Q1.</li><li class=\"text-gray-600\">Video length: Videos over 8 minutes can include mid-roll ads, significantly increasing revenue per view.</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Revenue Beyond AdSense</h3><p class=\"mb-4 leading-relaxed text-gray-700\">Smart creators diversify their income: YouTube memberships, Super Chats, merchandise, sponsorships, and affiliate marketing often make up the majority of a successful channel's income.</p>"
         },
         "crontab-generator": {
-            "name": "Crontab Generator",
+            "name": "Generatore di Crontab",
             "description": "Generate and validate Linux cron expressions with human-readable descriptions.",
             "seoTitle": "[Gratis] Crontab Generator (Free) — Build & Validate Cron Expressions Online",
-            "seoDescription": "Generate and validate Linux crontab expressions instantly. Choose from common presets or build a custom cron schedule. Instantly see a human-readable description of your cron job timing.",
+            "seoDescription": "Genera e convalida istantaneamente le espressioni crontab di Linux. Scegli tra le preimpostazioni comuni o crea una pianificazione cron personalizzata. Visualizza immediatamente una descrizione leggibile dall'uomo dei tempi del tuo lavoro cron.",
             "seoKeywords": "crontab generator, cron expression generator, cron job generator, cron schedule builder, linux cron syntax, crontab examples, cron expression validator, cron to english, cron expression explainer",
-            "seoH1": "Crontab Generator: Build Cron Expressions & Understand Their Timing",
+            "seoH1": "Generatore di Crontab: crea espressioni Cron e comprendi i loro tempi",
             "faq": [
                 {
                     "question": "How do I edit my crontab on Linux?",
@@ -3069,6 +3077,62 @@
                 }
             ],
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Cron Job?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A cron job is a scheduled task in Unix/Linux systems that runs automatically at specified intervals. Defined in the <em>crontab</em> (cron table) file, they're used for automated backups, report generation, database maintenance, API calls, and server monitoring.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Cron Expression Format</h3><p class=\"mb-4 leading-relaxed text-gray-700\">A cron expression has 5 fields: <code>MINUTE HOUR DAY MONTH WEEKDAY</code>. Each field accepts specific values and wildcards:</p><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\"><code>*</code> — any value (every minute, every hour, etc.)</li><li class=\"text-gray-600\"><code>*/n</code> — every n units (*/5 = every 5 minutes)</li><li class=\"text-gray-600\"><code>a,b</code> — multiple values (1,15 = 1st and 15th)</li><li class=\"text-gray-600\"><code>a-b</code> — range (1-5 = Monday through Friday)</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Cron Job Use Cases</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">0 0 * * * — Daily backup at midnight</li><li class=\"text-gray-600\">*/5 * * * * — API health check every 5 minutes</li><li class=\"text-gray-600\">0 9 * * 1-5 — Daily report email every weekday at 9am</li><li class=\"text-gray-600\">0 0 1 * * — Monthly invoice generation</li></ul>"
+        },
+        "double-underline-text": {
+            "name": "Sottolineatura doppia",
+            "description": "Genera testo sottolineato doppio per i social media.",
+            "seoTitle": "Testo sottolineato doppio gratis online - Usa testo sottolineato doppio",
+            "seoDescription": "Usa il testo sottolineato doppio online gratuitamente. Elaborazione rapida e sicura. Nessun accesso, veloce, sicuro. Perfetto per le attività quotidiane.",
+            "seoH1": "Testo sottolineato doppio libero: usa testo sottolineato doppio"
+        },
+        "cursive-text": {
+            "name": "Generatore di testo corsivo",
+            "description": "Genera testo corsivo / script per i social media.",
+            "seoTitle": "Generatore di testo corsivo gratuito online - Usa il generatore di testo corsivo",
+            "seoDescription": "Usa gratuitamente Cursive Text Generator online. Elaborazione rapida e sicura. Nessun accesso, veloce, sicuro. Perfetto per le attività quotidiane.",
+            "seoH1": "Generatore di testo corsivo gratuito: usa il generatore di testo corsivo"
+        },
+        "currency-converter": {
+            "name": "Convertitore valute",
+            "description": "Converti tra diverse valute con tariffe in tempo reale.",
+            "seoTitle": "Convertitore di valuta online gratuito - Tassi di cambio in tempo reale",
+            "seoDescription": "Converti valute online gratuitamente. Tassi di cambio in tempo reale per oltre 150 valute. Nessun accesso, veloce, accurato. Perfetto per viaggi e affari.",
+            "seoH1": "Convertitore di valuta gratuito: tassi di cambio in tempo reale"
+        },
+        "401k-retirement-calculator": {
+            "name": "Calcolatore di pensionamento 401k",
+            "description": "Pianifica la tua pensione stimando la tua crescita di 401k con l'abbinamento del datore di lavoro.",
+            "seoTitle": "Calcolatore di pensionamento 401k - Pianificatore di ricchezza n. 1 negli Stati Uniti",
+            "seoDescription": "Calcola il tuo saldo di 401k al momento del pensionamento. Include la corrispondenza del datore di lavoro, gli aumenti salariali e la crescita composta. Pianifica oggi i tuoi risparmi per la pensione negli Stati Uniti.",
+            "seoH1": "Calcolatore di pensionamento 401k: pianifica la tua ricchezza futura"
+        },
+        "image-format-converter": {
+            "name": "Convertitore del formato immagine",
+            "description": "Converti immagini online gratuitamente tra i formati JPG, PNG, WebP, GIF e BMP."
+        },
+        "merge-pdf": {
+            "name": "Unisci PDF",
+            "description": "Combina più file PDF in un unico documento."
+        },
+        "split-pdf": {
+            "name": "PDF diviso",
+            "description": "Dividere un file PDF in più documenti separati."
+        },
+        "gpa-calculator": {
+            "name": "Calcolatore GPA",
+            "description": "Calcola il tuo GPA universitario o di scuola superiore in base a voti e crediti."
+        },
+        "salary-calculator": {
+            "name": "Stipendio al calcolatore orario",
+            "description": "Converti il ​​tuo stipendio annuale in tariffe orarie, settimanali e mensili."
+        },
+        "tip-calculator": {
+            "name": "Calcolatore delle mance",
+            "description": "Calcola velocemente la mancia e dividi il conto tra gli amici."
+        },
+        "json-to-typescript": {
+            "name": "JSON in TypeScript",
+            "description": "Converti automaticamente oggetti JSON in interfacce TypeScript."
         }
     },
     "Common": {

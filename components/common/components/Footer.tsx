@@ -39,7 +39,7 @@ export default function Footer() {
                         </p>
                         <div className="flex items-center gap-4 text-muted-foreground">
                             <div className="flex items-center gap-2 text-xs font-bold bg-muted/50 px-3 py-1.5 rounded-full border border-border">
-                                <Globe size={14} className="text-primary" /> Multi-language Support
+                                <Globe size={14} className="text-primary" /> {tFooter('multiLanguage')}
                             </div>
                         </div>
                     </div>
@@ -91,13 +91,13 @@ export default function Footer() {
                                 </li>
                                 <li>
                                     <Link href="/privacy" className="text-muted-foreground/60 hover:text-primary transition-colors text-[13px] font-medium flex items-center gap-2">
-                                        <Shield size={12} /> Privacy
+                                        <Shield size={12} /> {tFooter('privacy')}
                                     </Link>
                                 </li>
                             </ul>
                         </div>
                         <div className="bg-primary/5 p-4 rounded-2xl border border-primary/10">
-                            <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider mb-3">Support Project</p>
+                            <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider mb-3">{tFooter('supportProject')}</p>
                             <a
                                 href="https://www.buymeacoffee.com/aynzo"
                                 target="_blank"
@@ -105,7 +105,7 @@ export default function Footer() {
                                 className="inline-flex items-center gap-2 bg-[#FFDD00] text-black px-3 py-1.5 rounded-lg font-bold text-[10px] hover:bg-[#FFDD00]/90 transition-colors w-full justify-center"
                             >
                                 <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" className="w-3.5 h-3.5" />
-                                <span>Buy me a coffee</span>
+                                <span>{tFooter('buyMeACoffee')}</span>
                             </a>
                         </div>
                     </div>

@@ -20,8 +20,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: {
       absolute: `${t('title')} | ${tApp('name')} - 100% Free & Secure Online Tools`
     },
-    description: "Professional suite of free online tools for developers, designers, and creators. Image compression, PDF conversion, text formatting, and developer utilities. All processed 100% locally in your browser for total privacy.",
-    keywords: "aynzo tools, free online tools, image compressor, word counter, pdf to word, json formatter, privacy first tools, developer utilities, online calculator",
+    description: t('metaDescription'),
+    keywords: t('metaKeywords'),
     alternates: {
       canonical: `https://tools.aynzo.com/${locale}`,
       languages: {
