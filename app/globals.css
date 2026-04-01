@@ -261,10 +261,10 @@
 
   @media (min-width: 768px) {
     .content-body h2 {
-      font-size: 1.375rem;
+      font-size: 2.25rem;
     }
     .content-body h3 {
-      font-size: 1.125rem;
+      font-size: 1.75rem;
     }
     .content-body p,
     .content-body li {

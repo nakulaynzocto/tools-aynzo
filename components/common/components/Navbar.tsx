@@ -9,9 +9,14 @@ import { ModeToggle } from './ModeToggle';
 import { cn } from '@/utils/cn';
 
 import { useTranslations } from 'next-intl';
+import { usePathname } from '@/navigation';
 
 export default function Navbar() {
+    const pathname = usePathname();
     const t = useTranslations('Navigation');
+
+    // Hide Aynzo Navbar on Cricket tools for independent design
+    if (pathname.startsWith('/tools/cricket')) return null;
     const tApp = useTranslations('App');
     const tCategories = useTranslations('Categories');
     const tNavbar = useTranslations('NavbarCategories');

@@ -4,8 +4,10 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { toolCategories } from '@/lib/tools';
 import { Globe, Heart, Shield, FileText, Mail, Info } from 'lucide-react';
+import { usePathname } from '@/navigation';
 
 export default function Footer() {
+    const pathname = usePathname();
     const tApp = useTranslations('App');
     const tNav = useTranslations('Navigation');
     const tCat = useTranslations('NavbarCategories');
@@ -13,6 +15,9 @@ export default function Footer() {
     const tFooter = useTranslations('Footer');
     const tTools = useTranslations('Tools'); // Added this line
     const currentYear = new Date().getFullYear();
+
+    // Hide Aynzo Footer on Cricket tools
+    if (pathname.startsWith('/tools/cricket')) return null;
 
     return (
         <footer className="bg-card border-t border-border mt-20">

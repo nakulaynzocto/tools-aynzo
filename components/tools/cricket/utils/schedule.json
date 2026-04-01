@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "team1": "RR",
+        "team2": "CSK",
+        "venue": "Sawai Mansingh Stadium, Jaipur",
+        "time": "2026-03-30T14:00:00Z",
+        "status": "upcoming"
+    },
+    {
+        "id": "2",
+        "team1": "MI",
+        "team2": "GT",
+        "venue": "Wankhede Stadium, Mumbai",
+        "time": "2026-03-31T14:00:00Z",
+        "status": "upcoming"
+    },
+    {
+        "id": "3",
+        "team1": "SRH",
+        "team2": "KKR",
+        "venue": "Rajiv Gandhi Intl Stadium, Hyderabad",
+        "time": "2026-04-01T14:00:00Z",
+        "status": "upcoming"
+    },
+    {
+        "id": "4",
+        "team1": "RCB",
+        "team2": "DC",
+        "venue": "M. Chinnaswamy Stadium, Bengaluru",
+        "time": "2026-04-02T14:00:00Z",
+        "status": "upcoming"
+    }
+]

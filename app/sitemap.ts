@@ -4,9 +4,14 @@ import { locales } from '@/i18n';
 import fs from 'fs';
 import path from 'path';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+import { getCachedMatches } from '@/lib/tools/cricket/cache';
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://tools.aynzo.com';
     let allPages: MetadataRoute.Sitemap = [];
+
+    // Fetch dynamic cricket matches
+    const matches = await getCachedMatches().catch(() => []);
 
     const blogsDir = path.join(process.cwd(), 'seo-blogs');
     const blogFiles = fs.existsSync(blogsDir) 
@@ -45,6 +50,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 changeFrequency: 'weekly',
                 priority: 0.8,
                 alternates: getAlternateLanguages(`/tools/${tool.slug}`),
+            });
+        });
+
+        // Cricket Pages (Dynamic SEO)
+        allPages.push({
+            url: `${baseUrl}/${locale}/tools/cricket/ai-predictor`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.9,
+            alternates: getAlternateLanguages('/tools/cricket/ai-predictor'),
+        });
+
+        matches.forEach((match) => {
+            const urlSlug = match.slug || match.event_key;
+            allPages.push({
+                url: `${baseUrl}/${locale}/tools/cricket/${urlSlug}`,
+                lastModified: new Date(),
+                changeFrequency: 'always', // Highly dynamic
+                priority: 0.8,
+                alternates: getAlternateLanguages(`/tools/cricket/${urlSlug}`),
             });
         });
 
