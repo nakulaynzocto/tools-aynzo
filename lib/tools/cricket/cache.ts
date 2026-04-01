@@ -2,7 +2,8 @@
 import { unstable_cache } from 'next/cache';
 
 const API_BASE = 'https://apiv2.api-cricket.com/cricket';
-const API_KEY  = process.env.CRICKET_API_KEY || process.env.NEXT_PUBLIC_CRICKET_API_KEY ;
+const API_KEY_ENV = process.env.CRICKET_API_KEY || process.env.NEXT_PUBLIC_CRICKET_API_KEY || '';
+const API_KEY_BACKUP = process.env.CRICKET_API_KEY_BACKUP || '';
 
 // ─── DYNAMIC NEURAL ENGINE (V8.0) ─────────────────
 // Static fallbacks removed. All data is now resolved via Live API or Real-time AI Scan.
@@ -42,8 +43,9 @@ export interface StandingRow {
 // GLOBAL RAM CACHE (Protection Layer for 10k+ Users)
 const GLOBAL_RAM_CACHE: Record<string, { data: any; expiry: number }> = {};
 
-async function fetchAPI(method: string, params: Record<string, string> = {}) {
-    const cacheKey = `api_${method}_${JSON.stringify(params)}`;
+async function fetchAPI(method: string, params: Record<string, string> = {}, useBackup = false) {
+    const activeKey = (useBackup || !API_KEY_ENV) ? API_KEY_BACKUP : API_KEY_ENV;
+    const cacheKey = `api_${method}_${JSON.stringify(params)}_${activeKey.substring(0, 5)}`;
     const now = Date.now();
     
     // 1. RAM SHIELD: Check if we have a fresh copy in memory
@@ -51,11 +53,11 @@ async function fetchAPI(method: string, params: Record<string, string> = {}) {
         return GLOBAL_RAM_CACHE[cacheKey].data;
     }
 
-    let url = `${API_BASE}/?method=${method}&APIkey=${API_KEY}`;
+    let url = `${API_BASE}/?method=${method}&APIkey=${activeKey}`;
     for (const [k, v] of Object.entries(params)) if (v) url += `&${k}=${v}`;
     
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000); 
+    const timeout = setTimeout(() => controller.abort(), 12000); 
 
     try {
         const res = await fetch(url, { 
@@ -66,6 +68,11 @@ async function fetchAPI(method: string, params: Record<string, string> = {}) {
         if (!res.ok) throw new Error(`API error: ${res.status}`);
         const data = await res.json();
         
+        // SMART RETRY: If env key is wrong, try with backup once
+        if (!useBackup && API_KEY_ENV && data.result && Array.isArray(data.result) && data.result[0]?.cod === 1004) {
+            return fetchAPI(method, params, true);
+        }
+        
         // 2. RAM STORE: Save to memory for 3600 seconds
         GLOBAL_RAM_CACHE[cacheKey] = {
             data,
@@ -73,7 +80,7 @@ async function fetchAPI(method: string, params: Record<string, string> = {}) {
         };
         
         return data;
-    } catch (err) {
+    } catch (err: any) {
         clearTimeout(timeout);
         // 3. STALE FALLBACK: If API fails, return last known RAM data even if expired
         if (GLOBAL_RAM_CACHE[cacheKey]) return GLOBAL_RAM_CACHE[cacheKey].data;
@@ -226,7 +233,7 @@ export const getCachedMatches = unstable_cache(
             }));
         } catch (err) { return []; }
     },
-    ['ipl-matches-pure-v4'], { revalidate: 3600, tags: ['cricket', 'ipl-matches'] }
+    ['ipl-matches-pure-v6'], { revalidate: 3600, tags: ['cricket', 'ipl-matches'] }
 );
 
 export const getCachedMatchDetail = unstable_cache(
