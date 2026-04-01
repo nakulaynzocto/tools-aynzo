@@ -2,7 +2,7 @@
 import { unstable_cache } from 'next/cache';
 
 const API_BASE = 'https://apiv2.api-cricket.com/cricket';
-const API_KEY  = process.env.NEXT_PUBLIC_CRICKET_API_KEY || process.env.CRICKET_API_KEY || '';
+const API_KEY  = process.env.CRICKET_API_KEY || process.env.NEXT_PUBLIC_CRICKET_API_KEY ;
 
 // ─── DYNAMIC NEURAL ENGINE (V8.0) ─────────────────
 // Static fallbacks removed. All data is now resolved via Live API or Real-time AI Scan.
@@ -226,7 +226,7 @@ export const getCachedMatches = unstable_cache(
             }));
         } catch (err) { return []; }
     },
-    ['ipl-matches-pure-v3'], { revalidate: 3600, tags: ['cricket', 'ipl-matches'] }
+    ['ipl-matches-pure-v4'], { revalidate: 3600, tags: ['cricket', 'ipl-matches'] }
 );
 
 export const getCachedMatchDetail = unstable_cache(

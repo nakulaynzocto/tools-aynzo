@@ -8,7 +8,10 @@
  */
 export function formatTime(time: string, dateStr?: string) {
     try {
+        if (!time) return 'TBA';
         const [hoursStr, minutesStr] = time.split(':');
+        if (!hoursStr || !minutesStr) return 'TBA';
+        
         let utcHours = parseInt(hoursStr);
         const utcMinutes = parseInt(minutesStr);
         
@@ -39,13 +42,18 @@ export function formatTime(time: string, dateStr?: string) {
  */
 export function formatMatchDate(dateStr: string) {
     try {
+        if (!dateStr || dateStr === 'Invalid Date' || dateStr === 'NaN') {
+            return { month: 'TBA', weekday: 'TBA', day: '' };
+        }
         const d = new Date(dateStr);
+        if (isNaN(d.getTime())) return { month: 'TBA', weekday: 'TBA', day: '' };
+        
         return {
             month:   d.toLocaleDateString('en-IN', { month: 'short' }).toUpperCase(),
             weekday: d.toLocaleDateString('en-IN', { weekday: 'short' }).toUpperCase(),
             day:     d.getDate(),
         };
     } catch { 
-        return { month: 'APR', weekday: 'TBA', day: 1 }; 
+        return { month: 'TBA', weekday: 'TBA', day: '' }; 
     }
 }
