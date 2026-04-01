@@ -103,8 +103,8 @@ export default async function Home({ params: { locale } }: { params: { locale: s
           <div className="mt-12 bg-gradient-to-r from-red-600/10 via-[#ef4123]/5 to-slate-900/10 border border-red-500/10 rounded-[2rem] p-6 md:p-8 relative overflow-hidden group hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-500">
             <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 blur-[60px] group-hover:bg-red-500/20 transition-all" />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="flex items-center gap-5 text-left">
-                    <div className="w-14 h-14 bg-white rounded-2xl shadow-xl flex items-center justify-center text-[#ef4123] group-hover:scale-110 transition-transform">
+                <Link href="/tools/cricket" className="flex items-center gap-5 text-left group/content">
+                    <div className="w-14 h-14 bg-white rounded-2xl shadow-xl flex items-center justify-center text-[#ef4123] group-hover/content:scale-110 transition-transform">
                         <Zap size={28} fill="currentColor" />
                     </div>
                     <div>
@@ -112,10 +112,10 @@ export default async function Home({ params: { locale } }: { params: { locale: s
                             <span className="px-2 py-0.5 bg-[#ef4123] text-white text-[9px] font-black uppercase rounded-lg shadow-lg shadow-red-500/20 animate-pulse">New Feature</span>
                             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">IPL 2026 Special</span>
                         </div>
-                        <h3 className="text-lg md:text-xl font-black text-slate-800 uppercase italic leading-tight italic">Cricket AI Match Predictor</h3>
+                        <h3 className="text-lg md:text-xl font-black text-slate-800 uppercase italic leading-tight group-hover/content:text-[#ef4123] transition-colors">Cricket AI Match Predictor</h3>
                         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight mt-1">Get 5 Daily Fantasy Teams & Deep Neural Match Analysis</p>
                     </div>
-                </div>
+                </Link>
                 <Link 
                     href="/tools/cricket" 
                     className="bg-slate-900 hover:bg-[#ef4123] text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-xl hover:scale-105 active:scale-95 whitespace-nowrap flex items-center gap-2 group/btn"
