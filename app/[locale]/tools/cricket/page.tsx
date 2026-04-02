@@ -1,10 +1,12 @@
 // SERVER COMPONENT — data fetched server-side, cached for 1 hour
 import React from 'react';
 import { getCachedMatches } from '@/lib/tools/cricket/cache';
-import MatchListClient from '@/components/tools/cricket/components/MatchListClient';
+import dynamic from 'next/dynamic';
 import { Link } from '@/navigation';
 import { Trophy, Zap, BarChart3, TrendingUp, Calendar, ArrowRight, Shield } from 'lucide-react';
-import IPLTicker from '@/components/tools/cricket/components/IPLTicker';
+
+const MatchListClient = dynamic(() => import('@/components/tools/cricket/components/MatchListClient'), { ssr: false });
+const IPLTicker = dynamic(() => import('@/components/tools/cricket/components/IPLTicker'), { ssr: false });
 
 export const revalidate = 3600; // Next.js page-level ISR: revalidate every 1 hour
 
