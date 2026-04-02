@@ -59,7 +59,7 @@ export default function SquadsAnalysisClient({ homeTeam, awayTeam, isIPL }: Prop
                 </div>
              </div>
              <div className="flex flex-col items-end shrink-0">
-                <div className="flex items-center gap-0.5 text-[#ef4123]">
+                <div className="flex items-center gap-0.5 text-[#D11414]">
                     <Zap size={9} fill="currentColor" /><span className="text-[11px] font-black italic">{p.form}</span>
                 </div>
                 <span className="text-[7px] font-bold text-slate-400 uppercase tracking-tight">FORM</span>

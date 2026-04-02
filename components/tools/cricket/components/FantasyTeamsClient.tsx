@@ -9,6 +9,7 @@ interface Player {
     score: number;
     isXI: boolean;
     form: string;
+    role?: string;
 }
 
 interface TeamProps {
@@ -35,8 +36,16 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
         
         const generated = [];
 
+        // Helper to get roles correctly
+        const playersWithRoles = allPlayers.map(p => ({
+            ...p,
+            normalizedRole: (p.role || '').toLowerCase().includes('wk') || (p.role || '').toLowerCase().includes('keeper') ? 'WK' :
+                            (p.role || '').toLowerCase().includes('all') ? 'AR' :
+                            (p.role || '').toLowerCase().includes('bowl') ? 'BOWL' : 'BAT'
+        }));
+
         // 1. SAFE TEAM (H2H - Top Performers)
-        const safePlayers = allPlayers.slice(0, 11);
+        const safePlayers = playersWithRoles.slice(0, 11);
         generated.push({
             name: "SAFE TEAM (H2H)",
             type: "Safe",
@@ -50,8 +59,8 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
 
         // 2. BALANCED (Medium Risk)
         const balancedPlayers = [
-            ...allPlayers.slice(0, 7),
-            ...allPlayers.slice(11, 15)
+            ...playersWithRoles.slice(0, 7),
+            ...playersWithRoles.slice(11, 15)
         ].slice(0, 11);
         generated.push({
             name: "BALANCED (Medium)",
@@ -66,10 +75,10 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
 
         // 3. RISKY (Grand League)
         const riskyPlayers = [
-            allPlayers[0],
-            allPlayers[3],
-            allPlayers[5],
-            ...allPlayers.slice(15, 23)
+            playersWithRoles[0],
+            playersWithRoles[3],
+            playersWithRoles[5],
+            ...playersWithRoles.slice(15, 23)
         ].slice(0, 11);
         generated.push({
             name: "GRAND LEAGUE (Risky)",
@@ -84,8 +93,8 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
 
         // 4. MEGA CONTEST SPECIAL
         const megaPlayers = [
-            ...allPlayers.slice(2, 8),
-            ...allPlayers.slice(12, 17)
+            ...playersWithRoles.slice(2, 8),
+            ...playersWithRoles.slice(12, 17)
         ].slice(0, 11);
         generated.push({
             name: "MEGA CONTEST",
@@ -98,10 +107,10 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
             bg: "bg-purple-50"
         });
 
-        // 5. UNDERDOG FAVORITE
+        // 5. UNDERDOG SPECIAL
         const underdogPlayers = [
-            ...allPlayers.slice(8, 16),
-            ...allPlayers.slice(0, 3)
+            ...playersWithRoles.slice(8, 16),
+            ...playersWithRoles.slice(0, 3)
         ].slice(0, 11);
         generated.push({
             name: "UNDERDOG SPECIAL",
@@ -110,7 +119,7 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
             players: underdogPlayers,
             captain: underdogPlayers[0],
             vc: underdogPlayers[10],
-            color: "border-[#ef4123]",
+            color: "border-[#D11414]",
             bg: "bg-red-50"
         });
 
@@ -121,17 +130,25 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
 
     const currentTeam = teams[selectedTeamTab];
 
+    // Group current team by role for the field view
+    const fieldRoles = [
+        { label: 'WICKET-KEEPER', players: (currentTeam?.players || []).filter((p: any) => p.normalizedRole === 'WK') },
+        { label: 'BATTERS', players: (currentTeam?.players || []).filter((p: any) => p.normalizedRole === 'BAT') },
+        { label: 'ALL-ROUNDERS', players: (currentTeam?.players || []).filter((p: any) => p.normalizedRole === 'AR') },
+        { label: 'BOWLERS', players: (currentTeam?.players || []).filter((p: any) => p.normalizedRole === 'BOWL') }
+    ];
+
     return (
         <div className="space-y-6">
-            <div className="bg-white border border-slate-100 rounded-[3rem] p-8 shadow-sm">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-slate-50 pb-8">
+            <div className="bg-white border border-slate-100 rounded-[2rem] md:rounded-[3rem] p-4 md:p-8 shadow-sm">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6 md:mb-8 border-b border-slate-50 pb-6 md:pb-8">
                     <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 bg-red-50 text-[#ef4123] rounded-2xl flex items-center justify-center shadow-lg shadow-red-500/10">
-                            <BrainCircuit size={28} />
+                        <div className="w-10 h-10 md:w-14 md:h-14 bg-red-50 text-[#D11414] rounded-2xl flex items-center justify-center shadow-lg shadow-red-500/10">
+                            <BrainCircuit size={24} />
                         </div>
-                        <div>
-                            <h2 className="text-xl md:text-2xl font-black text-slate-800 uppercase italic tracking-tighter leading-none">Fantasy Predictions (5 Teams)</h2>
-                            <p className="text-[10px] font-bold text-slate-400 uppercase mt-2 tracking-[0.2em]">Neural Picks: Safe, Balanced & Grand League Combinations</p>
+                        <div className="min-w-0">
+                            <h2 className="text-lg md:text-2xl font-black text-slate-800 uppercase italic tracking-tighter leading-none">Fantasy Teams</h2>
+                            <p className="text-[8px] md:text-[10px] font-bold text-slate-400 uppercase mt-2 tracking-widest md:tracking-[0.2em] truncate">Neural Picks: Safe, Balanced & GL Combinations</p>
                         </div>
                     </div>
                     
@@ -155,7 +172,7 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     {/* Team Info Column */}
-                    <div className="lg:col-span-5 space-y-6">
+                    <div className="lg:col-span-4 space-y-6">
                         <div className={cn("p-6 rounded-[2.5rem] border-2 shadow-sm transition-all relative overflow-hidden", currentTeam.color, currentTeam.bg)}>
                             <div className="relative z-10">
                                 <span className="px-3 py-1 bg-white border border-slate-100 rounded-full text-[8px] font-black text-slate-500 uppercase tracking-widest mb-4 inline-block">
@@ -193,7 +210,7 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
                     </div>
 
                     {/* Players Field View Column */}
-                    <div className="lg:col-span-7 bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl relative min-h-[600px] border-4 border-slate-800">
+                    <div className="lg:col-span-8 bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl relative min-h-[600px] border-4 border-slate-800">
                         {/* Stadium/Pitch Background */}
                         <div className="absolute inset-0 bg-[#386641] opacity-90">
                             {/* Grass Patterns */}
@@ -204,15 +221,10 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
 
                         <div className="relative z-10 h-full flex flex-col justify-between py-10 px-4">
                             {/* Distribution of 11 players across field layers (generic positions) */}
-                            {[
-                                { label: 'WICKET-KEEPER', players: currentTeam.players.slice(0, 1) },
-                                { label: 'BATTERS', players: currentTeam.players.slice(1, 5) },
-                                { label: 'ALL-ROUNDERS', players: currentTeam.players.slice(5, 8) },
-                                { label: 'BOWLERS', players: currentTeam.players.slice(8, 11) }
-                            ].map((row, rowIdx) => (
+                            {fieldRoles.map((row, rowIdx) => (
                                 <div key={rowIdx} className="space-y-2">
                                     <div className="flex justify-center gap-2 md:gap-6 flex-wrap">
-                                        {row.players.map((p, pIdx) => (
+                                        {row.players.map((p: any, pIdx: number) => (
                                             <div key={pIdx} className="flex flex-col items-center group cursor-default">
                                                 <div className="relative mb-1">
                                                     {/* Player Avatar */}
@@ -271,7 +283,7 @@ export default function FantasyTeamsClient({ homeTeam, awayTeam }: TeamProps) {
                                 </div>
                             </div>
                             <div className="bg-black/50 backdrop-blur-md px-3 py-1 transparent rounded-lg flex items-center gap-2">
-                                <BrainCircuit size={12} className="text-[#ef4123]" />
+                                <BrainCircuit size={12} className="text-[#D11414]" />
                                 <span className="text-[8px] font-black text-white/80 uppercase tracking-widest">Neural Field View</span>
                             </div>
                         </div>

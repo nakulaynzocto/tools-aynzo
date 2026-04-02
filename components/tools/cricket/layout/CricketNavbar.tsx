@@ -55,46 +55,9 @@ export default function CricketNavbar() {
                             );
                         })}
                     </div>
-
-                    {/* Mobile Toggle */}
-                    <div className="md:hidden">
-                        <button 
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="p-1.5 text-white/90 hover:text-white"
-                        >
-                            {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
-                        </button>
-                    </div>
                 </div>
             </div>
 
-            {/* Mobile Menu */}
-            {isMenuOpen && (
-                <div className="md:hidden bg-[#D11414] border-t border-white/10 animate-in slide-in-from-top-2 duration-300">
-                    <div className="px-4 pt-4 pb-8 space-y-2">
-                        {navLinks.map((link) => {
-                            const Icon = link.icon;
-                            const isActive = pathname === link.href;
-                            return (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={() => setIsMenuOpen(false)}
-                                    className={cn(
-                                        "flex items-center gap-4 px-5 py-4 rounded-xl text-base font-black uppercase transition-all",
-                                        isActive 
-                                            ? "bg-white text-[#D11414] shadow-lg" 
-                                            : "text-white/90 bg-white/5 active:bg-white/10"
-                                    )}
-                                >
-                                    <Icon size={20} />
-                                    {link.name}
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </div>
-            )}
         </nav>
     );
 }

@@ -34,12 +34,12 @@ export default function CricketTabHeader({ title = "IPL HUB 2026", currentTab, o
             <div className="max-w-5xl mx-auto px-4 pt-8 pb-0">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6">
                     <div className="space-y-4">
-                        <div className="flex items-center gap-2 text-[10px] text-slate-400 font-medium whitespace-nowrap">
-                            <Link href="/tools/cricket" className="hover:text-white transition-colors">Home</Link>
-                            <span>/</span>
-                            <span className="text-white">Cricket Tools</span>
+                        <div className="flex items-center gap-2 text-[9px] md:text-[10px] text-slate-400 font-black uppercase tracking-[0.2em] whitespace-nowrap">
+                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            <span className="opacity-30">/</span>
+                            <span className="text-white/60">Cricket Hub</span>
                         </div>
-                        <h1 className="text-3xl md:text-4xl font-black tracking-tighter uppercase italic">{title}</h1>
+                        <h1 className="text-2xl md:text-4xl font-black tracking-tighter uppercase italic">{title}</h1>
                     </div>
 
                     {/* Mini Hero Spotlight in Header */}

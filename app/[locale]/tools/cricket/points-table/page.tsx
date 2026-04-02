@@ -28,49 +28,51 @@ export default async function PointsTablePage() {
 
             {/* Table */}
             <div className="bg-white rounded-[2.5rem] border border-slate-100 shadow-xl overflow-hidden overflow-x-auto">
-                <table className="w-full text-left border-collapse min-w-[700px]">
+                <table className="w-full text-left border-collapse">
                     <thead className="bg-slate-50 border-b border-slate-100">
                         <tr>
-                            <th className="px-6 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest w-16">Pos</th>
-                            <th className="px-6 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">Team</th>
-                            <th className="px-6 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">M</th>
-                            <th className="px-6 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">W</th>
-                            <th className="px-6 py-5 text-[10px] font-black text-[#D11414] uppercase tracking-widest">Pts</th>
-                            <th className="px-6 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">NRR</th>
+                            <th className="px-3 md:px-6 py-5 text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest w-12 md:w-16">Pos</th>
+                            <th className="px-3 md:px-6 py-5 text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest">Team</th>
+                            <th className="px-3 md:px-6 py-5 text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest text-center">M</th>
+                            <th className="px-3 md:px-6 py-5 text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest text-center">W</th>
+                            <th className="px-3 md:px-6 py-5 text-[9px] md:text-[10px] font-black text-[#D11414] uppercase tracking-widest text-center">Pts</th>
+                            <th className="px-3 md:px-6 py-5 text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest text-center">NRR</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-50">
                         {table.length > 0 ? table.map((row, idx) => (
                             <tr key={idx} className="hover:bg-slate-50/50 transition-colors group">
-                                <td className="px-6 py-5">
+                                <td className="px-3 md:px-6 py-5">
                                     <div className={cn(
-                                        "w-8 h-8 rounded-lg flex items-center justify-center font-black text-xs italic",
+                                        "w-7 h-7 md:w-8 md:h-8 rounded-lg flex items-center justify-center font-black text-[10px] md:text-xs italic shadow-sm",
                                         idx < 4
-                                            ? "bg-red-50 text-[#D11414] border border-red-100 shadow-sm"
+                                            ? "bg-red-50 text-[#D11414] border border-red-100"
                                             : "bg-slate-50 text-slate-400 border border-slate-100"
                                     )}>
                                         {row.overall_league_position || idx + 1}
                                     </div>
                                 </td>
-                                <td className="px-6 py-5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center font-black text-slate-800 text-xs shadow-sm group-hover:scale-110 transition-transform overflow-hidden">
+                                <td className="px-3 md:px-6 py-5">
+                                    <div className="flex items-center gap-2 md:gap-3">
+                                        <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-lg md:rounded-xl border border-slate-100 flex items-center justify-center font-black text-slate-800 text-[10px] shadow-sm group-hover:scale-110 transition-transform overflow-hidden shrink-0">
                                             {row.team_logo
-                                                ? <img src={row.team_logo} alt={row.team_name} className="w-full h-full object-contain" />
+                                                ? <img src={row.team_logo} alt={row.team_name} className="w-full h-full object-contain p-1" />
                                                 : row.team_name?.substring(0, 3).toUpperCase()
                                             }
                                         </div>
-                                        <span className="text-xs font-black text-slate-800 uppercase italic tracking-tight">{row.team_name}</span>
+                                        <div className="flex flex-col min-w-0">
+                                            <span className="text-[10px] md:text-xs font-black text-slate-800 uppercase italic tracking-tight truncate max-w-[80px] sm:max-w-none">{row.team_name}</span>
+                                        </div>
                                     </div>
                                 </td>
-                                <td className="px-6 py-5 text-xs font-bold text-slate-500">{row.overall_league_played}</td>
-                                <td className="px-6 py-5 text-xs font-bold text-slate-500">{row.overall_league_W ?? '—'}</td>
-                                <td className="px-6 py-5 text-sm font-black text-slate-800 italic">{row.overall_league_PTS ?? '—'}</td>
+                                <td className="px-3 md:px-6 py-5 text-center text-[10px] md:text-xs font-bold text-slate-500 whitespace-nowrap">{row.overall_league_played}</td>
+                                <td className="px-3 md:px-6 py-5 text-center text-[10px] md:text-xs font-bold text-slate-500 whitespace-nowrap">{row.overall_league_W ?? '0'}</td>
+                                <td className="px-3 md:px-6 py-5 text-center text-xs md:text-sm font-black text-[#D11414] italic whitespace-nowrap">{row.overall_league_PTS ?? '0'}</td>
                                 <td className={cn(
-                                    "px-6 py-5 text-xs font-black italic",
-                                    parseFloat(row.overall_league_NRR ?? '0') >= 0 ? "text-emerald-500" : "text-red-500"
+                                    "px-3 md:px-6 py-5 text-center text-[10px] md:text-xs font-black italic whitespace-nowrap",
+                                    parseFloat(row.overall_league_NRR ?? '0') >= 0 ? "text-emerald-600" : "text-red-500"
                                 )}>
-                                    {row.overall_league_NRR ?? '—'}
+                                    {row.overall_league_NRR ?? '0.000'}
                                 </td>
                             </tr>
                         )) : (

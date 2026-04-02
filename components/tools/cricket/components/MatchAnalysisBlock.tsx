@@ -61,7 +61,7 @@ export default function MatchAnalysisBlock({ match, initialData }: { match: any,
             <div className="bg-white border border-slate-100 rounded-[2.5rem] p-16 flex flex-col items-center justify-center text-center space-y-8 shadow-sm">
                 <div className="relative">
                     <div className="absolute inset-0 bg-red-100 rounded-full animate-ping opacity-20" />
-                    <div className="relative z-10 w-24 h-24 bg-red-50 text-[#ef4123] rounded-full flex items-center justify-center shadow-inner">
+                    <div className="relative z-10 w-24 h-24 bg-red-50 text-[#D11414] rounded-full flex items-center justify-center shadow-inner">
                         <Loader2 size={48} className="animate-spin" />
                     </div>
                 </div>
@@ -81,19 +81,19 @@ export default function MatchAnalysisBlock({ match, initialData }: { match: any,
     return (
         <div className="space-y-8 px-1">
             {/* 1. TOP STATS BAR */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                 {[
                     { label: 'Win Probability', val: (analysis?.stats?.winProb || 55) + '%', icon: Target, color: 'text-blue-600', bg: 'bg-blue-50' },
                     { label: 'Pitch Map', val: analysis?.stats?.pitchBehavior || 'Balanced', icon: Shield, color: 'text-green-600', bg: 'bg-green-50' },
                     { label: 'Projected Avg', val: analysis?.stats?.avgScore || '178', icon: TrendingUp, color: 'text-orange-600', bg: 'bg-orange-50' },
-                    { label: 'Neural Alpha', val: 'V8.04', icon: BrainCircuit, color: 'text-[#ef4123]', bg: 'bg-red-50' },
+                    { label: 'Neural Alpha', val: 'V8.04', icon: BrainCircuit, color: 'text-[#D11414]', bg: 'bg-red-50' },
                 ].map((s, i) => (
-                    <div key={i} className="bg-white p-5 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col items-center text-center group hover:scale-[1.02] transition-all hover:shadow-md">
-                        <div className={`w-10 h-10 rounded-2xl ${s.bg} flex items-center justify-center mb-3 transition-colors`}>
-                            <s.icon size={18} className={s.color} />
+                    <div key={i} className="bg-white p-3 md:p-5 rounded-2xl md:rounded-[2rem] border border-slate-100 shadow-sm flex flex-col items-center text-center group hover:scale-[1.02] transition-all hover:shadow-md">
+                        <div className={`w-8 h-8 md:w-10 md:h-10 rounded-xl md:rounded-2xl ${s.bg} flex items-center justify-center mb-2 md:mb-3 transition-colors`}>
+                            <s.icon size={16} className={s.color} />
                         </div>
-                        <span className="text-sm font-black text-slate-800 uppercase italic leading-none">{s.val}</span>
-                        <span className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.15em] mt-2">{s.label}</span>
+                        <span className="text-[12px] md:text-sm font-black text-slate-800 uppercase italic leading-none">{s.val}</span>
+                        <span className="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-[0.1em] md:tracking-[0.15em] mt-1.5 md:mt-2">{s.label}</span>
                     </div>
                 ))}
             </div>
@@ -113,7 +113,7 @@ export default function MatchAnalysisBlock({ match, initialData }: { match: any,
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {(analysis?.topPlayers || []).map((p, idx) => (
                         <div key={idx} className="flex items-center gap-4 p-4 rounded-3xl bg-slate-50/50 border border-slate-50 group hover:bg-white hover:border-red-100 hover:shadow-sm transition-all">
-                            <div className="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-slate-300 font-black text-[10px] shadow-sm shrink-0 border border-slate-50 group-hover:text-[#ef4123]">
+                            <div className="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-slate-300 font-black text-[10px] shadow-sm shrink-0 border border-slate-50 group-hover:text-[#D11414]">
                                 #{idx + 1}
                             </div>
                             <div className="flex-1 min-w-0">
@@ -122,7 +122,7 @@ export default function MatchAnalysisBlock({ match, initialData }: { match: any,
                                     <span className="text-[8px] font-black bg-white px-2 py-0.5 rounded-full border border-slate-100 text-slate-400 uppercase shrink-0">{p.role}</span>
                                 </div>
                                 <div className="flex items-center gap-1.5 mt-1">
-                                    <History size={10} className="text-[#ef4123]" />
+                                    <History size={10} className="text-[#D11414]" />
                                     <p className="text-[9px] font-bold text-slate-500 line-clamp-1">{p.record}</p>
                                 </div>
                             </div>
@@ -148,11 +148,11 @@ export default function MatchAnalysisBlock({ match, initialData }: { match: any,
             <div className="bg-white border border-border/40 rounded-[2.5rem] overflow-hidden shadow-sm">
                 <div className="p-8 border-b border-border/40 bg-secondary/10 flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-[#ef4123] border border-slate-50">
+                        <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-[#D11414] border border-slate-50">
                             <BrainCircuit size={20} />
                         </div>
                         <div>
-                            <h3 className="text-xs font-black text-slate-800 uppercase italic tracking-wider leading-none">Intelligence Deep Dive</h3>
+                            <h3 className="text-sm font-black text-slate-800 uppercase italic tracking-wider leading-none">Intelligence Deep Dive</h3>
                             <div className="flex items-center gap-1.5 mt-1.5">
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.3)]" />
                                 <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest leading-none">Ready for Analysis</span>
@@ -162,15 +162,15 @@ export default function MatchAnalysisBlock({ match, initialData }: { match: any,
                 </div>
                 
                 {/* BLOG-ALIGNED TYPOGRAPHY DESIGN */}
-                <div className="p-6 md:p-14 bg-white">
+                <div className="p-5 md:p-14 bg-white">
                     <div 
                         className="content-body max-w-none selection:bg-primary/20"
                         dangerouslySetInnerHTML={{ __html: htmlContent }}
                     />
                 </div>
 
-                <div className="p-8 bg-slate-900 border-t border-white/5 flex items-center gap-6">
-                    <div className="w-10 h-10 rounded-2xl bg-white/5 flex items-center justify-center text-[#ef4123] shrink-0 border border-white/10">
+                <div className="p-6 md:p-8 bg-slate-900 border-t border-white/5 flex items-center gap-6">
+                    <div className="w-10 h-10 rounded-2xl bg-white/5 flex items-center justify-center text-[#D11414] shrink-0 border border-white/10">
                         <Info size={18} />
                     </div>
                     <div className="space-y-1">

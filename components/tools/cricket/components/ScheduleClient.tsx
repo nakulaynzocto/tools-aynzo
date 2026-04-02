@@ -71,38 +71,40 @@ export default function ScheduleClient({ matches, heroMatch }: Props) {
                                     const isLive = match.event_live === '1' || match.event_status === 'In Progress' || match.event_status === 'Live';
                                     return (
                                         <div key={match.event_key} className="group bg-white border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                                            <div className="flex items-stretch min-h-[90px] max-w-5xl">
+                                            <div className="flex flex-col lg:flex-row items-stretch min-h-[90px] max-w-5xl">
 
                                                 {/* Left: Match # + Date */}
-                                                <div className="w-32 shrink-0 border-r border-slate-100 px-4 py-4 flex flex-col justify-center">
-                                                    <div className="inline-flex items-center border border-[#D11414] text-[#D11414] text-[8px] font-black uppercase px-1.5 py-0.5 rounded mb-1.5 w-fit">
+                                                <div className="w-full lg:w-32 shrink-0 lg:border-r border-slate-100 px-4 py-4 flex flex-row lg:flex-col justify-between lg:justify-center items-center lg:items-start group-hover:bg-[#D11414]/5 transition-colors">
+                                                    <div className="inline-flex items-center border border-[#D11414] text-[#D11414] text-[8px] font-black uppercase px-1.5 py-0.5 rounded mb-1.5 w-fit bg-white">
                                                         Match {num}
                                                     </div>
-                                                    {idx === 0 && (
-                                                        <div className="text-[11px] font-bold text-slate-700 leading-tight">
-                                                            {weekday}, {month} {day}
+                                                    <div className="flex flex-col items-end lg:items-start">
+                                                        {idx === 0 && (
+                                                            <div className="text-[11px] font-bold text-slate-700 leading-tight">
+                                                                {weekday}, {month} {day}
+                                                            </div>
+                                                        )}
+                                                        <div className="flex items-center gap-1 text-[9px] text-slate-400 mt-0.5 font-bold">
+                                                            <Clock size={8} />
+                                                            {formatTime(match.event_time, match.event_date_start)}
                                                         </div>
-                                                    )}
-                                                    <div className="flex items-center gap-1 text-[9px] text-slate-400 mt-0.5">
-                                                        <Clock size={8} />
-                                                        {formatTime(match.event_time, match.event_date_start)}
                                                     </div>
                                                 </div>
 
                                                 {/* Center: Venue + Teams */}
-                                                <div className="flex-1 px-5 py-3 flex flex-col justify-center gap-2">
-                                                    <div className="flex items-center gap-1 text-[9px] text-[#D11414] font-semibold">
+                                                <div className="flex-1 px-5 py-5 lg:py-3 flex flex-col justify-center gap-3">
+                                                    <div className="flex items-center gap-1 text-[9px] text-[#D11414] font-black tracking-widest uppercase italic">
                                                         <MapPin size={9} />
                                                         <span className="truncate">{match.event_stadium || 'Venue TBA'}</span>
                                                     </div>
-                                                    <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-8">
+                                                    <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                                                         <div className="flex items-center justify-between md:justify-start md:gap-4 flex-1">
-                                                            <div className="flex items-center gap-2">
+                                                            <div className="flex items-center gap-3">
                                                                 {match.event_home_team_logo
                                                                     ? <img src={match.event_home_team_logo} alt={match.event_home_team} className="w-8 h-8 object-contain flex-shrink-0" />
-                                                                    : <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-[9px] font-black text-slate-500 flex-shrink-0">{match.event_home_team.substring(0,3)}</div>
+                                                                    : <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-[9px] font-black text-slate-500 flex-shrink-0 uppercase">{match.event_home_team.substring(0,3)}</div>
                                                                 }
-                                                                <span className="text-sm font-bold text-slate-700 truncate max-w-[150px]">{match.event_home_team}</span>
+                                                                <span className="text-sm font-black text-slate-700 uppercase italic truncate max-w-[150px]">{match.event_home_team}</span>
                                                             </div>
                                                             {match.event_home_final_result && (
                                                                 <span className="text-sm font-black text-slate-900 ml-2">{match.event_home_final_result}</span>
@@ -110,19 +112,19 @@ export default function ScheduleClient({ matches, heroMatch }: Props) {
                                                         </div>
 
                                                         <div className="hidden md:block text-[10px] font-black text-slate-200 uppercase tracking-widest italic grow-0 shrink-0">V/S</div>
-                                                        <div className="md:hidden flex items-center gap-2 opacity-30">
+                                                        <div className="md:hidden flex items-center gap-2 opacity-20">
                                                             <div className="h-px flex-1 bg-slate-300" />
                                                             <span className="text-[8px] font-black text-slate-400">V/S</span>
                                                             <div className="h-px flex-1 bg-slate-300" />
                                                         </div>
 
                                                         <div className="flex items-center justify-between md:justify-start md:gap-4 flex-1">
-                                                            <div className="flex items-center gap-2">
+                                                            <div className="flex items-center gap-3">
                                                                 {match.event_away_team_logo
                                                                     ? <img src={match.event_away_team_logo} alt={match.event_away_team} className="w-8 h-8 object-contain flex-shrink-0" />
-                                                                    : <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-[9px] font-black text-slate-500 flex-shrink-0">{match.event_away_team.substring(0,3)}</div>
+                                                                    : <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-[9px] font-black text-slate-500 flex-shrink-0 uppercase">{match.event_away_team.substring(0,3)}</div>
                                                                 }
-                                                                <span className="text-sm font-bold text-slate-700 truncate max-w-[150px]">{match.event_away_team}</span>
+                                                                <span className="text-sm font-black text-slate-700 uppercase italic truncate max-w-[150px]">{match.event_away_team}</span>
                                                             </div>
                                                             {match.event_away_final_result && (
                                                                 <span className="text-sm font-black text-slate-900 ml-2">{match.event_away_final_result}</span>
@@ -130,25 +132,25 @@ export default function ScheduleClient({ matches, heroMatch }: Props) {
                                                         </div>
                                                     </div>
                                                     {match.event_status_info && (
-                                                        <div className="text-[10px] font-bold text-red-600 bg-red-50/50 px-2 py-1 rounded w-fit">
+                                                        <div className="text-[10px] font-bold text-red-600 bg-red-50 border border-red-100 px-2.5 py-1 rounded w-fit uppercase tracking-tighter italic">
                                                             {match.event_status_info}
                                                         </div>
                                                     )}
                                                 </div>
 
                                                 {/* Right: CTA */}
-                                                <div className="w-40 shrink-0 border-l border-slate-100 px-4 flex items-center justify-end gap-2">
+                                                <div className="w-full lg:w-40 px-5 pb-5 lg:pb-0 lg:border-l border-slate-100 flex items-center justify-between lg:justify-end gap-3 group-hover:bg-[#D11414]/5 transition-colors">
                                                     {isLive && (
-                                                        <span className="flex items-center gap-1 text-[9px] font-black text-red-600 bg-red-50 border border-red-100 px-2 py-1 rounded-full">
-                                                            <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping" />
-                                                            LIVE
+                                                        <span className="flex items-center gap-1.5 text-[9px] font-black text-red-600 bg-red-50 border border-red-200 px-3 py-1.5 rounded-full shadow-sm animate-pulse">
+                                                            <span className="w-2 h-2 bg-red-600 rounded-full" />
+                                                            LIVE NOW
                                                         </span>
                                                     )}
                                                     <Link
                                                         href={`/tools/cricket/${match.slug || match.event_key}`}
-                                                        className="flex items-center gap-1.5 bg-[#D11414] hover:bg-[#b01010] text-white text-[10px] font-black px-6 py-2 rounded-lg transition-colors shadow-sm whitespace-nowrap"
+                                                        className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-[#D11414] hover:bg-[#b01010] text-white text-[10px] font-black px-6 py-2.5 rounded-xl transition-all shadow-md active:scale-95 uppercase italic tracking-widest whitespace-nowrap"
                                                     >
-                                                        <Zap size={10} /> AI PREDICTIONS
+                                                        <Zap size={12} className="fill-white" /> AI PREDICTIONS
                                                     </Link>
                                                 </div>
                                             </div>

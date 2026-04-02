@@ -138,10 +138,10 @@ export default function AIPredictorPage() {
                             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest italic animate-pulse">Syncing Neural Grid...</span>
                         </div>
                     ) : filteredMatches.length === 0 ? (
-                        <div className="py-20 text-center space-y-4">
-                            <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto text-slate-200"><Trophy size={32} /></div>
+                        <div className="py-24 text-center bg-white rounded-3xl border border-slate-100 shadow-sm">
+                            <Trophy className="w-12 h-12 text-slate-100 mx-auto mb-4" />
                             <h3 className="text-sm font-black text-slate-800 uppercase italic">No Matches Found</h3>
-                            <p className="text-slate-400 font-bold uppercase text-[9px] tracking-widest leading-none">Neural scanner returning empty for current filter.</p>
+                            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Check back later for updated AI predictions.</p>
                         </div>
                     ) : (
                         filteredMatches.map((match, idx) => {
@@ -153,12 +153,12 @@ export default function AIPredictorPage() {
                                 <div key={match.event_key} className="group hover:bg-slate-50/70 transition-colors">
                                     <div className="flex flex-col lg:flex-row lg:items-stretch min-h-[90px]">
                                         
-                                        {/* LEFT: MATCH # + DATE */}
-                                        <div className="w-full lg:w-40 shrink-0 lg:border-r border-slate-100 p-4 flex flex-row lg:flex-col justify-center lg:items-start items-center gap-4 lg:gap-0">
+                                        {/* 1. LEFT: MATCH # + DATE */}
+                                        <div className="w-full lg:w-40 shrink-0 lg:border-r border-slate-100 p-4 flex flex-row lg:flex-col justify-between lg:justify-center lg:items-start items-center group-hover:bg-[#D11414]/5 transition-colors">
                                             <div className="inline-flex items-center border border-[#D11414] text-[#D11414] text-[8px] font-black uppercase px-1.5 py-0.5 rounded mb-1.5 w-fit bg-white">
                                                 MATCH {idx + 1}
                                             </div>
-                                            <div className="flex flex-col lg:items-start items-center">
+                                            <div className="flex flex-col items-end lg:items-start">
                                                 <div className="text-[11px] font-bold text-slate-800 leading-tight">
                                                     {weekday}, {month} {day}
                                                 </div>
@@ -170,59 +170,60 @@ export default function AIPredictorPage() {
                                             </div>
                                         </div>
 
-                                        {/* CENTER: VENUE + TEAMS */}
-                                        <div className="flex-1 p-4 flex flex-col justify-center space-y-2 lg:border-r border-slate-100">
+                                        {/* 2. CENTER: VENUE + TEAMS */}
+                                        <div className="flex-1 p-5 lg:p-4 flex flex-col justify-center space-y-3 lg:border-r border-slate-100">
                                             <div className="flex items-center gap-1 text-[10px] text-[#D11414] font-black uppercase tracking-tight italic">
                                                 <MapPin size={10} className="shrink-0" />
                                                 <span className="truncate">{match.event_stadium || 'Wait for Stadium TBA'}</span>
                                             </div>
                                             
-                                            <div className="flex items-center justify-center md:justify-start gap-4 md:gap-10">
-                                                <div className="flex items-center gap-2 md:gap-4">
-                                                    <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center p-1.5 border border-slate-100 group-hover:scale-110 transition-transform">
-                                                        {match.event_home_team_logo ? <img src={match.event_home_team_logo} className="w-full h-full object-contain" alt="" /> : <Trophy size={14} className="text-slate-100" />}
+                                            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
+                                                <div className="flex items-center justify-between md:justify-start md:gap-4 flex-1">
+                                                    <div className="flex items-center gap-3 md:gap-4">
+                                                        <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center p-1.5 border border-slate-100 group-hover:scale-110 transition-transform flex-shrink-0 shadow-sm">
+                                                            {match.event_home_team_logo ? <img src={match.event_home_team_logo} className="w-full h-full object-contain" alt="" /> : <Trophy size={14} className="text-slate-100" />}
+                                                        </div>
+                                                        <span className="text-[12px] md:text-sm font-black text-slate-700 uppercase italic truncate max-w-[140px] md:max-w-none">{match.event_home_team}</span>
                                                     </div>
-                                                    <span className="text-[11px] md:text-sm font-black text-slate-700 uppercase italic truncate max-w-[120px]">{match.event_home_team}</span>
-                                                    {match.event_home_final_result && <span className="text-base font-black text-slate-900">{match.event_home_final_result}</span>}
+                                                    {match.event_home_final_result && <span className="text-sm md:text-base font-black text-slate-900">{match.event_home_final_result}</span>}
                                                 </div>
 
-                                                <span className="text-[9px] font-black text-slate-200 uppercase tracking-widest italic grow-0 shrink-0">V/S</span>
+                                                <div className="hidden md:block text-[9px] font-black text-slate-200 uppercase tracking-widest italic shrink-0">V/S</div>
+                                                <div className="md:hidden flex items-center gap-2 opacity-20">
+                                                    <div className="h-px flex-1 bg-slate-200" />
+                                                    <span className="text-[8px] font-black text-slate-400">V/S</span>
+                                                    <div className="h-px flex-1 bg-slate-200" />
+                                                </div>
 
-                                                <div className="flex items-center gap-2 md:gap-4">
-                                                    <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center p-1.5 border border-slate-100 group-hover:scale-110 transition-transform">
-                                                        {match.event_away_team_logo ? <img src={match.event_away_team_logo} className="w-full h-full object-contain" alt="" /> : <Trophy size={14} className="text-slate-100" />}
+                                                <div className="flex items-center justify-between md:justify-start md:gap-4 flex-1">
+                                                    <div className="flex items-center gap-3 md:gap-4">
+                                                        <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center p-1.5 border border-slate-100 group-hover:scale-110 transition-transform flex-shrink-0 shadow-sm">
+                                                            {match.event_away_team_logo ? <img src={match.event_away_team_logo} className="w-full h-full object-contain" alt="" /> : <Trophy size={14} className="text-slate-100" />}
+                                                        </div>
+                                                        <span className="text-[12px] md:text-sm font-black text-slate-700 uppercase italic truncate max-w-[140px] md:max-w-none">{match.event_away_team}</span>
                                                     </div>
-                                                    <span className="text-[11px] md:text-sm font-black text-slate-700 uppercase italic truncate max-w-[120px]">{match.event_away_team}</span>
-                                                    {match.event_away_final_result && <span className="text-base font-black text-slate-900">{match.event_away_final_result}</span>}
+                                                    {match.event_away_final_result && <span className="text-sm md:text-base font-black text-slate-900">{match.event_away_final_result}</span>}
                                                 </div>
                                             </div>
 
                                             <div className="mt-1 flex items-center gap-2">
-                                                <div className={`px-3 py-0.5 rounded text-[8px] font-black uppercase tracking-widest border ${
-                                                    isLiveMatch ? 'bg-red-50 text-red-600 border-red-200 animate-pulse' : 'bg-orange-50 text-orange-600 border-orange-200'
+                                                <div className={`px-3 py-1 rounded text-[8px] font-black uppercase tracking-widest border italic ${
+                                                    isLiveMatch ? 'bg-red-50 text-red-600 border-red-200 animate-pulse shadow-sm' : 'bg-orange-50 text-orange-600 border-orange-200 shadow-sm'
                                                 }`}>
                                                     {isLiveMatch ? 'Live Now' : 'Match yet to begin'}
                                                 </div>
                                             </div>
                                         </div>
 
-                                        {/* RIGHT: CTA (Slanted AI Preview Button) */}
-                                        <div className="w-full lg:w-48 p-4 flex items-center justify-center lg:justify-end gap-3">
-                                            <Ticket size={20} className="text-slate-100 hover:text-[#D11414] transition-colors cursor-pointer hidden xl:block" />
+                                        {/* 3. RIGHT: CTA */}
+                                        <div className="w-full lg:w-48 px-5 pb-5 lg:pb-0 flex items-center justify-between lg:justify-end gap-3 group-hover:bg-[#D11414]/5 transition-colors">
+                                            <Ticket size={20} className="text-slate-200 hover:text-[#D11414] transition-colors cursor-pointer hidden xl:block" />
                                             <Link 
                                                 href={`/tools/cricket/${match.event_key}`}
-                                                className="relative flex items-center justify-center min-w-[110px] h-9 group/btn"
+                                                className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-[#D11414] hover:bg-[#b01010] text-white text-[10px] font-black px-6 py-2.5 rounded-xl transition-all shadow-md active:scale-95 uppercase italic tracking-widest whitespace-nowrap"
                                             >
-                                                <div 
-                                                    className="absolute inset-0 bg-[#D11414] group-hover/btn:bg-[#B11414] transition-all duration-300 shadow-sm"
-                                                    style={{ clipPath: 'polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%)' }}
-                                                />
-                                                <div className="relative z-10 flex items-center gap-1.5 text-white">
-                                                    <Zap size={11} className="group-hover/btn:rotate-12 transition-transform" />
-                                                    <span className="text-[9px] font-black uppercase tracking-widest italic pt-0.5">
-                                                        AI Preview
-                                                    </span>
-                                                </div>
+                                                <Zap size={12} className="fill-white group-hover/btn:rotate-12 transition-transform" /> 
+                                                AI PREDICTIONS
                                             </Link>
                                         </div>
                                     </div>

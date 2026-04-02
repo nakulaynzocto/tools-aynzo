@@ -165,7 +165,7 @@ async function aiGenerateSquad(team_name: string): Promise<string[]> {
 }
 
 export const getCachedTeamPlayers = unstable_cache(
-    async (team_key: string, team_name: string): Promise<{ name: string; image?: string }[]> => {
+    async (team_key: string, team_name: string): Promise<{ name: string; image?: string; role?: string }[]> => {
         // 1. API Primary
         if (team_key && team_key !== '0' && team_key !== '') {
             try {
@@ -174,7 +174,8 @@ export const getCachedTeamPlayers = unstable_cache(
                 if (Array.isArray(raw) && raw.length > 0) {
                     return raw.map((p: any) => ({
                         name: p.player_name,
-                        image: p.player_image || p.player_image_url || p.player_logo || ''
+                        image: p.player_image || p.player_image_url || p.player_logo || '',
+                        role: p.player_type || p.player_role || ''
                     }));
                 }
             } catch (err) { }
@@ -296,8 +297,8 @@ export const getCachedLineups = unstable_cache(
             const lineups = data?.result?.lineups;
             if (!lineups) return null;
             return {
-                home_team: lineups.home_team?.map((p: any) => ({ name: p.player_name, image: p.player_image || '' })) || [],
-                away_team: lineups.away_team?.map((p: any) => ({ name: p.player_name, image: p.player_image || '' })) || []
+                home_team: lineups.home_team?.map((p: any) => ({ name: p.player_name, image: p.player_image || '', role: p.player_type || '' })) || [],
+                away_team: lineups.away_team?.map((p: any) => ({ name: p.player_name, image: p.player_image || '', role: p.player_type || '' })) || []
             };
         } catch (err) { return null; }
     },
