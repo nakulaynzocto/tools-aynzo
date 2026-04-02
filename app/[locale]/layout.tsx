@@ -11,6 +11,9 @@ import Footer from "@/components/common/components/Footer";
 import { locales } from '@/i18n-config';
 import NextTopLoader from '@/components/common/components/NextTopLoader';
 import CommandPalette from '@/components/common/components/CommandPalette';
+import dynamic from 'next/dynamic';
+
+const PromotionalBanner = dynamic(() => import('@/components/common/components/PromotionalBanner'), { ssr: false });
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800", "900"] });
 
@@ -83,8 +86,6 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-
-
 export default async function RootLayout({
   children,
   params: { locale }
@@ -144,6 +145,7 @@ export default async function RootLayout({
                   "url": "https://tools.aynzo.com/logo.png",
                   "width": 1200,
                   "height": 630,
+                  "alt": "Aynzo Logo",
                 },
               },
               "potentialAction": {
@@ -178,8 +180,9 @@ export default async function RootLayout({
           <CommandPalette />
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
             <div className="flex flex-col min-h-screen">
+              <PromotionalBanner />
               <Navbar />
-              <main className="flex-1 pt-16">
+              <main className="flex-1">
                 {children}
               </main>
               <Footer />
