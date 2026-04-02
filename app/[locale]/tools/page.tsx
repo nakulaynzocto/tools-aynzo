@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { locales } from '@/i18n';
+import { locales } from '@/i18n-config';
 import HeroSearch from '@/components/common/components/HeroSearch';
 import RecentToolsSection from '@/components/common/components/RecentToolsSection';
 import { getCategoryIcon } from '@/utils/icon-mapping';

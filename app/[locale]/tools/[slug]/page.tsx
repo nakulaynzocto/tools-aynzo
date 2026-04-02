@@ -14,7 +14,7 @@ import { ShareButtons } from '@/components/common/components/ShareButtons';
 import { EmbedWidget } from '@/components/common/components/EmbedWidget';
 import Script from 'next/script';
 import { generateProgrammaticMetadata } from '@/utils/seo-utils';
-import { locales } from '@/i18n';
+import { locales } from '@/i18n-config';
 
 const ImageTools = dynamic(() => import('@/components/tools/image/Index'));
 const PdfTools = dynamic(() => import('@/components/tools/pdf/Index'));

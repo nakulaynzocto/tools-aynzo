@@ -4,57 +4,24 @@ import { Trophy, Activity, Clock, ArrowRight, BrainCircuit } from 'lucide-react'
 import { ApiMatch } from '@/lib/tools/cricket/cache';
 import { Link } from '@/navigation';
 
-function MatchCountdown({ startDate, startTime }: { startDate: string, startTime: string }) {
-    const [timeLeft, setTimeLeft] = useState<string>('');
-
-    useEffect(() => {
-        const calculate = () => {
-            try {
-                const [h, m] = startTime.split(':');
-                const target = new Date(startDate);
-                target.setUTCHours(parseInt(h), parseInt(m), 0, 0);
-                const diff = target.getTime() - new Date().getTime();
-
-                if (diff <= 0) return '00:00:00';
-
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                const mins = Math.floor((diff / 1000 / 60) % 60);
-                const secs = Math.floor((diff / 1000) % 60);
-
-                const parts = [];
-                if (days > 0) parts.push(`${days}d`);
-                parts.push(`${String(hours).padStart(2, '0')}h`);
-                parts.push(`${String(mins).padStart(2, '0')}m`);
-                parts.push(`${String(secs).padStart(2, '0')}s`);
-                return parts.join(' ');
-            } catch { return ''; }
-        };
-
-        const timer = setInterval(() => setTimeLeft(calculate()), 1000);
-        setTimeLeft(calculate());
-        return () => clearInterval(timer);
-    }, [startDate, startTime]);
-
-    if (!timeLeft) return null;
-    return (
-        <div className="text-[9px] font-black text-[#ef4123] tracking-widest flex items-center gap-1 bg-[#ef4123]/5 px-1.5 py-0.5 rounded-full border border-[#ef4123]/10">
-            <span className="w-1 h-1 rounded-full bg-[#ef4123] animate-pulse" />
-            {timeLeft}
-        </div>
-    );
-}
+import MatchCountdown from './MatchCountdown';
 
 interface Props { matches: ApiMatch[]; }
 
 export default function IPLTicker({ matches }: Props) {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     const iplMatches = matches.filter(m => 
         m.league_key === '745' || 
         m.league_name?.toLowerCase().includes('ipl') || 
         (m.league_name?.toLowerCase().includes('premier league') && m.league_name?.toLowerCase().includes('indian'))
     ).filter(m => m.event_status !== 'Finished').slice(0, 10);
 
-    if (iplMatches.length === 0) return null;
+    if (!isMounted || iplMatches.length === 0) return null;
 
     return (
         <div className="w-full bg-[#f8fafc] pb-0 pt-4 overflow-visible">

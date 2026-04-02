@@ -1,7 +1,7 @@
 import InfoPageLayout from '@/components/common/components/InfoPageLayout';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { locales } from '@/i18n';
+import { locales } from '@/i18n-config';
 import { useTranslations } from 'next-intl';
 
 export function generateStaticParams() {

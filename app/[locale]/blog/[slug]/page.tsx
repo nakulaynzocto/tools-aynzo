@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { locales } from '@/i18n';
+import { locales } from '@/i18n-config';
 import { Link } from '@/navigation';
 import fs from 'fs';
 import path from 'path';

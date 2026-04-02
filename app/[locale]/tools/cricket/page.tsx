@@ -43,22 +43,29 @@ export default async function CricketMatchHub() {
 
                 {/* AI Features Summary */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-10 border-t border-slate-100">
-                    {[
-                        { icon: Zap,          title: 'Neural Scanning', desc: '15+ live player metrics analyzed every minute for maximum accuracy.' },
-                        { icon: Shield,       title: 'Pitch Analysis',  desc: 'Real-time pitch condition reports integrated into Dream XI picking.' },
-                        { icon: TrendingUp,   title: 'Win Flow',       desc: 'Dynamic win probability tracker that updates live as the ball moves.' },
-                    ].map((feature, i) => {
-                        const Icon = feature.icon;
-                        return (
-                            <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
-                                <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center mb-4">
-                                    <Icon size={20} className="text-red-600" />
-                                </div>
-                                <h4 className="text-sm font-black text-slate-800 uppercase mb-2 tracking-wide">{feature.title}</h4>
-                                <p className="text-[11px] text-slate-400 leading-relaxed font-medium">{feature.desc}</p>
-                            </div>
-                        )
-                    })}
+                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                        <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center mb-4">
+                            <Zap size={20} className="text-red-600" />
+                        </div>
+                        <h4 className="text-sm font-black text-slate-800 uppercase mb-2 tracking-wide">Neural Scanning</h4>
+                        <p className="text-[11px] text-slate-400 leading-relaxed font-medium">15+ live player metrics analyzed every minute for maximum accuracy.</p>
+                    </div>
+
+                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                        <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center mb-4">
+                            <Shield size={20} className="text-red-600" />
+                        </div>
+                        <h4 className="text-sm font-black text-slate-800 uppercase mb-2 tracking-wide">Pitch Analysis</h4>
+                        <p className="text-[11px] text-slate-400 leading-relaxed font-medium">Real-time pitch condition reports integrated into Dream XI picking.</p>
+                    </div>
+
+                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                        <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center mb-4">
+                            <TrendingUp size={20} className="text-red-600" />
+                        </div>
+                        <h4 className="text-sm font-black text-slate-800 uppercase mb-2 tracking-wide">Win Flow</h4>
+                        <p className="text-[11px] text-slate-400 leading-relaxed font-medium">Dynamic win probability tracker that updates live as the ball moves.</p>
+                    </div>
                 </div>
             </div>
         </div>

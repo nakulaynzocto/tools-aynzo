@@ -8,7 +8,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import Script from 'next/script';
 import Footer from "@/components/common/components/Footer";
-import { locales } from '@/i18n';
+import { locales } from '@/i18n-config';
 import NextTopLoader from '@/components/common/components/NextTopLoader';
 import CommandPalette from '@/components/common/components/CommandPalette';
 

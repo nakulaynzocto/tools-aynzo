@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { locales } from '@/i18n';
+import { locales } from '@/i18n-config';
 import Image from 'next/image';
 import { Shield, Zap, Image as ImageIcon, FileText, Code, ArrowRight } from 'lucide-react';
 import HeroSearch from '@/components/common/components/HeroSearch';
@@ -9,7 +9,7 @@ import { Link } from '@/navigation';
 import ToolDirectory from '@/components/common/components/ToolDirectory';
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return locales.map((locale: string) => ({ locale }));
 }
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
@@ -105,7 +105,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                 <Link href="/tools/cricket" className="flex items-center gap-5 text-left group/content">
                     <div className="w-14 h-14 bg-white rounded-2xl shadow-xl flex items-center justify-center text-[#ef4123] group-hover/content:scale-110 transition-transform">
-                        <Zap size={28} fill="currentColor" />
+                        <Zap size={28} className="fill-white" />
                     </div>
                     <div>
                         <div className="flex items-center gap-2 mb-1">

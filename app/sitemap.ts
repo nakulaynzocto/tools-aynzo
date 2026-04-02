@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { tools } from '@/lib/tools';
-import { locales } from '@/i18n';
+import { locales } from '@/i18n-config';
 import fs from 'fs';
 import path from 'path';
 
@@ -24,13 +24,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const getAlternateLanguages = (path: string) => {
         const languages: Record<string, string> = {};
         languages['x-default'] = `${baseUrl}/en${path}`;
-        locales.forEach((l) => {
+        locales.forEach((l: string) => {
             languages[l] = `${baseUrl}/${l}${path}`;
         });
         return { languages };
     };
 
-    locales.forEach((locale) => {
+    locales.forEach((locale: string) => {
         // Static Pages
         staticPages.forEach((pagePath) => {
             allPages.push({
