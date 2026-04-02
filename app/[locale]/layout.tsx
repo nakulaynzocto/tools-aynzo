@@ -83,7 +83,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-import PromotionalBanner from '@/components/common/components/PromotionalBanner';
+
 
 export default async function RootLayout({
   children,
@@ -178,9 +178,8 @@ export default async function RootLayout({
           <CommandPalette />
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
             <div className="flex flex-col min-h-screen">
-              <PromotionalBanner />
               <Navbar />
-              <main className="flex-1">
+              <main className="flex-1 pt-16">
                 {children}
               </main>
               <Footer />
