@@ -4,7 +4,7 @@
  */
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || "";
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aynzo.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tools.aynzo.com";
 const SITE_NAME = "Aynzo Tools Platform";
 
 export async function askAI(prompt: string, model: string = "google/gemini-2.0-flash-001") {

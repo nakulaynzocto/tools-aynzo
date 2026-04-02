@@ -4808,7 +4808,7 @@ export const toolSEO: { [key: string]: ToolSEO } = {
 <ol>
 <li><strong>Paste Your List: </strong> Copy your column of URLs from Excel, Google Sheets, or a text file and paste them into the box above.</li >
 <li><strong>Clean Your Data: </strong> Our tool automatically detects line breaks and spaces, identifying each unique URL in your list.</li >
-<li><strong>Allow Popups: </strong> This is critical. Most modern browsers (Chrome, Safari, Edge) block multiple tabs from opening to prevent spam. Look for the "Popup Blocked" icon in your address bar and click <strong>"Always Allow Popups from tools.aynzo.com."</strong > </li>
+<li><strong>Allow Popups: </strong> This is critical. Most modern browsers (Chrome, Safari, Edge) block multiple tabs from opening to prevent spam. Look for the "Popup Blocked" icon in your address bar and click <strong>"Always Allow Popups from aynzo.com."</strong > </li>
 <li> <strong>Go!: </strong> Click the "Open All" button and watch your browser do the work.</li >
 </ol>
 

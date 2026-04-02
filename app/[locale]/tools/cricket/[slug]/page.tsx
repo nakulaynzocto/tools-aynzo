@@ -45,18 +45,22 @@ export default async function MatchDetailPage({ params }: { params: { slug: stri
         getCachedLineups(eventKey)
     ]);
     if (!match) { notFound(); }
+    
+    // Ensure standings is at least an empty array before searching
+    const safeStandings = Array.isArray(standings) ? standings : [];
+    
     const hKey = match.home_team_key && match.home_team_key !== '0' && match.home_team_key !== '' 
         ? match.home_team_key 
-        : standings.find(s => s.team_name === match.event_home_team)?.team_key || '';
+        : safeStandings.find(s => s.team_name === match.event_home_team)?.team_key || '';
     
     const aKey = match.away_team_key && match.away_team_key !== '0' && match.away_team_key !== '' 
         ? match.away_team_key 
-        : standings.find(s => s.team_name === match.event_away_team)?.team_key || '';
+        : safeStandings.find(s => s.team_name === match.event_away_team)?.team_key || '';
 
     // 1. GET AUTHENTIC SQUADS FIRST
     const [homeSquadFull, awaySquadFull] = await Promise.all([
-        getCachedTeamPlayers(String(hKey), match.event_home_team),
-        getCachedTeamPlayers(String(aKey), match.event_away_team)
+        getCachedTeamPlayers(String(hKey), match.event_home_team || 'Home Team'),
+        getCachedTeamPlayers(String(aKey), match.event_away_team || 'Away Team')
     ]);
 
     // 2. PASS SQUADS TO ANALYSIS ENGINE (SEO-FRIENDLY CACHED SERVER ANALYSIS)
@@ -70,19 +74,19 @@ export default async function MatchDetailPage({ params }: { params: { slug: stri
                  (match.league_name?.toLowerCase().includes('premier league') && match.league_name?.toLowerCase().includes('indian'));
 
     const eventKeyNum = parseInt(match.event_key || '0');
-    const hPos = standings.find(s => s.team_name === match.event_home_team)?.overall_league_position || 5;
-    const aPos = standings.find(s => s.team_name === match.event_away_team)?.overall_league_position || 6;
-
-    const buildRoster = (lineupPlayers: { name: string; image?: string }[], squadPlayers: { name: string; image?: string }[], isHome: boolean) => {
+    const hPos = safeStandings.find(s => s.team_name === match.event_home_team)?.overall_league_position || 5;
+    const aPos = safeStandings.find(s => s.team_name === match.event_away_team)?.overall_league_position || 6;
+ 
+    const buildRoster = (lineupPlayers: { name: string; image?: string }[] = [], squadPlayers: { name: string; image?: string }[] = [], isHome: boolean) => {
         // Correct logic: if lineup exists, use it. Otherwise use squad.
-        const players = lineupPlayers.length > 0 
+        const players = (lineupPlayers && lineupPlayers.length > 0) 
             ? lineupPlayers
-            : squadPlayers;
-
+            : (Array.isArray(squadPlayers) ? squadPlayers : []);
+ 
         return players.map((p: any, idx) => {
-            const seed = (p.name.length * eventKeyNum) + idx + (isHome ? 100 : 200);
+            const seed = (p.name?.length * eventKeyNum) + idx + (isHome ? 100 : 200) || idx;
             return {
-                name: p.name,
+                name: p.name || 'Unknown Player',
                 image: p.image || '',
                 score: parseFloat((45 + (seed % 45) + (isHome ? (10 - hPos) : (10 - aPos))).toFixed(1)),
                 isXI: idx < 11,
@@ -91,16 +95,16 @@ export default async function MatchDetailPage({ params }: { params: { slug: stri
             };
         });
     };
-
+ 
     const homeSquad = {
-        name: match.event_home_team,
-        logo: match.event_home_team_logo,
+        name: match.event_home_team || 'Home Team',
+        logo: match.event_home_team_logo || '',
         players: buildRoster(lineups?.home_team || [], homeSquadFull, true)
     };
-
+ 
     const awaySquad = {
-        name: match.event_away_team,
-        logo: match.event_away_team_logo,
+        name: match.event_away_team || 'Away Team',
+        logo: match.event_away_team_logo || '',
         players: buildRoster(lineups?.away_team || [], awaySquadFull, false)
     };
 

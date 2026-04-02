@@ -10,6 +10,8 @@
     "HomePage": {
         "title": "免费开发者工具",
         "description": "日常任务的简单、快速、安全工具集合。",
+        "metaDescription": "日常任务的简单、快速、安全工具集合。为开发人员、设计师和内容创作者提供的专业免费在线工具箱。",
+        "metaKeywords": "Aynzo工具, 免费在线工具, 图片压缩, 字数统计, PDF工具, 开发人员实用工具, SEO工具",
         "noAds": "无广告、无跟踪，只有工具。",
         "toolsCount": "{count} 个工具",
         "capabilities": {
@@ -1665,7 +1667,7 @@
             "seoDescription": "生成 url opener 在线 免费. Bulk link opener. 无需登录, 快速, 安全. 完美适用于 research.免费、快速且安全，无需注册。",
             "seoKeywords": "bulk url opener free, open multiple links online, url list opener, link opener, multiple url opener",
             "seoH1": "URL Opener 免费: Open multiple URLs in new tabs",
-            "content": "<h2> 为什么要使用批量 URL 打开器？ </h2>\n\n<p> 在数字营销、SEO 和学术研究中，您经常会遇到需要处理的大量网址。手动点击、复制和粘贴 20 多个 URL 既费时又费力。我们的<strong>批量 URL 打开器</strong>简化了这一工作流程，您可以粘贴一个列表，然后立即在单独的浏览器标签页中打开每个 URL。</p>\n\n<p> 无论您是在审核网站的 404 页面还是检查竞争对手的链接列表，此工具都能将繁琐的点击操作从几分钟缩短到一秒钟的自动化操作。</p>\n\n<h2> 如何使用 Aynzo 多链接打开器</h2>\n\n<ol>\n<li><strong>粘贴您的列表：</strong> 从 Excel、Google Sheets 或文本文件中复制您的 URL 列，然后将其粘贴到上面的框中。</li>\n\n<li><strong>清理您的数据：</strong> 我们的工具会自动检测换行符。</strong>以及空格，用于标识列表中的每个唯一 URL。</li>\n\n<li><strong>允许弹出窗口：</strong>这一点至关重要。大多数现代浏览器（Chrome、Safari、Edge）都会阻止打开多个标签页以防止垃圾邮件。在地址栏中查找“弹出窗口已阻止”图标，然后点击“始终允许来自 tools.aynzo.com 的弹出窗口”。\n\n<li><strong>开始！：</strong>点击“全部打开”按钮，然后观看浏览器自动完成操作。</li>\n\n</ol>\n\n<h2>研究人员和 SEO 人员的理想用例</h2>\n\n<ul>\n\n<li><strong>反向链接审核：</strong>快速打开引用域列表，检查内容质量。</li>\n\n<li><strong>域名研究：</strong>批量评估过期域名或潜在购买目标。</li>\n\n<li><strong>社交媒体管理：</strong>一次性打开品牌的所有社交媒体账号，检查信息传递是否一致。</li>\n\n<li><strong>技术 SEO：</strong>验证“301 重定向”是否指向正确的有效页面。</li> >\n\n</ul>\n\n<h2>关于浏览器性能的说明</h2>\n\n<p>同时打开过多标签页会降低电脑性能（占用内存）。我们建议，如果您使用的是笔记本电脑，每次打开<strong>10-15个URL</strong>；如果您使用的是高性能工作站，则最多打开30个。这样可以确保您在进行审核时浏览器保持响应迅速。</p>\n\n<h2>安全私密的链接管理</h2>\n\n<p>您的研究数据是您的专属资产。与其他可能会追踪您正在调查的URL的“链接打开”网站不同，<strong>Aynzo Tools</strong>完全在客户端运行。我们不会记录您粘贴的URL，也无法查看您的研究内容。这是一个干净、私密且专业的环境，适合您的日常数字工作流程。</p>",
+            "content": "<h2> 为什么要使用批量 URL 打开器？ </h2>\n\n<p> 在数字营销、SEO 和学术研究中，您经常会遇到需要处理的大量网址。手动点击、复制和粘贴 20 多个 URL 既费时又费力。我们的<strong>批量 URL 打开器</strong>简化了这一工作流程，您可以粘贴一个列表，然后立即在单独的浏览器标签页中打开每个 URL。</p>\n\n<p> 无论您是在审核网站的 404 页面还是检查竞争对手的链接列表，此工具都能将繁琐的点击操作从几分钟缩短到一秒钟的自动化操作。</p>\n\n<h2> 如何使用 Aynzo 多链接打开器</h2>\n\n<ol>\n<li><strong>粘贴您的列表：</strong> 从 Excel、Google Sheets 或文本文件中复制您的 URL 列，然后将其粘贴到上面的框中。</li>\n\n<li><strong>清理您的数据：</strong> 我们的工具会自动检测换行符。</strong>以及空格，用于标识列表中的每个唯一 URL。</li>\n\n<li><strong>允许弹出窗口：</strong>这一点至关重要。大多数现代浏览器（Chrome、Safari、Edge）都会阻止打开多个标签页以防止垃圾邮件。在地址栏中查找“弹出窗口已阻止”图标，然后点击“始终允许来自 aynzo.com 的弹出窗口”。\n\n<li><strong>开始！：</strong>点击“全部打开”按钮，然后观看浏览器自动完成操作。</li>\n\n</ol>\n\n<h2>研究人员和 SEO 人员的理想用例</h2>\n\n<ul>\n\n<li><strong>反向链接审核：</strong>快速打开引用域列表，检查内容质量。</li>\n\n<li><strong>域名研究：</strong>批量评估过期域名或潜在购买目标。</li>\n\n<li><strong>社交媒体管理：</strong>一次性打开品牌的所有社交媒体账号，检查信息传递是否一致。</li>\n\n<li><strong>技术 SEO：</strong>验证“301 重定向”是否指向正确的有效页面。</li> >\n\n</ul>\n\n<h2>关于浏览器性能的说明</h2>\n\n<p>同时打开过多标签页会降低电脑性能（占用内存）。我们建议，如果您使用的是笔记本电脑，每次打开<strong>10-15个URL</strong>；如果您使用的是高性能工作站，则最多打开30个。这样可以确保您在进行审核时浏览器保持响应迅速。</p>\n\n<h2>安全私密的链接管理</h2>\n\n<p>您的研究数据是您的专属资产。与其他可能会追踪您正在调查的URL的“链接打开”网站不同，<strong>Aynzo Tools</strong>完全在客户端运行。我们不会记录您粘贴的URL，也无法查看您的研究内容。这是一个干净、私密且专业的环境，适合您的日常数字工作流程。</p>",
             "faq": [
                 {
                     "question": "安全吗？",

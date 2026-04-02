@@ -10,6 +10,8 @@
     "HomePage": {
         "title": "Strumenti Gratuiti per Sviluppatori",
         "description": "Una collezione di strumenti semplici, veloci e sicuri per le tue attività quotidiane.",
+        "metaDescription": "Una collezione di strumenti semplici, veloci e sicuri per le tue attività quotidiane. Suite professionale di strumenti online gratuiti per sviluppatori, designer e creatori.",
+        "metaKeywords": "Strumenti Aynzo, strumenti online gratuiti, compressore immagini, contatore parole, strumenti PDF, calcolatore online, utility per sviluppatori",
         "noAds": "Nessuna pubblicità, nessun tracciamento, solo utilità.",
         "toolsCount": "{count} Strumenti",
         "capabilities": {

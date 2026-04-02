@@ -46,7 +46,7 @@ const blogs = [
 
 <h2>How to Use Aynzo Image Compressor (Step-by-Step)</h2>
 <ol>
-  <li>Visit <a href="${BASE_URL}/en/tools/image-compressor">tools.aynzo.com/tools/image-compressor</a></li>
+  <li>Visit <a href="${BASE_URL}/en/tools/image-compressor">aynzo.com/tools/image-compressor</a></li>
   <li>Click <strong>"Upload Image"</strong> or drag and drop your JPG, PNG, or WebP file</li>
   <li>Adjust the quality slider (we recommend 80% for web use)</li>
   <li>Click <strong>"Compress"</strong> and download your optimized image</li>

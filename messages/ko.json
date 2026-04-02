@@ -10,6 +10,8 @@
     "HomePage": {
         "title": "무료 개발자 도구",
         "description": "일상적인 작업을 위한 간단하고 빠르며 안전한 도구 모음입니다.",
+        "metaDescription": "일상적인 작업을 위한 간단하고 빠르며 안전한 도구 모음입니다. 개발자, 디자이너 및 크리에이터를 위한 무료 온라인 전문 도구 제품군입니다.",
+        "metaKeywords": "Aynzo 도구, 무료 온라인 도구, 이미지 압축, 단어 수 세기, PDF 도구, 개발자 유틸리티, SEO 도구",
         "noAds": "광고 없음, 추적 없음, 오직 유틸리티뿐입니다.",
         "toolsCount": "{count} Tools",
         "capabilities": {

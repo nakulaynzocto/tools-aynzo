@@ -72,7 +72,7 @@ export async function generateMatchInsightsSummary(matchInfo: any, squads?: { ho
         method: "POST",
         headers: {
           "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-          "HTTP-Referer": "https://aynzo.com",
+          "HTTP-Referer": "https://tools.aynzo.com",
           "X-Title": "Aynzo Tools",
           "Content-Type": "application/json"
         },

@@ -3,7 +3,7 @@ import React from 'react';
 import { getCachedMatches } from '@/lib/tools/cricket/cache';
 import MatchListClient from '@/components/tools/cricket/components/MatchListClient';
 import { Link } from '@/navigation';
-import { Trophy, Zap, BarChart3, TrendingUp, Calendar, ArrowRight } from 'lucide-react';
+import { Trophy, Zap, BarChart3, TrendingUp, Calendar, ArrowRight, Shield } from 'lucide-react';
 import IPLTicker from '@/components/tools/cricket/components/IPLTicker';
 
 export const revalidate = 3600; // Next.js page-level ISR: revalidate every 1 hour
@@ -65,5 +65,3 @@ export default async function CricketMatchHub() {
     );
 }
 
-// Add Shield export if not found in lucide-react imports
-import { Shield } from 'lucide-react';

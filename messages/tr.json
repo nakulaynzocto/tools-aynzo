@@ -10,6 +10,8 @@
     "HomePage": {
         "title": "Ücretsiz Geliştirici Araçları",
         "description": "Günlük işleriniz için basit, hızlı ve güvenli araç koleksiyonu.",
+        "metaDescription": "Günlük işleriniz için basit, hızlı ve güvenli araç koleksiyonu. Geliştiriciler, tasarımcılar ve içerik oluşturucular için profesyonel ücretsiz çevrimiçi araç takımı.",
+        "metaKeywords": "Aynzo Araçları, ücretsiz çevrimiçi araçlar, resim sıkıştırma, kelime sayacı, PDF araçları, geliştirici yardımcı programları, SEO araçları",
         "noAds": "Reklam yok, takip yok, sadece araçlar.",
         "toolsCount": "{count} Araç",
         "capabilities": {

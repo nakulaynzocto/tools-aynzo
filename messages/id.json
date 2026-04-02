@@ -10,6 +10,8 @@
     "HomePage": {
         "title": "Alat Pengembang Gratis",
         "description": "Kumpulan alat sederhana, cepat, dan aman untuk tugas sehari-hari Anda.",
+        "metaDescription": "Kumpulan alat sederhana, cepat, dan aman untuk tugas sehari-hari Anda. Suite profesional alat online gratis untuk pengembang, desainer, dan pembuat konten.",
+        "metaKeywords": "Aynzo Tools, alat online gratis, kompres gambar, penghitung kata, alat PDF, alat desain, utilitas pengembang",
         "noAds": "Tanpa iklan, tanpa pelacakan, hanya alat.",
         "toolsCount": "{count} Alat",
         "capabilities": {
