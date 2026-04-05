@@ -8,13 +8,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://tools.aynzo.com';
     let allPages: MetadataRoute.Sitemap = [];
 
-    const blogsDir = path.join(process.cwd(), 'seo-blogs');
-    const blogFiles = fs.existsSync(blogsDir) 
-        ? fs.readdirSync(blogsDir).filter(f => f.endsWith('.json') && !f.startsWith('_'))
-        : [];
-    const blogSlugs = blogFiles.map(f => f.replace('.json', ''));
+    const staticPages = ['', '/tools', '/blog', '/about', '/contact', '/privacy', '/terms'];
 
-    const staticPages = ['', '/blog', '/about', '/contact', '/privacy', '/terms'];
+    const getBlogSlugs = () => {
+        const slugs = new Set<string>();
+        
+        // Scan main English directory
+        const mainBlogsDir = path.join(process.cwd(), 'seo-blogs');
+        if (fs.existsSync(mainBlogsDir)) {
+            fs.readdirSync(mainBlogsDir)
+              .filter(f => f.endsWith('.json') && !f.startsWith('_'))
+              .forEach(f => slugs.add(f.replace('.json', '')));
+        }
+
+        // Scan all localized subdirectories
+        locales.forEach(loc => {
+            const locBlogsDir = path.join(process.cwd(), 'seo-blogs', loc);
+            if (fs.existsSync(locBlogsDir)) {
+                fs.readdirSync(locBlogsDir)
+                  .filter(f => f.endsWith('.json') && !f.startsWith('_'))
+                  .forEach(f => slugs.add(f.replace('.json', '')));
+            }
+        });
+
+        return Array.from(slugs);
+    };
+
+    const blogSlugs = getBlogSlugs();
 
     const getAlternateLanguages = (path: string) => {
         const languages: Record<string, string> = {};

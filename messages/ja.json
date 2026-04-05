@@ -3037,5 +3037,18 @@
         "section2Text": "Permission is granted to use our online tools for personal and commercial purposes. All processing happens in your browser for most tools, ensuring privacy.",
         "section3Title": "3. Disclaimer",
         "section3Text": "The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+    },
+    "ToolsDirectory": {
+        "title": "プロフェッショナル・オンライン・ツール・ライブラリ | Aynzo",
+        "description": "100以上の無料オンラインツールの包括的なライブラリを探索してください。",
+        "heroTitle": "<v>プロフェッショナル</v>なユーティリティを閲覧する",
+        "heroSubtitle": "強力で安全、そして非常に高速なツール。"
+    },
+    "CategoryDescriptions": {
+        "image": "品質を損なうことなく画像を圧縮するプロフェッショナルツール。",
+        "pdf": "ドキュメントを簡単に結合するためのエンタープライズグレードツール。",
+        "text": "フォーマットのための高度なテキストユーティリティ。",
+        "developer": "コードの整型に不可欠な開発者ツール。",
+        "seo": "高性能なSEOおよびソーシャルメディアツール。"
     }
 }

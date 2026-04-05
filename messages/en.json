@@ -61,6 +61,24 @@
         "nameHighlight": "Tools",
         "description": "The Ultimate Online Tools Hub"
     },
+    "ToolsDirectory": {
+        "title": "Professional Online Tools Library | Aynzo",
+        "description": "Explore our comprehensive library of 100+ free online tools for developers, designers, and writers. High-performance, secure, and privacy-first utilities for every digital task.",
+        "heroTitle": "Browse Our <v>Professional</v> Utilities",
+        "heroSubtitle": "Powerful, secure, and blazing-fast tools for developers, designers, and creators. All processed locally in your browser for 100% privacy."
+    },
+    "CategoryDescriptions": {
+        "image": "Professional image processing tools to compress, resize, and convert images without losing quality.",
+        "pdf": "Enterprise-grade PDF management tools to merge, split, and convert documents with ease.",
+        "text": "Advanced text utilities for formatting, case conversion, and character analysis.",
+        "developer": "Essential developer tools for code beautification, JSON formatting, and data validation.",
+        "seo": "High-performance SEO and social media tools to optimize your digital presence.",
+        "security": "Secure cryptography tools for hash generation, password creation, and data encryption.",
+        "converter": "Accurate unit and data converters for professional and academic workflows.",
+        "utility": "Everyday utility tools designed to simplify your digital life.",
+        "calculator": "Smart financial and mathematical calculators for instant results.",
+        "youtube": "Dedicated YouTube tools for creators to download thumbnails and generate tags."
+    },
     "Navigation": {
         "allTools": "All Tools",
         "more": "More",

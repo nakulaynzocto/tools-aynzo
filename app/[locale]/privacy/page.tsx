@@ -13,8 +13,25 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     return {
         title: t('title'),
         description: t('intro'),
+        openGraph: {
+            title: t('title'),
+            description: t('intro'),
+            url: `https://tools.aynzo.com/${locale}/privacy`,
+            images: [{ url: 'https://tools.aynzo.com/og-image.png', width: 1200, height: 630 }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: t('title'),
+            description: t('intro'),
+        },
         alternates: {
-            canonical: `https://tools.aynzo.com/${locale}/privacy`
+            canonical: `https://tools.aynzo.com/${locale}/privacy`,
+            languages: {
+                'x-default': 'https://tools.aynzo.com/en/privacy',
+                ...Object.fromEntries(
+                    locales.map((l) => [l, `https://tools.aynzo.com/${l}/privacy`])
+                )
+            }
         }
     };
 }

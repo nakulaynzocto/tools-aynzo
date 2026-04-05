@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Shield, Zap, Image as ImageIcon, FileText, Code, ArrowRight } from 'lucide-react';
 import HeroSearch from '@/components/common/components/HeroSearch';
 import { Link } from '@/navigation';
+import { Suspense } from 'react';
 
 import ToolDirectory from '@/components/common/components/ToolDirectory';
 
@@ -26,20 +27,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       canonical: `https://tools.aynzo.com/${locale}`,
       languages: {
         'x-default': 'https://tools.aynzo.com/en',
-        'en': 'https://tools.aynzo.com/en',
-        'hi': 'https://tools.aynzo.com/hi',
-        'pt': 'https://tools.aynzo.com/pt',
-        'es': 'https://tools.aynzo.com/es',
-        'id': 'https://tools.aynzo.com/id',
-        'de': 'https://tools.aynzo.com/de',
-        'fr': 'https://tools.aynzo.com/fr',
-        'ja': 'https://tools.aynzo.com/ja',
-        'ru': 'https://tools.aynzo.com/ru',
-        'tr': 'https://tools.aynzo.com/tr',
-        'it': 'https://tools.aynzo.com/it',
-        'ko': 'https://tools.aynzo.com/ko',
-        'zh': 'https://tools.aynzo.com/zh',
-        'ar': 'https://tools.aynzo.com/ar',
+        ...Object.fromEntries(
+          locales.map((l) => [l, `https://tools.aynzo.com/${l}`])
+        )
       }
     }
   };
@@ -97,7 +87,9 @@ export default async function Home({ params: { locale } }: { params: { locale: s
               v: (chunks) => <span className="text-primary">{chunks}</span>
             })}
           </h1>
-          <HeroSearch />
+          <Suspense fallback={<div className="h-16 w-full max-w-3xl mx-auto animate-pulse bg-muted/20 rounded-2xl" />}>
+            <HeroSearch />
+          </Suspense>
         </div>
       </section>
 
@@ -162,6 +154,25 @@ export default async function Home({ params: { locale } }: { params: { locale: s
           </div>
         </div>
       </section>
+
+      {/* SEO Content Section - High Value for Search Engines */}
+      {t.has('seoContent') && (
+        <section className="py-24 bg-background">
+          <div className="max-w-4xl mx-auto px-6">
+            <div 
+              className="prose prose-invert max-w-none 
+                prose-h2:text-3xl prose-h2:font-bold prose-h2:mb-8 prose-h2:text-foreground
+                prose-h3:text-2xl prose-h3:font-bold prose-h3:mt-12 prose-h3:mb-6 prose-h3:text-foreground
+                prose-p:text-lg prose-p:text-muted-foreground prose-p:mb-6
+                prose-ul:space-y-4 prose-ul:text-muted-foreground prose-ul:mb-8
+                prose-li:text-muted-foreground
+                prose-strong:text-foreground
+                prose-a:text-primary prose-a:no-underline hover:prose-a:underline"
+              dangerouslySetInnerHTML={{ __html: t('seoContent') }}
+            />
+          </div>
+        </section>
+      )}
 
       {/* SEO Link Directory - Strategically placed for crawlers but unobtrusive for users */}
       <ToolDirectory locale={locale} />

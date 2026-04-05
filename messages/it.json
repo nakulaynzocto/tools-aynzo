@@ -3544,5 +3544,18 @@
         "section2Text": "Permission is granted to use our online tools for personal and commercial purposes. All processing happens in your browser for most tools, ensuring privacy.",
         "section3Title": "3. Disclaimer",
         "section3Text": "The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+    },
+    "ToolsDirectory": {
+        "title": "Libreria di Strumenti Online Professionali | Aynzo",
+        "description": "Esplora la nostra libreria di oltre 100 strumenti online gratuiti.",
+        "heroTitle": "Sfoglia le Nostre Utility <v>Professionali</v>",
+        "heroSubtitle": "Strumenti potenti, sicuri e velocissimi."
+    },
+    "CategoryDescriptions": {
+        "image": "Strumenti professionali di elaborazione immagini.",
+        "pdf": "Strumenti di gestione PDF di livello aziendale.",
+        "text": "Utility di testo avanzate per formattazione.",
+        "developer": "Strumenti essenziali per sviluppatori.",
+        "seo": "Strumenti SEO e social media performanti."
     }
 }

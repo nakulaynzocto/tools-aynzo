@@ -123,15 +123,17 @@ export default async function ToolPage({ params }: Props) {
     return notFound();
   }
 
-  const tTools = await getTranslations('Tools');
-  const t = await getTranslations('Common');
+  const tTools = await getTranslations({ locale: params.locale, namespace: 'Tools' });
+  const t = await getTranslations({ locale: params.locale, namespace: 'Tools' });
 
   const translatedName = tTools.has(`${params.slug}.name`) ? tTools(`${params.slug}.name`) : tool.name;
-  const translatedDesc = tTools.has(`${params.slug}.description`) ? tTools(`${params.slug}.description`) : tool.description;
+  const translatedDesc = tTools.has(`${params.slug}.seoDescription`) 
+    ? tTools(`${params.slug}.seoDescription`) 
+    : (tTools.has(`${params.slug}.description`) ? tTools(`${params.slug}.description`) : tool.description);
 
-  const tCategories = await getTranslations('Categories');
+  const tCategories = await getTranslations({ locale: params.locale, namespace: 'Categories' });
   const translatedCategory = tCategories.has(tool.category) ? tCategories(tool.category) : tool.category;
-  const tNav = await getTranslations('Navigation');
+  const tNav = await getTranslations({ locale: params.locale, namespace: 'Navigation' });
 
   const renderTool = () => {
     switch (params.slug) {
@@ -433,7 +435,21 @@ export default async function ToolPage({ params }: Props) {
     ]
   };
 
-    return (
+  const localizedFaqs = tTools.has(`${params.slug}.faq`) ? (tTools.raw(`${params.slug}.faq`) as any[]) : (seo?.faq || []);
+  const faqSchema = localizedFaqs && localizedFaqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': localizedFaqs.map((item: any) => ({
+      '@type': 'Question',
+      'name': item.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': item.answer
+      }
+    }))
+  } : null;
+
+  return (
     <div className="min-h-screen bg-background pb-12">
       {/* Schema Markup for SEO */}
       {seo?.schema && (
@@ -445,7 +461,8 @@ export default async function ToolPage({ params }: Props) {
               ...seo.schema,
               name: translatedName,
               description: translatedDesc,
-              inLanguage: params.locale
+              inLanguage: params.locale,
+              url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`
             })
           }}
         />
@@ -497,6 +514,17 @@ export default async function ToolPage({ params }: Props) {
         }}
       />
 
+      {/* FAQ Schema for Rich SERP Results */}
+      {faqSchema && (
+        <Script
+          id="faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema)
+          }}
+        />
+      )}
+
       <div className="w-full max-w-7xl mx-auto py-4 px-4 md:px-6">
         {/* Breadcrumbs for SEO */}
         <Breadcrumbs
@@ -504,6 +532,14 @@ export default async function ToolPage({ params }: Props) {
             { label: tNav('tools'), href: '/tools' },
             { label: translatedName, href: `/tools/${params.slug}` }
           ]}
+        />
+
+        {/* Tool Header - Critical for SEO H1 */}
+        <ToolPageHeader
+          name={translatedName}
+          description={translatedDesc}
+          category={translatedCategory}
+          h1={seo?.h1}
         />
 
         {/* Tool Content */}
@@ -523,19 +559,28 @@ export default async function ToolPage({ params }: Props) {
           name={translatedName}
           description={translatedDesc}
           content={(() => {
-            // Priority: Localized JSON content
+            // Priority 1: Localized JSON content from messages/
             const localizedContent = tTools.has(`${params.slug}.content`) ? (tTools.raw(`${params.slug}.content`) as string) : undefined;
             
-            // Only use hardcoded English content if locale is 'en'
-            const hardcodedContent = params.locale === 'en' ? seo?.content : undefined;
+            // Priority 2: Hardcoded rich content from lib/seo.ts (Fallback for all languages)
+            const hardcodedContent = seo?.content;
             
             const finalRawContent = localizedContent || hardcodedContent;
             
             if (!finalRawContent) return undefined;
             
-            // Internal link rewriting for better locale consistency
-            return finalRawContent.replace(/href="\/(?:en|hi|pt|es|id|de|fr|ja|ru|tr|it|ko|zh|ar)\/tools\//g, `href="/${params.locale}/tools/`)
-                               .replace(/href="\/tools\//g, `href="/${params.locale}/tools/`);
+            // Internal link rewriting logic:
+            // 1. Ensure links to tools include the current locale
+            // 2. Prevent hardcoded /en/ links when in other locales
+            return finalRawContent.replace(/href="\/(?:en|hi|pt|es|id|de|fr|ja|ru|tr|it|ko|zh|ar|x-default)\//g, `href="/${params.locale}/`)
+                               .replace(/href="\/(?!http|https|mailto|tel)([^\/"]+)/g, (match, p1) => {
+                                   // If it's a root path like /tools or /blog without locale
+                                   const isSupportedLocale = ['en','hi','pt','es','id','de','fr','ja','ru','tr','it','ko','zh','ar'].includes(p1);
+                                   if (!isSupportedLocale) {
+                                       return `href="/${params.locale}/${p1}`;
+                                   }
+                                   return match;
+                               });
           })()}
         />
 
@@ -554,7 +599,7 @@ export default async function ToolPage({ params }: Props) {
         {/* Last Updated - Freshness Signal for SEO */}
         <div className="flex items-center justify-end mt-3">
           <span className="text-xs text-muted-foreground/60 italic">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            Last updated: {new Date().toLocaleDateString(params.locale, { year: 'numeric', month: 'long', day: 'numeric' })}
           </span>
         </div>
 

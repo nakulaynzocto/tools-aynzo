@@ -15,8 +15,20 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('metaTitle') || 'Blog - Aynzo Tools',
     description: t('metaDescription') || 'Read the latest guides and tutorials on using online tools for productivity and SEO.',
+    openGraph: {
+      title: t('metaTitle') || 'Blog - Aynzo Tools',
+      description: t('metaDescription') || 'Read the latest guides on Aynzo Tools.',
+      url: `https://tools.aynzo.com/${locale}/blog`,
+      images: [{ url: 'https://tools.aynzo.com/og-image.png', width: 1200, height: 630 }],
+    },
     alternates: {
-      canonical: `https://tools.aynzo.com/${locale}/blog`
+      canonical: `https://tools.aynzo.com/${locale}/blog`,
+      languages: {
+        'x-default': 'https://tools.aynzo.com/en/blog',
+        ...Object.fromEntries(
+          locales.map((l) => [l, `https://tools.aynzo.com/${l}/blog`])
+        )
+      }
     }
   };
 }

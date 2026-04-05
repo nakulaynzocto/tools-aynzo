@@ -1,9 +1,29 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, Search, Wrench, ArrowLeft } from 'lucide-react';
+import { Home, Search, Wrench } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+
+const SUPPORTED_LOCALES = ['en','hi','pt','es','id','de','fr','ja','ru','tr','it','ko','zh','ar'];
+
+function detectLocale(pathname: string): string {
+    const segment = pathname?.split('/')[1];
+    return SUPPORTED_LOCALES.includes(segment) ? segment : 'en';
+}
+
+const POPULAR_TOOLS = [
+    { name: 'Word Counter', slug: 'word-counter' },
+    { name: 'Image Compressor', slug: 'image-compressor' },
+    { name: 'PDF to Word', slug: 'pdf-to-word' },
+    { name: 'QR Code Generator', slug: 'qr-code-generator' },
+    { name: 'Password Generator', slug: 'password-generator' },
+    { name: 'JSON Formatter', slug: 'json-formatter' },
+];
 
 export default function NotFound() {
+    const pathname = usePathname();
+    const locale = detectLocale(pathname || '');
+
     return (
         <div className="min-h-screen bg-background flex items-center justify-center px-4">
             <div className="max-w-2xl w-full text-center">
@@ -31,14 +51,14 @@ export default function NotFound() {
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                     <Link
-                        href="/"
+                        href={`/${locale}`}
                         className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition-all shadow-lg hover:shadow-primary/30"
                     >
                         <Home className="h-5 w-5" />
                         Go Home
                     </Link>
                     <Link
-                        href="/tools"
+                        href={`/${locale}/tools`}
                         className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-border text-foreground rounded-xl font-semibold hover:bg-muted transition-all"
                     >
                         <Wrench className="h-5 w-5" />
@@ -52,17 +72,10 @@ export default function NotFound() {
                         Popular Tools
                     </p>
                     <div className="flex flex-wrap gap-2 justify-center">
-                        {[
-                            { name: 'Word Counter', slug: 'word-counter' },
-                            { name: 'Image Compressor', slug: 'image-compressor' },
-                            { name: 'PDF to Word', slug: 'pdf-to-word' },
-                            { name: 'QR Code Generator', slug: 'qr-code-generator' },
-                            { name: 'Password Generator', slug: 'password-generator' },
-                            { name: 'JSON Formatter', slug: 'json-formatter' },
-                        ].map(tool => (
+                        {POPULAR_TOOLS.map(tool => (
                             <Link
                                 key={tool.slug}
-                                href={`/en/tools/${tool.slug}`}
+                                href={`/${locale}/tools/${tool.slug}`}
                                 className="px-4 py-2 bg-muted hover:bg-primary/10 hover:text-primary border border-border rounded-lg text-sm font-medium transition-all"
                             >
                                 {tool.name}

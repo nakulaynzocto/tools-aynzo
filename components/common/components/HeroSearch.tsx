@@ -7,16 +7,30 @@ import { useTranslations } from 'next-intl';
 import { searchTools } from '@/lib/tools';
 import { cn } from '@/utils/cn';
 import { usePersistentTools } from '@/hooks/use-persistent-tools';
+import { useSearchParams } from 'next/navigation';
 
 export default function HeroSearch() {
     const t = useTranslations('Navigation');
     const tTools = useTranslations('Tools');
+    const searchParams = useSearchParams();
+    const urlQuery = searchParams.get('q');
+    
     const [query, setQuery] = useState('');
     const [results, setResults] = useState<any[]>([]);
     const [isOpen, setIsOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
     const { addRecentTool } = usePersistentTools();
+
+    // Support URL search query
+    useEffect(() => {
+        if (urlQuery && urlQuery.trim().length > 1) {
+            setQuery(urlQuery);
+            const filtered = searchTools(urlQuery).slice(0, 8);
+            setResults(filtered);
+            setIsOpen(true);
+        }
+    }, [urlQuery]);
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {

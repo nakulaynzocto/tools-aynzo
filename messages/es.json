@@ -3428,5 +3428,18 @@
         "section2Text": "Permission is granted to use our online tools for personal and commercial purposes. All processing happens in your browser for most tools, ensuring privacy.",
         "section3Title": "3. Disclaimer",
         "section3Text": "The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+    },
+    "ToolsDirectory": {
+        "title": "Biblioteca de Herramientas Online Profesionales | Aynzo",
+        "description": "Explore nuestra biblioteca completa de más de 100 herramientas gratuitas en línea.",
+        "heroTitle": "Explore Nuestras Utilidades <v>Profesionales</v>",
+        "heroSubtitle": "Herramientas potentes, seguras y ultrarrápidas. Todo se procesa localmente."
+    },
+    "CategoryDescriptions": {
+        "image": "Herramientas de imágenes profesionales para comprimir y convertir fotos.",
+        "pdf": "Herramientas de gestión de PDF para combinar y convertir documentos.",
+        "text": "Utilidades de texto avanzadas para formateo y análisis.",
+        "developer": "Herramientas esenciales para desarrolladores y validación de datos.",
+        "seo": "Herramientas de SEO y redes sociales para optimizar su presencia."
     }
 }

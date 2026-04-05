@@ -3042,5 +3042,18 @@
         "section2Text": "Permission is granted to use our online tools for personal and commercial purposes. All processing happens in your browser for most tools, ensuring privacy.",
         "section3Title": "3. Disclaimer",
         "section3Text": "The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+    },
+    "ToolsDirectory": {
+        "title": "전문 온라인 도구 라이브러리 | Aynzo",
+        "description": "개발자, 디자이너, 작가를 위한 100개 이상의 무료 온라인 도구를 탐색하세요. 고성능, 안전하고 개인정보 보호를 최우선으로 하는 유틸리티.",
+        "heroTitle": "저희 <v>전문</v> 유틸리티를 살펴보세요",
+        "heroSubtitle": "개발자, 디자이너, 크리에이터를 위한 강력하고 안전하며 초고속 도구. 100% 개인정보 보호를 위해 브라우저에서 로컬로 처리됩니다."
+    },
+    "CategoryDescriptions": {
+        "image": "품질 손실 없이 이미지를 압축, 크기 조정 및 변환하는 전문 이미지 처리 도구.",
+        "pdf": "문서를 쉽게 병합, 분할 및 변환하는 엔터프라이즈급 PDF 관리 도구.",
+        "text": "서식, 대소문자 변환 및 문자 분석을 위한 고급 텍스트 유틸리티.",
+        "developer": "코드 미화, JSON 형식 지정 및 데이터 유효성 검사를 위한 필수 개발자 도구.",
+        "seo": "디지털 존재감을 최적화하는 고성능 SEO 및 소셜 미디어 도구."
     }
 }

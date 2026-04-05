@@ -2983,5 +2983,18 @@
         "section2Text": "Permission is granted to use our online tools for personal and commercial purposes. All processing happens in your browser for most tools, ensuring privacy.",
         "section3Title": "3. Disclaimer",
         "section3Text": "The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+    },
+    "ToolsDirectory": {
+        "title": "专业在线工具库 | Aynzo",
+        "description": "探索我们为开发人员、设计师和作家提供的 100 多个免费在线工具。",
+        "heroTitle": "浏览我们的<v>专业</v>实用程序",
+        "heroSubtitle": "强大、安全且极速的工具。"
+    },
+    "CategoryDescriptions": {
+        "image": "专业图像处理工具，压缩图片。",
+        "pdf": "企业级 PDF 管理工具，轻松合并。",
+        "text": "用于文本格式化的高级文本实用程序。",
+        "developer": "用于代码美化的基本开发人员工具。",
+        "seo": "高性能 SEO 和社交媒体工具。"
     }
 }

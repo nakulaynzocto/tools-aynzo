@@ -27,6 +27,7 @@ export function ToolCard({ _id, slug, name, description, category, categoryKey }
             <Link
                 href={`/tools/${slug}`}
                 onClick={() => addRecentTool(slug)}
+                title={`Use Free Online ${name} Tool - Aynzo`}
                 className="block bg-card/60 backdrop-blur-sm rounded-[2rem] p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 border border-border/50 hover:border-primary/30 hover:-translate-y-2 overflow-hidden relative h-full"
             >
                 <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 blur-[40px] rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors" />
@@ -71,6 +72,7 @@ export function ToolCard({ _id, slug, name, description, category, categoryKey }
                     e.stopPropagation();
                     toggleFavorite(slug);
                 }}
+                aria-label={favorite ? 'Remove from favorites' : 'Add to favorites'}
                 className={cn(
                     "absolute top-6 right-6 p-2.5 rounded-xl border transition-all duration-300 z-10",
                     favorite 

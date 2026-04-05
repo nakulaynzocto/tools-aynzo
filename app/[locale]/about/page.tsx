@@ -12,6 +12,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     return {
         title: t('title'),
         description: t('description'),
+        openGraph: {
+            title: t('title'),
+            description: t('description'),
+            url: `https://tools.aynzo.com/${locale}/about`,
+            images: [{ url: 'https://tools.aynzo.com/og-image.png', width: 1200, height: 630 }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: t('title'),
+            description: t('description'),
+        },
         alternates: {
             canonical: `https://tools.aynzo.com/${locale}/about`,
             languages: {
@@ -23,6 +34,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         }
     };
 }
+
 
 export default async function AboutPage({ params: { locale } }: { params: { locale: string } }) {
     const t = await getTranslations({ locale, namespace: 'About' });

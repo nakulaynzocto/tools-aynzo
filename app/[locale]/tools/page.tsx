@@ -19,27 +19,20 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
     const t = await getTranslations({ locale, namespace: 'Navigation' });
+    const tTools = await getTranslations({ locale, namespace: 'ToolsDirectory' });
+    
+    const localizedTitle = tTools.has('title') ? tTools('title') : `${t('tools')} | Professional Online Tools Library`;
+    
     return {
-        title: t('tools'),
-        description: "Browse our complete collection of free online tools for developers, designers, and writers.",
+        title: localizedTitle,
+        description: tTools.has('description') ? tTools('description') : "Browse our complete collection of 100+ free online tools for developers, designers, and writers.",
         alternates: {
             canonical: `https://tools.aynzo.com/${locale}/tools`,
             languages: {
                 'x-default': 'https://tools.aynzo.com/en/tools',
-                'en': 'https://tools.aynzo.com/en/tools',
-                'hi': 'https://tools.aynzo.com/hi/tools',
-                'pt': 'https://tools.aynzo.com/pt/tools',
-                'es': 'https://tools.aynzo.com/es/tools',
-                'id': 'https://tools.aynzo.com/id/tools',
-                'de': 'https://tools.aynzo.com/de/tools',
-                'fr': 'https://tools.aynzo.com/fr/tools',
-                'ja': 'https://tools.aynzo.com/ja/tools',
-                'ru': 'https://tools.aynzo.com/ru/tools',
-                'tr': 'https://tools.aynzo.com/tr/tools',
-                'it': 'https://tools.aynzo.com/it/tools',
-                'ko': 'https://tools.aynzo.com/ko/tools',
-                'zh': 'https://tools.aynzo.com/zh/tools',
-                'ar': 'https://tools.aynzo.com/ar/tools',
+                ...Object.fromEntries(
+                    locales.map((l) => [l, `https://tools.aynzo.com/${l}/tools`])
+                )
             }
         }
     };
@@ -47,7 +40,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 export default async function ToolsPage({ params: { locale } }: { params: { locale: string } }) {
     const tCategories = await getTranslations({ locale, namespace: 'Categories' });
+    const tCategoryDescriptions = await getTranslations({ locale, namespace: 'CategoryDescriptions' });
     const tTools = await getTranslations({ locale, namespace: 'Tools' });
+    const tToolsDir = await getTranslations({ locale, namespace: 'ToolsDirectory' });
     const tNav = await getTranslations({ locale, namespace: 'Navigation' });
     const tHome = await getTranslations({ locale, namespace: 'HomePage' });
 
@@ -78,10 +73,12 @@ export default async function ToolsPage({ params: { locale } }: { params: { loca
                         {tHome('toolsCount', { count: tools.length })} Available
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-700">
-                        Browse Our <span className="text-primary italic">Professional</span> Utilities
+                        {tToolsDir.rich('heroTitle', {
+                            v: (chunks) => <span className="text-primary italic">{chunks}</span>
+                        })}
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-5 duration-1000">
-                        Powerful, secure, and blazing-fast tools for developers, designers, and creators. All processed locally in your browser for 100% privacy.
+                        {tToolsDir('heroSubtitle')}
                     </p>
                     
                     <div className="pt-4 animate-in fade-in slide-in-from-bottom-6 duration-1000">
@@ -130,7 +127,9 @@ export default async function ToolsPage({ params: { locale } }: { params: { loca
                                         </h2>
                                     </div>
                                     <p className="text-muted-foreground font-medium text-lg max-w-xl">
-                                        Collection of high-performance {categoryName.toLowerCase()} designed for professional workflows.
+                                        {tCategoryDescriptions.has(categoryName) 
+                                          ? tCategoryDescriptions(categoryName) 
+                                          : `Collection of high-performance ${categoryName.toLowerCase()} designed for professional workflows.`}
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground bg-secondary/50 px-4 py-2 rounded-xl border border-border/40">

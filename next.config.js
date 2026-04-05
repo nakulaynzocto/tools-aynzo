@@ -13,7 +13,11 @@ const nextConfig = {
   images: {
     unoptimized: false,
     remotePatterns: [],
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
+
 
   // Permanent redirects for old/renamed tool slugs and protocol/domain fixes
   // These fix "Excluded by noindex", "Not Found (404)", and "Page with redirect" errors in GSC

@@ -45,18 +45,22 @@ export default function Footer() {
                     </div>
 
                     {/* Tool Categories - SEO Links */}
-                    <div className="lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8">
-                        {Object.entries(toolCategories).slice(0, 3).map(([category, tools]) => (
+                    <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                        {Object.entries(toolCategories).map(([category, tools]) => (
                             <div key={category}>
-                                <h4 className="text-foreground font-black text-[11px] uppercase tracking-widest mb-4 opacity-70">
-                                    {tCat.has(category) ? tCat(category) : category}
-                                </h4>
-                                <ul className="space-y-2">
-                                    {tools.slice(0, 15).map(tool => (
+                                <Link 
+                                    href={`/tools#${category.replace(/\s+/g, '-').toLowerCase()}`}
+                                    className="text-foreground font-black text-[11px] uppercase tracking-widest mb-4 opacity-70 hover:text-primary transition-colors block"
+                                >
+                                    {tCat.has(category) ? tCat(category) : (tCategories.has(category) ? tCategories(category) : category)}
+                                </Link>
+                                <ul className="space-y-1.5">
+                                    {tools.slice(0, 8).map(tool => (
                                         <li key={tool.slug}>
                                             <Link
                                                 href={`/tools/${tool.slug}`}
-                                                className="text-muted-foreground/60 hover:text-primary transition-colors text-[13px] font-medium"
+                                                className="text-muted-foreground/60 hover:text-primary transition-colors text-[12px] font-medium"
+                                                title={tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
                                             >
                                                 {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}
                                             </Link>

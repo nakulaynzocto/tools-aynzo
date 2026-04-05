@@ -23,6 +23,7 @@ export default function LanguageSwitcher() {
                 value={locale}
                 onChange={onSelectChange}
                 disabled={isPending}
+                aria-label="Select Language"
                 className="bg-transparent text-foreground text-xs py-1 pr-2 pl-3 outline-none cursor-pointer appearance-none hover:text-primary transition-colors focus:ring-0 font-bold tracking-tight"
             >
                 <option value="en">🇺🇸 English</option>
