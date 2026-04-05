@@ -124,7 +124,8 @@ export default async function ToolPage({ params }: Props) {
   }
 
   const tTools = await getTranslations({ locale: params.locale, namespace: 'Tools' });
-  const t = await getTranslations({ locale: params.locale, namespace: 'Tools' });
+  const t = tTools;
+  const tCommon = await getTranslations({ locale: params.locale, namespace: 'Common' });
 
   const translatedName = tTools.has(`${params.slug}.name`) ? tTools(`${params.slug}.name`) : tool.name;
   const translatedDesc = tTools.has(`${params.slug}.seoDescription`) 
@@ -534,7 +535,12 @@ export default async function ToolPage({ params }: Props) {
           ]}
         />
 
-        {/* Tool Header - Critical for SEO H1 */}
+        {/* 1. Tool Content (Pahle tools ho) */}
+        <div className="mb-8 mt-4">
+          {renderTool()}
+        </div>
+
+        {/* 2. Tool Header (Uske badd tittle) */}
         <ToolPageHeader
           name={translatedName}
           description={translatedDesc}
@@ -542,19 +548,14 @@ export default async function ToolPage({ params }: Props) {
           h1={seo?.h1}
         />
 
-        {/* Tool Content */}
-        <div className="mb-6">
-          {renderTool()}
-        </div>
-
-        {/* FAQ Section with Schema - Localized for all languages */}
+        {/* 3. FAQ Section (Uke badd faq) */}
         {(() => {
           const localizedFaqs = tTools.has(`${params.slug}.faq`) ? tTools.raw(`${params.slug}.faq`) : (params.locale === 'en' ? seo?.faq : undefined);
           if (!localizedFaqs) return null;
-          return <FAQSection title={t('faqTitle')} faqs={localizedFaqs as any} />;
+          return <FAQSection title={tCommon('faqTitle')} faqs={localizedFaqs as any} />;
         })()}
 
-        {/* Info Section */}
+        {/* 4. Info Section (And fir conted) */}
         <ToolInfoSection
           name={translatedName}
           description={translatedDesc}

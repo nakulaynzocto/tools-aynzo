@@ -59,7 +59,9 @@
     "App": {
         "name": "Aynzo",
         "nameHighlight": "Tools",
-        "description": "The Ultimate Online Tools Hub"
+        "description": "The Ultimate Online Tools Hub",
+        "metaKeywords": "aynzo tools, free online tools, image compressor, word counter, pdf to word, json formatter, privacy first tools, developer utilities, online calculator",
+        "keywords": "aynzo tools, free online tools, image compressor, word counter, pdf converter, developer tools"
     },
     "ToolsDirectory": {
         "title": "Professional Online Tools Library | Aynzo",

@@ -17,12 +17,20 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'HomePage' });
   const tApp = await getTranslations({ locale, namespace: 'App' });
 
+  // Safe reads — prevents build crash if any locale file is missing a key
+  let pageTitle = locale === 'en' ? t('title') : t('title');
+  let metaDesc = "Professional free online tools for developers, designers & creators. 100% private, browser-based.";
+  let metaKeywords = "aynzo tools, free online tools, image compressor, pdf converter";
+
+  try { metaDesc = t('metaDescription'); } catch { try { metaDesc = t('description'); } catch {} }
+  try { metaKeywords = t('metaKeywords'); } catch {}
+
   return {
     title: {
-      absolute: `${t('title')} | ${tApp('name')} - 100% Free & Secure Online Tools`
+      absolute: `${pageTitle} | ${tApp('name')} - 100% Free & Secure Online Tools`
     },
-    description: t('metaDescription'),
-    keywords: t('metaKeywords'),
+    description: metaDesc,
+    keywords: metaKeywords,
     alternates: {
       canonical: `https://tools.aynzo.com/${locale}`,
       languages: {
@@ -34,6 +42,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     }
   };
 }
+
 
 export default async function Home({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'HomePage' });
@@ -173,6 +182,43 @@ export default async function Home({ params: { locale } }: { params: { locale: s
           </div>
         </section>
       )}
+
+      {/* Popular Calculators & Health Tools Section - Driving Traffic to SEO Pillars */}
+      <section className="py-24 bg-card ring-1 ring-border shadow-inner">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-foreground mb-4">
+              Calculators & <span className="text-primary">Financial Hub</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              Professional-grade tools for finance, health, and daily planning. Completely private, fast, and free forever.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {[
+              { name: 'Age Calculator', slug: 'age-calculator', icon: '🎂' },
+              { name: 'BMI Calculator', slug: 'bmi-calculator', icon: '⚖️' },
+              { name: 'EMI Calculator', slug: 'emi-calculator', icon: '🏦' },
+              { name: 'GST Calculator', slug: 'gst-calculator', icon: '📊' },
+              { name: 'Mortgage Calc', slug: 'mortgage-calculator', icon: '🏠' },
+              { name: 'Crypto Profit', slug: 'crypto-profit-calculator', icon: '₿' },
+              { name: 'Body Fat %', slug: 'body-fat-calculator', icon: '💪' },
+              { name: 'Salary Calc', slug: 'salary-calculator', icon: '💰' }
+            ].map((tool) => (
+              <Link 
+                key={tool.slug}
+                href={`/tools/${tool.slug}`}
+                className="group p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/50 hover:shadow-xl transition-all duration-300"
+              >
+                <div className="text-3xl mb-4 group-hover:scale-125 transition-transform duration-300 transform-gpu">{tool.icon}</div>
+                <h3 className="text-sm md:text-base font-bold text-foreground group-hover:text-primary transition-colors">{tool.name}</h3>
+                <p className="text-xs text-muted-foreground mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Launch Tool →</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* SEO Link Directory - Strategically placed for crawlers but unobtrusive for users */}
       <ToolDirectory locale={locale} />

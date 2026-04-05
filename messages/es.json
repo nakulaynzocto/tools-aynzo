@@ -52,13 +52,16 @@
                 "desc": "Sin suscripciones, sin muros de pago, sin costos ocultos. Para siempre."
             }
         },
-        "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Potencia tu Flujo de Trabajo Digital con Aynzo Tools</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  Bienvenido a <strong>Aynzo Tools</strong>, tu destino definitivo de <strong>herramientas online gratuitas</strong> de alta calidad, diseñadas para simplificar tus tareas digitales diarias. En un mundo donde la productividad es fundamental, ofrecemos un entorno limpio, rápido y seguro para manejar desde conversiones de archivos complejas hasta formateo de texto simple. Nuestra misión es ofrecer una plataforma profesional de \"utilidades como servicio\" que elimine la necesidad de software costoso o alternativas llenas de anuncios.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Una Suite Completa de Utilidades Online</h3>\n<p class=\"text-muted-foreground mb-6\">\n  En Aynzo Tools, categorizamos nuestras ofertas para ayudarte a encontrar exactamente lo que necesitas en segundos:\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">Conversor de Imágenes Online y Editores:</strong> Nuestra suite de imágenes está diseñada para la velocidad. Ya sea que necesites un <strong>conversor de imágenes online</strong> para cambiar entre JPG, PNG y WebP, o necesites comprimir fotos para optimización web, te tenemos cubierto. También puedes recortar, rotar y añadir filtros con cero pérdida de calidad.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Herramientas PDF Esenciales:</strong> Los documentos no deberían ser un problema. Nuestras <strong>herramientas PDF gratuitas</strong> te permiten convertir PDFs a Word, combinar archivos o extraer imágenes sin comprometer la integridad del documento.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Utilidades de Texto y Programación:</strong> Para desarrolladores y escritores, ofrecemos formateadores de texto avanzados, conversores de mayúsculas/minúsculas y minificadores de código. Valide tu JSON, embellece tu CSS o convierte Markdown a HTML con un solo clic.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Herramientas de SEO y Redes Sociales:</strong> Posiciónate mejor y comparte más. Usa nuestros generadores de meta-tags, verificadores de densidad de palabras clave y descargadores de miniaturas de YouTube para ganar una ventaja competitiva en los resultados de búsqueda.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">¿Por qué Elegir Aynzo Tools?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Internet está lleno de sitios \"gratuitos\" que rastrean tus datos o te bombardean con anuncios intrusivos. Aynzo Tools es diferente. Priorizamos la <strong>Privacidad y Seguridad</strong>, asegurando que tus archivos se procesen localmente o se eliminen inmediatamente después de su uso. Nuestra plataforma es <strong>100% Libre de Anúncios</strong>, lo que significa que puedes concentrarte en tu trabajo sin distracciones. Cada herramienta está optimizada para un <strong>Rendimiento Ultra Rápido</strong>, utilizando las últimas tecnologías web para entregar resultados en milisegundos.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">¿Para quién es Aynzo Tools?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Nuestra plataforma está meticulosamente diseñada para:\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Desarrolladores:</strong> Depuración rápida de código, formateo de datos o generación de hashes.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Creadores de Contenido:</strong> Optimización de imágenes, análisis de SEO y activos sociales.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Estudiantes y Profesionales:</strong> Conversión de documentos y cálculos rápidos.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Usuarios Cotidianos:</strong> Herramientas utilitarias online simples que solo funcionan.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"Deja de saltar entre docenas de pestañas. Añade Aynzo Tools a tus marcadores hoy y experimenta el poder de una suite de herramientas profesional directamente en tu navegador.\"\n  </p>\n</div>"
+        "seoContent": "\n<h2 class=\"text-3xl font-bold text-foreground mb-8\">Potencia tu Flujo de Trabajo Digital con Aynzo Tools</h2>\n\n<p class=\"text-lg text-muted-foreground mb-6\">\n  Bienvenido a <strong>Aynzo Tools</strong>, tu destino definitivo de <strong>herramientas online gratuitas</strong> de alta calidad, diseñadas para simplificar tus tareas digitales diarias. En un mundo donde la productividad es fundamental, ofrecemos un entorno limpio, rápido y seguro para manejar desde conversiones de archivos complejas hasta formateo de texto simple. Nuestra misión es ofrecer una plataforma profesional de \"utilidades como servicio\" que elimine la necesidad de software costoso o alternativas llenas de anuncios.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">Una Suite Completa de Utilidades Online</h3>\n<p class=\"text-muted-foreground mb-6\">\n  En Aynzo Tools, categorizamos nuestras ofertas para ayudarte a encontrar exactamente lo que necesitas en segundos:\n</p>\n<ul class=\"space-y-4 text-muted-foreground mb-8\">\n  <li>\n    <strong class=\"text-foreground\">Conversor de Imágenes Online y Editores:</strong> Nuestra suite de imágenes está diseñada para la velocidad. Ya sea que necesites un <strong>conversor de imágenes online</strong> para cambiar entre JPG, PNG y WebP, o necesites comprimir fotos para optimización web, te tenemos cubierto. También puedes recortar, rotar y añadir filtros con cero pérdida de calidad.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Herramientas PDF Esenciales:</strong> Los documentos no deberían ser un problema. Nuestras <strong>herramientas PDF gratuitas</strong> te permiten convertir PDFs a Word, combinar archivos o extraer imágenes sin comprometer la integridad del documento.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Utilidades de Texto y Programación:</strong> Para desarrolladores y escritores, ofrecemos formateadores de texto avanzados, conversores de mayúsculas/minúsculas y minificadores de código. Valide tu JSON, embellece tu CSS o convierte Markdown a HTML con un solo clic.\n  </li>\n  <li>\n    <strong class=\"text-foreground\">Herramientas de SEO y Redes Sociales:</strong> Posiciónate mejor y comparte más. Usa nuestros generadores de meta-tags, verificadores de densidad de palabras clave y descargadores de miniaturas de YouTube para ganar una ventaja competitiva en los resultados de búsqueda.\n  </li>\n</ul>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">¿Por qué Elegir Aynzo Tools?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Internet está lleno de sitios \"gratuitos\" que rastrean tus datos o te bombardean con anuncios intrusivos. Aynzo Tools es diferente. Priorizamos la <strong>Privacidad y Seguridad</strong>, asegurando que tus archivos se procesen localmente o se eliminen inmediatamente después de su uso. Nuestra plataforma es <strong>100% Libre de Anúncios</strong>, lo que significa que puedes concentrarte en tu trabajo sin distracciones. Cada herramienta está optimizada para un <strong>Rendimiento Ultra Rápido</strong>, utilizando las últimas tecnologías web para entregar resultados en milisegundos.\n</p>\n\n<h3 class=\"text-2xl font-bold text-foreground mt-12 mb-6\">¿Para quién es Aynzo Tools?</h3>\n<p class=\"text-muted-foreground mb-6\">\n  Nuestra plataforma está meticulosamente diseñada para:\n</p>\n<ul class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground mb-8\">\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Desarrolladores:</strong> Depuración rápida de código, formateo de datos o generación de hashes.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Creadores de Contenido:</strong> Optimización de imágenes, análisis de SEO y activos sociales.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Estudiantes y Profesionales:</strong> Conversión de documentos y cálculos rápidos.</span>\n  </li>\n  <li class=\"flex items-start gap-2\">\n    <span class=\"text-primary font-bold\">✓</span>\n    <span><strong>Usuarios Cotidianos:</strong> Herramientas utilitarias online simples que solo funcionan.</span>\n  </li>\n</ul>\n\n<div class=\"bg-secondary/30 border border-border rounded-2xl p-8 text-center mt-12\">\n  <p class=\"text-lg font-medium text-foreground italic\">\n    \"Deja de saltar entre docenas de pestañas. Añade Aynzo Tools a tus marcadores hoy y experimenta el poder de una suite de herramientas profesional directamente en tu navegador.\"\n  </p>\n</div>",
+        "metaDescription": "Conjunto profesional de herramientas online gratuitas para desarrolladores, diseñadores y creadores. Compresión de imágenes, conversión de PDF, formato de texto y utilidades para desarrolladores. Todo se procesa 100% localmente en tu navegador para una total privacidad.",
+        "metaKeywords": "Herramientas Aynzo, herramientas online gratuitas, compresor de imágenes, contador de palabras, PDF a Word, formateador JSON, herramientas de privacidad, utilidades para desarrolladores, calculadora online"
     },
     "App": {
         "name": "AYNZO",
         "nameHighlight": "TOOLS",
         "description": "Suite de Herramientas Online Profesional",
-        "metaKeywords": "Herramientas Aynzo, herramientas gratuitas en línea, compresor de imágenes, contador de palabras, herramientas PDF"
+        "metaKeywords": "Herramientas Aynzo, herramientas gratuitas en línea, compresor de imágenes, contador de palabras, herramientas PDF",
+        "keywords": "aynzo tools, herramientas en línea gratuitas, compresor de imágenes, contador de palabras, conversor de pdf, utilidades de desarrollador"
     },
     "Navigation": {
         "allTools": "Todas las herramientas",
@@ -67,7 +70,26 @@
         "mobileMenu": "Menú",
         "home": "Inicio",
         "tools": "Herramientas",
-        "blog": "Blog"
+        "blog": "Blog",
+        "heroSearchPlaceholder": "Busca en más de 100 herramientas: 'Imagen', 'PDF' o 'JSON'",
+        "foundResults": "Se encontraron {count} resultados",
+        "browseAll": "Explorar todas las herramientas",
+        "noToolsFound": "No se encontraron herramientas para \"{query}\"",
+        "tryKeywords": "Prueba buscando palabras clave como 'PDF', 'Imagen' o 'JSON'",
+        "clearSearch": "Limpiar búsqueda"
+    },
+    "Blog": {
+        "title": "Centro de Aprendizaje de Aynzo",
+        "description": "Domine su flujo de trabajo digital con guías expertas, tutoriales de herramientas y trucos de productividad. 100% gratis.",
+        "metaTitle": "Blog de Aynzo - Guías de Herramientas Online Gratuitas y Productividad 2025",
+        "metaDescription": "Explore guías expertas y tutoriales para usar las herramientas de Aynzo. Aprenda a comprimir imágenes, gestionar PDFs y optimizar su flujo de trabajo de desarrollador.",
+        "readMore": "Leer el artículo completo",
+        "noPosts": "¡Próximamente más artículos!",
+        "backToBlog": "Volver al Blog",
+        "aboutAynzo": "Acerca de las Herramientas de Aynzo",
+        "aboutDescription": "Aynzo ofrece más de 100 herramientas online de alta calidad para ayudar a todos, desde desarrolladores hasta redactores, a agilizar su flujo de trabajo digital priorizando la privacidad.",
+        "exploreTools": "Explorar herramientas",
+        "author": "Equipo Editorial de Aynzo"
     },
     "Categories": {
         "Image Tools": "Herramientas de Imagen",
@@ -3441,5 +3463,56 @@
         "text": "Utilidades de texto avanzadas para formateo y análisis.",
         "developer": "Herramientas esenciales para desarrolladores y validación de datos.",
         "seo": "Herramientas de SEO y redes sociales para optimizar su presencia."
+    },
+    "About": {
+        "title": "Sobre Nosotros",
+        "description": "Obtenga más información sobre AYNZO TOOLS, nuestra misión y nuestros valores.",
+        "missionTitle": "Nuestra Misión",
+        "missionText": "Bienvenido a AYNZO TOOLS, su destino único para utilidades digitales de calidad profesional. Nuestra misión es proporcionar a los desarrolladores, creadores de contenido y usuarios cotidianos herramientas de alta calidad, gratuitas y seguras que faciliten su vida digital.",
+        "whyTitle": "¿Por qué elegirnos?",
+        "reason1Title": "Privacidad Primero",
+        "reason1Text": "La mayoría de nuestras herramientas procesan los datos completamente en su navegador. Sus datos nunca salen de su computadora.",
+        "reason2Title": "Sin Registro",
+        "reason2Text": "Sin cuentas, sin registros, sin muros de pago. Simplemente use lo que necesite, cuando lo necesite.",
+        "reason3Title": "Ultra Rápido",
+        "reason3Text": "Construido con tecnología moderna para un rendimiento máximo y una experiencia de usuario fluida.",
+        "reason4Title": "100% Gratis",
+        "reason4Text": "Nuestras herramientas son y seguirán siendo gratuitas para siempre.",
+        "storyTitle": "Nuestra Historia",
+        "storyText": "AYNZO TOOLS comenzó como un proyecto pequeño para resolver frustraciones comunes de desarrollo, como JSON desordenado o HTML sin formato. Hoy, se ha convertido en una suite integral de herramientas que van desde el procesamiento avanzado de imágenes hasta generadores y calculadoras de SEO.",
+        "quote": "Creemos que las herramientas poderosas deben ser fáciles de usar y accesibles para todos."
+    },
+    "Contact": {
+        "title": "Contáctenos",
+        "description": "Póngase en contacto con el equipo de soporte de AYNZO TOOLS para cualquier consulta o comentario.",
+        "intro": "¡Nos encantaría saber de usted! Ya sea que tenga una pregunta sobre nuestras herramientas, funciones o cualquier otra cosa, nuestro equipo está listo para responder todas sus preguntas.",
+        "formTitle": "Envíenos un Mensaje",
+        "formPlaceholder": "Este es un marcador de posición para el formulario de contacto.",
+        "button": "Contactar Soporte"
+    },
+    "Privacy": {
+        "title": "Política de Privacidad",
+        "intro": "Su privacidad es nuestra máxima prioridad. Esta política describe cómo manejamos sus datos.",
+        "section1Title": "1. Procesamiento Local",
+        "section1Text": "La gran mayoría de nuestras herramientas (Compresor de imágenes, Herramientas de texto, Formateadores de código, etc.) procesan sus datos localmente en su navegador mediante JavaScript. Esto significa que sus archivos, texto y datos nunca se cargan en nuestros servidores.",
+        "section2Title": "2. Sin Recopilación de Datos",
+        "section2Text": "No recopilamos ni almacenamos ninguna información personal. No requerimos que cree una cuenta y no rastreamos el uso individual de sus herramientas.",
+        "section3Title": "3. Análisis",
+        "section3Text": "Utilizamos análisis básicos y respetuosos con la privacidad para comprender los patrones de tráfico agregados (por ejemplo, qué herramientas son las más populares) para ayudarnos a mejorar la plataforma. Estos datos son anónimos y no incluyen información de identificación personal.",
+        "section4Title": "4. Enlaces de Terceros",
+        "section4Text": "Nuestra plataforma puede contener enlaces a sitios web de terceros. No somos responsables de las prácticas de privacidad o el contenido de esos sitios.",
+        "section5Title": "5. Actualizaciones de la Política",
+        "section5Text": "Es posible que actualicemos esta política de vez en cuando. Cualquier cambio se publicará en esta página con una fecha de modificación actualizada.",
+        "lastUpdated": "Última actualización: Marzo de 2026"
+    },
+    "Terms": {
+        "title": "Términos de Servicio",
+        "intro": "Lea atentamente estos términos y condiciones antes de utilizar nuestro servicio.",
+        "section1Title": "1. Aceptación de los Términos",
+        "section1Text": "Al acceder y utilizar este sitio web, usted acepta y acuerda estar sujeto a los términos y disposiciones de este acuerdo.",
+        "section2Title": "2. Licencia de Uso",
+        "section2Text": "Se otorga permiso para utilizar nuestras herramientas en línea para fines personales y comerciales. Todo el procesamiento ocurre en su navegador para la mayoría de las herramientas, lo que garantiza la privacidad.",
+        "section3Title": "3. Descargo de Responsabilidad",
+        "section3Text": "Los materiales en este sitio web se proporcionan 'tal cual'. No ofrecemos garantías, expresas o implícitas, y por la presente renunciamos y negamos todas las demás garantías, incluidas, entre otras, las garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular o no infracción de la propiedad intelectual u otra violación de derechos."
     }
 }

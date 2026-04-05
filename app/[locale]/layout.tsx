@@ -19,7 +19,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   
   const siteTitle = t('name') || "AYNZO TOOLS";
   const siteDesc = t('description') || "Professional online tools for developers and content creators.";
-  const siteKeywords = t('keywords') || "online tools, free utilities";
+  // Use description as fallback if keywords missing
+  let siteKeywords = "aynzo tools, free online tools, utilities";
+  try { siteKeywords = t('keywords' as any); } catch { try { siteKeywords = t('metaKeywords' as any); } catch {} }
 
   return {
     metadataBase: new URL('https://tools.aynzo.com'),
