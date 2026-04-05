@@ -159,10 +159,10 @@ export default function Navbar() {
                             }
 
                             // Ensure realistic minimums
-                            // Hydration-safe defaults for server/initial render
-                            const finalLG = mounted ? Math.max(1, countLG) : 1;
-                            const finalXL = mounted ? Math.max(finalLG, countXL) : 2;
-                            const final2XL = mounted ? Math.max(finalXL, count2XL) : 3;
+                            // Hydration-safe defaults for server/initial render - Increase these to prevent empty-looking navbar
+                            const finalLG = mounted ? Math.max(1, countLG) : 4; 
+                            const finalXL = mounted ? Math.max(finalLG, countXL) : 6;
+                            const final2XL = mounted ? Math.max(finalXL, count2XL) : 8;
 
                             // Helper to generate classes
                             const getVisibilityClasses = (index: number, isMoreMenu: boolean) => {
