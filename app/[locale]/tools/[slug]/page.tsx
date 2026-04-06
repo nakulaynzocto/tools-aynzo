@@ -366,7 +366,7 @@ export default async function ToolPage({ params }: Props) {
 
   // WebPage Schema for better indexing
   const lastUpdated = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-  const webPageSchema = {
+    const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: translatedName,
@@ -378,29 +378,6 @@ export default async function ToolPage({ params }: Props) {
       '@type': 'WebSite',
       name: 'AYNZO TOOLS',
       url: 'https://tools.aynzo.com'
-    },
-    breadcrumb: {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: tNav('home'),
-          item: `https://tools.aynzo.com/${params.locale}`
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: tNav('tools'),
-          item: `https://tools.aynzo.com/${params.locale}/tools`
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: translatedName,
-          item: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`
-        }
-      ]
     }
   };
 
@@ -550,9 +527,9 @@ export default async function ToolPage({ params }: Props) {
 
         {/* 3. FAQ Section (Uke badd faq) */}
         {(() => {
-          const localizedFaqs = tTools.has(`${params.slug}.faq`) ? tTools.raw(`${params.slug}.faq`) : (params.locale === 'en' ? seo?.faq : undefined);
-          if (!localizedFaqs) return null;
-          return <FAQSection title={tCommon('faqTitle')} faqs={localizedFaqs as any} />;
+          const faqs = tTools.has(`${params.slug}.faq`) ? (tTools.raw(`${params.slug}.faq`) as any[]) : (seo?.faq || []);
+          if (!faqs || faqs.length === 0) return null;
+          return <FAQSection title={tCommon('faqTitle')} faqs={faqs} />;
         })()}
 
         {/* 4. Info Section (And fir conted) */}

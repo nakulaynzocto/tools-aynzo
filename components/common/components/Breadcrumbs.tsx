@@ -2,7 +2,7 @@
 import { Link } from '@/navigation';
 import { ChevronRight, Home } from 'lucide-react';
 import Script from 'next/script';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 interface BreadcrumbsProps {
     items: {
@@ -13,6 +13,7 @@ interface BreadcrumbsProps {
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
     const t = useTranslations('Navigation');
+    const locale = useLocale();
     const baseUrl = 'https://tools.aynzo.com';
 
     // Breadcrumb Schema
@@ -24,16 +25,21 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                 '@type': 'ListItem',
                 position: 1,
                 name: t('home'),
-                item: baseUrl,
+                item: `${baseUrl}/${locale}`,
             },
-            ...items.map((item, index) => ({
-                '@type': 'ListItem',
-                position: index + 2,
-                name: item.label,
-                item: item.href.startsWith('http') ? item.href : `${baseUrl}${item.href}`,
-            })),
+            ...items.map((item, index) => {
+                // Ensure href starts with /
+                const path = item.href.startsWith('/') ? item.href : `/${item.href}`;
+                return {
+                    '@type': 'ListItem',
+                    position: index + 2,
+                    name: item.label,
+                    item: item.href.startsWith('http') ? item.href : `${baseUrl}/${locale}${path}`,
+                };
+            }),
         ],
     };
+
 
     return (
         <nav className="flex mb-6 overflow-x-auto whitespace-nowrap pb-1 no-scrollbar" aria-label="Breadcrumb">
