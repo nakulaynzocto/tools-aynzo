@@ -11,6 +11,7 @@ import Footer from "@/components/common/components/Footer";
 import { locales } from '@/i18n';
 import NextTopLoader from '@/components/common/components/NextTopLoader';
 import CommandPalette from '@/components/common/components/CommandPalette';
+import AnalyticsTracker from '@/components/common/components/AnalyticsTracker';
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800", "900"] });
 
@@ -182,6 +183,7 @@ export default async function RootLayout({
         <NextTopLoader />
         <NextIntlClientProvider messages={messages}>
           <CommandPalette />
+          <AnalyticsTracker />
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
             <div className="flex flex-col min-h-screen">
               <PromotionalBanner />
