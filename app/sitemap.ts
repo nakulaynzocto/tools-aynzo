@@ -38,18 +38,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const getAlternateLanguages = (path: string) => {
         const languages: Record<string, string> = {};
-        languages['x-default'] = `${baseUrl}/en${path}`;
+        // x-default should point to the primary locale without a locale prefix
+        languages['x-default'] = `${baseUrl}${path}`;
         locales.forEach((l) => {
             languages[l] = `${baseUrl}/${l}${path}`;
         });
         return { languages };
     };
+    const primaryLocale = 'en';
 
+    // Generate sitemap entries for all locales, but primary locale URLs omit the locale prefix
     locales.forEach((locale) => {
+        const isPrimary = locale === primaryLocale;
+        const localePrefix = isPrimary ? '' : `/${locale}`;
         // Static Pages
         staticPages.forEach((pagePath) => {
+            const url = `${baseUrl}${localePrefix}${pagePath}`;
+            if (url.includes('?')) return; // skip parameter URLs
             allPages.push({
-                url: `${baseUrl}/${locale}${pagePath}`,
+                url,
                 lastModified: new Date(),
                 changeFrequency: pagePath === '' ? 'daily' : 'monthly',
                 priority: pagePath === '' ? 1 : 0.7,
@@ -59,8 +66,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
         // Tools
         tools.forEach((tool) => {
+            const url = `${baseUrl}${localePrefix}/tools/${tool.slug}`;
+            if (url.includes('?')) return;
             allPages.push({
-                url: `${baseUrl}/${locale}/tools/${tool.slug}`,
+                url,
                 lastModified: new Date(),
                 changeFrequency: 'weekly',
                 priority: 0.8,
@@ -70,8 +79,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
         // Blogs
         blogSlugs.forEach((slug) => {
+            const url = `${baseUrl}${localePrefix}/blog/${slug}`;
+            if (url.includes('?')) return;
             allPages.push({
-                url: `${baseUrl}/${locale}/blog/${slug}`,
+                url,
                 lastModified: new Date(),
                 changeFrequency: 'monthly',
                 priority: 0.6,
@@ -80,5 +91,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         });
     });
 
-    return allPages;
+    // Deduplicate URLs while preserving order
+    const seen = new Set<string>();
+    const uniquePages: MetadataRoute.Sitemap = [];
+    for (const entry of allPages) {
+        if (!seen.has(entry.url)) {
+            seen.add(entry.url);
+            uniquePages.push(entry);
+        }
+    }
+    return uniquePages;
 }

@@ -33,6 +33,8 @@ export function RobotsTxtGenerator({ robots, setRobots, result, copied, onCopy }
                             <div className="space-y-1.5">
                                 <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Block Path</label>
                                 <input value={robots.disallow} onChange={e => setRobots({ ...robots, disallow: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card" placeholder="Disallow Path" />
+                                <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1 mt-2">Sitemap URL</label>
+                                <input value={robots.sitemap || ''} onChange={e => setRobots({ ...robots, sitemap: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card" placeholder="https://example.com/sitemap.xml" />
                             </div>
                         </div>
                     </div>
