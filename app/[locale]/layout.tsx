@@ -9,6 +9,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import Script from 'next/script';
 import Footer from "@/components/common/components/Footer";
 import { locales } from '@/i18n';
+import { getLocalePrefix, getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl, isPrimaryLocale } from '@/utils/locale-utils';
 import NextTopLoader from '@/components/common/components/NextTopLoader';
 import CommandPalette from '@/components/common/components/CommandPalette';
 import AnalyticsTracker from '@/components/common/components/AnalyticsTracker';
@@ -23,6 +24,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   // Use description as fallback if keywords missing
   let siteKeywords = "aynzo tools, free online tools, utilities";
   try { siteKeywords = t('keywords' as any); } catch { try { siteKeywords = t('metaKeywords' as any); } catch {} }
+  
+  // as-needed locale prefix logic
+  const localePrefix = getLocalePrefix(locale);
+  const isPrimary = isPrimaryLocale(locale);
 
   return {
     metadataBase: new URL('https://tools.aynzo.com'),
@@ -39,7 +44,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     openGraph: {
       type: "website",
       locale: locale,
-      url: `https://tools.aynzo.com/${locale}`,
+      url: getLocalizedUrl('https://tools.aynzo.com', locale),
       siteName: "Aynzo Tools",
       title: `${siteTitle} | 100+ Free Online Tools`,
       description: siteDesc,
@@ -64,12 +69,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
     },
     alternates: {
-      canonical: `https://tools.aynzo.com/${locale}`,
+      canonical: getLocalizedUrl('https://tools.aynzo.com', locale),
       languages: {
-        'x-default': 'https://tools.aynzo.com/en',
-        ...Object.fromEntries(
-          locales.map((l) => [l, `https://tools.aynzo.com/${l}`])
-        )
+        'x-default': getXDefaultUrl('https://tools.aynzo.com'),
+        ...getAllHreflangUrls('https://tools.aynzo.com', locales)
       }
     },
     icons: {

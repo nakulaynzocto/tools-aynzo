@@ -44,7 +44,7 @@ const nextConfig = {
       // Also redirect without locale prefix (catches non-locale hits)
       allRedirects.push({
         source: `/tools/${source}`,
-        destination: `/en/tools/${destination}`,
+        destination: `/tools/${destination}`,
         permanent: true,
       });
     }
@@ -53,20 +53,20 @@ const nextConfig = {
     const spacedToolRedirects = [
       {
         source: '/en%20/%20tools%20/%20youtube%20-%20title%20-%20generator',
-        destination: '/en/tools/youtube-title-generator',
+        destination: '/tools/youtube-title-generator',
       },
       {
         source: '/en%20/%20tools%20/%20youtube%20-%20thumbnail%20-%20downloader',
-        destination: '/en/tools/youtube-thumbnail-downloader',
+        destination: '/tools/youtube-thumbnail-downloader',
       },
       {
         source: '/en%20/%20tools%20/%20youtube%20-%20tag%20-%20generator',
-        destination: '/en/tools/youtube-tag-generator',
+        destination: '/tools/youtube-tag-generator',
       },
       {
         // Catch-all for $ URL (bot/GSC artifact)
         source: '/$',
-        destination: '/en',
+        destination: '/',
       },
     ];
 
@@ -75,23 +75,7 @@ const nextConfig = {
     return allRedirects;
   },
 
-  // Add X-Robots-Tag: noindex to non-locale paths that next-intl 307-redirects to locale versions.
-  // This prevents Google from treating the redirect source (e.g. /tools/lorem-ipsum) as
-  // a competing canonical against the user-declared canonical (/en/tools/lorem-ipsum).
-  async headers() {
-    return [
-      {
-        // The root / path (redirects to /en via next-intl middleware)
-        source: '/',
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
-      },
-      {
-        // /tools and all /tools/* paths (redirect to /en/tools/...)
-        source: '/tools/:path*',
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
-      },
-    ];
-  },
+  // Removed X-Robots-Tag noindex headers - using proper canonical URLs and meta robots instead
 
   // Exclude unnecessary packages from standalone build
   experimental: {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tools.aynzo.com/sitemap.xml
+Sitemap: https://tools.aynzo.com/sitemap

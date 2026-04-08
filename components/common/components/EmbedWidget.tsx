@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { Code2, Copy, Check, ExternalLink } from 'lucide-react';
 
+import { getLocalePrefix, getLocalizedUrl } from '@/utils/locale-utils';
+import { SITE_URL } from '@/lib/constants';
+
 interface EmbedWidgetProps {
     slug: string;
     toolName: string;
@@ -13,7 +16,7 @@ export function EmbedWidget({ slug, toolName, locale = 'en' }: EmbedWidgetProps)
     const [copied, setCopied] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
-    const embedUrl = `https://tools.aynzo.com/${locale}/tools/${slug}`;
+    const embedUrl = getLocalizedUrl(SITE_URL, locale, `/tools/${slug}`);
     const embedCode = `<iframe
   src="${embedUrl}"
   width="100%"

@@ -5,6 +5,8 @@ import { Link } from '@/navigation';
 import fs from 'fs';
 import path from 'path';
 import { BookOpen, Calendar, Clock, ChevronRight } from 'lucide-react';
+import { getLocalePrefix, getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl, isPrimaryLocale } from '@/utils/locale-utils';
+import { SITE_URL, OG_IMAGES } from '@/lib/constants';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -18,16 +20,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     openGraph: {
       title: t('metaTitle') || 'Blog - Aynzo Tools',
       description: t('metaDescription') || 'Read the latest guides on Aynzo Tools.',
-      url: `https://tools.aynzo.com/${locale}/blog`,
-      images: [{ url: 'https://tools.aynzo.com/og-image.png', width: 1200, height: 630 }],
+      url: getLocalizedUrl(SITE_URL, locale, '/blog'),
+      images: [{ url: OG_IMAGES.blog, width: 1200, height: 630 }],
     },
     alternates: {
-      canonical: `https://tools.aynzo.com/${locale}/blog`,
+      canonical: getLocalizedUrl(SITE_URL, locale, '/blog'),
       languages: {
-        'x-default': 'https://tools.aynzo.com/en/blog',
-        ...Object.fromEntries(
-          locales.map((l) => [l, `https://tools.aynzo.com/${l}/blog`])
-        )
+        'x-default': getXDefaultUrl(SITE_URL, '/blog'),
+        ...getAllHreflangUrls(SITE_URL, locales, '/blog')
       }
     }
   };
@@ -37,8 +37,8 @@ export default async function BlogListPage({ params: { locale } }: { params: { l
   const t = await getTranslations({ locale, namespace: 'Blog' });
   
   // Read blogs from seo-blogs directory
-  // For 'en', use root seo-blogs. For others, use subdirectory with fallback to 'en'.
-  let blogsDir = locale === 'en' 
+  // For primary locale (en), use root seo-blogs. For others, use subdirectory with fallback.
+  let blogsDir = isPrimaryLocale(locale) 
     ? path.join(process.cwd(), 'seo-blogs')
     : path.join(process.cwd(), 'seo-blogs', locale);
     

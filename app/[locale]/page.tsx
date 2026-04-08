@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
+import { getLocalePrefix, getAllHreflangUrls, getXDefaultUrl, localizeHtmlLinks } from '@/utils/locale-utils';
 import Image from 'next/image';
 import { Shield, Zap, Image as ImageIcon, FileText, Code, ArrowRight } from 'lucide-react';
 import HeroSearch from '@/components/common/components/HeroSearch';
@@ -24,6 +25,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
   try { metaDesc = t('metaDescription'); } catch { try { metaDesc = t('description'); } catch {} }
   try { metaKeywords = t('metaKeywords'); } catch {}
+  
+  // as-needed locale prefix logic
+  const localePrefix = getLocalePrefix(locale);
 
   return {
     title: {
@@ -32,12 +36,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: metaDesc,
     keywords: metaKeywords,
     alternates: {
-      canonical: `https://tools.aynzo.com/${locale}`,
+      canonical: `https://tools.aynzo.com${localePrefix}`,
       languages: {
-        'x-default': 'https://tools.aynzo.com/en',
-        ...Object.fromEntries(
-          locales.map((l) => [l, `https://tools.aynzo.com/${l}`])
-        )
+        'x-default': getXDefaultUrl('https://tools.aynzo.com'),
+        ...getAllHreflangUrls('https://tools.aynzo.com', locales)
       }
     }
   };
@@ -177,7 +179,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
                 prose-li:text-muted-foreground
                 prose-strong:text-foreground
                 prose-a:text-primary prose-a:no-underline hover:prose-a:underline"
-              dangerouslySetInnerHTML={{ __html: t('seoContent') }}
+              dangerouslySetInnerHTML={{ __html: localizeHtmlLinks(t('seoContent'), locale) }}
             />
           </div>
         </section>

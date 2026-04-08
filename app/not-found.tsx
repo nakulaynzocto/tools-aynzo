@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Home, Search, Wrench } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
+import { getLocalePrefix } from '@/utils/locale-utils';
+
 const SUPPORTED_LOCALES = ['en','hi','pt','es','id','de','fr','ja','ru','tr','it','ko','zh','ar'];
 
 function detectLocale(pathname: string): string {
@@ -23,6 +25,7 @@ const POPULAR_TOOLS = [
 export default function NotFound() {
     const pathname = usePathname();
     const locale = detectLocale(pathname || '');
+    const prefix = getLocalePrefix(locale);
 
     return (
         <div className="min-h-screen bg-background flex items-center justify-center px-4">
@@ -51,14 +54,14 @@ export default function NotFound() {
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                     <Link
-                        href={`/${locale}`}
+                        href={prefix || '/'}
                         className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition-all shadow-lg hover:shadow-primary/30"
                     >
                         <Home className="h-5 w-5" />
                         Go Home
                     </Link>
                     <Link
-                        href={`/${locale}/tools`}
+                        href={`${prefix}/tools`}
                         className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-border text-foreground rounded-xl font-semibold hover:bg-muted transition-all"
                     >
                         <Wrench className="h-5 w-5" />
@@ -75,7 +78,7 @@ export default function NotFound() {
                         {POPULAR_TOOLS.map(tool => (
                             <Link
                                 key={tool.slug}
-                                href={`/${locale}/tools/${tool.slug}`}
+                                href={`${prefix}/tools/${tool.slug}`}
                                 className="px-4 py-2 bg-muted hover:bg-primary/10 hover:text-primary border border-border rounded-lg text-sm font-medium transition-all"
                             >
                                 {tool.name}

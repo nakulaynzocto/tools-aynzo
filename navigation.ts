@@ -4,8 +4,8 @@ import { defineRouting } from 'next-intl/routing';
 export const routing = defineRouting({
     locales: ['en', 'hi', 'pt', 'es', 'id', 'de', 'fr', 'ja', 'ru', 'tr', 'it', 'ko', 'zh', 'ar'],
     defaultLocale: 'en',
-    // Use 'always' so /en/... paths are always used (never strip locale prefix from canonical URL)
-    localePrefix: 'always',
+    // Use 'as-needed' so English URLs don't have /en/ prefix (better for SEO)
+    localePrefix: 'as-needed',
 });
 
 export const { Link, redirect, usePathname, useRouter } =

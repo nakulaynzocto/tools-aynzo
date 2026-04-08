@@ -4,6 +4,9 @@ import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
 import { useTranslations } from 'next-intl';
 
+import { getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl } from '@/utils/locale-utils';
+import { SITE_URL } from '@/lib/constants';
+
 export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
 }
@@ -14,7 +17,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         title: t('title'),
         description: t('intro'),
         alternates: {
-            canonical: `https://tools.aynzo.com/${locale}/terms`
+            canonical: getLocalizedUrl(SITE_URL, locale, '/terms'),
+            languages: {
+                'x-default': getXDefaultUrl(SITE_URL, '/terms'),
+                ...getAllHreflangUrls(SITE_URL, locales, '/terms')
+            }
         }
     };
 }

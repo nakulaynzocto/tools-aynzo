@@ -15,6 +15,9 @@ import { EmbedWidget } from '@/components/common/components/EmbedWidget';
 import Script from 'next/script';
 import { generateProgrammaticMetadata } from '@/utils/seo-utils';
 import { locales } from '@/i18n';
+import { getToolOGImage } from '@/utils/og-image-utils';
+import { getLocalePrefix, getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl, PRIMARY_LOCALE, localizeHtmlLinks } from '@/utils/locale-utils';
+import { SITE_URL } from '@/lib/constants';
 
 const ImageTools = dynamic(() => import('@/components/tools/image/Index'));
 const PdfTools = dynamic(() => import('@/components/tools/pdf/Index'));
@@ -53,6 +56,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const tApp = await getTranslations({ locale: params.locale, namespace: 'App' });
     const seo = getToolSEO(params.slug);
     const fallbackSeo = generateProgrammaticMetadata(params.slug, params.locale);
+    
+    // Get tool data for category-based OG image
+    const toolRes = await api.getProduct(params.slug);
+    const tool = toolRes.success ? toolRes.data : null;
+    const toolCategory = tool?.category || 'utility';
+    const toolName = tool?.name || params.slug;
 
     const name = tTools.has(`${params.slug}.name`) ? tTools(`${params.slug}.name`) : (seo?.h1 || params.slug);
     const siteName = tApp('name');
@@ -72,6 +81,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const finalTitle = localizedTitle || `${name} | ${siteName}`;
     const finalDesc = localizedDesc || `Use our free online ${name} tool. Fast, secure, and easy to use.`;
     const finalKeywords = localizedKeywords || `${name.toLowerCase()}, online tools, free online ${name.toLowerCase()}`;
+    
+    // as-needed locale prefix logic
+    const localePrefix = getLocalePrefix(params.locale);
+    
+    // Get category-specific OG image
+    const ogImage = getToolOGImage(toolCategory, toolName);
 
     return {
       title: finalTitle,
@@ -81,13 +96,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: finalTitle,
         description: finalDesc,
         type: 'website',
-        url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`,
+        url: getLocalizedUrl('https://tools.aynzo.com', params.locale, `/tools/${params.slug}`),
         images: [
           {
-            url: 'https://tools.aynzo.com/og-image.png',
-            width: 1200,
-            height: 630,
-            alt: `${finalTitle} - Aynzo Tools`,
+            url: ogImage.url,
+            width: ogImage.width,
+            height: ogImage.height,
+            alt: ogImage.alt,
           }
         ],
       },
@@ -95,15 +110,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         card: 'summary_large_image',
         title: finalTitle,
         description: finalDesc,
-        images: ['https://tools.aynzo.com/og-image.png'],
+        images: [ogImage.url],
       },
       alternates: {
-        canonical: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`,
+        canonical: getLocalizedUrl('https://tools.aynzo.com', params.locale, `/tools/${params.slug}`),
         languages: {
-          'x-default': `https://tools.aynzo.com/en/tools/${params.slug}`,
-          ...Object.fromEntries(
-            locales.map((l) => [l, `https://tools.aynzo.com/${l}/tools/${params.slug}`])
-          )
+          'x-default': getXDefaultUrl('https://tools.aynzo.com', `/tools/${params.slug}`),
+          ...getAllHreflangUrls('https://tools.aynzo.com', locales, `/tools/${params.slug}`)
         }
       },
     };
@@ -371,7 +384,7 @@ export default async function ToolPage({ params }: Props) {
     '@type': 'WebPage',
     name: translatedName,
     description: translatedDesc,
-    url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`,
+    url: getLocalizedUrl(SITE_URL, params.locale, `/tools/${params.slug}`),
     inLanguage: params.locale,
     dateModified: lastUpdated,
     isPartOf: {
@@ -394,21 +407,21 @@ export default async function ToolPage({ params }: Props) {
         position: 1,
         name: 'Open the Tool',
         text: `Navigate to the ${translatedName} page on Aynzo Tools.`,
-        url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}#tool`
+        url: getLocalizedUrl(SITE_URL, params.locale, `/tools/${params.slug}#tool`)
       },
       {
         '@type': 'HowToStep',
         position: 2,
         name: 'Enter Your Input',
         text: `Paste or type your content into the ${translatedName} input area.`,
-        url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}#tool`
+        url: getLocalizedUrl(SITE_URL, params.locale, `/tools/${params.slug}#tool`)
       },
       {
         '@type': 'HowToStep',
         position: 3,
         name: 'Get Instant Results',
         text: 'Click the action button and get your results instantly. No signup or download required.',
-        url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}#tool`
+        url: getLocalizedUrl(SITE_URL, params.locale, `/tools/${params.slug}#tool`)
       }
     ]
   };
@@ -440,7 +453,7 @@ export default async function ToolPage({ params }: Props) {
               name: translatedName,
               description: translatedDesc,
               inLanguage: params.locale,
-              url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`
+              url: getLocalizedUrl(SITE_URL, params.locale, `/tools/${params.slug}`)
             })
           }}
         />
@@ -467,7 +480,7 @@ export default async function ToolPage({ params }: Props) {
             description: translatedDesc,
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
-            url: `https://tools.aynzo.com/${params.locale}/tools/${params.slug}`,
+            url: getLocalizedUrl(SITE_URL, params.locale, `/tools/${params.slug}`),
             softwareVersion: '2.0.1',
             offers: {
               '@type': 'Offer',
@@ -547,24 +560,13 @@ export default async function ToolPage({ params }: Props) {
             
             if (!finalRawContent) return undefined;
             
-            // Internal link rewriting logic:
-            // 1. Ensure links to tools include the current locale
-            // 2. Prevent hardcoded /en/ links when in other locales
-            return finalRawContent.replace(/href="\/(?:en|hi|pt|es|id|de|fr|ja|ru|tr|it|ko|zh|ar|x-default)\//g, `href="/${params.locale}/`)
-                               .replace(/href="\/(?!http|https|mailto|tel)([^\/"]+)/g, (match, p1) => {
-                                   // If it's a root path like /tools or /blog without locale
-                                   const isSupportedLocale = ['en','hi','pt','es','id','de','fr','ja','ru','tr','it','ko','zh','ar'].includes(p1);
-                                   if (!isSupportedLocale) {
-                                       return `href="/${params.locale}/${p1}`;
-                                   }
-                                   return match;
-                               });
+            return localizeHtmlLinks(finalRawContent, params.locale);
           })()}
         />
 
         <ShareButtons
           title={translatedName}
-          url={`https://tools.aynzo.com/${params.locale}/tools/${params.slug}`}
+          url={getLocalizedUrl(SITE_URL, params.locale, `/tools/${params.slug}`)}
         />
 
         {/* Embed Widget - Backlink Generator */}

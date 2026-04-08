@@ -4,6 +4,8 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
 import { useTranslations } from 'next-intl';
+import { getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl } from '@/utils/locale-utils';
+import { SITE_URL, OG_IMAGES } from '@/lib/constants';
 
 export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
@@ -17,8 +19,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         openGraph: {
             title: t('title'),
             description: t('description'),
-            url: `https://tools.aynzo.com/${locale}/contact`,
-            images: [{ url: 'https://tools.aynzo.com/og-image.png', width: 1200, height: 630 }],
+            url: getLocalizedUrl(SITE_URL, locale, '/contact'),
+            images: [{ url: OG_IMAGES.default, width: 1200, height: 630 }],
         },
         twitter: {
             card: 'summary_large_image',
@@ -26,12 +28,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
             description: t('description'),
         },
         alternates: {
-            canonical: `https://tools.aynzo.com/${locale}/contact`,
+            canonical: getLocalizedUrl(SITE_URL, locale, '/contact'),
             languages: {
-                'x-default': 'https://tools.aynzo.com/en/contact',
-                ...Object.fromEntries(
-                    locales.map((l) => [l, `https://tools.aynzo.com/${l}/contact`])
-                )
+                'x-default': getXDefaultUrl(SITE_URL, '/contact'),
+                ...getAllHreflangUrls(SITE_URL, locales, '/contact')
             }
         }
     };

@@ -12,6 +12,8 @@ import RecentToolsSection from '@/components/common/components/RecentToolsSectio
 import { getCategoryIcon } from '@/utils/icon-mapping';
 import AdCard from '@/components/common/components/AdCard';
 import { Fragment } from 'react';
+import { getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl } from '@/utils/locale-utils';
+import { SITE_URL, OG_IMAGES } from '@/lib/constants';
 
 export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
@@ -27,12 +29,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         title: localizedTitle,
         description: tTools.has('description') ? tTools('description') : "Browse our complete collection of 100+ free online tools for developers, designers, and writers.",
         alternates: {
-            canonical: `https://tools.aynzo.com/${locale}/tools`,
+            canonical: getLocalizedUrl(SITE_URL, locale, '/tools'),
             languages: {
-                'x-default': 'https://tools.aynzo.com/en/tools',
-                ...Object.fromEntries(
-                    locales.map((l) => [l, `https://tools.aynzo.com/${l}/tools`])
-                )
+                'x-default': getXDefaultUrl(SITE_URL, '/tools'),
+                ...getAllHreflangUrls(SITE_URL, locales, '/tools')
             }
         }
     };

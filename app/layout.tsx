@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { usePathname } from 'next/navigation';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,16 +26,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const baseUrl = 'https://tools.aynzo.com';
-  const canonicalUrl = `${baseUrl}${pathname}`;
-
   return (
     <html lang="en">
-      <head>
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonicalUrl} />
-      </head>
       <body className={inter.className}>
         {children}
       </body>

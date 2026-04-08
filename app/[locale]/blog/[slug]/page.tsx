@@ -8,11 +8,13 @@ import { notFound } from 'next/navigation';
 import { Calendar, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin, Copy } from 'lucide-react';
 import { RelatedTools } from '@/components/common/components/RelatedTools';
 import { toolCategories } from '@/lib/tools';
+import { getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl, isPrimaryLocale, localizeHtmlLinks } from '@/utils/locale-utils';
+import { SITE_URL, OG_IMAGES } from '@/lib/constants';
 
 export async function generateStaticParams() {
   const allParams = [];
   for (const locale of locales) {
-    const blogsDir = locale === 'en' 
+    const blogsDir = isPrimaryLocale(locale) 
       ? path.join(process.cwd(), 'seo-blogs')
       : path.join(process.cwd(), 'seo-blogs', locale);
     
@@ -28,7 +30,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { locale, slug } }: { params: { locale: string, slug: string } }): Promise<Metadata> {
-  let blogsDir = locale === 'en' 
+  let blogsDir = isPrimaryLocale(locale) 
     ? path.join(process.cwd(), 'seo-blogs')
     : path.join(process.cwd(), 'seo-blogs', locale);
     
@@ -47,23 +49,20 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
     description: blog.metaDescription,
     keywords: blog.tags.join(', '),
     alternates: {
-      canonical: `https://tools.aynzo.com/${locale}/blog/${slug}`,
-      languages: locales.reduce((acc: any, loc) => {
-        acc[loc] = `https://tools.aynzo.com/${loc}/blog/${slug}`;
-        return acc;
-      }, {})
+      canonical: getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`),
+      languages: getAllHreflangUrls(SITE_URL, locales, `/blog/${slug}`)
     },
     openGraph: {
       title: blog.metaTitle,
       description: blog.metaDescription,
-      url: `https://tools.aynzo.com/${locale}/blog/${slug}`,
+      url: getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`),
       type: 'article',
       publishedTime: blog.publishedAt,
       modifiedTime: blog.updatedAt,
       tags: blog.tags,
       images: [
         {
-          url: 'https://tools.aynzo.com/og-blog.png',
+          url: OG_IMAGES.blog,
           width: 1200,
           height: 630,
           alt: blog.title,
@@ -74,13 +73,13 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
       card: 'summary_large_image',
       title: blog.metaTitle,
       description: blog.metaDescription,
-      images: ['https://tools.aynzo.com/og-blog.png'],
+      images: [OG_IMAGES.blog],
     }
   };
 }
 
 export default async function BlogDetailPage({ params: { locale, slug } }: { params: { locale: string, slug: string } }) {
-  let blogsDir = locale === 'en' 
+  let blogsDir = isPrimaryLocale(locale) 
     ? path.join(process.cwd(), 'seo-blogs')
     : path.join(process.cwd(), 'seo-blogs', locale);
     
@@ -138,7 +137,7 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
       <div className="max-w-4xl mx-auto px-6 pt-20">
         <div 
           className="content-body max-w-none selection:bg-primary/20"
-          dangerouslySetInnerHTML={{ __html: cleanContent }}
+          dangerouslySetInnerHTML={{ __html: localizeHtmlLinks(cleanContent, locale) }}
         />
         
         {/* Author Footer (Minimal) */}
@@ -179,7 +178,7 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://tools.aynzo.com/${locale}/blog/${slug}`
+              "@id": getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`)
             }
           })
         }}

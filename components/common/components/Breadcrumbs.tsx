@@ -3,6 +3,7 @@ import { Link } from '@/navigation';
 import { ChevronRight, Home } from 'lucide-react';
 import Script from 'next/script';
 import { useTranslations, useLocale } from 'next-intl';
+import { getLocalePrefix } from '@/utils/locale-utils';
 
 interface BreadcrumbsProps {
     items: {
@@ -15,6 +16,9 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
     const t = useTranslations('Navigation');
     const locale = useLocale();
     const baseUrl = 'https://tools.aynzo.com';
+    
+    // as-needed locale prefix logic
+    const localePrefix = getLocalePrefix(locale);
 
     // Breadcrumb Schema
     const breadcrumbSchema = {
@@ -25,7 +29,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                 '@type': 'ListItem',
                 position: 1,
                 name: t('home'),
-                item: `${baseUrl}/${locale}`,
+                item: `${baseUrl}${localePrefix}`,
             },
             ...items.map((item, index) => {
                 // Ensure href starts with /
@@ -34,7 +38,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                     '@type': 'ListItem',
                     position: index + 2,
                     name: item.label,
-                    item: item.href.startsWith('http') ? item.href : `${baseUrl}/${locale}${path}`,
+                    item: item.href.startsWith('http') ? item.href : `${baseUrl}${localePrefix}${path}`,
                 };
             }),
         ],
