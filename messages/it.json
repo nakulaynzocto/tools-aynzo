@@ -2366,7 +2366,8 @@
             "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required. Gratuito, veloce e sicuro. Nessuna registrazione.",
             "name": "Generatore di testo in grassetto",
             "description": "Genera testo in grassetto utilizzando caratteri Unicode.",
-            "seoH1": "Generatore di testo in grassetto: distinguiti con caratteri pesanti"
+            "seoH1": "Generatore di testo in grassetto: distinguiti con caratteri pesanti",
+            "seoKeywords": "bold text generator, heavy font generator, bold unicode text, thick text online, bold font for instagram, 𝗯𝗼𝗹𝗱 𝘁𝗲𝘅𝘁"
         },
         "seo-score-checker": {
             "content": "< p > Stop guessing why your website isn't ranking. Our **Live <strong>SEO Score Checker</strong>**doesn't just pretend to analyze your site—it actually fetches your live code in real - time.Unlike generic tools that give random numbers, we parse your HTML structure to find the ** exact technical flaws ** holding you back.</p>\n< h3 > How Our Real - Time Scanner Works </h3>\n< p > When you enter a URL, our advanced crawler connects to your website instantly.It reads the public HTML just like Googlebot does, checking for: </p>\n< ul >\n<li class=\"text-gray-600\">** Title & Meta Tags:** We verify if they exist and if they are the perfect length for search snippets.</li>\n<li class=\"text-gray-600\"> ** Header Hiearchy:** We scan your H1, H2, and H3 tags to ensure your content structure is semantic and readable.</li>\n<li class=\"text-gray-600\"> ** Image Accessibility:** We count every image and flag the ones missing 'alt' text, which hurts your accessibility and image search ranking.</li>\n<li class=\"text-gray-600\"> ** Internal & External Links:** We count valid links to judge the crawlability of your page.</li>\n</ul>\n< h3 > Why a 'Real' Score Matters </h3>\n< p > Many free tools simulate results.We don't. If you fix an issue and run the scan again,**you will see your score increase immediately**. This direct feedback loop allows developers and marketers to:</p>\n< ul >\n<li class=\"text-gray-600\">Validate fixes instantly after deploying code.</li>\n< li > Audit competitor pages to see their real metadata strengths.</li>\n< li > Generate accurate reports for clients based on actual page data.</li>\n</ul>\n< h3 > Actionable \"Fix-It\" List </h3>\n< p > We don't just give you a number. We provide a checklist of **Failed**vs**Passed** tests. If your Meta Description is too short, we tell you. If your H1 is missing, we alert you. This tool is your personal SEO assistant, working 24/7 for free.</p>",
@@ -3105,28 +3106,51 @@
             "description": "Genera testo sottolineato doppio per i social media.",
             "seoTitle": "Testo sottolineato doppio gratis online - Usa testo sottolineato doppio",
             "seoDescription": "Usa il testo sottolineato doppio online gratuitamente. Elaborazione rapida e sicura. Nessun accesso, veloce, sicuro. Perfetto per le attività quotidiane.",
-            "seoH1": "Testo sottolineato doppio libero: usa testo sottolineato doppio"
+            "seoH1": "Testo sottolineato doppio libero: usa testo sottolineato doppio",
+            "seoKeywords": "double-underline-text, free double underline text, double underline text tool"
         },
         "cursive-text": {
             "name": "Generatore di testo corsivo",
             "description": "Genera testo corsivo / script per i social media.",
             "seoTitle": "Generatore di testo corsivo gratuito online - Usa il generatore di testo corsivo",
             "seoDescription": "Usa gratuitamente Cursive Text Generator online. Elaborazione rapida e sicura. Nessun accesso, veloce, sicuro. Perfetto per le attività quotidiane.",
-            "seoH1": "Generatore di testo corsivo gratuito: usa il generatore di testo corsivo"
+            "seoH1": "Generatore di testo corsivo gratuito: usa il generatore di testo corsivo",
+            "seoKeywords": "cursive-text, free cursive text generator, cursive text generator tool"
         },
         "currency-converter": {
             "name": "Convertitore valute",
             "description": "Converti tra diverse valute con tariffe in tempo reale.",
             "seoTitle": "Convertitore di valuta online gratuito - Tassi di cambio in tempo reale",
             "seoDescription": "Converti valute online gratuitamente. Tassi di cambio in tempo reale per oltre 150 valute. Nessun accesso, veloce, accurato. Perfetto per viaggi e affari.",
-            "seoH1": "Convertitore di valuta gratuito: tassi di cambio in tempo reale"
+            "seoH1": "Convertitore di valuta gratuito: tassi di cambio in tempo reale",
+            "seoKeywords": "currency converter free, exchange rate calculator, foreign exchange rates, convert money online, currency exchange tool"
         },
         "401k-retirement-calculator": {
             "name": "Calcolatore di pensionamento 401k",
             "description": "Pianifica la tua pensione stimando la tua crescita di 401k con l'abbinamento del datore di lavoro.",
             "seoTitle": "Calcolatore di pensionamento 401k - Pianificatore di ricchezza n. 1 negli Stati Uniti",
             "seoDescription": "Calcola il tuo saldo di 401k al momento del pensionamento. Include la corrispondenza del datore di lavoro, gli aumenti salariali e la crescita composta. Pianifica oggi i tuoi risparmi per la pensione negli Stati Uniti.",
-            "seoH1": "Calcolatore di pensionamento 401k: pianifica la tua ricchezza futura"
+            "seoH1": "Calcolatore di pensionamento 401k: pianifica la tua ricchezza futura",
+            "seoKeywords": "401k calculator, retirement planner, 401k match calculator, retirement savings estimator, us retirement tool",
+            "content": "<h2>401k Retirement Calculator: Secure Your Financial Future</h2><p>Your <strong>401k plan</strong> is one of the most powerful tools for building wealth in the United States. Thanks to tax-advantaged growth and <strong>employer matching</strong>, it can turn modest savings into a multi-million dollar nest egg.</p><h3>The Power of Employer Matching</h3><p>Many employers offer a match (e.g., 50% for every dollar you contribute up to 6%). This is literally <strong>free money</strong>. Our calculator helps you visualize how that match compounds over 20-40 years.</p>",
+            "faq": [
+                {
+                    "question": "Should I contribute more than my employer match?",
+                    "answer": "Yes, if you can afford it. Most experts recommend saving 15% of your income for retirement. The 401k match is just the starting point."
+                },
+                {
+                    "question": "What is a realistic 401k return rate?",
+                    "answer": "Historically, the S&P 500 has averaged 7-10% annually. For conservative planning, 6-8% is a safe estimate for long-term projections."
+                },
+                {
+                    "question": "Can I withdraw my 401k early?",
+                    "answer": "Withdrawing before age 59½ usually results in a 10% penalty plus income taxes. It's best to leave it for retirement unless it's a financial emergency."
+                },
+                {
+                    "question": "What is the 2024 401k contribution limit?",
+                    "answer": "For 2024, the 401k contribution limit is $23,000. If you are 50 or older, you can contribute an additional $7,500 as a catch-up contribution."
+                }
+            ]
         },
         "image-format-converter": {
             "name": "Convertitore del formato immagine",
@@ -3208,7 +3232,8 @@
         "reset": "Reimposta",
         "shareThisTool": "Condividi questo strumento",
         "copyLink": "Copia link",
-        "faqTitle": "Domande frequenti (FAQ)"
+        "faqTitle": "Domande frequenti (FAQ)",
+        "pleaseWait": "Attendi prego..."
     },
     "NavbarCategories": {
         "Image Tools": "Strumenti Immagine",
@@ -3271,7 +3296,17 @@
         "strikethrough": "Barrato",
         "sortAZ": "Ordina A-Z",
         "removeDuplicates": "Rimuovi duplicati",
-        "textTool": "Strumento testo"
+        "textTool": "Strumento testo",
+        "boldText": "Bold Text",
+        "cursiveText": "Cursive Text",
+        "doubleUnderline": "Double Underline",
+        "uppercaseShort": "UPPER",
+        "lowercaseShort": "lower",
+        "titleCaseShort": "Title",
+        "sentenceCaseShort": "Sentence",
+        "cleanSpacesShort": "Clean",
+        "removeLineBreaksShort": "Breaks",
+        "reverseTextShort": "Rev"
     },
     "YouTubeTools": {
         "analyze": "Analizza",
@@ -3313,7 +3348,11 @@
         "ourMission": "La nostra missione",
         "missionStatement": "Strumenti online gratuiti, veloci e privati per tutti — senza pubblicità o tracciamento.",
         "securePrivate": "Sicuro & Privato",
-        "allRightsReserved": "Tutti i diritti riservati."
+        "allRightsReserved": "Tutti i diritti riservati.",
+        "multiLanguage": "Multi-language Support",
+        "privacy": "Privacy",
+        "supportProject": "Support Project",
+        "buyMeACoffee": "Offrimi un caffè"
     },
     "Share": {
         "shareThisTool": "Condividi questo strumento",
@@ -3337,7 +3376,10 @@
         "clearAll": "Cancella tutto",
         "filesSelected": "{count} file selezionati",
         "pasteBase64": "Incolla Base64",
-        "batchReady": "Batch pronto"
+        "batchReady": "Batch pronto",
+        "runTool": "Elabora",
+        "download": "Scarica",
+        "convert": "Converti"
     },
     "ImageGroups": {
         "image-optimize": "Ottimizza",
@@ -3345,12 +3387,12 @@
         "image-edit": "Modifica",
         "image-effects": "Filtri",
         "image-dev": "Base64",
-        "pdf-convert": "PDF Converti",
-        "pdf-edit": "PDF Modifica",
+        "pdf-convert": "Converti PDF",
+        "pdf-edit": "Modifica PDF",
         "text-analyze": "Analizza",
         "text-edit": "Modifica",
         "text-style": "Stile",
-        "dev-format": "Formatta",
+        "dev-format": "Formato",
         "dev-tool": "Strumenti",
         "dev-convert": "Converti",
         "dev-optimize": "Ottimizza",
@@ -3360,14 +3402,14 @@
         "conv-data": "Dati",
         "util-rand": "Casuale",
         "util-gen": "Generatori",
-        "util-net": "Rete & Web",
+        "util-net": "Rete e Web",
         "sec-gen": "Sicurezza",
         "yt-tool": "YouTube",
         "seo-gen": "Generatori SEO",
-        "seo-keyword": "Parole Chiave",
-        "social-gen": "Social & Link",
-        "calc-util": "Salute & Info",
-        "calc-math": "Finanza & Mate"
+        "seo-keyword": "Parole chiave",
+        "social-gen": "Social e Link",
+        "calc-util": "Salute e Info",
+        "calc-math": "Finanza e Matematica"
     },
     "CalculatorNav": {
         "finance": "Finanza",
@@ -3397,7 +3439,10 @@
         "pregnancy": "Gravidanza",
         "macros": "Macro",
         "idealWeight": "Peso Ideale",
-        "percentage": "Percentuale"
+        "percentage": "Percentuale",
+        "salary": "Stipendio in orario",
+        "tip": "Calcolatore mancia",
+        "gpa": "Calcolatore GPA"
     },
     "WebNav": {
         "metaOptimisation": "Meta & Optimization",
@@ -3578,6 +3623,56 @@
         "pdf": "Strumenti di gestione PDF di livello aziendale.",
         "text": "Utility di testo avanzate per formattazione.",
         "developer": "Strumenti essenziali per sviluppatori.",
-        "seo": "Strumenti SEO e social media performanti."
+        "seo": "Strumenti SEO e social media performanti.",
+        "security": "Strumenti crittografici sicuri per hash, password e cifratura dei dati.",
+        "converter": "Convertitori accurati di unità e dati per flussi professionali e accademici.",
+        "utility": "Strumenti utili quotidiani per semplificare la tua vita digitale.",
+        "calculator": "Calcolatori finanziari e matematici intelligenti per risultati immediati.",
+        "youtube": "Strumenti YouTube dedicati ai creator per scaricare miniature e generare tag."
+    },
+    "CurrencyConverter": {
+        "from": "Da",
+        "to": "A",
+        "amountPlaceholder": "Inserisci importo",
+        "exchangeRate": "Tasso di cambio",
+        "refresh": "Aggiorna",
+        "lastUpdated": "Ultimo aggiornamento: {time}",
+        "errorUnavailable": "Tasso di cambio non disponibile",
+        "errorFetch": "Impossibile recuperare il tasso di cambio"
+    },
+    "TextToolContent": {
+        "word-counter": {
+            "title": "Free Online Word Counter & Character Count Tool",
+            "intro": "Our **Word Counter** is a free, real-time tool to count words, characters, sentences, and paragraphs. Perfect for writers, students, and professionals who need to check their text length instantly.",
+            "howToUseTitle": "How to Use the Word Count Calculator",
+            "howToUseSteps": [
+                "Paste or type your text into the input box.",
+                "The tool will automatically calculate the word count and character count.",
+                "Check detailed metrics like sentence count, paragraph count, and reading time.",
+                "Use the 'Copy' or 'Download' buttons to save your work."
+            ],
+            "featuresTitle": "Key Features of Our Word Counter Checker",
+            "features": [
+                "**Instant Calculation:** Results appear immediately as you type.",
+                "**Essay Word Counter:** Ideal for checking essay length requirements.",
+                "**Character Counter:** Includes spaces and excludes spaces for precise limits (like Twitter/X).",
+                "**100% Free & Secure:** No login required, and your text is processed locally in your browser."
+            ],
+            "faqTitle": "Common Questions (FAQ)",
+            "faq": [
+                {
+                    "q": "How many words is this text?",
+                    "a": "Simply paste your text above, and our tool will tell you exactly how many words, characters, and sentences it contains."
+                },
+                {
+                    "q": "Is this word counter free?",
+                    "a": "Yes, our word counter is completely free to use online with no limits."
+                },
+                {
+                    "q": "Can I use this for essays?",
+                    "a": "Absolutely! This tool is perfect as an essay word counter to ensure you meet your assignment's word count requirements."
+                }
+            ]
+        }
     }
 }

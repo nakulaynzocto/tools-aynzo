@@ -3032,7 +3032,9 @@
                     "question": "هل هو مجاني؟",
                     "answer": "نعم، جميع أدوات Aynzo مجانية بنسبة 100%."
                 }
-            ]
+            ],
+            "name": "Regex Tester",
+            "description": "Test regular expressions against text."
         },
         "reverse-text": {
             "content": "हमारे <strong>ऑनलाइन रिवर्स टेक्स्ट टूल</strong> से अपने संचार को एक नया रूप दें। चाहे आप एक अनोखा सोशल मीडिया बायो बनाना चाहते हों, किसी पहेली के लिए कोडित संदेश लिखना चाहते हों, या बस अपने शब्दों को एक अलग नज़रिए से देखना चाहते हों, हमारा कैरेक्टर-फ्लिपिंग इंजन तुरंत परिणाम देता है। यह रचनात्मक अभिव्यक्ति और डिजिटल खेल के लिए डिज़ाइन किया गया एक मज़ेदार, हल्का-फुल्का टूल है।</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">सिर्फ़ उल्टा लिखने से कहीं ज़्यादा</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">टेक्स्ट को उल्टा करने में अक्षरों की एक श्रृंखला को ठीक उल्टे क्रम में व्यवस्थित करना शामिल है। हालाँकि यह सरल लगता है, इसका उपयोग कलात्मक परियोजनाओं के लिए दर्पण-छवि टेक्स्ट बनाने से लेकर एस्केप रूम या ऑनलाइन गेम के लिए सरल कोड बनाने तक हर चीज़ के लिए किया जा सकता है।</p> हमारा टूल प्रतीकों, रिक्त स्थानों और बहु-पंक्ति इनपुट को पूर्ण सटीकता के साथ संभालता है।</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">टूल की क्षमताएं</h2>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>अक्षर-स्तर पर उलटाव:</strong> प्रत्येक अक्षर, रिक्त स्थान और विराम चिह्न को उलट दिया जाता है, जिससे सही मायने में उल्टा प्रभाव मिलता है।</li>\n<li class=\"text-gray-600\"><strong>वाक्य-स्तर पर विकल्प:</strong> शब्दों को पठनीय रखते हुए पूरे वाक्यों के क्रम को आसानी से उलट दें।</li>\n<li class=\"text-gray-600\"><strong>तत्काल मिरर आउटपुट:</strong> टाइप करते सम�� अपने टेक्स्ट को बदलते हुए देखें, बिना किसी विलंब के और पृष्ठ को रीफ़्रेश करने की आवश्यकता के बिना।</li>\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">100% स्थानीय गोपनीयता</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">आपके संदेश केवल आपके हैं। Aynzo Tools सभी टेक्स्ट उलटाव को सीधे आपके कंप्यूटर पर JavaScript का उपयोग करके संसाधित करता है।</strong> हम आपके टेक्स्ट को कभी भी अपने सर्वर पर अपलोड नहीं करते हैं, जिससे यह सुनिश्चित होता है कि आपके गुप्त संदेश, मजेदार चुटकुले और रचनात्मक अंश हर समय 100% निजी और सुरक्षित रहें।",
@@ -3047,7 +3049,9 @@
                     "question": "هل هو مجاني؟",
                     "answer": "نعم، جميع أدوات Aynzo مجانية بنسبة 100%."
                 }
-            ]
+            ],
+            "name": "Reverse Text Generator",
+            "description": "Reverse your text, flip it, or reverse words."
         },
         "bold-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">हमारे <strong>बोल्ड टेक्स्ट जेनरेटर</strong> से अपने संदेशों को और भी आकर्षक बनाएं! यह मुफ़्त ऑनलाइन टूल आपके सामान्य टेक्स्ट को बोल्ड यूनिकोड अक्षरों में बदल देता है, जिनका उपयोग विभिन्न सोशल मीडिया प्लेटफॉर्म, मैसेजिंग ऐप और वेबसाइटों पर किया जा सकता है। मुख्य बिंदुओं पर ज़ोर देने, आकर्षक हेडलाइन बनाने या अपनी प्रोफ़ाइल को और भी प्रभावशाली बनाने के लिए यह एकदम सही है।</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">यह कैसे काम करता है?</h3> </h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\"> पारंपरिक HTML बोल्ड टैग्स (<code>&lt; b &gt; </code> या <code>&lt;strong&gt;</code>) के विपरीत, हमारा जनरेटर विशेष यूनिकोड वर्णों का उपयोग करता है जो दिखने में बोल्ड होते हैं। चूंकि ये वास्तविक टेक्स्ट वर्ण हैं, इसलिए इन्हें लगभग किसी भी टेक्स्ट फ़ील्ड में पेस्ट किया जा सकता है, जिसमें सोशल मीडिया बायो, टिप्पणियाँ और चैट संदेश शामिल हैं, जहाँ HTML फ़ॉर्मेटिंग समर्थित नहीं है।</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\"> मुख्य विशेषताएं </h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>सार्वभौमिक संगतता: </strong> इंस्टाग्राम, फेसबुक, ट्विटर, व्हाट्सएप और अन्य पर काम करता है।</li>\n<li class=\"text-gray-600\"><strong>तत्काल रूपांतरण: </strong> अपना टेक्स्ट टाइप करें या पेस्ट करें और इसे तुरंत रूपांतरित होते देखें।</li>\n<li class=\"text-gray-600\"><strong>बहुविध बोल्ड शैलियाँ: </strong> विभिन्न बोल्ड फ़ॉन्ट और शैलियों (जैसे, बोल्ड सेरिफ़, बोल्ड सैन्स-सेरिफ़) का अन्वेषण करें।</li> >\n<li class=\"text-gray-600\"><strong>कॉपी और पेस्ट:</strong> एक क्लिक से आसानी से जेनरेट किए गए बोल्ड टेक्स्ट को कॉपी करें।</li >\n</ul>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\"> बोल्ड टेक्स्ट के रचनात्मक उपयोग </h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>सोशल मीडिया बायो:</strong> अपने इंस्टाग्राम या टिकटॉक बायो में मुख्य जानकारी को हाइलाइट करें।</li >\n<li class=\"text-gray-600\"><strong>पोस्ट पर ज़ोर:</strong> अपने कैप्शन या ट्वीट के महत्वपूर्ण हिस्सों को अलग दिखाएं।</li >\n<li class=\"text-gray-600\"><strong>हेडलाइन और शीर्षक:</strong> अपनी ऑनलाइन सामग्री के लिए प्रभावशाली शीर्षक बनाएं।</li >\n<li class=\"text-gray-600\"><strong>मैसेजिंग:</strong> चैट एप्लिकेशन में संदेशों पर ज़ोर दें।</li >\n</ul>",
@@ -3069,7 +3073,8 @@
             ],
             "name": "बोल्ड टेक्स्ट जनरेटर",
             "description": "यूनिकोड वर्णों का उपयोग करके बोल्ड टेक्स्ट जनरेट करें।",
-            "seoH1": "बोल्ड टेक्स्ट जनरेटर: भारी फ़ॉन्ट के साथ अलग दिखें"
+            "seoH1": "बोल्ड टेक्स्ट जनरेटर: भारी फ़ॉन्ट के साथ अलग दिखें",
+            "seoKeywords": "bold text generator, heavy font generator, bold unicode text, thick text online, bold font for instagram, 𝗯𝗼𝗹𝗱 𝘁𝗲𝘅𝘁"
         },
         "word-to-pdf": {
             "content": "पेशेवर जगत में, ड्राफ्ट से अंतिम दस्तावेज़ में रूपांतरण में अक्सर पीडीएफ़ में परिवर्तन शामिल होता है। जबकि माइक्रोसॉफ्ट वर्ड सामग्री बनाने के लिए वैश्विक मानक है, पीडीएफ़ (पोर्टेबल डॉक्यूमेंट फॉर्मेट) इसे वितरित करने के लिए सर्वोत्कृष्ट है। <strong>आयन्ज़ो वर्ड टू पीडीएफ़ कन्वर्टर</strong> को पिक्सेल-परफेक्ट सटीकता के साथ इस अंतर को पाटने के लिए डिज़ाइन किया गया है, यह सुनिश्चित करते हुए कि आपकी मेहनत हर डिवाइस पर ठीक उसी तरह दिखे जैसा आपने सोचा था।</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">पेशेवर लाभ: वर्ड को पीडीएफ़ में क्यों बदलें?</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">वर्ड फ़ाइलों के रूप में साझा किए गए दस्तावेज़ों में फ़ॉर्मेटिंग में बदलाव, फ़ॉन्ट की कमी और अनजाने में हुए संपादन की संभावना रहती है। <strong>वर्ड को पीडीएफ़ में ऑनलाइन बदलने</strong> का विकल्प चुनकर, आप अपने डिज़ाइन को सुरक्षित कर लेते हैं।</p> चाहे आप थीसिस जमा करने वाले छात्र हों, इनवॉइस भेजने वाले फ्रीलांसर हों, या रिपोर्ट वितरित करने वाले कॉर्पोरेट अधिकारी हों, PDF वह पेशेवर स्तर प्रदान करता है जो कच्चे संपादन योग्य प्रारूपों से मेल नहीं खाता।</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">बेजोड़ फ़ॉर्मेटिंग संरक्षण</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">मुफ्त कन्वर्टर्स के बारे में सबसे आम शिकायत यह है कि वे दस्तावेज़ को \"खराब\" कर देते हैं। टेब�� अपनी जगह से हट जाती हैं, चित्र एक-दूसरे पर चढ़ जाते हैं, और कस्टम फ़ॉन्ट गायब हो जाते हैं। हमारा टूल उन्नत रेंडरिंग लॉजिक का उपयोग करता है जो Microsoft Office द्वारा लेआउट को संभालने के तरीके को दर्शाता है। हम निम्नलिखित का समर्थन करते हैं:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>जटिल लेआउट:</strong> बहु-स्तंभ रिपोर्ट, हेडर और फ़ूटर 100% सटीकता के साथ संरक्षित रहते हैं।</li>\n<li class=\"text-gray-600\"><strong>गतिशील तत्व:</strong> निर्यातित PDF में हाइपरलिंक, विषय-सूची (TOC) और मेटाडेटा कार्यात्मक बने रहते हैं।</li>\n<li class=\"text-gray-600\"><strong>एम्बेडेड मीडिया:</strong> उच्च-रिज़ॉल्यूशन चित्र और चार्ट को उनकी मूल स्पष्टता खोए बिना रूपांतरित किया जाता है।</li >\n<li class=\"text-gray-600\"><strong>फ़ॉन्ट अखंडता:</strong> हम मानक और सामान्य सिस्टम फ़ॉन्ट का उपयोग करते हैं ताकि आपकी टाइपोग्राफी एकरूप बनी रहे।</li >\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> सुरक्षा और गोपनीयता: आपके दस्तावेज़ सुरक्षित हैं </h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\"> दस्तावेज़ सुरक्षा हमारी सर्वोच्च प्राथमिकता है। कई \"मुफ़्त\" ऑनलाइन टूल के विपरीत जो प्रशिक्षण या विज्ञापन के लिए आपका संवेदनशील डेटा संग्रहीत करते हैं, <strong>Aynzo Tools </strong> आपकी गोपनीयता को प्राथमिकता देता है। सभी प्रोसेसिंग एक अस्थायी, एन्क्रिप्टेड वातावरण में की जाती है। रूपांतरण पूरा होने के तुरंत बाद आपकी फ़ाइलें स्वचालित रूप से हटा दी जाती हैं। हम आपके द��्तावेज़ों की सामग्री को ट्रैक नहीं करते हैं और न ही ईमेल साइन-अप की आवश्यकता होती है, जिससे आपकी पहचान गुमनाम रहती है।</p >\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">गति के लिए अनुकूलित: वर्ड से पीडीएफ में सेकंडों में रूपांतरण </h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\"> समय एक अनमोल संसाधन है। हमने अपने सर्वर-साइड इंजन को बड़े, इमेज-प्रधान दस्तावेज़ों (50MB तक) को भी कुछ ही सेकंडों में प्रोसेस करने के लिए अनुकूलित किया है। यह उन उपयोगकर्ताओं के लिए आदर्श उपकरण है जो बड़ी मात्रा में फ़ाइलों का उपयोग करते हैं और जिन्हें पारंपरिक डेस्कटॉप सॉफ़्टवेयर की अनावश्यक सुविधाओं के बिना एक तेज़ Word से PDF कनवर्टर की आवश्यकता होती है।\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> व्यापक संगतता: .DOC और .DOCX समर्थित </h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\"> चाहे आप पुराने Word 97-2003 दस्तावेज़ों (.doc) के साथ काम कर रहे हों या आधुनिक XML-आधारित फ़ाइलों (.docx) के साथ, हमारा जनरेटर दोनों को आसानी से संभालता है। यह बैकवर्ड कम्पैटिबिलिटी सुनिश्चित करती है कि आपके सबसे पुराने आर्काइव भी बिना किसी कम्पैटिबिलिटी समस्या के आधुनिक PDF मानक में परिवर्तित हो सकते हैं।</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> Aynzo <strong>Word to PDF</strong> टूल का उपयोग कैसे करें </h2>\n<ol>\n<li class=\"text-gray-600\"><strong>अपनी फ़ाइल चुनें: </strong> अपलोड बॉक्स पर क्लिक करें या अपनी Word फ़ाइल को टूल क्षेत्र में ड्रैग और ड्रॉप करें।</li>\n<li class=\"text-gray-600\"><strong>रूपांतरण की प्रतीक्षा करें: </strong> हमारा इंजन तुरंत उ���्च गति रेंडरिंग प्रक्रिया शुरू कर देगा।</li>\n<li class=\"text-gray-600\"><strong>परिणाम डाउनलोड करें: </strong> अपने पेशेवर PDF को अपने कंप्यूटर या मोबाइल डिवाइस पर सहेजने के लिए बस 'डाउनलोड' बटन पर क्लिक करें।</li>\n</ol>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> डेस्कटॉप सॉफ़्टवेयर के बजाय Aynzo क्यों चुनें? </h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\"> Adobe Acrobat जैसे सॉफ़्टवेयर शक्तिशाली तो हैं, लेकिन महंगे और संसाधन-गहन हैं। दैनिक दस्तावेज़ कार्यों के 99% के लिए, एक हल्का <strong> ऑनलाइन <strong>Word to PDF</strong> जनरेटर < /strong> अधिक कुशल है। इसमें न तो कोई सॉफ्टवेयर इंस्टॉल करना है, न ही अपडेट्स मैनेज करने हैं और न ही कोई मासिक सदस्यता शुल्क है। यह विंडोज, मैकओएस, लिनक्स और यहां तक ​​कि एंड्रॉइड और आईओएस के मोबाइल ब्राउज़रों पर भी काम करता है।",
@@ -3099,7 +3104,8 @@
             ],
             "name": "वर्ड को पीडीएफ में बदलें",
             "description": "माइक्रोसॉफ्ट वर्ड (DOC/DOCX) दस्तावेज़ों को PDF प्रारूप में परिवर्तित करें।",
-            "seoH1": "वर्ड को पीडीएफ में मुफ्त रूप से बदलें: वर्ड DOC/DOCX को पीडीएफ में बदलें"
+            "seoH1": "वर्ड को पीडीएफ में मुफ्त रूप से बदलें: वर्ड DOC/DOCX को पीडीएफ में बदलें",
+            "seoKeywords": "word to pdf converter free, convert word to pdf online, doc to pdf converter free, docx to pdf online, free word to pdf no signup"
         },
         "seo-score-checker": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">अब यह अनुमान लगाना बंद करें कि आपकी वेबसाइट पहले पेज पर क्यों नहीं आ रही है। हमारा <strong>ऑनलाइन एसईओ स्कोर चेकर</strong> किसी भी यूआरएल का पेशेवर, रीयल-टाइम ऑडिट प्रदान करता है। पुराने कैश किए गए डेटा पर निर्भर रहने वाले स्टैटिक टूल्स के विपरीत, हमारा स्कैनर आपके लाइव एचटीएमएल कोड को तुरंत प्राप्त करता है और उन्हीं तकनीकी कारकों का विश्लेषण करता है जिनका उपयोग सर्च इंजन क्रॉलर आपकी रैंकिंग निर्धारित करने के लिए करते हैं।</p>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">हमारा रीयल-टाइम तकनीकी स्कैनर कैसे काम करता है</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">जब आप कोई यूआरएल दर्ज करते हैं, तो हमारा उन्नत क्रॉलर सुरक्षित रूप से आपकी साइट से जुड़ता है और उसकी संरचना का विश्लेषण करता है।</p> यह कई महत्वपूर्ण एसईओ स्तंभों का व्यापक निदान करता है:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>मेटाडेटा अखंडता:</strong> हम आपके शीर्षक टैग और मेटा विवरण की उपस्थिति और लंबाई की जाँच करते हैं ताकि यह सुनिश्चित हो सके कि वे खोज इंजन परिणाम पृष्ठों (एसईआरपी) में अधूरे न दिखें।</li>\n<li class=\"text-gray-600\"><strong>अर्थ संबंधी सामग्री पदानुक्रम:</strong> हम आपके H1 से H3 टैग का ऑडिट करते हैं ताकि यह सुनिश्चित हो सके कि आपकी सामग्री उपयोगकर्ताओं और खोज बॉट दोनों के लिए तार्किक रूप से संरचित है।</li>\n<li class=\"text-gray-600\"><strong>छवि अनुकूलन:</strong> \"alt\" विशेषता का न होना खरा�� पहुँच और छवि खोज ट्रैफ़िक के नुकसान का एक प्रमुख कारण है; हम सुधार की आवश्यकता वाली प्रत्येक छवि को चिह्नित करते हैं।\n\nलिंक और नेविगेशन स्वास्थ्य: हम आंतरिक और बाह्य लिंक के वितरण का विश्लेषण करते हैं ताकि आपको अपने पृष्ठ की क्रॉलेबिलिटी और अथॉरिटी प्रवाह को समझने में मदद मिल सके।\n\nलाइव स्कोर बेहतर क्यों है?\n\nसामान्य एसईओ टूल अक्सर हफ़्तों या महीनों पहले के डेटा के आधार पर स्कोर प्रदान करते हैं। Aynzo टूल्स के साथ, आपका स्कोर आपके वर्तमान कोड को दर्शाता है। यह त्वरित प्रतिक्रिया लूप डेवलपर्स और मार्केटर्स को निम्न कार्य करने की अनुमति देता है:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\">तैनाती के तुरंत बाद तकनीकी सुधारों का सत्यापन करना।</li>\n<li class=\"text-gray-600\">प्रतिस्पर्धी की लाइव मेटाडेटा रणनीतियों का ऑडिट करके प्रतिस्पर्धी विश्लेषण करना।</li>\n<li class=\"text-gray-600\">वास्तविक, नवीनतम पेज डेटा के आधार पर ग्राहकों के लिए सटीक SEO स्वास्थ्य रिपोर्ट तैयार करना।</li>\n</ul>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">कार्रवाई योग्य SEO सुधार सूची</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हमारा मानना ​​है कि बिना कार्रवाई के डेटा बेकार है। केवल प्रतिशत स्कोर से परे, हम एक विस्तृत <strong>SEO चेकलिस्ट</strong> प्रदान करते हैं जो परीक्षणों को \"सफल\" और \"असफल\" में वर्गीकृत करती है। यदि आपका मेटा विवरण गायब है या आपका H1 डुप्लिकेट है, तो हम आपको इसे ��ीक करने के लिए स्पष्ट, कार्रवाई योग्य सलाह देते हैं, जो आपके व्यक्तिगत तकनीकी SEO सहायक के रूप में कार्य करता है।</p>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">100% निजी वेबसाइट ऑडिटिंग</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">आपका प्रतिस्पर्धी अनुसंधान और वेबसाइट प्रदर्शन डेटा संवेदनशील है। Aynzo Tools सभी विश्लेषण आपके ब्राउज़र में ही करता है। हम आपके द्वारा ऑडिट किए गए URL को कभी भी स्टोर नहीं करते, आपके स्कोर को लॉग नहीं करते और आपकी तकनीकी कमजोरियों को किसी तीसरे पक्ष के साथ साझा नहीं करते। आप पूरी गोपनीयता और गति के साथ असीमित ऑडिट कर सकते हैं।",
@@ -3934,46 +3940,87 @@
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Cron Job?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A cron job is a scheduled task in Unix/Linux systems that runs automatically at specified intervals. Defined in the <em>crontab</em> (cron table) file, they're used for automated backups, report generation, database maintenance, API calls, and server monitoring.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Cron Expression Format</h3><p class=\"mb-4 leading-relaxed text-gray-700\">A cron expression has 5 fields: <code>MINUTE HOUR DAY MONTH WEEKDAY</code>. Each field accepts specific values and wildcards:</p><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\"><code>*</code> — any value (every minute, every hour, etc.)</li><li class=\"text-gray-600\"><code>*/n</code> — every n units (*/5 = every 5 minutes)</li><li class=\"text-gray-600\"><code>a,b</code> — multiple values (1,15 = 1st and 15th)</li><li class=\"text-gray-600\"><code>a-b</code> — range (1-5 = Monday through Friday)</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Cron Job Use Cases</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">0 0 * * * — Daily backup at midnight</li><li class=\"text-gray-600\">*/5 * * * * — API health check every 5 minutes</li><li class=\"text-gray-600\">0 9 * * 1-5 — Daily report email every weekday at 9am</li><li class=\"text-gray-600\">0 0 1 * * — Monthly invoice generation</li></ul>"
         },
         "gpa-calculator": {
-            "content": "<section>\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">शैक्षणिक उत्कृष्टता: सटीक रूप से अपने जीपीए को ट्रैक करना</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">आपका <strong>ग्रेड प्वाइंट एवरेज (जीपीए)</strong> अमेरिकी शिक्षा प्रणाली में सबसे महत्वपूर्ण मापदंडों में से एक है, जो कॉलेज प्रवेश, छात्रवृत्ति पात्रता और करियर के अवसरों को प्रभावित करता है। <strong>आयन्ज़ो जीपीए कैलकुलेटर</strong> उन छात्रों के लिए बनाया गया है जिन्हें सेमेस्टर के दौरान अपने शैक्षणिक प्रदर्शन को सटीकता और आसानी से ट्रैक करने की आवश्यकता होती है।</p>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">भारित बनाम भाररहित जीपीए: क्या अंतर है?</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">अधिकांश अमेरिकी हाई स्कूल और विश्वविद्यालय दो मुख्य स्कोरिंग प्रणालियों में से एक का उपयोग करते हैं:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>भाररहित जीपीए (4.0 स्केल):</strong> प्रत्येक कक्षा को कठिनाई के स्तर की परवाह किए बिना मानक 4.0 स्केल पर मापा जाता है। 'A' ग्रेड हमेशा 4.0 GPA के बराबर होता है।\n\nभारित GPA (5.0 स्केल): ऑनर्स, AP (एडवांस्ड प्लेसमेंट) या IB कक्षाओं के लिए अतिरिक्त अंक जोड़े जाते हैं। इससे छात्रों को अधिक चुनौतीपूर्ण पाठ्यक्रम लेने के लिए प्रोत्साहन मिलता है।</li>\n</ul>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">अपने सेमेस्टर का GPA कैसे गणना करें</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">एक सेमेस्टर के लिए अपना GPA जानने के लिए, इन चरणों का पालन करें:</p>\n<ol>\n<li class=\"text-gray-600\">प्रत्येक ग्रेड को एक अंक दें (A=4, B=3, आदि)।</li>\n<li class=\"text-gray-600\">अंकों को उस कक्षा के क्रेडिट/यूनिट की संख्या से गुणा करें।</li>\n<li class=\"text-gray-600\">इन सभी \"ग्रेड पॉइंट्स\" को जोड़ें।</li>\n<li class=\"text-gray-600\">कुल ग्रेड पॉइंट्स को लिए गए कुल क्रेडिट की संख्या से भाग दें।</li>\n</ol>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">हमारे GPA अनुमानक का उपयोग क्यों करें?</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">मैन्युअल स्प्रेडशीट के बजाय, हमारा टूल 100% निजी, वास्तविक समय का वातावरण प्रदान करता है।</p> चाहे आप हाई स्कूल के प्रथम वर्ष के छात्र हों या कॉलेज के अंतिम वर्ष के छात्र, अपने संचयी अंकों पर नज़र रखना ही स्नातक स्तर की पढ़ाई और करियर के लक्ष्यों को पूरा करने का सबसे अच्छा तरीका है।\n</section>"
+            "content": "<section>\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">शैक्षणिक उत्कृष्टता: सटीक रूप से अपने जीपीए को ट्रैक करना</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">आपका <strong>ग्रेड प्वाइंट एवरेज (जीपीए)</strong> अमेरिकी शिक्षा प्रणाली में सबसे महत्वपूर्ण मापदंडों में से एक है, जो कॉलेज प्रवेश, छात्रवृत्ति पात्रता और करियर के अवसरों को प्रभावित करता है। <strong>आयन्ज़ो जीपीए कैलकुलेटर</strong> उन छात्रों के लिए बनाया गया है जिन्हें सेमेस्टर के दौरान अपने शैक्षणिक प्रदर्शन को सटीकता और आसानी से ट्रैक करने की आवश्यकता होती है।</p>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">भारित बनाम भाररहित जीपीए: क्या अंतर है?</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">अधिकांश अमेरिकी हाई स्कूल और विश्वविद्यालय दो मुख्य स्कोरिंग प्रणालियों में से एक का उपयोग करते हैं:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>भाररहित जीपीए (4.0 स्केल):</strong> प्रत्येक कक्षा को कठिनाई के स्तर की परवाह किए बिना मानक 4.0 स्केल पर मापा जाता है। 'A' ग्रेड हमेशा 4.0 GPA के बराबर होता है।\n\nभारित GPA (5.0 स्केल): ऑनर्स, AP (एडवांस्ड प्लेसमेंट) या IB कक्षाओं के लिए अतिरिक्त अंक जोड़े जाते हैं। इससे छात्रों को अधिक चुनौतीपूर्ण पाठ्यक्रम लेने के लिए प्रोत्साहन मिलता है।</li>\n</ul>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">अपने सेमेस्टर का GPA कैसे गणना करें</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">एक सेमेस्टर के लिए अपना GPA जानने के लिए, इन चरणों का पालन करें:</p>\n<ol>\n<li class=\"text-gray-600\">प्रत्येक ग्रेड को एक अंक दें (A=4, B=3, आदि)।</li>\n<li class=\"text-gray-600\">अंकों को उस कक्षा के क्रेडिट/यूनिट की संख्या से गुणा करें।</li>\n<li class=\"text-gray-600\">इन सभी \"ग्रेड पॉइंट्स\" को जोड़ें।</li>\n<li class=\"text-gray-600\">कुल ग्रेड पॉइंट्स को लिए गए कुल क्रेडिट की संख्या से भाग दें।</li>\n</ol>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">हमारे GPA अनुमानक का उपयोग क्यों करें?</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">मैन्युअल स्प्रेडशीट के बजाय, हमारा टूल 100% निजी, वास्तविक समय का वातावरण प्रदान करता है।</p> चाहे आप हाई स्कूल के प्रथम वर्ष के छात्र हों या कॉलेज के अंतिम वर्ष के छात्र, अपने संचयी अंकों पर नज़र रखना ही स्नातक स्तर की पढ़ाई और करियर के लक्ष्यों को पूरा करने का सबसे अच्छा तरीका है।\n</section>",
+            "name": "GPA Calculator",
+            "description": "Calculate your college or high school GPA based on grades and credits."
         },
         "salary-calculator": {
-            "content": "<section>\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">करियर प्लानिंग: अपनी वास्तविक प्रति घंटा मजदूरी को समझना</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">चाहे आप किसी नई नौकरी के प्रस्ताव पर बातचीत कर रहे हों या अपना व्यक्तिगत बजट बना रहे हों, वार्षिक वेतन से अपनी प्रति घंटा दर जानना बेहद महत्वपूर्ण है। अमेरिका में, अधिकांश पूर्णकालिक पदों की गणना 2,080 घंटे के कार्य वर्ष (52 सप्ताहों के लिए प्रति सप्ताह 40 घंटे) के आधार पर की जाती है।</p> <strong>आयन्ज़ो वेतन कैलकुलेटर</strong> आपको हर आम समयावधि में आपकी कमाई का तुरंत ब्यौरा देता है।</p>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">2024 का अमेरिकी मानक कार्य वर्ष</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हमारा कैलकुलेटर सटीक परिणाम देने के लिए अमेरिकी मानक व्यावसायिक मापदंडों का उपयोग करता है:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>दैनिक:</strong> 8 घंटे के कार्यदिवस पर आधारित।</li>\n<li class=\"text-gray-600\"><strong>साप्ताहिक:</strong> 40 घंटे के कार्य पर आधारित।</li>\n<li class=\"text-gray-600\"><strong>द्वि-साप्ताहिक:</strong> अमेरिका में सबसे आम वेतन भुगतान दिवस (हर 2 सप्ताह में)।</li>\n<li class=\"text-gray-600\"><strong>मासिक:</strong> वार्षिक वेतन के 1/12वें भाग पर आधारित।</li>\n\n</ul>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">वेतन को प्रति घंटा में क्यों बदलें?</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">अपनी प्रति घंटा आय को समझना</p> यह मूल्य कई तरह से मददगार है:</p>\n\n<ol><strong>ओवरटाइम तुलना:</strong> यदि आप प्रति घंटा वेतन से वेतनभोगी नौकरी पर जा रहे हैं, तो आप देख सकते हैं कि नया वेतन वास्तव में अपेक्षित अतिरिक्त घंटों को कवर करता है या नहीं।</li>\n\n<li class=\"text-gray-600\">फ्रीलांस बेंचमार्किंग:</strong> यदि आप पूर्णकालिक नौकरी छोड़कर फ्रीलांसिंग करना चाहते हैं, तो यह आपको बताता है कि अपनी जीवनशैली बनाए रखने के लिए आपको न्यूनतम प्रति घंटा दर कितनी लेनी चाहिए।</li>\n\n<li class=\"text-gray-600\">छुट्टियों का प्रभाव:</strong> देखें कि सवैतनिक अवकाश और संघीय छुट्टियां आपकी प्रभावी आय को कैसे प्रभावित करती हैं।</li>\n\n</ol>\n</section>"
+            "content": "<section>\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">करियर प्लानिंग: अपनी वास्तविक प्रति घंटा मजदूरी को समझना</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">चाहे आप किसी नई नौकरी के प्रस्ताव पर बातचीत कर रहे हों या अपना व्यक्तिगत बजट बना रहे हों, वार्षिक वेतन से अपनी प्रति घंटा दर जानना बेहद महत्वपूर्ण है। अमेरिका में, अधिकांश पूर्णकालिक पदों की गणना 2,080 घंटे के कार्य वर्ष (52 सप्ताहों के लिए प्रति सप्ताह 40 घंटे) के आधार पर की जाती है।</p> <strong>आयन्ज़ो वेतन कैलकुलेटर</strong> आपको हर आम समयावधि में आपकी कमाई का तुरंत ब्यौरा देता है।</p>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">2024 का अमेरिकी मानक कार्य वर्ष</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हमारा कैलकुलेटर सटीक परिणाम देने के लिए अमेरिकी मानक व्यावसायिक मापदंडों का उपयोग करता है:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>दैनिक:</strong> 8 घंटे के कार्यदिवस पर आधारित।</li>\n<li class=\"text-gray-600\"><strong>साप्ताहिक:</strong> 40 घंटे के कार्य पर आधारित।</li>\n<li class=\"text-gray-600\"><strong>द्वि-साप्ताहिक:</strong> अमेरिका में सबसे आम वेतन भुगतान दिवस (हर 2 सप्ताह में)।</li>\n<li class=\"text-gray-600\"><strong>मासिक:</strong> वार्षिक वेतन के 1/12वें भाग पर आधारित।</li>\n\n</ul>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">वेतन को प्रति घंटा में क्यों बदलें?</h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">अपनी प्रति घंटा आय को समझना</p> यह मूल्य कई तरह से मददगार है:</p>\n\n<ol><strong>ओवरटाइम तुलना:</strong> यदि आप प्रति घंटा वेतन से वेतनभोगी नौकरी पर जा रहे हैं, तो आप देख सकते हैं कि नया वेतन वास्तव में अपेक्षित अतिरिक्त घंटों को कवर करता है या नहीं।</li>\n\n<li class=\"text-gray-600\">फ्रीलांस बेंचमार्किंग:</strong> यदि आप पूर्णकालिक नौकरी छोड़कर फ्रीलांसिंग करना चाहते हैं, तो यह आपको बताता है कि अपनी जीवनशैली बनाए रखने के लिए आपको न्यूनतम प्रति घंटा दर कितनी लेनी चाहिए।</li>\n\n<li class=\"text-gray-600\">छुट्टियों का प्रभाव:</strong> देखें कि सवैतनिक अवकाश और संघीय छुट्टियां आपकी प्रभावी आय को कैसे प्रभावित करती हैं।</li>\n\n</ol>\n</section>",
+            "name": "Salary to Hourly Calculator",
+            "description": "Convert your annual salary to hourly, weekly, and monthly rates."
         },
         "tip-calculator": {
-            "content": "बाहर खाना खाना तनावमुक्त होना चाहिए। लेकिन जब बिल आता है, तो बड़े समूह के लिए \"प्रतिशत गणना\" करना एक मुश्किल काम हो सकता है। <strong>आयन्ज़ो टिप कैलकुलेटर</strong> को गति और सटीकता के लिए डिज़ाइन किया गया है, जिससे आप कुछ ही सेकंड में बिल का भुगतान कर सकते हैं और अपनी शाम का आनंद ले सकते हैं।</p>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">अमेरिकी टिप देने का शिष्टाचार: कितना देना उचित है?</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हालांकि टिप देना स्वैच्छिक है, संयुक्त राज्य अमेरिका में सेवा के लिए कुछ मानक मानदंड हैं:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>15%</strong> अधिकांश अनौपचारिक स्थानों में पर्याप्त सेवा के लिए मानक टिप।</li>\n<li class=\"text-gray-600\"><strong>18%</strong> अच्छी सेवा के लिए आमतौर पर दी जाने वाली \"सुझाई गई\" टिप।</li>\n<li class=\"text-gray-600\"><strong>20%+</strong> उत्कृष्ट सेवा या उच्च स्तरीय भोजन और बड़े समूहों के लिए।</li>\n</ul>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">दोस्तों के साथ बिल बाँटें</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हमारी सबसे लोकप्रिय सुविधाओं में से एक है <strong>बिल स्प्लिटर</strong>।</p> बस अपने समूह में लोगों की संख्या दर्ज करें, और हमारा टूल आपको बताएगा कि प्रत्येक व्यक्ति को टिप सहित कितनी राशि देनी है। अब खाने की मेज पर हिसाब-किताब करने की झंझट नहीं!</p>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">100% मुफ़्त और मोबाइल के अनुकूल</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हमारा टूल मोबाइल ब्राउज़र के लिए अनुकूलित है, इसलिए आप इसे बिना कोई ऐप डाउनलोड किए सीधे रेस्टोरेंट में इस्तेमाल कर सकते हैं�� यह तेज़, सुरक्षित है और इसके लिए किसी पंजीकरण की आवश्यकता नहीं है। बस पेज खोलें, राशि दर्ज करें और शुरू करें।</p>"
+            "content": "बाहर खाना खाना तनावमुक्त होना चाहिए। लेकिन जब बिल आता है, तो बड़े समूह के लिए \"प्रतिशत गणना\" करना एक मुश्किल काम हो सकता है। <strong>आयन्ज़ो टिप कैलकुलेटर</strong> को गति और सटीकता के लिए डिज़ाइन किया गया है, जिससे आप कुछ ही सेकंड में बिल का भुगतान कर सकते हैं और अपनी शाम का आनंद ले सकते हैं।</p>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">अमेरिकी टिप देने का शिष्टाचार: कितना देना उचित है?</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हालांकि टिप देना स्वैच्छिक है, संयुक्त राज्य अमेरिका में सेवा के लिए कुछ मानक मानदंड हैं:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>15%</strong> अधिकांश अनौपचारिक स्थानों में पर्याप्त सेवा के लिए मानक टिप।</li>\n<li class=\"text-gray-600\"><strong>18%</strong> अच्छी सेवा के लिए आमतौर पर दी जाने वाली \"सुझाई गई\" टिप।</li>\n<li class=\"text-gray-600\"><strong>20%+</strong> उत्कृष्ट सेवा या उच्च स्तरीय भोजन और बड़े समूहों के लिए।</li>\n</ul>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">दोस्तों के साथ बिल बाँटें</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हमारी सबसे लोकप्रिय सुविधाओं में से एक है <strong>बिल स्प्लिटर</strong>।</p> बस अपने समूह में लोगों की संख्या दर्ज करें, और हमारा टूल आपको बताएगा कि प्रत्येक व्यक्ति को टिप सहित कितनी राशि देनी है। अब खाने की मेज पर हिसाब-किताब करने की झंझट नहीं!</p>\n\n<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">100% मुफ़्त और मोबाइल के अनुकूल</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">हमारा टूल मोबाइल ब्राउज़र के लिए अनुकूलित है, इसलिए आप इसे बिना कोई ऐप डाउनलोड किए सीधे रेस्टोरेंट में इस्तेमाल कर सकते हैं�� यह तेज़, सुरक्षित है और इसके लिए किसी पंजीकरण की आवश्यकता नहीं है। बस पेज खोलें, राशि दर्ज करें और शुरू करें।</p>",
+            "name": "Tip Calculator",
+            "description": "Quickly calculate the tip and split the bill among friends."
         },
         "double-underline-text": {
             "name": "दोहरी रेखांकित पाठ",
             "description": "सोशल मीडिया के लिए डबल अंडरलाइन वाला टेक्स्ट जेनरेट करें।",
             "seoTitle": "डबल अंडरलाइन टेक्स्ट का उपयोग मुफ्त में ऑनलाइन करें - डबल अंडरलाइन टेक्स्ट का उपयोग करें",
             "seoDescription": "ऑनलाइन डबल अंडरलाइन टेक्स्ट का मुफ्त उपयोग करें। तेज़ और सुरक्षित प्रोसेसिंग। लॉगिन की आवश्यकता नहीं, तेज़ और सुरक्षित। दैनिक कार्यों के लिए बिल्कुल उपयुक्त।",
-            "seoH1": "टेक्स्ट को दो बार अंडरलाइन करें (मुफ़्त): टेक्स्ट को दो बार अंडरलाइन करें"
+            "seoH1": "टेक्स्ट को दो बार अंडरलाइन करें (मुफ़्त): टेक्स्ट को दो बार अंडरलाइन करें",
+            "seoKeywords": "double-underline-text, free double underline text, double underline text tool"
         },
         "cursive-text": {
             "name": "कर्सिव टेक्स्ट जनरेटर",
             "description": "सोशल मीडिया के लिए कर्सिव/स्क्रिप्ट टेक्स्ट जनरेट करें।",
             "seoTitle": "कर्सिव टेक्स्ट जेनरेटर मुफ्त ऑनलाइन - कर्सिव टेक्स्ट जेनरेटर का उपयोग करें",
             "seoDescription": "कर्सिव टेक्स्ट जेनरेटर का ऑनलाइन मुफ्त उपयोग करें। तेज़ और सुरक्षित प्रोसेसिंग। लॉगिन की आवश्यकता नहीं, तेज़ और सुरक्षित। दैनिक कार्यों के लिए बिल्कुल उपयुक्त।",
-            "seoH1": "फ्री कर्सिव टेक्स्ट जेनरेटर: कर्सिव टेक्स्ट जेनरेटर का उपयोग करें"
+            "seoH1": "फ्री कर्सिव टेक्स्ट जेनरेटर: कर्सिव टेक्स्ट जेनरेटर का उपयोग करें",
+            "seoKeywords": "cursive-text, free cursive text generator, cursive text generator tool"
         },
         "currency-converter": {
             "name": "मुद्रा परिवर्तक",
             "description": "150 से अधिक विश्व मुद्राओं को वास्तविक समय की विनिमय दरों के साथ परिवर्तित करें।",
             "seoTitle": "फ्री ऑनलाइन करेंसी कन्वर्टर - रियल-टाइम एक्सचेंज रेट",
             "seoDescription": "ऑनलाइन मुद्रा विनिमय निःशुल्क। 150 से अधिक मुद्राओं के लिए वास्तविक समय विनिमय दरें। लॉगिन की आवश्यकता नहीं, तेज़ और सटीक। यात्रा और व्यवसाय के लिए बिल्कुल उपयुक्त।",
-            "seoH1": "फ्री करेंसी कन्वर्टर: रियल-टाइम एक्सचेंज रेट"
+            "seoH1": "फ्री करेंसी कन्वर्टर: रियल-टाइम एक्सचेंज रेट",
+            "seoKeywords": "currency converter free, exchange rate calculator, foreign exchange rates, convert money online, currency exchange tool"
         },
         "401k-retirement-calculator": {
             "name": "401k सेवानिवृत्ति कैलकुलेटर",
             "description": "अपने नियोक्ता द्वारा किए जाने वाले योगदान के साथ अपने 401k खाते की वृद्धि का अनुमान लगाकर अपनी सेवानिवृत्ति की योजना बनाएं।",
             "seoTitle": "401k रिटायरमेंट कैलकुलेटर - अमेरिका का नंबर 1 मुफ़्त वेल्थ प्लानर",
             "seoDescription": "अपनी सेवानिवृत्ति के समय अपने 401k बैलेंस की गणना करें। इसमें नियोक्ता द्वारा दी जाने वाली धनराशि, वेतन वृद्धि और चक्रवृद्धि ब्याज शामिल है। आज ही अपनी अमेरिकी सेवानिवृत्ति बचत की योजना बनाएं।",
-            "seoH1": "401k रिटायरमेंट कैलकुलेटर: अपने भविष्य की संपत्ति की योजना बनाएं"
+            "seoH1": "401k रिटायरमेंट कैलकुलेटर: अपने भविष्य की संपत्ति की योजना बनाएं",
+            "seoKeywords": "401k calculator, retirement planner, 401k match calculator, retirement savings estimator, us retirement tool",
+            "content": "<h2>401k Retirement Calculator: Secure Your Financial Future</h2><p>Your <strong>401k plan</strong> is one of the most powerful tools for building wealth in the United States. Thanks to tax-advantaged growth and <strong>employer matching</strong>, it can turn modest savings into a multi-million dollar nest egg.</p><h3>The Power of Employer Matching</h3><p>Many employers offer a match (e.g., 50% for every dollar you contribute up to 6%). This is literally <strong>free money</strong>. Our calculator helps you visualize how that match compounds over 20-40 years.</p>",
+            "faq": [
+                {
+                    "question": "Should I contribute more than my employer match?",
+                    "answer": "Yes, if you can afford it. Most experts recommend saving 15% of your income for retirement. The 401k match is just the starting point."
+                },
+                {
+                    "question": "What is a realistic 401k return rate?",
+                    "answer": "Historically, the S&P 500 has averaged 7-10% annually. For conservative planning, 6-8% is a safe estimate for long-term projections."
+                },
+                {
+                    "question": "Can I withdraw my 401k early?",
+                    "answer": "Withdrawing before age 59½ usually results in a 10% penalty plus income taxes. It's best to leave it for retirement unless it's a financial emergency."
+                },
+                {
+                    "question": "What is the 2024 401k contribution limit?",
+                    "answer": "For 2024, the 401k contribution limit is $23,000. If you are 50 or older, you can contribute an additional $7,500 as a catch-up contribution."
+                }
+            ]
         },
-        "image-format-converter": {},
-        "merge-pdf": {},
-        "split-pdf": {},
-        "json-to-typescript": {}
+        "image-format-converter": {
+            "name": "Image Format Converter",
+            "description": "Convert images between JPG, PNG, WebP, GIF, and BMP formats online for free."
+        },
+        "merge-pdf": {
+            "name": "Merge PDF",
+            "description": "Combine multiple PDF files into a single document."
+        },
+        "split-pdf": {
+            "name": "Split PDF",
+            "description": "Split a PDF file into multiple separate documents."
+        },
+        "json-to-typescript": {
+            "name": "JSON to TypeScript",
+            "description": "Convert JSON objects to TypeScript interfaces automatically."
+        }
     },
     "Common": {
         "backToTools": "टूल्स पर वापस",
@@ -4026,7 +4073,8 @@
         "reset": "रीसेट",
         "shareThisTool": "यह टूल शेयर करें",
         "copyLink": "लिंक कॉपी करें",
-        "faqTitle": "सामान्यतः पूछे जाने वाले प्रश्न (FAQ)"
+        "faqTitle": "सामान्यतः पूछे जाने वाले प्रश्न (FAQ)",
+        "pleaseWait": "कृपया प्रतीक्षा करें..."
     },
     "NavbarCategories": {
         "Image Tools": "इमेज टूल्स",
@@ -4089,7 +4137,17 @@
         "strikethrough": "स्ट्राइकथ्रू",
         "sortAZ": "A-Z सॉर्ट",
         "removeDuplicates": "डुप्लिकेट हटाएँ",
-        "textTool": "टेक्स्ट टूल"
+        "textTool": "टेक्स्ट टूल",
+        "boldText": "बोल्ड टेक्स्ट",
+        "cursiveText": "कर्सिव टेक्स्ट",
+        "doubleUnderline": "डबल अंडरलाइन",
+        "uppercaseShort": "बड़ा",
+        "lowercaseShort": "छोटा",
+        "titleCaseShort": "शीर्षक",
+        "sentenceCaseShort": "वाक्य",
+        "cleanSpacesShort": "साफ़",
+        "removeLineBreaksShort": "लाइनें",
+        "reverseTextShort": "उल्टा"
     },
     "YouTubeTools": {
         "analyze": "विश्लेषण करें",
@@ -4135,7 +4193,7 @@
         "multiLanguage": "बहु-भाषा सहायता",
         "privacy": "प्राइवेसी",
         "supportProject": "प्रोजेक्ट को सपोर्ट करें",
-        "buyMeACoffee": "Buy me a coffee"
+        "buyMeACoffee": "मुझे एक कॉफी पिलाएँ"
     },
     "Share": {
         "shareThisTool": "यह टूल शेयर करें",
@@ -4159,7 +4217,10 @@
         "clearAll": "सब साफ करें",
         "filesSelected": "{count} फाइलें चुनी गई",
         "pasteBase64": "Base64 पेस्ट करें",
-        "batchReady": "बैच तैयार"
+        "batchReady": "बैच तैयार",
+        "runTool": "प्रोसेस करें",
+        "download": "डाउनलोड",
+        "convert": "कन्वर्ट करें"
     },
     "CalculatorNav": {
         "finance": "वित्त",
@@ -4189,7 +4250,10 @@
         "pregnancy": "गर्भावस्था",
         "macros": "मैक्रोज़",
         "idealWeight": "आदर्श वजन",
-        "percentage": "प्रतिशत"
+        "percentage": "प्रतिशत",
+        "salary": "सैलरी से प्रति घंटा",
+        "tip": "टिप कैलकुलेटर",
+        "gpa": "जीपीए कैलकुलेटर"
     },
     "WebNav": {
         "metaOptimisation": "Meta & Optimization",
@@ -4358,5 +4422,80 @@
         "section2Text": "व्यक्तिगत और व्यावसायिक उद्देश्यों के लिए हमारे ऑनलाइन टूल का उपयोग करने की अनुमति है। अधिकांश टूल के लिए सभी प्रसंस्करण आपके ब्राउज़र में होता है, जिससे गोपनीयता सुनिश्चित होती है।",
         "section3Title": "3. डिस्क्लेमर",
         "section3Text": "इस वेबसाइट की सामग्री 'जैसा है' के आधार पर प्रदान की जाती है। हम कोई वारंटी नहीं देते हैं और अन्य सभी वारंटी को अस्वीकार करते हैं।"
+    },
+    "CurrencyConverter": {
+        "from": "से",
+        "to": "तक",
+        "amountPlaceholder": "राशि दर्ज करें",
+        "exchangeRate": "विनिमय दर",
+        "refresh": "रिफ्रेश करें",
+        "lastUpdated": "अंतिम अपडेट: {time}",
+        "errorUnavailable": "विनिमय दर उपलब्ध नहीं है",
+        "errorFetch": "विनिमय दर प्राप्त करने में विफल"
+    },
+    "TextToolContent": {
+        "word-counter": {
+            "title": "Free Online Word Counter & Character Count Tool",
+            "intro": "Our **Word Counter** is a free, real-time tool to count words, characters, sentences, and paragraphs. Perfect for writers, students, and professionals who need to check their text length instantly.",
+            "howToUseTitle": "How to Use the Word Count Calculator",
+            "howToUseSteps": [
+                "Paste or type your text into the input box.",
+                "The tool will automatically calculate the word count and character count.",
+                "Check detailed metrics like sentence count, paragraph count, and reading time.",
+                "Use the 'Copy' or 'Download' buttons to save your work."
+            ],
+            "featuresTitle": "Key Features of Our Word Counter Checker",
+            "features": [
+                "**Instant Calculation:** Results appear immediately as you type.",
+                "**Essay Word Counter:** Ideal for checking essay length requirements.",
+                "**Character Counter:** Includes spaces and excludes spaces for precise limits (like Twitter/X).",
+                "**100% Free & Secure:** No login required, and your text is processed locally in your browser."
+            ],
+            "faqTitle": "Common Questions (FAQ)",
+            "faq": [
+                {
+                    "q": "How many words is this text?",
+                    "a": "Simply paste your text above, and our tool will tell you exactly how many words, characters, and sentences it contains."
+                },
+                {
+                    "q": "Is this word counter free?",
+                    "a": "Yes, our word counter is completely free to use online with no limits."
+                },
+                {
+                    "q": "Can I use this for essays?",
+                    "a": "Absolutely! This tool is perfect as an essay word counter to ensure you meet your assignment's word count requirements."
+                }
+            ]
+        }
+    },
+    "ImageGroups": {
+        "image-optimize": "ऑप्टिमाइज़",
+        "image-convert": "कन्वर्ट",
+        "image-edit": "एडिट",
+        "image-effects": "फिल्टर",
+        "image-dev": "Base64",
+        "pdf-convert": "PDF कन्वर्ट",
+        "pdf-edit": "PDF एडिट",
+        "text-analyze": "विश्लेषण",
+        "text-edit": "एडिट",
+        "text-style": "स्टाइल",
+        "dev-format": "फॉर्मेट",
+        "dev-tool": "टूल्स",
+        "dev-convert": "कन्वर्ट",
+        "dev-optimize": "ऑप्टिमाइज़",
+        "conv-unit": "इकाइयाँ",
+        "conv-curr": "मुद्रा",
+        "conv-color": "रंग",
+        "conv-data": "डेटा",
+        "util-rand": "रैंडम",
+        "util-gen": "जनरेटर्स",
+        "util-net": "नेटवर्क और वेब",
+        "sec-gen": "सुरक्षा",
+        "yt-tool": "YouTube",
+        "seo-gen": "SEO जनरेटर्स",
+        "seo-keyword": "कीवर्ड",
+        "social-gen": "सोशल और लिंक",
+        "calc-util": "स्वास्थ्य और जानकारी",
+        "calc-math": "वित्त और गणित"
     }
 }

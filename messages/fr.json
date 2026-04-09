@@ -2314,7 +2314,9 @@
                 }
             ],
             "seoTitle": "Regex Tester - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required. Gratuit, rapide et sécurisé. Sans inscription."
+            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required. Gratuit, rapide et sécurisé. Sans inscription.",
+            "name": "Regex Tester",
+            "description": "Test regular expressions against text."
         },
         "reverse-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">Renversez votre communication avec notre <strong>Outil de texte inversé en ligne</strong>. Que vous souhaitiez créer une bio unique pour les réseaux sociaux, écrire des messages codés pour un puzzle ou simplement voir vos mots sous un autre angle, notre moteur d'inversion de caractères vous offre des résultats instantanés. C'est un outil ludique et léger, conçu pour l'expression créative et les jeux numériques.</p>\n\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Bien plus que de l'écriture à l'envers</h2>\n\n<p class=\"mb-4 leading-relaxed text-gray-700\">Inverser un texte consiste à prendre une suite de caractères et à les réorganiser dans l'ordre inverse. Bien que cela paraisse simple, cette technique peut servir à de nombreuses fins, de la création de textes en miroir pour des projets artistiques à la génération de codes simples pour des escape games ou des jeux en ligne. Notre outil gère les symboles, les espaces et les entrées multilignes avec une fidélité parfaite.</p>\n\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Fonctionnalités de l'outil</h2>\n\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Inversion au niveau des caractères :</strong> Chaque lettre, espace et signe de ponctuation est inversé pour un véritable effet d'inversion.</li>\n\n<li class=\"text-gray-600\"><strong>Options au niveau des phrases :</strong> Inversez facilement l'ordre de phrases entières tout en conservant la lisibilité des mots.</li>\n\n<li class=\"text-gray-600\"><strong>Affichage miroir instantané :</strong> Observez la transformation de votre texte pendant que vous tapez, sans aucun décalage et sans avoir besoin d'actualiser la page.</li>\n\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Confidentialité locale garantie à 100 %</h2>\n\n<p class=\"mb-4 leading-relaxed text-gray-700\">Vos messages vous appartiennent. Aynzo Tools traite toutes les inversions de texte <strong>directement sur votre ordinateur</strong> à l'aide de JavaScript. Nous ne téléchargeons jamais votre texte sur nos serveurs, ce qui garantit que vos messages secrets, vos blagues amusantes et vos petits textes créatifs restent 100 % privés et sécurisés en permanence.",
@@ -2329,7 +2331,9 @@
                 }
             ],
             "seoTitle": "Reverse Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required. Gratuit, rapide et sécurisé. Sans inscription."
+            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required. Gratuit, rapide et sécurisé. Sans inscription.",
+            "name": "Reverse Text Generator",
+            "description": "Reverse your text, flip it, or reverse words."
         },
         "bold-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">Mettez vos messages en valeur grâce à notre <strong>Générateur de texte en gras</strong> ! Cet outil en ligne gratuit convertit votre texte normal en caractères Unicode gras, utilisables sur diverses plateformes de médias sociaux, applications de messagerie et sites web. Idéal pour souligner vos idées, créer des titres percutants ou ajouter une touche d'originalité à vos profils.</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">Comment ça marche ?</h3> </h3>\n\n<p class=\"mb-4 leading-relaxed text-gray-700\">Contrairement aux balises de gras HTML traditionnelles (<code>&lt;b&gt;</code> ou <code>&lt;strong&gt;</code>), notre générateur utilise des caractères Unicode spéciaux qui apparaissent visuellement en gras. Comme il s'agit de véritables caractères, ils peuvent être collés dans presque tous les champs de texte, y compris les biographies, les commentaires et les messages de chat sur les réseaux sociaux, où la mise en forme HTML n'est pas prise en charge.</p>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\"> Fonctionnalités clés </h3>\n\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Compatibilité universelle :</strong> Fonctionne sur Instagram, Facebook, Twitter, WhatsApp et plus encore.</li>\n\n<li class=\"text-gray-600\"><strong>Conversion instantanée :</strong> Saisissez ou collez votre texte et voyez-le transformé instantanément.</li>\n\n<li class=\"text-gray-600\"><strong>Plusieurs styles de gras :</strong> Explorez différentes polices et styles de gras (par exemple, gras serif, gras sans-serif).</li>\n\n<li class=\"text-gray-600\"><strong>Copier-coller :</strong> Copiez facilement le texte en gras généré. Un seul clic.</li >\n</ul>\n\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\"> Utilisations créatives du texte en gras </h3>\n\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Biographies sur les réseaux sociaux :</strong> Mettez en valeur les informations clés dans votre bio Instagram ou TikTok.</li >\n\n<li class=\"text-gray-600\"><strong>Mise en valeur des publications :</strong> Faites ressortir les parties importantes de vos légendes ou tweets.</li >\n\n<li class=\"text-gray-600\"><strong>Titres :</strong> Créez des titres percutants pour votre contenu en ligne.</li >\n\n<li class=\"text-gray-600\"><strong>Messagerie :</strong> Ajoutez de l'emphase à vos messages dans les applications de chat.</li >\n</ul>",
@@ -2344,7 +2348,11 @@
                 }
             ],
             "seoTitle": "Bold Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required. Gratuit, rapide et sécurisé. Sans inscription."
+            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required. Gratuit, rapide et sécurisé. Sans inscription.",
+            "name": "Bold Text Generator",
+            "description": "Generate bold text using unicode characters.",
+            "seoKeywords": "bold text generator, heavy font generator, bold unicode text, thick text online, bold font for instagram, 𝗯𝗼𝗹𝗱 𝘁𝗲𝘅𝘁",
+            "seoH1": "Bold Text Generator: Stand Out with Heavy Fonts"
         },
         "word-to-pdf": {
             "content": "Dans le monde professionnel, le passage du brouillon au document final implique souvent une conversion au format PDF. Si Microsoft Word est la norme mondiale pour la <em>création</em> de contenu, le PDF (Portable Document Format) est la référence pour sa <em>distribution</em>. Le convertisseur <strong>Aynzo <strong>Word to PDF</strong> Converter</strong> est conçu pour combler cet écart avec une précision au pixel près, garantissant ainsi que votre travail s'affiche exactement comme prévu sur tous les appareils.\n\nL'avantage professionnel : Pourquoi convertir Word en PDF ?\n\nLes documents partagés au format Word sont sujets aux décalages de mise en page, aux polices manquantes et aux modifications accidentelles. En choisissant de <strong>convertir Word en PDF en ligne</strong>, vous préservez votre mise en page. Que vous soyez étudiant soumettant une thèse, freelance envoyant une facture ou cadre dirigeant distribuant un rapport, le PDF offre un niveau de professionnalisme inégalé par les formats modifiables bruts.</p>\n\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Préservation de la mise en forme inégalée</h2>\n\n<p class=\"mb-4 leading-relaxed text-gray-700\"> Le reproche le plus fréquent concernant les convertisseurs gratuits est qu'ils « détériorent » le document : les tableaux se déplacent, les images se chevauchent et les polices personnalisées disparaissent. Notre outil utilise une logique de rendu avancée qui reproduit la façon dont Microsoft Office gère les mises en page. Nous prenons en charge :</p>\n\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Mises en page complexes :</strong> Les rapports à plusieurs colonnes, les en-têtes et les pieds de page sont préservés à 100 %.</li>\n\n<li class=\"text-gray-600\"><strong>Éléments dynamiques :</strong> Les hyperliens, la table des matières et les métadonnées restent fonctionnels dans le PDF exporté.</li>\n\n<li class=\"text-gray-600\"><strong>Médias intégrés :</strong> Les images et les graphiques haute résolution sont convertis sans perte de netteté.</li> >\n\n<li class=\"text-gray-600\"><strong>Intégrité des polices :</strong> Nous gérons les polices système standard et courantes pour garantir la cohérence de votre typographie.</li >\n</ul>\n\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Sécurité et confidentialité : Vos documents sont protégés</h2>\n\n<p class=\"mb-4 leading-relaxed text-gray-700\"> La sécurité de vos documents est notre priorité absolue. Contrairement à de nombreux outils en ligne « gratuits » qui stockent vos données sensibles à des fins de formation ou de publicité, <strong>Aynzo Tools</strong> privilégie votre confidentialité. Tout le traitement est effectué dans un environnement temporaire et chiffré. Vos fichiers sont automatiquement supprimés immédiatement après la conversion. Nous ne suivons pas le contenu de vos documents et ne demandons aucune inscription par e-mail, préservant ainsi votre anonymat.</p >\n\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Optimisé pour la vitesse : Conversion de Word en PDF en quelques secondes</h2>\n\n<p class=\"mb-4 leading-relaxed text-gray-700\"> Le temps est précieux. Nous avons optimisé notre moteur côté serveur pour traiter même les documents volumineux et riches en images (jusqu’à 50 Mo) en quelques secondes seulement. Cela en fait l'outil idéal pour les utilisateurs intensifs qui ont besoin d'un convertisseur Word vers PDF rapide, sans la lourdeur des logiciels de bureau traditionnels.\n\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> Compatibilité étendue : prise en charge des formats .DOC et .DOCX </h2>\n\n<p class=\"mb-4 leading-relaxed text-gray-700\"> Que vous travailliez avec d'anciens documents Word 97-2003 (.doc) ou des fichiers XML modernes (.docx), notre générateur les gère tous deux facilement. Cette rétrocompatibilité garantit que même vos archives les plus anciennes peuvent être converties au format PDF moderne sans problème de compatibilité.</p>\n\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> Comment utiliser l'outil Aynzo Word vers PDF </h2>\n\n<ol>\n<li class=\"text-gray-600\"><strong>Sélectionnez votre fichier :</strong> Cliquez sur la zone de téléchargement ou glissez-déposez votre fichier Word dans la zone de l'outil.</li >\n\n<li class=\"text-gray-600\"><strong>Attendez la conversion :</strong> Notre moteur lancera immédiatement le processus de rendu haute vitesse.</li >\n\n<li class=\"text-gray-600\"><strong>Téléchargez le résultat :</strong> Cliquez simplement sur le bouton « Télécharger » pour enregistrer votre PDF professionnel sur votre ordinateur ou appareil mobile.</li >\n\n</ol>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> Pourquoi choisir Aynzo plutôt qu'un logiciel de bureau ?</h2>\n\n<p class=\"mb-4 leading-relaxed text-gray-700\"> Les logiciels comme Adobe Acrobat sont puissants, mais coûteux et gourmands en ressources. Pour 99 % des tâches documentaires quotidiennes, un générateur Word vers PDF en ligne léger est plus efficace. Aucun logiciel à installer, aucune mise à jour à gérer et aucun abonnement mensuel. Il fonctionne sous Windows, macOS, Linux, et même sur les navigateurs mobiles Android et iOS.",
@@ -2359,7 +2367,11 @@
                 }
             ],
             "seoTitle": "Word To Pdf - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Word To Pdf tool. Fast, secure, and easy to use. No login required. Gratuit, rapide et sécurisé. Sans inscription."
+            "seoDescription": "Use our free online Word To Pdf tool. Fast, secure, and easy to use. No login required. Gratuit, rapide et sécurisé. Sans inscription.",
+            "name": "Word to PDF",
+            "description": "Convert Microsoft Word (DOC/DOCX) documents to PDF format.",
+            "seoKeywords": "word to pdf converter free, convert word to pdf online, doc to pdf converter free, docx to pdf online, free word to pdf no signup",
+            "seoH1": "Word to PDF Free: Convert Word DOC/DOCX to PDF"
         },
         "seo-score-checker": {
             "content": "< p > Stop guessing why your website isn't ranking. Our **Live <strong>SEO Score Checker</strong>**doesn't just pretend to analyze your site—it actually fetches your live code in real - time.Unlike generic tools that give random numbers, we parse your HTML structure to find the ** exact technical flaws ** holding you back.</p>\n< h3 > How Our Real - Time Scanner Works </h3>\n< p > When you enter a URL, our advanced crawler connects to your website instantly.It reads the public HTML just like Googlebot does, checking for: </p>\n< ul >\n<li class=\"text-gray-600\">** Title & Meta Tags:** We verify if they exist and if they are the perfect length for search snippets.</li>\n<li class=\"text-gray-600\"> ** Header Hiearchy:** We scan your H1, H2, and H3 tags to ensure your content structure is semantic and readable.</li>\n<li class=\"text-gray-600\"> ** Image Accessibility:** We count every image and flag the ones missing 'alt' text, which hurts your accessibility and image search ranking.</li>\n<li class=\"text-gray-600\"> ** Internal & External Links:** We count valid links to judge the crawlability of your page.</li>\n</ul>\n< h3 > Why a 'Real' Score Matters </h3>\n< p > Many free tools simulate results.We don't. If you fix an issue and run the scan again,**you will see your score increase immediately**. This direct feedback loop allows developers and marketers to:</p>\n< ul >\n<li class=\"text-gray-600\">Validate fixes instantly after deploying code.</li>\n< li > Audit competitor pages to see their real metadata strengths.</li>\n< li > Generate accurate reports for clients based on actual page data.</li>\n</ul>\n< h3 > Actionable \"Fix-It\" List </h3>\n< p > We don't just give you a number. We provide a checklist of **Failed**vs**Passed** tests. If your Meta Description is too short, we tell you. If your H1 is missing, we alert you. This tool is your personal SEO assistant, working 24/7 for free.</p>",
@@ -3093,17 +3105,85 @@
             ],
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Cron Job?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A cron job is a scheduled task in Unix/Linux systems that runs automatically at specified intervals. Defined in the <em>crontab</em> (cron table) file, they're used for automated backups, report generation, database maintenance, API calls, and server monitoring.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Cron Expression Format</h3><p class=\"mb-4 leading-relaxed text-gray-700\">A cron expression has 5 fields: <code>MINUTE HOUR DAY MONTH WEEKDAY</code>. Each field accepts specific values and wildcards:</p><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\"><code>*</code> — any value (every minute, every hour, etc.)</li><li class=\"text-gray-600\"><code>*/n</code> — every n units (*/5 = every 5 minutes)</li><li class=\"text-gray-600\"><code>a,b</code> — multiple values (1,15 = 1st and 15th)</li><li class=\"text-gray-600\"><code>a-b</code> — range (1-5 = Monday through Friday)</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Cron Job Use Cases</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">0 0 * * * — Daily backup at midnight</li><li class=\"text-gray-600\">*/5 * * * * — API health check every 5 minutes</li><li class=\"text-gray-600\">0 9 * * 1-5 — Daily report email every weekday at 9am</li><li class=\"text-gray-600\">0 0 1 * * — Monthly invoice generation</li></ul>"
         },
-        "double-underline-text": {},
-        "cursive-text": {},
-        "currency-converter": {},
-        "401k-retirement-calculator": {},
-        "image-format-converter": {},
-        "merge-pdf": {},
-        "split-pdf": {},
-        "gpa-calculator": {},
-        "salary-calculator": {},
-        "tip-calculator": {},
-        "json-to-typescript": {}
+        "double-underline-text": {
+            "name": "Double Underline Text",
+            "description": "Generate double underlined text for social media.",
+            "seoTitle": "Double Underline Text Free Online - Use Double Underline Text",
+            "seoDescription": "Use Double Underline Text online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
+            "seoKeywords": "double-underline-text, free double underline text, double underline text tool",
+            "seoH1": "Double Underline Text Free: Use Double Underline Text"
+        },
+        "cursive-text": {
+            "name": "Cursive Text Generator",
+            "description": "Generate cursive / script text for social media.",
+            "seoTitle": "Cursive Text Generator Free Online - Use Cursive Text Generator",
+            "seoDescription": "Use Cursive Text Generator online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
+            "seoKeywords": "cursive-text, free cursive text generator, cursive text generator tool",
+            "seoH1": "Cursive Text Generator Free: Use Cursive Text Generator"
+        },
+        "currency-converter": {
+            "name": "Currency Converter",
+            "description": "Convert between different currencies with live rates.",
+            "seoTitle": "Currency Converter Free Online - Real-time Exchange Rates",
+            "seoDescription": "Convert currencies online free. Real-time exchange rates for 150+ currencies. No login, fast, accurate. Perfect for travel and business.",
+            "seoKeywords": "currency converter free, exchange rate calculator, foreign exchange rates, convert money online, currency exchange tool",
+            "seoH1": "Currency Converter Free: Real-time Exchange Rates"
+        },
+        "401k-retirement-calculator": {
+            "name": "401k Retirement Calculator",
+            "description": "Plan your retirement by estimating your 401k growth with employer matching.",
+            "seoTitle": "401k Retirement Calculator - #1 Free US Wealth Planner",
+            "seoDescription": "Calculate your 401k balance at retirement. Includes employer matching, salary increases, and compound growth. Plan your US retirement savings today.",
+            "seoKeywords": "401k calculator, retirement planner, 401k match calculator, retirement savings estimator, us retirement tool",
+            "seoH1": "401k Retirement Calculator: Plan Your Future Wealth",
+            "content": "<h2>401k Retirement Calculator: Secure Your Financial Future</h2><p>Your <strong>401k plan</strong> is one of the most powerful tools for building wealth in the United States. Thanks to tax-advantaged growth and <strong>employer matching</strong>, it can turn modest savings into a multi-million dollar nest egg.</p><h3>The Power of Employer Matching</h3><p>Many employers offer a match (e.g., 50% for every dollar you contribute up to 6%). This is literally <strong>free money</strong>. Our calculator helps you visualize how that match compounds over 20-40 years.</p>",
+            "faq": [
+                {
+                    "question": "Should I contribute more than my employer match?",
+                    "answer": "Yes, if you can afford it. Most experts recommend saving 15% of your income for retirement. The 401k match is just the starting point."
+                },
+                {
+                    "question": "What is a realistic 401k return rate?",
+                    "answer": "Historically, the S&P 500 has averaged 7-10% annually. For conservative planning, 6-8% is a safe estimate for long-term projections."
+                },
+                {
+                    "question": "Can I withdraw my 401k early?",
+                    "answer": "Withdrawing before age 59½ usually results in a 10% penalty plus income taxes. It's best to leave it for retirement unless it's a financial emergency."
+                },
+                {
+                    "question": "What is the 2024 401k contribution limit?",
+                    "answer": "For 2024, the 401k contribution limit is $23,000. If you are 50 or older, you can contribute an additional $7,500 as a catch-up contribution."
+                }
+            ]
+        },
+        "image-format-converter": {
+            "name": "Image Format Converter",
+            "description": "Convert images between JPG, PNG, WebP, GIF, and BMP formats online for free."
+        },
+        "merge-pdf": {
+            "name": "Merge PDF",
+            "description": "Combine multiple PDF files into a single document."
+        },
+        "split-pdf": {
+            "name": "Split PDF",
+            "description": "Split a PDF file into multiple separate documents."
+        },
+        "gpa-calculator": {
+            "name": "GPA Calculator",
+            "description": "Calculate your college or high school GPA based on grades and credits."
+        },
+        "salary-calculator": {
+            "name": "Salary to Hourly Calculator",
+            "description": "Convert your annual salary to hourly, weekly, and monthly rates."
+        },
+        "tip-calculator": {
+            "name": "Tip Calculator",
+            "description": "Quickly calculate the tip and split the bill among friends."
+        },
+        "json-to-typescript": {
+            "name": "JSON to TypeScript",
+            "description": "Convert JSON objects to TypeScript interfaces automatically."
+        }
     },
     "Common": {
         "backToTools": "Retour aux outils",
@@ -3156,7 +3236,8 @@
         "reset": "Réinitialiser",
         "shareThisTool": "Partager cet outil",
         "copyLink": "Copier le lien",
-        "faqTitle": "Foire aux questions (FAQ)"
+        "faqTitle": "Foire aux questions (FAQ)",
+        "pleaseWait": "Veuillez patienter..."
     },
     "NavbarCategories": {
         "Image Tools": "Outils Image",
@@ -3219,7 +3300,17 @@
         "strikethrough": "Barré",
         "sortAZ": "Trier A-Z",
         "removeDuplicates": "Supprimer les doublons",
-        "textTool": "Outil texte"
+        "textTool": "Outil texte",
+        "boldText": "Bold Text",
+        "cursiveText": "Cursive Text",
+        "doubleUnderline": "Double Underline",
+        "uppercaseShort": "UPPER",
+        "lowercaseShort": "lower",
+        "titleCaseShort": "Title",
+        "sentenceCaseShort": "Sentence",
+        "cleanSpacesShort": "Clean",
+        "removeLineBreaksShort": "Breaks",
+        "reverseTextShort": "Rev"
     },
     "YouTubeTools": {
         "analyze": "Analyser",
@@ -3261,7 +3352,11 @@
         "ourMission": "Notre mission",
         "missionStatement": "Outils en ligne gratuits, rapides et privés pour tous — sans pub ni suivi.",
         "securePrivate": "Sûr & Privé",
-        "allRightsReserved": "Tous droits réservés."
+        "allRightsReserved": "Tous droits réservés.",
+        "multiLanguage": "Multi-language Support",
+        "privacy": "Privacy",
+        "supportProject": "Support Project",
+        "buyMeACoffee": "Offrez-moi un café"
     },
     "Share": {
         "shareThisTool": "Partager cet outil",
@@ -3285,7 +3380,10 @@
         "clearAll": "Tout effacer",
         "filesSelected": "{count} fichiers sélectionnés",
         "pasteBase64": "Coller Base64",
-        "batchReady": "Lot prêt"
+        "batchReady": "Lot prêt",
+        "runTool": "Traiter",
+        "download": "Télécharger",
+        "convert": "Convertir"
     },
     "CalculatorNav": {
         "finance": "Finance",
@@ -3315,7 +3413,10 @@
         "pregnancy": "Grossesse",
         "macros": "Macros",
         "idealWeight": "Poids Idéal",
-        "percentage": "Pourcentage"
+        "percentage": "Pourcentage",
+        "salary": "Salaire en taux horaire",
+        "tip": "Calculateur de pourboire",
+        "gpa": "Calculateur de GPA"
     },
     "WebNav": {
         "metaOptimisation": "Meta & Optimization",
@@ -3496,6 +3597,86 @@
         "pdf": "Outils de gestion PDF de qualité entreprise pour fusionner.",
         "text": "Utilitaires de texte avancés pour le formatage.",
         "developer": "Outils de développement essentiels pour l embellissement du code.",
-        "seo": "Outils SEO et réseaux sociaux performants."
+        "seo": "Outils SEO et réseaux sociaux performants.",
+        "security": "Outils cryptographiques sécurisés pour le hachage, les mots de passe et le chiffrement des données.",
+        "converter": "Convertisseurs précis d’unités et de données pour les flux professionnels et académiques.",
+        "utility": "Outils utilitaires quotidiens conçus pour simplifier votre vie numérique.",
+        "calculator": "Calculatrices financières et mathématiques intelligentes pour des résultats instantanés.",
+        "youtube": "Outils YouTube dédiés aux créateurs pour télécharger des miniatures et générer des tags."
+    },
+    "CurrencyConverter": {
+        "from": "De",
+        "to": "Vers",
+        "amountPlaceholder": "Entrez le montant",
+        "exchangeRate": "Taux de change",
+        "refresh": "Actualiser",
+        "lastUpdated": "Dernière mise à jour : {time}",
+        "errorUnavailable": "Taux de change indisponible",
+        "errorFetch": "Échec de récupération du taux de change"
+    },
+    "TextToolContent": {
+        "word-counter": {
+            "title": "Free Online Word Counter & Character Count Tool",
+            "intro": "Our **Word Counter** is a free, real-time tool to count words, characters, sentences, and paragraphs. Perfect for writers, students, and professionals who need to check their text length instantly.",
+            "howToUseTitle": "How to Use the Word Count Calculator",
+            "howToUseSteps": [
+                "Paste or type your text into the input box.",
+                "The tool will automatically calculate the word count and character count.",
+                "Check detailed metrics like sentence count, paragraph count, and reading time.",
+                "Use the 'Copy' or 'Download' buttons to save your work."
+            ],
+            "featuresTitle": "Key Features of Our Word Counter Checker",
+            "features": [
+                "**Instant Calculation:** Results appear immediately as you type.",
+                "**Essay Word Counter:** Ideal for checking essay length requirements.",
+                "**Character Counter:** Includes spaces and excludes spaces for precise limits (like Twitter/X).",
+                "**100% Free & Secure:** No login required, and your text is processed locally in your browser."
+            ],
+            "faqTitle": "Common Questions (FAQ)",
+            "faq": [
+                {
+                    "q": "How many words is this text?",
+                    "a": "Simply paste your text above, and our tool will tell you exactly how many words, characters, and sentences it contains."
+                },
+                {
+                    "q": "Is this word counter free?",
+                    "a": "Yes, our word counter is completely free to use online with no limits."
+                },
+                {
+                    "q": "Can I use this for essays?",
+                    "a": "Absolutely! This tool is perfect as an essay word counter to ensure you meet your assignment's word count requirements."
+                }
+            ]
+        }
+    },
+    "ImageGroups": {
+        "image-optimize": "Optimiser",
+        "image-convert": "Convertir",
+        "image-edit": "Modifier",
+        "image-effects": "Filtres",
+        "image-dev": "Base64",
+        "pdf-convert": "Convertir PDF",
+        "pdf-edit": "Éditer PDF",
+        "text-analyze": "Analyser",
+        "text-edit": "Modifier",
+        "text-style": "Style",
+        "dev-format": "Formater",
+        "dev-tool": "Outils",
+        "dev-convert": "Convertir",
+        "dev-optimize": "Optimiser",
+        "conv-unit": "Unités",
+        "conv-curr": "Devise",
+        "conv-color": "Couleurs",
+        "conv-data": "Données",
+        "util-rand": "Aléatoire",
+        "util-gen": "Générateurs",
+        "util-net": "Réseau et Web",
+        "sec-gen": "Sécurité",
+        "yt-tool": "YouTube",
+        "seo-gen": "Générateurs SEO",
+        "seo-keyword": "Mots-clés",
+        "social-gen": "Social & Liens",
+        "calc-util": "Santé & Infos",
+        "calc-math": "Finance & Mathématiques"
     }
 }

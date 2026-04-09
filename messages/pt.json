@@ -2314,7 +2314,9 @@
                 }
             ],
             "seoTitle": "Regex Tester - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required. Grátis, rápido e seguro. Sem cadastro."
+            "seoDescription": "Use our free online Regex Tester tool. Fast, secure, and easy to use. No login required. Grátis, rápido e seguro. Sem cadastro.",
+            "name": "Regex Tester",
+            "description": "Test regular expressions against text."
         },
         "reverse-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">Inverta sua comunicação com nossa <strong>Ferramenta Online de Inversão de Texto</strong>. Seja para criar uma biografia exclusiva para redes sociais, escrever mensagens codificadas para um quebra-cabeça ou simplesmente ver suas palavras de uma perspectiva diferente, nosso mecanismo de inversão de caracteres oferece resultados instantâneos. É um utilitário divertido e leve, projetado para expressão criativa e jogos digitais.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Mais do que apenas escrever ao contrário</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Inverter um texto envolve pegar uma sequência de caracteres e reorganizá-los exatamente na ordem inversa. Embora pareça simples, pode ser usado para tudo, desde criar texto espelhado para projetos artísticos até gerar cifras simples para salas de fuga ou jogos online. Nossa ferramenta lida com símbolos, espaços em branco e entradas de várias linhas com fidelidade perfeita.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Recursos da Ferramenta</h2>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Inversão em Nível de Caractere:</strong> Cada letra, espaço e sinal de pontuação é invertido para um verdadeiro efeito de inversão.</li>\n<li class=\"text-gray-600\"><strong>Opções em Nível de Frase:</strong> Inverta facilmente a ordem de frases inteiras, mantendo as palavras legíveis.</li>\n<li class=\"text-gray-600\"><strong>Saída Espelhada Instantânea:</strong> Veja seu texto se transformar enquanto você digita, sem atrasos e sem a necessidade de atualizar a página.</li>\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Privacidade Local Total</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Suas mensagens são exclusivamente suas. O Aynzo Tools processa todas as inversões de texto <strong>diretamente no seu computador</strong> usando JavaScript. Nunca enviamos seu texto para nossos servidores, garantindo que suas mensagens secretas, piadas divertidas e trechos criativos permaneçam 100% privados e seguros o tempo todo.",
@@ -2329,7 +2331,9 @@
                 }
             ],
             "seoTitle": "Reverse Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required. Grátis, rápido e seguro. Sem cadastro."
+            "seoDescription": "Use our free online Reverse Text tool. Fast, secure, and easy to use. No login required. Grátis, rápido e seguro. Sem cadastro.",
+            "name": "Reverse Text Generator",
+            "description": "Reverse your text, flip it, or reverse words."
         },
         "bold-text": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">Dê destaque às suas mensagens com o nosso <strong>Gerador de Texto em Negrito</strong>! Esta ferramenta online gratuita converte seu texto normal em caracteres Unicode em negrito que podem ser usados ​​em diversas plataformas de mídia social, aplicativos de mensagens e sites. Perfeito para enfatizar pontos, criar títulos chamativos ou adicionar estilo aos seus perfis.</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">Como funciona? </h3>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Ao contrário das tags HTML tradicionais em negrito (<code>&lt;b&gt;</code> ou <code>&lt;strong&gt;</code>), nosso gerador usa caracteres Unicode especiais que visualmente aparecem em negrito. Como são caracteres de texto reais, eles podem ser colados em praticamente qualquer campo de texto, incluindo biografias de redes sociais, comentários e mensagens de bate-papo, onde a formatação HTML não é compatível.</p>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">Principais Recursos</h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Compatibilidade Universal:</strong> Funciona no Instagram, Facebook, Twitter, WhatsApp e muito mais.</li>\n<li class=\"text-gray-600\"><strong>Conversão Instantânea:</strong> Digite ou cole seu texto e veja-o transformado instantaneamente.</li>\n<li class=\"text-gray-600\"><strong>Vários Estilos de Negrito:</strong> Explore diferentes fontes e estilos de negrito (por exemplo, negrito serifado, negrito sem serifa).</li>\n<li class=\"text-gray-600\"><strong>Copiar e Colar:</strong> Copie facilmente o texto em negrito gerado com um único clique. clique.</li >\n</ul>\n<h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3 text-primary/80\">Usos Criativos para Texto em Negrito</h3>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Bios em Redes Sociais:</strong> Destaque informações importantes na sua bio do Instagram ou TikTok.</li >\n<li class=\"text-gray-600\"><strong>Ênfase nas Publicações:</strong> Faça com que partes importantes das suas legendas ou tweets se destaquem.</li >\n<li class=\"text-gray-600\"><strong>Títulos e Manchetes:</strong> Crie títulos impactantes para o seu conteúdo online.</li >\n<li class=\"text-gray-600\"><strong>Mensagens:</strong> Adicione ênfase às mensagens em aplicativos de bate-papo.</li >\n</ul>",
@@ -2344,7 +2348,11 @@
                 }
             ],
             "seoTitle": "Bold Text - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required. Grátis, rápido e seguro. Sem cadastro."
+            "seoDescription": "Use our free online Bold Text tool. Fast, secure, and easy to use. No login required. Grátis, rápido e seguro. Sem cadastro.",
+            "name": "Bold Text Generator",
+            "description": "Generate bold text using unicode characters.",
+            "seoKeywords": "bold text generator, heavy font generator, bold unicode text, thick text online, bold font for instagram, 𝗯𝗼𝗹𝗱 𝘁𝗲𝘅𝘁",
+            "seoH1": "Bold Text Generator: Stand Out with Heavy Fonts"
         },
         "word-to-pdf": {
             "content": "<p class=\"mb-4 leading-relaxed text-gray-700\">No mundo profissional, a transição de um rascunho para um documento final geralmente envolve uma conversão para PDF. Embora o Microsoft Word seja o padrão global para <em>criar</em> conteúdo, o PDF (Portable Document Format) é o padrão ouro para <em>distribuí-lo</em>. O <strong>Conversor de Word para PDF da Aynzo</strong> foi projetado para preencher essa lacuna com precisão perfeita em cada pixel, garantindo que seu trabalho árduo tenha a aparência desejada em todos os dispositivos.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">A Vantagem Profissional: Por que Converter Word para PDF?</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Documentos compartilhados como arquivos do Word estão sujeitos a alterações de formatação, fontes ausentes e edições acidentais. Ao optar por <strong>converter Word para PDF online</strong>, você está protegendo seu design. Seja você um estudante entregando uma tese, um freelancer enviando uma fatura ou um executivo corporativo distribuindo um relatório, o PDF oferece um nível de profissionalismo que formatos editáveis ​​brutos não conseguem igualar.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Preservação de Formatação Inigualável</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">A reclamação mais comum sobre conversores gratuitos é que eles \"quebram\" o documento. Tabelas se deslocam, imagens se sobrepõem e fontes personalizadas desaparecem. Nossa ferramenta utiliza lógica de renderização avançada que espelha a forma como o próprio Microsoft Office lida com layouts. Oferecemos suporte a:</p>\n<ul class=\"list-disc ml-6 mb-4 space-y-1\">\n<li class=\"text-gray-600\"><strong>Layouts Complexos:</strong> Relatórios com várias colunas, cabeçalhos e rodapés são preservados com 100% de precisão.</li>\n<li class=\"text-gray-600\"><strong>Elementos Dinâmicos:</strong> Hiperlinks, sumário e metadados permanecem funcionais no PDF exportado.</li>\n<li class=\"text-gray-600\"><strong>Mídia Incorporada:</strong> Imagens e gráficos de alta resolução são convertidos sem perder sua nitidez original.</li>\n<li class=\"text-gray-600\"><strong>Fontes Integridade: </strong> Manipulamos fontes padrão e comuns do sistema para garantir que sua tipografia permaneça consistente.</li>\n</ul>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> Segurança e Privacidade: Seus Documentos Estão Seguros </h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\"> A segurança dos documentos é nossa principal prioridade. Ao contrário de muitas ferramentas online \"gratuitas\" que armazenam seus dados confidenciais para treinamento ou publicidade, o <strong>Aynzo Tools</strong> prioriza sua privacidade. Todo o processamento é feito em um ambiente temporário e criptografado. Seus arquivos são apagados automaticamente imediatamente após a conclusão da conversão. Não rastreamos o conteúdo de seus documentos nem exigimos cadastro por e-mail, mantendo sua identidade anônima.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\"> Otimizado para Velocidade: Word para PDF em Segundos </h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\"> Tempo é um recurso precioso. Otimizamos nosso mecanismo do lado do servidor para processar at�� mesmo documentos grandes e com muitas imagens (até 50 MB) em meros segundos. Isso a torna a ferramenta ideal para usuários de alto volume que precisam de um <strong>conversor rápido de Word para PDF</strong> sem a complexidade dos softwares tradicionais para desktop.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Compatibilidade abrangente: .DOC e .DOCX suportados</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Seja você trabalhando com documentos legados do Word 97-2003 (.doc) ou com os modernos arquivos baseados em XML (.docx), nosso gerador lida com ambos com facilidade. Essa retrocompatibilidade garante que até mesmo seus arquivos mais antigos possam ser convertidos para o padrão PDF moderno sem problemas de compatibilidade.</p>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Como usar a ferramenta Aynzo Word para PDF</h2>\n<ol>\n<li class=\"text-gray-600\"><strong>Selecione seu arquivo:</strong> Clique na caixa de upload ou arraste e solte seu arquivo Word na área da ferramenta.</li>\n<li class=\"text-gray-600\"><strong>Aguarde a conversão:</strong> Nosso mecanismo iniciará imediatamente o processo de renderização em alta velocidade.</li>\n<li class=\"text-gray-600\"><strong>Baixe o resultado:</strong> Basta clicar no botão 'Download' para salvar seu PDF profissional em seu computador ou dispositivo móvel.</li>\n</ol>\n<!-- UI Section --><h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary flex items-center gap-2\">Por que escolher o Aynzo em vez de um software para desktop?</h2>\n<p class=\"mb-4 leading-relaxed text-gray-700\">Softwares como o Adobe Acrobat são poderosos, mas caros e consomem muitos recursos. Para 99% das tarefas diárias com documentos, um gerador online de Word para PDF leve é ​​mais eficiente. Não há software para instalar, atualizações para gerenciar ou taxas de assinatura mensais. Funciona no Windows, macOS, Linux e até mesmo em navegadores móveis no Android e iOS.",
@@ -2359,7 +2367,11 @@
                 }
             ],
             "seoTitle": "Word To Pdf - Free Online Tool | Aynzo Tools",
-            "seoDescription": "Use our free online Word To Pdf tool. Fast, secure, and easy to use. No login required. Grátis, rápido e seguro. Sem cadastro."
+            "seoDescription": "Use our free online Word To Pdf tool. Fast, secure, and easy to use. No login required. Grátis, rápido e seguro. Sem cadastro.",
+            "name": "Word to PDF",
+            "description": "Convert Microsoft Word (DOC/DOCX) documents to PDF format.",
+            "seoKeywords": "word to pdf converter free, convert word to pdf online, doc to pdf converter free, docx to pdf online, free word to pdf no signup",
+            "seoH1": "Word to PDF Free: Convert Word DOC/DOCX to PDF"
         },
         "seo-score-checker": {
             "content": "< p > Stop guessing why your website isn't ranking. Our **Live <strong>SEO Score Checker</strong>**doesn't just pretend to analyze your site—it actually fetches your live code in real - time.Unlike generic tools that give random numbers, we parse your HTML structure to find the ** exact technical flaws ** holding you back.</p>\n< h3 > How Our Real - Time Scanner Works </h3>\n< p > When you enter a URL, our advanced crawler connects to your website instantly.It reads the public HTML just like Googlebot does, checking for: </p>\n< ul >\n<li class=\"text-gray-600\">** Title & Meta Tags:** We verify if they exist and if they are the perfect length for search snippets.</li>\n<li class=\"text-gray-600\"> ** Header Hiearchy:** We scan your H1, H2, and H3 tags to ensure your content structure is semantic and readable.</li>\n<li class=\"text-gray-600\"> ** Image Accessibility:** We count every image and flag the ones missing 'alt' text, which hurts your accessibility and image search ranking.</li>\n<li class=\"text-gray-600\"> ** Internal & External Links:** We count valid links to judge the crawlability of your page.</li>\n</ul>\n< h3 > Why a 'Real' Score Matters </h3>\n< p > Many free tools simulate results.We don't. If you fix an issue and run the scan again,**you will see your score increase immediately**. This direct feedback loop allows developers and marketers to:</p>\n< ul >\n<li class=\"text-gray-600\">Validate fixes instantly after deploying code.</li>\n< li > Audit competitor pages to see their real metadata strengths.</li>\n< li > Generate accurate reports for clients based on actual page data.</li>\n</ul>\n< h3 > Actionable \"Fix-It\" List </h3>\n< p > We don't just give you a number. We provide a checklist of **Failed**vs**Passed** tests. If your Meta Description is too short, we tell you. If your H1 is missing, we alert you. This tool is your personal SEO assistant, working 24/7 for free.</p>",
@@ -3085,17 +3097,85 @@
             ],
             "content": "<h2 class=\"text-xl md:text-2xl font-bold mt-8 mb-4 text-primary\">What is a Cron Job?</h2><p class=\"mb-4 leading-relaxed text-gray-700\">A cron job is a scheduled task in Unix/Linux systems that runs automatically at specified intervals. Defined in the <em>crontab</em> (cron table) file, they're used for automated backups, report generation, database maintenance, API calls, and server monitoring.</p><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">The Cron Expression Format</h3><p class=\"mb-4 leading-relaxed text-gray-700\">A cron expression has 5 fields: <code>MINUTE HOUR DAY MONTH WEEKDAY</code>. Each field accepts specific values and wildcards:</p><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\"><code>*</code> — any value (every minute, every hour, etc.)</li><li class=\"text-gray-600\"><code>*/n</code> — every n units (*/5 = every 5 minutes)</li><li class=\"text-gray-600\"><code>a,b</code> — multiple values (1,15 = 1st and 15th)</li><li class=\"text-gray-600\"><code>a-b</code> — range (1-5 = Monday through Friday)</li></ul><h3 class=\"text-lg md:text-xl font-semibold mt-6 mb-3\">Common Cron Job Use Cases</h3><ul class=\"list-disc ml-6 mb-4 space-y-1\"><li class=\"text-gray-600\">0 0 * * * — Daily backup at midnight</li><li class=\"text-gray-600\">*/5 * * * * — API health check every 5 minutes</li><li class=\"text-gray-600\">0 9 * * 1-5 — Daily report email every weekday at 9am</li><li class=\"text-gray-600\">0 0 1 * * — Monthly invoice generation</li></ul>"
         },
-        "double-underline-text": {},
-        "cursive-text": {},
-        "currency-converter": {},
-        "401k-retirement-calculator": {},
-        "image-format-converter": {},
-        "merge-pdf": {},
-        "split-pdf": {},
-        "gpa-calculator": {},
-        "salary-calculator": {},
-        "tip-calculator": {},
-        "json-to-typescript": {}
+        "double-underline-text": {
+            "name": "Double Underline Text",
+            "description": "Generate double underlined text for social media.",
+            "seoTitle": "Double Underline Text Free Online - Use Double Underline Text",
+            "seoDescription": "Use Double Underline Text online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
+            "seoKeywords": "double-underline-text, free double underline text, double underline text tool",
+            "seoH1": "Double Underline Text Free: Use Double Underline Text"
+        },
+        "cursive-text": {
+            "name": "Cursive Text Generator",
+            "description": "Generate cursive / script text for social media.",
+            "seoTitle": "Cursive Text Generator Free Online - Use Cursive Text Generator",
+            "seoDescription": "Use Cursive Text Generator online free. Fast and secure processing. No login, fast, secure. Perfect for daily tasks.",
+            "seoKeywords": "cursive-text, free cursive text generator, cursive text generator tool",
+            "seoH1": "Cursive Text Generator Free: Use Cursive Text Generator"
+        },
+        "currency-converter": {
+            "name": "Currency Converter",
+            "description": "Convert between different currencies with live rates.",
+            "seoTitle": "Currency Converter Free Online - Real-time Exchange Rates",
+            "seoDescription": "Convert currencies online free. Real-time exchange rates for 150+ currencies. No login, fast, accurate. Perfect for travel and business.",
+            "seoKeywords": "currency converter free, exchange rate calculator, foreign exchange rates, convert money online, currency exchange tool",
+            "seoH1": "Currency Converter Free: Real-time Exchange Rates"
+        },
+        "401k-retirement-calculator": {
+            "name": "401k Retirement Calculator",
+            "description": "Plan your retirement by estimating your 401k growth with employer matching.",
+            "seoTitle": "401k Retirement Calculator - #1 Free US Wealth Planner",
+            "seoDescription": "Calculate your 401k balance at retirement. Includes employer matching, salary increases, and compound growth. Plan your US retirement savings today.",
+            "seoKeywords": "401k calculator, retirement planner, 401k match calculator, retirement savings estimator, us retirement tool",
+            "seoH1": "401k Retirement Calculator: Plan Your Future Wealth",
+            "content": "<h2>401k Retirement Calculator: Secure Your Financial Future</h2><p>Your <strong>401k plan</strong> is one of the most powerful tools for building wealth in the United States. Thanks to tax-advantaged growth and <strong>employer matching</strong>, it can turn modest savings into a multi-million dollar nest egg.</p><h3>The Power of Employer Matching</h3><p>Many employers offer a match (e.g., 50% for every dollar you contribute up to 6%). This is literally <strong>free money</strong>. Our calculator helps you visualize how that match compounds over 20-40 years.</p>",
+            "faq": [
+                {
+                    "question": "Should I contribute more than my employer match?",
+                    "answer": "Yes, if you can afford it. Most experts recommend saving 15% of your income for retirement. The 401k match is just the starting point."
+                },
+                {
+                    "question": "What is a realistic 401k return rate?",
+                    "answer": "Historically, the S&P 500 has averaged 7-10% annually. For conservative planning, 6-8% is a safe estimate for long-term projections."
+                },
+                {
+                    "question": "Can I withdraw my 401k early?",
+                    "answer": "Withdrawing before age 59½ usually results in a 10% penalty plus income taxes. It's best to leave it for retirement unless it's a financial emergency."
+                },
+                {
+                    "question": "What is the 2024 401k contribution limit?",
+                    "answer": "For 2024, the 401k contribution limit is $23,000. If you are 50 or older, you can contribute an additional $7,500 as a catch-up contribution."
+                }
+            ]
+        },
+        "image-format-converter": {
+            "name": "Image Format Converter",
+            "description": "Convert images between JPG, PNG, WebP, GIF, and BMP formats online for free."
+        },
+        "merge-pdf": {
+            "name": "Merge PDF",
+            "description": "Combine multiple PDF files into a single document."
+        },
+        "split-pdf": {
+            "name": "Split PDF",
+            "description": "Split a PDF file into multiple separate documents."
+        },
+        "gpa-calculator": {
+            "name": "GPA Calculator",
+            "description": "Calculate your college or high school GPA based on grades and credits."
+        },
+        "salary-calculator": {
+            "name": "Salary to Hourly Calculator",
+            "description": "Convert your annual salary to hourly, weekly, and monthly rates."
+        },
+        "tip-calculator": {
+            "name": "Tip Calculator",
+            "description": "Quickly calculate the tip and split the bill among friends."
+        },
+        "json-to-typescript": {
+            "name": "JSON to TypeScript",
+            "description": "Convert JSON objects to TypeScript interfaces automatically."
+        }
     },
     "Common": {
         "backToTools": "Voltar às ferramentas",
@@ -3148,7 +3228,8 @@
         "reset": "Redefinir",
         "shareThisTool": "Compartilhar esta ferramenta",
         "copyLink": "Copiar link",
-        "faqTitle": "Perguntas Frequentes (FAQ)"
+        "faqTitle": "Perguntas Frequentes (FAQ)",
+        "pleaseWait": "Por favor, aguarde..."
     },
     "NavbarCategories": {
         "Image Tools": "Ferramentas de Imagem",
@@ -3211,7 +3292,17 @@
         "strikethrough": "Riscado",
         "sortAZ": "Ordenar A-Z",
         "removeDuplicates": "Remover duplicados",
-        "textTool": "Ferramenta de texto"
+        "textTool": "Ferramenta de texto",
+        "boldText": "Bold Text",
+        "cursiveText": "Cursive Text",
+        "doubleUnderline": "Double Underline",
+        "uppercaseShort": "UPPER",
+        "lowercaseShort": "lower",
+        "titleCaseShort": "Title",
+        "sentenceCaseShort": "Sentence",
+        "cleanSpacesShort": "Clean",
+        "removeLineBreaksShort": "Breaks",
+        "reverseTextShort": "Rev"
     },
     "YouTubeTools": {
         "analyze": "Analisar",
@@ -3253,7 +3344,11 @@
         "ourMission": "Nossa missão",
         "missionStatement": "Ferramentas online gratuitas, rápidas e privadas para todos — sem anúncios nem rastreamento.",
         "securePrivate": "Seguro & Privado",
-        "allRightsReserved": "Todos os direitos reservados."
+        "allRightsReserved": "Todos os direitos reservados.",
+        "multiLanguage": "Multi-language Support",
+        "privacy": "Privacy",
+        "supportProject": "Support Project",
+        "buyMeACoffee": "Pague-me um café"
     },
     "Share": {
         "shareThisTool": "Compartilhar esta ferramenta",
@@ -3277,7 +3372,10 @@
         "clearAll": "Limpar tudo",
         "filesSelected": "{count} arquivos selecionados",
         "pasteBase64": "Colar Base64",
-        "batchReady": "Lote pronto"
+        "batchReady": "Lote pronto",
+        "runTool": "Processar",
+        "download": "Baixar",
+        "convert": "Converter"
     },
     "CalculatorNav": {
         "finance": "Finanças",
@@ -3307,7 +3405,10 @@
         "pregnancy": "Gravidez",
         "macros": "Macros",
         "idealWeight": "Peso Ideal",
-        "percentage": "Porcentagem"
+        "percentage": "Porcentagem",
+        "salary": "Salário para hora",
+        "tip": "Calculadora de gorjeta",
+        "gpa": "Calculadora de GPA"
     },
     "WebNav": {
         "metaOptimisation": "Meta & Optimization",
@@ -3427,29 +3528,29 @@
         }
     },
     "Privacy": {
-        "title": "Privacy Policy",
-        "intro": "Your privacy is our top priority. This policy outlines how we handle your data.",
-        "section1Title": "1. Local Processing",
-        "section1Text": "The vast majority of our tools (Image Compressor, Text Tools, Code Formatters, etc.) process your data locally in your browser using JavaScript. This means your files, text, and data are never uploaded to our servers.",
-        "section2Title": "2. No Data Collection",
-        "section2Text": "We do not collect or store any personal information. We do not require you to create an account, and we do not track your individual tool usage.",
-        "section3Title": "3. Analytics",
-        "section3Text": "We use basic, privacy-friendly analytics to understand aggregate traffic patterns (e.g., which tools are most popular) to help us improve the platform. This data is anonymous and does not include personally identifiable information.",
-        "section4Title": "4. Third-Party Links",
-        "section4Text": "Our platform may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites.",
-        "section5Title": "5. Policy Updates",
-        "section5Text": "We may update this policy from time to time. Any changes will be posted on this page with an updated modification date.",
-        "lastUpdated": "Last updated: March 2026"
+        "title": "Política de Privacidade",
+        "intro": "Sua privacidade é nossa prioridade máxima. Esta política descreve como lidamos com seus dados.",
+        "section1Title": "1. Processamento Local",
+        "section1Text": "A grande maioria das nossas ferramentas (Compressor de Imagem, Ferramentas de Texto, Formatadores de Código, etc.) processa seus dados localmente no seu navegador usando JavaScript. Isso significa que seus arquivos, textos e dados nunca são enviados para nossos servidores.",
+        "section2Title": "2. Sem Coleta de Dados",
+        "section2Text": "Não coletamos nem armazenamos nenhuma informação pessoal. Não exigimos que você crie uma conta e não rastreamos o uso de ferramentas individuais.",
+        "section3Title": "3. Analítica",
+        "section3Text": "Usamos análises básicas e amigáveis à privacidade para entender padrões de tráfego agregados (por exemplo, quais ferramentas são mais populares) para nos ajudar a melhorar a plataforma. Esses dados são anónimos e não incluem informações de identificação pessoal.",
+        "section4Title": "4. Links de Terceiros",
+        "section4Text": "Nossa plataforma pode conter links para sites de terceiros. Não somos responsáveis pelas práticas de privacidade ou pelo conteúdo desses sites.",
+        "section5Title": "5. Atualizações da Política",
+        "section5Text": "Podemos atualizar esta política de tempos em tempos. Quaisquer alterações serão publicadas nesta página com uma data de modificação atualizada.",
+        "lastUpdated": "Última atualização: Março de 2026"
     },
     "Terms": {
-        "title": "Terms of Service",
-        "intro": "Please read these terms and conditions carefully before using our service.",
-        "section1Title": "1. Acceptance of Terms",
-        "section1Text": "By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.",
-        "section2Title": "2. Use License",
-        "section2Text": "Permission is granted to use our online tools for personal and commercial purposes. All processing happens in your browser for most tools, ensuring privacy.",
-        "section3Title": "3. Disclaimer",
-        "section3Text": "The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+        "title": "Termos de Serviço",
+        "intro": "Leia estes termos e condições cuidadosamente antes de usar nosso serviço.",
+        "section1Title": "1. Aceitação dos Termos",
+        "section1Text": "Ao acessar e usar este site, você aceita e concorda em cumprir os termos e disposições deste contrato.",
+        "section2Title": "2. Lisença de Uso",
+        "section2Text": "É concedida permissão para usar nossas ferramentas online para fins pessoais e comerciais. Todo o processamento acontece no seu navegador para a maioria das ferramentas, garantindo a privacidade.",
+        "section3Title": "3. Isenção de Responsabilidade",
+        "section3Text": "Os materiais neste site são fornecidos 'como estão'. Não oferecemos garantias, expressas ou implícitas, e por meio deste renunciamos e negamos todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização, adequação a um propósito específico ou não violação de propriedade intelectual ou outra violação de direitos."
     },
     "ToolsDirectory": {
         "title": "Biblioteca de Ferramentas Online Profissionais | Aynzo",
@@ -3462,7 +3563,12 @@
         "pdf": "Ferramentas de gestão de PDF para combinar e converter documentos.",
         "text": "Utilitários de texto avançados para formatação e análise.",
         "developer": "Ferramentas essenciais para desenvolvedores e validação de dados.",
-        "seo": "Ferramentas de SEO e redes sociais para otimizar sua presença."
+        "seo": "Ferramentas de SEO e redes sociais para otimizar sua presença.",
+        "security": "Ferramentas criptográficas seguras para hash, criação de senhas e criptografia de dados.",
+        "converter": "Conversores precisos de unidades e dados para fluxos profissionais e acadêmicos.",
+        "utility": "Ferramentas utilitárias do dia a dia para simplificar sua vida digital.",
+        "calculator": "Calculadoras financeiras e matemáticas inteligentes para resultados instantâneos.",
+        "youtube": "Ferramentas dedicadas do YouTube para criadores baixarem miniaturas e gerarem tags."
     },
     "About": {
         "title": "Sobre Nós",
@@ -3490,29 +3596,79 @@
         "formPlaceholder": "Este é um espaço reservado para o formulário de contato.",
         "button": "Contatar Suporte"
     },
-    "Privacy": {
-        "title": "Política de Privacidade",
-        "intro": "Sua privacidade é nossa prioridade máxima. Esta política descreve como lidamos com seus dados.",
-        "section1Title": "1. Processamento Local",
-        "section1Text": "A grande maioria das nossas ferramentas (Compressor de Imagem, Ferramentas de Texto, Formatadores de Código, etc.) processa seus dados localmente no seu navegador usando JavaScript. Isso significa que seus arquivos, textos e dados nunca são enviados para nossos servidores.",
-        "section2Title": "2. Sem Coleta de Dados",
-        "section2Text": "Não coletamos nem armazenamos nenhuma informação pessoal. Não exigimos que você crie uma conta e não rastreamos o uso de ferramentas individuais.",
-        "section3Title": "3. Analítica",
-        "section3Text": "Usamos análises básicas e amigáveis à privacidade para entender padrões de tráfego agregados (por exemplo, quais ferramentas são mais populares) para nos ajudar a melhorar a plataforma. Esses dados são anónimos e não incluem informações de identificação pessoal.",
-        "section4Title": "4. Links de Terceiros",
-        "section4Text": "Nossa plataforma pode conter links para sites de terceiros. Não somos responsáveis pelas práticas de privacidade ou pelo conteúdo desses sites.",
-        "section5Title": "5. Atualizações da Política",
-        "section5Text": "Podemos atualizar esta política de tempos em tempos. Quaisquer alterações serão publicadas nesta página com uma data de modificação atualizada.",
-        "lastUpdated": "Última atualização: Março de 2026"
+    "CurrencyConverter": {
+        "from": "De",
+        "to": "Para",
+        "amountPlaceholder": "Insira o valor",
+        "exchangeRate": "Taxa de câmbio",
+        "refresh": "Atualizar",
+        "lastUpdated": "Última atualização: {time}",
+        "errorUnavailable": "Taxa de câmbio indisponível",
+        "errorFetch": "Falha ao obter taxa de câmbio"
     },
-    "Terms": {
-        "title": "Termos de Serviço",
-        "intro": "Leia estes termos e condições cuidadosamente antes de usar nosso serviço.",
-        "section1Title": "1. Aceitação dos Termos",
-        "section1Text": "Ao acessar e usar este site, você aceita e concorda em cumprir os termos e disposições deste contrato.",
-        "section2Title": "2. Lisença de Uso",
-        "section2Text": "É concedida permissão para usar nossas ferramentas online para fins pessoais e comerciais. Todo o processamento acontece no seu navegador para a maioria das ferramentas, garantindo a privacidade.",
-        "section3Title": "3. Isenção de Responsabilidade",
-        "section3Text": "Os materiais neste site são fornecidos 'como estão'. Não oferecemos garantias, expressas ou implícitas, e por meio deste renunciamos e negamos todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização, adequação a um propósito específico ou não violação de propriedade intelectual ou outra violação de direitos."
+    "TextToolContent": {
+        "word-counter": {
+            "title": "Free Online Word Counter & Character Count Tool",
+            "intro": "Our **Word Counter** is a free, real-time tool to count words, characters, sentences, and paragraphs. Perfect for writers, students, and professionals who need to check their text length instantly.",
+            "howToUseTitle": "How to Use the Word Count Calculator",
+            "howToUseSteps": [
+                "Paste or type your text into the input box.",
+                "The tool will automatically calculate the word count and character count.",
+                "Check detailed metrics like sentence count, paragraph count, and reading time.",
+                "Use the 'Copy' or 'Download' buttons to save your work."
+            ],
+            "featuresTitle": "Key Features of Our Word Counter Checker",
+            "features": [
+                "**Instant Calculation:** Results appear immediately as you type.",
+                "**Essay Word Counter:** Ideal for checking essay length requirements.",
+                "**Character Counter:** Includes spaces and excludes spaces for precise limits (like Twitter/X).",
+                "**100% Free & Secure:** No login required, and your text is processed locally in your browser."
+            ],
+            "faqTitle": "Common Questions (FAQ)",
+            "faq": [
+                {
+                    "q": "How many words is this text?",
+                    "a": "Simply paste your text above, and our tool will tell you exactly how many words, characters, and sentences it contains."
+                },
+                {
+                    "q": "Is this word counter free?",
+                    "a": "Yes, our word counter is completely free to use online with no limits."
+                },
+                {
+                    "q": "Can I use this for essays?",
+                    "a": "Absolutely! This tool is perfect as an essay word counter to ensure you meet your assignment's word count requirements."
+                }
+            ]
+        }
+    },
+    "ImageGroups": {
+        "image-optimize": "Otimizar",
+        "image-convert": "Converter",
+        "image-edit": "Editar",
+        "image-effects": "Filtros",
+        "image-dev": "Base64",
+        "pdf-convert": "Converter PDF",
+        "pdf-edit": "Editar PDF",
+        "text-analyze": "Analisar",
+        "text-edit": "Editar",
+        "text-style": "Estilo",
+        "dev-format": "Formatar",
+        "dev-tool": "Ferramentas",
+        "dev-convert": "Converter",
+        "dev-optimize": "Otimizar",
+        "conv-unit": "Unidades",
+        "conv-curr": "Moeda",
+        "conv-color": "Cores",
+        "conv-data": "Dados",
+        "util-rand": "Aleatório",
+        "util-gen": "Geradores",
+        "util-net": "Rede e Web",
+        "sec-gen": "Segurança",
+        "yt-tool": "YouTube",
+        "seo-gen": "Geradores SEO",
+        "seo-keyword": "Palavras-chave",
+        "social-gen": "Social e Links",
+        "calc-util": "Saúde e Info",
+        "calc-math": "Finanças e Matemática"
     }
 }

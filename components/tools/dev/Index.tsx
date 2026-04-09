@@ -7,8 +7,11 @@ import { JSONFormatter } from './JSONFormatter';
 import { URLEncoderDecoder } from './URLEncoderDecoder';
 import { CrontabGenerator } from './CrontabGenerator';
 import { JsonToTypeScriptConverter } from './JsonToTypeScriptConverter';
+import { useTranslations } from 'next-intl';
 
 export default function DevToolsIndex({ type }: DevToolProps) {
+    const tTools = useTranslations('Tools');
+
     const devNavTools = [
         {
             category: 'FORMAT',
@@ -54,6 +57,13 @@ export default function DevToolsIndex({ type }: DevToolProps) {
             ]
         }
     ];
+    const localizedDevNavTools = devNavTools.map((section) => ({
+        ...section,
+        tools: section.tools.map((tool) => ({
+            ...tool,
+            label: tTools.has(`${tool.id}.name`) ? tTools(`${tool.id}.name`) : tool.label,
+        })),
+    }));
 
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
@@ -328,7 +338,7 @@ export default function DevToolsIndex({ type }: DevToolProps) {
 
     return (
         <div className="max-w-6xl mx-auto space-y-6">
-            <ScrollableNav items={devNavTools} activeToolId={type} />
+            <ScrollableNav items={localizedDevNavTools} activeToolId={type} />
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-8 space-y-8">
                     {renderDevTool()}

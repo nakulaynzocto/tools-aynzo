@@ -147,6 +147,9 @@ export default async function ToolPage({ params }: Props) {
   const translatedDesc = tTools.has(`${params.slug}.seoDescription`) 
     ? tTools(`${params.slug}.seoDescription`) 
     : (tTools.has(`${params.slug}.description`) ? tTools(`${params.slug}.description`) : tool.description);
+  const localizedH1 = tTools.has(`${params.slug}.h1`)
+    ? tTools(`${params.slug}.h1`)
+    : (params.locale === 'en' ? (seo?.h1 || translatedName) : translatedName);
 
   const tCategories = await getTranslations({ locale: params.locale, namespace: 'Categories' });
   const translatedCategory = tCategories.has(tool.category) ? tCategories(tool.category) : tool.category;
@@ -533,7 +536,7 @@ export default async function ToolPage({ params }: Props) {
           name={translatedName}
           description={translatedDesc}
           category={translatedCategory}
-          h1={seo?.h1}
+          h1={localizedH1}
         />
 
         {/* 3. FAQ Section (Uke badd faq) */}
