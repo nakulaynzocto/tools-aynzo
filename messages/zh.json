@@ -2800,7 +2800,10 @@
         "pregnancy": "怀孕",
         "macros": "宏量营养素",
         "idealWeight": "理想体重",
-        "percentage": "百分比"
+        "percentage": "百分比",
+        "salary": "年薪转时薪",
+        "tip": "小费计算器",
+        "gpa": "GPA 计算器"
     },
     "WebNav": {
         "metaOptimisation": "Meta & Optimization",
@@ -2878,7 +2881,11 @@
         "ourMission": "我们的使命",
         "missionStatement": "为所有人提供免费、快速、私密的在线工具 — 无广告、无跟踪。",
         "securePrivate": "安全 & 私密",
-        "allRightsReserved": "保留所有权利。"
+        "allRightsReserved": "保留所有权利。",
+        "multiLanguage": "多语言支持",
+        "privacy": "隐私",
+        "supportProject": "支持项目",
+        "buyMeACoffee": "请我喝杯咖啡"
     },
     "Share": {
         "shareThisTool": "分享此工具",

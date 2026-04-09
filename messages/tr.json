@@ -2853,7 +2853,10 @@
         "pregnancy": "Hamilelik",
         "macros": "Makrolar",
         "idealWeight": "İdeal Kilo",
-        "percentage": "Yüzde"
+        "percentage": "Yüzde",
+        "salary": "Maaştan Saatliğe",
+        "tip": "Bahşiş Hesaplayıcı",
+        "gpa": "GPA Hesaplayıcı"
     },
     "WebNav": {
         "metaOptimisation": "Meta & Optimization",
@@ -2931,7 +2934,11 @@
         "ourMission": "Misyonumuz",
         "missionStatement": "Herkes için ücretsiz, hızlı ve gizli online araçlar — reklam veya takip olmadan.",
         "securePrivate": "Güvenli & Özel",
-        "allRightsReserved": "Tüm hakları saklıdır."
+        "allRightsReserved": "Tüm hakları saklıdır.",
+        "multiLanguage": "Çok Dilli Destek",
+        "privacy": "Gizlilik",
+        "supportProject": "Projeyi Destekle",
+        "buyMeACoffee": "Bana bir kahve ısmarla"
     },
     "Share": {
         "shareThisTool": "Bu aracı paylaş",
