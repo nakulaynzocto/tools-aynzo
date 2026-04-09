@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tools.aynzo.com/sitemap
+Disallow: /api/
+
+Sitemap: https://tools.aynzo.com/sitemap.xml

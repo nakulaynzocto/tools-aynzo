@@ -74,8 +74,20 @@ export function getXDefaultUrl(baseUrl: string, path: string = ''): string {
 export function localizeHtmlLinks(html: string, locale: string): string {
     const prefix = getLocalePrefix(locale);
     const domain = 'tools.aynzo.com';
+    const legacySlugMap: Record<string, string> = {
+        'text-replace': 'find-replace',
+        'remove-duplicate-lines': 'duplicate-line-remover',
+        'remove-extra-spaces': 'whitespace-remover',
+    };
+    let normalizedHtml = html;
+
+    // Normalize malformed spaced links from legacy SEO content.
+    normalizedHtml = normalizedHtml.replace(
+        /href\s*=\s*["']\s*\/\s*([a-z]{2})\s*\/\s*tools\s*\/\s*([^"']+?)\s*["']/gi,
+        (_match, loc: string, slug: string) => `href="/${loc}/tools/${slug.replace(/\s*-\s*/g, '-').trim()}"`
+    );
     
-    return html
+    let localized = normalizedHtml
         // 1. Rewrite full domain links: https://tools.aynzo.com/en/tools -> https://tools.aynzo.com/tools
         .replace(new RegExp(`href="https://${domain}/(?:en|hi|pt|es|id|de|fr|ja|ru|tr|it|ko|zh|ar|x-default)/`, 'g'), `href="https://${domain}${prefix}/`)
         // 2. Rewrite relative locale links: href="/en/tools" -> href="/tools"
@@ -88,4 +100,18 @@ export function localizeHtmlLinks(html: string, locale: string): string {
             }
             return match;
         });
+
+    // Normalize legacy renamed tool slugs after locale normalization.
+    for (const [oldSlug, newSlug] of Object.entries(legacySlugMap)) {
+        localized = localized.replace(
+            new RegExp(`(href="(?:https://${domain})?(?:/[a-z]{2})?/tools/)${oldSlug}([/"#?]|")`, 'g'),
+            `$1${newSlug}$2`
+        );
+        localized = localized.replace(
+            new RegExp(`(href="/tools/)${oldSlug}([/"#?]|")`, 'g'),
+            `$1${newSlug}$2`
+        );
+    }
+
+    return localized;
 }

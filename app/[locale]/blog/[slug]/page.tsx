@@ -35,14 +35,15 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
     : path.join(process.cwd(), 'seo-blogs', locale);
     
   // FALLBACK: If translation folder doesn't exist, use English
-  if (!fs.existsSync(blogsDir) || !fs.readdirSync(blogsDir).some(f => f.includes(slug))) {
+  if (!fs.existsSync(blogsDir) || !fs.existsSync(path.join(blogsDir, `${slug}.json`))) {
     blogsDir = path.join(process.cwd(), 'seo-blogs');
   }
 
-  const fileFound = fs.readdirSync(blogsDir).find(f => f.includes(slug));
-  if (!fileFound) return {};
+  const fileFound = `${slug}.json`;
+  const filePath = path.join(blogsDir, fileFound);
+  if (!fs.existsSync(filePath)) return {};
 
-  const blog = JSON.parse(fs.readFileSync(path.join(blogsDir, fileFound), 'utf-8'));
+  const blog = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
   return {
     title: blog.metaTitle,
@@ -84,14 +85,15 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
     : path.join(process.cwd(), 'seo-blogs', locale);
     
   // FALLBACK: If translation doesn't exist yet, use English original
-  if (!fs.existsSync(blogsDir) || !fs.readdirSync(blogsDir).some(f => f.includes(slug))) {
+  if (!fs.existsSync(blogsDir) || !fs.existsSync(path.join(blogsDir, `${slug}.json`))) {
     blogsDir = path.join(process.cwd(), 'seo-blogs');
   }
 
-  const fileFound = fs.readdirSync(blogsDir).find(f => f.includes(slug));
-  if (!fileFound) notFound();
+  const fileFound = `${slug}.json`;
+  const filePath = path.join(blogsDir, fileFound);
+  if (!fs.existsSync(filePath)) notFound();
 
-  const blog = JSON.parse(fs.readFileSync(path.join(blogsDir, fileFound), 'utf-8'));
+  const blog = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
   const t = await getTranslations({ locale, namespace: 'Blog' });
 
   const cleanContent = blog.content.replace(/^\s*<h1[^>]*>.*?<\/h1>/i, '').trim();

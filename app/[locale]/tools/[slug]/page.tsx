@@ -45,9 +45,12 @@ interface Props {
 }
 
 export function generateStaticParams() {
-  return tools.map((tool) => ({
-    slug: tool.slug,
-  }));
+  return locales.flatMap((locale) =>
+    tools.map((tool) => ({
+      locale,
+      slug: tool.slug,
+    }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -486,11 +489,6 @@ export default async function ToolPage({ params }: Props) {
               '@type': 'Offer',
               price: '0',
               priceCurrency: 'USD'
-            },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: (4.7 + (params.slug.length % 3) / 10).toFixed(1),
-              reviewCount: 120 + (params.slug.length * 11)
             }
           })
         }}

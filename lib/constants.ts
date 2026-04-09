@@ -12,13 +12,13 @@ export const SITE_NAME = 'Aynzo Tools';
 // OG Image URLs
 export const OG_IMAGES = {
     default: `${SITE_URL}/og-image.png`,
-    blog: `${SITE_URL}/og-blog.png`,
-    tools: `${SITE_URL}/assets/og-image-tools.png`,
-    pdf: `${SITE_URL}/assets/og-image-pdf.png`,
-    image: `${SITE_URL}/assets/og-image-tools.png`,
-    seo: `${SITE_URL}/assets/og-image-seo.png`,
-    dev: `${SITE_URL}/assets/og-image-dev.png`,
-    youtube: `${SITE_URL}/assets/og-image-youtube.png`,
+    blog: `${SITE_URL}/og-image.png`,
+    tools: `${SITE_URL}/og-image.png`,
+    pdf: `${SITE_URL}/og-image.png`,
+    image: `${SITE_URL}/og-image.png`,
+    seo: `${SITE_URL}/og-image.png`,
+    dev: `${SITE_URL}/og-image.png`,
+    youtube: `${SITE_URL}/og-image.png`,
 } as const;
 
 // Default Metadata

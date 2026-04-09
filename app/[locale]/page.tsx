@@ -5,7 +5,7 @@ import { getLocalePrefix, getAllHreflangUrls, getXDefaultUrl, localizeHtmlLinks 
 import Image from 'next/image';
 import { Shield, Zap, Image as ImageIcon, FileText, Code, ArrowRight } from 'lucide-react';
 import HeroSearch from '@/components/common/components/HeroSearch';
-import { Link } from '@/navigation';
+import Link from 'next/link';
 import { Suspense } from 'react';
 
 import ToolDirectory from '@/components/common/components/ToolDirectory';
@@ -48,6 +48,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 export default async function Home({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'HomePage' });
+  const localePrefix = getLocalePrefix(locale);
 
   const capabilities = [
     {
@@ -57,7 +58,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       image: "/assets/image_tools.png",
       color: "from-blue-500/20 to-purple-500/20",
       accent: "text-blue-500",
-      href: "/tools"
+      href: `${localePrefix}/tools`
     },
     {
       title: t('capabilities.pdf.title'),
@@ -66,7 +67,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       image: "/assets/pdf_tools.png",
       color: "from-orange-500/20 to-red-500/20",
       accent: "text-orange-500",
-      href: "/tools"
+      href: `${localePrefix}/tools`
     },
     {
       title: t('capabilities.dev.title'),
@@ -75,7 +76,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       image: "/assets/dev_tools.png",
       color: "from-green-500/20 to-emerald-500/20",
       accent: "text-emerald-500",
-      href: "/tools"
+      href: `${localePrefix}/tools`
     },
     {
       title: t('capabilities.privacy.title'),
@@ -84,7 +85,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       image: "/assets/security_privacy.png",
       color: "from-indigo-500/20 to-blue-500/20",
       accent: "text-indigo-500",
-      href: "/tools"
+      href: `${localePrefix}/tools`
     }
   ];
 
@@ -210,7 +211,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
             ].map((tool) => (
               <Link 
                 key={tool.slug}
-                href={`/tools/${tool.slug}`}
+                href={`${localePrefix}/tools/${tool.slug}`}
                 className="group p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/50 hover:shadow-xl transition-all duration-300"
               >
                 <div className="text-3xl mb-4 group-hover:scale-125 transition-transform duration-300 transform-gpu">{tool.icon}</div>

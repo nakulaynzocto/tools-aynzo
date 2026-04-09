@@ -41,115 +41,115 @@ const DEFAULT_OG_IMAGE: OGImageConfig = {
 // Category-specific OG images with different colors/themes
 const CATEGORY_OG_IMAGES: Record<ToolCategory, OGImageConfig> = {
   image: {
-    url: 'https://tools.aynzo.com/assets/og-image-tools.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Image Tools - Compress, Convert & Edit Images Online'
   },
   pdf: {
-    url: 'https://tools.aynzo.com/assets/og-image-pdf.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'PDF Tools - Convert & Edit PDFs Online'
   },
   text: {
-    url: 'https://tools.aynzo.com/assets/og-image-text.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Text Tools - Word Counter & Text Formatting'
   },
   advancedtext: {
-    url: 'https://tools.aynzo.com/assets/og-image-text.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Advanced Text Tools - Format & Transform Text'
   },
   formatter: {
-    url: 'https://tools.aynzo.com/assets/og-image-dev.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Code Formatter - Format JSON, CSS, HTML & More'
   },
   converter: {
-    url: 'https://tools.aynzo.com/assets/og-image-converter.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Unit Converter - Convert Units & Measurements'
   },
   generator: {
-    url: 'https://tools.aynzo.com/assets/og-image-generator.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Generator Tools - QR Codes, Passwords & More'
   },
   dev: {
-    url: 'https://tools.aynzo.com/assets/og-image-dev.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Developer Tools - JSON Formatter & URL Encoder'
   },
   security: {
-    url: 'https://tools.aynzo.com/assets/og-image-security.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Security Tools - Password Generator & Hash Tools'
   },
   utility: {
-    url: 'https://tools.aynzo.com/assets/og-image-tools.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Utility Tools - Online Utilities & Calculators'
   },
   crypto: {
-    url: 'https://tools.aynzo.com/assets/og-image-security.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Crypto Tools - Encrypt & Decrypt Data'
   },
   regex: {
-    url: 'https://tools.aynzo.com/assets/og-image-dev.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Regex Tools - Test & Validate Regular Expressions'
   },
   youtube: {
-    url: 'https://tools.aynzo.com/assets/og-image-youtube.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'YouTube Tools - Thumbnail Downloader & Tag Generator'
   },
   seo: {
-    url: 'https://tools.aynzo.com/assets/og-image-seo.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'SEO Tools - Meta Tags, Sitemap & SERP Simulator'
   },
   keyword: {
-    url: 'https://tools.aynzo.com/assets/og-image-seo.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Keyword Tools - Research & Analyze Keywords'
   },
   web: {
-    url: 'https://tools.aynzo.com/assets/og-image-dev.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Web Tools - Analyze & Optimize Websites'
   },
   social: {
-    url: 'https://tools.aynzo.com/assets/og-image-social.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Social Media Tools - Generate Bio & Links'
   },
   tech: {
-    url: 'https://tools.aynzo.com/assets/og-image-tech.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Tech Tools - Calculators & Utilities'
   },
   calculator: {
-    url: 'https://tools.aynzo.com/assets/og-image-tech.png',
+    url: 'https://tools.aynzo.com/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Calculator Tools - Financial & Math Calculators'
@@ -183,7 +183,7 @@ export function getGenericOGImage(pageType: 'home' | 'blog' | 'about' | 'contact
   const pageImages: Record<string, OGImageConfig> = {
     home: DEFAULT_OG_IMAGE,
     blog: {
-      url: 'https://tools.aynzo.com/assets/og-image-blog.png',
+      url: 'https://tools.aynzo.com/og-image.png',
       width: 1200,
       height: 630,
       alt: 'Aynzo Blog - SEO Tips & Tool Guides'
@@ -201,7 +201,7 @@ export function getGenericOGImage(pageType: 'home' | 'blog' | 'about' | 'contact
       alt: 'Contact Aynzo - Get in Touch'
     },
     tools: {
-      url: 'https://tools.aynzo.com/assets/og-image-tools.png',
+      url: 'https://tools.aynzo.com/og-image.png',
       width: 1200,
       height: 630,
       alt: 'All Tools - 100+ Free Online Tools'

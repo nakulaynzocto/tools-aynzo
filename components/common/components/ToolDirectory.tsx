@@ -1,10 +1,12 @@
-import { Link } from '@/navigation';
+import Link from 'next/link';
 import { toolCategories } from '@/lib/tools';
 import { getTranslations } from 'next-intl/server';
+import { getLocalePrefix } from '@/utils/locale-utils';
 
 export default async function ToolDirectory({ locale }: { locale: string }) {
     const tTools = await getTranslations({ locale, namespace: 'Tools' });
     const tCat = await getTranslations({ locale, namespace: 'Categories' });
+    const localePrefix = getLocalePrefix(locale);
 
     return (
         <section className="bg-background pt-8 pb-16 border-t border-border/30 overflow-hidden opacity-80 hover:opacity-100 transition-opacity">
@@ -20,7 +22,7 @@ export default async function ToolDirectory({ locale }: { locale: string }) {
                                     {categoryTools.map((tool) => (
                                         <Link
                                             key={tool.slug}
-                                            href={`/tools/${tool.slug}`}
+                                            href={`${localePrefix}/tools/${tool.slug}`}
                                             className="text-[11px] font-medium text-muted-foreground/50 hover:text-primary transition-colors whitespace-nowrap decoration-dotted hover:underline"
                                         >
                                             {tTools.has(`${tool.slug}.name`) ? tTools(`${tool.slug}.name`) : tool.name}

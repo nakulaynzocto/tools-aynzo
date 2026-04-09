@@ -13,9 +13,24 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
     const t = await getTranslations({ locale, namespace: 'Terms' });
+    const description = t('intro');
+    const title = t('title');
+    const image = `${SITE_URL}/og-image.png`;
     return {
-        title: t('title'),
-        description: t('intro'),
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            url: getLocalizedUrl(SITE_URL, locale, '/terms'),
+            images: [{ url: image, width: 1200, height: 630 }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [image],
+        },
         alternates: {
             canonical: getLocalizedUrl(SITE_URL, locale, '/terms'),
             languages: {
