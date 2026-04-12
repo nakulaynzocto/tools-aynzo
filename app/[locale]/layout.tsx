@@ -40,7 +40,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     authors: [{ name: "AYNZO TOOLS" }],
     creator: "AYNZO TOOLS",
     publisher: "AYNZO TOOLS",
-    robots: "index, follow",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     openGraph: {
       type: "website",
       locale: locale,

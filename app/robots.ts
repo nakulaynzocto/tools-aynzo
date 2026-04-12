@@ -5,9 +5,19 @@ export default function robots(): MetadataRoute.Robots {
         rules: [
             {
                 userAgent: '*',
-                allow: '/',
-                // Only block private API routes — all tool pages must be crawlable
-                disallow: ['/api/'],
+                allow: [
+                    '/',
+                    '/_next/static/',
+                    '/_next/image/',
+                    '/assets/',
+                    '/favicon.ico',
+                    '/sitemap.xml',
+                ],
+                // Block private API routes and internal Next.js paths that shouldn't be indexed
+                disallow: [
+                    '/api/',
+                    '/_next/data/',
+                ],
             },
         ],
         sitemap: 'https://tools.aynzo.com/sitemap.xml',

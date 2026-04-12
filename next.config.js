@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
+  trailingSlash: false,
   // Optimize build size
   compress: true,
   swcMinify: true,
