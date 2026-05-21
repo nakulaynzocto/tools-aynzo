@@ -6,6 +6,8 @@ export const routing = defineRouting({
     defaultLocale: 'en',
     // Use 'as-needed' so English URLs don't have /en/ prefix (better for SEO)
     localePrefix: 'as-needed',
+    // Disable locale detection to prevent 307 redirects for root URLs, which breaks hreflang and GSC validation
+    localeDetection: false,
 });
 
 export const { Link, redirect, usePathname, useRouter } =
