@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
 import { Link } from '@/navigation';
-import fs from 'fs';
-import path from 'path';
+import connectToDatabase from '@/lib/db';
+import Blog from '@/lib/models/Blog';
 import { BookOpen, Calendar, Clock, ChevronRight } from 'lucide-react';
 import { getLocalePrefix, getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl, isPrimaryLocale } from '@/utils/locale-utils';
 import { SITE_URL, OG_IMAGES } from '@/lib/constants';
@@ -35,27 +35,19 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 export default async function BlogListPage({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Blog' });
-  
-  // Read blogs from seo-blogs directory
-  // For primary locale (en), use root seo-blogs. For others, use subdirectory with fallback.
-  let blogsDir = isPrimaryLocale(locale) 
-    ? path.join(process.cwd(), 'seo-blogs')
-    : path.join(process.cwd(), 'seo-blogs', locale);
-    
-  // If locale directory doesn't exist yet, fallback to English
-  if (!fs.existsSync(blogsDir)) {
-    blogsDir = path.join(process.cwd(), 'seo-blogs');
-  }
-    
-  let blogs: any[] = [];
-  
-  if (fs.existsSync(blogsDir)) {
-    const files = fs.readdirSync(blogsDir).filter(f => f.endsWith('.json') && !f.startsWith('_'));
-    blogs = files.map(file => {
-      const content = fs.readFileSync(path.join(blogsDir, file), 'utf-8');
-      return JSON.parse(content);
-    }).sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
-  }
+  // Read blogs from dynamic database instead of static files
+  await connectToDatabase();
+  const dbBlogs = await Blog.find({ locale }).sort({ createdAt: -1 }).lean();
+
+  // Map Mongoose documents to the existing UI structure
+  const blogs = dbBlogs.map((b: any) => ({
+    slug: b.slug,
+    title: b.title,
+    metaDescription: b.seoDescription || b.content.replace(/<[^>]*>?/gm, '').substring(0, 150) + '...',
+    category: b.category || 'Guide',
+    publishedAt: new Date(b.createdAt).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' }),
+    readTime: b.readTime || '5 min read',
+  }));
 
   return (
     <div className="bg-background min-h-screen">

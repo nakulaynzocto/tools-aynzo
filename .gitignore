@@ -53,3 +53,14 @@ coverage/
 # One-time setup scripts (already executed)
 scripts/add-google-analytics.js
 scripts/translate-blog-content-quick.js
+
+# Local test/debug files
+test-db.js
+test-db.ts
+build.log
+build-debug.log
+fix.log
+fix-id.log
+gtx.log
+sanitize.log
+mymemory.log

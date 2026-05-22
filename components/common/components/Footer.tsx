@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { toolCategories } from '@/lib/tools';
 import { Globe, Heart, Shield, FileText, Mail, Info } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
     const tApp = useTranslations('App');
@@ -13,6 +14,9 @@ export default function Footer() {
     const tFooter = useTranslations('Footer');
     const tTools = useTranslations('Tools'); // Added this line
     const currentYear = new Date().getFullYear();
+    const pathname = usePathname();
+
+    if (pathname.includes('/admin')) return null;
 
     return (
         <footer className="bg-card border-t border-border mt-20">

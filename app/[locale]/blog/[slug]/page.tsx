@@ -2,65 +2,38 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n';
 import { Link } from '@/navigation';
-import fs from 'fs';
-import path from 'path';
+import connectToDatabase from '@/lib/db';
+import Blog from '@/lib/models/Blog';
 import { notFound } from 'next/navigation';
-import { Calendar, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin, Copy } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft } from 'lucide-react';
 import { RelatedTools } from '@/components/common/components/RelatedTools';
+import { BlogShareButtons } from '@/components/blog/BlogShareButtons';
 import { toolCategories } from '@/lib/tools';
 import { getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl, isPrimaryLocale, localizeHtmlLinks } from '@/utils/locale-utils';
 import { SITE_URL, OG_IMAGES } from '@/lib/constants';
 
-export async function generateStaticParams() {
-  const allParams = [];
-  for (const locale of locales) {
-    const blogsDir = isPrimaryLocale(locale) 
-      ? path.join(process.cwd(), 'seo-blogs')
-      : path.join(process.cwd(), 'seo-blogs', locale);
-    
-    if (fs.existsSync(blogsDir)) {
-      const files = fs.readdirSync(blogsDir).filter(f => f.endsWith('.json') && !f.startsWith('_'));
-      for (const file of files) {
-        const blogData = JSON.parse(fs.readFileSync(path.join(blogsDir, file), 'utf-8'));
-        allParams.push({ locale, slug: blogData.slug });
-      }
-    }
-  }
-  return allParams;
-}
-
 export async function generateMetadata({ params: { locale, slug } }: { params: { locale: string, slug: string } }): Promise<Metadata> {
-  let blogsDir = isPrimaryLocale(locale) 
-    ? path.join(process.cwd(), 'seo-blogs')
-    : path.join(process.cwd(), 'seo-blogs', locale);
-    
-  // FALLBACK: If translation folder doesn't exist, use English
-  if (!fs.existsSync(blogsDir) || !fs.existsSync(path.join(blogsDir, `${slug}.json`))) {
-    blogsDir = path.join(process.cwd(), 'seo-blogs');
-  }
+  await connectToDatabase();
+  const blog = await Blog.findOne({ locale, slug }).lean();
 
-  const fileFound = `${slug}.json`;
-  const filePath = path.join(blogsDir, fileFound);
-  if (!fs.existsSync(filePath)) return {};
-
-  const blog = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  if (!blog) return {};
 
   return {
-    title: blog.metaTitle,
-    description: blog.metaDescription,
-    keywords: blog.tags.join(', '),
+    title: blog.seoTitle || blog.title,
+    description: blog.seoDescription,
+    keywords: blog.seoKeywords?.join(', '),
     alternates: {
       canonical: getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`),
       languages: getAllHreflangUrls(SITE_URL, locales, `/blog/${slug}`)
     },
     openGraph: {
-      title: blog.metaTitle,
-      description: blog.metaDescription,
+      title: blog.seoTitle || blog.title,
+      description: blog.seoDescription,
       url: getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`),
       type: 'article',
-      publishedTime: blog.publishedAt,
-      modifiedTime: blog.updatedAt,
-      tags: blog.tags,
+      publishedTime: blog.createdAt?.toISOString(),
+      modifiedTime: blog.updatedAt?.toISOString(),
+      tags: blog.seoKeywords,
       images: [
         {
           url: OG_IMAGES.blog,
@@ -72,28 +45,19 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
     },
     twitter: {
       card: 'summary_large_image',
-      title: blog.metaTitle,
-      description: blog.metaDescription,
+      title: blog.seoTitle || blog.title,
+      description: blog.seoDescription,
       images: [OG_IMAGES.blog],
     }
   };
 }
 
 export default async function BlogDetailPage({ params: { locale, slug } }: { params: { locale: string, slug: string } }) {
-  let blogsDir = isPrimaryLocale(locale) 
-    ? path.join(process.cwd(), 'seo-blogs')
-    : path.join(process.cwd(), 'seo-blogs', locale);
-    
-  // FALLBACK: If translation doesn't exist yet, use English original
-  if (!fs.existsSync(blogsDir) || !fs.existsSync(path.join(blogsDir, `${slug}.json`))) {
-    blogsDir = path.join(process.cwd(), 'seo-blogs');
-  }
+  await connectToDatabase();
+  const blog = await Blog.findOne({ locale, slug }).lean();
 
-  const fileFound = `${slug}.json`;
-  const filePath = path.join(blogsDir, fileFound);
-  if (!fs.existsSync(filePath)) notFound();
+  if (!blog) notFound();
 
-  const blog = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
   const t = await getTranslations({ locale, namespace: 'Blog' });
 
   const cleanContent = blog.content.replace(/^\s*<h1[^>]*>.*?<\/h1>/i, '').trim();
@@ -109,9 +73,9 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
           
           <div className="text-center">
             <div className="flex items-center justify-center gap-4 text-xs font-black tracking-widest text-primary/60 uppercase mb-8">
-              <span className="px-3 py-1 bg-primary/5 rounded-md border border-primary/10">{blog.category}</span>
+              <span className="px-3 py-1 bg-primary/5 rounded-md border border-primary/10">{blog.category || 'Guide'}</span>
               <span className="w-1 h-1 rounded-full bg-primary/20"></span>
-              <span className="flex items-center gap-1.5"><Calendar size={14}/> {blog.publishedAt}</span>
+              <span className="flex items-center gap-1.5"><Calendar size={14}/> {new Date(blog.createdAt).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-foreground mb-12 leading-[1.1]">
@@ -120,16 +84,13 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
 
             <div className="flex flex-wrap items-center justify-center gap-8 pt-8 border-t border-border/40 max-w-2xl mx-auto">
               <div className="flex items-center gap-2 text-sm text-foreground/80 font-bold uppercase tracking-wider">
-                <Clock size={16} className="text-primary"/> {blog.readTime}
+                <Clock size={16} className="text-primary"/> {blog.readTime || '5 min read'}
               </div>
               {/* Social Share Pills */}
-              <div className="flex items-center gap-3">
-                {[Facebook, Twitter, Linkedin, Copy].map((Icon, i) => (
-                  <button key={i} className="h-10 w-10 flex items-center justify-center bg-card border-border hover:bg-primary/5 hover:border-primary/30 hover:text-primary transition-all rounded-full ring-1 ring-border">
-                    <Icon size={16} />
-                  </button>
-                ))}
-              </div>
+              <BlogShareButtons 
+                title={blog.title}
+                url={getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`)}
+              />
             </div>
           </div>
         </div>
@@ -148,8 +109,8 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
               {t('aboutDescription')}
             </p>
-            <Link href="/" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-black text-sm uppercase tracking-widest rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">
-               {t('exploreTools')} <ArrowLeft className="rotate-180" size={16}/>
+            <Link href={blog.internalLink || "/"} className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-black text-sm uppercase tracking-widest rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">
+               {blog.internalLink ? 'Try Tool Now' : t('exploreTools')} <ArrowLeft className="rotate-180" size={16}/>
             </Link>
         </footer>
       </div>
@@ -162,8 +123,8 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": blog.title,
-            "description": blog.metaDescription,
-            "datePublished": blog.publishedAt,
+            "description": blog.seoDescription,
+            "datePublished": blog.createdAt,
             "dateModified": blog.updatedAt,
             "author": {
               "@type": "Organization",
@@ -182,6 +143,35 @@ export default async function BlogDetailPage({ params: { locale, slug } }: { par
               "@type": "WebPage",
               "@id": getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`)
             }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": getLocalizedUrl(SITE_URL, locale, '')
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": getLocalizedUrl(SITE_URL, locale, '/blog')
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": blog.title,
+                "item": getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`)
+              }
+            ]
           })
         }}
       />

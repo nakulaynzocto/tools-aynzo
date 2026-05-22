@@ -2,20 +2,23 @@
 
 import { getWhatsAppLink } from "@/lib/constants";
 import { MessageCircle, Sparkles, X } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function PromotionalBanner() {
     const t = useTranslations('Marketing');
     const [isVisible, setIsVisible] = useState(false);
     const rate = t('rate');
 
+    const pathname = usePathname();
+
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 1500);
         return () => clearTimeout(timer);
     }, []);
 
-    if (!isVisible) return null;
+    if (!isVisible || pathname.includes('/admin')) return null;
 
     return (
         <div className="relative group bg-primary isolate flex items-center gap-x-6 overflow-hidden px-6 py-2.5 sm:px-3.5 sm:before:flex-1 animate-in slide-in-from-top duration-700">

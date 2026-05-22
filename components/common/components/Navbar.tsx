@@ -7,6 +7,7 @@ import { toolCategories, searchTools } from '@/lib/tools';
 import LanguageSwitcher from './LanguageSwitcher';
 import { ModeToggle } from './ModeToggle';
 import { cn } from '@/utils/cn';
+import { usePathname } from 'next/navigation';
 
 import { useTranslations } from 'next-intl';
 
@@ -57,6 +58,33 @@ export default function Navbar() {
             setShowSearch(false);
         }
     };
+
+    const pathname = usePathname();
+    const isAdmin = pathname.includes('/admin');
+    const isLogin = pathname.includes('/admin/login');
+
+    if (isAdmin) {
+        return (
+            <nav className="sticky top-0 z-50 bg-[#1e293b] text-white border-b border-slate-700 shadow-sm">
+                <div className="w-full px-6">
+                    <div className="flex items-center justify-between h-14">
+                        <Link href="/" className="flex items-center gap-2">
+                            <span className="font-bold tracking-wider text-sm">AYNZO<span className="text-blue-400">ADMIN</span></span>
+                        </Link>
+                        <div className="flex items-center gap-4 text-sm font-medium">
+                            <Link href="/" className="hover:text-blue-400 transition-colors">Public Site</Link>
+                            {!isLogin && (
+                                <>
+                                    <Link href="/admin/dashboard" className="hover:text-blue-400 transition-colors">SEO Dashboard</Link>
+                                    <Link href="/admin/blogs" className="hover:text-blue-400 transition-colors">Blogs</Link>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        );
+    }
 
     return (
         <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border shadow-sm">
