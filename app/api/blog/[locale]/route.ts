@@ -30,6 +30,7 @@ export async function GET(req: Request, { params }: { params: { locale: string }
 
     const [blogs, total] = await Promise.all([
       Blog.find({ locale })
+        .select('-content')
         .skip(skip)
         .limit(parseInt(limit))
         .sort({ createdAt: -1 }),

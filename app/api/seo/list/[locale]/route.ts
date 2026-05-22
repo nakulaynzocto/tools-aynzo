@@ -49,6 +49,7 @@ export async function GET(req: Request, { params }: { params: { locale: string }
 
     const [seoData, total] = await Promise.all([
       ToolSEO.find(query)
+        .select('-contentBody -faq')
         .skip(skip)
         .limit(parseInt(limit))
         .sort({ toolSlug: 1 }),
