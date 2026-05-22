@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 import { Download, Settings } from 'lucide-react';
 import { generateQRCode } from '@/components/utils/crypto/cryptoProcessing';
 
+import { useTranslations } from 'next-intl';
+
 export function QRCodeGenerator() {
+    const t = useTranslations('Tools.CryptoToolsText');
     const [input, setInput] = useState('');
     const [qrCodeData, setQrCodeData] = useState('');
     const [qrOptions, setQrOptions] = useState({
@@ -41,8 +44,8 @@ export function QRCodeGenerator() {
             <div className="grid lg:grid-cols-12 gap-10">
                 <div className="lg:col-span-7 space-y-4">
                     <div className="flex justify-between items-end">
-                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Input Data</label>
-                        <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} Chars</span>
+                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('inputData')}</label>
+                        <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} {t('chars')}</span>
                     </div>
                     <textarea
                         className="w-full p-6 border-2 border-border rounded-3xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground placeholder-muted-foreground min-h-[300px] shadow-inner transition-all"
@@ -60,17 +63,17 @@ export function QRCodeGenerator() {
                         <div className="space-y-6">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase text-muted-foreground">Foreground</label>
+                                    <label className="text-[10px] font-black uppercase text-muted-foreground">{t('foreground')}</label>
                                     <input type="color" value={qrOptions.dark} onChange={e => setQrOptions({ ...qrOptions, dark: e.target.value })} className="w-full h-12 rounded-xl cursor-pointer border-2 border-border bg-background p-1" />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase text-muted-foreground">Background</label>
+                                    <label className="text-[10px] font-black uppercase text-muted-foreground">{t('background')}</label>
                                     <input type="color" value={qrOptions.light} onChange={e => setQrOptions({ ...qrOptions, light: e.target.value })} className="w-full h-12 rounded-xl cursor-pointer border-2 border-border bg-background p-1" />
                                 </div>
                             </div>
                             <div className="space-y-4">
                                 <div className="flex justify-between text-[10px] font-black uppercase">
-                                    <span>Margin</span>
+                                    <span>{t('margin')}</span>
                                     <span className="text-accent">{qrOptions.margin}px</span>
                                 </div>
                                 <input type="range" min="0" max="10" value={qrOptions.margin} onChange={e => setQrOptions({ ...qrOptions, margin: parseInt(e.target.value) })} className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-accent" />

@@ -5,7 +5,10 @@ import { cn } from '@/utils/cn';
 
 interface DebtItem { name: string; amount: number; }
 
+import { useTranslations } from 'next-intl';
+
 export function DTICalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [grossIncome, setGrossIncome] = useState<number>(6000);
     const [debts, setDebts] = useState<DebtItem[]>([
         { name: 'Mortgage / Rent', amount: 1200 },
@@ -49,11 +52,11 @@ export function DTICalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Income & Debts</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('incomeDebts')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Gross Monthly Income</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('grossMonthlyIncome')}</label>
                         <div className="relative group">
                             <span className="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-muted-foreground group-focus-within:text-primary transition-colors">$</span>
                             <input type="number" value={grossIncome} onChange={e => setGrossIncome(Number(e.target.value))} className="w-full pl-8 pr-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
@@ -62,15 +65,14 @@ export function DTICalculator() {
 
                     <div className="space-y-3">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Monthly Debts</label>
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('monthlyDebts')}</label>
                             <button onClick={addDebt} className="flex items-center gap-1.5 text-primary font-bold text-xs hover:underline">
-                                <PlusCircle className="w-4 h-4" /> Add Debt
-                            </button>
+                                <PlusCircle className="w-4 h-4" />{tCalc('addDebt')}</button>
                         </div>
                         <div className="space-y-3">
                             {debts.map((d, i) => (
                                 <div key={i} className="flex gap-2 items-center">
-                                    <input type="text" value={d.name} onChange={e => updateDebt(i, 'name', e.target.value)} placeholder="Debt name" className="flex-1 px-4 py-2.5 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-medium text-sm" />
+                                    <input type="text" value={d.name} onChange={e => updateDebt(i, 'name', e.target.value)} placeholder={tCalc('debtName')} className="flex-1 px-4 py-2.5 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-medium text-sm" />
                                     <div className="relative w-32">
                                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground font-bold">$</span>
                                         <input type="number" value={d.amount} onChange={e => updateDebt(i, 'amount', Number(e.target.value))} className="w-full pl-6 pr-2 py-2.5 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-sm" />
@@ -85,16 +87,14 @@ export function DTICalculator() {
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Debt-to-Income Ratio</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('debtToIncomeRatio')}</h3>
 
                 <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[300px]">
                     <div className="text-center space-y-4">
                         <div className={cn('text-6xl font-black transition-colors animate-in fade-in zoom-in duration-500', cfg.color)}>
                             {result.dti.toFixed(1)}%
                         </div>
-                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                            Current DTI Ratio
-                        </div>
+                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('currentDTIRatio')}</div>
                         <div className={cn('px-4 py-2 rounded-xl border font-bold text-xs shadow-sm flex items-center gap-2', cfg.bg, cfg.border, cfg.color)}>
                             <StatusIcon className="w-4 h-4" /> {result.label.split(' – ')[0]}
                         </div>
@@ -102,7 +102,7 @@ export function DTICalculator() {
 
                     <div className="w-full space-y-4 bg-card/50 p-6 rounded-2xl border border-border/50">
                         <div className="flex justify-between items-center text-xs font-black uppercase tracking-widest">
-                            <span className="text-muted-foreground">Total Monthly Debt</span>
+                            <span className="text-muted-foreground">{tCalc('totalMonthlyDebt')}</span>
                             <span className="text-foreground">${result.totalDebt.toLocaleString()}</span>
                         </div>
                         <div className="w-full bg-muted/30 h-2 rounded-full overflow-hidden border border-border/50">
@@ -119,8 +119,7 @@ export function DTICalculator() {
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        Lenders typically prefer a DTI ratio of <strong>36% or less</strong> for the best interest rates and loan terms.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('lendersTypicallyPreferADTIRatioOf')}<strong>36% or less</strong> for the best interest rates and loan terms.
                     </p>
                 </div>
             </div>

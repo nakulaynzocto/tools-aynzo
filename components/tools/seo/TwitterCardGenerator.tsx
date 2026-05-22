@@ -11,7 +11,10 @@ interface TwitterCardGeneratorProps {
     onCopy: () => void;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function TwitterCardGenerator({ twitter, setTwitter, result, copied, onCopy }: TwitterCardGeneratorProps) {
+    const tTool = useTranslations('Tools.seoTools');
     return (
         <>
             <div className="p-8 space-y-6 h-full overflow-y-auto no-scrollbar bg-muted/5">
@@ -22,15 +25,15 @@ export function TwitterCardGenerator({ twitter, setTwitter, result, copied, onCo
                     </div>
                     <div className="grid gap-4">
                         <div className="space-y-1.5">
-                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Author Handle</label>
+                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('authorHandle')}</label>
                             <input value={twitter.site} onChange={e => setTwitter({ ...twitter, site: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" />
                         </div>
                         <div className="space-y-1.5">
-                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Card Headline</label>
+                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('cardHeadline')}</label>
                             <input value={twitter.title} onChange={e => setTwitter({ ...twitter, title: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" />
                         </div>
                         <div className="space-y-1.5">
-                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Hero Image URL</label>
+                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('heroImageURL')}</label>
                             <input value={twitter.image} onChange={e => setTwitter({ ...twitter, image: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" />
                         </div>
                     </div>
@@ -41,9 +44,8 @@ export function TwitterCardGenerator({ twitter, setTwitter, result, copied, onCo
                     <div className="space-y-3">
                         <div className="flex items-center justify-between">
                             <h3 className="text-[9px] font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
-                                <Globe size={12} className="text-primary" /> Visual Simulation
-                            </h3>
-                            <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-md text-[8px] font-black uppercase tracking-tighter leading-none border border-emerald-500/20">Live Sync</span>
+                                <Globe size={12} className="text-primary" />{tTool('visualSimulation')}</h3>
+                            <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-md text-[8px] font-black uppercase tracking-tighter leading-none border border-emerald-500/20">{tTool('liveSync')}</span>
                         </div>
                         <div className="bg-card rounded-3xl border border-border shadow-xl overflow-hidden">
                             <div className="aspect-[1200/630] bg-muted/30 relative flex items-center justify-center overflow-hidden">
@@ -52,17 +54,15 @@ export function TwitterCardGenerator({ twitter, setTwitter, result, copied, onCo
                                 ) : (
                                     <div className="flex flex-col items-center gap-2 opacity-20">
                                         <Share2 size={40} />
-                                        <span className="font-black text-[9px] uppercase tracking-widest">Asset Preview</span>
+                                        <span className="font-black text-[9px] uppercase tracking-widest">{tTool('assetPreview')}</span>
                                     </div>
                                 )}
-                                <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[8px] text-white font-black uppercase tracking-widest border border-white/10">
-                                    X-Card
-                                </div>
+                                <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[8px] text-white font-black uppercase tracking-widest border border-white/10">{tTool('xCard')}</div>
                             </div>
                             <div className="p-5 space-y-2 bg-card border-t border-border">
                                 <div className="flex items-center gap-1.5 opacity-40">
                                     <Globe size={10} />
-                                    <p className="text-[9px] font-black uppercase tracking-widest">EXAMPLE.COM</p>
+                                    <p className="text-[9px] font-black uppercase tracking-widest">{tTool('eXAMPLECOM')}</p>
                                 </div>
                                 <h4 className="text-base font-black leading-tight line-clamp-1 text-foreground">
                                     {twitter.title || 'Compelling Shared Title'}
@@ -76,8 +76,7 @@ export function TwitterCardGenerator({ twitter, setTwitter, result, copied, onCo
                     <div className="flex-1 flex flex-col min-h-0">
                         <div className="flex justify-between items-center mb-3">
                             <h3 className="text-[9px] font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
-                                <Code size={12} className="text-primary" /> Markup Output
-                            </h3>
+                                <Code size={12} className="text-primary" />{tTool('markupOutput')}</h3>
                             {result && (
                                 <button onClick={onCopy} className={cn("px-4 py-1.5 rounded-xl text-[9px] font-black flex items-center gap-2 transition-all uppercase tracking-widest border", copied ? "bg-emerald-500 text-white border-emerald-500" : "bg-card text-primary border-primary/20 hover:border-primary/50")}>
                                     {copied ? <CheckCircle2 size={12} /> : <Copy size={12} />}
@@ -92,7 +91,7 @@ export function TwitterCardGenerator({ twitter, setTwitter, result, copied, onCo
                                 </div>
                             ) : (
                                 <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/30 gap-3">
-                                    <p className="font-black text-[9px] uppercase tracking-[0.2em] text-center">Awaiting Data</p>
+                                    <p className="font-black text-[9px] uppercase tracking-[0.2em] text-center">{tTool('awaitingData')}</p>
                                 </div>
                             )}
                         </div>

@@ -13,6 +13,7 @@ const romanValues: { [key: string]: number } = {
 const romanNumerals = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
 
 export function RomanNumeralConverter() {
+    const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('Common');
     const [roman, setRoman] = useState('');
     const [number, setNumber] = useState('');
@@ -125,7 +126,7 @@ export function RomanNumeralConverter() {
                     {/* Roman Input */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">Roman Numeral</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('romanNumeral')}</label>
                             <button
                                 onClick={() => handleCopy(roman, 'roman')}
                                 className={cn(
@@ -154,7 +155,7 @@ export function RomanNumeralConverter() {
                     {/* Number Output */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">Number</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('number')}</label>
                             <button
                                 onClick={() => handleCopy(number, 'number')}
                                 className={cn(

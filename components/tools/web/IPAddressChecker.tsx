@@ -10,7 +10,10 @@ interface IPAddressCheckerProps {
     onRefresh: () => void;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function IPAddressChecker({ result, loading, copied, onCopy, onRefresh }: IPAddressCheckerProps) {
+    const tTool = useTranslations('Tools.webTools');
     return (
         <div className="py-16 flex flex-col items-center justify-center space-y-8">
             <div className="relative group">
@@ -20,7 +23,7 @@ export function IPAddressChecker({ result, loading, copied, onCopy, onRefresh }:
                 </div>
             </div>
             <div className="text-center space-y-4">
-                <h3 className="text-xs font-black uppercase tracking-[0.4em] text-muted-foreground">Public Gateway IP</h3>
+                <h3 className="text-xs font-black uppercase tracking-[0.4em] text-muted-foreground">{tTool('publicGatewayIP')}</h3>
                 <div className="text-7xl font-black tracking-tight text-foreground bg-clip-text">
                     {loading ? <div className="flex gap-2 p-4">{[1, 2, 3].map(i => <div key={i} className="w-5 h-5 bg-muted rounded-full animate-pulse" />)}</div> : result}
                 </div>
@@ -30,8 +33,7 @@ export function IPAddressChecker({ result, loading, copied, onCopy, onRefresh }:
                     {copied ? <CheckCircle2 size={20} /> : <Copy size={20} />} {copied ? 'IP COPIED' : 'COPY IP'}
                 </button>
                 <button onClick={onRefresh} className="px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-[1.25rem] font-black shadow-xl hover:scale-105 transition-all flex items-center gap-3 text-sm">
-                    <RefreshCw size={20} /> REFRESH
-                </button>
+                    <RefreshCw size={20} />{tTool('rEFRESH')}</button>
             </div>
         </div>
     );

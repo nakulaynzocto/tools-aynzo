@@ -16,11 +16,17 @@ const toolLabels: Record<string, string> = {
 };
 
 export function TextManipulator({ type }: TextManipulatorProps) {
+    const tToolNew = useTranslations('Tools.advancedtextToolsNew');
     const t = useTranslations('Common');
+    const tAdvText = useTranslations('Tools.AdvancedText');
+    const tTools = useTranslations('Tools');
     const tActions = useTranslations('ToolActions');
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [copied, setCopied] = useState(false);
+
+    // Get tool name
+    const toolName = tTools(`${type}.name`) !== `${type}.name` ? tTools(`${type}.name`) : 'Output';
 
     const handleTransform = () => {
         if (!input.trim()) {
@@ -59,12 +65,12 @@ export function TextManipulator({ type }: TextManipulatorProps) {
                 {/* Input */}
                 <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-sm font-black uppercase tracking-widest text-foreground">Input Text</label>
+                        <label className="text-sm font-black uppercase tracking-widest text-foreground">{tAdvText('inputText')}</label>
                     </div>
                     <textarea
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
-                        placeholder="Enter your text here..."
+                        placeholder={tAdvText('enterTextHere')}
                         className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-sm font-medium text-foreground focus:border-primary focus:outline-none min-h-[200px] resize-none"
                     />
                     <button
@@ -76,15 +82,14 @@ export function TextManipulator({ type }: TextManipulatorProps) {
                                 ? "bg-primary text-primary-foreground hover:bg-primary/90"
                                 : "bg-muted text-muted-foreground cursor-not-allowed"
                         )}
-                    >
-                        Transform <ArrowRight size={16} />
+                    >{tToolNew('transform')}<ArrowRight size={16} />
                     </button>
                 </div>
 
                 {/* Output */}
                 <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-sm font-black uppercase tracking-widest text-foreground">Output</label>
+                        <label className="text-sm font-black uppercase tracking-widest text-foreground">{toolName}</label>
                         <div className="flex gap-2">
                             <button
                                 onClick={handleCopy}
@@ -99,7 +104,7 @@ export function TextManipulator({ type }: TextManipulatorProps) {
                                 )}
                             >
                                 {copied ? <CheckCircle2 size={14} /> : <Copy size={14} />}
-                                Copy
+                                {tAdvText('copy')}
                             </button>
                             <button
                                 onClick={handleDownload}
@@ -112,16 +117,13 @@ export function TextManipulator({ type }: TextManipulatorProps) {
                                 )}
                             >
                                 <Download size={14} />
-                                Download
+                                {tAdvText('download')}
                             </button>
                         </div>
                     </div>
-                    <textarea
-                        value={output}
-                        readOnly
-                        placeholder="Transformed text will appear here..."
-                        className="w-full px-4 py-4 bg-muted/50 border-2 border-border rounded-xl text-sm font-medium text-foreground min-h-[200px] resize-none"
-                    />
+                    <div className="w-full px-4 py-4 bg-muted/50 border-2 border-border rounded-xl text-sm font-medium text-foreground min-h-[200px] whitespace-pre-wrap break-words">
+                        {output || <span className="text-muted-foreground">{tAdvText('transformedText')}</span>}
+                    </div>
                 </div>
             </div>
         </div>

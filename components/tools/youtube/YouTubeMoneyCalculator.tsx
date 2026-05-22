@@ -3,8 +3,10 @@ import { useState, useMemo } from 'react';
 import { DollarSign, TrendingUp, Eye, Copy, Check, Youtube, Info } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export function YouTubeMoneyCalculator() {
-    const [dailyViews, setDailyViews] = useState<number>(10000);
+    const tTool = useTranslations('Tools.youtubeTools'); const [dailyViews, setDailyViews] = useState<number>(10000);
     const [rpmMin, setRpmMin] = useState<number>(2);
     const [rpmMax, setRpmMax] = useState<number>(5);
     const [ctr, setCtr] = useState<number>(50); // what % of views are monetized
@@ -44,15 +46,15 @@ export function YouTubeMoneyCalculator() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="bg-muted/10 p-7 rounded-[2rem] border-2 border-border/50 space-y-6">
                     <div className="space-y-2">
-                        <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex justify-between">Daily Video Views <span>{dailyViews.toLocaleString()}</span></label>
+                        <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex justify-between">{tTool('dailyVideoViews')}<span>{dailyViews.toLocaleString()}</span></label>
                         <input type="range" min="100" max="10000000" step="100" value={dailyViews} onChange={e => setDailyViews(Number(e.target.value))} className="w-full accent-red-500" />
                     </div>
                     <div className="space-y-2">
-                        <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex justify-between">RPM Min <span>${rpmMin}</span></label>
+                        <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex justify-between">{tTool('rPMMin')}<span>${rpmMin}</span></label>
                         <input type="range" min="0.5" max="20" step="0.5" value={rpmMin} onChange={e => setRpmMin(Number(e.target.value))} className="w-full accent-red-500" />
                     </div>
                     <div className="space-y-2">
-                        <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex justify-between">RPM Max <span>${rpmMax}</span></label>
+                        <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex justify-between">{tTool('rPMMax')}<span>${rpmMax}</span></label>
                         <input type="range" min={rpmMin} max="30" step="0.5" value={rpmMax} onChange={e => setRpmMax(Number(e.target.value))} className="w-full accent-red-500" />
                     </div>
                     <div className="space-y-2">
@@ -60,14 +62,14 @@ export function YouTubeMoneyCalculator() {
                         <input type="range" min="10" max="100" value={ctr} onChange={e => setCtr(Number(e.target.value))} className="w-full accent-red-500" />
                     </div>
                     <div className="bg-muted/30 rounded-2xl p-4 text-sm text-muted-foreground font-medium">
-                        <strong className="text-foreground">RPM</strong> (Revenue per Mille) varies by niche: Finance ($10-30), Tech ($5-15), Entertainment ($2-5).
+                        <strong className="text-foreground">{tTool('rPM')}</strong> (Revenue per Mille) varies by niche: Finance ($10-30), Tech ($5-15), Entertainment ($2-5).
                     </div>
                 </div>
 
                 <div className="flex flex-col gap-5">
                     <div className="bg-gradient-to-br from-red-600 to-red-500 p-8 rounded-[2.5rem] text-white text-center shadow-2xl">
                         <DollarSign className="w-12 h-12 mx-auto mb-3 text-red-200" />
-                        <p className="text-red-100 font-black uppercase tracking-widest text-sm mb-2">Daily Earnings</p>
+                        <p className="text-red-100 font-black uppercase tracking-widest text-sm mb-2">{tTool('dailyEarnings')}</p>
                         <p className="text-5xl font-black">{fmtRange(result.dailyMin, result.dailyMax)}</p>
                         <p className="text-red-200 font-bold mt-2">based on {dailyViews.toLocaleString()} views/day</p>
                     </div>
@@ -89,8 +91,8 @@ export function YouTubeMoneyCalculator() {
             <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">How YouTube Earnings Work</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed"><strong>RPM</strong> (Revenue per Mille) varies widely by niche: Finance/Legal ($10–30), Tech/Software ($5–15), Entertainment ($2–5). Only ~40–60% of views are monetized — the rest come from viewers in low-CPM regions or using ad blockers.</p>
+                    <h4 className="font-bold text-foreground">{tTool('howYouTubeEarningsWork')}</h4>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed"><strong>{tTool('rPM')}</strong> (Revenue per Mille) varies widely by niche: Finance/Legal ($10–30), Tech/Software ($5–15), Entertainment ($2–5). Only ~40–60% of views are monetized — the rest come from viewers in low-CPM regions or using ad blockers.</p>
                 </div>
             </div>
         </div>

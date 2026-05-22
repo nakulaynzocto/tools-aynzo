@@ -11,6 +11,7 @@ import { TextMetrics } from './TextMetrics';
 import { TextFindReplace } from './TextFindReplace'; // Re-adding this import
 
 export default function TextToolsIndex({ type, hideNavigation = false }: TextToolProps) {
+    const tTool = useTranslations('Tools.textTools');
     const t = useTranslations('TextTools');
     const tNav = useTranslations('TextNav');
     const textNavTools = [

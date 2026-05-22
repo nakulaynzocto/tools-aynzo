@@ -8,7 +8,9 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 export function WordToPdf() {
+    const tToolNew = useTranslations('Tools.pdfToolsNew');
     const tActions = useTranslations('ToolActions');
+    const tPdf = useTranslations('Tools.PdfTools');
     const [file, setFile] = useState<File | null>(null);
     const [processing, setProcessing] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -23,7 +25,7 @@ export function WordToPdf() {
         ];
 
         if (!validTypes.includes(selectedFile.type) && !selectedFile.name.endsWith('.docx') && !selectedFile.name.endsWith('.doc')) {
-            setError('Please select a Word document (.doc or .docx)');
+            setError(tPdf('selectFilePdf') || 'Please select a Word document (.doc or .docx)');
             return;
         }
         setFile(selectedFile);
@@ -114,7 +116,7 @@ export function WordToPdf() {
 
         } catch (e: any) {
             console.error(e);
-            setError(e.message || 'Failed to convert Word to PDF');
+            setError(e.message || tPdf('failedConvert') || 'Failed to convert Word to PDF');
             setProcessing(false);
         }
     };
@@ -151,10 +153,10 @@ export function WordToPdf() {
                 >
                     <Upload className="mx-auto mb-4 text-primary" size={48} />
                     <p className="text-lg font-bold text-foreground mb-2">
-                        {tActions('chooseFile') || 'Choose File'}
+                        {tActions('chooseFile') || tPdf('chooseFile')}
                     </p>
                     <p className="text-sm text-muted-foreground mb-4">
-                        Drag and drop your Word document here, or click to browse
+                        {tPdf('selectFilePdf')}
                     </p>
                     <p className="text-xs text-muted-foreground">
                         Supported formats: .doc, .docx
@@ -196,7 +198,7 @@ export function WordToPdf() {
                     {!downloadUrl && !processing && (
                         <div className="py-12 text-center">
                             <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto mb-4" />
-                            <p className="text-muted-foreground animate-pulse">Initializing conversion...</p>
+                            <p className="text-muted-foreground animate-pulse">{tPdf('converting') || 'Initializing conversion...'}</p>
                         </div>
                     )}
 
@@ -204,8 +206,8 @@ export function WordToPdf() {
                         <div className="py-10 text-center space-y-4">
                             <div className="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto" />
                             <div>
-                                <h3 className="font-bold text-lg">Converting to PDF...</h3>
-                                <p className="text-sm text-muted-foreground">Preserving document layout and styles</p>
+                                <h3 className="font-bold text-lg">{tPdf('convertToPdf')}...</h3>
+                                <p className="text-sm text-muted-foreground">{tPdf('preserveLayout')}</p>
                             </div>
                         </div>
                     )}
@@ -215,8 +217,8 @@ export function WordToPdf() {
                             <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-5 flex items-center gap-4">
                                 <CheckCircle2 className="text-emerald-600" size={28} />
                                 <div>
-                                    <p className="font-bold text-emerald-700">Conversion Complete!</p>
-                                    <p className="text-sm text-muted-foreground">Your PDF is ready for download</p>
+                                    <p className="font-bold text-emerald-700">{tPdf('convertComplete')}</p>
+                                    <p className="text-sm text-muted-foreground">{tPdf('readyToDownloadConvert')}</p>
                                 </div>
                             </div>
                             <button
@@ -230,7 +232,7 @@ export function WordToPdf() {
                                 onClick={handleClear}
                                 className="text-muted-foreground hover:text-foreground text-sm underline w-full"
                             >
-                                Convert another file
+                                {tActions('clearAll') || 'Convert another file'}
                             </button>
                         </div>
                     )}

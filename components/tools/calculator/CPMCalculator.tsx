@@ -9,7 +9,10 @@ interface CPMResult {
     unit: string;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function CPMCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [cost, setCost] = useState(1000);
     const [cpm, setCpm] = useState(5);
     const [impressions, setImpressions] = useState(200000);
@@ -52,7 +55,7 @@ export function CPMCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Ad Metrics</h3>
+                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('adMetrics')}</h3>
                     <Megaphone size={16} className="text-primary" />
                 </div>
                 
@@ -101,7 +104,7 @@ export function CPMCalculator() {
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Calculator Output</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('calculatorOutput')}</h3>
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[350px] flex flex-col items-center justify-center gap-6 shadow-sm">
                         <div className="text-center space-y-4">
@@ -118,7 +121,7 @@ export function CPMCalculator() {
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
                         <Megaphone size={48} className="opacity-20" />
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Solve for Cost, CPM, or Reach</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('solveForCostCPMOrReach')}</span>
                     </div>
                 )}
             </div>

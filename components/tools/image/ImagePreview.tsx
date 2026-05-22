@@ -15,8 +15,9 @@ interface ImagePreviewProps {
     mobilePreview?: boolean;
 }
 
-export function ImagePreview({
-    files,
+import { useTranslations } from 'next-intl';
+
+export function ImagePreview({ files,
     selectedFileId,
     previewUrl,
     className,
@@ -26,6 +27,7 @@ export function ImagePreview({
     children,
     mobilePreview = false,
 }: ImagePreviewProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const selectedFile = files.find(f => f.id === selectedFileId) || files[0];
 
     return (
@@ -36,11 +38,11 @@ export function ImagePreview({
             {showComparison && originalSize && processedSize && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                     <div className="bg-card/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-border shadow-sm flex flex-row sm:flex-col justify-between items-center sm:items-start">
-                        <div className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Original</div>
+                        <div className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{tTool('original')}</div>
                         <div className="text-xl sm:text-2xl font-black text-foreground">{originalSize} KB</div>
                     </div>
                     <div className="bg-primary/10 border-primary/20 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-primary/30 shadow-sm flex flex-row sm:flex-col justify-between items-center sm:items-start">
-                        <div className="text-[10px] font-black uppercase tracking-widest text-primary">Processed</div>
+                        <div className="text-[10px] font-black uppercase tracking-widest text-primary">{tTool('processed')}</div>
                         <div className="text-xl sm:text-2xl font-black text-primary">{processedSize} KB</div>
                     </div>
                 </div>
@@ -63,7 +65,7 @@ export function ImagePreview({
                         className="max-w-full max-h-full object-contain"
                     />
                 ) : (
-                    <div className="text-muted-foreground text-sm">No image selected</div>
+                    <div className="text-muted-foreground text-sm">{tTool('noImageSelected')}</div>
                 )}
                 {children}
             </div>

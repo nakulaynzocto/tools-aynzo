@@ -6,7 +6,9 @@ import { useTranslations } from 'next-intl';
 import { PDFDocument } from 'pdf-lib';
 
 export function MergePdf() {
+    const tToolNew = useTranslations('Tools.pdfToolsNew');
     const tActions = useTranslations('ToolActions');
+    const tPdf = useTranslations('Tools.PdfTools');
     const [files, setFiles] = useState<File[]>([]);
     const [processing, setProcessing] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -21,7 +23,7 @@ export function MergePdf() {
         );
 
         if (pdfFiles.length === 0) {
-            setError('Please select PDF files');
+            setError(tPdf('pleaseSelectPdf'));
             return;
         }
 
@@ -60,7 +62,7 @@ export function MergePdf() {
     const processMerge = async () => {
         if (files.length === 0) return;
         if (files.length === 1) {
-            setError('Please add at least 2 PDF files to merge');
+            setError(tPdf('pleaseAddTwo'));
             return;
         }
 
@@ -82,7 +84,7 @@ export function MergePdf() {
             const url = URL.createObjectURL(blob);
             setDownloadUrl(url);
         } catch (e) {
-            setError(e instanceof Error ? e.message : 'Failed to merge PDFs');
+            setError(e instanceof Error ? e.message : tPdf('failedMerge'));
         } finally {
             setProcessing(false);
         }
@@ -120,13 +122,13 @@ export function MergePdf() {
                 >
                     <Upload className="mx-auto mb-4 text-primary" size={48} />
                     <p className="text-lg font-bold text-foreground mb-2">
-                        {tActions('chooseFile') || 'Choose Files'}
+                        {tActions('chooseFile') || tPdf('chooseFile')}
                     </p>
                     <p className="text-sm text-muted-foreground mb-4">
-                        Drag and drop PDF files here, or click to browse
+                        {tPdf('dragDrop')}
                     </p>
                     <p className="text-xs text-muted-foreground">
-                        Select multiple PDF files to merge
+                        {tPdf('selectMultipleMerge')}
                     </p>
                     <input
                         ref={fileInputRef}
@@ -143,7 +145,7 @@ export function MergePdf() {
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-3">
                         <div className="flex items-center justify-between mb-4">
                             <p className="font-bold text-foreground">
-                                {files.length} PDF file{files.length !== 1 ? 's' : ''} selected
+                                {tPdf('filesSelected').replace('{count}', files.length.toString())}
                             </p>
                             <div className="flex gap-2">
                                 <button
@@ -151,13 +153,13 @@ export function MergePdf() {
                                     className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-bold hover:bg-primary/90 transition-all flex items-center gap-2"
                                 >
                                     <Plus size={16} />
-                                    Add More
+                                    {tPdf('addMore')}
                                 </button>
                                 <button
                                     onClick={handleClear}
                                     className="px-4 py-2 bg-muted text-foreground rounded-lg text-sm font-bold hover:bg-muted/80 transition-all"
                                 >
-                                    Clear All
+                                    {tPdf('clearAll')}
                                 </button>
                             </div>
                         </div>
@@ -237,7 +239,7 @@ export function MergePdf() {
                                     : "bg-primary text-primary-foreground hover:bg-primary/90"
                             )}
                         >
-                            {processing ? 'Merging PDFs...' : 'Merge PDFs'}
+                            {processing ? tPdf('merging') : tPdf('mergePdfBtn')}
                         </button>
                     )}
 
@@ -246,8 +248,8 @@ export function MergePdf() {
                             <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 flex items-center gap-3">
                                 <CheckCircle2 className="text-emerald-500" size={24} />
                                 <div className="flex-1">
-                                    <p className="font-bold text-emerald-500">Merge Complete!</p>
-                                    <p className="text-xs text-muted-foreground">Your merged PDF is ready to download.</p>
+                                    <p className="font-bold text-emerald-500">{tPdf('mergeComplete')}</p>
+                                    <p className="text-xs text-muted-foreground">{tPdf('readyToDownloadMerge')}</p>
                                 </div>
                             </div>
                             <button
@@ -255,7 +257,7 @@ export function MergePdf() {
                                 className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                             >
                                 <Download size={20} />
-                                {tActions('download') || 'Download Merged PDF'}
+                                {tActions('download') || tPdf('downloadMerged')}
                             </button>
                         </div>
                     )}

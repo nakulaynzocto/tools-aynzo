@@ -13,7 +13,10 @@ interface URLEncoderDecoderProps {
     onDownload: () => void;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function URLEncoderDecoder({ input, setInput, output, mode, setMode, copied, onCopy, onDownload }: URLEncoderDecoderProps) {
+    const tTool = useTranslations('Tools.devTools');
     return (
         <>
             <div className="flex flex-wrap gap-3 items-center">
@@ -24,26 +27,22 @@ export function URLEncoderDecoder({ input, setInput, output, mode, setMode, copi
                             : 'bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95'
                         )}
                         onClick={() => setMode('encode')}
-                    >
-                        Encode
-                    </button>
+                    >{tTool('encode')}</button>
                     <button
                         className={cn("px-6 py-2 rounded-lg font-bold transition-all text-sm border", mode === 'decode'
                             ? 'bg-primary text-primary-foreground border-primary shadow-lg'
                             : 'bg-transparent text-foreground border-border hover:bg-primary/10 hover:border-primary active:scale-95'
                         )}
                         onClick={() => setMode('decode')}
-                    >
-                        Decode
-                    </button>
+                    >{tTool('decode')}</button>
                 </div>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-6">
                 <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                        <label className="text-sm font-bold">Input</label>
-                        <button onClick={() => setInput('')} className="text-xs text-muted-foreground hover:text-foreground">Clear</button>
+                        <label className="text-sm font-bold">{tTool('input')}</label>
+                        <button onClick={() => setInput('')} className="text-xs text-muted-foreground hover:text-foreground">{tTool('clear')}</button>
                     </div>
                     <textarea
                         value={input}
@@ -54,7 +53,7 @@ export function URLEncoderDecoder({ input, setInput, output, mode, setMode, copi
                 </div>
                 <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                        <label className="text-sm font-bold">Output</label>
+                        <label className="text-sm font-bold">{tTool('output')}</label>
                         <div className="flex gap-2">
                             <button onClick={onCopy} className={cn("p-2 rounded-lg transition-all", copied ? "bg-emerald-500 text-white" : "bg-muted hover:bg-primary hover:text-primary-foreground")}>
                                 {copied ? <CheckCircle2 className="h-4 w-4" /> : <Copy className="h-4 w-4" />}

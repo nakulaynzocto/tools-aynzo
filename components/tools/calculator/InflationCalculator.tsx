@@ -10,7 +10,10 @@ interface InflationResult {
     lossPercent: string;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function InflationCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [amount, setAmount] = useState(100);
     const [rate, setRate] = useState(4); // Default 4% inflation
     const [time, setTime] = useState(10);
@@ -48,7 +51,7 @@ export function InflationCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Monetary Inputs</h3>
+                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('monetaryInputs')}</h3>
                     <ArrowDownNarrowWide size={16} className="text-rose-500" />
                 </div>
                 
@@ -78,7 +81,7 @@ export function InflationCalculator() {
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Impact Profile</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('impactProfile')}</h3>
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[350px] flex flex-col items-center justify-center gap-6 shadow-sm">
                         <div className="text-center space-y-4">
@@ -89,11 +92,11 @@ export function InflationCalculator() {
 
                         <div className="grid grid-cols-2 gap-4 w-full">
                             <div className="bg-card p-4 rounded-2xl border border-border flex flex-col items-center shadow-sm">
-                                <span className="text-[10px] font-black uppercase text-muted-foreground mb-1">Total Value Lost</span>
+                                <span className="text-[10px] font-black uppercase text-muted-foreground mb-1">{tCalc('totalValueLost')}</span>
                                 <span className="text-sm font-bold text-rose-500">-${result.lostValue}</span>
                             </div>
                             <div className="bg-card p-4 rounded-2xl border border-border flex flex-col items-center shadow-sm">
-                                <span className="text-[10px] font-black uppercase text-muted-foreground mb-1">Cost to Buy Same</span>
+                                <span className="text-[10px] font-black uppercase text-muted-foreground mb-1">{tCalc('costToBuySame')}</span>
                                 <span className="text-sm font-bold text-primary">${result.futureCost}</span>
                             </div>
                         </div>
@@ -110,7 +113,7 @@ export function InflationCalculator() {
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
                         <ShoppingCart size={48} className="opacity-20" />
-                        <span className="text-xs font-black uppercase tracking-widest text-center">See how time affects your wallet</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('seeHowTimeAffectsYourWallet')}</span>
                     </div>
                 )}
             </div>

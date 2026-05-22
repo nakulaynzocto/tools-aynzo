@@ -44,8 +44,10 @@ function detectAI(text: string): { score: number; signals: string[] } {
     return { score: Math.max(5, Math.min(96, score)), signals };
 }
 
+import { useTranslations } from 'next-intl';
+
 export function AIContentDetector() {
-    const [text, setText] = useState('');
+    const tTool = useTranslations('Tools.utilityTools'); const [text, setText] = useState('');
     const [result, setResult] = useState<{ score: number; signals: string[] } | null>(null);
     const [copied, setCopied] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -92,8 +94,7 @@ export function AIContentDetector() {
             <div className="bg-muted/10 p-8 rounded-[2rem] border-2 border-border/50 space-y-5">
                 <div className="flex items-center justify-between">
                     <label className="text-sm font-black text-primary uppercase tracking-widest flex items-center gap-2">
-                        <ScanSearch className="w-4 h-4" /> Paste Text to Analyze
-                    </label>
+                        <ScanSearch className="w-4 h-4" />{tTool('pasteTextToAnalyze')}</label>
                     <span className={cn('text-sm font-bold', wordCount >= 50 ? 'text-green-500' : 'text-muted-foreground')}>
                         {wordCount} / 50 words minimum
                     </span>
@@ -111,9 +112,9 @@ export function AIContentDetector() {
                     className="w-full py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-2xl font-black text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                 >
                     {isAnalyzing ? (
-                        <><Zap className="w-5 h-5 animate-pulse" /> Analyzing Patterns...</>
+                        <><Zap className="w-5 h-5 animate-pulse" />{tTool('analyzingPatterns')}</>
                     ) : (
-                        <><ScanSearch className="w-5 h-5" /> Detect AI Content</>
+                        <><ScanSearch className="w-5 h-5" />{tTool('detectAIContent')}</>
                     )}
                 </button>
             </div>
@@ -126,7 +127,7 @@ export function AIContentDetector() {
                         <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
                             <div className="text-center">
                                 <div className="text-7xl font-black">{result.score}%</div>
-                                <div className="text-white/80 font-bold text-sm mt-1">AI Probability</div>
+                                <div className="text-white/80 font-bold text-sm mt-1">{tTool('aIProbability')}</div>
                             </div>
                             <div className="flex-1 space-y-3">
                                 <p className="text-2xl font-black">{cfg.label}</p>
@@ -140,7 +141,7 @@ export function AIContentDetector() {
 
                     {result.signals.length > 0 && (
                         <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-lg space-y-4">
-                            <p className="text-sm font-black text-muted-foreground uppercase tracking-widest">Detection Signals Found</p>
+                            <p className="text-sm font-black text-muted-foreground uppercase tracking-widest">{tTool('detectionSignalsFound')}</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 {result.signals.map((s, i) => (
                                     <div key={i} className={cn('flex items-start gap-3 p-3 rounded-xl border text-sm font-medium', s.includes('human') ? 'bg-green-500/5 border-green-500/20 text-green-700 dark:text-green-400' : 'bg-red-500/5 border-red-500/20 text-red-700 dark:text-red-400')}>
@@ -157,8 +158,8 @@ export function AIContentDetector() {
             <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">About This Tool</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">This tool uses <strong>heuristic signal analysis</strong> (linguistic patterns, phrase detection, writing style). It is not 100% accurate and should be used as a guide. For critical use cases, supplement with multiple AI detection tools.</p>
+                    <h4 className="font-bold text-foreground">{tTool('aboutThisTool')}</h4>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('thisToolUses')}<strong>heuristic signal analysis</strong> (linguistic patterns, phrase detection, writing style). It is not 100% accurate and should be used as a guide. For critical use cases, supplement with multiple AI detection tools.</p>
                 </div>
             </div>
         </div>

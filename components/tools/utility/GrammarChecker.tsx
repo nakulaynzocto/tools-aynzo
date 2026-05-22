@@ -35,8 +35,10 @@ const rules: Array<{ pattern: RegExp; suggestion: (m: RegExpMatchArray) => strin
     { pattern: /\bsuprise\b/gi, suggestion: () => "surprise", reason: "Common misspelling" },
 ];
 
+import { useTranslations } from 'next-intl';
+
 export function GrammarChecker() {
-    const [text, setText] = useState('');
+    const tTool = useTranslations('Tools.utilityTools'); const [text, setText] = useState('');
     const [issues, setIssues] = useState<GrammarIssue[]>([]);
     const [checked, setChecked] = useState(false);
     const [copied, setCopied] = useState(false);
@@ -81,8 +83,7 @@ export function GrammarChecker() {
                 <div className="flex items-center gap-3">
                     {checked && issues.length > 0 && (
                         <button onClick={fixAll} className="flex items-center gap-2.5 px-5 py-3.5 bg-green-500 hover:bg-green-600 text-white rounded-2xl font-bold text-sm transition-all shadow-lg">
-                            <RefreshCw className="w-4 h-4" /> Fix All Issues
-                        </button>
+                            <RefreshCw className="w-4 h-4" />{tTool('fixAllIssues')}</button>
                     )}
                     <button onClick={handleCopy} disabled={!text} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base disabled:opacity-50">
                         {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
@@ -114,22 +115,20 @@ export function GrammarChecker() {
             {/* Text Area */}
             <div className="bg-muted/10 p-8 rounded-[2rem] border-2 border-border/50 space-y-5">
                 <label className="text-sm font-black text-primary uppercase tracking-widest flex items-center gap-2">
-                    <SpellCheck className="w-4 h-4" /> Your Text
-                </label>
+                    <SpellCheck className="w-4 h-4" />{tTool('yourText')}</label>
                 <textarea
                     value={text}
                     onChange={e => { setText(e.target.value); setChecked(false); setIssues([]); }}
                     rows={12}
                     className="w-full px-5 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-medium text-sm resize-none"
-                    placeholder="Paste or type your text here to check for grammar and spelling errors..."
+                    placeholder={tTool('pasteOrTypeYourTextHereToCheckForGrammarAndSpellingErrors')}
                 />
                 <button
                     onClick={handleCheck}
                     disabled={text.trim().length < 5}
                     className="w-full py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-2xl font-black text-lg transition-all disabled:opacity-50 flex items-center justify-center gap-3"
                 >
-                    <SpellCheck className="w-5 h-5" /> Check Grammar
-                </button>
+                    <SpellCheck className="w-5 h-5" />{tTool('checkGrammar')}</button>
             </div>
 
             {/* Results */}
@@ -140,8 +139,8 @@ export function GrammarChecker() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl" />
                             <div className="relative z-10 space-y-3">
                                 <CheckCircle className="w-16 h-16 mx-auto text-white/90" />
-                                <p className="text-3xl font-black">No Issues Found!</p>
-                                <p className="text-white/80 font-medium">Your text looks great. No grammar errors detected.</p>
+                                <p className="text-3xl font-black">{tTool('noIssuesFound')}</p>
+                                <p className="text-white/80 font-medium">{tTool('yourTextLooksGreatNoGrammarErrorsDetected')}</p>
                             </div>
                         </div>
                     ) : (
@@ -149,8 +148,7 @@ export function GrammarChecker() {
                             <div className="flex items-center justify-between">
                                 <p className="text-sm font-black text-muted-foreground uppercase tracking-widest">{issues.length} Issues Found</p>
                                 <button onClick={fixAll} className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-sm transition-all">
-                                    <RefreshCw className="w-3.5 h-3.5" /> Fix All
-                                </button>
+                                    <RefreshCw className="w-3.5 h-3.5" />{tTool('fixAll')}</button>
                             </div>
                             <div className="space-y-3">
                                 {issues.map((issue, i) => (
@@ -175,8 +173,8 @@ export function GrammarChecker() {
             <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">About This Tool</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">This tool uses <strong>rule-based pattern matching</strong> to detect common grammar and spelling errors — entirely in your browser with no API calls. It catches frequent mistakes but is not a replacement for full grammar software like Grammarly.</p>
+                    <h4 className="font-bold text-foreground">{tTool('aboutThisTool')}</h4>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('thisToolUses')}<strong>rule-based pattern matching</strong> to detect common grammar and spelling errors — entirely in your browser with no API calls. It catches frequent mistakes but is not a replacement for full grammar software like Grammarly.</p>
                 </div>
             </div>
         </div>

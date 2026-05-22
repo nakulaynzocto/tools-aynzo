@@ -3,7 +3,11 @@ import { useState } from 'react';
 import { Copy, CheckCircle2, Gavel, Download, FileText } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export function TermsConditionsGenerator() {
+    const tToolNew = useTranslations('Tools.socialToolsNew');
+    const tSocial = useTranslations('Tools.SocialToolsText');
     const [websiteName, setWebsiteName] = useState('');
     const [websiteUrl, setWebsiteUrl] = useState('');
     const [country, setCountry] = useState('United States');
@@ -67,32 +71,30 @@ These Terms will be governed by and interpreted in accordance with the laws of $
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Business Details</h3>
+                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tSocial('businessDetails')}</h3>
                     <Gavel size={16} className="text-primary" />
                 </div>
                 
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Website Name</label>
+                        <label className="text-sm font-bold text-foreground">{tSocial('websiteName')}</label>
                         <input type="text" value={websiteName} onChange={e => setWebsiteName(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" placeholder="e.g. Aynzo Tools" />
                     </div>
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Website URL</label>
+                        <label className="text-sm font-bold text-foreground">{tSocial('websiteUrl')}</label>
                         <input type="text" value={websiteUrl} onChange={e => setWebsiteUrl(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" placeholder="https://example.com" />
                     </div>
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Governing Country/State</label>
+                        <label className="text-sm font-bold text-foreground">{tSocial('governingCountry')}</label>
                         <input type="text" value={country} onChange={e => setCountry(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" placeholder="e.g. United States, California" />
                     </div>
                     
-                    <button onClick={generate} disabled={!websiteName || !websiteUrl} className="w-full py-4 bg-primary text-white rounded-xl font-black shadow-lg hover:opacity-90 transition-all disabled:opacity-50">
-                        Generate Terms & Conditions
-                    </button>
+                    <button onClick={generate} disabled={!websiteName || !websiteUrl} className="w-full py-4 bg-primary text-white rounded-xl font-black shadow-lg hover:opacity-90 transition-all disabled:opacity-50">{tToolNew('generateTermsConditions')}</button>
                 </div>
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Generated Document</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tSocial('generatedDoc')}</h3>
                 {terms ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-6 min-h-[400px] flex flex-col gap-4 shadow-sm relative">
                         <div className="flex justify-end gap-2 mb-2">
@@ -110,7 +112,7 @@ These Terms will be governed by and interpreted in accordance with the laws of $
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
                         <FileText size={48} className="opacity-20" />
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Enter details to generate agreement</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tSocial('enterDetailsDoc')}</span>
                     </div>
                 )}
             </div>

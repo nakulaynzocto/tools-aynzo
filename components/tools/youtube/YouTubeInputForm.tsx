@@ -1,6 +1,6 @@
 "use client";
-import { RefreshCw, Play, CheckCircle2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { RefreshCw, Play, CheckCircle2 } from 'lucide-react';
 import { YouTubeToolProps } from '@/components/types/youtube/types';
 
 interface YouTubeInputFormProps {
@@ -11,7 +11,9 @@ interface YouTubeInputFormProps {
     setLoading: (value: boolean) => void;
 }
 
+
 export function YouTubeInputForm({ type, input, setInput, loading, setLoading }: YouTubeInputFormProps) {
+    const tTool = useTranslations('Tools.youtubeTools');
     const t = useTranslations('YouTubeTools');
 
     return (
@@ -48,8 +50,7 @@ export function YouTubeInputForm({ type, input, setInput, loading, setLoading }:
 
                 <div className="pt-8 flex justify-center gap-8 border-t border-border/50">
                     <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-40">
-                        <Play size={14} className="text-red-500" /> Fast Extract
-                    </div>
+                        <Play size={14} className="text-red-500" />{tTool('fastExtract')}</div>
                     <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-40">
                         <CheckCircle2 size={14} className="text-emerald-500" /> 100% Free
                     </div>

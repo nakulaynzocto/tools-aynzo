@@ -7,6 +7,7 @@ import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 
 export default function RegexDiffToolsIndex({ type }: RegexDiffToolProps) {
+    const tToolNew = useTranslations('Tools.regexToolsNew');
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     
@@ -94,25 +95,25 @@ export default function RegexDiffToolsIndex({ type }: RegexDiffToolProps) {
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
                                 <label className="text-sm font-bold">Text 1 (Original)</label>
-                                <button onClick={() => setText1('')} className="text-xs text-muted-foreground hover:text-foreground">Clear</button>
+                                <button onClick={() => setText1('')} className="text-xs text-muted-foreground hover:text-foreground">{tToolNew('clear')}</button>
                             </div>
                             <textarea
                                 value={text1}
                                 onChange={(e) => setText1(e.target.value)}
                                 className="w-full h-96 p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 focus:border-primary outline-none resize-none"
-                                placeholder="Paste first text here..."
+                                placeholder={tToolNew('pasteFirstTextHere')}
                             />
                         </div>
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
                                 <label className="text-sm font-bold">Text 2 (Modified)</label>
-                                <button onClick={() => setText2('')} className="text-xs text-muted-foreground hover:text-foreground">Clear</button>
+                                <button onClick={() => setText2('')} className="text-xs text-muted-foreground hover:text-foreground">{tToolNew('clear')}</button>
                             </div>
                             <textarea
                                 value={text2}
                                 onChange={(e) => setText2(e.target.value)}
                                 className="w-full h-96 p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 focus:border-primary outline-none resize-none"
-                                placeholder="Paste second text here..."
+                                placeholder={tToolNew('pasteSecondTextHere')}
                             />
                         </div>
                     </div>
@@ -120,7 +121,7 @@ export default function RegexDiffToolsIndex({ type }: RegexDiffToolProps) {
                     {diff.length > 0 && (
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">Differences</label>
+                                <label className="text-sm font-bold">{tToolNew('differences')}</label>
                                 <div className="flex gap-2">
                                     <button 
                                         onClick={handleCopy} 

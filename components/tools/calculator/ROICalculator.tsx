@@ -9,7 +9,10 @@ interface ROIResult {
     isProfit: boolean;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function ROICalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [investment, setInvestment] = useState(10000);
     const [returns, setReturns] = useState(15000);
     const [copied, setCopied] = useState(false);
@@ -41,7 +44,7 @@ export function ROICalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Investment Metrics</h3>
+                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('investmentMetrics')}</h3>
                     <Target size={16} className="text-primary" />
                 </div>
                 
@@ -66,7 +69,7 @@ export function ROICalculator() {
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">ROI Analysis</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('rOIAnalysis')}</h3>
                 {result ? (
                     <div className={cn(
                         "border-2 rounded-3xl p-8 min-h-[350px] flex flex-col items-center justify-center gap-6 shadow-sm",
@@ -96,7 +99,7 @@ export function ROICalculator() {
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
                         <Target size={48} className="opacity-20" />
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Enter data to evaluate performance</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('enterDataToEvaluatePerformance')}</span>
                     </div>
                 )}
             </div>

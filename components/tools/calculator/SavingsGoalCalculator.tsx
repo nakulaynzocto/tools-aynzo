@@ -3,7 +3,10 @@ import { useState, useMemo } from 'react';
 import { Target, DollarSign, TrendingUp, Copy, Check, Info, Calendar, ArrowUpRight } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export function SavingsGoalCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [goal, setGoal] = useState<number>(20000);
     const [currentSavings, setCurrentSavings] = useState<number>(2000);
     const [monthlyContrib, setMonthlyContrib] = useState<number>(500);
@@ -44,12 +47,12 @@ export function SavingsGoalCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Savings Strategy</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('savingsStrategy')}</h3>
                 
                 <div className="space-y-8 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Savings Goal</span>
+                            <span className="uppercase tracking-wider">{tCalc('savingsGoal')}</span>
                             <span className="text-primary text-base">{fmt(goal)}</span>
                         </div>
                         <input 
@@ -62,7 +65,7 @@ export function SavingsGoalCalculator() {
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Current Savings</span>
+                            <span className="uppercase tracking-wider">{tCalc('currentSavings')}</span>
                             <span className="text-primary text-base">{fmt(currentSavings)}</span>
                         </div>
                         <input 
@@ -75,7 +78,7 @@ export function SavingsGoalCalculator() {
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Monthly Contribution</span>
+                            <span className="uppercase tracking-wider">{tCalc('monthlyContribution')}</span>
                             <span className="text-primary text-base">{fmt(monthlyContrib)}/mo</span>
                         </div>
                         <input 
@@ -88,7 +91,7 @@ export function SavingsGoalCalculator() {
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Annual Interest Rate</span>
+                            <span className="uppercase tracking-wider">{tCalc('annualInterestRate')}</span>
                             <span className="text-primary text-base">{annualRate}%</span>
                         </div>
                         <input 
@@ -101,13 +104,13 @@ export function SavingsGoalCalculator() {
 
                     <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/30">
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Growth Ratio</label>
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('growthRatio')}</label>
                             <div className="text-sm font-bold text-foreground">
                                 {((result.totalContrib + result.totalInterest + currentSavings) / (result.totalContrib + currentSavings) || 1).toFixed(2)}x Wealth
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Progress</label>
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('progress')}</label>
                             <div className="text-sm font-bold text-foreground">
                                 {pct.toFixed(0)}% Achieved
                             </div>
@@ -117,39 +120,36 @@ export function SavingsGoalCalculator() {
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4 transition-all hover:bg-primary/10">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        Consistency is the key to reaching your <strong>Financial Goals</strong>. Automating your savings is the most proven way to stay on track.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('consistencyIsTheKeyToReachingYour')}<strong>{tCalc('financialGoals')}</strong>. Automating your savings is the most proven way to stay on track.
                     </p>
                 </div>
             </div>
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Time Horizon Projection</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('timeHorizonProjection')}</h3>
                 
                 <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
                     <div className="text-center space-y-4 w-full">
                         <div className="text-7xl font-black text-primary animate-in fade-in zoom-in duration-500">
                             {result.achieved ? '0' : result.months} <span className="text-4xl text-muted-foreground">mo</span>
                         </div>
-                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                            Months to Reach Your Goal
-                        </div>
+                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('monthsToReachYourGoal')}</div>
 
                         <div className="grid grid-cols-2 gap-3 w-full mt-6">
                             <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
-                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Total Saved</span>
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('totalSaved')}</span>
                                 <span className="block text-lg font-black text-foreground">{fmt(result.totalContrib + currentSavings)}</span>
                             </div>
                             <div className="bg-card p-4 rounded-2xl border border-border/50 text-center text-emerald-500">
-                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Interest Earned</span>
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('interestEarned')}</span>
                                 <span className="block text-lg font-black">+{fmt(result.totalInterest)}</span>
                             </div>
                         </div>
 
                         <div className="w-full space-y-2 mt-4 text-left">
                             <div className="flex justify-between text-[10px] font-black uppercase text-muted-foreground mb-1">
-                                <span>Progress to Goal</span>
+                                <span>{tCalc('progressToGoal')}</span>
                                 <span>{pct.toFixed(0)}% Milestones</span>
                             </div>
                             <div className="w-full bg-card h-3 rounded-full overflow-hidden flex border border-border/50">

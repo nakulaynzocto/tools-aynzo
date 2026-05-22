@@ -13,7 +13,10 @@ const US_TAX_BRACKETS_2024 = [
     { min: 609350, max: Infinity, rate: 0.37 },
 ];
 
+import { useTranslations } from 'next-intl';
+
 export function FreelanceTaxCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [annualIncome, setAnnualIncome] = useState<number>(80000);
     const [expenses, setExpenses] = useState<number>(10000);
     const [state, setState] = useState<number>(5);
@@ -55,11 +58,11 @@ export function FreelanceTaxCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Income & Expenses</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('incomeExpenses')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Annual Gross Income</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('annualGrossIncome')}</label>
                         <div className="relative group">
                             <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
                             <input type="number" value={annualIncome} onChange={e => setAnnualIncome(Number(e.target.value))} className="w-full pl-10 pr-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
@@ -67,7 +70,7 @@ export function FreelanceTaxCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Business Expenses</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('businessExpenses')}</label>
                         <div className="relative group">
                             <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
                             <input type="number" value={expenses} onChange={e => setExpenses(Number(e.target.value))} className="w-full pl-10 pr-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
@@ -85,23 +88,21 @@ export function FreelanceTaxCalculator() {
                     </div>
 
                     <div className="bg-amber-500/5 border border-amber-500/20 rounded-xl p-4">
-                        <p className="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest text-center">Based on 2024 US tax brackets</p>
+                        <p className="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest text-center">{tCalc('basedOn2024USTaxBrackets')}</p>
                     </div>
                 </div>
             </div>
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Tax Estimate Result</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('taxEstimateResult')}</h3>
                 
                 <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
                     <div className="text-center space-y-4 w-full">
                         <div className="text-7xl font-black text-primary animate-in fade-in zoom-in duration-500">
                             {fmt(result.quarterlyEst)}
                         </div>
-                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                            Estimated Quarterly Payment
-                        </div>
+                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('estimatedQuarterlyPayment')}</div>
 
                         <div className="grid grid-cols-2 gap-3 w-full mt-6">
                             {[
@@ -121,15 +122,15 @@ export function FreelanceTaxCalculator() {
                                 <span className="text-foreground">{fmt(result.seTax)}</span>
                             </div>
                             <div className="flex justify-between items-center py-1.5 border-b border-border/30">
-                                <span className="text-muted-foreground uppercase tracking-wider">Federal Income Tax</span>
+                                <span className="text-muted-foreground uppercase tracking-wider">{tCalc('federalIncomeTax')}</span>
                                 <span className="text-foreground">{fmt(result.fedTax)}</span>
                             </div>
                             <div className="flex justify-between items-center py-1.5 border-b border-border/30">
-                                <span className="text-muted-foreground uppercase tracking-wider">State Income Tax</span>
+                                <span className="text-muted-foreground uppercase tracking-wider">{tCalc('stateIncomeTax')}</span>
                                 <span className="text-foreground">{fmt(result.stateTax)}</span>
                             </div>
                             <div className="flex justify-between items-center pt-2 text-primary font-black">
-                                <span className="uppercase tracking-widest">Total Annual Owed</span>
+                                <span className="uppercase tracking-widest">{tCalc('totalAnnualOwed')}</span>
                                 <span>{fmt(result.totalTax)}</span>
                             </div>
                         </div>
@@ -143,8 +144,7 @@ export function FreelanceTaxCalculator() {
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        Setting aside <strong>30%</strong> of your gross income for taxes is a safe rule of thumb for most US-based freelancers.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('settingAside')}<strong>30%</strong> of your gross income for taxes is a safe rule of thumb for most US-based freelancers.
                     </p>
                 </div>
             </div>

@@ -13,7 +13,11 @@ const tiktokHashtagData: Record<string, { tags: string[]; icon: React.ElementTyp
     'Photography': { icon: Camera, color: 'text-orange-500', tags: ['#photography', '#photo', '#photographer', '#aesthetic', '#photooftheday', '#instagram', '#portrait', '#landscape', '#cameratips', '#photographytips', '#lightroom', '#presets', '#streetphotography', '#nightphotography', '#goldenhour', '#mobilephotography', '#shotoniphone', '#photoediting'] },
 };
 
+import { useTranslations } from 'next-intl';
+
 export function TikTokHashtagGenerator() {
+    const tToolNew = useTranslations('Tools.socialToolsNew');
+    const tSocial = useTranslations('Tools.SocialToolsText');
     const [selectedCategory, setSelectedCategory] = useState<string>('Entertainment');
     const [copied, setCopied] = useState(false);
     const [customTopic, setCustomTopic] = useState('');
@@ -40,12 +44,12 @@ export function TikTokHashtagGenerator() {
 
             <div className="space-y-6">
                 <div className="space-y-3">
-                    <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">Your Topic (optional)</label>
+                    <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">{tSocial('topicOptional')}</label>
                     <input type="text" value={customTopic} onChange={e => setCustomTopic(e.target.value)} placeholder="e.g., skincare, crypto, pets..." className="w-full px-5 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-pink-500 transition-all font-medium" />
                 </div>
 
                 <div className="space-y-3">
-                    <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">Category</label>
+                    <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">{tSocial('category')}</label>
                     <div className="flex gap-2 flex-wrap">
                         {Object.entries(tiktokHashtagData).map(([cat, { icon: Icon, color }]) => (
                             <button key={cat} onClick={() => setSelectedCategory(cat)} className={`flex items-center gap-1.5 px-4 py-2 rounded-xl font-bold text-sm border-2 transition-all ${selectedCategory === cat ? `bg-pink-500 text-white border-pink-500` : 'border-border hover:border-pink-500/40'}`}>
@@ -76,8 +80,8 @@ export function TikTokHashtagGenerator() {
             <div className="bg-pink-500/5 border-2 border-pink-500/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-pink-500 shrink-0 mt-1" />
                 <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">TikTok Hashtag Strategy</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">Use <strong>3–5 targeted hashtags</strong> rather than stuffing 30. Combine 1–2 broad viral tags (#fyp, #foryou), 2–3 niche-specific tags, and 1 branded tag. Click any tag to copy it individually.</p>
+                    <h4 className="font-bold text-foreground">{tSocial('hashtagStrategy')}</h4>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tSocial('hashtagDesc')}</p>
                 </div>
             </div>
         </div>

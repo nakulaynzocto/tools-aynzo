@@ -12,7 +12,10 @@ interface ResolutionSimulatorProps {
     setScale: (scale: number) => void;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setResolution, scale, setScale }: ResolutionSimulatorProps) {
+    const tTool = useTranslations('Tools.webTools');
     const handleResolutionChange = (res: ResolutionData) => {
         setResolution(res);
         if (res.w > 1000) setScale(0.4);
@@ -24,7 +27,7 @@ export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setRe
         <div className="space-y-10">
             <div className="flex flex-col xl:flex-row gap-8 items-end">
                 <div className="flex-1 w-full space-y-3">
-                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-[0.2em] ml-2">SIMULATION SOURCE</label>
+                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-[0.2em] ml-2">{tTool('sIMULATIONSOURCE')}</label>
                     <div className="relative group">
                         <div className="absolute left-5 top-1/2 -translate-y-1/2 text-primary">
                             <Globe size={22} />
@@ -74,7 +77,7 @@ export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setRe
                 <div className="absolute top-6 left-8 flex items-center gap-6 z-10">
                     <div className="flex items-center gap-2">
                         <span className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
-                        <span className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Active Simulator</span>
+                        <span className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">{tTool('activeSimulator')}</span>
                     </div>
                     <div className="px-5 py-2 bg-card border-2 border-border rounded-full text-xs font-black text-primary shadow-sm">{resolution.w} x {resolution.h}</div>
                 </div>
@@ -101,8 +104,8 @@ export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setRe
                                             <ExternalLink size={40} className="opacity-20" />
                                         </div>
                                         <div className="space-y-2">
-                                            <p className="text-lg font-black text-foreground">Awaiting Source URL</p>
-                                            <p className="text-xs font-medium text-muted-foreground max-w-xs">Enter a valid website address above to begin the responsive simulation for <b>{resolution.label}</b> device.</p>
+                                            <p className="text-lg font-black text-foreground">{tTool('awaitingSourceURL')}</p>
+                                            <p className="text-xs font-medium text-muted-foreground max-w-xs">{tTool('enterAValidWebsiteAddressAboveToBeginTheResponsiveSimulationFor')}<b>{resolution.label}</b> device.</p>
                                         </div>
                                     </div>
                                 )}

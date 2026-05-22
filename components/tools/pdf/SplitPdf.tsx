@@ -7,7 +7,9 @@ import { PDFDocument } from 'pdf-lib';
 import JSZip from 'jszip';
 
 export function SplitPdf() {
+    const tToolNew = useTranslations('Tools.pdfToolsNew');
     const tActions = useTranslations('ToolActions');
+    const tPdf = useTranslations('Tools.PdfTools');
     const [file, setFile] = useState<File | null>(null);
     const [processing, setProcessing] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -18,7 +20,7 @@ export function SplitPdf() {
 
     const handleFileSelect = (selectedFile: File) => {
         if (selectedFile.type !== 'application/pdf') {
-            setError('Please select a PDF file');
+            setError(tPdf('pleaseSelectPdf') || 'Please select a PDF file');
             return;
         }
         setFile(selectedFile);
@@ -101,7 +103,7 @@ export function SplitPdf() {
             const url = URL.createObjectURL(zipBlob);
             setDownloadUrl(url);
         } catch (e) {
-            setError(e instanceof Error ? e.message : 'Failed to split PDF');
+            setError(e instanceof Error ? e.message : tPdf('failedSplit'));
         } finally {
             setProcessing(false);
         }
@@ -140,10 +142,10 @@ export function SplitPdf() {
                 >
                     <Upload className="mx-auto mb-4 text-primary" size={48} />
                     <p className="text-lg font-bold text-foreground mb-2">
-                        {tActions('chooseFile') || 'Choose File'}
+                        {tActions('chooseFile') || tPdf('chooseFile')}
                     </p>
                     <p className="text-sm text-muted-foreground mb-4">
-                        Drag and drop your PDF file here, or click to browse
+                        {tPdf('dragDrop')}
                     </p>
                     <p className="text-xs text-muted-foreground">
                         Supported format: PDF
@@ -185,7 +187,7 @@ export function SplitPdf() {
                         {/* Split Mode Selection */}
                         <div className="space-y-4">
                             <div>
-                                <label className="text-sm font-bold text-foreground mb-2 block">Split Mode</label>
+                                <label className="text-sm font-bold text-foreground mb-2 block">{tPdf('splitMode')}</label>
                                 <div className="flex gap-3">
                                     <button
                                         onClick={() => setSplitMode('all')}
@@ -196,7 +198,7 @@ export function SplitPdf() {
                                                 : "bg-background text-foreground border border-border hover:bg-muted"
                                         )}
                                     >
-                                        Split All Pages
+                                        {tPdf('splitEvery')}
                                     </button>
                                     <button
                                         onClick={() => setSplitMode('range')}
@@ -207,7 +209,7 @@ export function SplitPdf() {
                                                 : "bg-background text-foreground border border-border hover:bg-muted"
                                         )}
                                     >
-                                        Split by Range
+                                        {tPdf('extractPages')}
                                     </button>
                                 </div>
                             </div>
@@ -215,7 +217,7 @@ export function SplitPdf() {
                             {splitMode === 'range' && (
                                 <div>
                                     <label className="text-sm font-bold text-foreground mb-2 block">
-                                        Page Range (e.g., "1-5, 10-15, 20")
+                                        {tPdf('pagesToExtract')}
                                     </label>
                                     <input
                                         type="text"
@@ -244,7 +246,7 @@ export function SplitPdf() {
                                     : "bg-primary text-primary-foreground hover:bg-primary/90"
                             )}
                         >
-                            {processing ? 'Splitting PDF...' : 'Split PDF'}
+                            {processing ? tPdf('splitting') : tPdf('splitPdfBtn')}
                         </button>
                     )}
 
@@ -253,8 +255,8 @@ export function SplitPdf() {
                             <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 flex items-center gap-3">
                                 <CheckCircle2 className="text-emerald-500" size={24} />
                                 <div className="flex-1">
-                                    <p className="font-bold text-emerald-500">Split Complete!</p>
-                                    <p className="text-xs text-muted-foreground">Your split PDF files are ready to download as a ZIP.</p>
+                                    <p className="font-bold text-emerald-500">{tPdf('splitComplete')}</p>
+                                    <p className="text-xs text-muted-foreground">{tPdf('readyToDownloadSplit')}</p>
                                 </div>
                             </div>
                             <button
@@ -262,7 +264,7 @@ export function SplitPdf() {
                                 className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                             >
                                 <Download size={20} />
-                                {tActions('download') || 'Download ZIP'}
+                                {tActions('download') || tPdf('downloadSplit')}
                             </button>
                         </div>
                     )}

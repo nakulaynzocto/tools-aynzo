@@ -164,6 +164,7 @@ const currencies = [
 ];
 
 export function CurrencyConverter() {
+    const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('CurrencyConverter');
     const [fromCurrency, setFromCurrency] = useState('USD');
     const [toCurrency, setToCurrency] = useState('EUR');

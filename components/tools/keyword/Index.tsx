@@ -6,7 +6,11 @@ import { KeywordToolProps } from '@/components/types/keyword/types';
 import { generateSlug, cleanKeywords, generateLongTailKeywords, calculateKeywordDensity } from '@/components/utils/keyword/keywordProcessing';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export default function KeywordToolsIndex({ type }: KeywordToolProps) {
+    const tKeyword = useTranslations('Tools.KeywordTools');
+    const tTools = useTranslations('Tools');
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [copied, setCopied] = useState(false);
@@ -14,12 +18,12 @@ export default function KeywordToolsIndex({ type }: KeywordToolProps) {
 
     const keywordNavTools = [
         {
-            category: 'KEYWORDS',
+            category: tKeyword('category'),
             tools: [
-                { id: 'keyword-density-checker', label: 'Density Checker', icon: Hash },
-                { id: 'keyword-cleaner', label: 'Keyword Cleaner', icon: RefreshCw },
-                { id: 'long-tail-keyword-generator', label: 'Long Tail Generator', icon: Search },
-                { id: 'slug-generator', label: 'Slug Generator', icon: LinkIcon },
+                { id: 'keyword-density-checker', label: tTools('keyword-density-checker.name') !== 'keyword-density-checker.name' ? tTools('keyword-density-checker.name') : 'Density Checker', icon: Hash },
+                { id: 'keyword-cleaner', label: tTools('keyword-cleaner.name') !== 'keyword-cleaner.name' ? tTools('keyword-cleaner.name') : 'Keyword Cleaner', icon: RefreshCw },
+                { id: 'long-tail-keyword-generator', label: tTools('long-tail-keyword-generator.name') !== 'long-tail-keyword-generator.name' ? tTools('long-tail-keyword-generator.name') : 'Long Tail Generator', icon: Search },
+                { id: 'slug-generator', label: tTools('slug-generator.name') !== 'slug-generator.name' ? tTools('slug-generator.name') : 'Slug Generator', icon: LinkIcon },
             ]
         }
     ];
@@ -29,7 +33,12 @@ export default function KeywordToolsIndex({ type }: KeywordToolProps) {
             case 'keyword-density-checker':
                 if (input && keyword) {
                     const result = calculateKeywordDensity(input, keyword);
-                    setOutput(`Keyword: "${keyword}"\nCount: ${result.count}\nDensity: ${result.density}%`);
+                    // Use string replacement for dynamic translation
+                    const template = tKeyword('keywordResult');
+                    const formatted = template.replace('{keyword}', keyword)
+                                              .replace('{count}', result.count.toString())
+                                              .replace('{density}', result.density.toString());
+                    setOutput(formatted);
                 }
                 break;
             case 'keyword-cleaner':
@@ -68,29 +77,29 @@ export default function KeywordToolsIndex({ type }: KeywordToolProps) {
                         <div className="space-y-4">
                             {type === 'keyword-density-checker' && (
                                 <div>
-                                    <label className="text-xs font-bold text-foreground block mb-2">Enter Keyword</label>
+                                    <label className="text-xs font-bold text-foreground block mb-2">{tKeyword('enterKeyword')}</label>
                                     <input
                                         type="text"
                                         value={keyword}
                                         onChange={(e) => setKeyword(e.target.value)}
                                         className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl text-sm font-medium text-foreground focus:border-primary focus:outline-none"
-                                        placeholder="Enter keyword to check"
+                                        placeholder={tKeyword('enterKeywordToCheck')}
                                     />
                                 </div>
                             )}
                             <div>
                                 <label className="text-xs font-bold text-foreground block mb-2">
-                                    {type === 'keyword-density-checker' ? 'Enter Text' : 'Input'}
+                                    {type === 'keyword-density-checker' ? tKeyword('enterText') : tKeyword('input')}
                                 </label>
                                 <textarea
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     className="w-full h-64 p-4 border-2 border-border rounded-xl bg-muted/30 text-sm font-medium text-foreground focus:border-primary focus:outline-none resize-none"
                                     placeholder={
-                                        type === 'keyword-density-checker' ? 'Paste your text here...' :
-                                        type === 'keyword-cleaner' ? 'Enter keywords separated by commas or newlines...' :
-                                        type === 'long-tail-keyword-generator' ? 'Enter seed keyword...' :
-                                        'Enter text to convert to slug...'
+                                        type === 'keyword-density-checker' ? tKeyword('pasteTextHere') :
+                                        type === 'keyword-cleaner' ? tKeyword('enterKeywordsSeparated') :
+                                        type === 'long-tail-keyword-generator' ? tKeyword('enterSeedKeyword') :
+                                        tKeyword('enterTextToConvert')
                                     }
                                 />
                             </div>
@@ -105,15 +114,15 @@ export default function KeywordToolsIndex({ type }: KeywordToolProps) {
                                 )}
                             >
                                 <RefreshCw size={16} />
-                                {type === 'keyword-density-checker' ? 'Check Density' :
-                                 type === 'keyword-cleaner' ? 'Clean Keywords' :
-                                 type === 'long-tail-keyword-generator' ? 'Generate Keywords' :
-                                 'Generate Slug'}
+                                {type === 'keyword-density-checker' ? tKeyword('checkDensity') :
+                                 type === 'keyword-cleaner' ? tKeyword('cleanKeywords') :
+                                 type === 'long-tail-keyword-generator' ? tKeyword('generateKeywords') :
+                                 tKeyword('generateSlug')}
                             </button>
                         </div>
                         <div className="space-y-4">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">Output</label>
+                                <label className="text-sm font-bold">{tKeyword('output')}</label>
                                 <button
                                     onClick={handleCopy}
                                     disabled={!output}
@@ -131,7 +140,7 @@ export default function KeywordToolsIndex({ type }: KeywordToolProps) {
                                 value={output}
                                 readOnly
                                 className="w-full h-64 p-4 border-2 border-border rounded-xl bg-muted/30 text-sm font-medium text-foreground resize-none"
-                                placeholder="Output will appear here..."
+                                placeholder={tKeyword('outputWillAppear')}
                             />
                         </div>
                     </div>

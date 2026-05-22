@@ -1,7 +1,7 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { useState, useMemo } from 'react';
 import { Copy, CheckCircle2, TrendingUp, Info } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
 interface CompoundResult {
     totalAmount: string;
@@ -9,7 +9,9 @@ interface CompoundResult {
     totalInterest: string;
 }
 
+
 export function CompoundInterestCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const t = useTranslations('Calculators.CompoundInterest');
     const ct = useTranslations('Common');
     const [principal, setPrincipal] = useState(10000);

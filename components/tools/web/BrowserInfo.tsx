@@ -6,7 +6,10 @@ interface BrowserInfoProps {
     onCopy: (text: string) => void;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function BrowserInfo({ result, onCopy }: BrowserInfoProps) {
+    const tTool = useTranslations('Tools.webTools');
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {result && Object.entries(result).map(([k, v]: [string, any]) => (

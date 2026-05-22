@@ -1,7 +1,7 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { Settings, Sliders } from 'lucide-react';
 import { cn } from '@/utils/cn';
-import { useTranslations } from 'next-intl';
 
 interface SettingsPanelProps {
     quality: number;
@@ -43,8 +43,8 @@ interface SettingsPanelProps {
     onPercentageResize?: (percent: number) => void;
 }
 
-export function SettingsPanel({
-    quality,
+
+export function SettingsPanel({ quality,
     onQualityChange,
     width,
     height,
@@ -82,6 +82,7 @@ export function SettingsPanel({
     originalHeight,
     onPercentageResize,
 }: SettingsPanelProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const t = useTranslations('Common');
 
     return (
@@ -113,7 +114,7 @@ export function SettingsPanel({
                     {/* Quick Percentage Buttons */}
                     {originalWidth && originalHeight && (
                         <div>
-                            <label className="text-xs font-bold text-foreground block mb-2">Quick Resize</label>
+                            <label className="text-xs font-bold text-foreground block mb-2">{tTool('quickResize')}</label>
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                                 {[25, 50, 75, 100, 150, 500].map((percent) => (
                                     <button
@@ -135,23 +136,23 @@ export function SettingsPanel({
 
                     <div className="grid grid-cols-2 gap-3">
                         <div>
-                            <label className="text-xs font-bold text-foreground block mb-1">Width</label>
+                            <label className="text-xs font-bold text-foreground block mb-1">{tTool('width')}</label>
                             <input
                                 type="number"
                                 value={width || ''}
                                 onChange={(e) => onWidthChange(Number(e.target.value))}
                                 className="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm"
-                                placeholder="Auto"
+                                placeholder={tTool('auto')}
                             />
                         </div>
                         <div>
-                            <label className="text-xs font-bold text-foreground block mb-1">Height</label>
+                            <label className="text-xs font-bold text-foreground block mb-1">{tTool('height')}</label>
                             <input
                                 type="number"
                                 value={height || ''}
                                 onChange={(e) => onHeightChange(Number(e.target.value))}
                                 className="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm"
-                                placeholder="Auto"
+                                placeholder={tTool('auto')}
                             />
                         </div>
                     </div>
@@ -161,9 +162,7 @@ export function SettingsPanel({
                             checked={maintainAspectRatio}
                             onChange={(e) => onMaintainAspectRatioChange(e.target.checked)}
                             className="rounded"
-                        />
-                        Maintain Aspect Ratio
-                    </label>
+                        />{tTool('maintainAspectRatio')}</label>
                 </div>
             )}
 
@@ -205,18 +204,14 @@ export function SettingsPanel({
                             checked={flipH}
                             onChange={(e) => onFlipHChange(e.target.checked)}
                             className="rounded"
-                        />
-                        Flip Horizontal
-                    </label>
+                        />{tTool('flipHorizontal')}</label>
                     <label className="flex items-center gap-2 text-xs text-foreground">
                         <input
                             type="checkbox"
                             checked={flipV}
                             onChange={(e) => onFlipVChange(e.target.checked)}
                             className="rounded"
-                        />
-                        Flip Vertical
-                    </label>
+                        />{tTool('flipVertical')}</label>
                 </div>
             )}
 
@@ -248,7 +243,7 @@ export function SettingsPanel({
                         />
                     </div>
                     <div>
-                        <label className="text-xs font-bold text-foreground block mb-2">Border Color</label>
+                        <label className="text-xs font-bold text-foreground block mb-2">{tTool('borderColor')}</label>
                         <div className="flex gap-2 items-center">
                             <input
                                 type="color"

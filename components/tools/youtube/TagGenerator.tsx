@@ -8,11 +8,14 @@ interface TagGeneratorProps {
     onCopy: () => void;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function TagGenerator({ result, copied, onCopy }: TagGeneratorProps) {
+    const tTool = useTranslations('Tools.youtubeTools');
     return (
         <div className="bg-card p-8 rounded-[2.5rem] border-2 border-border relative group h-full flex flex-col shadow-2xl">
             <div className="flex justify-between items-center mb-6">
-                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Generated Tags</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{tTool('generatedTags')}</span>
                 <button onClick={onCopy} className={cn("text-[10px] font-black uppercase tracking-wider flex items-center gap-2 px-5 py-2.5 rounded-xl transition-all", copied ? "bg-emerald-500 text-white" : "bg-primary text-primary-foreground")}>
                     {copied ? <Check size={14} /> : <Copy size={14} />} {copied ? 'Copied' : 'Copy All'}
                 </button>

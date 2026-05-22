@@ -23,7 +23,10 @@ interface TaxResult {
     totalAmount: string;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function SalesTaxCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [amount, setAmount] = useState(100);
     const [rate, setRate] = useState(7.25);
     const [isInclusive, setIsInclusive] = useState(false);
@@ -65,7 +68,7 @@ export function SalesTaxCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Tax Info</h3>
+                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('taxInfo')}</h3>
                     <Landmark size={16} className="text-primary" />
                 </div>
                 
@@ -74,8 +77,8 @@ export function SalesTaxCalculator() {
                         <label className="text-sm font-bold text-foreground">Amount ($)</label>
                         <input type="number" value={amount} onChange={e => setAmount(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                         <div className="flex gap-2">
-                            <button onClick={() => setIsInclusive(false)} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg border-2 transition-all", !isInclusive ? "bg-primary text-white border-primary" : "bg-muted text-muted-foreground border-border")}>Add Tax</button>
-                            <button onClick={() => setIsInclusive(true)} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg border-2 transition-all", isInclusive ? "bg-primary text-white border-primary" : "bg-muted text-muted-foreground border-border")}>Remove Tax</button>
+                            <button onClick={() => setIsInclusive(false)} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg border-2 transition-all", !isInclusive ? "bg-primary text-white border-primary" : "bg-muted text-muted-foreground border-border")}>{tCalc('addTax')}</button>
+                            <button onClick={() => setIsInclusive(true)} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg border-2 transition-all", isInclusive ? "bg-primary text-white border-primary" : "bg-muted text-muted-foreground border-border")}>{tCalc('removeTax')}</button>
                         </div>
                     </div>
                     
@@ -92,14 +95,12 @@ export function SalesTaxCalculator() {
 
                 <div className="bg-primary/5 p-4 rounded-xl border border-primary/10 flex items-start gap-3 mt-4">
                     <Info size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <p className="text-[11px] font-medium text-muted-foreground leading-relaxed">
-                        Sales tax rates vary significantly by state and local jurisdiction. This tool allows you to add tax to a base price or calculate the original price from a tax-inclusive total.
-                    </p>
+                    <p className="text-[11px] font-medium text-muted-foreground leading-relaxed">{tCalc('salesTaxRatesVarySignificantlyByStateAndLocalJurisdictionThisToolAllowsYouToAddTaxToABasePriceOrCalculateTheOriginalPriceFromATaxInclusiveTotal')}</p>
                 </div>
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Tax Summary</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('taxSummary')}</h3>
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[350px] flex flex-col items-center justify-center gap-6 shadow-sm">
                         <div className="text-center space-y-4">
@@ -108,7 +109,7 @@ export function SalesTaxCalculator() {
                             
                             <div className="bg-card w-full p-6 rounded-2xl border-2 border-border space-y-3 mt-6">
                                 <div className="flex justify-between items-center text-sm">
-                                    <span className="text-muted-foreground font-medium">Net Price</span>
+                                    <span className="text-muted-foreground font-medium">{tCalc('netPrice')}</span>
                                     <span className="font-bold text-foreground">${result.netAmount}</span>
                                 </div>
                                 <div className="flex justify-between items-center text-sm">
@@ -126,7 +127,7 @@ export function SalesTaxCalculator() {
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
                         <Receipt size={48} className="opacity-20" />
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Enter amount to see tax breakdown</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('enterAmountToSeeTaxBreakdown')}</span>
                     </div>
                 )}
             </div>

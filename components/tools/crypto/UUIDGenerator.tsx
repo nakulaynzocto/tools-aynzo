@@ -3,7 +3,10 @@ import { useState } from 'react';
 import { Copy, CheckCircle2, RefreshCw } from 'lucide-react';
 import { generateUUID } from '@/components/utils/crypto/cryptoProcessing';
 
+import { useTranslations } from 'next-intl';
+
 export function UUIDGenerator() {
+    const t = useTranslations('Tools.CryptoToolsText');
     const [output, setOutput] = useState('');
     const [copied, setCopied] = useState(false);
 
@@ -27,12 +30,12 @@ export function UUIDGenerator() {
                 className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3"
             >
                 <RefreshCw className="w-6 h-6" />
-                <span className="text-lg">Generate New UUID</span>
+                <span className="text-lg">{t('generateUuid')}</span>
             </button>
             {output && (
                 <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Output</label>
+                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('resultOutput')}</label>
                         <button
                             onClick={copyToClipboard}
                             className={`px-4 py-1.5 rounded-xl text-[10px] font-black flex items-center gap-2 transition-all ${copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary/10 text-primary hover:bg-primary/20'}`}

@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 import { Copy, CheckCircle2, Settings } from 'lucide-react';
 import { generateBcrypt } from '@/components/utils/crypto/cryptoProcessing';
 
+import { useTranslations } from 'next-intl';
+
 export function BcryptGenerator() {
+    const t = useTranslations('Tools.CryptoToolsText');
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [rounds, setRounds] = useState(10);
@@ -40,8 +43,8 @@ export function BcryptGenerator() {
                 <div className="space-y-6">
                     <div className="space-y-4">
                         <div className="flex justify-between items-end">
-                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Input Data</label>
-                            <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} Chars</span>
+                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('inputData')}</label>
+                            <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} {t('chars')}</span>
                         </div>
                         <textarea
                             className="w-full p-6 border-2 border-border rounded-3xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground placeholder-muted-foreground min-h-[300px] shadow-inner transition-all"
@@ -68,7 +71,7 @@ export function BcryptGenerator() {
                                 />
                                 <div className="flex justify-between text-[10px] font-black opacity-50 uppercase">
                                     <span>Fast ({rounds})</span>
-                                    <span>Secure (14)</span>
+                                    <span>{t('secure14')}</span>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +79,7 @@ export function BcryptGenerator() {
                 </div>
                 <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Output</label>
+                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('resultOutput')}</label>
                         <button
                             onClick={copyToClipboard}
                             disabled={!output}
@@ -89,7 +92,7 @@ export function BcryptGenerator() {
                     <div className="w-full p-6 bg-muted/30 border-2 border-border rounded-3xl font-mono text-sm break-all text-primary shadow-inner min-h-[300px] whitespace-pre-wrap flex flex-col items-center justify-center">
                         {output ? output : (
                             <div className="text-muted-foreground/30 flex flex-col items-center gap-2">
-                                <span className="text-[10px] font-black uppercase tracking-widest">Waiting for input...</span>
+                                <span className="text-[10px] font-black uppercase tracking-widest">{t('waitingInput')}</span>
                             </div>
                         )}
                     </div>

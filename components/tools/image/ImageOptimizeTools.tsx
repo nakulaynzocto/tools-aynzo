@@ -1,8 +1,8 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
 import { RefreshCw, Upload, Wand2, Download, X } from 'lucide-react';
 import { cn } from '@/utils/cn';
-import { useTranslations } from 'next-intl';
 import { useImageFileUpload } from '@/components/hooks/image/useImageFileUpload';
 import { processAllFiles, downloadResults } from '@/components/hooks/image/useImageProcessing';
 import { FileUploadArea } from './FileUploadArea';
@@ -13,7 +13,9 @@ interface ImageOptimizeToolsProps {
     type: 'image-compressor' | 'image-resizer' | 'image-enlarger';
 }
 
+
 export function ImageOptimizeTools({ type }: ImageOptimizeToolsProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
 

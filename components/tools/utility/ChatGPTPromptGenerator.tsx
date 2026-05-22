@@ -23,8 +23,10 @@ const categoryColors: Record<string, string> = {
     Learning: 'bg-green-500/10 text-green-500 border-green-500/30',
 };
 
+import { useTranslations } from 'next-intl';
+
 export function ChatGPTPromptGenerator() {
-    const [category, setCategory] = useState('All');
+    const tTool = useTranslations('Tools.utilityTools'); const [category, setCategory] = useState('All');
     const [customized, setCustomized] = useState('');
     const [selectedName, setSelectedName] = useState('');
     const [copied, setCopied] = useState(false);
@@ -90,8 +92,8 @@ export function ChatGPTPromptGenerator() {
                 <div className="space-y-4 bg-muted/10 p-8 rounded-[2rem] border-2 border-border/50">
                     <div className="flex items-center justify-between">
                         <div>
-                            <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">Customize Your Prompt</label>
-                            <p className="text-xs text-muted-foreground mt-1">Replace <strong>[PLACEHOLDERS]</strong> with your specifics</p>
+                            <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">{tTool('customizeYourPrompt')}</label>
+                            <p className="text-xs text-muted-foreground mt-1">{tTool('replace')}<strong>[PLACEHOLDERS]</strong> with your specifics</p>
                         </div>
                         <div className="flex items-center gap-3">
                             <span className="text-xs font-bold text-muted-foreground">{wordCount} words</span>
@@ -108,23 +110,21 @@ export function ChatGPTPromptGenerator() {
                         className="w-full px-5 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-medium text-sm resize-none"
                     />
                     <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
-                        <ArrowRight className="w-3 h-3 shrink-0" />
-                        Works with ChatGPT, Claude, Gemini, and other AI models.
-                    </div>
+                        <ArrowRight className="w-3 h-3 shrink-0" />{tTool('worksWithChatGPTClaudeGeminiAndOtherAIModels')}</div>
                 </div>
             ) : (
                 <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl p-14 text-center">
                     <Wand2 className="w-12 h-12 text-muted-foreground/40 mx-auto mb-4" />
-                    <p className="text-muted-foreground font-bold text-lg">Select a template above to get started</p>
-                    <p className="text-muted-foreground/60 font-medium text-sm mt-1">Then customize and copy into your favourite AI</p>
+                    <p className="text-muted-foreground font-bold text-lg">{tTool('selectATemplateAboveToGetStarted')}</p>
+                    <p className="text-muted-foreground/60 font-medium text-sm mt-1">{tTool('thenCustomizeAndCopyIntoYourFavouriteAI')}</p>
                 </div>
             )}
 
             <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">Prompt Engineering Tip</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">The more <strong>specific and contextual</strong> your prompt, the better the AI output. Always specify tone, audience, length, and format for best results. Iterate and refine!</p>
+                    <h4 className="font-bold text-foreground">{tTool('promptEngineeringTip')}</h4>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('theMore')}<strong>specific and contextual</strong> your prompt, the better the AI output. Always specify tone, audience, length, and format for best results. Iterate and refine!</p>
                 </div>
             </div>
         </div>

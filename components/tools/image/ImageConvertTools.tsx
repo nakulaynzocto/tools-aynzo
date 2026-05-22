@@ -1,8 +1,8 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
 import { RefreshCw, Wand2, Upload, X } from 'lucide-react';
 import { cn } from '@/utils/cn';
-import { useTranslations } from 'next-intl';
 import { useImageFileUpload } from '@/components/hooks/image/useImageFileUpload';
 import { processAllFiles, downloadResults } from '@/components/hooks/image/useImageProcessing';
 import { FileUploadArea } from './FileUploadArea';
@@ -13,7 +13,9 @@ interface ImageConvertToolsProps {
     type: 'jpg-to-png' | 'png-to-jpg' | 'webp-converter' | 'jpg-to-webp' | 'png-to-webp' | 'webp-to-jpg' | 'webp-to-png' | 'svg-to-png' | 'png-to-svg' | 'jpg-to-svg' | 'webp-to-svg';
 }
 
+
 export function ImageConvertTools({ type }: ImageConvertToolsProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const tActions = useTranslations('ToolActions');
 
     const {

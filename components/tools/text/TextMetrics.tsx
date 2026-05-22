@@ -1,20 +1,21 @@
 "use client";
-import { FileText, Type, AlignLeft, MoveVertical, Hash, Clock, Activity } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { FileText, Type, AlignLeft, MoveVertical, Hash, Clock, Activity } from 'lucide-react';
 import { TextStats } from '@/components/types/text/types';
 
 interface TextMetricsProps {
     stats: TextStats;
 }
 
+
 export function TextMetrics({ stats }: TextMetricsProps) {
+    const tTool = useTranslations('Tools.textTools');
     const t = useTranslations('TextTools');
 
     return (
         <div className="bg-card rounded-2xl sm:rounded-3xl border-2 border-border shadow-xl p-3 sm:p-5 space-y-3 sm:space-y-4">
             <h3 className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-1.5 sm:gap-2">
-                <Activity size={10} className="sm:w-3 sm:h-3 text-primary" /> Metrics
-            </h3>
+                <Activity size={10} className="sm:w-3 sm:h-3 text-primary" />{tTool('metrics')}</h3>
             <div className="grid grid-cols-2 gap-2 sm:gap-2">
                 {[
                     { label: t('words'), value: stats.words, icon: FileText, color: 'text-blue-400' },

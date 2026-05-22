@@ -12,6 +12,7 @@ import { BrowserInfo } from './BrowserInfo';
 import { ResolutionSimulator } from './ResolutionSimulator';
 
 export default function WebToolsIndex({ type }: WebToolProps) {
+    const tTool = useTranslations('Tools.webTools');
     const t = useTranslations('WebNav');
 
     const seoNavTools = [
@@ -127,10 +128,8 @@ export default function WebToolsIndex({ type }: WebToolProps) {
                     <Shield className="text-primary w-10 h-10" />
                 </div>
                 <div className="space-y-2 text-center md:text-left">
-                    <h3 className="text-xl font-black tracking-tight text-foreground uppercase">Privacy First Simulation</h3>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed max-w-3xl">
-                        Our platform uses advanced in-browser technologies to simulator various web environments. All data processing occurs locally on your machine, ensuring that your sensitive information, browsing habits, and simulated parameters remain private and never touch our servers.
-                    </p>
+                    <h3 className="text-xl font-black tracking-tight text-foreground uppercase">{tTool('privacyFirstSimulation')}</h3>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed max-w-3xl">{tTool('ourPlatformUsesAdvancedInBrowserTechnologiesToSimulatorVariousWebEnvironmentsAllDataProcessingOccursLocallyOnYourMachineEnsuringThatYourSensitiveInformationBrowsingHabitsAndSimulatedParametersRemainPrivateAndNeverTouchOurServers')}</p>
                 </div>
             </div>
         </div>

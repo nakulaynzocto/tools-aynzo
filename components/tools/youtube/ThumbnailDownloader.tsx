@@ -6,7 +6,10 @@ interface ThumbnailDownloaderProps {
     result: YouTubeThumbnails;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function ThumbnailDownloader({ result }: ThumbnailDownloaderProps) {
+    const tTool = useTranslations('Tools.youtubeTools');
     return (
         <div className="grid grid-cols-2 gap-6 pb-6">
             {Object.entries(result).map(([quality, url]: [string, any]) => (
@@ -37,8 +40,7 @@ export function ThumbnailDownloader({ result }: ThumbnailDownloaderProps) {
                         }}
                         className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-black text-center text-[10px] uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer hover:opacity-90 transition-opacity"
                     >
-                        <Download size={14} /> Download
-                    </button>
+                        <Download size={14} />{tTool('download')}</button>
                 </div>
             ))}
         </div>

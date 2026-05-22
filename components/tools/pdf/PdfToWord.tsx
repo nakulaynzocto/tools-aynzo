@@ -5,7 +5,9 @@ import { useTranslations } from 'next-intl';
 import { Document, Packer, Paragraph, TextRun, AlignmentType } from 'docx';
 
 export function PdfToWord() {
+    const tToolNew = useTranslations('Tools.pdfToolsNew');
     const tActions = useTranslations('ToolActions');
+    const tPdf = useTranslations('Tools.PdfTools');
     const [file, setFile] = useState<File | null>(null);
     const [processing, setProcessing] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -17,7 +19,7 @@ export function PdfToWord() {
 
     const handleFileSelect = (selectedFile: File) => {
         if (selectedFile.type !== 'application/pdf') {
-            setError('Please select a PDF file');
+            setError(tPdf('pleaseSelectPdf') || 'Please select a PDF file');
             return;
         }
         setFile(selectedFile);
@@ -258,12 +260,12 @@ export function PdfToWord() {
                 >
                     <Upload className="mx-auto mb-4 text-primary" size={48} />
                     <p className="text-lg font-bold text-foreground mb-2">
-                        {tActions('chooseFile') || 'Choose File'}
+                        {tActions('chooseFile') || tPdf('chooseFile')}
                     </p>
                     <p className="text-sm text-muted-foreground mb-4">
-                        Drag and drop your PDF here, or click to browse
+                        {tPdf('selectFileWord')}
                     </p>
-                    <p className="text-xs text-muted-foreground">Supports selectable & scanned PDFs</p>
+                    <p className="text-xs text-muted-foreground">{tToolNew('supportsSelectableScannedPDFs')}</p>
                     <input
                         ref={fileInputRef}
                         type="file"
@@ -300,9 +302,7 @@ export function PdfToWord() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-lg">Running OCR…</h3>
-                                        <p className="text-sm text-muted-foreground mt-1">
-                                            This PDF appears to be scanned. Using optical character recognition.
-                                        </p>
+                                        <p className="text-sm text-muted-foreground mt-1">{tToolNew('thisPDFAppearsToBeScannedUsingOpticalCharacterRecognition')}</p>
                                     </div>
                                 </div>
                             ) : (
@@ -310,7 +310,7 @@ export function PdfToWord() {
                                     <div className="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
                                     <div>
                                         <h3 className="font-bold text-lg">Extracting text…</h3>
-                                        <p className="text-sm text-muted-foreground mt-1">Preserving layout</p>
+                                        <p className="text-sm text-muted-foreground mt-1">{tPdf('preserveLayout')}</p>
                                     </div>
                                 </div>
                             )}
@@ -342,12 +342,12 @@ export function PdfToWord() {
                                 }
                                 <div>
                                     <p className={`font-bold ${isOcr ? 'text-amber-700 dark:text-amber-400' : 'text-emerald-700 dark:text-emerald-400'}`}>
-                                        {isOcr ? 'OCR Complete!' : 'Conversion Complete!'}
+                                        {isOcr ? 'OCR Complete!' : tPdf('convertComplete')}
                                     </p>
                                     <p className="text-sm text-muted-foreground">
                                         {isOcr
                                             ? 'Text extracted via OCR. Accuracy depends on scan quality.'
-                                            : 'Your Word document is ready'
+                                            : tPdf('readyToDownloadConvert')
                                         }
                                     </p>
                                 </div>
@@ -365,7 +365,7 @@ export function PdfToWord() {
                                 onClick={handleClear}
                                 className="text-muted-foreground hover:text-foreground text-sm underline w-full"
                             >
-                                Convert another file
+                                {tActions('clearAll') || 'Convert another file'}
                             </button>
                         </div>
                     )}
@@ -378,7 +378,7 @@ export function PdfToWord() {
                                 onClick={handleClear}
                                 className="w-full text-sm text-muted-foreground underline"
                             >
-                                Try another file
+                                {tActions('clearAll') || 'Try another file'}
                             </button>
                         </div>
                     )}

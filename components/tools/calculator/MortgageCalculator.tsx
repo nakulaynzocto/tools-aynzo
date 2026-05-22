@@ -1,7 +1,7 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { useState, useMemo } from 'react';
 import { Copy, CheckCircle2, Home, DollarSign, Info } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
 interface MortgageResult {
     monthlyPayment: string;
@@ -13,7 +13,9 @@ interface MortgageResult {
     isPmiApplied: boolean;
 }
 
+
 export function MortgageCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const t = useTranslations('Calculators.Mortgage');
     const [price, setPrice] = useState(350000);
     const [downPayment, setDownPayment] = useState(70000);

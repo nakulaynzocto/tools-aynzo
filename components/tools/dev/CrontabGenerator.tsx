@@ -49,8 +49,10 @@ function parseCron(expr: string): string {
     } catch { return 'Enter a valid cron expression'; }
 }
 
+import { useTranslations } from 'next-intl';
+
 export function CrontabGenerator() {
-    const [expression, setExpression] = useState('0 0 * * *');
+    const tTool = useTranslations('Tools.devTools'); const [expression, setExpression] = useState('0 0 * * *');
     const [copied, setCopied] = useState(false);
 
     const description = parseCron(expression);
@@ -71,7 +73,7 @@ export function CrontabGenerator() {
             </div>
 
             <div className="bg-card border-2 border-primary/30 rounded-3xl p-6 space-y-4">
-                <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">Cron Expression</label>
+                <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">{tTool('cronExpression')}</label>
                 <input
                     type="text"
                     value={expression}
@@ -90,7 +92,7 @@ export function CrontabGenerator() {
             </div>
 
             <div className="space-y-3">
-                <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2"><RefreshCw className="w-4 h-4" /> Common Presets</label>
+                <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2"><RefreshCw className="w-4 h-4" />{tTool('commonPresets')}</label>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
                     {presets.map(p => (
                         <button key={p.value} onClick={() => setExpression(p.value)} className={`px-4 py-3 rounded-2xl border-2 text-left transition-all hover:border-primary/50 ${expression === p.value ? 'bg-primary/10 border-primary text-primary' : 'border-border hover:bg-muted/30'}`}>
@@ -102,7 +104,7 @@ export function CrontabGenerator() {
             </div>
 
             <div className="bg-muted/10 border-2 border-border/50 rounded-2xl p-5">
-                <p className="text-sm font-black text-foreground mb-2">Cron Format Reference</p>
+                <p className="text-sm font-black text-foreground mb-2">{tTool('cronFormatReference')}</p>
                 <div className="grid grid-cols-5 gap-2 font-mono text-xs">
                     {[
                         { field: 'Minute', range: '0-59' },
@@ -123,8 +125,8 @@ export function CrontabGenerator() {
             <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">Testing Your Cron Job</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">Always test your cron expression with <strong>crontab -e</strong> on Linux/Mac. For debugging, redirect output to a log file: <code className="bg-muted px-1 py-0.5 rounded text-xs">* * * * * /path/to/script.sh &gt;&gt; /var/log/cron.log 2&gt;&amp;1</code></p>
+                    <h4 className="font-bold text-foreground">{tTool('testingYourCronJob')}</h4>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('alwaysTestYourCronExpressionWith')}<strong>crontab -e</strong> on Linux/Mac. For debugging, redirect output to a log file: <code className="bg-muted px-1 py-0.5 rounded text-xs">* * * * * /path/to/script.sh &gt;&gt; /var/log/cron.log 2&gt;&amp;1</code></p>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { Upload } from 'lucide-react';
 import { cn } from '@/utils/cn';
-import { useTranslations } from 'next-intl';
 
 
 interface FileUploadAreaProps {
@@ -16,8 +16,8 @@ interface FileUploadAreaProps {
     isLoading?: boolean;
 }
 
-export function FileUploadArea({
-    dragActive,
+
+export function FileUploadArea({ dragActive,
     onDrag,
     onDrop,
     onFileSelect,
@@ -27,6 +27,7 @@ export function FileUploadArea({
     children,
     isLoading = false,
 }: FileUploadAreaProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const tActions = useTranslations('ToolActions');
     const t = useTranslations('Common');
 

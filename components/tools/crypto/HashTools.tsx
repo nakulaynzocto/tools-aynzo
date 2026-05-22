@@ -7,7 +7,10 @@ interface HashToolsProps {
     type: 'md5-hash' | 'sha256-hash' | 'sha512-hash';
 }
 
+import { useTranslations } from 'next-intl';
+
 export function HashTools({ type }: HashToolsProps) {
+    const t = useTranslations('Tools.CryptoToolsText');
     const [input, setInput] = useState('');
     const [copied, setCopied] = useState(false);
 
@@ -37,12 +40,12 @@ export function HashTools({ type }: HashToolsProps) {
         <div className="grid lg:grid-cols-2 gap-10">
             <div className="space-y-4">
                 <div className="flex justify-between items-end">
-                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Input Data</label>
-                    <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} Chars</span>
+                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('inputData')}</label>
+                    <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} {t('chars')}</span>
                 </div>
                 <textarea
                     className="w-full p-6 border-2 border-border rounded-3xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground placeholder-muted-foreground min-h-[300px] shadow-inner transition-all"
-                    placeholder="Enter text to hash..."
+                    placeholder={t('enterTextHash')}
                     value={input}
                     onChange={e => setInput(e.target.value)}
                     rows={8}
@@ -50,14 +53,14 @@ export function HashTools({ type }: HashToolsProps) {
             </div>
             <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Output</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('resultOutput')}</label>
                     <button
                         onClick={copyToClipboard}
                         disabled={!output}
                         className={`px-4 py-1.5 rounded-xl text-[10px] font-black flex items-center gap-2 transition-all disabled:opacity-30 ${copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary/10 text-primary hover:bg-primary/20'}`}
                     >
                         {copied ? <CheckCircle2 size={12} /> : <Copy size={12} />}
-                        {copied ? 'COPIED' : 'COPY'}
+                        {copied ? t('copied') : t('copy')}
                     </button>
                 </div>
                 <div className="w-full p-6 bg-muted/30 border-2 border-border rounded-3xl font-mono text-sm break-all text-primary shadow-inner min-h-[300px] whitespace-pre-wrap flex flex-col items-center justify-center">
@@ -67,7 +70,7 @@ export function HashTools({ type }: HashToolsProps) {
                         </div>
                     ) : (
                         <div className="text-muted-foreground/30 flex flex-col items-center gap-2">
-                            <span className="text-[10px] font-black uppercase tracking-widest">Waiting for input...</span>
+                            <span className="text-[10px] font-black uppercase tracking-widest">{t('waitingInput')}</span>
                         </div>
                     )}
                 </div>

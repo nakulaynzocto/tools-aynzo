@@ -8,7 +8,10 @@ interface BMIResult {
     category: string;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function BMICalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [bmiInputs, setBmiInputs] = useState({ height: '', weight: '', unit: 'metric' as 'metric' | 'imperial' });
     const [copied, setCopied] = useState(false);
 
@@ -52,11 +55,11 @@ export function BMICalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Body Measurements</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('bodyMeasurements')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Unit System</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('unitSystem')}</label>
                         <div className="flex p-1 bg-muted/20 rounded-xl gap-1">
                             {['metric', 'imperial'].map(u => (
                                 <button key={u} onClick={() => setBmiInputs({ ...bmiInputs, unit: u as any })} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg transition-all", bmiInputs.unit === u ? "bg-background shadow-sm text-primary" : "text-muted-foreground hover:text-foreground")}>{u}</button>
@@ -77,7 +80,7 @@ export function BMICalculator() {
 
                     {result && (
                         <div className="space-y-3 pt-4 border-t border-border/50">
-                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">BMI Range Scale</label>
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('bMIRangeScale')}</label>
                             <div className="relative h-4 bg-muted/20 rounded-full overflow-hidden flex">
                                 <div className="h-full bg-blue-500/40 w-[18.5%]" />
                                 <div className="h-full bg-emerald-500/40 w-[6.5%]" />
@@ -86,10 +89,10 @@ export function BMICalculator() {
                                 <div className="absolute top-0 bottom-0 w-1 bg-primary shadow-[0_0_10px_rgba(0,0,0,0.5)] transition-all duration-1000" style={{ left: `${Math.min(100, (parseFloat(result.bmi) / 40) * 100)}%` }} />
                             </div>
                             <div className="flex justify-between text-[10px] font-bold text-muted-foreground uppercase tracking-tighter">
-                                <span>Under</span>
-                                <span>Normal</span>
-                                <span>Over</span>
-                                <span>Obese</span>
+                                <span>{tCalc('under')}</span>
+                                <span>{tCalc('normal')}</span>
+                                <span>{tCalc('over')}</span>
+                                <span>{tCalc('obese')}</span>
                             </div>
                         </div>
                     )}
@@ -98,13 +101,13 @@ export function BMICalculator() {
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">BMI Result</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('bMIResult')}</h3>
                 
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
                         <div className="text-center space-y-4">
                             <div className="text-7xl font-black text-primary animate-in fade-in zoom-in duration-500">{result.bmi}</div>
-                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">Your Body Mass Index</div>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('yourBodyMassIndex')}</div>
                             
                             <div className={cn("mt-6 px-8 py-3 rounded-2xl font-black uppercase text-sm tracking-widest shadow-sm",
                                 result.category === 'Normal weight' ? 'bg-emerald-500/10 text-emerald-600 border-2 border-emerald-500/20' : 
@@ -122,7 +125,7 @@ export function BMICalculator() {
                     </div>
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4 min-h-[400px]">
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Enter weight and height to see BMI</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('enterWeightAndHeightToSeeBMI')}</span>
                     </div>
                 )}
             </div>

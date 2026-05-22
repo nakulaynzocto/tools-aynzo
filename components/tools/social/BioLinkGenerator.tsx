@@ -6,7 +6,11 @@ interface LinkItem { label: string; url: string; icon: string; }
 
 const iconOptions = ['🔗', '🌐', '📸', '🎵', '💼', '🛒', '📧', '📞', '🎮', '💰', '📺', '🐦'];
 
+import { useTranslations } from 'next-intl';
+
 export function BioLinkGenerator() {
+    const tToolNew = useTranslations('Tools.socialToolsNew');
+    const tBio = useTranslations('Tools.BioLinkGenerator');
     const [name, setName] = useState('Your Name');
     const [bio, setBio] = useState('Creator | Entrepreneur | Making cool stuff 🚀');
     const [links, setLinks] = useState<LinkItem[]>([
@@ -17,7 +21,7 @@ export function BioLinkGenerator() {
     const [copied, setCopied] = useState(false);
     const [preview, setPreview] = useState(false);
 
-    const addLink = () => setLinks(prev => [...prev, { label: 'New Link', url: '', icon: '🔗' }]);
+    const addLink = () => setLinks(prev => [...prev, { label: tBio('newLink'), url: '', icon: '🔗' }]);
     const removeLink = (i: number) => setLinks(prev => prev.filter((_, idx) => idx !== i));
     const updateLink = (i: number, field: keyof LinkItem, val: string) =>
         setLinks(prev => prev.map((l, idx) => idx === i ? { ...l, [field]: val } : l));
@@ -54,14 +58,14 @@ ${links.filter(l => l.url).map(l => `<a class="link" href="${l.url}" target="_bl
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="space-y-5 bg-muted/10 p-7 rounded-[2rem] border-2 border-border/50">
                         <div className="space-y-3">
-                            <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2"><User className="w-4 h-4" /> Profile</label>
-                            <input value={name} onChange={e => setName(e.target.value)} placeholder="Your Name" className="w-full px-4 py-3 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-violet-500 transition-all font-bold" />
-                            <textarea value={bio} onChange={e => setBio(e.target.value)} placeholder="Your bio..." rows={2} className="w-full px-4 py-3 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-violet-500 transition-all font-medium resize-none" />
+                            <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2"><User className="w-4 h-4" />{tBio('profile')}</label>
+                            <input value={name} onChange={e => setName(e.target.value)} placeholder={tBio('yourName')} className="w-full px-4 py-3 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-violet-500 transition-all font-bold" />
+                            <textarea value={bio} onChange={e => setBio(e.target.value)} placeholder={tBio('yourBio')} rows={2} className="w-full px-4 py-3 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-violet-500 transition-all font-medium resize-none" />
                         </div>
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2"><Link2 className="w-4 h-4" /> Links</label>
-                                <button onClick={addLink} className="flex items-center gap-1.5 text-violet-500 font-bold text-sm hover:underline"><Plus className="w-4 h-4" /> Add</button>
+                                <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2"><Link2 className="w-4 h-4" />{tBio('links')}</label>
+                                <button onClick={addLink} className="flex items-center gap-1.5 text-violet-500 font-bold text-sm hover:underline"><Plus className="w-4 h-4" />{tBio('add')}</button>
                             </div>
                             {links.map((l, i) => (
                                 <div key={i} className="space-y-2 bg-background border-2 border-border rounded-2xl p-4">
@@ -69,7 +73,7 @@ ${links.filter(l => l.url).map(l => `<a class="link" href="${l.url}" target="_bl
                                         <select value={l.icon} onChange={e => updateLink(i, 'icon', e.target.value)} className="px-2 py-2 bg-background border-2 border-border rounded-xl font-bold text-lg">
                                             {iconOptions.map(ic => <option key={ic} value={ic}>{ic}</option>)}
                                         </select>
-                                        <input value={l.label} onChange={e => updateLink(i, 'label', e.target.value)} placeholder="Label" className="flex-1 px-3 py-2 bg-muted/30 border-2 border-border rounded-xl focus:outline-none focus:border-violet-500 transition-all font-bold text-sm" />
+                                        <input value={l.label} onChange={e => updateLink(i, 'label', e.target.value)} placeholder={tBio('label')} className="flex-1 px-3 py-2 bg-muted/30 border-2 border-border rounded-xl focus:outline-none focus:border-violet-500 transition-all font-bold text-sm" />
                                         <button onClick={() => removeLink(i)} className="p-2 text-red-400 hover:bg-red-500/10 rounded-xl transition-all"><Trash2 className="w-4 h-4" /></button>
                                     </div>
                                     <input value={l.url} onChange={e => updateLink(i, 'url', e.target.value)} placeholder="https://" className="w-full px-3 py-2 bg-muted/30 border-2 border-border rounded-xl focus:outline-none focus:border-violet-500 transition-all text-sm font-medium" />
@@ -101,8 +105,8 @@ ${links.filter(l => l.url).map(l => `<a class="link" href="${l.url}" target="_bl
             <div className="bg-violet-500/5 border-2 border-violet-500/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-violet-500 shrink-0 mt-1" />
                 <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">How to Use</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">Click <strong>"Copy HTML"</strong> and paste into a free hosting service like <strong>GitHub Pages, Netlify, or Vercel</strong>. Or add to your website as a standalone page. Works as a free Linktree alternative!</p>
+                    <h4 className="font-bold text-foreground">{tBio('howToUse')}</h4>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tBio('howToUseDesc')}</p>
                 </div>
             </div>
         </div>

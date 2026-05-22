@@ -10,7 +10,10 @@ interface RetirementResult {
     totalInterest: number;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function Retirement401kCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [currentAge, setCurrentAge] = useState<number>(30);
     const [retirementAge, setRetirementAge] = useState<number>(65);
     const [annualSalary, setAnnualSalary] = useState<number>(75000);
@@ -87,12 +90,12 @@ export function Retirement401kCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Retirement Plan</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('retirementPlan')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Current Age</span>
+                            <span className="uppercase tracking-wider">{tCalc('currentAge')}</span>
                             <span className="text-primary text-base">{currentAge} Years</span>
                         </div>
                         <input 
@@ -105,7 +108,7 @@ export function Retirement401kCalculator() {
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Retirement Age</span>
+                            <span className="uppercase tracking-wider">{tCalc('retirementAge')}</span>
                             <span className="text-primary text-base">{retirementAge} Years</span>
                         </div>
                         <input 
@@ -118,7 +121,7 @@ export function Retirement401kCalculator() {
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Annual Salary</span>
+                            <span className="uppercase tracking-wider">{tCalc('annualSalary')}</span>
                             <span className="text-primary text-base">${annualSalary.toLocaleString()}</span>
                         </div>
                         <input 
@@ -131,7 +134,7 @@ export function Retirement401kCalculator() {
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Current 401k Balance</span>
+                            <span className="uppercase tracking-wider">{tCalc('current401kBalance')}</span>
                             <span className="text-primary text-base">${currentBalance.toLocaleString()}</span>
                         </div>
                         <input 
@@ -145,7 +148,7 @@ export function Retirement401kCalculator() {
                     <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border/30">
                         <div className="space-y-4">
                             <div className="flex justify-between items-center text-[10px] font-black uppercase text-muted-foreground tracking-widest">
-                                <span>Contribution</span>
+                                <span>{tCalc('contribution')}</span>
                                 <span className="text-primary text-xs">{contributionRate}%</span>
                             </div>
                             <input 
@@ -157,7 +160,7 @@ export function Retirement401kCalculator() {
                         </div>
                         <div className="space-y-4">
                             <div className="flex justify-between items-center text-[10px] font-black uppercase text-muted-foreground tracking-widest">
-                                <span>Expected Return</span>
+                                <span>{tCalc('expectedReturn')}</span>
                                 <span className="text-primary text-xs">{expectedReturn}%</span>
                             </div>
                             <input 
@@ -172,7 +175,7 @@ export function Retirement401kCalculator() {
                     <div className="grid grid-cols-2 gap-6">
                         <div className="space-y-4">
                             <div className="flex justify-between items-center text-[10px] font-black uppercase text-muted-foreground tracking-widest">
-                                <span>Employer Match</span>
+                                <span>{tCalc('employerMatch')}</span>
                                 <span className="text-primary text-xs">{employerMatch}%</span>
                             </div>
                             <input 
@@ -184,7 +187,7 @@ export function Retirement401kCalculator() {
                         </div>
                         <div className="space-y-4">
                             <div className="flex justify-between items-center text-[10px] font-black uppercase text-muted-foreground tracking-widest">
-                                <span>Salary Increase</span>
+                                <span>{tCalc('salaryIncrease')}</span>
                                 <span className="text-primary text-xs">{salaryIncrease}%</span>
                             </div>
                             <input 
@@ -198,13 +201,13 @@ export function Retirement401kCalculator() {
 
                     <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/30">
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Growth Ratio</label>
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('growthRatio')}</label>
                             <div className="text-sm font-bold text-foreground">
                                 {(result.totalSavings / (result.employeeContributions + result.employerMatch + (currentBalance || 1)) || 1).toFixed(2)}x Return
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Time Horizon</label>
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('timeHorizon')}</label>
                             <div className="text-sm font-bold text-foreground">
                                 {retirementAge - currentAge} Years
                             </div>
@@ -214,15 +217,14 @@ export function Retirement401kCalculator() {
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4 transition-all hover:bg-primary/10">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        Maxing out your 401k contribution and catching the full <strong>Employer Match</strong> is one of the most effective ways to build retirement wealth.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('maxingOutYour401kContributionAndCatchingTheFull')}<strong>{tCalc('employerMatch')}</strong> is one of the most effective ways to build retirement wealth.
                     </p>
                 </div>
             </div>
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Retirement Projection</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('retirementProjection')}</h3>
                 
                 <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
                     <div className="text-center space-y-4 w-full">
@@ -235,22 +237,22 @@ export function Retirement401kCalculator() {
 
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full mt-6">
                             <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
-                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">My Savings</span>
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('mySavings')}</span>
                                 <span className="block text-base font-black text-foreground">{formatCurrency(result.employeeContributions)}</span>
                             </div>
                             <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
-                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Employer Match</span>
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('employerMatch')}</span>
                                 <span className="block text-base font-black text-foreground">{formatCurrency(result.employerMatch)}</span>
                             </div>
                             <div className="bg-card p-4 rounded-2xl border border-border/50 text-center text-emerald-500 col-span-2 md:col-span-1">
-                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Total Interest</span>
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('totalInterest')}</span>
                                 <span className="block text-base font-black">+{formatCurrency(result.totalInterest)}</span>
                             </div>
                         </div>
 
                         <div className="w-full space-y-2 mt-4 text-left">
                             <div className="flex justify-between text-[10px] font-black uppercase text-muted-foreground mb-1">
-                                <span>Interest vs Contributions</span>
+                                <span>{tCalc('interestVsContributions')}</span>
                                 <span>{((result.totalInterest / result.totalSavings) * 100).toFixed(0)}% Compound Growth</span>
                             </div>
                             <div className="w-full bg-card h-3 rounded-full overflow-hidden flex border border-border/50">

@@ -6,8 +6,9 @@ import { useTranslations } from 'next-intl';
 import { findReplace } from '@/components/utils/text/textProcessing';
 
 export function FindReplace() {
-    const t = useTranslations('Common');
-    const tActions = useTranslations('ToolActions');
+    const tToolNew = useTranslations('Tools.advancedtextToolsNew');
+    const tAdvText = useTranslations('Tools.AdvancedText');
+    const tTools = useTranslations('Tools');
     const [input, setInput] = useState('');
     const [findText, setFindText] = useState('');
     const [replaceText, setReplaceText] = useState('');
@@ -65,7 +66,7 @@ export function FindReplace() {
                 <div className="flex items-center justify-between mb-4">
                     <label className="text-sm font-black uppercase tracking-widest text-foreground flex items-center gap-2">
                         <Search size={16} className="text-primary" />
-                        Find & Replace
+                        {tAdvText('findReplace')}
                     </label>
                     <label className="flex items-center gap-2 text-xs font-bold">
                         <input
@@ -74,27 +75,27 @@ export function FindReplace() {
                             onChange={(e) => setUseRegex(e.target.checked)}
                             className="w-4 h-4 rounded border-border"
                         />
-                        Use Regex
+                        {tAdvText('useRegex')}
                     </label>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <label className="text-xs font-bold text-foreground block mb-2">Find</label>
+                        <label className="text-xs font-bold text-foreground block mb-2">{tAdvText('find')}</label>
                         <input
                             type="text"
                             value={findText}
                             onChange={(e) => setFindText(e.target.value)}
-                            placeholder="Text to find..."
+                            placeholder={tAdvText('textToFind')}
                             className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl text-sm font-medium text-foreground focus:border-primary focus:outline-none"
                         />
                     </div>
                     <div>
-                        <label className="text-xs font-bold text-foreground block mb-2">Replace With</label>
+                        <label className="text-xs font-bold text-foreground block mb-2">{tAdvText('replaceWith')}</label>
                         <input
                             type="text"
                             value={replaceText}
                             onChange={(e) => setReplaceText(e.target.value)}
-                            placeholder="Replacement text..."
+                            placeholder={tAdvText('replacementText')}
                             className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl text-sm font-medium text-foreground focus:border-primary focus:outline-none"
                         />
                     </div>
@@ -109,18 +110,18 @@ export function FindReplace() {
                             : "bg-muted text-muted-foreground cursor-not-allowed"
                     )}
                 >
-                    Replace All <ArrowRight size={16} />
+                    {tAdvText('replaceAll')} <ArrowRight size={16} />
                 </button>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Input */}
                 <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
-                    <label className="text-sm font-black uppercase tracking-widest text-foreground">Input Text</label>
+                    <label className="text-sm font-black uppercase tracking-widest text-foreground">{tAdvText('inputText')}</label>
                     <textarea
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
-                        placeholder="Enter your text here..."
+                        placeholder={tAdvText('enterTextHere')}
                         className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-sm font-medium text-foreground focus:border-primary focus:outline-none min-h-[200px] resize-none"
                     />
                 </div>
@@ -128,7 +129,7 @@ export function FindReplace() {
                 {/* Output */}
                 <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-sm font-black uppercase tracking-widest text-foreground">Output</label>
+                        <label className="text-sm font-black uppercase tracking-widest text-foreground">{tTools('find-replace.name') !== 'find-replace.name' ? tTools('find-replace.name') : 'Output'}</label>
                         <div className="flex gap-2">
                             <button
                                 onClick={handleCopy}
@@ -143,7 +144,7 @@ export function FindReplace() {
                                 )}
                             >
                                 {copied ? <CheckCircle2 size={14} /> : <Copy size={14} />}
-                                Copy
+                                {tAdvText('copy')}
                             </button>
                             <button
                                 onClick={handleDownload}
@@ -156,16 +157,13 @@ export function FindReplace() {
                                 )}
                             >
                                 <Download size={14} />
-                                Download
+                                {tAdvText('download')}
                             </button>
                         </div>
                     </div>
-                    <textarea
-                        value={output}
-                        readOnly
-                        placeholder="Replaced text will appear here..."
-                        className="w-full px-4 py-4 bg-muted/50 border-2 border-border rounded-xl text-sm font-medium text-foreground min-h-[200px] resize-none"
-                    />
+                    <div className="w-full px-4 py-4 bg-muted/50 border-2 border-border rounded-xl text-sm font-medium text-foreground min-h-[200px] whitespace-pre-wrap break-words">
+                        {output || <span className="text-muted-foreground">{tAdvText('replacedText')}</span>}
+                    </div>
                 </div>
             </div>
         </div>

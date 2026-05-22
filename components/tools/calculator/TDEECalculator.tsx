@@ -3,7 +3,10 @@ import { useState, useMemo } from 'react';
 import { Flame, Activity, Copy, Check, Info, ArrowUpRight } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export function TDEECalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [age, setAge] = useState<number>(28);
     const [gender, setGender] = useState<'male' | 'female'>('male');
     const [weight, setWeight] = useState<number>(75);
@@ -46,12 +49,12 @@ export function TDEECalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Personal Profile</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('personalProfile')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Unit System</label>
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('unitSystem')}</label>
                             <div className="flex p-1 bg-muted/20 rounded-xl gap-1">
                                 {(['metric', 'imperial'] as const).map(u => (
                                     <button key={u} onClick={() => setUnit(u)} className={cn('flex-1 py-2 rounded-lg font-black text-[10px] uppercase transition-all', unit === u ? 'bg-background shadow-sm text-primary' : 'text-muted-foreground hover:text-foreground')}>{u}</button>
@@ -59,7 +62,7 @@ export function TDEECalculator() {
                             </div>
                         </div>
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Gender</label>
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('gender')}</label>
                             <div className="flex p-1 bg-muted/20 rounded-xl gap-1">
                                 {(['male', 'female'] as const).map(g => (
                                     <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-2 rounded-lg font-black text-[10px] uppercase transition-all', gender === g ? 'bg-background shadow-sm text-primary' : 'text-muted-foreground hover:text-foreground')}>{g}</button>
@@ -69,7 +72,7 @@ export function TDEECalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider flex justify-between">Age <span>{age} yrs</span></label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider flex justify-between">{tCalc('age')}<span>{age} yrs</span></label>
                         <input type="range" min="10" max="80" value={age} onChange={e => setAge(Number(e.target.value))} className="w-full accent-primary" />
                     </div>
 
@@ -85,7 +88,7 @@ export function TDEECalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Activity Multiplier</label>
+                        <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('activityMultiplier')}</label>
                         <div className="grid grid-cols-1 gap-2">
                             {activityLevels.map(lvl => (
                                 <button key={lvl.value} onClick={() => setActivity(lvl.value)} className={cn('w-full px-4 py-3 rounded-xl border-2 text-left transition-all flex justify-between items-center', activity === lvl.value ? 'bg-orange-500/10 border-orange-500/30' : 'border-border bg-muted/5 opacity-70 hover:opacity-100')}>
@@ -103,7 +106,7 @@ export function TDEECalculator() {
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Calories Result</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('caloriesResult')}</h3>
                 
                 <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
                     <div className="text-center space-y-4 w-full">
@@ -120,7 +123,7 @@ export function TDEECalculator() {
                                 <span className="block text-lg font-black text-foreground">{result.bmr.toLocaleString()}</span>
                             </div>
                             <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
-                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Energy Ratio</span>
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('energyRatio')}</span>
                                 <span className="block text-lg font-black text-foreground">{activity.toFixed(2)}x</span>
                             </div>
                         </div>
@@ -148,8 +151,7 @@ export function TDEECalculator() {
 
                 <div className="bg-orange-500/5 border-2 border-orange-500/20 p-6 rounded-3xl flex items-start gap-4">
                     <Flame className="w-6 h-6 text-orange-500 shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        The <strong>Mifflin-St Jeor</strong> formula is the industrial standard for calculating calorie needs. Consistency over 2 weeks is key.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('the')}<strong>{tCalc('mifflinStJeor')}</strong> formula is the industrial standard for calculating calorie needs. Consistency over 2 weeks is key.
                     </p>
                 </div>
             </div>

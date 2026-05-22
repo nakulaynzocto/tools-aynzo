@@ -5,6 +5,7 @@ import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 
 export function BinaryToText() {
+    const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('Common');
     const [binary, setBinary] = useState('');
     const [text, setText] = useState('');
@@ -76,7 +77,7 @@ export function BinaryToText() {
                     {/* Binary Input */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">Binary</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('binary')}</label>
                             <button
                                 onClick={() => handleCopy(binary, 'binary')}
                                 className={cn(
@@ -101,7 +102,7 @@ export function BinaryToText() {
                     {/* Text Output */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">Text</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('text')}</label>
                             <button
                                 onClick={() => handleCopy(text, 'text')}
                                 className={cn(
@@ -118,7 +119,7 @@ export function BinaryToText() {
                         <textarea
                             value={text}
                             onChange={(e) => handleTextChange(e.target.value)}
-                            placeholder="Enter text to convert to binary"
+                            placeholder={tToolNew('enterTextToConvertToBinary')}
                             className="w-full px-4 py-4 bg-muted/50 border-2 border-border rounded-xl text-sm font-mono text-foreground focus:border-primary focus:outline-none min-h-[200px] resize-none"
                         />
                     </div>

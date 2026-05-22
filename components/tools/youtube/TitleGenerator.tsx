@@ -8,7 +8,10 @@ interface TitleGeneratorProps {
     onCopy: (text: string, index: number) => void;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function TitleGenerator({ result, copiedIndex, onCopy }: TitleGeneratorProps) {
+    const tTool = useTranslations('Tools.youtubeTools');
     return (
         <div className="grid gap-3 pb-6">
             {result.map((title, i) => (

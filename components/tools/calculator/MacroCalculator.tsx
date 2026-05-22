@@ -3,7 +3,10 @@ import { useState, useMemo } from 'react';
 import { Dumbbell, Copy, Check, Info, ArrowUpRight, Flame } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export function MacroCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [weight, setWeight] = useState<number>(75);
     const [unit, setUnit] = useState<'kg' | 'lbs'>('kg');
     const [goal, setGoal] = useState<'cut' | 'maintain' | 'bulk'>('maintain');
@@ -64,11 +67,11 @@ export function MacroCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Macro Inputs</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('macroInputs')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Gender</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('gender')}</label>
                         <div className="flex gap-2">
                             {(['male', 'female'] as const).map(g => (
                                 <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 capitalize transition-all', gender === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{g}</button>
@@ -98,7 +101,7 @@ export function MacroCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Goal</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('goal')}</label>
                         <div className="grid grid-cols-3 gap-2">
                             {(['cut', 'maintain', 'bulk'] as const).map(g => (
                                 <button key={g} onClick={() => setGoal(g)} className={cn('py-3 rounded-xl font-bold text-sm border-2 capitalize transition-all', goal === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{g}</button>
@@ -107,7 +110,7 @@ export function MacroCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Activity Level</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('activityLevel')}</label>
                         <select value={activityMult} onChange={e => setActivityMult(Number(e.target.value))} className="w-full px-4 py-3 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-bold">
                             {activityLevels.map(a => <option key={a.value} value={a.value}>{a.label}</option>)}
                         </select>
@@ -117,7 +120,7 @@ export function MacroCalculator() {
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Calories & Macros</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('caloriesMacros')}</h3>
 
                 <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[300px]">
                     <div className="text-center space-y-4">
@@ -171,7 +174,7 @@ export function MacroCalculator() {
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                     <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        <strong>Protein</strong> is key for muscle. Aim for 1.8-2.2g/kg. Adjust based on energy levels.
+                        <strong>{tCalc('protein')}</strong> is key for muscle. Aim for 1.8-2.2g/kg. Adjust based on energy levels.
                     </p>
                 </div>
             </div>

@@ -20,7 +20,10 @@ const MILESTONES = [
     { week: 40, event: '🎉 Estimated due date' },
 ];
 
+import { useTranslations } from 'next-intl';
+
 export function PregnancyDueDateCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [lmpDate, setLmpDate] = useState<string>('');
     const [method, setMethod] = useState<'lmp' | 'conception' | 'ivf'>('lmp');
     const [conceptionDate, setConceptionDate] = useState<string>('');
@@ -70,11 +73,11 @@ export function PregnancyDueDateCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Calculation Details</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('calculationDetails')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Method</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('method')}</label>
                         <div className="flex flex-wrap gap-2">
                             {([
                                 { id: 'lmp', label: 'Last Period' },
@@ -106,7 +109,7 @@ export function PregnancyDueDateCalculator() {
 
                     {result && (
                         <div className="space-y-3 pt-4 border-t border-border/50">
-                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Trimester Progress</label>
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('trimesterProgress')}</label>
                             <div className="grid grid-cols-1 gap-2">
                                 {TRIMESTERS.map(t => {
                                     const current = result.weeksPregnant >= t.weeks[0] && result.weeksPregnant <= t.weeks[1];
@@ -126,7 +129,7 @@ export function PregnancyDueDateCalculator() {
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Due Date Result</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('dueDateResult')}</h3>
                 
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
@@ -134,24 +137,22 @@ export function PregnancyDueDateCalculator() {
                             <div className="text-4xl md:text-5xl font-black text-pink-500 drop-shadow-sm leading-tight animate-in fade-in zoom-in duration-500">
                                 {fmt(result.dueDate)}
                             </div>
-                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                                Estimated Due Date
-                            </div>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('estimatedDueDate')}</div>
 
                             <div className="grid grid-cols-2 gap-3 w-full mt-6">
                                 <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
-                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Current Progress</span>
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('currentProgress')}</span>
                                     <span className="block text-lg font-black text-pink-500">{result.weeksPregnant}w {result.daysRemainder}d</span>
                                 </div>
                                 <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
-                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Days Remaining</span>
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('daysRemaining')}</span>
                                     <span className="block text-lg font-black text-pink-500">{result.daysLeft}</span>
                                 </div>
                             </div>
 
                             {result.upcoming.length > 0 && (
                                 <div className="bg-card/50 p-6 rounded-2xl border border-border/50 text-left mt-4">
-                                    <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest block mb-3">Upcoming Milestones</span>
+                                    <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest block mb-3">{tCalc('upcomingMilestones')}</span>
                                     <div className="space-y-2">
                                         {result.upcoming.map(m => (
                                             <div key={m.week} className="flex justify-between items-center text-xs font-bold py-1.5 border-b border-border/30 last:border-0 last:pb-0">
@@ -172,7 +173,7 @@ export function PregnancyDueDateCalculator() {
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4 min-h-[400px]">
                         <Baby size={48} className="opacity-20" />
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Select a date to calculate</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('selectADateToCalculate')}</span>
                     </div>
                 )}
 

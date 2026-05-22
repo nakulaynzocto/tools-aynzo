@@ -64,6 +64,7 @@ const units: Record<UnitCategory, Unit[]> = {
 };
 
 export function UnitConverter() {
+    const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('Common');
     const [category, setCategory] = useState<UnitCategory>('length');
     const [fromUnit, setFromUnit] = useState(0);
@@ -132,7 +133,7 @@ export function UnitConverter() {
                     {/* From */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">From</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('from')}</label>
                             <select
                                 value={fromUnit}
                                 onChange={(e) => setFromUnit(Number(e.target.value))}
@@ -149,7 +150,7 @@ export function UnitConverter() {
                             type="number"
                             value={value}
                             onChange={(e) => setValue(e.target.value)}
-                            placeholder="Enter value"
+                            placeholder={tToolNew('enterValue')}
                             className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-2xl font-black text-foreground focus:border-primary focus:outline-none"
                         />
                     </div>
@@ -157,7 +158,7 @@ export function UnitConverter() {
                     {/* To */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">To</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('to')}</label>
                             <select
                                 value={toUnit}
                                 onChange={(e) => setToUnit(Number(e.target.value))}

@@ -12,6 +12,7 @@ import { TextToHandwriting } from './TextToHandwriting';
 import { GrammarChecker } from './GrammarChecker';
 
 export default function UtilityToolsIndex({ type }: UtilityToolProps) {
+    const tTool = useTranslations('Tools.utilityTools');
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     
@@ -120,7 +121,7 @@ export default function UtilityToolsIndex({ type }: UtilityToolProps) {
                     <div className="p-8 space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label className="text-xs font-bold text-foreground block mb-2">Number of Paragraphs</label>
+                                <label className="text-xs font-bold text-foreground block mb-2">{tTool('numberOfParagraphs')}</label>
                                 <input
                                     type="number"
                                     value={paragraphs}
@@ -131,7 +132,7 @@ export default function UtilityToolsIndex({ type }: UtilityToolProps) {
                                 />
                             </div>
                             <div>
-                                <label className="text-xs font-bold text-foreground block mb-2">Sentences per Paragraph</label>
+                                <label className="text-xs font-bold text-foreground block mb-2">{tTool('sentencesPerParagraph')}</label>
                                 <input
                                     type="number"
                                     value={sentencesPerParagraph}
@@ -146,14 +147,12 @@ export default function UtilityToolsIndex({ type }: UtilityToolProps) {
                             onClick={handleGenerate}
                             className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
-                            <Type size={16} />
-                            Generate Lorem Ipsum
-                        </button>
+                            <Type size={16} />{tTool('generateLoremIpsum')}</button>
                         
                         {output && (
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
-                                    <label className="text-sm font-bold">Generated Text</label>
+                                    <label className="text-sm font-bold">{tTool('generatedText')}</label>
                                     <div className="flex gap-2">
                                         <button
                                             onClick={handleCopy}
@@ -189,7 +188,7 @@ export default function UtilityToolsIndex({ type }: UtilityToolProps) {
         <div className="max-w-6xl mx-auto space-y-4">
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-8 text-center">
-                    <p className="text-lg font-bold text-foreground mb-2">Tool Implementation Coming Soon</p>
+                    <p className="text-lg font-bold text-foreground mb-2">{tTool('toolImplementationComingSoon')}</p>
                     <p className="text-sm text-muted-foreground">The {type} tool is currently under development.</p>
                 </div>
             </div>

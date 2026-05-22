@@ -1,8 +1,8 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { useState, useRef, useEffect } from 'react';
 import { Upload, FileText, CheckCircle2, Download, RefreshCw, X } from 'lucide-react';
 import { cn } from '@/utils/cn';
-import { useTranslations } from 'next-intl';
 import { ProcessedFile } from '@/components/types/image/types';
 import { useImageFileUpload } from '@/components/hooks/image/useImageFileUpload';
 import { processSingleFile, downloadResults } from '@/components/hooks/image/useImageProcessing';
@@ -13,7 +13,9 @@ interface Base64ToolsProps {
     quality: number;
 }
 
+
 export function Base64Tools({ type, quality }: Base64ToolsProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
 
@@ -135,7 +137,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                 {/* Left Side - Input */}
                 <div className="flex flex-col bg-card rounded-2xl border-2 border-border shadow-lg overflow-hidden">
                     <div className="px-4 sm:px-6 py-3 sm:py-4 bg-primary/5 border-b border-border flex items-center justify-between">
-                        <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground">Input Image</h3>
+                        <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground">{tTool('inputImage')}</h3>
                         <div className="text-[10px] sm:text-xs text-muted-foreground font-bold">
                             {files.length} {t('imagesSelected', { count: files.length })}
                         </div>
@@ -236,9 +238,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                 </>
                             ) : (
                                 <>
-                                    <FileText className="w-5 h-5" />
-                                    Convert to Base64
-                                </>
+                                    <FileText className="w-5 h-5" />{tTool('convertToBase64')}</>
                             )}
                         </button>
                     </div>
@@ -247,7 +247,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                 {/* Right Side - Output */}
                 <div className="flex flex-col bg-card rounded-2xl border-2 border-border shadow-lg overflow-hidden" ref={base64OutputRef}>
                     <div className="px-4 sm:px-6 py-3 sm:py-4 bg-accent/10 border-b border-border flex items-center justify-between">
-                        <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground">Output Base64</h3>
+                        <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground">{tTool('outputBase64')}</h3>
                         {base64Output && (
                             <button
                                 onClick={() => {
@@ -281,9 +281,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                                 ? "bg-primary text-primary-foreground shadow-md"
                                                 : "text-muted-foreground hover:text-foreground bg-transparent"
                                         )}
-                                    >
-                                        Data URI
-                                    </button>
+                                    >{tTool('dataURI')}</button>
                                     <button
                                         onClick={() => setOutputFormat('base64')}
                                         className={cn(
@@ -292,9 +290,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                                 ? "bg-primary text-primary-foreground shadow-md"
                                                 : "text-muted-foreground hover:text-foreground bg-transparent"
                                         )}
-                                    >
-                                        Base64 Only
-                                    </button>
+                                    >{tTool('base64Only')}</button>
                                 </div>
 
                                 {/* Base64 Output */}
@@ -325,9 +321,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                     }}
                                     className="mt-4 w-full py-2.5 px-4 bg-muted hover:bg-muted/80 text-foreground rounded-lg text-xs font-bold uppercase tracking-wider transition-all border border-border flex items-center justify-center gap-2"
                                 >
-                                    <Download size={16} />
-                                    Save as...
-                                </button>
+                                    <Download size={16} />{tTool('saveAs')}</button>
                             </>
                         ) : (
                             <div className="flex-1 flex items-center justify-center text-muted-foreground text-sm">
@@ -358,14 +352,14 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
     return (
         <div className="space-y-6">
             <div className="bg-card rounded-2xl border-2 border-border shadow-lg p-6">
-                <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground mb-4">Input Base64</h3>
+                <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground mb-4">{tTool('inputBase64')}</h3>
                 <textarea
                     value={base64Input}
                     onChange={(e) => {
                         setBase64Input(e.target.value);
                         setBase64Error(null);
                     }}
-                    placeholder="Paste your Base64 string here..."
+                    placeholder={tTool('pasteYourBase64StringHere')}
                     className="w-full h-48 p-4 font-mono text-xs bg-muted/30 rounded-xl border border-border resize-none outline-none focus:ring-2 focus:ring-primary"
                 />
                 {base64Error && (
@@ -389,7 +383,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
 
             {base64Preview && (
                 <div className="bg-card rounded-2xl border-2 border-border shadow-lg p-6">
-                    <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground mb-4">Preview</h3>
+                    <h3 className="text-sm sm:text-base font-black uppercase tracking-widest text-foreground mb-4">{tTool('preview')}</h3>
                     <div className="bg-muted/20 rounded-xl border border-border p-4 flex items-center justify-center min-h-[300px]">
                         <img
                             src={base64Preview}
@@ -401,9 +395,7 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                         onClick={downloadBase64Image}
                         className="w-full mt-4 py-3 bg-primary text-primary-foreground rounded-xl font-bold transition-all text-sm hover:bg-primary/90 shadow-lg flex items-center justify-center gap-2"
                     >
-                        <Download size={20} />
-                        Download Image
-                    </button>
+                        <Download size={20} />{tTool('downloadImage')}</button>
                 </div>
             )}
         </div>

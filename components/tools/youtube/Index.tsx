@@ -15,6 +15,7 @@ import { YouTubeSettingsPanel } from './YouTubeSettingsPanel';
 import { YouTubeMoneyCalculator } from './YouTubeMoneyCalculator';
 
 export default function YouTubeToolsIndex({ type }: YouTubeToolProps) {
+    const tTool = useTranslations('Tools.youtubeTools');
     const t = useTranslations('YouTubeNav');
     const youtubeNavTools = [
         {
@@ -108,7 +109,7 @@ export default function YouTubeToolsIndex({ type }: YouTubeToolProps) {
                                             {type.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
                                         </div>
                                     </div>
-                                    <button onClick={() => { setInput(''); setResult(null); }} className="text-[10px] font-black uppercase tracking-widest text-destructive hover:underline">New Analysis</button>
+                                    <button onClick={() => { setInput(''); setResult(null); }} className="text-[10px] font-black uppercase tracking-widest text-destructive hover:underline">{tTool('newAnalysis')}</button>
                                 </div>
                                 <div className="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-1">
                                     {renderTool()}

@@ -8,6 +8,7 @@ import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 
 export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
+    const tToolNew = useTranslations('Tools.generatorToolsNew');
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     
@@ -156,7 +157,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                     <div className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div>
-                                <label className="text-xs font-bold text-foreground block mb-2">Min Value</label>
+                                <label className="text-xs font-bold text-foreground block mb-2">{tToolNew('minValue')}</label>
                                 <input
                                     type="number"
                                     value={min}
@@ -165,7 +166,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                                 />
                             </div>
                             <div>
-                                <label className="text-xs font-bold text-foreground block mb-2">Max Value</label>
+                                <label className="text-xs font-bold text-foreground block mb-2">{tToolNew('maxValue')}</label>
                                 <input
                                     type="number"
                                     value={max}
@@ -174,7 +175,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                                 />
                             </div>
                             <div>
-                                <label className="text-xs font-bold text-foreground block mb-2">Count</label>
+                                <label className="text-xs font-bold text-foreground block mb-2">{tToolNew('count')}</label>
                                 <input
                                     type="number"
                                     value={count}
@@ -189,9 +190,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                             onClick={handleGenerate}
                             className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
-                            <RefreshCw size={16} />
-                            Generate Random Numbers
-                        </button>
+                            <RefreshCw size={16} />{tToolNew('generateRandomNumbers')}</button>
                     </div>
                 );
             
@@ -199,7 +198,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                 return (
                     <div className="space-y-6">
                         <div>
-                            <label className="text-xs font-bold text-foreground block mb-2">Length</label>
+                            <label className="text-xs font-bold text-foreground block mb-2">{tToolNew('length')}</label>
                             <input
                                 type="number"
                                 value={length}
@@ -210,7 +209,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                             />
                         </div>
                         <div className="space-y-3">
-                            <label className="text-xs font-bold text-foreground block">Include</label>
+                            <label className="text-xs font-bold text-foreground block">{tToolNew('include')}</label>
                             <div className="flex gap-4">
                                 <label className="flex items-center gap-2 cursor-pointer">
                                     <input
@@ -219,7 +218,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                                         onChange={(e) => setIncludeLetters(e.target.checked)}
                                         className="w-4 h-4 rounded border-border"
                                     />
-                                    <span className="text-sm font-medium">Letters</span>
+                                    <span className="text-sm font-medium">{tToolNew('letters')}</span>
                                 </label>
                                 <label className="flex items-center gap-2 cursor-pointer">
                                     <input
@@ -228,7 +227,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                                         onChange={(e) => setIncludeNumbers(e.target.checked)}
                                         className="w-4 h-4 rounded border-border"
                                     />
-                                    <span className="text-sm font-medium">Numbers</span>
+                                    <span className="text-sm font-medium">{tToolNew('numbers')}</span>
                                 </label>
                                 <label className="flex items-center gap-2 cursor-pointer">
                                     <input
@@ -237,7 +236,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                                         onChange={(e) => setIncludeSymbols(e.target.checked)}
                                         className="w-4 h-4 rounded border-border"
                                     />
-                                    <span className="text-sm font-medium">Symbols</span>
+                                    <span className="text-sm font-medium">{tToolNew('symbols')}</span>
                                 </label>
                             </div>
                         </div>
@@ -245,9 +244,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                             onClick={handleGenerate}
                             className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
-                            <RefreshCw size={16} />
-                            Generate Random String
-                        </button>
+                            <RefreshCw size={16} />{tToolNew('generateRandomString')}</button>
                     </div>
                 );
             
@@ -255,7 +252,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                 return (
                     <div className="space-y-6">
                         <div>
-                            <label className="text-xs font-bold text-foreground block mb-2">Color Format</label>
+                            <label className="text-xs font-bold text-foreground block mb-2">{tToolNew('colorFormat')}</label>
                             <div className="flex gap-2">
                                 {(['hex', 'rgb', 'hsl'] as const).map((format) => (
                                     <button
@@ -277,9 +274,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                             onClick={handleGenerate}
                             className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
-                            <RefreshCw size={16} />
-                            Generate Random Color
-                        </button>
+                            <RefreshCw size={16} />{tToolNew('generateRandomColor')}</button>
                         {output && (
                             <div className="w-full h-32 rounded-xl border-2 border-border" style={{ backgroundColor: output.includes('rgb') || output.includes('hsl') ? output : output }} />
                         )}
@@ -291,7 +286,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                     <div className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label className="text-xs font-bold text-foreground block mb-2">Start Date</label>
+                                <label className="text-xs font-bold text-foreground block mb-2">{tToolNew('startDate')}</label>
                                 <input
                                     type="date"
                                     value={startDate}
@@ -300,7 +295,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                                 />
                             </div>
                             <div>
-                                <label className="text-xs font-bold text-foreground block mb-2">End Date</label>
+                                <label className="text-xs font-bold text-foreground block mb-2">{tToolNew('endDate')}</label>
                                 <input
                                     type="date"
                                     value={endDate}
@@ -313,9 +308,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                             onClick={handleGenerate}
                             className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
-                            <RefreshCw size={16} />
-                            Generate Random Date
-                        </button>
+                            <RefreshCw size={16} />{tToolNew('generateRandomDate')}</button>
                     </div>
                 );
             
@@ -323,7 +316,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                 return (
                     <div className="space-y-6">
                         <div>
-                            <label className="text-xs font-bold text-foreground block mb-2">Count</label>
+                            <label className="text-xs font-bold text-foreground block mb-2">{tToolNew('count')}</label>
                             <input
                                 type="number"
                                 value={ipCount}
@@ -337,9 +330,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                             onClick={handleGenerate}
                             className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-xl font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
                         >
-                            <RefreshCw size={16} />
-                            Generate Random IPs
-                        </button>
+                            <RefreshCw size={16} />{tToolNew('generateRandomIPs')}</button>
                     </div>
                 );
             
@@ -358,7 +349,7 @@ export default function GeneratorToolsIndex({ type }: GeneratorToolProps) {
                     {output && (
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">Output</label>
+                                <label className="text-sm font-bold">{tToolNew('output')}</label>
                                 <div className="flex gap-2">
                                     <button
                                         onClick={handleCopy}

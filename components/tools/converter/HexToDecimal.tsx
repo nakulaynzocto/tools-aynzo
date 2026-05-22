@@ -5,6 +5,7 @@ import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 
 export function HexToDecimal() {
+    const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('Common');
     const [hex, setHex] = useState('');
     const [decimal, setDecimal] = useState('');
@@ -79,7 +80,7 @@ export function HexToDecimal() {
                     {/* Hex Input */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">Hexadecimal</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('hexadecimal')}</label>
                             <button
                                 onClick={() => handleCopy(hex, 'hex')}
                                 className={cn(
@@ -108,7 +109,7 @@ export function HexToDecimal() {
                     {/* Decimal Output */}
                     <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <label className="text-sm font-black uppercase tracking-widest text-foreground">Decimal</label>
+                            <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('decimal')}</label>
                             <button
                                 onClick={() => handleCopy(decimal, 'decimal')}
                                 className={cn(
@@ -126,7 +127,7 @@ export function HexToDecimal() {
                             type="text"
                             value={decimal}
                             onChange={(e) => handleDecimalChange(e.target.value)}
-                            placeholder="Enter decimal number"
+                            placeholder={tToolNew('enterDecimalNumber')}
                             className="w-full px-4 py-4 bg-muted/50 border-2 border-border rounded-xl text-2xl font-mono font-black text-foreground focus:border-primary focus:outline-none"
                         />
                         <div className="text-xs text-muted-foreground">

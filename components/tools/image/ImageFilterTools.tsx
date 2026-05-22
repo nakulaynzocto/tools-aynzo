@@ -1,7 +1,7 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
 import { RefreshCw, Wand2, Download } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 import { useImageFileUpload } from '@/components/hooks/image/useImageFileUpload';
 import { processAllFiles, downloadResults } from '@/components/hooks/image/useImageProcessing';
 import { FileUploadArea } from './FileUploadArea';
@@ -12,7 +12,9 @@ interface ImageFilterToolsProps {
     type: 'grayscale-image' | 'sepia-converter' | 'invert-image' | 'blur-image' | 'image-brightness' | 'image-contrast' | 'saturate-image' | 'hue-rotate-image' | 'image-opacity' | 'round-corners-image' | 'image-shadow' | 'pixelate-image';
 }
 
+
 export function ImageFilterTools({ type }: ImageFilterToolsProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const tActions = useTranslations('ToolActions');
 
     const {

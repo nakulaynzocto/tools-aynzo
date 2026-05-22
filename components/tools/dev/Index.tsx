@@ -10,6 +10,7 @@ import { JsonToTypeScriptConverter } from './JsonToTypeScriptConverter';
 import { useTranslations } from 'next-intl';
 
 export default function DevToolsIndex({ type }: DevToolProps) {
+    const tTool = useTranslations('Tools.devTools');
     const tTools = useTranslations('Tools');
 
     const devNavTools = [
@@ -303,18 +304,18 @@ export default function DevToolsIndex({ type }: DevToolProps) {
                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">
                         <div className="bg-muted/30 rounded-[2.5rem] border-2 border-border overflow-hidden shadow-inner flex flex-col min-h-[500px]">
                             <div className="p-6 flex items-center gap-3 border-b-2 border-border bg-muted/50">
-                                <h3 className="text-foreground font-black text-sm uppercase tracking-[0.2em]">Input Area</h3>
+                                <h3 className="text-foreground font-black text-sm uppercase tracking-[0.2em]">{tTool('inputArea')}</h3>
                             </div>
                             <textarea
                                 className="flex-1 w-full p-8 text-sm leading-relaxed resize-none focus:outline-none text-foreground bg-input font-mono placeholder:opacity-30"
-                                placeholder="Paste your content here..."
+                                placeholder={tTool('pasteYourContentHere')}
                                 value={input}
                                 onChange={e => setInput(e.target.value)}
                             />
                         </div>
                         <div className="bg-muted/30 rounded-[2.5rem] border-2 border-border overflow-hidden shadow-inner flex flex-col min-h-[500px]">
                             <div className="p-6 flex items-center justify-between border-b-2 border-border bg-muted/50">
-                                <h3 className="text-foreground font-black text-sm uppercase tracking-[0.2em]">Output Result</h3>
+                                <h3 className="text-foreground font-black text-sm uppercase tracking-[0.2em]">{tTool('outputResult')}</h3>
                                 {output && (
                                     <button
                                         onClick={handleCopy}
@@ -328,7 +329,7 @@ export default function DevToolsIndex({ type }: DevToolProps) {
                                 readOnly
                                 className="flex-1 w-full p-8 text-sm leading-relaxed resize-none focus:outline-none text-foreground bg-input font-mono placeholder:opacity-20"
                                 value={output}
-                                placeholder="Output will appear here..."
+                                placeholder={tTool('outputWillAppearHere')}
                             />
                         </div>
                     </div>

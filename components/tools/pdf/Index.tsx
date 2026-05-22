@@ -7,20 +7,26 @@ import { MergePdf } from './MergePdf';
 import { SplitPdf } from './SplitPdf';
 import { FileText, FileStack, Scissors } from 'lucide-react';
 
+import { useTranslations } from 'next-intl';
+
 export default function PdfToolsIndex({ type }: PdfToolProps) {
+    const tToolNew = useTranslations('Tools.pdfToolsNew');
+    const tPdf = useTranslations('Tools.PdfTools');
+    const tTools = useTranslations('Tools');
+
     const pdfNavTools = [
         {
-            category: 'PDF CONVERT',
+            category: tPdf('convertCategory'),
             tools: [
-                { id: 'pdf-to-word', label: 'PDF to Word', icon: FileText },
-                { id: 'word-to-pdf', label: 'Word to PDF', icon: FileText },
+                { id: 'pdf-to-word', label: tTools('pdf-to-word.name') !== 'pdf-to-word.name' ? tTools('pdf-to-word.name') : 'PDF to Word', icon: FileText },
+                { id: 'word-to-pdf', label: tTools('word-to-pdf.name') !== 'word-to-pdf.name' ? tTools('word-to-pdf.name') : 'Word to PDF', icon: FileText },
             ]
         },
         {
-            category: 'PDF EDIT',
+            category: tPdf('editCategory'),
             tools: [
-                { id: 'merge-pdf', label: 'Merge PDF', icon: FileStack },
-                { id: 'split-pdf', label: 'Split PDF', icon: Scissors },
+                { id: 'merge-pdf', label: tTools('merge-pdf.name') !== 'merge-pdf.name' ? tTools('merge-pdf.name') : 'Merge PDF', icon: FileStack },
+                { id: 'split-pdf', label: tTools('split-pdf.name') !== 'split-pdf.name' ? tTools('split-pdf.name') : 'Split PDF', icon: Scissors },
             ]
         }
     ];
@@ -46,7 +52,7 @@ export default function PdfToolsIndex({ type }: PdfToolProps) {
             default:
                 return (
                     <div className="p-8 text-center">
-                        <p className="text-lg font-bold text-foreground mb-2">Tool not found</p>
+                        <p className="text-lg font-bold text-foreground mb-2">{tToolNew('toolNotFound')}</p>
                         <p className="text-sm text-muted-foreground">The {type} tool is not recognized.</p>
                     </div>
                 );

@@ -10,26 +10,29 @@ interface MetaTagGeneratorProps {
     onCopy: () => void;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function MetaTagGenerator({ meta, setMeta, result, copied, onCopy }: MetaTagGeneratorProps) {
+    const tTool = useTranslations('Tools.seoTools');
     return (
         <>
             <div className="p-8 space-y-6 h-full overflow-y-auto no-scrollbar bg-muted/5">
                 <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary border-b border-border pb-4">
                         <Code size={16} />
-                        <h4 className="text-[10px] font-black uppercase tracking-widest leading-none">Global Metadata</h4>
+                        <h4 className="text-[10px] font-black uppercase tracking-widest leading-none">{tTool('globalMetadata')}</h4>
                     </div>
                     <div className="grid gap-4">
                         <div className="space-y-1.5">
-                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Page Title</label>
+                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('pageTitle')}</label>
                             <input value={meta.title} onChange={e => setMeta({ ...meta, title: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder="Safe title: 50-60 chars" />
                         </div>
                         <div className="space-y-1.5">
-                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">SEO Description</label>
-                            <textarea value={meta.description} onChange={e => setMeta({ ...meta, description: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none h-24 text-sm font-medium leading-relaxed" placeholder="Brief site info..." />
+                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('sEODescription')}</label>
+                            <textarea value={meta.description} onChange={e => setMeta({ ...meta, description: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none h-24 text-sm font-medium leading-relaxed" placeholder={tTool('briefSiteInfo')} />
                         </div>
                         <div className="space-y-1.5">
-                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">Focus Keywords</label>
+                            <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('focusKeywords')}</label>
                             <input value={meta.keywords} onChange={e => setMeta({ ...meta, keywords: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder="comma, separated, tags" />
                         </div>
                     </div>
@@ -40,9 +43,8 @@ export function MetaTagGenerator({ meta, setMeta, result, copied, onCopy }: Meta
                     <div className="space-y-3">
                         <div className="flex items-center justify-between">
                             <h3 className="text-[9px] font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
-                                <Globe size={12} className="text-primary" /> Visual Simulation
-                            </h3>
-                            <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-md text-[8px] font-black uppercase tracking-tighter leading-none border border-emerald-500/20">Live Sync</span>
+                                <Globe size={12} className="text-primary" />{tTool('visualSimulation')}</h3>
+                            <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-md text-[8px] font-black uppercase tracking-tighter leading-none border border-emerald-500/20">{tTool('liveSync')}</span>
                         </div>
                         <div className="bg-card rounded-2xl border border-border p-5 shadow-sm space-y-3">
                             <div className="font-sans">
@@ -67,8 +69,7 @@ export function MetaTagGenerator({ meta, setMeta, result, copied, onCopy }: Meta
                     <div className="flex-1 flex flex-col min-h-0">
                         <div className="flex justify-between items-center mb-3">
                             <h3 className="text-[9px] font-black uppercase text-muted-foreground tracking-widest flex items-center gap-2">
-                                <Code size={12} className="text-primary" /> Markup Output
-                            </h3>
+                                <Code size={12} className="text-primary" />{tTool('markupOutput')}</h3>
                             {result && (
                                 <button onClick={onCopy} className={`px-4 py-1.5 rounded-xl text-[9px] font-black flex items-center gap-2 transition-all uppercase tracking-widest border ${copied ? "bg-emerald-500 text-white border-emerald-500" : "bg-card text-primary border-primary/20 hover:border-primary/50"}`}>
                                     {copied ? 'Copied' : 'Copy Snippet'}
@@ -82,7 +83,7 @@ export function MetaTagGenerator({ meta, setMeta, result, copied, onCopy }: Meta
                                 </div>
                             ) : (
                                 <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/30 gap-3">
-                                    <p className="font-black text-[9px] uppercase tracking-[0.2em] text-center">Awaiting Data</p>
+                                    <p className="font-black text-[9px] uppercase tracking-[0.2em] text-center">{tTool('awaitingData')}</p>
                                 </div>
                             )}
                         </div>

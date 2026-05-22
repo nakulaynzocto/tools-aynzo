@@ -12,7 +12,10 @@ interface CryptoResult {
     isProfit: boolean;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function CryptoCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [investment, setInvestment] = useState(1000);
     const [buyPrice, setBuyPrice] = useState(50000);
     const [sellPrice, setSellPrice] = useState(65000);
@@ -54,7 +57,7 @@ export function CryptoCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Trade Configuration</h3>
+                    <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('tradeConfiguration')}</h3>
                     <Coins size={16} className="text-yellow-500" />
                 </div>
                 
@@ -83,7 +86,7 @@ export function CryptoCalculator() {
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Trade Outcome</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('tradeOutcome')}</h3>
                 {result ? (
                     <div className={cn(
                         "border-2 rounded-3xl p-8 min-h-[350px] flex flex-col items-center justify-center gap-6 shadow-sm transition-colors duration-500",
@@ -110,11 +113,11 @@ export function CryptoCalculator() {
 
                         <div className="grid grid-cols-2 gap-4 w-full">
                             <div className="bg-card p-4 rounded-2xl border border-border shadow-sm flex flex-col items-center">
-                                <span className="text-[10px] font-black uppercase text-muted-foreground mb-1">Fee Total</span>
+                                <span className="text-[10px] font-black uppercase text-muted-foreground mb-1">{tCalc('feeTotal')}</span>
                                 <span className="text-sm font-bold text-foreground">${result.totalFees}</span>
                             </div>
                             <div className="bg-card p-4 rounded-2xl border border-border shadow-sm flex flex-col items-center">
-                                <span className="text-[10px] font-black uppercase text-muted-foreground mb-1">Coin Units</span>
+                                <span className="text-[10px] font-black uppercase text-muted-foreground mb-1">{tCalc('coinUnits')}</span>
                                 <span className="text-xs font-black font-mono text-primary truncate max-w-full">{result.coinAmount}</span>
                             </div>
                         </div>
@@ -127,7 +130,7 @@ export function CryptoCalculator() {
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
                         <Coins size={48} className="opacity-20" />
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Calculate your crypto moonshot</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('calculateYourCryptoMoonshot')}</span>
                     </div>
                 )}
             </div>

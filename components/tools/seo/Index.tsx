@@ -12,6 +12,7 @@ import { RobotsTxtGenerator } from './RobotsTxtGenerator';
 import { SitemapGenerator } from './SitemapGenerator';
 
 export default function SeoToolsIndex({ type }: SeoToolProps) {
+    const tTool = useTranslations('Tools.seoTools');
     const t = useTranslations('WebNav');
     const seoNavTools = [
         {
@@ -85,7 +86,7 @@ export default function SeoToolsIndex({ type }: SeoToolProps) {
             </div>
             <div className="mt-8 flex items-center gap-4 text-xs font-bold text-muted-foreground bg-muted/50 p-4 rounded-2xl border border-border">
                 <Globe size={16} className="text-blue-500" />
-                <span>Search engines like Google use these tags to understand your content. Social networks use them to create beautiful rich shared links.</span>
+                <span>{tTool('searchEnginesLikeGoogleUseTheseTagsToUnderstandYourContentSocialNetworksUseThemToCreateBeautifulRichSharedLinks')}</span>
             </div>
         </div>
     );

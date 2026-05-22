@@ -9,6 +9,8 @@ import { useTranslations } from 'next-intl';
 
 export default function FormatterToolsIndex({ type }: FormatterToolProps) {
     const t = useTranslations('Common');
+    const tFmt = useTranslations('Tools.FormatterTools');
+    const tTools = useTranslations('Tools');
     const tActions = useTranslations('ToolActions');
 
     const [input, setInput] = useState('');
@@ -19,28 +21,28 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
 
     const formatterNavTools = [
         {
-            category: 'FORMAT',
+            category: tFmt('format'),
             tools: [
-                { id: 'html-formatter', label: 'HTML', icon: Code },
-                { id: 'css-formatter', label: 'CSS', icon: FileCode },
-                { id: 'javascript-formatter', label: 'JavaScript', icon: Braces },
-                { id: 'xml-formatter', label: 'XML', icon: FileCode },
-                { id: 'sql-formatter', label: 'SQL', icon: FileText },
+                { id: 'html-formatter', label: tTools('html-formatter.name') !== 'html-formatter.name' ? tTools('html-formatter.name') : 'HTML', icon: Code },
+                { id: 'css-formatter', label: tTools('css-formatter.name') !== 'css-formatter.name' ? tTools('css-formatter.name') : 'CSS', icon: FileCode },
+                { id: 'javascript-formatter', label: tTools('javascript-formatter.name') !== 'javascript-formatter.name' ? tTools('javascript-formatter.name') : 'JavaScript', icon: Braces },
+                { id: 'xml-formatter', label: tTools('xml-formatter.name') !== 'xml-formatter.name' ? tTools('xml-formatter.name') : 'XML', icon: FileCode },
+                { id: 'sql-formatter', label: tTools('sql-formatter.name') !== 'sql-formatter.name' ? tTools('sql-formatter.name') : 'SQL', icon: FileText },
             ]
         },
         {
-            category: 'CONVERT',
+            category: tFmt('convert'),
             tools: [
-                { id: 'markdown-to-html', label: 'MD to HTML', icon: FileText },
-                { id: 'html-to-markdown', label: 'HTML to MD', icon: Code },
-                { id: 'csv-to-json', label: 'CSV to JSON', icon: FileJson },
-                { id: 'json-to-csv', label: 'JSON to CSV', icon: FileJson },
+                { id: 'markdown-to-html', label: tFmt('mdToHtml'), icon: FileText },
+                { id: 'html-to-markdown', label: tFmt('htmlToMd'), icon: Code },
+                { id: 'csv-to-json', label: tFmt('csvToJson'), icon: FileJson },
+                { id: 'json-to-csv', label: tFmt('jsonToCsv'), icon: FileJson },
             ]
         },
         {
-            category: 'OPTIMIZE',
+            category: tFmt('optimize'),
             tools: [
-                { id: 'code-minifier', label: 'Code Minifier', icon: Minimize },
+                { id: 'code-minifier', label: tFmt('codeMinifier'), icon: Minimize },
             ]
         }
     ];
@@ -184,7 +186,7 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
                                     onClick={() => setMode('beautify')}
                                 >
                                     <Maximize2 className="h-4 w-4" />
-                                    Beautify
+                                    {tFmt('beautify')}
                                 </button>
                                 <button
                                     className={cn("px-5 py-2 rounded-lg font-bold transition-all flex items-center gap-2 text-sm border", mode === 'minify'
@@ -194,7 +196,7 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
                                     onClick={() => setMode('minify')}
                                 >
                                     <Minimize2 className="h-4 w-4" />
-                                    Minify
+                                    {tFmt('minify')}
                                 </button>
                             </div>
                         </div>
@@ -209,19 +211,19 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
                     <div className="grid lg:grid-cols-2 gap-6">
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">Input</label>
-                                <button onClick={() => setInput('')} className="text-xs text-muted-foreground hover:text-foreground">Clear</button>
+                                <label className="text-sm font-bold">{tFmt('input')}</label>
+                                <button onClick={() => setInput('')} className="text-xs text-muted-foreground hover:text-foreground">{tActions('clearAll') || 'Clear'}</button>
                             </div>
                             <textarea
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 className="w-full h-[500px] p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 focus:border-primary outline-none resize-none"
-                                placeholder="Paste your content here..."
+                                placeholder={tFmt("pasteContent")}
                             />
                         </div>
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">Output</label>
+                                <label className="text-sm font-bold">{tFmt('output')}</label>
                                 <div className="flex gap-2">
                                     <button
                                         onClick={handleCopy}
@@ -250,7 +252,7 @@ export default function FormatterToolsIndex({ type }: FormatterToolProps) {
                                 value={output}
                                 readOnly
                                 className="w-full h-[500px] p-4 font-mono text-sm border-2 border-border rounded-xl bg-muted/30 resize-none"
-                                placeholder="Output will appear here..."
+                                placeholder={tFmt("outputAppear")}
                             />
                         </div>
                     </div>

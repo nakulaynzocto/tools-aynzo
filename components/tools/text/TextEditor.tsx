@@ -1,6 +1,6 @@
 "use client";
-import { Copy, Check, Trash2, Download, Type, MoveVertical, Eraser, Sparkles, RefreshCw } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Copy, Check, Trash2, Download, Type, MoveVertical, Eraser, Sparkles, RefreshCw } from 'lucide-react';
 import { KeywordDensity } from '@/components/types/text/types';
 
 interface TextEditorProps {
@@ -15,7 +15,9 @@ interface TextEditorProps {
     toolType?: 'word-counter' | 'character-counter' | 'text-case-converter' | 'remove-line-breaks' | 'reverse-text';
 }
 
+
 export function TextEditor({ input, setInput, copied, onCopy, onDownload, onClear, onAction, keywordDensity, toolType }: TextEditorProps) {
+    const tTool = useTranslations('Tools.textTools');
     const t = useTranslations('TextTools');
 
     const showTransformButtons = !toolType || toolType === 'text-case-converter' || toolType === 'word-counter' || toolType === 'character-counter';

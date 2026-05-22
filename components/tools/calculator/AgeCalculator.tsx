@@ -8,7 +8,10 @@ interface AgeResult {
     days: number;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function AgeCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [ageDate, setAgeDate] = useState('');
     const [copied, setCopied] = useState(false);
 
@@ -48,19 +51,19 @@ export function AgeCalculator() {
     return (
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Calculator Inputs</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('calculatorInputs')}</h3>
                 <div className="space-y-2">
-                    <label className="text-sm font-bold text-foreground">Date of Birth</label>
+                    <label className="text-sm font-bold text-foreground">{tCalc('dateOfBirth')}</label>
                     <input type="date" value={ageDate} onChange={e => setAgeDate(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                 </div>
             </div>
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Data</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('resultData')}</h3>
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[300px] flex flex-col items-center justify-center gap-6">
                         <div className="text-center space-y-4">
                             <div className="text-6xl font-black text-primary animate-in fade-in zoom-in duration-500">{result.years}</div>
-                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">Years Young</div>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('yearsYoung')}</div>
                             <div className="flex gap-4 opacity-70">
                                 <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold">{result.months} Months</div>
                                 <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold">{result.days} Days</div>
@@ -73,7 +76,7 @@ export function AgeCalculator() {
                     </div>
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 min-h-[300px] flex flex-col items-center justify-center text-muted-foreground/30 gap-4">
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Enter date of birth to calculate age</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('enterDateOfBirthToCalculateAge')}</span>
                     </div>
                 )}
             </div>

@@ -1,6 +1,6 @@
 "use client";
-import { Settings, Wand2, Lock, RefreshCw } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Settings, Wand2, Lock, RefreshCw } from 'lucide-react';
 import { YouTubeToolProps, YouTubeSettings } from '@/components/types/youtube/types';
 
 interface YouTubeSettingsPanelProps {
@@ -11,7 +11,9 @@ interface YouTubeSettingsPanelProps {
     setSettings: (settings: YouTubeSettings) => void;
 }
 
+
 export function YouTubeSettingsPanel({ type, input, setInput, settings, setSettings }: YouTubeSettingsPanelProps) {
+    const tTool = useTranslations('Tools.youtubeTools');
     const t = useTranslations('YouTubeTools');
 
     const renderSettings = () => {
@@ -70,7 +72,7 @@ export function YouTubeSettingsPanel({ type, input, setInput, settings, setSetti
             <div className="flex-1 space-y-8 overflow-y-auto no-scrollbar pr-1">
                 <div className="flex items-center gap-3 text-primary border-b border-border pb-6">
                     <Settings className="w-5 h-5" />
-                    <h4 className="font-black uppercase tracking-[0.2em] text-xs leading-none">Parameters</h4>
+                    <h4 className="font-black uppercase tracking-[0.2em] text-xs leading-none">{tTool('parameters')}</h4>
                 </div>
 
                 <div className="space-y-8">
@@ -87,7 +89,7 @@ export function YouTubeSettingsPanel({ type, input, setInput, settings, setSetti
                 <div className="p-6 bg-blue-500/5 rounded-2xl border border-blue-500/10 space-y-2">
                     <div className="flex items-center gap-2 text-blue-500">
                         <Wand2 size={16} />
-                        <span className="text-[10px] font-black uppercase tracking-widest">Growth Expert Tip</span>
+                        <span className="text-[10px] font-black uppercase tracking-widest">{tTool('growthExpertTip')}</span>
                     </div>
                     <p className="text-[10px] text-muted-foreground leading-relaxed font-medium">
                         {t('tipText')}
@@ -97,8 +99,8 @@ export function YouTubeSettingsPanel({ type, input, setInput, settings, setSetti
 
             <div className="pt-8 mt-auto space-y-4 border-t border-border">
                 <div className="flex items-center justify-center gap-6 text-[9px] font-black uppercase tracking-widest text-muted-foreground/30">
-                    <div className="flex items-center gap-1.5"><Lock size={12} /> Secure</div>
-                    <div className="flex items-center gap-1.5"><RefreshCw size={12} /> Real-time</div>
+                    <div className="flex items-center gap-1.5"><Lock size={12} />{tTool('secure')}</div>
+                    <div className="flex items-center gap-1.5"><RefreshCw size={12} />{tTool('realTime')}</div>
                 </div>
             </div>
         </div>

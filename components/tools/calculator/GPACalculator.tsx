@@ -14,7 +14,10 @@ const gradePoints: Record<string, number> = {
     'C+': 2.3, 'C': 2.0, 'C-': 1.7, 'D+': 1.3, 'D': 1.0, 'F': 0.0
 };
 
+import { useTranslations } from 'next-intl';
+
 export function GPACalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [courses, setCourses] = useState<Course[]>([
         { id: '1', grade: 'A', credits: '3' },
         { id: '2', grade: 'B', credits: '3' }
@@ -60,12 +63,12 @@ export function GPACalculator() {
     return (
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Semester Courses</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('semesterCourses')}</h3>
                 
                 <div className="space-y-4 bg-muted/10 p-6 rounded-3xl border-2 border-border/50">
                     <div className="grid grid-cols-12 gap-4 px-2">
-                        <div className="col-span-6 text-[10px] font-black uppercase tracking-widest text-muted-foreground">Grade</div>
-                        <div className="col-span-4 text-[10px] font-black uppercase tracking-widest text-muted-foreground">Credits</div>
+                        <div className="col-span-6 text-[10px] font-black uppercase tracking-widest text-muted-foreground">{tCalc('grade')}</div>
+                        <div className="col-span-4 text-[10px] font-black uppercase tracking-widest text-muted-foreground">{tCalc('credits')}</div>
                         <div className="col-span-2"></div>
                     </div>
 
@@ -108,26 +111,25 @@ export function GPACalculator() {
                         onClick={addCourse}
                         className="w-full py-4 mt-2 flex items-center justify-center gap-2 bg-primary/10 text-primary rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-primary/20 transition-all border-2 border-dashed border-primary/30"
                     >
-                        <Plus size={16} /> Add Course
-                    </button>
+                        <Plus size={16} />{tCalc('addCourse')}</button>
                 </div>
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">GPA Result</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('gPAResult')}</h3>
                 
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-8 min-h-[400px]">
                         <div className="text-center space-y-4">
                             <div className="text-8xl font-black text-primary animate-in fade-in zoom-in duration-500">{result}</div>
-                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">Your Grade Point Average</div>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('yourGradePointAverage')}</div>
                             
                             <div className="mt-8 px-10 py-4 rounded-3xl bg-primary/10 border-2 border-primary/20 flex flex-col items-center gap-1">
-                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">Scale Breakdown</span>
+                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">{tCalc('scaleBreakdown')}</span>
                                 <div className="flex gap-4 font-black text-xs uppercase text-primary">
                                     <span>4.0 Scale</span>
                                     <span className="text-muted-foreground/30">|</span>
-                                    <span>US Standard</span>
+                                    <span>{tCalc('uSStandard')}</span>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +141,7 @@ export function GPACalculator() {
                     </div>
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4 min-h-[400px]">
-                        <span className="text-xs font-black uppercase tracking-widest text-center px-10">Add at least one course with credits to see your GPA</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center px-10">{tCalc('addAtLeastOneCourseWithCreditsToSeeYourGPA')}</span>
                     </div>
                 )}
             </div>

@@ -1,7 +1,7 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import { useState, useRef, useEffect } from 'react';
 import { RefreshCw, Wand2, RotateCw, MoveHorizontal, Download } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 import ReactCrop, { type Crop, type PixelCrop, centerCrop, makeAspectCrop } from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
 import { useImageFileUpload } from '@/components/hooks/image/useImageFileUpload';
@@ -22,7 +22,9 @@ function centerAspectCrop(mediaWidth: number, mediaHeight: number, aspect: numbe
     );
 }
 
+
 export function ImageEditTools({ type }: ImageEditToolsProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const tActions = useTranslations('ToolActions');
 
     const {

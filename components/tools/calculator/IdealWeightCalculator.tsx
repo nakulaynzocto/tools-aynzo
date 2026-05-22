@@ -3,7 +3,10 @@ import { useState, useMemo } from 'react';
 import { Scale, Copy, Check, Info, ArrowUpRight, Activity } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export function IdealWeightCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [height, setHeight] = useState<number>(170);
     const [unit, setUnit] = useState<'cm' | 'ft'>('cm');
     const [feet, setFeet] = useState<number>(5);
@@ -58,11 +61,11 @@ export function IdealWeightCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Your Details</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('yourDetails')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Gender</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('gender')}</label>
                         <div className="flex gap-2">
                             {(['male', 'female'] as const).map(g => (
                                 <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 capitalize transition-all', gender === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{g}</button>
@@ -71,7 +74,7 @@ export function IdealWeightCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Measurement Unit</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('measurementUnit')}</label>
                         <div className="flex gap-2">
                             {(['cm', 'ft'] as const).map(u => (
                                 <button key={u} onClick={() => setUnit(u)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 uppercase transition-all', unit === u ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{u === 'ft' ? 'ft/in' : u}</button>
@@ -87,11 +90,11 @@ export function IdealWeightCalculator() {
                     ) : (
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-3">
-                                <label className="text-sm font-bold text-foreground uppercase tracking-wider">Feet</label>
+                                <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('feet')}</label>
                                 <input type="number" value={feet} min={3} max={8} onChange={e => setFeet(Number(e.target.value))} className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
                             </div>
                             <div className="space-y-3">
-                                <label className="text-sm font-bold text-foreground uppercase tracking-wider">Inches</label>
+                                <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('inches')}</label>
                                 <input type="number" value={inches} min={0} max={11} onChange={e => setInches(Number(e.target.value))} className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
                             </div>
                         </div>
@@ -101,7 +104,7 @@ export function IdealWeightCalculator() {
                 {/* Formula breakdown inside input column */}
                 <div className="bg-card border-2 border-border rounded-2xl overflow-hidden mt-6">
                     <div className="px-6 py-4 border-b border-border bg-muted/30">
-                        <p className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Formula Breakdown</p>
+                        <p className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('formulaBreakdown')}</p>
                     </div>
                     <div className="divide-y divide-border/50">
                         {formulas.map(f => (
@@ -119,7 +122,7 @@ export function IdealWeightCalculator() {
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Ideal Weights</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('idealWeights')}</h3>
 
                 <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
                     <div className="text-center space-y-4 w-full">
@@ -140,14 +143,14 @@ export function IdealWeightCalculator() {
                             <div className="flex items-center gap-4 px-4">
                                 <div className="flex flex-col text-left">
                                     <span className="text-lg font-black text-foreground">{result.bmiLow.toFixed(1)}</span>
-                                    <span className="text-[10px] text-muted-foreground font-bold">Min</span>
+                                    <span className="text-[10px] text-muted-foreground font-bold">{tCalc('min')}</span>
                                 </div>
                                 <div className="flex-1 h-2 bg-muted/30 rounded-full overflow-hidden relative border border-border/50">
                                     <div className="absolute inset-y-0 left-[30%] right-[30%] bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full" />
                                 </div>
                                 <div className="flex flex-col text-right">
                                     <span className="text-lg font-black text-foreground">{result.bmiHigh.toFixed(1)}</span>
-                                    <span className="text-[10px] text-muted-foreground font-bold">Max</span>
+                                    <span className="text-[10px] text-muted-foreground font-bold">{tCalc('max')}</span>
                                 </div>
                             </div>
                         </div>
@@ -161,9 +164,7 @@ export function IdealWeightCalculator() {
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        Ideal weight is just a reference point. Your healthiest weight is one where you feel strong, energized, and have good metabolic health.
-                    </p>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('idealWeightIsJustAReferencePointYourHealthiestWeightIsOneWhereYouFeelStrongEnergizedAndHaveGoodMetabolicHealth')}</p>
                 </div>
             </div>
         </div>

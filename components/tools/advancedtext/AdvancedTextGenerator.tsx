@@ -22,11 +22,15 @@ const toolLabels: Record<string, string> = {
 };
 
 export function AdvancedTextGenerator({ type }: AdvancedTextGeneratorProps) {
-    const t = useTranslations('Common');
-    const tActions = useTranslations('ToolActions');
+    const tToolNew = useTranslations('Tools.advancedtextToolsNew');
+    const tAdvText = useTranslations('Tools.AdvancedText');
+    const tTools = useTranslations('Tools');
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [copied, setCopied] = useState(false);
+
+    // Get tool name
+    const toolName = tTools(`${type}.name`) !== `${type}.name` ? tTools(`${type}.name`) : (toolLabels[type] || 'Output');
 
     const handleTransform = () => {
         if (!input.trim()) {
@@ -75,7 +79,7 @@ export function AdvancedTextGenerator({ type }: AdvancedTextGeneratorProps) {
                 {/* Input */}
                 <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-sm font-black uppercase tracking-widest text-foreground">Input Text</label>
+                        <label className="text-sm font-black uppercase tracking-widest text-foreground">{tAdvText('inputText')}</label>
                     </div>
                     <textarea
                         value={input}
@@ -84,7 +88,7 @@ export function AdvancedTextGenerator({ type }: AdvancedTextGeneratorProps) {
                             const result = transformAdvancedText(e.target.value, type);
                             setOutput(result);
                         }}
-                        placeholder="Enter your text here..."
+                        placeholder={tAdvText('enterTextHere')}
                         className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-sm font-medium text-foreground focus:border-primary focus:outline-none min-h-[200px] resize-none"
                     />
                 </div>
@@ -92,7 +96,7 @@ export function AdvancedTextGenerator({ type }: AdvancedTextGeneratorProps) {
                 {/* Output */}
                 <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-sm font-black uppercase tracking-widest text-foreground">{toolLabels[type] || 'Output'}</label>
+                        <label className="text-sm font-black uppercase tracking-widest text-foreground">{toolName}</label>
                         <div className="flex gap-2">
                             <button
                                 onClick={handleCopy}
@@ -107,7 +111,7 @@ export function AdvancedTextGenerator({ type }: AdvancedTextGeneratorProps) {
                                 )}
                             >
                                 {copied ? <CheckCircle2 size={14} /> : <Copy size={14} />}
-                                Copy
+                                {tAdvText('copy')}
                             </button>
                             <button
                                 onClick={handleDownload}
@@ -120,12 +124,12 @@ export function AdvancedTextGenerator({ type }: AdvancedTextGeneratorProps) {
                                 )}
                             >
                                 <Download size={14} />
-                                Download
+                                {tAdvText('download')}
                             </button>
                         </div>
                     </div>
                     <div className="w-full px-4 py-4 bg-muted/50 border-2 border-border rounded-xl text-sm font-medium text-foreground min-h-[200px] whitespace-pre-wrap break-words">
-                        {output || <span className="text-muted-foreground">Transformed text will appear here...</span>}
+                        {output || <span className="text-muted-foreground">{tAdvText('transformedText')}</span>}
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import { RomanNumeralConverter } from './RomanNumeralConverter';
 import { Calculator, DollarSign, Palette, Binary, Hash, BookOpen } from 'lucide-react';
 
 export default function ConverterToolsIndex({ type }: ConverterToolProps) {
+    const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('ConverterNav');
     const converterNavTools = [
         {
@@ -66,7 +67,7 @@ export default function ConverterToolsIndex({ type }: ConverterToolProps) {
             default:
                 return (
                     <div className="p-8 text-center">
-                        <p className="text-lg font-bold text-foreground mb-2">Tool not found</p>
+                        <p className="text-lg font-bold text-foreground mb-2">{tToolNew('toolNotFound')}</p>
                         <p className="text-sm text-muted-foreground">The {type} tool is not recognized.</p>
                     </div>
                 );

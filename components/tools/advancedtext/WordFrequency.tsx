@@ -6,8 +6,9 @@ import { useTranslations } from 'next-intl';
 import { calculateKeywordDensity } from '@/components/utils/text/textProcessing';
 
 export function WordFrequency() {
-    const t = useTranslations('Common');
-    const tActions = useTranslations('ToolActions');
+    const tToolNew = useTranslations('Tools.advancedtextToolsNew');
+    const tAdvText = useTranslations('Tools.AdvancedText');
+    const tTools = useTranslations('Tools');
     const [input, setInput] = useState('');
     const [wordFrequency, setWordFrequency] = useState<Array<{ word: string; count: number; percentage: number }>>([]);
     const [copied, setCopied] = useState(false);
@@ -47,12 +48,12 @@ export function WordFrequency() {
         <div className="space-y-6">
             <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                 <div className="flex items-center justify-between">
-                    <label className="text-sm font-black uppercase tracking-widest text-foreground">Input Text</label>
+                    <label className="text-sm font-black uppercase tracking-widest text-foreground">{tAdvText('inputText')}</label>
                 </div>
                 <textarea
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    placeholder="Enter your text to analyze word frequency..."
+                    placeholder={tAdvText('analyzePlaceholder')}
                     className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-sm font-medium text-foreground focus:border-primary focus:outline-none min-h-[200px] resize-none"
                 />
                 <button
@@ -66,7 +67,7 @@ export function WordFrequency() {
                     )}
                 >
                     <BarChart3 size={16} />
-                    Analyze Word Frequency
+                    {tAdvText('analyzeBtn')}
                 </button>
             </div>
 
@@ -75,7 +76,7 @@ export function WordFrequency() {
                     <div className="flex items-center justify-between">
                         <label className="text-sm font-black uppercase tracking-widest text-foreground flex items-center gap-2">
                             <BarChart3 size={16} className="text-primary" />
-                            Word Frequency Results
+                            {tAdvText('results')}
                         </label>
                         <div className="flex gap-2">
                             <button
@@ -83,14 +84,14 @@ export function WordFrequency() {
                                 className="px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
                             >
                                 {copied ? <CheckCircle2 size={14} /> : <Copy size={14} />}
-                                Copy
+                                {tAdvText('copy')}
                             </button>
                             <button
                                 onClick={handleDownload}
                                 className="px-3 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
                             >
                                 <Download size={14} />
-                                Download
+                                {tAdvText('download')}
                             </button>
                         </div>
                     </div>
@@ -103,7 +104,7 @@ export function WordFrequency() {
                                     </div>
                                     <div>
                                         <p className="font-bold text-foreground">{item.word}</p>
-                                        <p className="text-xs text-muted-foreground">{item.count} occurrence{item.count !== 1 ? 's' : ''}</p>
+                                        <p className="text-xs text-muted-foreground">{item.count} {item.count !== 1 ? tAdvText('occurrences') : tAdvText('occurrence')}</p>
                                     </div>
                                 </div>
                                 <div className="text-right">

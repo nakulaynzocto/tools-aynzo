@@ -19,8 +19,10 @@ const PAPER_STYLES = [
 
 const INK_COLORS = ['#1a1a3e', '#1a3e1a', '#3e1a1a', '#2c3e8c', '#000000'];
 
+import { useTranslations } from 'next-intl';
+
 export function TextToHandwriting() {
-    const [text, setText] = useState('The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.');
+    const tTool = useTranslations('Tools.utilityTools'); const [text, setText] = useState('The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.');
     const [font, setFont] = useState('Caveat');
     const [fontSize, setFontSize] = useState(28);
     const [inkColor, setInkColor] = useState('#1a1a3e');
@@ -116,8 +118,7 @@ export function TextToHandwriting() {
                         {copied ? 'Copied!' : 'Copy Text'}
                     </button>
                     <button onClick={handleDownload} className="flex items-center gap-2.5 px-5 py-3.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-2xl font-bold text-sm transition-all shadow-lg">
-                        <Download className="w-4 h-4" /> Download PNG
-                    </button>
+                        <Download className="w-4 h-4" />{tTool('downloadPNG')}</button>
                 </div>
             </div>
 
@@ -126,14 +127,13 @@ export function TextToHandwriting() {
                 <div className="space-y-5">
                     <div className="bg-muted/10 p-6 rounded-[2rem] border-2 border-border/50 space-y-4">
                         <label className="text-sm font-black text-primary uppercase tracking-widest flex items-center gap-2">
-                            <Pen className="w-4 h-4" /> Your Text
-                        </label>
+                            <Pen className="w-4 h-4" />{tTool('yourText')}</label>
                         <textarea
                             value={text}
                             onChange={e => setText(e.target.value)}
                             rows={4}
                             className="w-full px-5 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-medium text-sm resize-none"
-                            placeholder="Type your text here..."
+                            placeholder={tTool('typeYourTextHere')}
                         />
                     </div>
 
@@ -144,10 +144,10 @@ export function TextToHandwriting() {
 
                 {/* Controls */}
                 <div className="bg-muted/10 p-6 rounded-[2rem] border-2 border-border/50 space-y-6">
-                    <h3 className="text-sm font-black text-primary uppercase tracking-widest">Customization</h3>
+                    <h3 className="text-sm font-black text-primary uppercase tracking-widest">{tTool('customization')}</h3>
 
                     <div className="space-y-3">
-                        <label className="text-xs font-black text-muted-foreground uppercase tracking-widest">Font Style</label>
+                        <label className="text-xs font-black text-muted-foreground uppercase tracking-widest">{tTool('fontStyle')}</label>
                         <div className="space-y-2">
                             {FONTS.map(f => (
                                 <button key={f.name} onClick={() => setFont(f.name)} className={cn(
@@ -161,14 +161,13 @@ export function TextToHandwriting() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-xs font-black text-muted-foreground uppercase tracking-widest flex justify-between">
-                            Font Size <span>{fontSize}px</span>
+                        <label className="text-xs font-black text-muted-foreground uppercase tracking-widest flex justify-between">{tTool('fontSize')}<span>{fontSize}px</span>
                         </label>
                         <input type="range" min="16" max="48" value={fontSize} onChange={e => setFontSize(Number(e.target.value))} className="w-full accent-primary" />
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-xs font-black text-muted-foreground uppercase tracking-widest">Ink Color</label>
+                        <label className="text-xs font-black text-muted-foreground uppercase tracking-widest">{tTool('inkColor')}</label>
                         <div className="flex gap-2 flex-wrap">
                             {INK_COLORS.map(c => (
                                 <button key={c} onClick={() => setInkColor(c)} className={cn('w-9 h-9 rounded-xl border-4 transition-all', inkColor === c ? 'border-primary scale-110' : 'border-transparent')} style={{ background: c }} />
@@ -178,7 +177,7 @@ export function TextToHandwriting() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-xs font-black text-muted-foreground uppercase tracking-widest">Paper Style</label>
+                        <label className="text-xs font-black text-muted-foreground uppercase tracking-widest">{tTool('paperStyle')}</label>
                         <div className="flex gap-2">
                             {PAPER_STYLES.map(({ name }, i) => (
                                 <button key={i} onClick={() => setPaper(i)} className={cn('flex-1 py-2.5 rounded-xl border-2 font-bold text-xs transition-all', paper === i ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>
@@ -189,15 +188,14 @@ export function TextToHandwriting() {
                     </div>
 
                     <button onClick={renderCanvas} className="w-full flex items-center justify-center gap-2 py-3 bg-muted/30 hover:bg-muted/50 border-2 border-border rounded-xl font-bold text-sm transition-all">
-                        <RefreshCw className="w-4 h-4" /> Refresh Canvas
-                    </button>
+                        <RefreshCw className="w-4 h-4" />{tTool('refreshCanvas')}</button>
                 </div>
             </div>
 
             <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">How It Works</h4>
+                    <h4 className="font-bold text-foreground">{tTool('howItWorks')}</h4>
                     <p className="text-sm text-muted-foreground font-medium leading-relaxed">Text is rendered on an HTML Canvas using Google Fonts — entirely in your browser, with no data sent to any server. Download the PNG for use in documents, social media, or as digital notes.</p>
                 </div>
             </div>

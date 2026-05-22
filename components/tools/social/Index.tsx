@@ -4,6 +4,8 @@ import { Send, ExternalLink, RefreshCw, Copy, Check, Settings, X, MessageSquare,
 import { ScrollableNav } from '@/components/common/components/ScrollableNav';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 import { SocialLinkToolProps } from '@/components/types/social/types';
 import { generateWhatsAppLink, generateTelegramLink, generatePayPalLink, generateInstagramHashtags, validateEmail } from '@/components/utils/social/socialProcessing';
 import { PrivacyPolicyGenerator } from './PrivacyPolicyGenerator';
@@ -12,35 +14,40 @@ import { TikTokHashtagGenerator } from './TikTokHashtagGenerator';
 import { BioLinkGenerator } from './BioLinkGenerator';
 
 export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
+    const tToolNew = useTranslations('Tools.socialToolsNew');
+    const t = useTranslations('Tools.Social');
+    const tIndex = useTranslations('Tools.SocialToolsTextIndex');
+    const tSocial = useTranslations('Tools.SocialToolsText');
+
     const socialNavTools = [
         {
-            category: 'Messaging',
+            category: tIndex('messaging'),
             tools: [
-                { id: 'whatsapp-link-generator', label: 'WhatsApp', icon: MessageSquare },
-                { id: 'telegram-link-generator', label: 'Telegram', icon: Send },
+                { id: 'whatsapp-link-generator', label: tIndex('whatsapp'), icon: MessageSquare },
+                { id: 'telegram-link-generator', label: tIndex('telegram'), icon: Send },
             ]
         },
         {
-            category: 'Business & Legal',
+            category: tIndex('businessLegal'),
             tools: [
-                { id: 'privacy-policy-generator', label: 'Privacy Policy', icon: ShieldCheck },
-                { id: 'terms-conditions-generator', label: 'Terms & Conditions', icon: Gavel },
-                { id: 'paypal-link-generator', label: 'PayPal', icon: BadgeDollarSign },
+                { id: 'privacy-policy-generator', label: tIndex('privacyPolicy'), icon: ShieldCheck },
+                { id: 'terms-conditions-generator', label: tIndex('termsConditions'), icon: Gavel },
+                { id: 'paypal-link-generator', label: tIndex('paypal'), icon: BadgeDollarSign },
             ]
         },
         {
-            category: 'Social',
+            category: tIndex('social'),
             tools: [
-                { id: 'instagram-hashtag-generator', label: 'Hashtags', icon: Hash },
-                { id: 'tiktok-hashtag-generator', label: 'TikTok Tags', icon: Music2 },
-                { id: 'bio-link-generator', label: 'Bio Link', icon: Link2 },
+                { id: 'instagram-hashtag-generator', label: tIndex('hashtags'), icon: Hash },
+                { id: 'tiktok-hashtag-generator', label: tIndex('tiktokTags'), icon: Music2 },
+                { id: 'bio-link-generator', label: tIndex('bioLink'), icon: Link2 },
             ]
         },
         {
-            category: 'Utility',
+            category: tIndex('utility'),
             tools: [
-                { id: 'email-validator', label: 'Email Verify', icon: CheckCircle },
-                { id: 'url-opener', label: 'URL Opener', icon: ExternalLink },
+                { id: 'email-validator', label: tIndex('emailVerify'), icon: CheckCircle },
+                { id: 'url-opener', label: tIndex('urlOpener'), icon: ExternalLink },
             ]
         }
     ];
@@ -119,7 +126,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 case 'email-validator':
                     if (!email) { setResult(null); return; }
                     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-                    setResult(isValid ? 'Valid Email Address ✅' : 'Invalid Email Address ❌');
+                    setResult(isValid ? tIndex('validEmail') : tIndex('invalidEmail'));
                     break;
             }
         };
@@ -138,7 +145,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
             });
 
             if (urlList.length === 0) {
-                setResult('Please enter at least one URL.');
+                setResult(tIndex('enterAtLeastOneUrl'));
                 return;
             }
 
@@ -218,7 +225,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                             <input type="text" value={whatsapp.phone} onChange={e => setWhatsapp({ ...whatsapp, phone: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="e.g. 15551234567" />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-foreground mb-1">Pre-filled Message</label>
+                            <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('preFilledMessage')}</label>
                             <textarea value={whatsapp.message} onChange={e => setWhatsapp({ ...whatsapp, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-40 text-foreground" placeholder="Hello, I'm interested..." />
                         </div>
                     </div>
@@ -227,12 +234,12 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 return (
                     <div className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium text-foreground mb-1">Telegram Username / Channel Link</label>
-                            <input type="text" value={telegram.username} onChange={e => setTelegram({ ...telegram, username: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="username or t.me/username" />
+                            <label className="block text-sm font-medium text-foreground mb-1">{t('telegramLabel')}</label>
+                            <input type="text" value={telegram.username} onChange={e => setTelegram({ ...telegram, username: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder={t('telegramPlaceholder')} />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-foreground mb-1">Pre-filled Message (Optional)</label>
-                            <textarea value={telegram.message} onChange={e => setTelegram({ ...telegram, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-40 text-foreground" placeholder="Hi, I found you on Aynzo..." />
+                            <label className="block text-sm font-medium text-foreground mb-1">{t('messageLabel')}</label>
+                            <textarea value={telegram.message} onChange={e => setTelegram({ ...telegram, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-40 text-foreground" placeholder={t('messagePlaceholder')} />
                         </div>
                     </div>
                 );
@@ -240,27 +247,27 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 return (
                     <div className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium text-foreground mb-1">PayPal Email</label>
+                            <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('payPalEmail')}</label>
                             <input type="email" value={paypal.email} onChange={e => setPaypal({ ...paypal, email: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="you@example.com" />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-foreground mb-1">Item Name</label>
+                            <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('itemName')}</label>
                             <input type="text" value={paypal.item} onChange={e => setPaypal({ ...paypal, item: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="Donation / Product" />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-foreground mb-1">Amount</label>
+                                <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('amount')}</label>
                                 <input type="number" value={paypal.amount} onChange={e => setPaypal({ ...paypal, amount: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="10.00" />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-foreground mb-1">Currency</label>
+                                <label className="block text-sm font-medium text-foreground mb-1">{tSocial('currency')}</label>
                                 <select value={paypal.currency} onChange={e => setPaypal({ ...paypal, currency: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground">
-                                    <option value="USD">USD</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="GBP">GBP</option>
-                                    <option value="CAD">CAD</option>
-                                    <option value="AUD">AUD</option>
-                                    <option value="JPY">JPY</option>
+                                    <option value="USD">{tToolNew('uSD')}</option>
+                                    <option value="EUR">{tToolNew('eUR')}</option>
+                                    <option value="GBP">{tToolNew('gBP')}</option>
+                                    <option value="CAD">{tToolNew('cAD')}</option>
+                                    <option value="AUD">{tToolNew('aUD')}</option>
+                                    <option value="JPY">{tToolNew('jPY')}</option>
                                 </select>
                             </div>
                         </div>
@@ -270,7 +277,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 return (
                     <div className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium text-foreground mb-1">Enter Keyword or Topic</label>
+                            <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('enterKeywordOrTopic')}</label>
                             <input type="text" value={hashtag} onChange={e => setHashtag(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="e.g. travel, food, fitness" />
                         </div>
                         <button
@@ -286,7 +293,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
             case 'email-validator':
                 return (
                     <div>
-                        <label className="block text-sm font-medium text-foreground mb-1">Email Address</label>
+                        <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('emailAddress')}</label>
                         <input type="email" value={email} onChange={e => setEmail(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="check@email.com" />
                     </div>
                 );
@@ -316,7 +323,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                             <div className="space-y-6">
                                 <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4">
                                     <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
-                                        <Settings size={14} /> Input Configuration
+                                        <Settings size={14} /> {t('inputConfig')}
                                     </h3>
                                     {renderForm()}
                                 </div>
@@ -327,15 +334,13 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                         className="w-full py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-black shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 border border-white/10"
                                     >
                                         {loading ? <RefreshCw className="w-6 h-6 animate-spin" /> : <Check className="w-6 h-6" />}
-                                        <span className="text-lg">
-                                            Open All Links
-                                        </span>
+                                        <span className="text-lg">{tToolNew('openAllLinks')}</span>
                                     </button>
                                 )}
                             </div>
 
                         <div className="space-y-6 h-full flex flex-col">
-                            <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Generated Result</h3>
+                            <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('generatedResult')}</h3>
                             {result ? (
                                 <div className="space-y-4 animate-in fade-in slide-in-from-right-5 duration-500 flex-1">
                                     {type === 'email-validator' || type === 'url-opener' ? (
@@ -369,8 +374,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className={`block w-full py-4 bg-secondary hover:bg-secondary/80 text-foreground rounded-xl font-bold text-center transition-all text-sm border border-border mt-auto ${type === 'instagram-hashtag-generator' ? 'hidden' : ''}`}
-                                            >
-                                                Open Link <ExternalLink className="inline-block ml-1 w-4 h-4" />
+                                            >{tToolNew('openLink')}<ExternalLink className="inline-block ml-1 w-4 h-4" />
                                             </a>
                                         </div>
                                     )}
@@ -378,7 +382,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                             ) : (
                                 <div className="flex-1 min-h-[300px] bg-muted/10 border-2 border-dashed border-border rounded-2xl flex flex-col items-center justify-center text-muted-foreground gap-3 opacity-50">
                                     <Send size={48} />
-                                    <p className="text-sm font-black uppercase tracking-widest">Awaiting Input</p>
+                                    <p className="text-sm font-black uppercase tracking-widest">{t('awaitingInput')}</p>
                                 </div>
                             )}
                         </div>

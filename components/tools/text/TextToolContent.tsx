@@ -5,7 +5,9 @@ interface TextToolContentProps {
     type: string;
 }
 
+
 export function TextToolContent({ type }: TextToolContentProps) {
+    const tTool = useTranslations('Tools.textTools');
     const t = useTranslations('TextToolContent');
 
     if (type !== 'word-counter') return null;

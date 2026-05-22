@@ -14,6 +14,11 @@
     "migrate-blogs": "npx tsx scripts/migrateBlogs.ts"
   },
   "dependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/generator": "^7.29.1",
+    "@babel/parser": "^7.29.3",
+    "@babel/traverse": "^7.29.0",
+    "@babel/types": "^7.29.0",
     "@react-oauth/google": "^0.13.4",
     "@types/bcryptjs": "^2.4.6",
     "@types/crypto-js": "^4.2.2",

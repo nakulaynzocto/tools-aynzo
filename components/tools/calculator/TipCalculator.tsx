@@ -3,7 +3,10 @@ import { useState, useMemo } from 'react';
 import { Copy, CheckCircle2, Utensils, Users } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export function TipCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [billAmount, setBillAmount] = useState('50.00');
     const [tipPercent, setTipPercent] = useState('18');
     const [people, setPeople] = useState('1');
@@ -36,7 +39,7 @@ export function TipCalculator() {
     return (
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Bill Details</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('billDetails')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
@@ -55,30 +58,30 @@ export function TipCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground flex items-center gap-2 uppercase tracking-widest"><Users size={14} /> Split Between</label>
+                        <label className="text-sm font-bold text-foreground flex items-center gap-2 uppercase tracking-widest"><Users size={14} />{tCalc('splitBetween')}</label>
                         <input type="number" value={people} onChange={e => setPeople(e.target.value)} className="w-full px-5 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-lg" placeholder="1" />
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Total Summary</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('totalSummary')}</h3>
                 
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-8 min-h-[400px]">
                         <div className="w-full space-y-6">
                             <div className="text-center p-8 bg-primary/10 rounded-3xl border-2 border-primary/20 animate-in fade-in slide-in-from-top duration-500">
                                 <div className="text-5xl font-black text-primary animate-pulse-slow">${result.perPerson}</div>
-                                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground mt-2">Per Person Total</div>
+                                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground mt-2">{tCalc('perPersonTotal')}</div>
                             </div>
                             
                             <div className="grid grid-cols-2 gap-4 h-full">
                                 <div className="p-6 bg-muted/20 border-2 border-border rounded-2xl space-y-1">
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Tip Amount</span>
+                                    <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{tCalc('tipAmount')}</span>
                                     <div className="text-xl font-black text-foreground">${result.tipTotal}</div>
                                 </div>
                                 <div className="p-6 bg-muted/20 border-2 border-border rounded-2xl space-y-1">
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Bill Total</span>
+                                    <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{tCalc('billTotal')}</span>
                                     <div className="text-xl font-black text-foreground">${result.billTotal}</div>
                                 </div>
                             </div>
@@ -92,7 +95,7 @@ export function TipCalculator() {
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4 min-h-[400px]">
                         <Utensils size={40} className="mb-2 opacity-5" />
-                        <span className="text-xs font-black uppercase tracking-widest">Enter bill total to see tip summary</span>
+                        <span className="text-xs font-black uppercase tracking-widest">{tCalc('enterBillTotalToSeeTipSummary')}</span>
                     </div>
                 )}
             </div>

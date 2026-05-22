@@ -8,7 +8,10 @@ interface SIPResult {
     totalReturns: string;
 }
 
+import { useTranslations } from 'next-intl';
+
 export function SIPCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [monthlyAmount, setMonthlyAmount] = useState(5000);
     const [rate, setRate] = useState(12);
     const [time, setTime] = useState(10);
@@ -56,12 +59,12 @@ export function SIPCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Investment Plan</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('investmentPlan')}</h3>
                 
                 <div className="space-y-8 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Monthly Investment</span>
+                            <span className="uppercase tracking-wider">{tCalc('monthlyInvestment')}</span>
                             <span className="text-primary text-base">₹{monthlyAmount.toLocaleString()}</span>
                         </div>
                         <input 
@@ -74,7 +77,7 @@ export function SIPCalculator() {
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Expected Return Rate</span>
+                            <span className="uppercase tracking-wider">{tCalc('expectedReturnRate')}</span>
                             <span className="text-primary text-base">{rate}% p.a</span>
                         </div>
                         <input 
@@ -87,7 +90,7 @@ export function SIPCalculator() {
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold text-foreground">
-                            <span className="uppercase tracking-wider">Time Period</span>
+                            <span className="uppercase tracking-wider">{tCalc('timePeriod')}</span>
                             <span className="text-primary text-base">{time} Years</span>
                         </div>
                         <input 
@@ -100,13 +103,13 @@ export function SIPCalculator() {
 
                     <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/30">
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Growth Ratio</label>
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('growthRatio')}</label>
                             <div className="text-sm font-bold text-foreground">
                                 {(Number(result?.futureValue) / Number(result?.totalInvested) || 1).toFixed(2)}x Return
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Total Months</label>
+                            <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('totalMonths')}</label>
                             <div className="text-sm font-bold text-foreground">
                                 {time * 12} Installments
                             </div>
@@ -116,15 +119,14 @@ export function SIPCalculator() {
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4 transition-all hover:bg-primary/10">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        SIPs use <strong>Rupee Cost Averaging</strong> to lower your average cost per unit over time. Compounding works best with consistency.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('sIPsUse')}<strong>{tCalc('rupeeCostAveraging')}</strong> to lower your average cost per unit over time. Compounding works best with consistency.
                     </p>
                 </div>
             </div>
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Investment Growth Projection</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('investmentGrowthProjection')}</h3>
                 
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[400px]">
@@ -132,24 +134,22 @@ export function SIPCalculator() {
                             <div className="text-7xl font-black text-primary animate-in fade-in zoom-in duration-500">
                                 ₹{Number(result.futureValue).toLocaleString()}
                             </div>
-                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                                Estimated Portfolio Value
-                            </div>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('estimatedPortfolioValue')}</div>
 
                             <div className="grid grid-cols-2 gap-3 w-full mt-6">
                                 <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
-                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Total Invested</span>
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('totalInvested')}</span>
                                     <span className="block text-lg font-black text-foreground">₹{Number(result.totalInvested).toLocaleString()}</span>
                                 </div>
                                 <div className="bg-card p-4 rounded-2xl border border-border/50 text-center text-emerald-500">
-                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Est. Returns</span>
+                                    <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('estReturns')}</span>
                                     <span className="block text-lg font-black">+₹{Number(result.totalReturns).toLocaleString()}</span>
                                 </div>
                             </div>
 
                             <div className="w-full space-y-2 mt-4 text-left">
                                 <div className="flex justify-between text-[10px] font-black uppercase text-muted-foreground mb-1">
-                                    <span>Invested vs Returns</span>
+                                    <span>{tCalc('investedVsReturns')}</span>
                                     <span>{((Number(result.totalReturns) / Number(result.futureValue)) * 100).toFixed(0)}% Growth</span>
                                 </div>
                                 <div className="w-full bg-card h-3 rounded-full overflow-hidden flex border border-border/50">
@@ -173,7 +173,7 @@ export function SIPCalculator() {
                 ) : (
                     <div className="bg-muted/10 border-2 border-dashed border-border rounded-3xl flex-1 flex flex-col items-center justify-center text-muted-foreground/30 gap-4 min-h-[400px]">
                         <BarChart3 size={48} className="opacity-20" />
-                        <span className="text-xs font-black uppercase tracking-widest text-center">Adjust inputs to see projection</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-center">{tCalc('adjustInputsToSeeProjection')}</span>
                     </div>
                 )}
             </div>

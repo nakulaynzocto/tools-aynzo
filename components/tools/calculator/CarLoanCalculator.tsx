@@ -3,7 +3,10 @@ import { useState, useMemo } from 'react';
 import { Car, DollarSign, TrendingUp, Copy, Check, Info, ArrowUpRight } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
+import { useTranslations } from 'next-intl';
+
 export function CarLoanCalculator() {
+    const tCalc = useTranslations('Tools.CalculatorText');
     const [price, setPrice] = useState<number>(30000);
     const [downPayment, setDownPayment] = useState<number>(5000);
     const [tradeIn, setTradeIn] = useState<number>(0);
@@ -37,7 +40,7 @@ export function CarLoanCalculator() {
         <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-in fade-in zoom-in duration-500">
             {/* Inputs Section */}
             <div className="space-y-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Loan Details</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('loanDetails')}</h3>
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -67,7 +70,7 @@ export function CarLoanCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">Loan Term</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('loanTerm')}</label>
                         <div className="flex gap-2 flex-wrap">
                             {termOptions.map(t => (
                                 <button key={t} onClick={() => setTerm(t)} className={cn('px-4 py-2 rounded-xl font-bold text-sm border-2 transition-all', term === t ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>
@@ -81,16 +84,14 @@ export function CarLoanCalculator() {
 
             {/* Results Section */}
             <div className="flex flex-col gap-6">
-                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Payment Summary</h3>
+                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('paymentSummary')}</h3>
 
                 <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-center justify-center gap-6 min-h-[300px]">
                     <div className="text-center space-y-4">
                         <div className="text-6xl font-black text-primary animate-in fade-in zoom-in duration-500">
                             {fmt(result.monthly)}
                         </div>
-                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                            Estimated Monthly Payment
-                        </div>
+                        <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('estimatedMonthlyPayment')}</div>
                         <div className="flex gap-4 opacity-80 flex-wrap justify-center">
                             <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold text-xs shadow-sm">
                                 Loan: {fmt(result.loanAmount)}
@@ -103,7 +104,7 @@ export function CarLoanCalculator() {
 
                     <div className="w-full space-y-4 bg-card/50 p-6 rounded-2xl border border-border/50">
                         <div className="flex justify-between items-center text-xs font-black uppercase tracking-widest">
-                            <span className="text-muted-foreground">Total Cost</span>
+                            <span className="text-muted-foreground">{tCalc('totalCost')}</span>
                             <span className="text-foreground">{fmt(result.totalPayment + downPayment + tradeIn)}</span>
                         </div>
                         <div className="w-full bg-muted/30 h-2 rounded-full overflow-hidden border border-border/50">
@@ -119,8 +120,7 @@ export function CarLoanCalculator() {
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        A larger <strong>down payment</strong> reduces your monthly costs and total interest paid significantly.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('aLarger')}<strong>down payment</strong> reduces your monthly costs and total interest paid significantly.
                     </p>
                 </div>
             </div>

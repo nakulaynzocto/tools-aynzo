@@ -13,6 +13,7 @@ import { useTranslations } from 'next-intl';
 const TextTools = dynamic(() => import('@/components/tools/text/Index'));
 
 export default function ImageToolsIndex({ type }: ImageToolProps) {
+    const tTool = useTranslations('Tools.imageTools');
     const t = useTranslations('ImageNav');
     const tTools = useTranslations('Tools');
     const tTextTools = useTranslations('TextTools');
@@ -245,7 +246,7 @@ export default function ImageToolsIndex({ type }: ImageToolProps) {
             <div className="bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden">
                 <div className="p-3 sm:p-4 md:p-6">
                     <div className="text-center text-muted-foreground py-12">
-                        <p className="text-lg font-bold mb-2">Tool not found</p>
+                        <p className="text-lg font-bold mb-2">{tTool('toolNotFound')}</p>
                         <p className="text-sm">The tool type "{type}" is not recognized.</p>
                     </div>
                 </div>

@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { generateBcrypt } from '@/components/utils/crypto/cryptoProcessing';
 
 export default function TechToolsIndex({ type }: TechToolProps) {
+    const tToolNew = useTranslations('Tools.techToolsNew');
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
     
@@ -171,7 +172,7 @@ export default function TechToolsIndex({ type }: TechToolProps) {
                                      type === 'wordpress-password-hash' ? 'Password' :
                                      'User Agent String'}
                                 </label>
-                                <button onClick={() => setInput('')} className="text-xs text-muted-foreground hover:text-foreground">Clear</button>
+                                <button onClick={() => setInput('')} className="text-xs text-muted-foreground hover:text-foreground">{tToolNew('clear')}</button>
                             </div>
                             <textarea
                                 value={input}

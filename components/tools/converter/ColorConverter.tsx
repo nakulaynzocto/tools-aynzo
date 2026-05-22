@@ -86,6 +86,7 @@ function hslToRgb(h: number, s: number, l: number): { r: number; g: number; b: n
 }
 
 export function ColorConverter() {
+    const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('Common');
     const [hex, setHex] = useState('#FF5733');
     const [rgb, setRgb] = useState({ r: 255, g: 87, b: 51 });
@@ -129,7 +130,7 @@ export function ColorConverter() {
                     style={{ backgroundColor: hex }}
                 />
                 <div className="text-center">
-                    <div className="text-sm font-black uppercase tracking-widest text-muted-foreground mb-2">Color Preview</div>
+                    <div className="text-sm font-black uppercase tracking-widest text-muted-foreground mb-2">{tToolNew('colorPreview')}</div>
                     <div className="text-2xl font-black text-foreground">{hex.toUpperCase()}</div>
                 </div>
             </div>
@@ -137,7 +138,7 @@ export function ColorConverter() {
             {/* HEX Input */}
             <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                 <div className="flex items-center justify-between">
-                    <label className="text-sm font-black uppercase tracking-widest text-foreground">HEX</label>
+                    <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('hEX')}</label>
                     <button
                         onClick={() => handleCopy(hex, 'hex')}
                         className={cn(
@@ -180,7 +181,7 @@ export function ColorConverter() {
             {/* RGB Input */}
             <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                 <div className="flex items-center justify-between">
-                    <label className="text-sm font-black uppercase tracking-widest text-foreground">RGB</label>
+                    <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('rGB')}</label>
                     <button
                         onClick={() => handleCopy(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`, 'rgb')}
                         className={cn(
@@ -239,7 +240,7 @@ export function ColorConverter() {
             {/* HSL Input */}
             <div className="bg-card rounded-2xl border-2 border-border p-6 space-y-4">
                 <div className="flex items-center justify-between">
-                    <label className="text-sm font-black uppercase tracking-widest text-foreground">HSL</label>
+                    <label className="text-sm font-black uppercase tracking-widest text-foreground">{tToolNew('hSL')}</label>
                     <button
                         onClick={() => handleCopy(`hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`, 'hsl')}
                         className={cn(

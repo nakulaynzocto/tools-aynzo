@@ -4,7 +4,10 @@ import { Copy, CheckCircle2 } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { encodeBase64, decodeBase64 } from '@/components/utils/crypto/cryptoProcessing';
 
+import { useTranslations } from 'next-intl';
+
 export function Base64Encoder() {
+    const t = useTranslations('Tools.CryptoToolsText');
     const [input, setInput] = useState('');
     const [mode, setMode] = useState<'encode' | 'decode'>('encode');
     const [copied, setCopied] = useState(false);
@@ -58,8 +61,8 @@ export function Base64Encoder() {
             <div className="grid lg:grid-cols-2 gap-10">
                 <div className="space-y-4">
                     <div className="flex justify-between items-end">
-                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Input Data</label>
-                        <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} Chars</span>
+                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('inputData')}</label>
+                        <span className="text-[10px] bg-muted px-2 py-0.5 rounded font-bold">{input.length} {t('chars')}</span>
                     </div>
                     <textarea
                         className="w-full p-6 border-2 border-border rounded-3xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground placeholder-muted-foreground min-h-[300px] shadow-inner transition-all"
@@ -71,7 +74,7 @@ export function Base64Encoder() {
                 </div>
                 <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Result Output</label>
+                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">{t('resultOutput')}</label>
                         <button
                             onClick={copyToClipboard}
                             disabled={!output}
@@ -91,7 +94,7 @@ export function Base64Encoder() {
                             </div>
                         ) : (
                             <div className="text-muted-foreground/30 flex flex-col items-center gap-2">
-                                <span className="text-[10px] font-black uppercase tracking-widest">Waiting for input...</span>
+                                <span className="text-[10px] font-black uppercase tracking-widest">{t('waitingInput')}</span>
                             </div>
                         )}
                     </div>
