@@ -28,12 +28,13 @@ export async function GET(req: Request, { params }: { params: { locale: string }
 
     const skip = (parseInt(page) - 1) * parseInt(limit);
 
-    const blogs = await Blog.find({ locale })
-      .skip(skip)
-      .limit(parseInt(limit))
-      .sort({ createdAt: -1 });
-      
-    const total = await Blog.countDocuments({ locale });
+    const [blogs, total] = await Promise.all([
+      Blog.find({ locale })
+        .skip(skip)
+        .limit(parseInt(limit))
+        .sort({ createdAt: -1 }),
+      Blog.countDocuments({ locale })
+    ]);
 
     return NextResponse.json({
       data: blogs,

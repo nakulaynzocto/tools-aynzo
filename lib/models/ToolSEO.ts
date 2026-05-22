@@ -35,4 +35,7 @@ const ToolSEOSchema: Schema = new Schema(
 // Compound index to ensure one unique entry per tool per locale
 ToolSEOSchema.index({ toolSlug: 1, locale: 1 }, { unique: true });
 
+// Add index to optimize dashboard list query
+ToolSEOSchema.index({ locale: 1, toolSlug: 1 });
+
 export default mongoose.models.ToolSEO || mongoose.model<IToolSEO>('ToolSEO', ToolSEOSchema);

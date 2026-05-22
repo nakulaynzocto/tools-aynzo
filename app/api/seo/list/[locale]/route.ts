@@ -47,12 +47,13 @@ export async function GET(req: Request, { params }: { params: { locale: string }
 
     const skip = (parseInt(page) - 1) * parseInt(limit);
 
-    const seoData = await ToolSEO.find(query)
-      .skip(skip)
-      .limit(parseInt(limit))
-      .sort({ toolSlug: 1 });
-      
-    const total = await ToolSEO.countDocuments(query);
+    const [seoData, total] = await Promise.all([
+      ToolSEO.find(query)
+        .skip(skip)
+        .limit(parseInt(limit))
+        .sort({ toolSlug: 1 }),
+      ToolSEO.countDocuments(query)
+    ]);
 
     return NextResponse.json({
       data: seoData,

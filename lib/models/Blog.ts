@@ -42,5 +42,6 @@ const BlogSchema: Schema = new Schema(
 );
 
 BlogSchema.index({ slug: 1, locale: 1 }, { unique: true });
+BlogSchema.index({ locale: 1, createdAt: -1 });
 
 export default mongoose.models.Blog || mongoose.model<IBlog>('Blog', BlogSchema);
