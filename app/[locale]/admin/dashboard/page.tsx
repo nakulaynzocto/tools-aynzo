@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { adminApi } from '@/lib/api/admin';
 import Link from 'next/link';
+import { useDebounce } from '../useDebounce';
 
 const SUPPORTED_LOCALES = ['en', 'hi', 'pt', 'es', 'id', 'de', 'fr', 'ja', 'ru', 'tr', 'it', 'ko', 'zh', 'ar'];
 
@@ -11,6 +12,7 @@ export default function AdminDashboard({ params: { locale } }: { params: { local
   const [seoData, setSeoData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
+  const debouncedSearch = useDebounce(search, 500); // 500ms delay
   const [category, setCategory] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -24,7 +26,7 @@ export default function AdminDashboard({ params: { locale } }: { params: { local
     }
 
     try {
-      const response = await adminApi.getSEOList(locale, token, page, 10, search, category);
+      const response = await adminApi.getSEOList(locale, token, page, 10, debouncedSearch, category);
       setSeoData(response.data);
       setTotalPages(response.pages || 1);
     } catch (error) {
@@ -34,7 +36,7 @@ export default function AdminDashboard({ params: { locale } }: { params: { local
     } finally {
       setLoading(false);
     }
-  }, [locale, page, search, category, router]);
+  }, [locale, page, debouncedSearch, category, router]);
 
   useEffect(() => {
     fetchSEOData();
@@ -43,7 +45,7 @@ export default function AdminDashboard({ params: { locale } }: { params: { local
   // Reset to page 1 when search or category changes
   useEffect(() => {
     setPage(1);
-  }, [search, category]);
+  }, [debouncedSearch, category]);
 
   const handleLogout = async () => {
     localStorage.removeItem('adminToken');
