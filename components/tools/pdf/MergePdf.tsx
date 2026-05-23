@@ -9,6 +9,7 @@ export function MergePdf() {
     const tToolNew = useTranslations('Tools.pdfToolsNew');
     const tActions = useTranslations('ToolActions');
     const tPdf = useTranslations('Tools.PdfTools');
+    const tCommon = useTranslations('Common');
     const [files, setFiles] = useState<File[]>([]);
     const [processing, setProcessing] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -117,19 +118,36 @@ export function MergePdf() {
                 <div
                     onDrop={handleDrop}
                     onDragOver={handleDragOver}
-                    className="border-2 border-dashed border-border rounded-3xl min-h-[325px] flex flex-col items-center justify-center p-12 text-center hover:border-primary transition-colors cursor-pointer bg-muted/20"
+                    className="bg-card rounded-3xl border-2 border-dashed border-border shadow-sm overflow-hidden transition-all relative flex flex-col items-center justify-center min-h-[300px] sm:min-h-[360px] hover:border-primary/50 hover:bg-muted/30 cursor-pointer"
                     onClick={() => fileInputRef.current?.click()}
                 >
-                    <Upload className="mx-auto mb-4 text-primary" size={48} />
-                    <p className="text-lg font-bold text-foreground mb-2">
-                        {tActions('chooseFile') || tPdf('chooseFile')}
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-4">
-                        {tPdf('dragDrop')}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                        {tPdf('selectMultipleMerge')}
-                    </p>
+                    <div className="absolute top-6 right-6 opacity-20 pointer-events-none hidden sm:block">
+                        <Upload size={80} />
+                    </div>
+
+                    <div className="relative z-10 text-center w-full px-4 flex flex-col items-center justify-center h-full">
+                        <div className="mb-6">
+                            <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                                <Upload size={32} />
+                            </div>
+                        </div>
+
+                        <div className="px-6 sm:px-10 py-3 sm:py-4 bg-primary text-primary-foreground text-base sm:text-lg font-bold rounded-xl shadow-md hover:scale-[1.02] hover:shadow-lg active:scale-95 transition-all duration-300 flex items-center gap-3 mx-auto">
+                            <span>{tActions('chooseFile') || tPdf('chooseFile')}</span>
+                        </div>
+
+                        <div className="mt-4 text-muted-foreground font-medium text-sm sm:text-base">
+                            {tPdf('dragDrop')}
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-2">
+                            {tPdf('selectMultipleMerge')}
+                        </p>
+                        
+                        <div className="mt-8 pt-4 border-t border-border/50 flex items-center justify-center gap-2 text-xs text-muted-foreground font-medium w-full max-w-sm">
+                            <span className="text-green-500">🔒</span>
+                            <span>{tCommon('secureAndPrivate')}</span>
+                        </div>
+                    </div>
                     <input
                         ref={fileInputRef}
                         type="file"

@@ -3445,7 +3445,10 @@
         "shareThisTool": "分享此工具",
         "copyLink": "复制链接",
         "faqTitle": "常见问题解答 (FAQ)",
-        "pleaseWait": "请稍候..."
+        "pleaseWait": "请稍候...",
+        "secureAndPrivate": "100% 安全且私密：文件在本地处理",
+        "supportedFormatPdf": "支持的格式：PDF",
+        "supportedFormatDoc": "支持的格式：.doc、.docx"
     },
     "NavbarCategories": {
         "Image Tools": "图像工具",

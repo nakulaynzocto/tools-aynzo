@@ -3924,7 +3924,10 @@
         "shareThisTool": "Partager cet outil",
         "copyLink": "Copier le lien",
         "faqTitle": "Foire aux questions (FAQ)",
-        "pleaseWait": "Veuillez patienter..."
+        "pleaseWait": "Veuillez patienter...",
+        "secureAndPrivate": "100 % sécurisé et privé : les fichiers sont traités localement",
+        "supportedFormatPdf": "Format pris en charge : PDF",
+        "supportedFormatDoc": "Formats pris en charge : .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "Outils Image",

@@ -3920,7 +3920,10 @@
         "shareThisTool": "Condividi questo strumento",
         "copyLink": "Copia link",
         "faqTitle": "Domande frequenti (FAQ)",
-        "pleaseWait": "Attendi prego..."
+        "pleaseWait": "Attendi prego...",
+        "secureAndPrivate": "Sicuro e privato al 100%: i file vengono elaborati localmente",
+        "supportedFormatPdf": "Formato supportato: PDF",
+        "supportedFormatDoc": "Formati supportati: .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "Strumenti Immagine",

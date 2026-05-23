@@ -3920,7 +3920,10 @@
         "shareThisTool": "Bagikan alat ini",
         "copyLink": "Salin tautan",
         "faqTitle": "Pertanyaan yang Sering Diajukan (FAQ)",
-        "pleaseWait": "Mohon tunggu..."
+        "pleaseWait": "Mohon tunggu...",
+        "secureAndPrivate": "100% Aman & Pribadi: File diproses secara lokal",
+        "supportedFormatPdf": "Format yang didukung: PDF",
+        "supportedFormatDoc": "Format yang didukung: .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "Alat Gambar",

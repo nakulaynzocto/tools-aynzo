@@ -2641,7 +2641,10 @@
         "shareThisTool": "Share this tool",
         "copyLink": "Copy Link",
         "pleaseWait": "Please wait...",
-        "faqTitle": "Common Questions (FAQ)"
+        "faqTitle": "Common Questions (FAQ)",
+        "secureAndPrivate": "100% Secure & Private: Files are processed locally",
+        "supportedFormatPdf": "Supported format: PDF",
+        "supportedFormatDoc": "Supported formats: .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "Image Tools",

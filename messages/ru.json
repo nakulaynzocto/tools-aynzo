@@ -3916,7 +3916,10 @@
         "shareThisTool": "Поделиться инструментом",
         "copyLink": "Копировать ссылку",
         "faqTitle": "Часто задаваемые вопросы (FAQ)",
-        "pleaseWait": "Пожалуйста, подождите..."
+        "pleaseWait": "Пожалуйста, подождите...",
+        "secureAndPrivate": "100% безопасно и конфиденциально: файлы обрабатываются локально",
+        "supportedFormatPdf": "Поддерживаемый формат: PDF",
+        "supportedFormatDoc": "Поддерживаемые форматы: .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "Инструменты для изображений",

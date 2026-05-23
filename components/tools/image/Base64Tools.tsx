@@ -175,21 +175,38 @@ export function Base64Tools({ type, quality }: Base64ToolsProps) {
                                         onDragOver={handleDrag}
                                         onDrop={handleDrop}
                                         className={cn(
-                                            "w-full h-full flex flex-col items-center justify-center gap-4 border-2 border-dashed rounded-xl transition-all min-h-[250px]",
-                                            dragActive ? "border-primary bg-primary/5" : "border-border"
+                                            "bg-card rounded-3xl border-2 border-dashed border-border shadow-sm overflow-hidden transition-all relative flex flex-col items-center justify-center min-h-[300px] sm:min-h-[360px] cursor-pointer",
+                                            dragActive ? "border-primary bg-primary/5 scale-[1.01]" : "hover:border-primary/50 hover:bg-muted/30"
                                         )}
+                                        onClick={() => fileInputRef.current?.click()}
                                     >
-                                        <Upload size={48} className="text-muted-foreground" />
-                                        <div className="text-center">
-                                            <p className="text-sm font-bold text-foreground">{t('dragDrop')}</p>
-                                            <p className="text-xs text-muted-foreground mt-1">{t('supports')}</p>
+                                        <div className="absolute top-6 right-6 opacity-20 pointer-events-none hidden sm:block">
+                                            <Upload size={80} />
                                         </div>
-                                        <button
-                                            onClick={() => fileInputRef.current?.click()}
-                                            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-bold"
-                                        >
-                                            {t('selectImage')}
-                                        </button>
+
+                                        <div className="relative z-10 text-center w-full px-4 flex flex-col items-center justify-center h-full">
+                                            <div className="mb-6">
+                                                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                                                    <Upload size={32} />
+                                                </div>
+                                            </div>
+
+                                            <div className="px-6 sm:px-10 py-3 sm:py-4 bg-primary text-primary-foreground text-base sm:text-lg font-bold rounded-xl shadow-md hover:scale-[1.02] hover:shadow-lg active:scale-95 transition-all duration-300 flex items-center gap-3 mx-auto">
+                                                <span>{t('selectImage')}</span>
+                                            </div>
+
+                                            <div className="mt-4 text-muted-foreground font-medium text-sm sm:text-base">
+                                                {t('dragDrop')}
+                                            </div>
+                                            <p className="text-xs text-muted-foreground mt-2">
+                                                {t('supports')}
+                                            </p>
+                                            
+                                            <div className="mt-8 pt-4 border-t border-border/50 flex items-center justify-center gap-2 text-xs text-muted-foreground font-medium w-full max-w-sm">
+                                                <span className="text-green-500">🔒</span>
+                                                <span>{t('secureAndPrivate')}</span>
+                                            </div>
+                                        </div>
                                         <input
                                             ref={fileInputRef}
                                             id="image-input"

@@ -3445,7 +3445,10 @@
         "shareThisTool": "공유",
         "copyLink": "링크 복사",
         "faqTitle": "자주 묻는 질문 (FAQ)",
-        "pleaseWait": "잠시만 기다려주세요..."
+        "pleaseWait": "잠시만 기다려주세요...",
+        "secureAndPrivate": "100% 안전 및 비공개: 파일은 로컬에서 처리됩니다",
+        "supportedFormatPdf": "지원되는 형식: PDF",
+        "supportedFormatDoc": "지원되는 형식: .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "이미지 도구",

@@ -4761,7 +4761,10 @@
         "shareThisTool": "यह टूल शेयर करें",
         "copyLink": "लिंक कॉपी करें",
         "faqTitle": "सामान्यतः पूछे जाने वाले प्रश्न (FAQ)",
-        "pleaseWait": "कृपया प्रतीक्षा करें..."
+        "pleaseWait": "कृपया प्रतीक्षा करें...",
+        "secureAndPrivate": "100% सुरक्षित और निजी: फ़ाइलें स्थानीय रूप से प्रोसेस की जाती हैं",
+        "supportedFormatPdf": "समर्थित प्रारूप: PDF",
+        "supportedFormatDoc": "समर्थित प्रारूप: .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "इमेज टूल्स",

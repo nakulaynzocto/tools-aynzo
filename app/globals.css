@@ -4,50 +4,52 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #161718;
+    --background: #f8fafc;
+    --foreground: #0f172a;
     --card: #ffffff;
-    --card-foreground: #161718;
+    --card-foreground: #0f172a;
     --popover: #ffffff;
-    --popover-foreground: #161718;
-    --primary: #074463;
-    --primary-rgb: 7, 68, 99;
+    --popover-foreground: #0f172a;
+    --primary: #4f46e5;
+    --primary-rgb: 79, 70, 229;
     --primary-foreground: #ffffff;
-    --primary-light: #98c7dd;
-    --secondary: #e9eff6;
-    --secondary-foreground: #074463;
-    --muted: #e9eff6;
-    --muted-foreground: #6b7280;
-    --accent: #3882a5;
+    --primary-light: #e0e7ff;
+    --secondary: #f1f5f9;
+    --secondary-foreground: #4f46e5;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --accent: #6366f1;
     --accent-foreground: #ffffff;
     --destructive: #ef4444;
     --destructive-foreground: #ffffff;
-    --border: #e5e7eb;
+    --border: #e2e8f0;
     --input: #ffffff;
-    --ring: rgba(56, 130, 165, 0.5);
-    --radius: 0.5rem;
+    --ring: rgba(79, 70, 229, 0.4);
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: #020817;
+    --background: #0B0F19;
     --foreground: #f8fafc;
-    --card: #020817;
+    --card: #111827;
     --card-foreground: #f8fafc;
-    --popover: #020817;
+    --popover: #111827;
     --popover-foreground: #f8fafc;
-    --primary: #e0f2fe;
-    --primary-foreground: #0f172a;
-    --secondary: #1e293b;
+    --primary: #818cf8;
+    --primary-rgb: 129, 140, 248;
+    --primary-foreground: #ffffff;
+    --primary-light: #3730a3;
+    --secondary: #1f2937;
     --secondary-foreground: #f8fafc;
-    --muted: #1e293b;
-    --muted-foreground: #94a3b8;
-    --accent: #1e293b;
-    --accent-foreground: #f8fafc;
+    --muted: #1f2937;
+    --muted-foreground: #9ca3af;
+    --accent: #6366f1;
+    --accent-foreground: #ffffff;
     --destructive: #7f1d1d;
     --destructive-foreground: #f8fafc;
-    --border: #1e293b;
-    --input: #1e293b;
-    --ring: #074463;
+    --border: #1f2937;
+    --input: #111827;
+    --ring: rgba(129, 140, 248, 0.4);
   }
 
   /* Specific Override for Reference matching:
@@ -63,11 +65,21 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-size: 16px;
+    line-height: 1.6;
     min-height: 100vh;
     transition: background-color 0.3s ease-in-out;
     overflow-x: hidden;
+  }
+
+  /* Global Inputs styling for focus glow */
+  input, textarea, select {
+    @apply transition-all duration-200 outline-none;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    @apply ring-2 ring-blue-500/50 border-blue-500;
   }
 
   h1,
@@ -76,24 +88,24 @@
   h4,
   h5,
   h6 {
-    @apply font-bold tracking-tight text-primary;
-    line-height: 1.1;
+    @apply font-bold tracking-tight text-foreground;
+    line-height: 1.2;
   }
 
   h1 {
-    @apply text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground;
   }
 
   h2 {
-    @apply text-3xl md:text-5xl font-bold tracking-tight;
+    @apply text-2xl md:text-4xl font-bold tracking-tight text-foreground;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-bold tracking-tight;
+    @apply text-xl md:text-2xl font-bold tracking-tight text-foreground;
   }
 
   .subtitle {
-    @apply text-muted-foreground font-medium text-lg md:text-xl leading-relaxed;
+    @apply text-muted-foreground font-medium text-base md:text-lg leading-relaxed max-w-3xl mx-auto;
   }
 }
 
@@ -111,12 +123,12 @@
 
   .card-tool {
     @apply bg-card border border-border rounded-xl p-6 transition-all duration-300;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   }
 
   .card-tool:hover {
-    @apply -translate-y-1 border-accent/50;
-    box-shadow: 0 10px 30px -10px rgba(56, 130, 165, 0.2);
+    @apply -translate-y-1 border-primary/40;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
   }
 
   /* Button styling - Hostinger style */
@@ -125,22 +137,21 @@
   }
 
   .btn-hostinger-primary {
-    @apply bg-white text-black border-white hover:bg-gray-200 hover:text-black hover:border-gray-200;
+    @apply bg-white text-black border-white hover:bg-gray-100 hover:text-black hover:border-gray-100;
   }
 
   .btn-hostinger-secondary {
-    @apply bg-transparent text-gray-300 border-gray-700 hover:bg-gray-900 hover:border-gray-500 hover:text-white;
+    @apply bg-transparent text-gray-400 border-gray-700 hover:bg-gray-800 hover:border-gray-500 hover:text-white;
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2;
-    box-shadow: 0 4px 14px 0 rgba(56, 130, 165, 0.39);
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-xl font-bold transition-all duration-300 flex items-center justify-center gap-2;
+    box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
   }
 
   .btn-primary:hover {
-    @apply transform scale-[1.02];
-    background-color: #2c6e8f;
-    box-shadow: 0 6px 20px 0 rgba(56, 130, 165, 0.23);
+    @apply transform scale-[1.02] bg-accent;
+    box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.23);
   }
 
   .btn-secondary {

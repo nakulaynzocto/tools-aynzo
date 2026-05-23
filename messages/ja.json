@@ -3444,7 +3444,10 @@
         "shareThisTool": "이 도구 공유",
         "copyLink": "링크 복사",
         "faqTitle": "よくある質問 (FAQ)",
-        "pleaseWait": "お待ちください..."
+        "pleaseWait": "お待ちください...",
+        "secureAndPrivate": "100%安全かつプライベート：ファイルはローカルで処理されます",
+        "supportedFormatPdf": "サポートされている形式: PDF",
+        "supportedFormatDoc": "サポートされている形式: .doc、.docx"
     },
     "NavbarCategories": {
         "Image Tools": "이미지 도구",

@@ -3444,7 +3444,10 @@
         "shareThisTool": "Bu aracı paylaş",
         "copyLink": "Bağlantıyı kopyala",
         "faqTitle": "Sıkça Sorulan Sorular (FAQ)",
-        "pleaseWait": "Lütfen bekleyin..."
+        "pleaseWait": "Lütfen bekleyin...",
+        "secureAndPrivate": "%100 Güvenli ve Gizli: Dosyalar yerel olarak işlenir",
+        "supportedFormatPdf": "Desteklenen format: PDF",
+        "supportedFormatDoc": "Desteklenen formatlar: .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "Görüntü Araçları",

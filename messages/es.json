@@ -3916,7 +3916,10 @@
         "shareThisTool": "Compartir esta herramienta",
         "copyLink": "Copiar enlace",
         "faqTitle": "Preguntas frecuentes (FAQ)",
-        "pleaseWait": "Por favor espera..."
+        "pleaseWait": "Por favor espera...",
+        "secureAndPrivate": "100% Seguro y Privado: Los archivos se procesan localmente",
+        "supportedFormatPdf": "Formato compatible: PDF",
+        "supportedFormatDoc": "Formatos compatibles: .doc, .docx"
     },
     "NavbarCategories": {
         "Image Tools": "Herramientas de Imagen",

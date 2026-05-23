@@ -4444,7 +4444,10 @@
         "shareThisTool": "مشاركة هذه الأداة",
         "copyLink": "نسخ الرابط",
         "faqTitle": "الأسئلة الشائعة (FAQ)",
-        "pleaseWait": "يرجى الانتظار..."
+        "pleaseWait": "يرجى الانتظار...",
+        "secureAndPrivate": "آمن وخاص 100٪: تتم معالجة الملفات محليًا",
+        "supportedFormatPdf": "التنسيق المدعوم: PDF",
+        "supportedFormatDoc": "التنسيقات المدعومة: .doc، .docx"
     },
     "NavbarCategories": {
         "Image Tools": "أدوات الصور",

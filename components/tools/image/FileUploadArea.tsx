@@ -38,36 +38,50 @@ export function FileUploadArea({ dragActive,
             onDragLeave={onDrag}
             onDrop={onDrop}
             className={cn(
-                "bg-card rounded-3xl border-2 border-border shadow-2xl overflow-hidden transition-all relative",
-                dragActive ? "border-primary bg-accent/5" : ""
+                "bg-card rounded-3xl border-2 border-dashed shadow-sm overflow-hidden transition-all relative flex flex-col items-center justify-center min-h-[300px] sm:min-h-[360px]",
+                dragActive ? "border-primary bg-primary/5 scale-[1.01]" : "border-border hover:border-primary/50 hover:bg-muted/30"
             )}
         >
-            <div
-                className={cn(
-                    "min-h-[260px] sm:min-h-[325px] flex flex-col items-center justify-center transition-all py-10 sm:py-16 px-4 relative",
-                    dragActive ? "bg-accent/5" : "bg-transparent"
-                )}
-            >
-                <div className="relative z-10 text-center">
-                    <button
-                        onClick={onFileSelect}
-                        disabled={isLoading}
-                        className={cn(
-                            "px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-5 lg:py-8 bg-primary text-primary-foreground dark:bg-gradient-to-r dark:from-sky-500 dark:to-blue-600 dark:border-none text-base sm:text-lg md:text-xl lg:text-3xl font-black rounded-2xl shadow-[0_20px_40px_-15px_rgba(var(--primary-rgb),0.4)] dark:shadow-[0_0_30px_-5px_rgba(14,165,233,0.4)] hover:scale-[1.05] hover:shadow-[0_25px_50px_-12px_rgba(var(--primary-rgb),0.5)] dark:hover:shadow-[0_0_40px_-5px_rgba(14,165,233,0.5)] active:scale-95 transition-all duration-300",
-                            isLoading ? "opacity-50 cursor-not-allowed hover:scale-100" : ""
-                        )}
-                    >
-                        {isLoading ? (
-                            <span className="flex items-center gap-2">
-                                <span className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></span>
-                                {tActions('processing')}
-                            </span>
-                        ) : tActions('chooseFile')}
-                    </button>
-                    <div className="mt-4 sm:mt-6 text-muted-foreground font-bold text-xs sm:text-sm uppercase tracking-[0.2em] opacity-40">
-                        {isLoading ? t('pleaseWait') : t('dragDrop')}
+            <div className="absolute top-6 right-6 opacity-20 pointer-events-none hidden sm:block">
+                <Upload size={80} />
+            </div>
+
+            <div className="relative z-10 text-center w-full px-4 flex flex-col items-center justify-center h-full">
+                <div className="mb-6">
+                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                        <Upload size={32} />
                     </div>
                 </div>
+
+                <button
+                    onClick={onFileSelect}
+                    disabled={isLoading}
+                    className={cn(
+                        "px-6 sm:px-10 py-3 sm:py-4 bg-primary text-primary-foreground text-base sm:text-lg font-bold rounded-xl shadow-md hover:scale-[1.02] hover:shadow-lg active:scale-95 transition-all duration-300 flex items-center gap-3 mx-auto",
+                        isLoading ? "opacity-50 cursor-not-allowed hover:scale-100" : ""
+                    )}
+                >
+                    {isLoading ? (
+                        <span className="flex items-center gap-2">
+                            <span className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></span>
+                            {tActions('processing')}
+                        </span>
+                    ) : (
+                        <>
+                            <span>{tActions('chooseFile')}</span>
+                        </>
+                    )}
+                </button>
+
+                <div className="mt-4 text-muted-foreground font-medium text-sm sm:text-base">
+                    {isLoading ? t('pleaseWait') : t('dragDrop')}
+                </div>
+                
+                <div className="mt-8 pt-4 border-t border-border/50 flex items-center justify-center gap-2 text-xs text-muted-foreground font-medium w-full max-w-sm">
+                    <span className="text-green-500">🔒</span>
+                    <span>{t('secureAndPrivate')}</span>
+                </div>
+            </div>
                 {children}
                 <input
                     id={inputId}
@@ -78,7 +92,6 @@ export function FileUploadArea({ dragActive,
                     onChange={onChange}
                     disabled={isLoading}
                 />
-            </div>
 
             {/* Full Overlay for better visibility of loading state */}
             {isLoading && (
