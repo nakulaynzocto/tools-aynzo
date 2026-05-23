@@ -56,7 +56,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
         setCrop(undefined);
         setCompletedCrop(undefined);
         setAspect(undefined);
-    }, [selectedFileId, files]);
+    }, [selectedFileId]);
 
     const onImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
         if (type === 'image-cropper') {
@@ -267,7 +267,7 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
                             {/* For cropper, show process button. For others, show download after processing */}
                             {type === 'image-cropper' ? (
                                 <button
-                                    onClick={() => processAll(false)}
+                                    onClick={() => processAll(true)}
                                     disabled={processing || files.length === 0 || !completedCrop}
                                     className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-black text-sm uppercase tracking-widest shadow-lg hover:shadow-xl disabled:opacity-50 transition-all flex items-center justify-center gap-2"
                                 >
@@ -278,8 +278,8 @@ export function ImageEditTools({ type }: ImageEditToolsProps) {
                                         </>
                                     ) : (
                                         <>
-                                            <Wand2 size={20} />
-                                            {tActions('runTool')}
+                                            <Download size={20} />
+                                            {tActions('download')}
                                         </>
                                     )}
                                 </button>
