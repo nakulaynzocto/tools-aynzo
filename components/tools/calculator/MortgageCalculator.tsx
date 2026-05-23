@@ -101,9 +101,9 @@ export function MortgageCalculator() {
                     <div className="space-y-3">
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{t('loanTerm')}</label>
                         <select value={term} onChange={e => setTerm(Number(e.target.value))} className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base appearance-none">
-                            <option value={15}>{t('termYears', { years: 15 })}</option>
-                            <option value={20}>{t('termYears', { years: 20 })}</option>
-                            <option value={30}>{t('termYears', { years: 30 })}</option>
+                            {Array.from({ length: 100 }, (_, i) => i + 1).map((year) => (
+                                <option key={year} value={year}>{t('termYears', { years: year })}</option>
+                            ))}
                         </select>
                     </div>
 
