@@ -100,12 +100,16 @@ export default function AdminDashboard({ params: { locale } }: { params: { local
           >
             <option value="">All Categories</option>
             <option value="image">Image Tools</option>
-            <option value="convert">Converters</option>
+            <option value="pdf">PDF Tools</option>
             <option value="text">Text Tools</option>
-            <option value="dev">Dev Tools</option>
+            <option value="developer">Dev Tools</option>
+            <option value="converter">Converters</option>
             <option value="utility">Utility Tools</option>
             <option value="security">Security Tools</option>
+            <option value="crypto">Crypto Tools</option>
             <option value="youtube">YouTube Tools</option>
+            <option value="seo">SEO Tools</option>
+            <option value="social">Social & Links</option>
             <option value="calculator">Calculators</option>
           </select>
         </div>
