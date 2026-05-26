@@ -6,17 +6,29 @@ interface ToolInfoSectionProps {
 
 import { useTranslations } from 'next-intl';
 import { ListTree, CheckCircle2, ShieldCheck, Microscope } from 'lucide-react';
+import { marked } from 'marked';
 
 export function ToolInfoSection({ name, description, content }: ToolInfoSectionProps) {
     const t = useTranslations('Common');
     
-    // 1. Process Content: Inject IDs into H2s and H3s for TOC scrolling
+    // 1. Process Content: Parse Markdown to HTML if needed, then inject IDs into H2s and H3s for TOC scrolling
     let tocItems: { id: string; text: string; level: number }[] = [];
-    let processedContent = content || "";
+    let processedContent = "";
 
     if (content) {
+        let htmlContent = content;
+        // Simple heuristic: if content has Markdown headings or starts with no HTML tags, parse it
+        if (!content.trim().startsWith('<') || content.includes('##') || content.includes('**')) {
+            try {
+                const parsed = marked.parse(content);
+                htmlContent = typeof parsed === 'string' ? parsed : String(parsed);
+            } catch (e) {
+                console.error('Error parsing markdown in ToolInfoSection:', e);
+            }
+        }
+        
         let headingIndex = 0;
-        processedContent = content.replace(/<(h2|h3)[^>]*>(.*?)<\/\1>/gi, (match, tag, text) => {
+        processedContent = htmlContent.replace(/<(h2|h3)[^>]*>(.*?)<\/\1>/gi, (match, tag, text) => {
             const id = `section-${headingIndex++}`;
             const cleanText = text.replace(/<[^>]*>/g, '').trim();
             tocItems.push({ id, text: cleanText, level: tag.toLowerCase() === 'h2' ? 2 : 3 });

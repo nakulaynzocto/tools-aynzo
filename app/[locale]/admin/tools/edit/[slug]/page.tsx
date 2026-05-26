@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { adminApi } from '@/lib/api/admin';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import 'react-quill/dist/quill.snow.css';
 
