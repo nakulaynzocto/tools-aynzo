@@ -17,14 +17,18 @@ export function ToolInfoSection({ name, description, content }: ToolInfoSectionP
 
     if (content) {
         let htmlContent = content;
-        // Simple heuristic: if content has Markdown headings or starts with no HTML tags, parse it
-        if (!content.trim().startsWith('<') || content.includes('##') || content.includes('**')) {
+        // Simple heuristic: if content starts with an HTML tag (after trimming), it is HTML.
+        // Otherwise, it is Markdown (which we parse with marked).
+        if (!content.trim().startsWith('<')) {
             try {
                 const parsed = marked.parse(content);
                 htmlContent = typeof parsed === 'string' ? parsed : String(parsed);
             } catch (e) {
                 console.error('Error parsing markdown in ToolInfoSection:', e);
             }
+        } else {
+            // It's HTML, but it might contain inline markdown bold syntax **
+            htmlContent = htmlContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         }
         
         let headingIndex = 0;
