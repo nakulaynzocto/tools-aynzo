@@ -25,7 +25,7 @@ export function MetaTagGenerator({ meta, setMeta, result, copied, onCopy }: Meta
                     <div className="grid gap-4">
                         <div className="space-y-1.5">
                             <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('pageTitle')}</label>
-                            <input value={meta.title} onChange={e => setMeta({ ...meta, title: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder="Safe title: 50-60 chars" />
+                            <input value={meta.title} onChange={e => setMeta({ ...meta, title: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder={tTool('safeTitle')} />
                         </div>
                         <div className="space-y-1.5">
                             <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('sEODescription')}</label>
@@ -33,7 +33,7 @@ export function MetaTagGenerator({ meta, setMeta, result, copied, onCopy }: Meta
                         </div>
                         <div className="space-y-1.5">
                             <label className="text-[9px] font-black uppercase text-muted-foreground tracking-widest pl-1">{tTool('focusKeywords')}</label>
-                            <input value={meta.keywords} onChange={e => setMeta({ ...meta, keywords: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder="comma, separated, tags" />
+                            <input value={meta.keywords} onChange={e => setMeta({ ...meta, keywords: e.target.value })} className="w-full p-3.5 border-2 border-border rounded-xl bg-card focus:border-primary outline-none text-sm font-bold" placeholder={tTool('commaSeparatedTags')} />
                         </div>
                     </div>
                 </div>
@@ -58,10 +58,10 @@ export function MetaTagGenerator({ meta, setMeta, result, copied, onCopy }: Meta
                                     </div>
                                 </div>
                                 <h3 className="text-lg text-[#1a0dab] dark:text-[#8ab4f8] font-medium leading-tight mb-1">
-                                    {meta.title || 'Optimal SEO Title for Growth'}
+                                    {meta.title || tTool('optimalTitlePlaceholder')}
                                 </h3>
                                 <p className="text-[13px] text-[#4d5156] dark:text-[#bdc1c6] leading-snug line-clamp-2">
-                                    {meta.description || 'This meta description will appear in search engine results. Keep it between 150-160 characters for maximum efficiency and click-through rates.'}
+                                    {meta.description || tTool('descriptionPlaceholder')}
                                 </p>
                             </div>
                         </div>
@@ -72,7 +72,7 @@ export function MetaTagGenerator({ meta, setMeta, result, copied, onCopy }: Meta
                                 <Code size={12} className="text-primary" />{tTool('markupOutput')}</h3>
                             {result && (
                                 <button onClick={onCopy} className={`px-4 py-1.5 rounded-xl text-[9px] font-black flex items-center gap-2 transition-all uppercase tracking-widest border ${copied ? "bg-emerald-500 text-white border-emerald-500" : "bg-card text-primary border-primary/20 hover:border-primary/50"}`}>
-                                    {copied ? 'Copied' : 'Copy Snippet'}
+                                    {copied ? tTool('copied') : tTool('copySnippet')}
                                 </button>
                             )}
                         </div>

@@ -2416,7 +2416,13 @@
             "authorHandle": "Author Handle",
             "cardHeadline": "Card Headline",
             "heroImageURL": "Hero Image URL",
-            "xCard": "X-Card"
+            "xCard": "X-Card",
+            "safeTitle": "Safe title: 50-60 chars",
+            "commaSeparatedTags": "comma, separated, tags",
+            "optimalTitlePlaceholder": "Optimal SEO Title for Growth",
+            "descriptionPlaceholder": "This meta description will appear in search engine results. Keep it between 150-160 characters for maximum efficiency and click-through rates.",
+            "copied": "Copied",
+            "copySnippet": "Copy Snippet"
         },
         "textTools": {
             "replace": "Replace",
