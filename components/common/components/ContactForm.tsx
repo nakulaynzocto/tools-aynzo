@@ -12,33 +12,21 @@ export default function ContactForm() {
         e.preventDefault();
         setStatus('loading');
 
-        const apiKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
-        if (!apiKey || apiKey === 'YOUR_ACCESS_KEY' || apiKey.trim() === '') {
-            // Realistic simulated success for Google AdSense Reviewers and demo testing
-            setTimeout(() => {
-                setStatus('success');
-                setForm({ name: '', email: '', subject: '', message: '' });
-            }, 1000);
-            return;
-        }
-
         try {
-            const res = await fetch('https://api.web3forms.com/submit', {
+            const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: apiKey,
-                    ...form,
-                    from_name: form.name,
-                }),
+                body: JSON.stringify(form),
             });
-            if (res.ok) {
+            const data = await res.json();
+            if (res.ok && data.success) {
                 setStatus('success');
                 setForm({ name: '', email: '', subject: '', message: '' });
             } else {
                 setStatus('error');
             }
-        } catch {
+        } catch (error) {
+            console.error('Submission Error:', error);
             setStatus('error');
         }
     };
