@@ -87,9 +87,9 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border shadow-sm">
+        <nav className="sticky top-0 z-50 bg-background/70 backdrop-blur-2xl border-b border-border/60" style={{boxShadow: '0 1px 0 0 rgba(79,70,229,0.08), 0 4px 24px 0 rgba(0,0,0,0.06)'}}>
             <div className="w-full px-6">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center justify-between h-[62px]">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-3 flex-shrink-0 group">
                         <div className="flex items-center gap-3">
@@ -103,8 +103,8 @@ export default function Navbar() {
                                     sizes="40px"
                                 />
                             </div>
-                            <span className="text-foreground font-bold text-lg md:text-xl tracking-tight inline-block">
-                                {tApp('name')}<span className="text-primary">{tApp('nameHighlight')}</span>
+                            <span className="text-foreground font-black text-lg md:text-xl tracking-tight inline-block">
+                                {tApp('name')}<span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">{tApp('nameHighlight')}</span>
                             </span>
                         </div>
                     </Link>
@@ -373,11 +373,11 @@ export default function Navbar() {
                         })()}
                     </div>
 
-                    {/* Action Hub - Professional & Clean */}
-                    <div className="hidden lg:flex items-center gap-4 ml-auto">
-                        <div className="flex items-center gap-2 p-1 bg-secondary/50 rounded-full border border-border/40">
+                    {/* Action Hub */}
+                    <div className="hidden lg:flex items-center gap-3 ml-auto">
+                        <div className="flex items-center gap-1.5 p-1.5 bg-secondary/60 rounded-full border border-border/50 backdrop-blur-sm">
                             <LanguageSwitcher />
-                            <div className="h-4 w-px bg-border/40 mx-1" />
+                            <div className="h-4 w-px bg-border/60 mx-0.5" />
                             <ModeToggle />
                         </div>
                     </div>
@@ -385,9 +385,9 @@ export default function Navbar() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="lg:hidden p-2 text-foreground hover:bg-secondary rounded-md ml-2"
+                        className="lg:hidden p-2 text-foreground hover:bg-primary/10 hover:text-primary rounded-xl ml-2 transition-all border border-transparent hover:border-primary/20"
                     >
-                        {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                        {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                     </button>
                 </div>
             </div >

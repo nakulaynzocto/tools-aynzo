@@ -21,35 +21,41 @@ export default function PromotionalBanner() {
     if (!isVisible || pathname.includes('/admin')) return null;
 
     return (
-        <div className="relative group bg-primary isolate flex items-center gap-x-6 overflow-hidden px-6 py-2.5 sm:px-3.5 sm:before:flex-1 animate-in slide-in-from-top duration-700">
-            <div className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
-                <div className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style={{ clipPath: 'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 52.8% 34.1%, 55.9% 57.4%, 40.4% 2.1%, 74.8% 41.9%)' }}></div>
-            </div>
-            <div className="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
-                <div className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style={{ clipPath: 'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 52.8% 34.1%, 55.9% 57.4%, 40.4% 2.1%, 74.8% 41.9%)' }}></div>
-            </div>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                <p className="text-sm leading-6 text-white font-medium">
-                    <strong className="font-black flex items-center gap-2">
+        <div className="relative bg-primary text-white overflow-hidden py-3 px-4 sm:px-6 animate-in slide-in-from-top duration-500">
+            {/* Ambient Background Glow Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-primary to-purple-600 opacity-90" />
+            
+            <div className="relative max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pr-8 sm:pr-0">
+                {/* Text and Icon */}
+                <div className="flex items-start sm:items-center gap-2.5">
+                    <div className="bg-white/10 p-1.5 rounded-lg shrink-0 mt-0.5 sm:mt-0">
                         <Sparkles size={16} className="text-yellow-300 animate-pulse" />
+                    </div>
+                    <p className="text-xs sm:text-sm font-medium leading-relaxed sm:leading-normal">
                         {t('bannerText', { rate })}
-                    </strong>
-                </p>
+                    </p>
+                </div>
+
+                {/* Call To Action Button */}
                 <a
                     href={getWhatsAppLink(rate)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-none rounded-full bg-white px-3.5 py-1 text-xs font-black text-primary shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 transition-all active:scale-95 flex items-center gap-2 uppercase tracking-tight"
+                    className="self-start sm:self-auto shrink-0 inline-flex items-center gap-2 bg-white text-primary px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider hover:bg-white/95 active:scale-95 transition-all shadow-sm shadow-black/10"
                 >
                     {t('ctaWhatsApp')} <MessageCircle size={14} />
                 </a>
             </div>
-            <div className="flex flex-1 justify-end">
-                <button type="button" className="-m-3 p-3 focus-visible:outline-offset-[-4px]" onClick={() => setIsVisible(false)}>
-                    <span className="sr-only">Dismiss</span>
-                    <X className="h-5 w-5 text-white/70 hover:text-white transition-colors" aria-hidden="true" />
-                </button>
-            </div>
+
+            {/* Absolute Position Close Button to prevent layout squishing */}
+            <button 
+                type="button" 
+                onClick={() => setIsVisible(false)}
+                className="absolute top-1/2 -translate-y-1/2 right-3 p-1.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white transition-colors"
+                aria-label="Dismiss banner"
+            >
+                <X size={16} />
+            </button>
         </div>
     );
 }

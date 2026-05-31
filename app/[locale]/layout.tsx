@@ -104,6 +104,7 @@ export function generateStaticParams() {
 }
 
 import PromotionalBanner from '@/components/common/components/PromotionalBanner';
+import CookieConsent from '@/components/common/components/CookieConsent';
 
 export default async function RootLayout({
   children,
@@ -187,6 +188,7 @@ export default async function RootLayout({
               <Footer />
             </div>
             <Toaster position="top-center" richColors />
+            <CookieConsent />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
