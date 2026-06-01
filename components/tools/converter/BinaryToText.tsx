@@ -17,13 +17,14 @@ export function BinaryToText() {
         return binaryArray.map(bin => {
             const decimal = parseInt(bin, 2);
             if (isNaN(decimal)) return '';
-            return String.fromCharCode(decimal);
+            return String.fromCodePoint(decimal);
         }).join('');
     };
 
     const textToBinary = (textStr: string): string => {
-        return textStr.split('').map(char => {
-            return char.charCodeAt(0).toString(2).padStart(8, '0');
+        return Array.from(textStr).map(char => {
+            const codePoint = char.codePointAt(0);
+            return codePoint !== undefined ? codePoint.toString(2).padStart(8, '0') : '';
         }).join(' ');
     };
 
