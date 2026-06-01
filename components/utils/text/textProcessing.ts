@@ -85,8 +85,8 @@ export const transformAdvancedText = (input: string, action: string): string => 
             // Unicode italic characters
             return input.split('').map(char => {
                 const code = char.charCodeAt(0);
-                if (code >= 65 && code <= 90) return String.fromCharCode(code + 120205); // A-Z
-                if (code >= 97 && code <= 122) return String.fromCharCode(code + 120211); // a-z
+                if (code >= 65 && code <= 90) return String.fromCodePoint(code + 120205); // A-Z
+                if (code >= 97 && code <= 122) return String.fromCodePoint(code + 120211); // a-z
                 return char;
             }).join('');
         
@@ -94,9 +94,9 @@ export const transformAdvancedText = (input: string, action: string): string => 
             // Unicode bold characters
             return input.split('').map(char => {
                 const code = char.charCodeAt(0);
-                if (code >= 65 && code <= 90) return String.fromCharCode(code + 120211); // A-Z
-                if (code >= 97 && code <= 122) return String.fromCharCode(code + 120205); // a-z
-                if (code >= 48 && code <= 57) return String.fromCharCode(code + 120764); // 0-9
+                if (code >= 65 && code <= 90) return String.fromCodePoint(code + 120211); // A-Z
+                if (code >= 97 && code <= 122) return String.fromCodePoint(code + 120205); // a-z
+                if (code >= 48 && code <= 57) return String.fromCodePoint(code + 120764); // 0-9
                 return char;
             }).join('');
         
