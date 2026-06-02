@@ -4,3 +4,6 @@
 # Get your Publisher ID from: https://adsense.google.com > Account > Account information
 
 google.com, pub-6355296965808078, DIRECT, f08c47fec0942fa0
+
+# Trigger auto-deploy on Vercel
+
