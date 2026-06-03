@@ -63,10 +63,10 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
     ];
 
     const stats = [
-        { value: '100+', label: 'Free Tools', icon: Code },
-        { value: '13', label: 'Languages', icon: Globe },
-        { value: '0%', label: 'Data Stored', icon: Shield },
-        { value: '∞', label: 'Always Free', icon: Heart },
+        { value: '100+', label: t('statFreeTools'), icon: Code },
+        { value: '13', label: t('statLanguages'), icon: Globe },
+        { value: '0%', label: t('statDataStored'), icon: Shield },
+        { value: '∞', label: t('statAlwaysFree'), icon: Heart },
     ];
 
     return (
@@ -80,13 +80,10 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
 
                 <div className="relative z-10 max-w-4xl mx-auto px-6 pt-24 pb-20 text-center">
                     <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-indigo-300 text-xs font-bold px-4 py-1.5 rounded-full mb-8 uppercase tracking-widest">
-                        <Users size={12} /> About Aynzo Tools
+                        <Users size={12} /> {t('badge')}
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
-                        Building Tools the{' '}
-                        <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
-                            World Deserves
-                        </span>
+                        {t('heroTitle')}
                     </h1>
                     <p className="text-indigo-200/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                         {t('missionText')}
@@ -115,20 +112,19 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <div>
                         <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-3 py-1.5 rounded-full mb-6 uppercase tracking-widest">
-                            <Target size={12} /> Our Mission
+                            <Target size={12} /> {t('missionBadge')}
                         </div>
                         <h2 className="text-3xl md:text-4xl font-black tracking-tight text-foreground mb-6">
-                            Powerful tools,{' '}
-                            <span className="text-primary">Zero cost</span>
+                            {t('missionHeading')}
                         </h2>
                         <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                             {t('storyText')}
                         </p>
                         <Link
                             href="/tools"
-                            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-primary/25"
+                            className="inline-flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-all shadow-lg"
                         >
-                            Explore All Tools <ArrowRight size={14} />
+                            {t('ctaExplore')} <ArrowRight size={14} />
                         </Link>
                     </div>
 
@@ -140,8 +136,8 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                                     <Lightbulb size={18} className="text-white" />
                                 </div>
                                 <div>
-                                    <p className="text-white font-black text-sm">Our Vision</p>
-                                    <p className="text-indigo-400 text-xs">What drives us</p>
+                                    <p className="text-white font-black text-sm">{t('visionTitle')}</p>
+                                    <p className="text-indigo-400 text-xs">{t('visionSub')}</p>
                                 </div>
                             </div>
                             <blockquote className="text-indigo-200 text-xl font-medium italic leading-relaxed">
@@ -153,7 +149,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                                 </div>
                                 <div>
                                     <p className="text-white text-sm font-bold">Nakul Singh</p>
-                                    <p className="text-indigo-400 text-xs">Founder, Aynzo Tools</p>
+                                    <p className="text-indigo-400 text-xs">{t('founderTitle')}</p>
                                 </div>
                             </div>
                         </div>
@@ -171,7 +167,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                             <Star size={12} /> {t('whyTitle')}
                         </div>
                         <h2 className="text-3xl md:text-4xl font-black tracking-tight text-foreground">
-                            Why Millions Choose <span className="text-primary">Aynzo</span>
+                            {t('whyHeading')}
                         </h2>
                     </div>
 
@@ -196,10 +192,10 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
             <section className="py-20 px-6">
                 <div className="max-w-3xl mx-auto text-center">
                     <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-3 py-1.5 rounded-full mb-6 uppercase tracking-widest">
-                        <Users size={12} /> Meet the Founder
+                        <Users size={12} /> {t('meetFounderBadge')}
                     </div>
                     <h2 className="text-3xl md:text-4xl font-black tracking-tight text-foreground mb-14">
-                        The Person Behind <span className="text-primary">Aynzo</span>
+                        {t('meetFounderTitle')}
                     </h2>
 
                     <div className="bg-card border border-border rounded-3xl p-10 shadow-xl hover:shadow-2xl hover:border-primary/20 transition-all relative overflow-hidden">
@@ -211,10 +207,10 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                         </div>
 
                         <h3 className="text-2xl font-black text-foreground mb-1">Nakul Singh</h3>
-                        <p className="text-primary font-bold text-sm uppercase tracking-widest mb-6">Founder & Developer</p>
+                        <p className="text-primary font-bold text-sm uppercase tracking-widest mb-6">{t('founderRole')}</p>
 
                         <p className="text-muted-foreground leading-relaxed text-lg max-w-xl mx-auto mb-8">
-                            A passionate full-stack developer who built Aynzo Tools from scratch to solve real-world productivity problems. With a focus on privacy, performance, and accessibility, Nakul's goal is to make professional tools available to everyone — completely free.
+                            {t('founderDesc')}
                         </p>
 
                         {/* Skills */}
@@ -233,23 +229,23 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
             <section className="py-20 px-6 bg-card border-t border-border">
                 <div className="max-w-3xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-black text-foreground mb-4">
-                        Ready to <span className="text-primary">Get Started?</span>
+                        {t('ctaTitle')}
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8">
-                        Explore 100+ professional tools — no signup, no payment, forever free.
+                        {t('ctaSubtitle')}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/tools"
-                            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-bold hover:opacity-90 hover:scale-105 transition-all shadow-xl shadow-primary/25"
+                            className="inline-flex items-center justify-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-2xl font-bold hover:opacity-90 hover:scale-105 transition-all shadow-xl"
                         >
-                            Explore All Tools <ArrowRight size={16} />
+                            {t('ctaExplore')} <ArrowRight size={16} />
                         </Link>
                         <Link
                             href="/contact"
                             className="inline-flex items-center justify-center gap-2 border-2 border-border text-foreground px-8 py-4 rounded-2xl font-bold hover:border-primary hover:text-primary transition-all"
                         >
-                            Contact Us
+                            {t('ctaContact')}
                         </Link>
                     </div>
                 </div>

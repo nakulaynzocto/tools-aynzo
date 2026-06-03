@@ -24,9 +24,20 @@ export default function Navbar() {
     const [searchResults, setSearchResults] = useState<any[]>([]);
     const [showSearch, setShowSearch] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         setMounted(true);
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     // Timeout ref for hover intent
@@ -64,30 +75,23 @@ export default function Navbar() {
     const isLogin = pathname.includes('/admin/login');
 
     if (isAdmin) {
-        return (
-            <nav className="sticky top-0 z-50 bg-[#1e293b] text-white border-b border-slate-700 shadow-sm">
-                <div className="w-full px-6">
-                    <div className="flex items-center justify-between h-14">
-                        <Link href="/" className="flex items-center gap-2">
-                            <span className="font-bold tracking-wider text-sm">AYNZO<span className="text-blue-400">ADMIN</span></span>
-                        </Link>
-                        <div className="flex items-center gap-4 text-sm font-medium">
-                            <Link href="/" className="hover:text-blue-400 transition-colors">Public Site</Link>
-                            {!isLogin && (
-                                <>
-                                    <Link href="/admin/dashboard" className="hover:text-blue-400 transition-colors">SEO Dashboard</Link>
-                                    <Link href="/admin/blogs" className="hover:text-blue-400 transition-colors">Blogs</Link>
-                                </>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        );
+        return null;
     }
 
     return (
-        <nav className="sticky top-0 z-50 bg-background/70 backdrop-blur-2xl border-b border-border/60" style={{boxShadow: '0 1px 0 0 rgba(79,70,229,0.08), 0 4px 24px 0 rgba(0,0,0,0.06)'}}>
+        <nav 
+            className={cn(
+                "sticky top-0 z-50 transition-all duration-300", 
+                scrolled 
+                    ? "bg-background/80 backdrop-blur-2xl border-b border-border/60" 
+                    : "bg-transparent border-b border-transparent"
+            )} 
+            style={{
+                boxShadow: scrolled 
+                    ? '0 1px 0 0 rgba(var(--primary-rgb, 79, 70, 229), 0.08), 0 4px 24px 0 rgba(0,0,0,0.06)' 
+                    : 'none'
+            }}
+        >
             <div className="w-full px-6">
                 <div className="flex items-center justify-between h-[62px]">
                     {/* Logo */}
@@ -96,7 +100,7 @@ export default function Navbar() {
                             <div className="relative w-10 h-10 transition-transform group-hover:scale-105">
                                 <Image
                                     src="/logo.png"
-                                    alt="Aynzo Tools - Free Professional Online Tools"
+                                    alt={`${tApp('name')} - ${tApp('description')}`}
                                     fill
                                     priority
                                     className="object-contain"
@@ -104,7 +108,7 @@ export default function Navbar() {
                                 />
                             </div>
                             <span className="text-foreground font-black text-lg md:text-xl tracking-tight inline-block">
-                                {tApp('name')}<span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">{tApp('nameHighlight')}</span>
+                                {tApp('name')}<span>{tApp('nameHighlight')}</span>
                             </span>
                         </div>
                     </Link>
@@ -361,7 +365,7 @@ export default function Navbar() {
                                                         <span>Explore {Object.values(toolCategories).flat().length} free online tools</span>
                                                         <div className="flex gap-6">
                                                             <span>No Signup Required</span>
-                                                            <span className="text-emerald-500">Local Processing</span>
+                                                            <span className="text-muted-foreground">Local Processing</span>
                                                         </div>
                                                     </div>
                                                 </div>

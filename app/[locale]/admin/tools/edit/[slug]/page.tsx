@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { adminApi } from '@/lib/api/admin';
 import dynamic from 'next/dynamic';
+import AdminSidebar from '@/components/admin/AdminSidebar';
 import 'react-quill/dist/quill.snow.css';
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
@@ -116,8 +117,13 @@ export default function EditToolSEOPage({ params: { locale, slug } }: { params: 
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
-      <div className="max-w-7xl mx-auto space-y-8 pb-20">
+    <div className="min-h-screen bg-slate-50 flex">
+      {/* Dynamic Navigation Sidebar */}
+      <AdminSidebar locale={locale} />
+
+      {/* Main Content Area */}
+      <main className="flex-1 p-4 pt-20 sm:p-8 lg:pt-10 overflow-x-hidden">
+        <div className="w-full space-y-8 pb-20">
         
         {/* Sticky Action Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white/50 backdrop-blur-md p-4 sm:p-6 rounded-[2rem] border border-white/60 shadow-sm shadow-gray-200/20 sticky top-4 z-50">
@@ -150,7 +156,7 @@ export default function EditToolSEOPage({ params: { locale, slug } }: { params: 
                     type="submit"
                     form="seo-form"
                     disabled={saving}
-                    className="px-6 h-10 rounded-lg font-bold uppercase tracking-widest text-[11px] shadow-sm bg-blue-600 hover:bg-blue-700 text-white transition-colors disabled:opacity-50"
+                    className="px-6 h-10 rounded-lg font-bold uppercase tracking-widest text-[11px] shadow-sm bg-orange-600 hover:bg-orange-700 text-white transition-colors disabled:opacity-50"
                 >
                     {saving ? 'Saving...' : 'Update SEO'}
                 </button>
@@ -280,7 +286,7 @@ export default function EditToolSEOPage({ params: { locale, slug } }: { params: 
                                 value={formData.seoTitle} 
                                 onChange={(e) => setFormData({ ...formData, seoTitle: e.target.value })} 
                                 placeholder="Keyword-rich title"
-                                className="w-full bg-white border-2 border-gray-100 p-4 min-h-[80px] rounded-xl font-bold focus:border-blue-500/50 outline-none transition-all resize-none text-[13px]"
+                                className="w-full bg-white border-2 border-gray-100 p-4 min-h-[80px] rounded-xl font-bold focus:border-orange-500/50 outline-none transition-all resize-none text-[13px]"
                             />
                         </div>
 
@@ -290,7 +296,7 @@ export default function EditToolSEOPage({ params: { locale, slug } }: { params: 
                                 value={formData.seoDescription} 
                                 onChange={(e) => setFormData({ ...formData, seoDescription: e.target.value })} 
                                 placeholder="SERP search result snippet..." 
-                                className="w-full rounded-xl border-2 border-gray-100 bg-white p-4 min-h-[120px] text-[13px] font-bold focus:border-blue-500/50 transition-all outline-none resize-none" 
+                                className="w-full rounded-xl border-2 border-gray-100 bg-white p-4 min-h-[120px] text-[13px] font-bold focus:border-orange-500/50 transition-all outline-none resize-none" 
                             />
                         </div>
 
@@ -302,17 +308,17 @@ export default function EditToolSEOPage({ params: { locale, slug } }: { params: 
                                 onChange={(e) => setKeywordInput(e.target.value)}
                                 onKeyDown={handleKeywordKeyDown}
                                 placeholder="Type a keyword and press Enter or Comma..."
-                                className="w-full bg-white border-2 border-gray-100 p-4 rounded-xl font-bold focus:border-blue-500/50 outline-none transition-all text-[13px]"
+                                className="w-full bg-white border-2 border-gray-100 p-4 rounded-xl font-bold focus:border-orange-500/50 outline-none transition-all text-[13px]"
                             />
                             {formData.seoKeywords.length > 0 && (
                                 <div className="flex flex-wrap gap-2 mt-3 p-4 bg-gray-50/50 rounded-xl border border-gray-100 min-h-[60px]">
                                     {formData.seoKeywords.map((kw, i) => (
-                                        <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100 shadow-sm transition-all hover:shadow-md">
+                                        <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-orange-50 text-orange-700 border border-orange-100 shadow-sm transition-all hover:shadow-md">
                                             {kw}
                                             <button 
                                                 type="button" 
                                                 onClick={() => removeKeyword(kw)}
-                                                className="hover:text-blue-900 transition-colors bg-blue-100/50 hover:bg-blue-200 rounded-md p-0.5 focus:outline-none"
+                                                className="hover:text-orange-900 transition-colors bg-orange-100/50 hover:bg-orange-200 rounded-md p-0.5 focus:outline-none"
                                             >
                                                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                                             </button>
@@ -339,6 +345,7 @@ export default function EditToolSEOPage({ params: { locale, slug } }: { params: 
           </div>
         </form>
       </div>
-    </div>
+    </main>
+  </div>
   );
 }

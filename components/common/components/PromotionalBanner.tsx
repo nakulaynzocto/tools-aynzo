@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 export default function PromotionalBanner() {
+    return null; // Hidden for now as requested
     const t = useTranslations('Marketing');
     const [isVisible, setIsVisible] = useState(false);
     const rate = t('rate');

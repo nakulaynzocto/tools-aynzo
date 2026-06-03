@@ -4,7 +4,8 @@ import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { adminApi } from '@/lib/api/admin';
 import Link from 'next/link';
-import { AlertTriangle, X } from 'lucide-react';
+import { AlertTriangle, X, Plus, Calendar, Settings, Trash2 } from 'lucide-react';
+import AdminSidebar from '@/components/admin/AdminSidebar';
 
 const SUPPORTED_LOCALES = ['en', 'hi', 'pt', 'es', 'id', 'de', 'fr', 'ja', 'ru', 'tr', 'it', 'ko', 'zh', 'ar'];
 
@@ -57,100 +58,168 @@ export default function AdminBlogsDashboard({ params: { locale } }: { params: { 
     }
   };
 
-  if (loading) return <div className="flex justify-center items-center h-screen">Loading...</div>;
+  if (loading) return <div className="flex justify-center items-center h-screen bg-slate-50">Loading...</div>;
 
   return (
     <>
-      <div className="min-h-screen bg-gray-50 p-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center mb-8 bg-white p-6 rounded-lg shadow-sm">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Blogs Management</h1>
-              <div className="flex items-center gap-2 mt-2">
-                <p className="text-gray-500">Managing Locale:</p>
-                <select
-                  value={locale}
-                  onChange={(e) => router.push(`/${e.target.value}/admin/blogs`)}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-1"
-                >
-                  {SUPPORTED_LOCALES.map((l) => (
-                    <option key={l} value={l}>{l.toUpperCase()}</option>
-                  ))}
-                </select>
+      <div className="min-h-screen bg-slate-50 flex">
+        {/* Dynamic Navigation Sidebar */}
+        <AdminSidebar locale={locale} />
+
+        {/* Main Content Area */}
+        <main className="flex-1 p-6 pt-20 lg:pt-10 lg:p-10 overflow-x-hidden">
+          <div className="w-full space-y-8">
+            
+            {/* Header Bar */}
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h1 className="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight">Blogs Management</h1>
+                <div className="flex items-center gap-2.5 mt-2">
+                  <span className="text-sm font-semibold text-slate-500">Managing Locale:</span>
+                  <select
+                    value={locale}
+                    onChange={(e) => router.push(`/${e.target.value}/admin/blogs`)}
+                    className="bg-slate-50 border border-slate-200 text-slate-800 text-sm font-bold rounded-xl focus:ring-orange-500 focus:border-orange-500 p-2 transition-all"
+                  >
+                    {SUPPORTED_LOCALES.map((l) => (
+                      <option key={l} value={l}>{l.toUpperCase()}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <Link href={`/${locale}/admin/blogs/new`} className="px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-sm font-black transition-all shadow-lg shadow-orange-600/15 uppercase tracking-wider text-center flex items-center gap-2">
+                  <Plus size={16} /> Create New Blog
+                </Link>
               </div>
             </div>
-            <div className="flex gap-4">
-              <Link href={`/${locale}/admin/dashboard`} className="px-4 py-2 border rounded-md text-sm font-medium hover:bg-gray-50">Back to SEO</Link>
-              <Link href={`/${locale}/admin/blogs/new`} className="px-4 py-2 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700">Create New Blog</Link>
+
+            {/* Table Container */}
+            {/* Desktop Table View */}
+            <div className="hidden md:block bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-slate-100">
+                  <thead className="bg-slate-50/50">
+                    <tr>
+                      <th className="px-6 py-4 text-left text-xs font-extrabold text-slate-400 uppercase tracking-widest">Title</th>
+                      <th className="px-6 py-4 text-left text-xs font-extrabold text-slate-400 uppercase tracking-widest">Slug</th>
+                      <th className="px-6 py-4 text-left text-xs font-extrabold text-slate-400 uppercase tracking-widest">Date</th>
+                      <th className="px-6 py-4 text-right text-xs font-extrabold text-slate-400 uppercase tracking-widest">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-slate-100">
+                    {blogs.map((blog) => (
+                      <tr key={blog._id} className="hover:bg-slate-50/40 transition-colors">
+                        <td className="px-6 py-4 text-sm font-bold text-slate-900 max-w-sm whitespace-normal break-words">{blog.title}</td>
+                        <td className="px-6 py-4 text-sm font-medium text-slate-550 font-mono">{blog.slug}</td>
+                        <td className="px-6 py-4 text-sm text-slate-500 font-semibold">
+                          <div className="flex items-center gap-1.5">
+                            <Calendar size={14} className="text-slate-400" />
+                            <span>{new Date(blog.createdAt).toLocaleDateString(locale, { dateStyle: 'medium' })}</span>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                          <div className="flex justify-end gap-3">
+                            <Link href={`/${locale}/admin/blogs/edit/${blog.slug}`} className="px-3 py-1.5 border border-slate-200 bg-white rounded-lg text-xs font-extrabold hover:bg-slate-50 text-orange-600 transition-all uppercase tracking-wider inline-block">
+                              Edit
+                            </Link>
+                            <button 
+                              onClick={() => openDeleteModal(blog.slug)} 
+                              className="px-3 py-1.5 border border-transparent rounded-lg text-xs font-extrabold text-rose-600 hover:bg-rose-50 transition-all uppercase tracking-wider inline-block"
+                            >
+                              Delete
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                    {blogs.length === 0 && (
+                      <tr>
+                        <td colSpan={4} className="px-6 py-12 text-center text-slate-450 font-medium">
+                          No blogs found in this language. Click "Create New Blog" to get started!
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Mobile Card List View */}
+            <div className="block md:hidden space-y-4">
+              {blogs.map((blog) => (
+                <div key={blog._id} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                  <div className="space-y-1">
+                    <h3 className="text-base font-bold text-slate-900 leading-snug">{blog.title}</h3>
+                    <p className="text-xs text-slate-500 font-mono break-all">{blog.slug}</p>
+                  </div>
+                  
+                  <div className="flex items-center justify-between pt-2 border-t border-slate-100">
+                    <div className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold">
+                      <Calendar size={14} className="text-slate-400" />
+                      <span>{new Date(blog.createdAt).toLocaleDateString(locale, { dateStyle: 'medium' })}</span>
+                    </div>
+                    
+                    <div className="flex gap-2">
+                      <Link 
+                        href={`/${locale}/admin/blogs/edit/${blog.slug}`} 
+                        className="px-3 py-1.5 border border-slate-200 bg-white rounded-lg text-xs font-extrabold text-orange-600 hover:bg-slate-50 transition-all uppercase tracking-wider"
+                      >
+                        Edit
+                      </Link>
+                      <button 
+                        onClick={() => openDeleteModal(blog.slug)} 
+                        className="px-3 py-1.5 border border-transparent rounded-lg text-xs font-extrabold text-rose-600 hover:bg-rose-50 transition-all uppercase tracking-wider"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              {blogs.length === 0 && (
+                <div className="bg-white p-8 text-center rounded-2xl border border-slate-200 shadow-sm text-slate-450 font-medium text-sm">
+                  No blogs found in this language. Click "Create New Blog" to get started!
+                </div>
+              )}
             </div>
           </div>
-
-          <div className="bg-white rounded-lg shadow overflow-hidden">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Slug</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                  <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {blogs.map((blog) => (
-                  <tr key={blog._id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{blog.title}</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">{blog.slug}</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">{new Date(blog.createdAt).toLocaleDateString()}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <Link href={`/${locale}/admin/blogs/edit/${blog.slug}`} className="text-blue-600 hover:text-blue-900 mr-4">Edit</Link>
-                      <button onClick={() => openDeleteModal(blog.slug)} className="text-red-600 hover:text-red-900">Delete</button>
-                    </td>
-                  </tr>
-                ))}
-                {blogs.length === 0 && (
-                  <tr>
-                    <td colSpan={4} className="px-6 py-8 text-center text-gray-500">No blogs found. Create one!</td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        </main>
       </div>
 
       {/* Delete Confirmation Modal */}
       {deleteModal.isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/50 backdrop-blur-sm">
-          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden">
-            <div className="flex items-start justify-between p-6 border-b border-gray-100">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/40 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden border border-slate-100">
+            <div className="flex items-start justify-between p-6 border-b border-slate-100">
               <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-red-100 text-red-600">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-rose-100 text-rose-600">
                   <AlertTriangle className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900">Delete Blog</h3>
-                  <p className="text-sm text-gray-500 mt-1">This action cannot be undone.</p>
+                  <h3 className="text-lg font-bold text-slate-900">Delete Blog</h3>
+                  <p className="text-sm text-slate-500 mt-1">This action cannot be undone.</p>
                 </div>
               </div>
               <button
                 onClick={() => setDeleteModal({ isOpen: false, slug: null })}
-                className="text-gray-400 hover:text-gray-500 transition-colors"
+                className="text-slate-400 hover:text-slate-500 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <div className="p-6 bg-gray-50 flex justify-end gap-3">
+            <div className="p-6 bg-slate-50 flex justify-end gap-3">
               <button
                 onClick={() => setDeleteModal({ isOpen: false, slug: null })}
-                className="px-4 py-2 font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                className="px-4 py-2 font-medium text-slate-700 bg-white border border-slate-350 border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none transition-colors"
                 disabled={isDeleting}
               >
                 Cancel
               </button>
               <button
                 onClick={confirmDelete}
-                className="px-4 py-2 font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-4 py-2 font-medium text-white bg-rose-600 rounded-lg hover:bg-rose-700 focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                 disabled={isDeleting}
               >
                 {isDeleting ? 'Deleting...' : 'Delete Blog'}

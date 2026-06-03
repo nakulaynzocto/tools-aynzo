@@ -58,7 +58,7 @@ export default async function ToolsPage({ params: { locale } }: { params: { loca
     const categoryList = Object.keys(toolsByCategory);
 
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen -mt-[62px]">
             {/* Background Decorative Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-0 -left-[10%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full animate-pulse" />
@@ -66,15 +66,15 @@ export default async function ToolsPage({ params: { locale } }: { params: { loca
             </div>
 
             {/* Hero Section */}
-            <section className="relative pt-20 pb-16 px-6 text-center overflow-hidden">
+            <section className="relative pt-[142px] pb-16 px-6 text-center overflow-hidden">
                 <div className="max-w-4xl mx-auto space-y-8">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest animate-in fade-in slide-in-from-bottom-3 duration-500">
                         <Zap size={14} />
-                        {tHome('toolsCount', { count: tools.length })} Available
+                        {tHome('toolsCount', { count: tools.length })} {tToolsDir('available')}
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-700">
                         {tToolsDir.rich('heroTitle', {
-                            v: (chunks) => <span className="text-primary italic">{chunks}</span>
+                            v: (chunks) => <span>{chunks}</span>
                         })}
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-5 duration-1000">
@@ -95,8 +95,12 @@ export default async function ToolsPage({ params: { locale } }: { params: { loca
                             <a
                                 key={cat}
                                 href={`#${cat.replace(/\s+/g, '-').toLowerCase()}`}
-                                className="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold bg-secondary/50 hover:bg-primary hover:text-white transition-all border border-border/40"
+                                className="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold bg-secondary/50 hover:bg-primary hover:text-white transition-all border border-border/40 flex items-center gap-2"
                             >
+                                {(() => {
+                                    const Icon = getCategoryIcon(cat);
+                                    return <Icon size={16} />;
+                                })()}
                                 {tCategories.has(cat) ? tCategories(cat) : cat}
                             </a>
                         ))}
@@ -129,12 +133,12 @@ export default async function ToolsPage({ params: { locale } }: { params: { loca
                                     <p className="text-muted-foreground font-medium text-lg max-w-xl">
                                         {tCategoryDescriptions.has(categoryName) 
                                           ? tCategoryDescriptions(categoryName) 
-                                          : `Collection of high-performance ${categoryName.toLowerCase()} designed for professional workflows.`}
+                                          : tToolsDir('categoryDescFallback', { category: categoryName })}
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground bg-secondary/50 px-4 py-2 rounded-xl border border-border/40">
                                     <span>{categoryTools.length}</span>
-                                    <span className="opacity-50 uppercase tracking-widest text-[10px]">Tools</span>
+                                    <span className="opacity-50 uppercase tracking-widest text-[10px]">{tToolsDir('toolsLabel')}</span>
                                 </div>
                             </div>
 
@@ -175,9 +179,7 @@ export default async function ToolsPage({ params: { locale } }: { params: { loca
                     <div className="relative z-10 max-w-2xl mx-auto space-y-6">
                         <h2 className="text-3xl md:text-4xl font-black">{tHome('trust.title')}</h2>
                         <p className="text-lg text-muted-foreground font-medium leading-loose">
-                            Everything on Aynzo Tools is processed completely within your browser. 
-                            Your files never touch our servers, ensuring your data remains private and secure. 
-                            Zero storage, zero tracking, just pure performance.
+                            {tToolsDir('privacyText')}
                         </p>
                     </div>
                 </div>
