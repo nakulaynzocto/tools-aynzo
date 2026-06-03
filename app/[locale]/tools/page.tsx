@@ -72,7 +72,7 @@ export default async function ToolsPage({ params: { locale } }: { params: { loca
                         <Zap size={14} />
                         {tHome('toolsCount', { count: tools.length })} {tToolsDir('available')}
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-700">
+                    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-700">
                         {tToolsDir.rich('heroTitle', {
                             v: (chunks) => <span>{chunks}</span>
                         })}

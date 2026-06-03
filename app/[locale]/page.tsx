@@ -93,7 +93,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.05]">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.05]">
             {t.rich('heroTitle', {
               v: (chunks) => <span>{chunks}</span>
             })}
