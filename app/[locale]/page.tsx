@@ -46,12 +46,16 @@ export default async function Home({ params: { locale } }: { params: { locale: s
   const localePrefix = getLocalePrefix(locale);
 
   const toolCategories = [
-    { label: tCategories('Image Tools'),  key: 'Image Tools',        href: `${localePrefix}/tools#image-tools`,     count: 6  },
-    { label: tCategories('Converters'),  key: 'Converters',         href: `${localePrefix}/tools#converters`,      count: 5  },
-    { label: tCategories('Text Tools'),   key: 'Text Tools',         href: `${localePrefix}/tools#text-tools`,      count: 5  },
-    { label: tCategories('Code & Developer Tools'),     key: 'Code & Dev Tools',   href: `${localePrefix}/tools#code-dev-tools`,  count: 5  },
-    { label: tCategories('Utility Tools'),     key: 'Utility Tools',      href: `${localePrefix}/tools#utility-tools`,   count: 5  },
-    { label: tCategories('Security & Crypto'),    key: 'Security & Crypto',  href: `${localePrefix}/tools#security-crypto`, count: 5  },
+    { label: tCategories('Image Tools'),            key: 'Image Tools',             href: `${localePrefix}/tools#image-tools`,             count: 31 },
+    { label: tCategories('Converters'),             key: 'Converters',              href: `${localePrefix}/tools#converters`,              count: 10 },
+    { label: tCategories('Text Tools'),             key: 'Text Tools',              href: `${localePrefix}/tools#text-tools`,              count: 21 },
+    { label: tCategories('Code & Developer Tools'), key: 'Code & Dev Tools',        href: `${localePrefix}/tools#code-&-developer-tools`,  count: 18 },
+    { label: tCategories('Utility Tools'),          key: 'Utility Tools',           href: `${localePrefix}/tools#utility-tools`,           count: 15 },
+    { label: tCategories('Security & Crypto'),      key: 'Security & Crypto',       href: `${localePrefix}/tools#security-&-crypto`,       count: 8  },
+    { label: tCategories('Calculators'),            key: 'Calculator Tools',        href: `${localePrefix}/tools#calculators`,             count: 27 },
+    { label: tCategories('SEO & Web Tools'),        key: 'SEO & Web Tools',         href: `${localePrefix}/tools#seo-&-web-tools`,          count: 11 },
+    { label: tCategories('YouTube Tools'),          key: 'YouTube Tools',           href: `${localePrefix}/tools#youtube-tools`,           count: 6  },
+    { label: tCategories('Social & Links'),         key: 'Social & Links',          href: `${localePrefix}/tools#social-&-links`,          count: 8  },
   ];
 
   const stats = [
@@ -135,7 +139,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {toolCategories.map((cat) => {
               const Icon = getCategoryIcon(cat.key);
               return (
@@ -153,6 +157,51 @@ export default async function Home({ params: { locale } }: { params: { locale: s
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
                     {t('catToolsCount', { count: cat.count })}
                   </p>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── POPULAR CALCULATORS SECTION ── */}
+      <section className="py-20 px-6 bg-slate-50/50 dark:bg-slate-900/10 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white mb-3">
+              Popular Online Calculators
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 text-lg max-w-xl mx-auto">
+              Quick, accurate, and privacy-first calculator tools for everyday tasks, finance, and health.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {calcTools.map((tool) => {
+              let name = tool.fallback;
+              let desc = '';
+              try { name = tTools(tool.nameKey); } catch {}
+              try { desc = tTools(`${tool.slug}.description`); } catch {}
+              
+              return (
+                <Link
+                  key={tool.slug}
+                  href={`${localePrefix}/tools/${tool.slug}`}
+                  className="group rounded-2xl bg-card border border-slate-200/80 dark:border-slate-800/80 hover:border-primary/40 hover:shadow-lg transition-all duration-300 p-6 flex flex-col items-start"
+                >
+                  <div className="text-3xl mb-4 bg-primary/5 w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {tool.icon}
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-primary transition-colors">
+                    {name}
+                  </h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mt-1 flex-1">
+                    {desc}
+                  </p>
+                  <div className="mt-4 flex items-center gap-1 text-xs font-semibold text-primary group-hover:gap-2 transition-all">
+                    <span>Use Tool</span>
+                    <ArrowRight size={14} />
+                  </div>
                 </Link>
               );
             })}

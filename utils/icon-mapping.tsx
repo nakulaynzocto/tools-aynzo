@@ -1,6 +1,6 @@
 import { 
     ImageIcon, FileText, Lock, Code, Search, Youtube, 
-    Link as LinkIcon, RefreshCw, Shuffle, CreditCard, Wand2 
+    Link as LinkIcon, RefreshCw, Shuffle, CreditCard, Wand2, Calculator 
 } from 'lucide-react';
 
 export const getCategoryIcon = (category: string) => {
@@ -14,6 +14,7 @@ export const getCategoryIcon = (category: string) => {
     if (lower.includes('social') || lower.includes('link')) return LinkIcon;
     if (lower.includes('converter')) return RefreshCw;
     if (lower.includes('random')) return Shuffle;
+    if (lower.includes('calculator')) return Calculator;
     if (lower.includes('utility')) return CreditCard;
     return Wand2;
 };

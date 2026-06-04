@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { api, tools } from '@/lib/tools';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -17,27 +18,30 @@ import { getToolOGImage } from '@/utils/og-image-utils';
 import { getLocalePrefix, getLocalizedUrl, getAllHreflangUrls, getXDefaultUrl, PRIMARY_LOCALE, localizeHtmlLinks } from '@/utils/locale-utils';
 import { SITE_URL } from '@/lib/constants';
 import { fetchDynamicSEO } from '@/lib/api/seo';
+import { CalculatorSkeleton, TextSkeleton, ImageSkeleton, PdfSkeleton, CodeEditorSkeleton } from '@/components/common/components/PageSkeleton';
 
-const ImageTools = dynamic(() => import('@/components/tools/image/Index'));
-const PdfTools = dynamic(() => import('@/components/tools/pdf/Index'));
-const TextTools = dynamic(() => import('@/components/tools/text/Index'));
-const AdvancedTextTools = dynamic(() => import('@/components/tools/advancedtext/Index'));
-const FormatterTools = dynamic(() => import('@/components/tools/formatter/Index'));
-const ConverterTools = dynamic(() => import('@/components/tools/converter/Index'));
-const GeneratorTools = dynamic(() => import('@/components/tools/generator/Index'));
-const DevTools = dynamic(() => import('@/components/tools/dev/Index'));
-const SecurityTools = dynamic(() => import('@/components/tools/security/Index'));
+const ImageTools = dynamic(() => import('@/components/tools/image/Index'), { loading: () => <ImageSkeleton /> });
+const PdfTools = dynamic(() => import('@/components/tools/pdf/Index'), { loading: () => <PdfSkeleton /> });
+const TextTools = dynamic(() => import('@/components/tools/text/Index'), { loading: () => <TextSkeleton /> });
+const AdvancedTextTools = dynamic(() => import('@/components/tools/advancedtext/Index'), { loading: () => <TextSkeleton /> });
+const FormatterTools = dynamic(() => import('@/components/tools/formatter/Index'), { loading: () => <CodeEditorSkeleton /> });
+const ConverterTools = dynamic(() => import('@/components/tools/converter/Index'), { loading: () => <PdfSkeleton /> });
+const GeneratorTools = dynamic(() => import('@/components/tools/generator/Index'), { loading: () => <PdfSkeleton /> });
+const DevTools = dynamic(() => import('@/components/tools/dev/Index'), { loading: () => <CodeEditorSkeleton /> });
+const SecurityTools = dynamic(() => import('@/components/tools/security/Index'), { loading: () => <CodeEditorSkeleton /> });
 const FAQSection = dynamic(() => import('@/components/common/components/FAQSection'));
-const UtilityTools = dynamic(() => import('@/components/tools/utility/Index'));
-const CryptoTools = dynamic(() => import('@/components/tools/crypto/Index'), { ssr: false });
-const RegexDiffTools = dynamic(() => import('@/components/tools/regex/Index'));
-const YouTubeTools = dynamic(() => import('@/components/tools/youtube/Index'));
-const SeoTools = dynamic(() => import('@/components/tools/seo/Index'));
-const KeywordTools = dynamic(() => import('@/components/tools/keyword/Index'));
-const WebTools = dynamic(() => import('@/components/tools/web/Index'));
-const SocialLinkTools = dynamic(() => import('@/components/tools/social/Index'));
-const TechTools = dynamic(() => import('@/components/tools/tech/Index'));
-const CalculatorTools = dynamic(() => import('@/components/tools/calculator/Index'));
+const UtilityTools = dynamic(() => import('@/components/tools/utility/Index'), { loading: () => <CodeEditorSkeleton /> });
+const CryptoTools = dynamic(() => import('@/components/tools/crypto/Index'), { ssr: false, loading: () => <CodeEditorSkeleton /> });
+const RegexDiffTools = dynamic(() => import('@/components/tools/regex/Index'), { loading: () => <CodeEditorSkeleton /> });
+const YouTubeTools = dynamic(() => import('@/components/tools/youtube/Index'), { loading: () => <PdfSkeleton /> });
+const SeoTools = dynamic(() => import('@/components/tools/seo/Index'), { loading: () => <CodeEditorSkeleton /> });
+const KeywordTools = dynamic(() => import('@/components/tools/keyword/Index'), { loading: () => <TextSkeleton /> });
+const WebTools = dynamic(() => import('@/components/tools/web/Index'), { loading: () => <CodeEditorSkeleton /> });
+const SocialLinkTools = dynamic(() => import('@/components/tools/social/Index'), { loading: () => <CodeEditorSkeleton /> });
+const TechTools = dynamic(() => import('@/components/tools/tech/Index'), { loading: () => <CodeEditorSkeleton /> });
+const CalculatorTools = dynamic(() => import('@/components/tools/calculator/Index'), {
+  loading: () => <CalculatorSkeleton />
+});
 
 interface Props {
   params: { slug: string; locale: string };
@@ -114,11 +118,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     };
   } catch (error) {
-    return { title: 'Error Loading Tool' };
+    const fallbackName = params.slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    return {
+      title: `${fallbackName} | Aynzo Tools`,
+      description: `Use our free online ${fallbackName} tool. Fast, secure, and browser-based.`,
+    };
   }
 }
 
-export default async function ToolPage({ params }: Props) {
+async function AsyncToolPage({ params }: Props) {
   const dynamicSeo = await fetchDynamicSEO(params.locale, params.slug);
   let tool;
   try {
@@ -598,5 +606,35 @@ export default async function ToolPage({ params }: Props) {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ToolPage({ params }: Props) {
+  const tool = tools.find((t) => t.slug === params.slug);
+  const category = tool?.category || 'utility';
+
+  const getSkeleton = () => {
+    switch (category) {
+      case 'calculator':
+        return <CalculatorSkeleton />;
+      case 'text':
+      case 'advancedtext':
+      case 'keyword':
+        return <TextSkeleton />;
+      case 'image':
+        return <ImageSkeleton />;
+      case 'pdf':
+      case 'converter':
+      case 'youtube':
+        return <PdfSkeleton />;
+      default:
+        return <CodeEditorSkeleton />;
+    }
+  };
+
+  return (
+    <Suspense fallback={getSkeleton()}>
+      <AsyncToolPage params={params} />
+    </Suspense>
   );
 }
