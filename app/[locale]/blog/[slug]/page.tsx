@@ -24,7 +24,10 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
     keywords: blog.seoKeywords?.join(', '),
     alternates: {
       canonical: getLocalizedUrl(SITE_URL, locale, `/blog/${slug}`),
-      languages: getAllHreflangUrls(SITE_URL, locales, `/blog/${slug}`)
+      languages: {
+        'x-default': getXDefaultUrl(SITE_URL, `/blog/${slug}`),
+        ...getAllHreflangUrls(SITE_URL, locales, `/blog/${slug}`)
+      }
     },
     openGraph: {
       title: blog.seoTitle || blog.title,

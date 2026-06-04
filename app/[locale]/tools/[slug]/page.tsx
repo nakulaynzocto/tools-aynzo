@@ -66,24 +66,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const toolRes = await api.getProduct(params.slug);
     const tool = toolRes.success ? toolRes.data : null;
     const toolCategory = tool?.category || 'utility';
-    const toolName = tool?.name || params.slug;
-
-    const name = dynamicSeo?.pageH1 || params.slug;
     const siteName = tApp('name');
 
-    const localizedTitle = dynamicSeo?.seoTitle || `${name} | ${siteName}`;
-    const localizedDesc = dynamicSeo?.seoDescription || `Use our free online ${name} tool. Fast, secure, and easy to use.`;
-    const localizedKeywords = (dynamicSeo?.seoKeywords && dynamicSeo.seoKeywords.length > 0) ? dynamicSeo.seoKeywords.join(', ') : `${name.toLowerCase()}, online tools, free online ${name.toLowerCase()}`;
+    // 1. Get localized name of the tool
+    const translatedName = tTools.has(`${params.slug}.name`) 
+      ? tTools(`${params.slug}.name`) 
+      : (tool?.name || params.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '));
 
-    const finalTitle = localizedTitle || `${name} | ${siteName}`;
-    const finalDesc = localizedDesc || `Use our free online ${name} tool. Fast, secure, and easy to use.`;
-    const finalKeywords = localizedKeywords || `${name.toLowerCase()}, online tools, free online ${name.toLowerCase()}`;
+    // 2. Determine H1 name (prefers database custom H1, then JSON translated name)
+    const name = dynamicSeo?.pageH1 || translatedName;
+
+    // 3. Fallback localized title
+    const jsonSeoTitle = tTools.has(`${params.slug}.seoTitle`) ? tTools(`${params.slug}.seoTitle`) : null;
+    const finalTitle = dynamicSeo?.seoTitle || jsonSeoTitle || `${name} | ${siteName}`;
+
+    // 4. Fallback localized description
+    const jsonSeoDesc = tTools.has(`${params.slug}.seoDescription`) ? tTools(`${params.slug}.seoDescription`) : null;
+    const jsonDesc = tTools.has(`${params.slug}.description`) ? tTools(`${params.slug}.description`) : null;
+    
+    // Default template translated
+    const defaultDescTemplate = params.locale === 'hi' 
+      ? `मुफ़्त ऑनलाइन ${name} टूल का उपयोग करें। तेज़, सुरक्षित और उपयोग में आसान।`
+      : params.locale === 'es'
+      ? `Utilice nuestra herramienta gratuita en línea ${name}. Rápida, segura y fácil de usar.`
+      : params.locale === 'pt'
+      ? `Use nossa ferramenta online gratuita ${name}. Rápida, segura e fácil de usar.`
+      : `Use our free online ${name} tool. Fast, secure, and easy to use.`;
+
+    const finalDesc = dynamicSeo?.seoDescription || jsonSeoDesc || jsonDesc || defaultDescTemplate;
+
+    // 5. Fallback localized keywords
+    const jsonSeoKeywords = tTools.has(`${params.slug}.seoKeywords`) ? tTools(`${params.slug}.seoKeywords`) : null;
+    const defaultKeywords = `${name.toLowerCase()}, online tools, free online ${name.toLowerCase()}`;
+    const finalKeywords = (dynamicSeo?.seoKeywords && dynamicSeo.seoKeywords.length > 0) 
+      ? dynamicSeo.seoKeywords.join(', ') 
+      : (jsonSeoKeywords || defaultKeywords);
     
     // as-needed locale prefix logic
     const localePrefix = getLocalePrefix(params.locale);
     
     // Get category-specific OG image
-    const ogImage = getToolOGImage(toolCategory, toolName);
+    const ogImage = getToolOGImage(toolCategory, tool?.name || params.slug);
 
     return {
       title: finalTitle,
@@ -141,8 +164,8 @@ async function AsyncToolPage({ params }: Props) {
   const t = tTools;
   const tCommon = await getTranslations({ locale: params.locale, namespace: 'Common' });
 
-  const translatedName = dynamicSeo?.pageH1 || tool.name;
-  const translatedDesc = dynamicSeo?.seoDescription || tool.description;
+  const translatedName = dynamicSeo?.pageH1 || (tTools.has(`${params.slug}.name`) ? tTools(`${params.slug}.name`) : tool.name);
+  const translatedDesc = dynamicSeo?.seoDescription || (tTools.has(`${params.slug}.description`) ? tTools(`${params.slug}.description`) : tool.description);
   const localizedH1 = dynamicSeo?.pageH1 || translatedName;
 
   const tCategories = await getTranslations({ locale: params.locale, namespace: 'Categories' });

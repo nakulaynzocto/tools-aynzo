@@ -7,6 +7,7 @@ import HeroSearch from '@/components/common/components/HeroSearch';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { getCategoryIcon } from '@/utils/icon-mapping';
+import Script from 'next/script';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -83,8 +84,28 @@ export default async function Home({ params: { locale } }: { params: { locale: s
     { nameKey: 'salary-calculator.name',        slug: 'salary-calculator',       fallback: 'Salary Calc',       icon: '💰' },
   ];
 
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    'name': 'Aynzo Tools',
+    'url': `https://tools.aynzo.com${localePrefix}`,
+    'potentialAction': {
+      '@type': 'SearchAction',
+      'target': {
+        '@type': 'EntryPoint',
+        'urlTemplate': `https://tools.aynzo.com${localePrefix}/tools?q={search_term_string}`
+      },
+      'query-input': 'required name=search_term_string'
+    }
+  };
+
   return (
     <div className="flex flex-col">
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       {/* ── HERO ── */}
       <section className="relative overflow-hidden -mt-[62px]">
         <div className="absolute inset-0 bg-background" />
