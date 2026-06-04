@@ -25,8 +25,8 @@ export function HtaccessRedirectGenerator({ redirect, setRedirect, result, copie
                         <div className="space-y-2">
                             <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">{tTool('type')}</label>
                             <select value={redirect.type} onChange={e => setRedirect({ ...redirect, type: e.target.value as '301' | '302' })} className="w-full p-4 border-2 border-border rounded-xl bg-input font-black text-sm appearance-none outline-none focus:border-accent">
-                                <option value="301">301 - Permanent</option>
-                                <option value="302">302 - Temporary</option>
+                                <option value="301">301 - {tTool('permanent')}</option>
+                                <option value="302">302 - {tTool('temporary')}</option>
                             </select>
                         </div>
                         <div className="space-y-2">
@@ -45,7 +45,7 @@ export function HtaccessRedirectGenerator({ redirect, setRedirect, result, copie
                     <h3 className="text-xs font-black uppercase text-muted-foreground tracking-widest">{tTool('apacheConfigOutput')}</h3>
                     {result && (
                         <button onClick={onCopy} className={cn("px-4 py-1.5 rounded-xl text-[10px] font-black flex items-center gap-2 transition-all", copied ? 'bg-emerald-500 text-white shadow-lg' : 'bg-primary/10 text-primary hover:bg-primary/20')}>
-                            {copied ? <CheckCircle2 size={12} /> : <Copy size={12} />} {copied ? 'COPIED' : 'COPY ALL'}
+                            {copied ? <CheckCircle2 size={12} /> : <Copy size={12} />} {copied ? tTool('copied') : tTool('copyAll')}
                         </button>
                     )}
                 </div>

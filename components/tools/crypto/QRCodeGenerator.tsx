@@ -6,6 +6,7 @@ import { generateQRCode } from '@/components/utils/crypto/cryptoProcessing';
 import { useTranslations } from 'next-intl';
 
 export function QRCodeGenerator() {
+    const tCrypto = useTranslations('Tools.cryptoTools');
     const t = useTranslations('Tools.CryptoToolsText');
     const [input, setInput] = useState('');
     const [qrCodeData, setQrCodeData] = useState('');
@@ -49,7 +50,7 @@ export function QRCodeGenerator() {
                     </div>
                     <textarea
                         className="w-full p-6 border-2 border-border rounded-3xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground placeholder-muted-foreground min-h-[300px] shadow-inner transition-all"
-                        placeholder="Enter text or URL for QR code..."
+                        placeholder={tCrypto('placeholderQrText')}
                         value={input}
                         onChange={e => setInput(e.target.value)}
                         rows={8}
@@ -91,7 +92,7 @@ export function QRCodeGenerator() {
                         onClick={downloadQRCode}
                         className="px-12 py-5 bg-emerald-600 text-white rounded-[1.25rem] font-black shadow-2xl transition-all flex items-center gap-4 text-lg"
                     >
-                        <Download className="w-6 h-6" /> SAVE QR CODE
+                        <Download className="w-6 h-6" /> {t('saveQrCode')}
                     </button>
                 </div>
             )}

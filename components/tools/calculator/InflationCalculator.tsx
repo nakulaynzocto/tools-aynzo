@@ -41,7 +41,7 @@ export function InflationCalculator() {
 
     const copy = () => {
         if (!result) return;
-        const text = `Amount: $${amount}\nFuture Purchasing Power: $${result.purchasingPower}\nValue Lost: $${result.lostValue} (${result.lossPercent}%)`;
+        const text = `${tCalc('amount')}: ${amount}\n${tCalc('purchasingPower')}: ${result.purchasingPower}\n${tCalc('totalValueLost')}: ${result.lostValue} (${result.lossPercent}%)`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -57,17 +57,17 @@ export function InflationCalculator() {
                 
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Current Amount ($)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('currentAmount')} ($)</label>
                         <input type="number" value={amount} onChange={e => setAmount(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                     </div>
                     
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Annual Inflation Rate (%)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('annualInflationRate')} (%)</label>
                         <input type="number" step="0.1" value={rate} onChange={e => setRate(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Time Horizon (Years)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('timeHorizon')} ({tCalc('years')})</label>
                         <input type="number" value={time} onChange={e => setTime(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                     </div>
                 </div>
@@ -75,7 +75,7 @@ export function InflationCalculator() {
                 <div className="bg-rose-500/5 p-4 rounded-xl border border-rose-500/10 flex items-start gap-3">
                     <Info size={16} className="text-rose-500 mt-1 flex-shrink-0" />
                     <p className="text-[11px] font-medium text-muted-foreground leading-relaxed">
-                        Inflation reduces the "purchasing power" of your money. What costs $100 today will likely cost significantly more in the future, meaning your savings lose value if they don't outpace inflation.
+                        {tCalc('inflationDefinition')}
                     </p>
                 </div>
             </div>
@@ -85,9 +85,9 @@ export function InflationCalculator() {
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[350px] flex flex-col items-center justify-center gap-6 shadow-sm">
                         <div className="text-center space-y-4">
-                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">Purchasing Power in {time} Years</div>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('purchasingPowerInYears', { years: time })}</div>
                             <div className="text-6xl font-black text-rose-500 animate-in fade-in zoom-in duration-500">${Number(result.purchasingPower).toLocaleString()}</div>
-                            <p className="text-xs font-bold text-muted-foreground">Your ${amount} will buy {100 - Number(result.lossPercent)}% of what it can today.</p>
+                            <p className="text-xs font-bold text-muted-foreground">{tCalc('yourAmountWillBuyPercent', { amount: amount, percent: (100 - Number(result.lossPercent)).toFixed(1) })}</p>
                         </div>
 
                         <div className="grid grid-cols-2 gap-4 w-full">
@@ -107,7 +107,7 @@ export function InflationCalculator() {
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Impact Result Copied' : 'Copy All Data'}
+                            {copied ? tCalc('impactResultCopied') : tCalc('copyAllData')}
                         </button>
                     </div>
                 ) : (

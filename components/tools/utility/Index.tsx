@@ -23,7 +23,7 @@ export default function UtilityToolsIndex({ type }: UtilityToolProps) {
 
     const utilityNavTools = [
         {
-            category: 'GENERATORS',
+            category: 'utility',
             tools: [
                 { id: 'lorem-ipsum', label: 'Lorem Ipsum Generator', icon: Type },
                 { id: 'chatgpt-prompt-generator', label: 'ChatGPT Prompts', icon: Bot },
@@ -31,7 +31,7 @@ export default function UtilityToolsIndex({ type }: UtilityToolProps) {
             ]
         },
         {
-            category: 'AI TOOLS',
+            category: 'utility',
             tools: [
                 { id: 'ai-content-detector', label: 'AI Detector', icon: ScanSearch },
                 { id: 'grammar-checker', label: 'Grammar Checker', icon: SpellCheck },

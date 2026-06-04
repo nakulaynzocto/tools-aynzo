@@ -17,17 +17,17 @@ export function MacroCalculator() {
     const [copied, setCopied] = useState(false);
 
     const activityLevels = [
-        { value: 1.2, label: 'Sedentary' },
-        { value: 1.375, label: 'Light (1–3x/wk)' },
-        { value: 1.55, label: 'Moderate (3–5x/wk)' },
-        { value: 1.725, label: 'Active (6–7x/wk)' },
-        { value: 1.9, label: 'Very Active' },
+        { value: 1.2, labelKey: 'sedentary' },
+        { value: 1.375, labelKey: 'light' },
+        { value: 1.55, labelKey: 'moderate' },
+        { value: 1.725, labelKey: 'active' },
+        { value: 1.9, labelKey: 'veryActive' },
     ];
 
     const goalConfig = {
-        cut: { kcalAdj: -500, protein: 2.2, fat: 0.8, label: 'Cutting', color: 'text-blue-500' },
-        maintain: { kcalAdj: 0, protein: 1.8, fat: 0.9, label: 'Maintenance', color: 'text-green-500' },
-        bulk: { kcalAdj: 300, protein: 1.6, fat: 1.0, label: 'Bulking', color: 'text-orange-500' },
+        cut: { kcalAdj: -500, protein: 2.2, labelKey: 'cut', color: 'text-blue-500' },
+        maintain: { kcalAdj: 0, protein: 1.8, labelKey: 'maintain', color: 'text-green-500' },
+        bulk: { kcalAdj: 300, protein: 1.6, labelKey: 'bulk', color: 'text-orange-500' },
     };
 
     const result = useMemo(() => {
@@ -38,7 +38,7 @@ export function MacroCalculator() {
         const cfg = goalConfig[goal];
         const totalCal = tdee + cfg.kcalAdj;
         const protein = w * cfg.protein;
-        const fat = w * cfg.fat;
+        const fat = w * (goal === 'cut' ? 0.8 : goal === 'maintain' ? 0.9 : 1.0);
         const carbCal = totalCal - protein * 4 - fat * 9;
         const carbs = Math.max(0, carbCal / 4);
         return {
@@ -53,7 +53,7 @@ export function MacroCalculator() {
     }, [weight, unit, goal, activityMult, gender, age, height]);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`Macro Plan (${goalConfig[goal].label}):\nCalories: ${result.calories} kcal/day\nProtein: ${result.protein}g (${result.proteinPct}%)\nCarbs: ${result.carbs}g (${result.carbsPct}%)\nFat: ${result.fat}g (${result.fatPct}%)`);
+        navigator.clipboard.writeText(`Macro Plan (${tCalc(goalConfig[goal].labelKey)}):\n${tCalc('caloriesResult')}: ${result.calories} kcal/day\n${tCalc('protein')}: ${result.protein}g (${result.proteinPct}%)\n${tCalc('carbs')}: ${result.carbs}g (${result.carbsPct}%)\n${tCalc('fat')}: ${result.fat}g (${result.fatPct}%)`);
         setCopied(true); setTimeout(() => setCopied(false), 2000);
     };
 
@@ -74,24 +74,24 @@ export function MacroCalculator() {
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('gender')}</label>
                         <div className="flex gap-2">
                             {(['male', 'female'] as const).map(g => (
-                                <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 capitalize transition-all', gender === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{g}</button>
+                                <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 capitalize transition-all', gender === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{tCalc(g)}</button>
                             ))}
                         </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground">Age ({age})</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('age')} ({age})</label>
                             <input type="range" min="15" max="80" value={age} onChange={e => setAge(Number(e.target.value))} className="w-full accent-primary" />
                         </div>
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground">Height ({height} cm)</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('height')} ({height} {tCalc('cm')})</label>
                             <input type="range" min="140" max="220" value={height} onChange={e => setHeight(Number(e.target.value))} className="w-full accent-primary" />
                         </div>
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground">Weight ({weight} {unit})</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('weight')} ({weight} {unit})</label>
                         <div className="flex gap-2 mb-2">
                             {(['kg', 'lbs'] as const).map(u => (
                                 <button key={u} onClick={() => setUnit(u)} className={cn('px-4 py-1.5 rounded-lg font-bold text-xs border-2 transition-all', unit === u ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{u}</button>
@@ -104,7 +104,7 @@ export function MacroCalculator() {
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('goal')}</label>
                         <div className="grid grid-cols-3 gap-2">
                             {(['cut', 'maintain', 'bulk'] as const).map(g => (
-                                <button key={g} onClick={() => setGoal(g)} className={cn('py-3 rounded-xl font-bold text-sm border-2 capitalize transition-all', goal === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{g}</button>
+                                <button key={g} onClick={() => setGoal(g)} className={cn('py-3 rounded-xl font-bold text-sm border-2 capitalize transition-all', goal === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{tCalc(g)}</button>
                             ))}
                         </div>
                     </div>
@@ -112,7 +112,7 @@ export function MacroCalculator() {
                     <div className="space-y-3">
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('activityLevel')}</label>
                         <select value={activityMult} onChange={e => setActivityMult(Number(e.target.value))} className="w-full px-4 py-3 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-bold">
-                            {activityLevels.map(a => <option key={a.value} value={a.value}>{a.label}</option>)}
+                            {activityLevels.map(a => <option key={a.value} value={a.value}>{tCalc(a.labelKey)}</option>)}
                         </select>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ export function MacroCalculator() {
                             {result.calories.toLocaleString()}
                         </div>
                         <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                            Daily Calorie Target ({goalConfig[goal].label})
+                            {tCalc('dailyCalorieTarget')} ({tCalc(goalConfig[goal].labelKey)})
                         </div>
                         <div className="flex gap-4 opacity-80 flex-wrap justify-center">
                             <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold text-sm shadow-sm flex items-center gap-2">
@@ -146,9 +146,9 @@ export function MacroCalculator() {
                     {/* Macro Bars */}
                     <div className="w-full space-y-4 bg-card/50 p-6 rounded-2xl border border-border/50">
                         {[
-                            { key: 'protein', label: 'Protein', grams: result.protein, pct: result.proteinPct },
-                            { key: 'carbs', label: 'Carbs', grams: result.carbs, pct: result.carbsPct },
-                            { key: 'fat', label: 'Fat', grams: result.fat, pct: result.fatPct },
+                            { key: 'protein', label: tCalc('protein'), grams: result.protein, pct: result.proteinPct },
+                            { key: 'carbs', label: tCalc('carbs'), grams: result.carbs, pct: result.carbsPct },
+                            { key: 'fat', label: tCalc('fat'), grams: result.fat, pct: result.fatPct },
                         ].map(({ key, label, grams, pct }) => {
                             const mc = macroColors[key as keyof typeof macroColors];
                             return (
@@ -167,14 +167,16 @@ export function MacroCalculator() {
 
                     <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                         {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                        {copied ? 'Copied to Clipboard' : 'Copy Macro Plan'}
+                        {copied ? tCalc('copiedToClipboard') : tCalc('copyMacroPlan')}
                     </button>
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                     <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        <strong>{tCalc('protein')}</strong> is key for muscle. Aim for 1.8-2.2g/kg. Adjust based on energy levels.
+                        {tCalc.rich('proteinCarbsFatRatioTip', {
+                            strongNode: (chunks) => <strong>{chunks}</strong>
+                        })}
                     </p>
                 </div>
             </div>

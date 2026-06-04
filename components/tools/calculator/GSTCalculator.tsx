@@ -29,7 +29,7 @@ export function GSTCalculator() {
             return {
                 tax: tax.toFixed(2),
                 total: (amt + tax).toFixed(2),
-                label: 'Total with GST'
+                label: tCalc('totalWithGst')
             };
         } else {
             const base = (amt * 100) / (100 + r);
@@ -37,14 +37,14 @@ export function GSTCalculator() {
             return {
                 tax: tax.toFixed(2),
                 original: base.toFixed(2),
-                label: 'Base Amount'
+                label: tCalc('baseAmount')
             };
         }
-    }, [inputs]);
+    }, [inputs, tCalc]);
 
     const copy = () => {
         if (!result) return;
-        const text = `GST Tax: ${result.tax}\n${result.label}: ${result.total || result.original}`;
+        const text = `${tCalc('gSTTax')}: ${result.tax}\n${result.label}: ${result.total || result.original}`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -61,14 +61,14 @@ export function GSTCalculator() {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-1">
-                            <label className="text-xs font-bold uppercase opacity-50">GST Rate (%)</label>
+                            <label className="text-xs font-bold uppercase opacity-50">{tCalc('gstRate')}</label>
                             <input type="number" value={inputs.rate} onChange={e => setInputs({ ...inputs, rate: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-bold focus:border-primary outline-none" placeholder="18" />
                         </div>
                         <div className="space-y-1">
                             <label className="text-xs font-bold uppercase opacity-50">{tCalc('taxType')}</label>
                             <div className="bg-muted p-1 rounded-xl flex gap-1 h-[60px]">
                                 {['inclusive', 'exclusive'].map(t => (
-                                    <button key={t} onClick={() => setInputs({ ...inputs, type: t as any })} className={cn("flex-1 text-[10px] font-black uppercase rounded-lg transition-all", inputs.type === t ? "bg-card shadow-sm text-primary" : "text-muted-foreground")}>{t}</button>
+                                    <button key={t} onClick={() => setInputs({ ...inputs, type: t as any })} className={cn("flex-1 text-[10px] font-black uppercase rounded-lg transition-all", inputs.type === t ? "bg-card shadow-sm text-primary" : "text-muted-foreground")}>{tCalc(t)}</button>
                                 ))}
                             </div>
                         </div>
@@ -91,7 +91,7 @@ export function GSTCalculator() {
                         </div>
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied to Clipboard' : 'Copy All Results'}
+                            {copied ? tCalc('copiedToClipboard') : tCalc('copyAllResults')}
                         </button>
                     </div>
                 ) : (

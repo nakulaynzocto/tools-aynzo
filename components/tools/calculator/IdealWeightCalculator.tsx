@@ -46,15 +46,15 @@ export function IdealWeightCalculator() {
     }, [height, unit, feet, inches, gender]);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`Ideal Weight (${gender}, ${unit === 'cm' ? height + 'cm' : feet + "'" + inches + '"'}):\nAverage: ${result.avg.toFixed(1)} kg\nHealthy BMI Range: ${result.bmiLow.toFixed(1)} – ${result.bmiHigh.toFixed(1)} kg\n\nBy Formula:\nHamwi: ${result.hamwi.toFixed(1)} kg\nDevine: ${result.devine.toFixed(1)} kg\nRobinson: ${result.robinson.toFixed(1)} kg\nMiller: ${result.miller.toFixed(1)} kg`);
+        navigator.clipboard.writeText(`Ideal Weight (${tCalc(gender)}, ${unit === 'cm' ? height + 'cm' : feet + "'" + inches + '"'}):\nAverage: ${result.avg.toFixed(1)} kg\nHealthy BMI Range: ${result.bmiLow.toFixed(1)} – ${result.bmiHigh.toFixed(1)} kg\n\nBy Formula:\nHamwi: ${result.hamwi.toFixed(1)} kg\nDevine: ${result.devine.toFixed(1)} kg\nRobinson: ${result.robinson.toFixed(1)} kg\nMiller: ${result.miller.toFixed(1)} kg`);
         setCopied(true); setTimeout(() => setCopied(false), 2000);
     };
 
     const formulas = [
-        { name: 'Hamwi', value: result.hamwi, desc: 'Clinical standard' },
-        { name: 'Devine', value: result.devine, desc: 'Medical dosing' },
-        { name: 'Robinson', value: result.robinson, desc: 'Modified Devine' },
-        { name: 'Miller', value: result.miller, desc: 'Lightest estimate' },
+        { name: 'Hamwi', value: result.hamwi, desc: tCalc('formulaClinicalStandard') },
+        { name: 'Devine', value: result.devine, desc: tCalc('formulaMedicalDosing') },
+        { name: 'Robinson', value: result.robinson, desc: tCalc('formulaModifiedDevine') },
+        { name: 'Miller', value: result.miller, desc: tCalc('formulaLightestEstimate') },
     ];
 
     return (
@@ -68,7 +68,7 @@ export function IdealWeightCalculator() {
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('gender')}</label>
                         <div className="flex gap-2">
                             {(['male', 'female'] as const).map(g => (
-                                <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 capitalize transition-all', gender === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{g}</button>
+                                <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 transition-all', gender === g ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{tCalc(g)}</button>
                             ))}
                         </div>
                     </div>
@@ -77,14 +77,14 @@ export function IdealWeightCalculator() {
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('measurementUnit')}</label>
                         <div className="flex gap-2">
                             {(['cm', 'ft'] as const).map(u => (
-                                <button key={u} onClick={() => setUnit(u)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 uppercase transition-all', unit === u ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{u === 'ft' ? 'ft/in' : u}</button>
+                                <button key={u} onClick={() => setUnit(u)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 uppercase transition-all', unit === u ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>{u === 'ft' ? tCalc('ftIn') : tCalc(u)}</button>
                             ))}
                         </div>
                     </div>
 
                     {unit === 'cm' ? (
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground">Height ({height} cm)</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('height')} ({height} {tCalc('cm')})</label>
                             <input type="range" min="140" max="220" value={height} onChange={e => setHeight(Number(e.target.value))} className="w-full accent-primary" />
                         </div>
                     ) : (
@@ -130,16 +130,16 @@ export function IdealWeightCalculator() {
                             {result.avg.toFixed(1)}
                         </div>
                         <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                            Average Ideal Weight (kg)
+                            {tCalc('averageIdealWeightKg')}
                         </div>
                         <div className="flex gap-4 opacity-80 flex-wrap justify-center pt-2">
                             <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold text-xs shadow-sm">
-                                {(result.avg * 2.205).toFixed(1)} lbs average
+                                {(result.avg * 2.205).toFixed(1)} {tCalc('lbsAverage')}
                             </div>
                         </div>
 
                         <div className="pt-8 mt-8 border-t border-border/50 w-full">
-                            <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-4">Healthy BMI Range (18.5–24.9)</p>
+                            <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-4">{tCalc('healthyBmiRange')}</p>
                             <div className="flex items-center gap-4 px-4">
                                 <div className="flex flex-col text-left">
                                     <span className="text-lg font-black text-foreground">{result.bmiLow.toFixed(1)}</span>
@@ -158,7 +158,7 @@ export function IdealWeightCalculator() {
 
                     <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                         {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                        {copied ? 'Copied to Clipboard' : 'Copy Result Summary'}
+                        {copied ? tCalc('copiedToClipboard') : tCalc('copyResultSummary')}
                     </button>
                 </div>
 

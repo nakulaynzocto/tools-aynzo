@@ -32,10 +32,10 @@ export function BMICalculator() {
         }
 
         let category = '';
-        if (bmiValue < 18.5) category = 'Underweight';
-        else if (bmiValue < 25) category = 'Normal weight';
-        else if (bmiValue < 30) category = 'Overweight';
-        else category = 'Obese';
+        if (bmiValue < 18.5) category = 'underweight';
+        else if (bmiValue < 25) category = 'normalWeight';
+        else if (bmiValue < 30) category = 'overweight';
+        else category = 'obeseCategory';
 
         return {
             bmi: bmiValue.toFixed(1),
@@ -45,7 +45,7 @@ export function BMICalculator() {
 
     const copy = () => {
         if (!result) return;
-        const text = `BMI: ${result.bmi}\nCategory: ${result.category}`;
+        const text = `BMI: ${result.bmi}\nCategory: ${tCalc(result.category)}`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -62,18 +62,18 @@ export function BMICalculator() {
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('unitSystem')}</label>
                         <div className="flex p-1 bg-muted/20 rounded-xl gap-1">
                             {['metric', 'imperial'].map(u => (
-                                <button key={u} onClick={() => setBmiInputs({ ...bmiInputs, unit: u as any })} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg transition-all", bmiInputs.unit === u ? "bg-background shadow-sm text-primary" : "text-muted-foreground hover:text-foreground")}>{u}</button>
+                                <button key={u} onClick={() => setBmiInputs({ ...bmiInputs, unit: u as any })} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg transition-all", bmiInputs.unit === u ? "bg-background shadow-sm text-primary" : "text-muted-foreground hover:text-foreground")}>{tCalc(u)}</button>
                             ))}
                         </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Weight ({bmiInputs.unit === 'metric' ? 'kg' : 'lbs'})</label>
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('weight')} ({bmiInputs.unit === 'metric' ? 'kg' : 'lbs'})</label>
                             <input type="number" value={bmiInputs.weight} onChange={e => setBmiInputs({ ...bmiInputs, weight: e.target.value })} className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" placeholder="70" />
                         </div>
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Height ({bmiInputs.unit === 'metric' ? 'cm' : 'in'})</label>
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('height')} ({bmiInputs.unit === 'metric' ? 'cm' : 'in'})</label>
                             <input type="number" value={bmiInputs.height} onChange={e => setBmiInputs({ ...bmiInputs, height: e.target.value })} className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" placeholder="175" />
                         </div>
                     </div>
@@ -110,17 +110,17 @@ export function BMICalculator() {
                             <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('yourBodyMassIndex')}</div>
                             
                             <div className={cn("mt-6 px-8 py-3 rounded-2xl font-black uppercase text-sm tracking-widest shadow-sm",
-                                result.category === 'Normal weight' ? 'bg-emerald-500/10 text-emerald-600 border-2 border-emerald-500/20' : 
-                                result.category === 'Underweight' ? 'bg-blue-500/10 text-blue-600 border-2 border-blue-500/20' :
+                                result.category === 'normalWeight' ? 'bg-emerald-500/10 text-emerald-600 border-2 border-emerald-500/20' : 
+                                result.category === 'underweight' ? 'bg-blue-500/10 text-blue-600 border-2 border-blue-500/20' :
                                 'bg-amber-500/10 text-amber-600 border-2 border-amber-500/20'
                             )}>
-                                {result.category}
+                                {tCalc(result.category)}
                             </div>
                         </div>
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied to Clipboard' : 'Copy BMI Details'}
+                            {copied ? tCalc('copiedToClipboard') : tCalc('copyBmiDetails')}
                         </button>
                     </div>
                 ) : (

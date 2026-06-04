@@ -38,14 +38,14 @@ export function TikTokHashtagGenerator() {
                 <div />
                 <button onClick={handleCopy} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base">
                     {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-pink-500" />}
-                    {copied ? 'COPIED ALL!' : 'COPY ALL TAGS'}
+                    {copied ? tSocial('copiedAll') : tSocial('copyAllTags')}
                 </button>
             </div>
 
             <div className="space-y-6">
                 <div className="space-y-3">
                     <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">{tSocial('topicOptional')}</label>
-                    <input type="text" value={customTopic} onChange={e => setCustomTopic(e.target.value)} placeholder="e.g., skincare, crypto, pets..." className="w-full px-5 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-pink-500 transition-all font-medium" />
+                    <input type="text" value={customTopic} onChange={e => setCustomTopic(e.target.value)} placeholder={tSocial('egTopicHashtags')} className="w-full px-5 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-pink-500 transition-all font-medium" />
                 </div>
 
                 <div className="space-y-3">
@@ -53,7 +53,7 @@ export function TikTokHashtagGenerator() {
                     <div className="flex gap-2 flex-wrap">
                         {Object.entries(tiktokHashtagData).map(([cat, { icon: Icon, color }]) => (
                             <button key={cat} onClick={() => setSelectedCategory(cat)} className={`flex items-center gap-1.5 px-4 py-2 rounded-xl font-bold text-sm border-2 transition-all ${selectedCategory === cat ? `bg-pink-500 text-white border-pink-500` : 'border-border hover:border-pink-500/40'}`}>
-                                <Icon className="w-3.5 h-3.5" /> {cat}
+                                <Icon className="w-3.5 h-3.5" /> {tSocial(cat.toLowerCase())}
                             </button>
                         ))}
                     </div>
@@ -61,15 +61,15 @@ export function TikTokHashtagGenerator() {
 
                 <div className="bg-card border-2 border-border rounded-3xl p-6">
                     <div className="flex items-center justify-between mb-4">
-                        <span className="text-sm font-black text-muted-foreground uppercase tracking-widest">{displayTags.length} Hashtags</span>
+                        <span className="text-sm font-black text-muted-foreground uppercase tracking-widest">{tSocial('hashtagsCount', { count: displayTags.length })}</span>
                         <button onClick={handleCopy} className="flex items-center gap-2 px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-xl font-bold text-sm transition-all">
                             {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                            {copied ? 'Copied!' : 'Copy All'}
+                            {copied ? tSocial('copiedShort') : tSocial('copyAllShort')}
                         </button>
                     </div>
                     <div className="flex flex-wrap gap-2">
                         {displayTags.map((tag, i) => (
-                            <button key={i} onClick={() => { navigator.clipboard.writeText(tag); }} className="px-3 py-1.5 bg-pink-500/10 hover:bg-pink-500/20 text-pink-600 dark:text-pink-400 border border-pink-500/20 rounded-xl font-bold text-sm transition-all" title="Click to copy">
+                            <button key={i} onClick={() => { navigator.clipboard.writeText(tag); }} className="px-3 py-1.5 bg-pink-500/10 hover:bg-pink-500/20 text-pink-600 dark:text-pink-400 border border-pink-500/20 rounded-xl font-bold text-sm transition-all" title={tSocial('clickToCopy')}>
                                 {tag}
                             </button>
                         ))}

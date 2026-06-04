@@ -74,7 +74,7 @@ export function SalesTaxCalculator() {
                 
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Amount ($)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('amountLabel')} ($)</label>
                         <input type="number" value={amount} onChange={e => setAmount(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                         <div className="flex gap-2">
                             <button onClick={() => setIsInclusive(false)} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg border-2 transition-all", !isInclusive ? "bg-primary text-white border-primary" : "bg-muted text-muted-foreground border-border")}>{tCalc('addTax')}</button>
@@ -83,7 +83,7 @@ export function SalesTaxCalculator() {
                     </div>
                     
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Tax Rate (%)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('taxRate')} (%)</label>
                         <div className="grid grid-cols-2 gap-4">
                             <input type="number" step="0.01" value={rate} onChange={e => setRate(Number(e.target.value))} className="p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                             <select value={rate} onChange={e => setRate(Number(e.target.value))} className="p-4 bg-input border-2 border-border rounded-xl text-sm font-bold outline-none focus:border-accent">
@@ -104,7 +104,7 @@ export function SalesTaxCalculator() {
                 {result ? (
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 min-h-[350px] flex flex-col items-center justify-center gap-6 shadow-sm">
                         <div className="text-center space-y-4">
-                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">Total {isInclusive ? 'After Tax' : 'Bill Amount'}</div>
+                            <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('total')} {isInclusive ? tCalc('afterTax') : tCalc('billAmount')}</div>
                             <div className="text-6xl font-black text-primary animate-in fade-in zoom-in duration-500">${Number(result.totalAmount).toLocaleString()}</div>
                             
                             <div className="bg-card w-full p-6 rounded-2xl border-2 border-border space-y-3 mt-6">
@@ -121,7 +121,7 @@ export function SalesTaxCalculator() {
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Tax Summary Copied' : 'Copy Invoice Details'}
+                            {copied ? tCalc('taxSummaryCopied') : tCalc('copyInvoiceDetails')}
                         </button>
                     </div>
                 ) : (

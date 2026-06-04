@@ -80,7 +80,7 @@ export function EMICalculator() {
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('tenureType')}</label>
                         <div className="flex p-1 bg-muted/20 rounded-xl gap-1">
                             {['months', 'years'].map(t => (
-                                <button key={t} onClick={() => setInputs({ ...inputs, type: t as any })} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg transition-all", inputs.type === t ? "bg-background shadow-sm text-primary" : "text-muted-foreground hover:text-foreground")}>{t}</button>
+                                <button key={t} onClick={() => setInputs({ ...inputs, type: t as any })} className={cn("flex-1 py-2 text-[10px] font-black uppercase rounded-lg transition-all", inputs.type === t ? "bg-background shadow-sm text-primary" : "text-muted-foreground hover:text-foreground")}>{tCalc(t)}</button>
                             ))}
                         </div>
                     </div>
@@ -113,7 +113,7 @@ export function EMICalculator() {
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied to Clipboard' : 'Copy Loan Details'}
+                            {copied ? tCalc('copiedToClipboard') : tCalc('copyLoanDetails')}
                         </button>
                     </div>
                 ) : (

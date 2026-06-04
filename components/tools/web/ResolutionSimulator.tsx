@@ -35,7 +35,7 @@ export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setRe
                         <input
                             value={iframeUrl} onChange={e => setIframeUrl(e.target.value)}
                             className="w-full pl-14 pr-6 py-5 border-2 border-border rounded-[1.25rem] bg-input font-black text-lg focus:border-primary outline-none transition-all shadow-inner"
-                            placeholder="Enter Website URL (e.g. google.com)"
+                            placeholder={tTool('placeholderSimulator')}
                         />
                     </div>
                 </div>
@@ -54,7 +54,7 @@ export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setRe
                             )}
                         >
                             <device.icon size={18} />
-                            <span className="text-[11px] font-black uppercase tracking-tighter">{device.label}</span>
+                            <span className="text-[11px] font-black uppercase tracking-tighter">{tTool(device.label.toLowerCase())}</span>
                         </button>
                     ))}
                 </div>
@@ -94,7 +94,7 @@ export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setRe
                                         <iframe
                                             src={iframeUrl.startsWith('http') ? iframeUrl : `https://${iframeUrl}`}
                                             className="w-full h-full border-none"
-                                            title="SimulatorView"
+                                            title={tTool('simulatorView')}
                                             sandbox="allow-scripts allow-same-origin allow-forms"
                                         />
                                     </div>
@@ -105,7 +105,7 @@ export function ResolutionSimulator({ iframeUrl, setIframeUrl, resolution, setRe
                                         </div>
                                         <div className="space-y-2">
                                             <p className="text-lg font-black text-foreground">{tTool('awaitingSourceURL')}</p>
-                                            <p className="text-xs font-medium text-muted-foreground max-w-xs">{tTool('enterAValidWebsiteAddressAboveToBeginTheResponsiveSimulationFor')}<b>{resolution.label}</b> device.</p>
+                                            <p className="text-xs font-medium text-muted-foreground max-w-xs">{tTool('enterAValidWebsiteAddressAboveToBeginTheResponsiveSimulationFor')} <b>{tTool(resolution.label.toLowerCase())}</b> {tTool('deviceWord')}</p>
                                         </div>
                                     </div>
                                 )}

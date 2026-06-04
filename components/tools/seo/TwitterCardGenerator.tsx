@@ -21,7 +21,7 @@ export function TwitterCardGenerator({ twitter, setTwitter, result, copied, onCo
                 <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary border-b border-border pb-4">
                         <Share2 size={16} />
-                        <h4 className="text-[10px] font-black uppercase tracking-widest leading-none">X/Twitter Integration</h4>
+                        <h4 className="text-[10px] font-black uppercase tracking-widest leading-none">{tTool('twitterIntegration')}</h4>
                     </div>
                     <div className="grid gap-4">
                         <div className="space-y-1.5">

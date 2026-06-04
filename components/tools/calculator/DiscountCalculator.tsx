@@ -37,7 +37,7 @@ export function DiscountCalculator() {
 
     const copy = () => {
         if (!result) return;
-        const text = `Final Price: ${result.final}\nSavings: ${result.savings}\nTax: ${result.tax}`;
+        const text = `${tCalc('finalPrice')}: ${result.final}\n${tCalc('totalSavings')}: ${result.savings}\n${tCalc('taxAmount')}: ${result.tax}`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -54,11 +54,11 @@ export function DiscountCalculator() {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-1">
-                            <label className="text-xs font-bold uppercase opacity-50">Discount (%)</label>
+                            <label className="text-xs font-bold uppercase opacity-50">{tCalc('discount')} (%)</label>
                             <input type="number" value={inputs.discount} onChange={e => setInputs({ ...inputs, discount: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium focus:border-primary outline-none" placeholder="20" />
                         </div>
                         <div className="space-y-1">
-                            <label className="text-xs font-bold uppercase opacity-50">Tax (%)</label>
+                            <label className="text-xs font-bold uppercase opacity-50">{tCalc('tax')} (%)</label>
                             <input type="number" value={inputs.tax} onChange={e => setInputs({ ...inputs, tax: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium focus:border-primary outline-none" placeholder="5" />
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export function DiscountCalculator() {
                         </div>
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied to Clipboard' : 'Copy All Results'}
+                            {copied ? tCalc('copiedToClipboard') : tCalc('copyAllResults')}
                         </button>
                     </div>
                 ) : (

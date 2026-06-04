@@ -77,7 +77,7 @@ export function YouTubeSettingsPanel({ type, input, setInput, settings, setSetti
 
                 <div className="space-y-8">
                     <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground opacity-60">Input URL / ID</label>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground opacity-60">{tTool('inputUrlId')}</label>
                         <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className="w-full p-4 border-2 border-border rounded-xl bg-muted focus:border-primary outline-none transition-all text-xs font-bold" />
                     </div>
 

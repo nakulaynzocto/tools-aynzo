@@ -174,7 +174,7 @@ export function GrammarChecker() {
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
                     <h4 className="font-bold text-foreground">{tTool('aboutThisTool')}</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('thisToolUses')}<strong>rule-based pattern matching</strong> to detect common grammar and spelling errors — entirely in your browser with no API calls. It catches frequent mistakes but is not a replacement for full grammar software like Grammarly.</p>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('grammarCheckerDisclaimer')}</p>
                 </div>
             </div>
         </div>

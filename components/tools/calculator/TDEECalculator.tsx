@@ -16,11 +16,11 @@ export function TDEECalculator() {
     const [copied, setCopied] = useState(false);
 
     const activityLevels = [
-        { value: 1.2, label: 'Sedentary', desc: 'Little or no exercise' },
-        { value: 1.375, label: 'Lightly Active', desc: '1–3 days/week' },
-        { value: 1.55, label: 'Moderately Active', desc: '3–5 days/week' },
-        { value: 1.725, label: 'Very Active', desc: '6–7 days/week' },
-        { value: 1.9, label: 'Extra Active', desc: 'Physical job + exercise' },
+        { value: 1.2, labelKey: 'sedentary', descKey: 'littleOrNoExercise' },
+        { value: 1.375, labelKey: 'lightlyActive', descKey: 'oneThreeDaysWeek' },
+        { value: 1.55, labelKey: 'moderatelyActive', descKey: 'threeFiveDaysWeek' },
+        { value: 1.725, labelKey: 'veryActive', descKey: 'sixSevenDaysWeek' },
+        { value: 1.9, labelKey: 'extraActive', descKey: 'physicalJobExercise' },
     ];
 
     const result = useMemo(() => {
@@ -57,7 +57,7 @@ export function TDEECalculator() {
                             <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('unitSystem')}</label>
                             <div className="flex p-1 bg-muted/20 rounded-xl gap-1">
                                 {(['metric', 'imperial'] as const).map(u => (
-                                    <button key={u} onClick={() => setUnit(u)} className={cn('flex-1 py-2 rounded-lg font-black text-[10px] uppercase transition-all', unit === u ? 'bg-background shadow-sm text-primary' : 'text-muted-foreground hover:text-foreground')}>{u}</button>
+                                    <button key={u} onClick={() => setUnit(u)} className={cn('flex-1 py-2 rounded-lg font-black text-[10px] uppercase transition-all', unit === u ? 'bg-background shadow-sm text-primary' : 'text-muted-foreground hover:text-foreground')}>{tCalc(u)}</button>
                                 ))}
                             </div>
                         </div>
@@ -65,24 +65,24 @@ export function TDEECalculator() {
                             <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('gender')}</label>
                             <div className="flex p-1 bg-muted/20 rounded-xl gap-1">
                                 {(['male', 'female'] as const).map(g => (
-                                    <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-2 rounded-lg font-black text-[10px] uppercase transition-all', gender === g ? 'bg-background shadow-sm text-primary' : 'text-muted-foreground hover:text-foreground')}>{g}</button>
+                                    <button key={g} onClick={() => setGender(g)} className={cn('flex-1 py-2 rounded-lg font-black text-[10px] uppercase transition-all', gender === g ? 'bg-background shadow-sm text-primary' : 'text-muted-foreground hover:text-foreground')}>{tCalc(g)}</button>
                                 ))}
                             </div>
                         </div>
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider flex justify-between">{tCalc('age')}<span>{age} yrs</span></label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider flex justify-between">{tCalc('age')}<span>{age} {tCalc('years')}</span></label>
                         <input type="range" min="10" max="80" value={age} onChange={e => setAge(Number(e.target.value))} className="w-full accent-primary" />
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Weight ({unit === 'metric' ? 'kg' : 'lbs'})</label>
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('weight')} ({unit === 'metric' ? 'kg' : 'lbs'})</label>
                             <input type="number" value={weight} onChange={e => setWeight(Number(e.target.value))} className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
                         </div>
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">Height ({unit === 'metric' ? 'cm' : 'in'})</label>
+                            <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('height')} ({unit === 'metric' ? 'cm' : 'in'})</label>
                             <input type="number" value={height} onChange={e => setHeight(Number(e.target.value))} className="w-full px-4 py-3 bg-background border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all font-bold text-base" />
                         </div>
                     </div>
@@ -93,8 +93,8 @@ export function TDEECalculator() {
                             {activityLevels.map(lvl => (
                                 <button key={lvl.value} onClick={() => setActivity(lvl.value)} className={cn('w-full px-4 py-3 rounded-xl border-2 text-left transition-all flex justify-between items-center', activity === lvl.value ? 'bg-orange-500/10 border-orange-500/30' : 'border-border bg-muted/5 opacity-70 hover:opacity-100')}>
                                     <div className="space-y-0.5">
-                                        <span className="font-bold text-xs block">{lvl.label}</span>
-                                        <span className="text-[10px] text-muted-foreground">{lvl.desc}</span>
+                                        <span className="font-bold text-xs block">{tCalc(lvl.labelKey)}</span>
+                                        <span className="text-[10px] text-muted-foreground">{tCalc(lvl.descKey)}</span>
                                     </div>
                                     {activity === lvl.value && <div className="p-1 bg-orange-500 rounded-full" />}
                                 </button>
@@ -114,12 +114,12 @@ export function TDEECalculator() {
                             {result.tdee.toLocaleString()}
                         </div>
                         <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                            Maintenance Calories / Day
+                            {tCalc('maintenanceCaloriesDay')}
                         </div>
 
                         <div className="grid grid-cols-2 gap-3 w-full mt-6">
                             <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
-                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">BMR (At Rest)</span>
+                                <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{tCalc('bmrAtRest')}</span>
                                 <span className="block text-lg font-black text-foreground">{result.bmr.toLocaleString()}</span>
                             </div>
                             <div className="bg-card p-4 rounded-2xl border border-border/50 text-center">
@@ -130,9 +130,9 @@ export function TDEECalculator() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full mt-4">
                             {[
-                                { label: 'Cutting', value: result.cutting, color: 'text-blue-500', desc: '−500 cal' },
-                                { label: 'Maintain', value: result.maintenance, color: 'text-emerald-500', desc: 'Stay same' },
-                                { label: 'Bulking', value: result.bulking, color: 'text-rose-500', desc: '+300 cal' },
+                                { label: tCalc('cut'), value: result.cutting, color: 'text-blue-500', desc: tCalc('cuttingDesc') },
+                                { label: tCalc('maintain'), value: result.maintenance, color: 'text-emerald-500', desc: tCalc('maintainDesc') },
+                                { label: tCalc('bulk'), value: result.bulking, color: 'text-rose-500', desc: tCalc('bulkingDesc') },
                             ].map(item => (
                                 <div key={item.label} className="bg-card/50 p-4 rounded-2xl border border-border/50 text-center">
                                     <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{item.label}</span>
@@ -145,13 +145,16 @@ export function TDEECalculator() {
 
                     <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-orange-500 transition-all mt-4">
                         {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                        {copied ? 'Copied to Clipboard' : 'Copy All Results'}
+                        {copied ? tCalc('copiedToClipboard') : tCalc('copyAllResults')}
                     </button>
                 </div>
 
                 <div className="bg-orange-500/5 border-2 border-orange-500/20 p-6 rounded-3xl flex items-start gap-4">
                     <Flame className="w-6 h-6 text-orange-500 shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('the')}<strong>{tCalc('mifflinStJeor')}</strong> formula is the industrial standard for calculating calorie needs. Consistency over 2 weeks is key.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        {tCalc.rich('mifflinStJeorFormulaTip', {
+                            strongNode: (chunks) => <strong>{chunks}</strong>
+                        })}
                     </p>
                 </div>
             </div>

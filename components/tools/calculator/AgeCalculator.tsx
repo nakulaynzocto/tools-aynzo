@@ -71,7 +71,7 @@ export function AgeCalculator() {
                         </div>
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied to Clipboard' : 'Copy All Results'}
+                            {copied ? tCalc('copiedToClipboard') : tCalc('copyAllResults')}
                         </button>
                     </div>
                 ) : (

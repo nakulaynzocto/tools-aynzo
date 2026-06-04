@@ -45,11 +45,11 @@ ${links.filter(l => l.url).map(l => `<a class="link" href="${l.url}" target="_bl
                 <div />
                 <div className="flex gap-2">
                     <button onClick={() => setPreview(!preview)} className="flex items-center gap-2 px-5 py-3 bg-violet-500/10 hover:bg-violet-500/20 text-violet-600 rounded-2xl transition-all border-2 border-violet-500/20 font-bold text-sm">
-                        <ExternalLink className="w-4 h-4" /> {preview ? 'Editor' : 'Preview'}
+                        <ExternalLink className="w-4 h-4" /> {preview ? tBio('editor') : tBio('preview')}
                     </button>
                 <button onClick={handleCopy} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base">
                         {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
-                        {copied ? 'COPIED!' : 'COPY HTML'}
+                        {copied ? tBio('copiedHTML') : tBio('copyHTML')}
                     </button>
                 </div>
             </div>

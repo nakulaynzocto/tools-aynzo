@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { PlusCircle, Trash2, TrendingDown, ShieldCheck, AlertTriangle, XCircle, Copy, Check, Info } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
@@ -10,12 +10,16 @@ import { useTranslations } from 'next-intl';
 export function DTICalculator() {
     const tCalc = useTranslations('Tools.CalculatorText');
     const [grossIncome, setGrossIncome] = useState<number>(6000);
-    const [debts, setDebts] = useState<DebtItem[]>([
-        { name: 'Mortgage / Rent', amount: 1200 },
-        { name: 'Car Loan', amount: 350 },
-        { name: 'Credit Card Min.', amount: 150 },
-    ]);
+    const [debts, setDebts] = useState<DebtItem[]>([]);
     const [copied, setCopied] = useState(false);
+
+    useEffect(() => {
+        setDebts([
+            { name: tCalc('mortgageRent'), amount: 1200 },
+            { name: tCalc('carLoan'), amount: 350 },
+            { name: tCalc('creditCardMin'), amount: 150 },
+        ]);
+    }, []);
 
     const addDebt = () => setDebts(prev => [...prev, { name: '', amount: 0 }]);
     const removeDebt = (i: number) => setDebts(prev => prev.filter((_, idx) => idx !== i));
@@ -26,12 +30,11 @@ export function DTICalculator() {
         const totalDebt = debts.reduce((s, d) => s + (d.amount || 0), 0);
         const dti = grossIncome > 0 ? (totalDebt / grossIncome) * 100 : 0;
         let status: 'excellent' | 'good' | 'fair' | 'poor';
-        let label: string;
-        if (dti <= 20) { status = 'excellent'; label = 'Excellent – Easily qualifies for loans'; }
-        else if (dti <= 36) { status = 'good'; label = 'Good – Meets most lender requirements'; }
-        else if (dti <= 43) { status = 'fair'; label = 'Fair – Borderline for mortgage approval'; }
-        else { status = 'poor'; label = 'High – May struggle to qualify for loans'; }
-        return { totalDebt, dti, status, label };
+        if (dti <= 20) { status = 'excellent'; }
+        else if (dti <= 36) { status = 'good'; }
+        else if (dti <= 43) { status = 'fair'; }
+        else { status = 'poor'; }
+        return { totalDebt, dti, status };
     }, [grossIncome, debts]);
 
     const statusConfig = {
@@ -44,7 +47,9 @@ export function DTICalculator() {
     const StatusIcon = cfg.icon;
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`DTI Ratio: ${result.dti.toFixed(1)}%\nTotal Monthly Debts: $${result.totalDebt.toLocaleString()}\nGross Monthly Income: $${grossIncome.toLocaleString()}\nStatus: ${result.label}`);
+        const title = tCalc(`dtiStatus.${result.status}.title`);
+        const desc = tCalc(`dtiStatus.${result.status}.desc`);
+        navigator.clipboard.writeText(`DTI Ratio: ${result.dti.toFixed(1)}%\nTotal Monthly Debts: $${result.totalDebt.toLocaleString()}\nGross Monthly Income: $${grossIncome.toLocaleString()}\nStatus: ${title} - ${desc}`);
         setCopied(true); setTimeout(() => setCopied(false), 2000);
     };
 
@@ -96,7 +101,7 @@ export function DTICalculator() {
                         </div>
                         <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('currentDTIRatio')}</div>
                         <div className={cn('px-4 py-2 rounded-xl border font-bold text-xs shadow-sm flex items-center gap-2', cfg.bg, cfg.border, cfg.color)}>
-                            <StatusIcon className="w-4 h-4" /> {result.label.split(' – ')[0]}
+                            <StatusIcon className="w-4 h-4" /> {tCalc(`dtiStatus.${result.status}.title`)}
                         </div>
                     </div>
 
@@ -108,18 +113,21 @@ export function DTICalculator() {
                         <div className="w-full bg-muted/30 h-2 rounded-full overflow-hidden border border-border/50">
                             <div className={cn('h-full transition-all duration-1000', cfg.bar)} style={{ width: `${Math.min(result.dti, 100)}%` }} />
                         </div>
-                        <p className="text-[10px] text-muted-foreground font-medium text-center italic">{result.label.split(' – ')[1]}</p>
+                        <p className="text-[10px] text-muted-foreground font-medium text-center italic">{tCalc(`dtiStatus.${result.status}.desc`)}</p>
                     </div>
 
                     <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                         {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                        {copied ? 'Copied to Clipboard' : 'Copy DTI Summary'}
+                        {copied ? tCalc('copiedToClipboard') : tCalc('copyDtiSummary')}
                     </button>
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('lendersTypicallyPreferADTIRatioOf')}<strong>36% or less</strong> for the best interest rates and loan terms.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        {tCalc.rich('lendersTypicallyPreferADTIRatio', {
+                            strongNode: (chunks) => <strong>{chunks}</strong>
+                        })}
                     </p>
                 </div>
             </div>

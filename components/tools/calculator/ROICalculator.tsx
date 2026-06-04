@@ -34,7 +34,7 @@ export function ROICalculator() {
 
     const copy = () => {
         if (!result) return;
-        const text = `Investment: $${investment}\nReturns: $${returns}\nROI: ${result.roi}%\nNet Profit: $${result.netProfit}`;
+        const text = `${tCalc('investment')}: ${investment}\n${tCalc('returns')}: ${returns}\nROI: ${result.roi}%\n${tCalc('netProfit')}: ${result.netProfit}`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -50,12 +50,12 @@ export function ROICalculator() {
                 
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Amount Invested ($)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('amountInvested')} ($)</label>
                         <input type="number" value={investment} onChange={e => setInvestment(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                     </div>
                     
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Amount Returned ($)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('amountReturned')} ($)</label>
                         <input type="number" value={returns} onChange={e => setReturns(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                     </div>
                 </div>
@@ -63,7 +63,7 @@ export function ROICalculator() {
                 <div className="bg-primary/5 p-4 rounded-xl border border-primary/10 flex items-start gap-3">
                     <Percent size={16} className="text-primary mt-1 flex-shrink-0" />
                     <p className="text-[11px] font-medium text-muted-foreground leading-relaxed">
-                        Return on Investment (ROI) is a performance measure used to evaluate the efficiency of an investment or compare the efficiency of several different investments.
+                        {tCalc('roiDefinition')}
                     </p>
                 </div>
             </div>
@@ -78,7 +78,7 @@ export function ROICalculator() {
                         <div className="text-center space-y-4">
                             <div className="flex items-center justify-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
                                 {result.isProfit ? <TrendingUp size={14} className="text-emerald-500" /> : <TrendingDown size={14} className="text-rose-500" />}
-                                {result.isProfit ? 'Positive ROI' : 'Negative ROI'}
+                                {result.isProfit ? tCalc('positiveRoi') : tCalc('negativeRoi')}
                             </div>
                             <div className={cn(
                                 "text-7xl font-black animate-in zoom-in duration-500",
@@ -87,13 +87,13 @@ export function ROICalculator() {
                                 {result.roi}%
                             </div>
                             <div className="text-sm font-bold text-muted-foreground">
-                                Net {result.isProfit ? 'Profit' : 'Loss'}: <span className={result.isProfit ? 'text-emerald-500' : 'text-rose-500'}>${Math.abs(Number(result.netProfit)).toLocaleString()}</span>
+                                {tCalc('net')} {result.isProfit ? tCalc('profit') : tCalc('loss')}: <span className={result.isProfit ? 'text-emerald-500' : 'text-rose-500'}>${Math.abs(Number(result.netProfit)).toLocaleString()}</span>
                             </div>
                         </div>
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Outcome Copied' : 'Copy All Data'}
+                            {copied ? tCalc('outcomeCopied') : tCalc('copyAllData')}
                         </button>
                     </div>
                 ) : (

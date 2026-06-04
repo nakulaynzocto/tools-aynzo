@@ -45,7 +45,13 @@ export function CreditCardPayoffCalculator() {
     const fmtFull = (n: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 }).format(n);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`Credit Card Payoff:\nBalance: ${fmt(balance)}\nAPR: ${apr}%\nPayoff: ${result.impossible ? 'Not possible' : `${result.months} months`}\nTotal Interest: ${fmt(result.totalInterest)}\nRequired Monthly Payment: ${fmtFull(result.requiredPayment)}`);
+        const text = `${tCalc('creditCardPayoffSummary')}:\n` +
+            `${tCalc('balance')}: ${fmt(balance)}\n` +
+            `APR: ${apr}%\n` +
+            `${tCalc('payoff')}: ${result.impossible ? tCalc('notPossible') : tCalc('payoffInMonths', { months: result.months })}\n` +
+            `${tCalc('totalInterest')}: ${fmt(result.totalInterest)}\n` +
+            `${tCalc('requiredMonthlyPayment')}: ${fmtFull(result.requiredPayment)}`;
+        navigator.clipboard.writeText(text);
         setCopied(true); setTimeout(() => setCopied(false), 2000);
     };
 
@@ -65,14 +71,14 @@ export function CreditCardPayoffCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground">Annual APR ({apr}%)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('annualApr')} ({apr}%)</label>
                         <input type="range" min="1" max="36" step="0.1" value={apr} onChange={e => setApr(Number(e.target.value))} className="w-full accent-primary" />
                     </div>
 
                     <div className="space-y-3">
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('calculationMode')}</label>
                         <div className="flex gap-2">
-                            {[{ id: 'payment', label: 'By Payment' }, { id: 'months', label: 'By Timeline' }].map(m => (
+                            {[{ id: 'payment', label: tCalc('byPayment') }, { id: 'months', label: tCalc('byTimeline') }].map(m => (
                                 <button key={m.id} onClick={() => setMode(m.id as any)} className={cn('flex-1 py-3 rounded-xl font-bold text-sm border-2 transition-all', mode === m.id ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>
                                     {m.label}
                                 </button>
@@ -90,7 +96,7 @@ export function CreditCardPayoffCalculator() {
                         </div>
                     ) : (
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground">Payoff in {targetMonths} Months</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('payoffInMonths', { months: targetMonths })}</label>
                             <input type="range" min="3" max="120" value={targetMonths} onChange={e => setTargetMonths(Number(e.target.value))} className="w-full accent-primary" />
                         </div>
                     )}
@@ -107,7 +113,7 @@ export function CreditCardPayoffCalculator() {
                             <div className="text-5xl font-black text-red-500">{tCalc('impossible')}</div>
                             <p className="text-sm font-bold text-muted-foreground">{tCalc('paymentDoesNotCoverInterest')}</p>
                             <div className="bg-red-500/10 border border-red-500/20 p-4 rounded-xl text-xs font-medium text-red-600">
-                                Minimum required: {fmtFull(balance * (apr / 100 / 12) + 1)}
+                                {tCalc('minimumRequired')}: {fmtFull(balance * (apr / 100 / 12) + 1)}
                             </div>
                         </div>
                     ) : (
@@ -118,16 +124,16 @@ export function CreditCardPayoffCalculator() {
                             <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('monthsToBeDebtFree')}</div>
                             <div className="flex gap-4 opacity-80 flex-wrap justify-center">
                                 <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold text-xs shadow-sm">
-                                    Total Interest: {fmt(result.totalInterest)}
+                                    {tCalc('totalInterest')}: {fmt(result.totalInterest)}
                                 </div>
                                 <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold text-xs shadow-sm">
-                                    Total Paid: {fmt(result.totalPaid)}
+                                    {tCalc('totalPaid')}: {fmt(result.totalPaid)}
                                 </div>
                             </div>
                             
                             <div className="pt-4 mt-4 border-t border-border/50 w-full">
                                 <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">{tCalc('requiredPayment')}</p>
-                                <p className="text-2xl font-black text-foreground">{fmtFull(result.requiredPayment)}/mo</p>
+                                <p className="text-2xl font-black text-foreground">{fmtFull(result.requiredPayment)}{tCalc('perMonth')}</p>
                             </div>
                         </div>
                     )}
@@ -135,14 +141,17 @@ export function CreditCardPayoffCalculator() {
                     {!result.impossible && (
                         <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied to Clipboard' : 'Copy Payoff Plan'}
+                            {copied ? tCalc('copiedToClipboard') : tCalc('copyPayoffPlan')}
                         </button>
                     )}
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('increasingYourPaymentByEven')}<strong>$50/month</strong> can save you thousands in interest and shave years off your timeline.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        {tCalc.rich('increasingYourPaymentByEven', {
+                            strongNode: (chunks) => <strong>{chunks}</strong>
+                        })}
                     </p>
                 </div>
             </div>

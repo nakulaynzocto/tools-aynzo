@@ -81,11 +81,11 @@ If you have additional questions or require more information about our Privacy P
                 <div className="space-y-4">
                     <div className="space-y-2">
                         <label className="text-sm font-bold text-foreground">{tSocial('websiteName')}</label>
-                        <input type="text" value={websiteName} onChange={e => setWebsiteName(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" placeholder="e.g. Aynzo Tools" />
+                        <input type="text" value={websiteName} onChange={e => setWebsiteName(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" placeholder={tSocial('websiteNamePlaceholder')} />
                     </div>
                     <div className="space-y-2">
                         <label className="text-sm font-bold text-foreground">{tSocial('websiteUrl')}</label>
-                        <input type="text" value={websiteUrl} onChange={e => setWebsiteUrl(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" placeholder="https://example.com" />
+                        <input type="text" value={websiteUrl} onChange={e => setWebsiteUrl(e.target.value)} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" placeholder={tSocial('websiteUrlPlaceholder')} />
                     </div>
                     <div className="space-y-2">
                         <label className="text-sm font-bold text-foreground">{tToolNew('contactEmail')}</label>

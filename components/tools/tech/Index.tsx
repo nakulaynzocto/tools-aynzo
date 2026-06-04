@@ -19,7 +19,7 @@ export default function TechToolsIndex({ type }: TechToolProps) {
 
     const techNavTools = [
         {
-            category: 'TECH UTILITIES',
+            category: 'utility',
             tools: [
                 { id: 'html-to-jsx', label: 'HTML to JSX', icon: Code },
                 { id: 'wordpress-password-hash', label: 'WordPress Hash', icon: Shield },

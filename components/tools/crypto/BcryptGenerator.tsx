@@ -6,6 +6,7 @@ import { generateBcrypt } from '@/components/utils/crypto/cryptoProcessing';
 import { useTranslations } from 'next-intl';
 
 export function BcryptGenerator() {
+    const tCrypto = useTranslations('Tools.cryptoTools');
     const t = useTranslations('Tools.CryptoToolsText');
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
@@ -48,7 +49,7 @@ export function BcryptGenerator() {
                         </div>
                         <textarea
                             className="w-full p-6 border-2 border-border rounded-3xl focus:border-accent focus:outline-none font-mono text-sm bg-input text-foreground placeholder-muted-foreground min-h-[300px] shadow-inner transition-all"
-                            placeholder="Enter password to hash..."
+                            placeholder={tCrypto('placeholderPasswordHash')}
                             value={input}
                             onChange={e => setInput(e.target.value)}
                             rows={8}

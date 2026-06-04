@@ -4,17 +4,17 @@ import { Pen, Copy, Check, Download, RefreshCw, Info } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
 const FONTS = [
-    { name: 'Caveat', label: 'Casual Handwriting' },
-    { name: 'Dancing Script', label: 'Elegant Cursive' },
-    { name: 'Patrick Hand', label: 'Print Style' },
-    { name: 'Shadows Into Light', label: 'Light & Airy' },
-    { name: 'Indie Flower', label: 'Fun & Quirky' },
+    { name: 'Caveat', labelKey: 'casualHandwriting' },
+    { name: 'Dancing Script', labelKey: 'elegantCursive' },
+    { name: 'Patrick Hand', labelKey: 'printStyle' },
+    { name: 'Shadows Into Light', labelKey: 'lightAndAiry' },
+    { name: 'Indie Flower', labelKey: 'funAndQuirky' },
 ];
 
 const PAPER_STYLES = [
-    { name: 'Lined', bg: '#fff9f0', lineColor: '#c7d5e8' },
-    { name: 'Grid', bg: '#f8f8ff', lineColor: '#d0d8e8' },
-    { name: 'Plain', bg: '#fffbf5', lineColor: 'transparent' },
+    { nameKey: 'lined', bg: '#fff9f0', lineColor: '#c7d5e8' },
+    { nameKey: 'grid', bg: '#f8f8ff', lineColor: '#d0d8e8' },
+    { nameKey: 'plain', bg: '#fffbf5', lineColor: 'transparent' },
 ];
 
 const INK_COLORS = ['#1a1a3e', '#1a3e1a', '#3e1a1a', '#2c3e8c', '#000000'];
@@ -22,7 +22,9 @@ const INK_COLORS = ['#1a1a3e', '#1a3e1a', '#3e1a1a', '#2c3e8c', '#000000'];
 import { useTranslations } from 'next-intl';
 
 export function TextToHandwriting() {
-    const tTool = useTranslations('Tools.utilityTools'); const [text, setText] = useState('The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.');
+    const tTool = useTranslations('Tools.utilityTools');
+    const tCommon = useTranslations('Common');
+    const [text, setText] = useState('The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.');
     const [font, setFont] = useState('Caveat');
     const [fontSize, setFontSize] = useState(28);
     const [inkColor, setInkColor] = useState('#1a1a3e');
@@ -115,7 +117,7 @@ export function TextToHandwriting() {
                 <div className="flex gap-3">
                     <button onClick={handleCopy} className="flex items-center gap-2.5 px-5 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl border-2 border-border font-bold text-sm transition-all">
                         {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4 text-primary" />}
-                        {copied ? 'Copied!' : 'Copy Text'}
+                        {copied ? tCommon('copied') : tCommon('copy')}
                     </button>
                     <button onClick={handleDownload} className="flex items-center gap-2.5 px-5 py-3.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-2xl font-bold text-sm transition-all shadow-lg">
                         <Download className="w-4 h-4" />{tTool('downloadPNG')}</button>
@@ -154,7 +156,7 @@ export function TextToHandwriting() {
                                     'w-full text-left px-4 py-3 rounded-xl border-2 font-bold text-sm transition-all',
                                     font === f.name ? 'bg-primary/10 border-primary text-primary' : 'border-border hover:border-primary/40'
                                 )}>
-                                    {f.label}
+                                    {tTool(f.labelKey)}
                                 </button>
                             ))}
                         </div>
@@ -172,16 +174,16 @@ export function TextToHandwriting() {
                             {INK_COLORS.map(c => (
                                 <button key={c} onClick={() => setInkColor(c)} className={cn('w-9 h-9 rounded-xl border-4 transition-all', inkColor === c ? 'border-primary scale-110' : 'border-transparent')} style={{ background: c }} />
                             ))}
-                            <input type="color" value={inkColor} onChange={e => setInkColor(e.target.value)} className="w-9 h-9 rounded-xl border-2 border-border cursor-pointer overflow-hidden bg-transparent" title="Custom color" />
+                            <input type="color" value={inkColor} onChange={e => setInkColor(e.target.value)} className="w-9 h-9 rounded-xl border-2 border-border cursor-pointer overflow-hidden bg-transparent" title={tTool('customColor')} />
                         </div>
                     </div>
 
                     <div className="space-y-3">
                         <label className="text-xs font-black text-muted-foreground uppercase tracking-widest">{tTool('paperStyle')}</label>
                         <div className="flex gap-2">
-                            {PAPER_STYLES.map(({ name }, i) => (
+                            {PAPER_STYLES.map(({ nameKey }, i) => (
                                 <button key={i} onClick={() => setPaper(i)} className={cn('flex-1 py-2.5 rounded-xl border-2 font-bold text-xs transition-all', paper === i ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:border-primary/40')}>
-                                    {name}
+                                    {tTool(nameKey)}
                                 </button>
                             ))}
                         </div>
@@ -196,7 +198,7 @@ export function TextToHandwriting() {
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
                     <h4 className="font-bold text-foreground">{tTool('howItWorks')}</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">Text is rendered on an HTML Canvas using Google Fonts — entirely in your browser, with no data sent to any server. Download the PNG for use in documents, social media, or as digital notes.</p>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('textToHandwritingDisclaimer')}</p>
                 </div>
             </div>
         </div>

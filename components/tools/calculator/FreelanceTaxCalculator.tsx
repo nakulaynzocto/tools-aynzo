@@ -50,7 +50,17 @@ export function FreelanceTaxCalculator() {
     const fmt = (n: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`Freelance Tax Estimate:\nGross Income: ${fmt(annualIncome)}\nBusiness Expenses: ${fmt(expenses)}\nNet Profit: ${fmt(result.netProfit)}\nSelf-Employment Tax: ${fmt(result.seTax)}\nFederal Income Tax: ${fmt(result.fedTax)}\nState Tax (${state}%): ${fmt(result.stateTax)}\nTotal Tax Owed: ${fmt(result.totalTax)}\nQuarterly Payments: ${fmt(result.quarterlyEst)}\nEffective Tax Rate: ${result.effectiveRate.toFixed(1)}%`);
+        const text = `${tCalc('freelanceTaxEstimate')}:\n` +
+            `${tCalc('annualGrossIncome')}: ${fmt(annualIncome)}\n` +
+            `${tCalc('businessExpenses')}: ${fmt(expenses)}\n` +
+            `${tCalc('netProfit')}: ${fmt(result.netProfit)}\n` +
+            `${tCalc('selfEmploymentTax')}: ${fmt(result.seTax)}\n` +
+            `${tCalc('federalIncomeTax')}: ${fmt(result.fedTax)}\n` +
+            `${tCalc('stateIncomeTax')} (${state}%): ${fmt(result.stateTax)}\n` +
+            `${tCalc('totalAnnualOwed')}: ${fmt(result.totalTax)}\n` +
+            `${tCalc('estimatedQuarterlyPayment')}: ${fmt(result.quarterlyEst)}\n` +
+            `${tCalc('effectiveRate')}: ${result.effectiveRate.toFixed(1)}%`;
+        navigator.clipboard.writeText(text);
         setCopied(true); setTimeout(() => setCopied(false), 2000);
     };
 
@@ -78,7 +88,7 @@ export function FreelanceTaxCalculator() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">State Tax Rate ({state}%)</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('stateTaxRate')} ({state}%)</label>
                         <input type="range" min="0" max="13" step="0.1" value={state} onChange={e => setState(Number(e.target.value))} className="w-full accent-primary" />
                         <div className="flex justify-between text-[10px] font-bold text-muted-foreground uppercase tracking-tighter">
                             <span>NY: 6.8%</span>
@@ -106,8 +116,8 @@ export function FreelanceTaxCalculator() {
 
                         <div className="grid grid-cols-2 gap-3 w-full mt-6">
                             {[
-                                { label: 'Net Profit', value: fmt(result.netProfit) },
-                                { label: 'Effective Rate', value: `${result.effectiveRate.toFixed(1)}%` },
+                                { label: tCalc('netProfit'), value: fmt(result.netProfit) },
+                                { label: tCalc('effectiveRate'), value: `${result.effectiveRate.toFixed(1)}%` },
                             ].map(item => (
                                 <div key={item.label} className="bg-card p-4 rounded-2xl border border-border/50 text-center">
                                     <span className="block text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">{item.label}</span>
@@ -118,7 +128,7 @@ export function FreelanceTaxCalculator() {
 
                         <div className="w-full space-y-3 bg-card/50 p-6 rounded-2xl border border-border/50 text-left mt-4 text-xs font-bold transition-all">
                             <div className="flex justify-between items-center py-1.5 border-b border-border/30">
-                                <span className="text-muted-foreground uppercase tracking-wider">Self-Employment (15.3%)</span>
+                                <span className="text-muted-foreground uppercase tracking-wider">{tCalc('selfEmploymentTax')} (15.3%)</span>
                                 <span className="text-foreground">{fmt(result.seTax)}</span>
                             </div>
                             <div className="flex justify-between items-center py-1.5 border-b border-border/30">
@@ -138,13 +148,16 @@ export function FreelanceTaxCalculator() {
 
                     <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                         {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                        {copied ? 'Copied to Clipboard' : 'Copy Full Estimate'}
+                        {copied ? tCalc('copiedToClipboard') : tCalc('copyFullEstimate')}
                     </button>
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('settingAside')}<strong>30%</strong> of your gross income for taxes is a safe rule of thumb for most US-based freelancers.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        {tCalc.rich('settingAsideGrossIncomeForTaxes', {
+                            strongNode: (chunks) => <strong>{chunks}</strong>
+                        })}
                     </p>
                 </div>
             </div>

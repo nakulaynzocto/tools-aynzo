@@ -30,7 +30,12 @@ export function CarLoanCalculator() {
     const fmt = (n: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`Car Loan Summary:\nMonthly Payment: ${fmt(result.monthly)}\nLoan Amount: ${fmt(result.loanAmount)}\nTotal Interest: ${fmt(result.totalInterest)}\nTotal Cost: ${fmt(result.totalPayment + downPayment + tradeIn)}`);
+        const text = `${tCalc('carLoanSummary')}:\n` +
+            `${tCalc('estimatedMonthlyPayment')}: ${fmt(result.monthly)}\n` +
+            `${tCalc('loanAmount')}: ${fmt(result.loanAmount)}\n` +
+            `${tCalc('totalInterest')}: ${fmt(result.totalInterest)}\n` +
+            `${tCalc('totalCost')}: ${fmt(result.totalPayment + downPayment + tradeIn)}`;
+        navigator.clipboard.writeText(text);
         setCopied(true); setTimeout(() => setCopied(false), 2000);
     };
 
@@ -45,9 +50,9 @@ export function CarLoanCalculator() {
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            { label: 'Vehicle Price', value: price, setter: setPrice },
-                            { label: 'Down Payment', value: downPayment, setter: setDownPayment },
-                            { label: 'Trade-In Value', value: tradeIn, setter: setTradeIn },
+                            { label: tCalc('vehiclePrice'), value: price, setter: setPrice },
+                            { label: tCalc('downPayment'), value: downPayment, setter: setDownPayment },
+                            { label: tCalc('tradeInValue'), value: tradeIn, setter: setTradeIn },
                         ].map(({ label, value, setter }) => (
                             <div key={label} className="space-y-3">
                                 <label className="text-sm font-bold text-foreground uppercase tracking-wider">{label}</label>
@@ -59,13 +64,13 @@ export function CarLoanCalculator() {
                         ))}
 
                         <div className="space-y-3">
-                            <label className="text-sm font-bold text-foreground">Interest Rate ({rate}%)</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('interestRate')} ({rate}%)</label>
                             <input type="range" min="0" max="25" step="0.1" value={rate} onChange={e => setRate(Number(e.target.value))} className="w-full accent-primary" />
                         </div>
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground">Sales Tax ({salesTax}%)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('salesTax')} ({salesTax}%)</label>
                         <input type="range" min="0" max="15" step="0.1" value={salesTax} onChange={e => setSalesTax(Number(e.target.value))} className="w-full accent-primary" />
                     </div>
 
@@ -94,10 +99,10 @@ export function CarLoanCalculator() {
                         <div className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">{tCalc('estimatedMonthlyPayment')}</div>
                         <div className="flex gap-4 opacity-80 flex-wrap justify-center">
                             <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold text-xs shadow-sm">
-                                Loan: {fmt(result.loanAmount)}
+                                {tCalc('loan')}: {fmt(result.loanAmount)}
                             </div>
                             <div className="bg-card px-4 py-2 rounded-xl border border-border font-bold text-xs shadow-sm">
-                                Interest: {fmt(result.totalInterest)}
+                                {tCalc('interest')}: {fmt(result.totalInterest)}
                             </div>
                         </div>
                     </div>
@@ -114,16 +119,20 @@ export function CarLoanCalculator() {
 
                     <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                         {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                        {copied ? 'Copied to Clipboard' : 'Copy Loan Summary'}
+                        {copied ? tCalc('copiedToClipboard') : tCalc('copyLoanSummary')}
                     </button>
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tCalc('aLarger')}<strong>down payment</strong> reduces your monthly costs and total interest paid significantly.
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
+                        {tCalc.rich('aLarger', {
+                            strongNode: (chunks) => <strong>{chunks}</strong>
+                        })}
                     </p>
                 </div>
             </div>
         </div>
     );
 }
+

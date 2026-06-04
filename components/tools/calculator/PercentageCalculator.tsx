@@ -55,9 +55,9 @@ export function PercentageCalculator() {
                 <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">{tCalc('calculatorInputs')}</h3>
                 <div className="space-y-4">
                     <select value={percentInputs.type} onChange={e => setPercentInputs({ ...percentInputs, type: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-bold text-sm focus:border-primary outline-none">
-                        <option value="percentage-of">What is % of X?</option>
-                        <option value="is-what-percentage">X is what % of Y?</option>
-                        <option value="percentage-increase">X to Y % Increase/Decrease</option>
+                        <option value="percentage-of">{tCalc('whatIsPercentOfX')}</option>
+                        <option value="is-what-percentage">{tCalc('xIsWhatPercentOfY')}</option>
+                        <option value="percentage-increase">{tCalc('xToYPercentIncreaseDecrease')}</option>
                     </select>
                     <div className="grid grid-cols-2 gap-4">
                         <input type="number" value={percentInputs.v1} onChange={e => setPercentInputs({ ...percentInputs, v1: e.target.value })} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium focus:border-primary outline-none" placeholder={tCalc('value1')} />
@@ -77,7 +77,7 @@ export function PercentageCalculator() {
                         </div>
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied to Clipboard' : 'Copy Result'}
+                            {copied ? tCalc('copiedToClipboard') : tCalc('copyResult')}
                         </button>
                     </div>
                 ) : (

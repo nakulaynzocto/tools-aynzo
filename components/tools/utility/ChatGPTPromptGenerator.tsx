@@ -93,13 +93,13 @@ export function ChatGPTPromptGenerator() {
                     <div className="flex items-center justify-between">
                         <div>
                             <label className="text-sm font-black text-muted-foreground uppercase tracking-widest">{tTool('customizeYourPrompt')}</label>
-                            <p className="text-xs text-muted-foreground mt-1">{tTool('replace')}<strong>[PLACEHOLDERS]</strong> with your specifics</p>
+                            <p className="text-xs text-muted-foreground mt-1">{tTool('replace')}<strong>[PLACEHOLDERS]</strong> {tTool('withYourSpecifics')}</p>
                         </div>
                         <div className="flex items-center gap-3">
-                            <span className="text-xs font-bold text-muted-foreground">{wordCount} words</span>
+                            <span className="text-xs font-bold text-muted-foreground">{wordCount} {tTool('words')}</span>
                             <button onClick={handleCopy} className="flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-bold text-sm transition-all">
                                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                                {copied ? 'Copied!' : 'Copy Prompt'}
+                                {copied ? tTool('copiedReport') : tTool('copyPrompt')}
                             </button>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ export function ChatGPTPromptGenerator() {
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
                     <h4 className="font-bold text-foreground">{tTool('promptEngineeringTip')}</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('theMore')}<strong>specific and contextual</strong> your prompt, the better the AI output. Always specify tone, audience, length, and format for best results. Iterate and refine!</p>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('promptEngineeringDisclaimer')}</p>
                 </div>
             </div>
         </div>

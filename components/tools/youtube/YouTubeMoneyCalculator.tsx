@@ -39,7 +39,7 @@ export function YouTubeMoneyCalculator() {
                 <div />
                 <button onClick={handleCopy} className="flex items-center gap-2.5 px-6 py-3.5 bg-muted/30 hover:bg-muted/50 rounded-2xl transition-all border-2 border-border font-bold text-base">
                     {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-primary" />}
-                    {copied ? 'COPIED!' : 'COPY ESTIMATE'}
+                    {copied ? tTool('copied') : tTool('copyEstimate')}
                 </button>
             </div>
 
@@ -58,11 +58,11 @@ export function YouTubeMoneyCalculator() {
                         <input type="range" min={rpmMin} max="30" step="0.5" value={rpmMax} onChange={e => setRpmMax(Number(e.target.value))} className="w-full accent-red-500" />
                     </div>
                     <div className="space-y-2">
-                        <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex justify-between">Monetized Views % <span>{ctr}%</span></label>
+                        <label className="text-sm font-black text-muted-foreground uppercase tracking-widest flex justify-between">{tTool('monetizedViewsPct')} <span>{ctr}%</span></label>
                         <input type="range" min="10" max="100" value={ctr} onChange={e => setCtr(Number(e.target.value))} className="w-full accent-red-500" />
                     </div>
                     <div className="bg-muted/30 rounded-2xl p-4 text-sm text-muted-foreground font-medium">
-                        <strong className="text-foreground">{tTool('rPM')}</strong> (Revenue per Mille) varies by niche: Finance ($10-30), Tech ($5-15), Entertainment ($2-5).
+                        <strong className="text-foreground">{tTool('rPM')}</strong> {tTool('rpmNicheExplanation')}
                     </div>
                 </div>
 
@@ -71,15 +71,15 @@ export function YouTubeMoneyCalculator() {
                         <DollarSign className="w-12 h-12 mx-auto mb-3 text-red-200" />
                         <p className="text-red-100 font-black uppercase tracking-widest text-sm mb-2">{tTool('dailyEarnings')}</p>
                         <p className="text-5xl font-black">{fmtRange(result.dailyMin, result.dailyMax)}</p>
-                        <p className="text-red-200 font-bold mt-2">based on {dailyViews.toLocaleString()} views/day</p>
+                        <p className="text-red-200 font-bold mt-2">{tTool('basedOnViewsDay', { count: dailyViews.toLocaleString() })}</p>
                     </div>
                     {[
-                        { label: 'Monthly Revenue', min: result.monthlyMin, max: result.monthlyMax, icon: TrendingUp, color: 'text-green-500', bg: 'bg-green-500/10' },
-                        { label: 'Yearly Revenue', min: result.yearlyMin, max: result.yearlyMax, icon: Eye, color: 'text-blue-500', bg: 'bg-blue-500/10' },
-                    ].map(({ label, min, max, icon: Icon, color, bg }) => (
-                        <div key={label} className="bg-card border-2 border-border rounded-3xl p-6 flex items-center justify-between">
+                        { labelKey: 'monthlyRevenue', min: result.monthlyMin, max: result.monthlyMax, icon: TrendingUp, color: 'text-green-500', bg: 'bg-green-500/10' },
+                        { labelKey: 'yearlyRevenue', min: result.yearlyMin, max: result.yearlyMax, icon: Eye, color: 'text-blue-500', bg: 'bg-blue-500/10' },
+                    ].map(({ labelKey, min, max, icon: Icon, color, bg }) => (
+                        <div key={labelKey} className="bg-card border-2 border-border rounded-3xl p-6 flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-black text-muted-foreground uppercase tracking-widest mb-1">{label}</p>
+                                <p className="text-xs font-black text-muted-foreground uppercase tracking-widest mb-1">{tTool(labelKey)}</p>
                                 <p className={`text-2xl font-black ${color}`}>{fmtRange(min, max)}</p>
                             </div>
                             <div className={`p-3 ${bg} rounded-2xl`}><Icon className={`w-7 h-7 ${color}`} /></div>
@@ -92,7 +92,7 @@ export function YouTubeMoneyCalculator() {
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
                     <h4 className="font-bold text-foreground">{tTool('howYouTubeEarningsWork')}</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed"><strong>{tTool('rPM')}</strong> (Revenue per Mille) varies widely by niche: Finance/Legal ($10–30), Tech/Software ($5–15), Entertainment ($2–5). Only ~40–60% of views are monetized — the rest come from viewers in low-CPM regions or using ad blockers.</p>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('howYouTubeEarningsWorkDesc')}</p>
                 </div>
             </div>
         </div>

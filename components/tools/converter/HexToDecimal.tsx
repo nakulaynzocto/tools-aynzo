@@ -5,6 +5,7 @@ import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 
 export function HexToDecimal() {
+    const tTool = useTranslations('Tools.converterTools');
     const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('Common');
     const [hex, setHex] = useState('');
@@ -98,7 +99,7 @@ export function HexToDecimal() {
                             type="text"
                             value={hex}
                             onChange={(e) => handleHexChange(e.target.value)}
-                            placeholder="Enter hex (e.g., FF, 0xFF, 1A3B)"
+                            placeholder={tTool('placeholderHex')}
                             className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-2xl font-mono font-black text-foreground focus:border-primary focus:outline-none"
                         />
                         <div className="text-xs text-muted-foreground">

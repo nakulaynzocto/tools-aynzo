@@ -167,7 +167,7 @@ export function SIPCalculator() {
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all mt-4">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Projection Copied' : 'Copy All Results'}
+                            {copied ? tCalc('projectionCopied') : tCalc('copyAllResults')}
                         </button>
                     </div>
                 ) : (

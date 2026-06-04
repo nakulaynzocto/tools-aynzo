@@ -43,12 +43,12 @@ export function TipCalculator() {
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-widest">Bill Amount ($)</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-widest">{tCalc('billAmount')} ($)</label>
                         <input type="number" value={billAmount} onChange={e => setBillAmount(e.target.value)} className="w-full px-5 py-4 bg-background border-2 border-border rounded-2xl focus:outline-none focus:border-primary transition-all font-black text-3xl" placeholder="50.00" />
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground uppercase tracking-widest">Tip Percentage (%)</label>
+                        <label className="text-sm font-bold text-foreground uppercase tracking-widest">{tCalc('tipPercentage')} (%)</label>
                         <div className="flex gap-2">
                             {['15', '18', '20', '25'].map(p => (
                                 <button key={p} onClick={() => setTipPercent(p)} className={cn("flex-1 py-3 text-[10px] font-black uppercase rounded-xl transition-all border-2", tipPercent === p ? "bg-primary text-primary-foreground border-primary" : "bg-background border-border text-muted-foreground hover:border-primary/30")}>{p}%</button>
@@ -89,7 +89,7 @@ export function TipCalculator() {
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all border-t-2 border-border/50 pt-4 w-full justify-center">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Details Copied' : 'Copy Breakdown'}
+                            {copied ? tCalc('detailsCopied') : tCalc('copyBreakdown')}
                         </button>
                     </div>
                 ) : (

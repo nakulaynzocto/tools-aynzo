@@ -7,6 +7,7 @@ import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 
 export default function RegexDiffToolsIndex({ type }: RegexDiffToolProps) {
+    const tRegex = useTranslations('Tools.regexTools');
     const tToolNew = useTranslations('Tools.regexToolsNew');
     const t = useTranslations('Common');
     const tActions = useTranslations('ToolActions');
@@ -18,7 +19,7 @@ export default function RegexDiffToolsIndex({ type }: RegexDiffToolProps) {
 
     const diffNavTools = [
         {
-            category: 'TOOLS',
+            category: 'developer',
             tools: [
                 { id: 'diff-checker', label: 'Diff Checker', icon: FileDiff },
             ]
@@ -94,7 +95,7 @@ export default function RegexDiffToolsIndex({ type }: RegexDiffToolProps) {
                     <div className="grid lg:grid-cols-2 gap-6">
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">Text 1 (Original)</label>
+                                <label className="text-sm font-bold">{tRegex('originalTextLabel')}</label>
                                 <button onClick={() => setText1('')} className="text-xs text-muted-foreground hover:text-foreground">{tToolNew('clear')}</button>
                             </div>
                             <textarea
@@ -106,7 +107,7 @@ export default function RegexDiffToolsIndex({ type }: RegexDiffToolProps) {
                         </div>
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
-                                <label className="text-sm font-bold">Text 2 (Modified)</label>
+                                <label className="text-sm font-bold">{tRegex('modifiedTextLabel')}</label>
                                 <button onClick={() => setText2('')} className="text-xs text-muted-foreground hover:text-foreground">{tToolNew('clear')}</button>
                             </div>
                             <textarea

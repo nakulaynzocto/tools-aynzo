@@ -30,15 +30,15 @@ export function CPMCalculator() {
 
         if (solveFor === 'cost') {
             calcCost = (cpm * impressions) / 1000;
-            return { label: 'Total Cost', value: `$${calcCost.toLocaleString()}`, unit: 'USD' };
+            return { label: tCalc('totalCost'), value: `${calcCost.toLocaleString()}`, unit: 'USD' };
         } else if (solveFor === 'cpm') {
             if (impressions <= 0) return null;
             calcCpm = (cost / impressions) * 1000;
-            return { label: 'Effective CPM', value: `$${calcCpm.toFixed(2)}`, unit: 'Per 1000 Impressions' };
+            return { label: tCalc('effectiveCpm'), value: `${calcCpm.toFixed(2)}`, unit: tCalc('per1000Impressions') };
         } else if (solveFor === 'impressions') {
             if (cpm <= 0) return null;
             calcImpressions = (cost / cpm) * 1000;
-            return { label: 'Total Impressions', value: Math.floor(calcImpressions).toLocaleString(), unit: 'Views' };
+            return { label: tCalc('totalImpressions'), value: Math.floor(calcImpressions).toLocaleString(), unit: tCalc('views') };
         }
         return null;
     }, [cost, cpm, impressions, solveFor]);
@@ -69,7 +69,7 @@ export function CPMCalculator() {
                                 solveFor === mode ? "bg-card text-primary shadow-sm" : "text-muted-foreground hover:text-foreground"
                             )}
                         >
-                            Solve {mode}
+                            {tCalc(mode === 'cost' ? 'solveCost' : mode === 'cpm' ? 'solveCpm' : 'solveImpressions')}
                         </button>
                     ))}
                 </div>
@@ -77,19 +77,19 @@ export function CPMCalculator() {
                 <div className="space-y-4">
                     {solveFor !== 'cost' && (
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-foreground">Total Campaign Cost ($)</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('totalCampaignCost')} ($)</label>
                             <input type="number" value={cost} onChange={e => setCost(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                         </div>
                     )}
                     {solveFor !== 'cpm' && (
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-foreground">CPM (Cost per 1000 views) ($)</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('cpmPer1000Views')} ($)</label>
                             <input type="number" value={cpm} onChange={e => setCpm(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                         </div>
                     )}
                     {solveFor !== 'impressions' && (
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-foreground">Total Impressions (Views)</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('totalImpressionsLabel')}</label>
                             <input type="number" value={impressions} onChange={e => setImpressions(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                         </div>
                     )}
@@ -98,7 +98,7 @@ export function CPMCalculator() {
                 <div className="bg-primary/5 p-4 rounded-xl border border-primary/10 flex items-start gap-3">
                     <Eye size={16} className="text-primary mt-1 flex-shrink-0" />
                     <p className="text-[11px] font-medium text-muted-foreground leading-relaxed">
-                        CPM (Cost Per Mille) is a marketing term used to denote the price of 1,000 advertisement impressions on one web page. It is a industry standard for ad pricing.
+                        {tCalc('cpmDefinition')}
                     </p>
                 </div>
             </div>
@@ -115,7 +115,7 @@ export function CPMCalculator() {
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Measurement Copied' : 'Copy All Data'}
+                            {copied ? tCalc('measurementCopied') : tCalc('copyAllData')}
                         </button>
                     </div>
                 ) : (

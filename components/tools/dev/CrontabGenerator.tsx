@@ -119,14 +119,14 @@ export function CrontabGenerator() {
                         </div>
                     ))}
                 </div>
-                <p className="text-xs text-muted-foreground mt-3 font-medium"><code className="text-primary font-bold">*</code> = any, <code className="text-primary font-bold">*/n</code> = every n, <code className="text-primary font-bold">a,b</code> = multiple, <code className="text-primary font-bold">a-b</code> = range</p>
+                <p className="text-xs text-muted-foreground mt-3 font-medium"><code className="text-primary font-bold">*</code> = {tTool('any')}, <code className="text-primary font-bold">*/n</code> = {tTool('everyN')}, <code className="text-primary font-bold">a,b</code> = {tTool('multiple')}, <code className="text-primary font-bold">a-b</code> = {tTool('range')}</p>
             </div>
 
             <div className="bg-primary/5 border-2 border-primary/20 p-6 rounded-3xl flex items-start gap-4">
                 <Info className="w-6 h-6 text-primary shrink-0 mt-1" />
                 <div className="space-y-1">
                     <h4 className="font-bold text-foreground">{tTool('testingYourCronJob')}</h4>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('alwaysTestYourCronExpressionWith')}<strong>crontab -e</strong> on Linux/Mac. For debugging, redirect output to a log file: <code className="bg-muted px-1 py-0.5 rounded text-xs">* * * * * /path/to/script.sh &gt;&gt; /var/log/cron.log 2&gt;&amp;1</code></p>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tTool('alwaysTestYourCronExpressionWith')}<strong>crontab -e</strong> {tTool('onLinuxMac')} {tTool('forDebuggingRedirect')} <code className="bg-muted px-1 py-0.5 rounded text-xs">* * * * * /path/to/script.sh &gt;&gt; /var/log/cron.log 2&gt;&amp;1</code></p>
                 </div>
             </div>
         </div>

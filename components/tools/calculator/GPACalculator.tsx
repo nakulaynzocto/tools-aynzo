@@ -55,7 +55,7 @@ export function GPACalculator() {
 
     const copy = () => {
         if (!result) return;
-        navigator.clipboard.writeText(`My GPA: ${result}`);
+        navigator.clipboard.writeText(`${tCalc('myGpa')}: ${result}`);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
@@ -127,7 +127,7 @@ export function GPACalculator() {
                             <div className="mt-8 px-10 py-4 rounded-3xl bg-primary/10 border-2 border-primary/20 flex flex-col items-center gap-1">
                                 <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">{tCalc('scaleBreakdown')}</span>
                                 <div className="flex gap-4 font-black text-xs uppercase text-primary">
-                                    <span>4.0 Scale</span>
+                                    <span>{tCalc('scale4')}</span>
                                     <span className="text-muted-foreground/30">|</span>
                                     <span>{tCalc('uSStandard')}</span>
                                 </div>
@@ -136,7 +136,7 @@ export function GPACalculator() {
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'GPA Copied' : 'Copy Result'}
+                            {copied ? tCalc('gpaCopied') : tCalc('copyResult')}
                         </button>
                     </div>
                 ) : (

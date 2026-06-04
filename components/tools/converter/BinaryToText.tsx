@@ -35,7 +35,7 @@ export function BinaryToText() {
             const result = binaryToText(value);
             setText(result);
         } catch (e) {
-            setError('Invalid binary format');
+            setError(tToolNew('invalidBinaryFormat'));
             setText('');
         }
     };
@@ -47,7 +47,7 @@ export function BinaryToText() {
             const result = textToBinary(value);
             setBinary(result);
         } catch (e) {
-            setError('Conversion error');
+            setError(tToolNew('conversionError'));
             setBinary('');
         }
     };
@@ -89,13 +89,13 @@ export function BinaryToText() {
                                 )}
                             >
                                 {copied === 'binary' ? <CheckCircle2 size={14} /> : <Copy size={14} />}
-                                Copy
+                                {t('copy')}
                             </button>
                         </div>
                         <textarea
                             value={binary}
                             onChange={(e) => handleBinaryChange(e.target.value)}
-                            placeholder="Enter binary code (e.g., 01001000 01100101 01101100 01101100 01101111)"
+                            placeholder={tToolNew('enterBinaryCode')}
                             className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-sm font-mono text-foreground focus:border-primary focus:outline-none min-h-[200px] resize-none"
                         />
                     </div>
@@ -114,7 +114,7 @@ export function BinaryToText() {
                                 )}
                             >
                                 {copied === 'text' ? <CheckCircle2 size={14} /> : <Copy size={14} />}
-                                Copy
+                                {t('copy')}
                             </button>
                         </div>
                         <textarea

@@ -20,10 +20,11 @@ const MILESTONES = [
     { week: 40, event: '🎉 Estimated due date' },
 ];
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export function PregnancyDueDateCalculator() {
     const tCalc = useTranslations('Tools.CalculatorText');
+    const locale = useLocale();
     const [lmpDate, setLmpDate] = useState<string>('');
     const [method, setMethod] = useState<'lmp' | 'conception' | 'ivf'>('lmp');
     const [conceptionDate, setConceptionDate] = useState<string>('');
@@ -54,12 +55,21 @@ export function PregnancyDueDateCalculator() {
 
         const trimester = weeksPregnant <= 12 ? '1st' : weeksPregnant <= 26 ? '2nd' : '3rd';
 
-        const upcoming = MILESTONES.filter(m => m.week > weeksPregnant).slice(0, 3);
+        const upcoming = MILESTONES.map(m => ({
+            week: m.week,
+            eventKey: m.event === 'Heartbeat detectable' ? 'heartbeatDetectable' :
+                      m.event === 'End of 1st trimester' ? 'endOf1stTrimester' :
+                      m.event === 'Gender may be visible' ? 'genderMayBeVisible' :
+                      m.event === 'Anatomy ultrasound' ? 'anatomyUltrasound' :
+                      m.event === 'Viability milestone' ? 'viabilityMilestone' :
+                      m.event === '3rd trimester begins' ? '3rdTrimesterBegins' :
+                      m.event === 'Full term approaching' ? 'fullTermApproaching' : 'estimatedDueDateEvent'
+        })).filter(m => m.week > weeksPregnant).slice(0, 3);
 
         return { dueDate, daysPregnant, weeksPregnant, daysRemainder, daysLeft, trimester, upcoming };
     }, [method, lmpDate, conceptionDate, ivfDate]);
 
-    const fmt = (d: Date) => d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    const fmt = (d: Date) => d.toLocaleDateString(locale, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
     const handleCopy = () => {
         if (!result) return;
@@ -80,9 +90,9 @@ export function PregnancyDueDateCalculator() {
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">{tCalc('method')}</label>
                         <div className="flex flex-wrap gap-2">
                             {([
-                                { id: 'lmp', label: 'Last Period' },
-                                { id: 'conception', label: 'Conception' },
-                                { id: 'ivf', label: 'IVF Transfer' },
+                                { id: 'lmp', label: tCalc('lastPeriod') },
+                                { id: 'conception', label: tCalc('conception') },
+                                { id: 'ivf', label: tCalc('ivfTransfer') },
                             ] as const).map(m => (
                                 <button key={m.id} onClick={() => setMethod(m.id)} className={cn('px-4 py-2 rounded-xl font-bold text-xs border-2 transition-all', method === m.id ? 'bg-pink-500 text-white border-pink-500' : 'border-border hover:border-pink-500/40')}>
                                     {m.label}
@@ -93,7 +103,7 @@ export function PregnancyDueDateCalculator() {
 
                     <div className="space-y-3">
                         <label className="text-sm font-bold text-foreground uppercase tracking-wider">
-                            {method === 'lmp' ? 'First Day of Last Period' : method === 'conception' ? 'Conception Date' : 'Transfer Date'}
+                            {method === 'lmp' ? tCalc('firstDayLastPeriod') : method === 'conception' ? tCalc('conceptionDate') : tCalc('transferDate')}
                         </label>
                         <div className="relative group">
                             <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground group-focus-within:text-pink-500 transition-colors" />
@@ -111,13 +121,15 @@ export function PregnancyDueDateCalculator() {
                         <div className="space-y-3 pt-4 border-t border-border/50">
                             <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{tCalc('trimesterProgress')}</label>
                             <div className="grid grid-cols-1 gap-2">
-                                {TRIMESTERS.map(t => {
+                                {TRIMESTERS.map((t, idx) => {
                                     const current = result.weeksPregnant >= t.weeks[0] && result.weeksPregnant <= t.weeks[1];
                                     const past = result.weeksPregnant > t.weeks[1];
+                                    const tKey = idx === 0 ? 'trimester1' : idx === 1 ? 'trimester2' : 'trimester3';
+                                    const dKey = idx === 0 ? 'weeks1To12' : idx === 1 ? 'weeks13To26' : 'weeks27To40';
                                     return (
                                         <div key={t.label} className={cn('px-4 py-2.5 rounded-xl border-2 transition-all flex justify-between items-center', current ? 'border-pink-500 bg-pink-500/10' : past ? 'border-emerald-500/20 bg-emerald-500/5' : 'border-border bg-muted/5 opacity-50')}>
-                                            <span className="font-bold text-xs">{t.label}</span>
-                                            <span className="text-[10px] font-black text-muted-foreground uppercase">{t.desc}</span>
+                                            <span className="font-bold text-xs">{tCalc(tKey)}</span>
+                                            <span className="text-[10px] font-black text-muted-foreground uppercase">{tCalc(dKey)}</span>
                                         </div>
                                     );
                                 })}
@@ -156,8 +168,8 @@ export function PregnancyDueDateCalculator() {
                                     <div className="space-y-2">
                                         {result.upcoming.map(m => (
                                             <div key={m.week} className="flex justify-between items-center text-xs font-bold py-1.5 border-b border-border/30 last:border-0 last:pb-0">
-                                                <span className="text-foreground">{m.event}</span>
-                                                <span className="text-pink-500 px-2 py-0.5 bg-pink-500/10 rounded-md">Week {m.week}</span>
+                                                <span className="text-foreground">{tCalc(m.eventKey)}</span>
+                                                <span className="text-pink-500 px-2 py-0.5 bg-pink-500/10 rounded-md">{tCalc('week')} {m.week}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -167,7 +179,7 @@ export function PregnancyDueDateCalculator() {
 
                         <button onClick={handleCopy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-pink-500 transition-all mt-4">
                             {copied ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Copied' : 'Copy Pregnancy Plan'}
+                            {copied ? tCalc('copied') : tCalc('copyPregnancyPlan')}
                         </button>
                     </div>
                 ) : (
@@ -180,7 +192,7 @@ export function PregnancyDueDateCalculator() {
                 <div className="bg-pink-500/5 border-2 border-pink-500/20 p-6 rounded-3xl flex items-start gap-4">
                     <Info className="w-6 h-6 text-pink-500 shrink-0 mt-1" />
                     <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                        Only 5% of babies are born on their exact due date. This tool provides an estimate for preparation. Always consult your midwife or doctor.
+                        {tCalc('pregnancyDueDateDisclaimer')}
                     </p>
                 </div>
             </div>

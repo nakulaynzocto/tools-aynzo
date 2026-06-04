@@ -221,12 +221,12 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 return (
                     <div className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium text-foreground mb-1">Phone Number (with Country Code)</label>
-                            <input type="text" value={whatsapp.phone} onChange={e => setWhatsapp({ ...whatsapp, phone: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="e.g. 15551234567" />
+                            <label className="block text-sm font-medium text-foreground mb-1">{tSocial('phoneNumWithCountry')}</label>
+                            <input type="text" value={whatsapp.phone} onChange={e => setWhatsapp({ ...whatsapp, phone: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder={tSocial('egPhoneNum')} />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('preFilledMessage')}</label>
-                            <textarea value={whatsapp.message} onChange={e => setWhatsapp({ ...whatsapp, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-40 text-foreground" placeholder="Hello, I'm interested..." />
+                            <textarea value={whatsapp.message} onChange={e => setWhatsapp({ ...whatsapp, message: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg h-40 text-foreground" placeholder={t('messagePlaceholder')} />
                         </div>
                     </div>
                 );
@@ -252,7 +252,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('itemName')}</label>
-                            <input type="text" value={paypal.item} onChange={e => setPaypal({ ...paypal, item: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="Donation / Product" />
+                            <input type="text" value={paypal.item} onChange={e => setPaypal({ ...paypal, item: e.target.value })} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder={tSocial('egPaypalItem')} />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
@@ -278,7 +278,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                     <div className="space-y-4">
                         <div>
                             <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('enterKeywordOrTopic')}</label>
-                            <input type="text" value={hashtag} onChange={e => setHashtag(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="e.g. travel, food, fitness" />
+                            <input type="text" value={hashtag} onChange={e => setHashtag(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder={tSocial('egInstagramTopic')} />
                         </div>
                         <button
                             onClick={handleProcess}
@@ -286,7 +286,7 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                             className="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-black shadow-lg hover:opacity-90 transition-all flex items-center justify-center gap-2"
                         >
                             {loading ? <RefreshCw className="w-5 h-5 animate-spin" /> : <Hash className="w-5 h-5" />}
-                            Generate Hashtags
+                            {tSocial('generateHashtags')}
                         </button>
                     </div>
                 );
@@ -294,14 +294,14 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                 return (
                     <div>
                         <label className="block text-sm font-medium text-foreground mb-1">{tToolNew('emailAddress')}</label>
-                        <input type="email" value={email} onChange={e => setEmail(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder="check@email.com" />
+                        <input type="email" value={email} onChange={e => setEmail(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg text-foreground" placeholder={tSocial('egEmailAddress')} />
                     </div>
                 );
             case 'url-opener':
                 return (
                     <div>
-                        <label className="block text-sm font-medium text-foreground mb-1">URLs (One per line)</label>
-                        <textarea value={urls} onChange={e => setUrls(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg h-48 text-foreground" placeholder={`https://google.com\nhttps://youtube.com`} />
+                        <label className="block text-sm font-medium text-foreground mb-1">{tSocial('urlsOnePerLine')}</label>
+                        <textarea value={urls} onChange={e => setUrls(e.target.value)} className="w-full p-3 border border-border bg-input rounded-lg h-48 text-foreground" placeholder={tSocial('egUrls')} />
                     </div>
                 );
         }
@@ -358,12 +358,12 @@ export default function SocialLinkToolsIndex({ type }: SocialLinkToolProps) {
                                     ) : (
                                         <div className="bg-muted/30 p-6 rounded-2xl border-2 border-border space-y-4 relative group flex flex-col h-full">
                                             <div className="flex items-center justify-between">
-                                                <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">{type === 'instagram-hashtag-generator' ? 'Generated Hashtags' : 'Direct Link'}</span>
+                                                <span className="text-[10px] font-black uppercase tracking-tighter text-muted-foreground">{type === 'instagram-hashtag-generator' ? tSocial('generatedHashtagsLabel') : tSocial('directLinkLabel')}</span>
                                                 <button
                                                     onClick={copyToClipboard}
                                                     className={`flex items-center gap-2 text-xs font-black transition-colors ${copied ? 'text-emerald-500' : 'text-primary hover:text-accent'}`}
                                                 >
-                                                    {copied ? <Check size={14} /> : <Copy size={14} />} {copied ? 'COPIED' : 'COPY'}
+                                                    {copied ? <Check size={14} /> : <Copy size={14} />} {copied ? (tSocial('copiedCaps') || 'COPIED') : (tSocial('copyCaps') || 'COPY')}
                                                 </button>
                                             </div>
                                             <div className="p-4 bg-card rounded-xl border-2 border-border font-mono text-sm break-all text-foreground min-h-[150px] max-h-[400px] overflow-y-auto shadow-inner custom-scrollbar">

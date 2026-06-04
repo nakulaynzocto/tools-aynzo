@@ -13,6 +13,7 @@ const romanValues: { [key: string]: number } = {
 const romanNumerals = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
 
 export function RomanNumeralConverter() {
+    const tTool = useTranslations('Tools.converterTools');
     const tToolNew = useTranslations('Tools.converterToolsNew');
     const t = useTranslations('Common');
     const [roman, setRoman] = useState('');
@@ -115,7 +116,7 @@ export function RomanNumeralConverter() {
             )}
 
             <div className="bg-muted/30 rounded-xl p-4 border border-border">
-                <div className="text-xs font-bold text-muted-foreground mb-2">Note:</div>
+                <div className="text-xs font-bold text-muted-foreground mb-2">{tTool('romanNoteLabel')}</div>
                 <div className="text-sm text-foreground">
                     Roman numerals range from 1 to 3999. Valid characters: I, V, X, L, C, D, M
                 </div>
@@ -144,7 +145,7 @@ export function RomanNumeralConverter() {
                             type="text"
                             value={roman}
                             onChange={(e) => handleRomanChange(e.target.value)}
-                            placeholder="Enter Roman numeral (e.g., XIV, MCMXCIV)"
+                            placeholder={tTool('placeholderRoman')}
                             className="w-full px-4 py-4 bg-background border-2 border-border rounded-xl text-2xl font-black text-foreground focus:border-primary focus:outline-none uppercase"
                         />
                         <div className="text-xs text-muted-foreground">
@@ -175,7 +176,7 @@ export function RomanNumeralConverter() {
                             max="3999"
                             value={number}
                             onChange={(e) => handleNumberChange(e.target.value)}
-                            placeholder="Enter number (1-3999)"
+                            placeholder={tTool('placeholderRomanNumber')}
                             className="w-full px-4 py-4 bg-muted/50 border-2 border-border rounded-xl text-2xl font-black text-foreground focus:border-primary focus:outline-none"
                         />
                         <div className="text-xs text-muted-foreground">

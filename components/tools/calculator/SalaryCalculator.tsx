@@ -31,7 +31,10 @@ export function SalaryCalculator() {
 
     const copy = () => {
         if (!breakdown) return;
-        const text = `Salary Breakdown:\nAnnual: $${breakdown.annual}\nMonthly: $${breakdown.monthly}\nHourly: $${breakdown.hourly}`;
+        const text = `${tCalc('salaryBreakdown')}:\n` +
+            `${tCalc('annual')}: $${breakdown.annual}\n` +
+            `${tCalc('monthly')}: $${breakdown.monthly}\n` +
+            `${tCalc('hourly')}: $${breakdown.hourly}`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -44,7 +47,7 @@ export function SalaryCalculator() {
                 
                 <div className="space-y-6 bg-muted/10 p-8 rounded-3xl border-2 border-border/50">
                     <div className="space-y-3">
-                        <label className="text-sm font-bold text-foreground">Annual Salary ($)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('annualSalary')} ($)</label>
                         <input 
                             type="number" 
                             value={salary} 
@@ -79,12 +82,12 @@ export function SalaryCalculator() {
                     <div className="bg-muted/20 border-2 border-border rounded-3xl p-8 flex flex-col items-stretch gap-6 flex-1 min-h-[400px]">
                         <div className="grid grid-cols-2 gap-4">
                             {[
-                                { label: 'Hourly', value: breakdown.hourly, icon: TrendingUp },
-                                { label: 'Daily', value: breakdown.daily },
-                                { label: 'Weekly', value: breakdown.weekly },
-                                { label: 'Bi-Weekly', value: breakdown.biweekly },
-                                { label: 'Monthly', value: breakdown.monthly },
-                                { label: 'Annual', value: breakdown.annual }
+                                { label: tCalc('hourly'), value: breakdown.hourly, icon: TrendingUp },
+                                { label: tCalc('daily'), value: breakdown.daily },
+                                { label: tCalc('weekly'), value: breakdown.weekly },
+                                { label: tCalc('biweekly'), value: breakdown.biweekly },
+                                { label: tCalc('monthly'), value: breakdown.monthly },
+                                { label: tCalc('annual'), value: breakdown.annual }
                             ].map((item, i) => (
                                 <div key={item.label} className={cn("p-6 rounded-2xl border-2 border-border flex flex-col gap-2 transition-all hover:border-primary/20", i === 0 && "bg-primary/10 border-primary/20")}>
                                     <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{item.label}</span>
@@ -98,7 +101,7 @@ export function SalaryCalculator() {
 
                         <button onClick={copy} className="flex items-center justify-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all py-4 border-t-2 border-border/50 pt-6">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Details Copied' : 'Copy Full Breakdown'}
+                            {copied ? tCalc('detailsCopied') : tCalc('copyFullBreakdown')}
                         </button>
                     </div>
                 ) : (

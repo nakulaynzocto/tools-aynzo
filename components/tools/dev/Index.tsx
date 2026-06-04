@@ -15,7 +15,7 @@ export default function DevToolsIndex({ type }: DevToolProps) {
 
     const devNavTools = [
         {
-            category: 'FORMAT',
+            category: 'developer',
             tools: [
                 { id: 'json-formatter', label: 'JSON Formatter', icon: FileJson },
                 { id: 'html-formatter', label: 'HTML Formatter', icon: Code },
@@ -26,7 +26,7 @@ export default function DevToolsIndex({ type }: DevToolProps) {
             ]
         },
         {
-            category: 'TOOLS',
+            category: 'developer',
             tools: [
                 { id: 'url-encoder-decoder', label: 'URL Encoder/Decoder', icon: Link2 },
                 { id: 'diff-checker', label: 'Text Diff Checker', icon: Split },
@@ -34,7 +34,7 @@ export default function DevToolsIndex({ type }: DevToolProps) {
             ]
         },
         {
-            category: 'CONVERT',
+            category: 'developer',
             tools: [
                 { id: 'markdown-to-html', label: 'Markdown to HTML', icon: FileText },
                 { id: 'html-to-markdown', label: 'HTML to Markdown', icon: Code },
@@ -44,13 +44,13 @@ export default function DevToolsIndex({ type }: DevToolProps) {
             ]
         },
         {
-            category: 'OPTIMIZE',
+            category: 'developer',
             tools: [
                 { id: 'code-minifier', label: 'Code Minifier', icon: Minimize2 },
             ]
         },
         {
-            category: 'OTHER',
+            category: 'developer',
             tools: [
                 { id: 'user-agent-parser', label: 'User Agent Parser', icon: Terminal },
                 { id: 'crontab-generator', label: 'Crontab Builder', icon: Clock },

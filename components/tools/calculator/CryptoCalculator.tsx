@@ -47,7 +47,7 @@ export function CryptoCalculator() {
 
     const copy = () => {
         if (!result) return;
-        const text = `Investment: $${investment}\nProfit/Loss: $${result.netProfit} (${result.profitPercent}%)\nCoin Amount: ${result.coinAmount}`;
+        const text = `${tCalc('investment')}: ${investment}\n${tCalc('profitLoss')}: ${result.netProfit} (${result.profitPercent}%)\n${tCalc('coinUnits')}: ${result.coinAmount}`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -63,23 +63,23 @@ export function CryptoCalculator() {
                 
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Investment Amount ($)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('investmentAmount')} ($)</label>
                         <input type="number" value={investment} onChange={e => setInvestment(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                     </div>
                     
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-foreground">Buy Price ($)</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('buyPrice')} ($)</label>
                             <input type="number" value={buyPrice} onChange={e => setBuyPrice(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-foreground">Sell Price ($)</label>
+                            <label className="text-sm font-bold text-foreground">{tCalc('sellPrice')} ($)</label>
                             <input type="number" value={sellPrice} onChange={e => setSellPrice(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                         </div>
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-foreground">Exchange Fees (%)</label>
+                        <label className="text-sm font-bold text-foreground">{tCalc('exchangeFees')} (%)</label>
                         <input type="number" step="0.01" value={fee} onChange={e => setFee(Number(e.target.value))} className="w-full p-4 bg-input border-2 border-border rounded-xl font-medium outline-none focus:border-accent" />
                     </div>
                 </div>
@@ -95,7 +95,7 @@ export function CryptoCalculator() {
                         <div className="text-center space-y-4">
                             <div className="flex items-center justify-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
                                 {result.isProfit ? <TrendingUp size={14} className="text-emerald-500" /> : <TrendingDown size={14} className="text-rose-500" />}
-                                {result.isProfit ? 'Estimated Profit' : 'Estimated Loss'}
+                                {result.isProfit ? tCalc('estimatedProfit') : tCalc('estimatedLoss')}
                             </div>
                             <div className={cn(
                                 "text-6xl font-black animate-in zoom-in duration-500",
@@ -107,7 +107,7 @@ export function CryptoCalculator() {
                                 "inline-block px-4 py-1 rounded-full text-xs font-black tracking-widest border capitalize",
                                 result.isProfit ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-500" : "bg-rose-500/10 border-rose-500/20 text-rose-500"
                             )}>
-                                {result.profitPercent}% ROI
+                                {result.profitPercent}% {tCalc('roi')}
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@ export function CryptoCalculator() {
 
                         <button onClick={copy} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-all">
                             {copied ? <CheckCircle2 size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                            {copied ? 'Trade Copied' : 'Copy Breakdown'}
+                            {copied ? tCalc('tradeCopied') : tCalc('copyBreakdown')}
                         </button>
                     </div>
                 ) : (
