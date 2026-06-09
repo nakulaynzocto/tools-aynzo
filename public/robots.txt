@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /api/
-
-Sitemap: https://tools.aynzo.com/sitemap.xml

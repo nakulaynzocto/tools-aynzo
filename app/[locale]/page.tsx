@@ -18,7 +18,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const tApp = await getTranslations({ locale, namespace: 'App' });
 
   let pageTitle = t('title');
-  let metaDesc = "Professional free online tools for developers, designers & creators. 100% private, browser-based.";
+  let metaDesc = "100+ free online tools for image editing, PDF conversion, text formatting, code utilities, SEO analysis & calculators. Fast, private, browser-based — no signup needed.";
   let metaKeywords = "aynzo tools, free online tools, image compressor, pdf converter";
 
   try { metaDesc = t('metaDescription'); } catch { try { metaDesc = t('description'); } catch {} }

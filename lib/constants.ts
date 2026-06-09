@@ -24,6 +24,6 @@ export const OG_IMAGES = {
 // Default Metadata
 export const DEFAULT_METADATA = {
     title: `${SITE_NAME} - 100+ Free Online Tools`,
-    description: 'Professional free online tools for developers, designers & creators. 100% private, browser-based.',
+    description: '100+ free online tools for image editing, PDF conversion, text formatting, code utilities, SEO analysis & calculators. Fast, private, browser-based — no signup needed.',
     keywords: 'aynzo tools, free online tools, image compressor, pdf converter',
 };

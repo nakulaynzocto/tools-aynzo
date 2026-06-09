@@ -20,7 +20,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'App' });
   
   const siteTitle = t('name') || "AYNZO TOOLS";
-  const siteDesc = t('description') || "Professional online tools for developers and content creators.";
+  const siteDesc = t('description') || "100+ free online tools for image editing, PDF conversion, text formatting, code utilities, SEO analysis & calculators. Fast, private, browser-based — no signup needed.";
   // Use description as fallback if keywords missing
   let siteKeywords = "aynzo tools, free online tools, utilities";
   try { siteKeywords = t('keywords' as any); } catch { try { siteKeywords = t('metaKeywords' as any); } catch {} }

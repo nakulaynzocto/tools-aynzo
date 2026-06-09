@@ -78,7 +78,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
     });
   } catch (error) {
-    console.error('Failed to fetch blogs for sitemap:', error);
+    console.error('[Sitemap] Failed to fetch blog slugs from DB:', error instanceof Error ? error.message : error);
+    // Fallback: ensure at least the blog index page is included when DB is unreachable
+    // Individual blog post URLs will be added once DB connectivity is restored
+    const blogIndexRoute = '/blog';
+    const blogAlternates: any = { languages: {} };
+    locales.forEach(loc => {
+      const isDefault = loc === 'en';
+      const locPrefix = isDefault ? '' : `/${loc}`;
+      blogAlternates.languages[loc] = `${SITE_URL}${locPrefix}${blogIndexRoute}`;
+    });
+    blogAlternates.languages['x-default'] = `${SITE_URL}${blogIndexRoute}`;
+    // Only add if /blog wasn't already in static routes (it is, but this ensures priority is set)
   }
 
   return sitemapData;

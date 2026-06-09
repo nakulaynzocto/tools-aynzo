@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "AYNZO TOOLS - Professional Online Tools",
-  description: "Fast, secure, and free online tools for developers and creators.",
+  description: "Aynzo Tools — 100+ free online tools for image editing, PDF conversion, text formatting, code utilities, SEO analysis & calculators. 100% private, browser-based, no signup required.",
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
